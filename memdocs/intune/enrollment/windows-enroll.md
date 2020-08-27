@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48560af1ff31d5660f00e775a2f510b88c08fd9c
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: cf74b7b96f51658f50ae8654b0c3a7e364cac63d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820604"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911819"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Windows cihazları için kaydı ayarlama
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Bu makale BT yöneticilerinin kullanıcıları için Windows kaydını kolaylaştırmasına yardımcı olur. [Intune’u kurduğunuzda](../fundamentals/setup-steps.md) kullanıcılar, iş veya okul hesaplarıyla [oturum açarak](https://docs.microsoft.com/mem/intune/user-help/windows-enrollment-company-portal) Windows cihazlarını kaydederler.  
+Bu makale BT yöneticilerinin kullanıcıları için Windows kaydını kolaylaştırmasına yardımcı olur. [Intune’u kurduğunuzda](../fundamentals/setup-steps.md) kullanıcılar, iş veya okul hesaplarıyla [oturum açarak](../user-help/windows-enrollment-company-portal.md) Windows cihazlarını kaydederler.  
 
 Bir Intune yöneticisi olarak, kayıt sürecini aşağıdaki yollarla basitleştirebilirsiniz:
 
@@ -39,7 +39,7 @@ Bir Intune yöneticisi olarak, kayıt sürecini aşağıdaki yollarla basitleşt
 
 Windows cihaz kaydını nasıl basit hale getirebileceğinizi iki faktör belirler:
 
-- **Azure Active Directory Premium kullanıyor musunuz?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium), Enterprise Mobility + Security ve diğer lisanslama planlarına dahildir.
+- **Azure Active Directory Premium kullanıyor musunuz?** <br>[Azure AD Premium](/azure/active-directory/active-directory-get-started-premium), Enterprise Mobility + Security ve diğer lisanslama planlarına dahildir.
 - **Kullanıcılar hangi Windows istemci sürümlerini kaydedecekler?** <br>Windows 10 cihazları iş veya okul hesabı eklenerek otomatik olarak kaydedilebilir. Önceki sürümlerin Şirket Portalı uygulamasını kullanarak kaydolması gerekir.
 
 ||**Azure AD Premium**|**Diğer AD**|
@@ -125,7 +125,7 @@ Azure Active Directory, iOS/ıpados, Android ve Windows cihazları için cihaz k
 | --- | --- | --- | --- |
 | CNAME | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 saat|
 
-Cihaz kaydı hakkında daha fazla bilgi için bkz [. Azure Portal kullanarak cihaz kimliklerini yönetme](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+Cihaz kaydı hakkında daha fazla bilgi için bkz [. Azure Portal kullanarak cihaz kimliklerini yönetme](/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Windows 10 otomatik kayıt ve cihaz kaydı
 

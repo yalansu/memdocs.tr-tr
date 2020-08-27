@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73a222ee8f847071174ea7dee1c438b69a1bd0ae
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 72bbc3d720f7abb22296d21bfe4869240200c912
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093775"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907744"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>İOS/ıpados ve ıpados Kullanıcı kaydını ayarlama (Önizleme)
 
@@ -34,7 +34,7 @@ Kullanıcı kaydında kullanılabilen seçenekler hakkında daha fazla bilgi iç
 > [!NOTE]
 > Apple 'ın Intune 'da Kullanıcı kaydı desteği şu anda önizlemededir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 - [Mobil Cihaz Yönetimi (MDM) Yetkilisi](../fundamentals/mdm-authority-set.md)
 - [Apple MDM anında Iletme sertifikası](apple-mdm-push-certificate-get.md)
 
@@ -46,7 +46,7 @@ Kayıt profili, kayıt sırasında bir cihaz grubuna uygulanan ayarları tanıml
 
     ![Apple kayıt profili oluştur](./media/ios-user-enrollment/create-profile.png)
 
-2. **Temel bilgiler** sayfasında, yönetim amaçları için profil Için bir **ad** ve **Açıklama** girin. Kullanıcılar bu ayrıntıları göremez. Azure Active Directory’de dinamik bir grup oluşturmak için **Ad** alanını kullanabilirsiniz. enrollmentProfileName parametresini, bu kayıt profiliyle cihazlara atamak amacıyla tanımlamak için profil adını kullanın. [Azure Active Directory dinamik grupları](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices) hakkında daha fazla bilgi edinin.
+2. **Temel bilgiler** sayfasında, yönetim amaçları için profil Için bir **ad** ve **Açıklama** girin. Kullanıcılar bu ayrıntıları göremez. Azure Active Directory’de dinamik bir grup oluşturmak için **Ad** alanını kullanabilirsiniz. enrollmentProfileName parametresini, bu kayıt profiliyle cihazlara atamak amacıyla tanımlamak için profil adını kullanın. [Azure Active Directory dinamik grupları](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices) hakkında daha fazla bilgi edinin.
 
     ![Temel bilgiler sayfası](./media/ios-user-enrollment/basics-page.png)
 
@@ -58,7 +58,7 @@ Kayıt profili, kayıt sırasında bir cihaz grubuna uygulanan ayarları tanıml
 
     - **Cihaz kaydı**: Bu profildeki tüm kullanıcılar cihaz kaydını kullanacaktır.
     - **Kullanıcı kaydı**: Bu profildeki tüm kullanıcılar Kullanıcı kaydını kullanacaktır.
-    - **Kullanıcı seçimine göre belirlenir**: Bu gruptaki tüm kullanıcılara hangi kayıt türünün kullanılacağı tercih edilir. Kullanıcılar cihazlarını kaydettiğinde, bu cihazdan ve **(Şirket) bu cihazın sahibi** **olduğumu** arasında seçim yapmak için bir seçenek görür. İkincisini seçtiyse cihaz, cihaz kaydı kullanılarak kaydedilir. Kullanıcı **Bu cihaza sahip olduğumu**seçerse, tüm cihazı güvenli hale getirmek veya yalnızca iş ile ilgili uygulamaları ve verileri güvenli hale getirmek için başka bir seçenek alırlar. Son kullanıcının, cihazında hangi kayıt türünün uygulandığını belirler. Bu Kullanıcı seçeneği, Intune 'daki cihaz sahipliği özniteliğinde de yansıtılır. Kullanıcı deneyimi hakkında daha fazla bilgi edinmek için bkz. [şirket kaynaklarınıza iOS/ıpados cihaz erişimini ayarlama](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+    - **Kullanıcı seçimine göre belirlenir**: Bu gruptaki tüm kullanıcılara hangi kayıt türünün kullanılacağı tercih edilir. Kullanıcılar cihazlarını kaydettiğinde, bu cihazdan ve **(Şirket) bu cihazın sahibi** **olduğumu** arasında seçim yapmak için bir seçenek görür. İkincisini seçtiyse cihaz, cihaz kaydı kullanılarak kaydedilir. Kullanıcı **Bu cihaza sahip olduğumu**seçerse, tüm cihazı güvenli hale getirmek veya yalnızca iş ile ilgili uygulamaları ve verileri güvenli hale getirmek için başka bir seçenek alırlar. Son kullanıcının, cihazında hangi kayıt türünün uygulandığını belirler. Bu Kullanıcı seçeneği, Intune 'daki cihaz sahipliği özniteliğinde de yansıtılır. Kullanıcı deneyimi hakkında daha fazla bilgi edinmek için bkz. [şirket kaynaklarınıza iOS/ıpados cihaz erişimini ayarlama](../user-help/enroll-your-device-in-intune-macos-cp.md).
     
 5. **İleri**’yi seçin.
 
@@ -81,5 +81,3 @@ Birden fazla kayıt türü profili oluşturduktan sonra, uygulandıkları öncel
 2. Listedeki profilleri, uygulanmasını istediğiniz sırada sürükleyip bırakın.
 
 Herhangi bir kullanıcının profilleri arasındaki çakışmalar söz konusu olduğunda, Kullanıcı için daha yüksek öncelikli profil uygulanır.
-
-

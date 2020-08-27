@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7101ad9bffcd80bd608690f22db37abbbc7a7895
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 00d515743f2391d9c232b9ae5d97062a01302c48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85093807"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908828"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Apple Configurator ile iOS/iPadOS cihaz kaydını ayarlama
 
@@ -35,7 +35,7 @@ Intune, bir Mac bilgisayarda çalışan [Apple Configurator](https://itunes.appl
 
 Apple Configurator kayıt yöntemleri [cihaz kaydı yöneticisi](device-enrollment-manager-enroll.md) ile birlikte kullanılamaz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - İOS/ıpados cihazlarına fiziksel erişim
 - [MDM yetkilisini ayarlama](../fundamentals/mdm-authority-set.md)
@@ -60,7 +60,7 @@ Bir cihaz kayıt profili kayıt sırasında uygulanan ayarları tanımlar. Bu ay
 
 4. **Kullanıcı Benzeşimi** için bu profile sahip cihazların atanan kullanıcıyla mı yoksa atanan kullanıcı olmadan mı kaydedilmesi gerektiğini seçin.
 
-    - **Kullanıcı benzeşimi Ile kaydetme** -kullanıcılara ait olan ve uygulamaları yükleme gibi hizmetler için şirket portalı 'nı kullanmak isteyen cihazlar için bu seçeneği belirleyin. Cihaz Kurulum Yardımcısı ile bir kullanıcıya bağlanmalıdır. Böylece, cihaz şirket verilerine ve e-postalara erişebilir. Yalnızca Kurulum Yardımcısı kaydı için desteklenir. Kullanıcı benzeşimi [WS-Trust 1.3 Kullanıcı adı/Karma uç noktası](https://technet.microsoft.com/library/adfs2-help-endpoints) gerektirir. [Daha fazla bilgi edinin](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Kullanıcı benzeşimi Ile kaydetme** -kullanıcılara ait olan ve uygulamaları yükleme gibi hizmetler için şirket portalı 'nı kullanmak isteyen cihazlar için bu seçeneği belirleyin. Cihaz Kurulum Yardımcısı ile bir kullanıcıya bağlanmalıdır. Böylece, cihaz şirket verilerine ve e-postalara erişebilir. Yalnızca Kurulum Yardımcısı kaydı için desteklenir. Kullanıcı benzeşimi [WS-Trust 1.3 Kullanıcı adı/Karma uç noktası](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) gerektirir. [Daha fazla bilgi edinin](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
 
     - **Kullanıcı Benzeşimi Olmadan Kaydetme** - Tek bir kullanıcıyla bağlantılı olmayan cihazlar için bu seçeneği seçin. Yerel kullanıcı verilerine erişmeden görevleri yerine getiren cihazlar için bunu kullanın. Kullanıcı ilişkisi gerektiren uygulamalar (iş kolu uygulamalarını yüklemek için kullanılan Şirket Portalı uygulaması dahil) çalışmaz. Doğrudan kayıt için gereklidir.
 
@@ -171,8 +171,3 @@ Kullanıcıların, cihazlarını aldıktan sonra Kurulum Yardımcısı'nı tamam
 6. İOS/ıpados cihazında **Ayarlar** ' ı açın ve **genel**  >  **cihaz yönetimi**  >  **Yönetim profili**' ne gidin. Profil yüklemesinin listelendiğini onaylayın ve iOS/ıpados ilke kısıtlamalarını ve yüklü uygulamaları denetleyin. İlke kısıtlamaları ve uygulamaların cihazda görünmesi 10 dakika kadar sürebilir.
 
 7. Cihazları dağıtın. İOS/ıpados cihazı artık Intune 'A kaydolmuş ve yönetilmektedir.
-
-
-
-
-

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19a2d82f23abef49f193859c46a17cbb44a61f49
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 09aa4bf48b459b4df04c7c7b5706902010a8fde2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663353"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911293"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune için Exchange şirket içi erişimini yapılandırma
 
@@ -34,7 +34,7 @@ Ayrılmış Exchange Online ortamınız varsa ve bunun yapılandırmasının yen
 > [!IMPORTANT]
 > Bu makaledeki bilgiler bir Exchange Connector kullanımı desteklenen müşteriler için geçerlidir.
 >
-> Haziran 2020 ' den başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilmiştir.  Ortamınızda ayarlanmış bir Exchange Bağlayıcısı varsa, Intune kiracınız kullanım için desteklenir ve yapılandırmasını destekleyen Kullanıcı arabirimine erişime sahip olmaya devam edersiniz. Bağlayıcıyı kullanmaya devam edebilir veya HMA 'yı yapılandırabilir ve ardından bağlayıcınızı kaldırabilirsiniz.
+> Haziran 2020 ' den başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilmiştir.  Ortamınızda ayarlanmış bir Exchange Bağlayıcısı varsa, Intune kiracınız kullanım için desteklenir ve yapılandırmasını destekleyen Kullanıcı arabirimine erişime sahip olmaya devam edersiniz. Bağlayıcıyı kullanmaya devam edebilir veya HMA 'yı yapılandırabilir ve ardından bağlayıcınızı kaldırabilirsiniz.
 >
 > HMA kullanımı, Intune 'un Exchange bağlayıcısını kurulumunu ve kullanmasını gerektirmez. Bu değişiklik ile, aboneliğiniz ile bir Exchange Bağlayıcısı kullanmıyorsanız, Intune için Exchange bağlayıcısını yapılandırmak ve yönetmek için kullanılan Kullanıcı arabirimi Microsoft Endpoint Manager yönetim merkezinden kaldırılmıştır.
 
@@ -86,16 +86,16 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
 
   4. Platformda **Android Enterprise** ' **Platform**u seçin, **profil türünde** **e-posta** ' yı seçin.
 
-  5. [E-posta profili ayarlarını](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise)yapılandırın.
+  5. [E-posta profili ayarlarını](/intune/configuration/email-settings-android-enterprise#android-enterprise)yapılandırın.
 
   6. İşiniz bittiğinde, değişikliklerinizi kaydetmek için **Tamam**  >  **Oluştur** ' u seçin.
 
-  7. E-posta profilini oluşturduktan sonra [gruplara atayın](https://docs.microsoft.com/intune/device-profile-assign).
+  7. E-posta profilini oluşturduktan sonra [gruplara atayın](/intune/device-profile-assign).
 
-  8. [Cihaz tabanlı koşullu erişimi](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access)ayarlayın.
+  8. [Cihaz tabanlı koşullu erişimi](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access)ayarlayın.
 
 > [!NOTE]
-> Android ve iOS için Microsoft Outlook/ıpados, şirket içi Exchange Bağlayıcısı aracılığıyla desteklenmez. Şirket içi posta kutularınız için iOS/ıpados ve Android için Outlook ile koşullu erişim ilkeleri ve Intune Uygulama Koruması Ilkeleri Azure Active Directory yararlanmak istiyorsanız lütfen bkz. [iOS Için Outlook ile karma modern kimlik doğrulamasını kullanma/ıpados ve Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+> Android ve iOS için Microsoft Outlook/ıpados, şirket içi Exchange Bağlayıcısı aracılığıyla desteklenmez. Şirket içi posta kutularınız için iOS/ıpados ve Android için Outlook ile koşullu erişim ilkeleri ve Intune Uygulama Koruması Ilkeleri Azure Active Directory yararlanmak istiyorsanız lütfen bkz. [iOS Için Outlook ile karma modern kimlik doğrulamasını kullanma/ıpados ve Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Bilgisayarlar için destek
 

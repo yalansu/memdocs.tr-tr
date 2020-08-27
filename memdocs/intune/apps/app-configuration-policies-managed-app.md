@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42547885c5f791749517415b325c8c785ec52c13
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 20b5b3de16023ac475cc41a633e5d3ab915a1bd0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051412"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910732"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Cihaz kaydı olmadan yönetilen uygulamalar için uygulama yapılandırma ilkeleri ekleme
 
@@ -45,13 +45,13 @@ Intune App SDK’sını destekleyen yönetilen uygulamalarla uygulama yapıland�
  
         Intune Uygulama SDK’sı özellikli uygulamalar, anahtar/değer çiftlerinde yapılandırmaları destekler. Hangi anahtar-değer yapılandırmalarının desteklendiğini öğrenmek için uygulamaların kendi belgelerine bakın. Uygulama tarafından oluşturulan verilerle dinamik olarak doldurulacak belirteçler kullanabileceğinizi unutmayın. Genel bir yapılandırma ayarını silmek için üç nokta (**...**) simgesini seçin ve **Sil**' i seçin. Daha fazla bilgi için bkz. [belirteçleri kullanmak Için yapılandırma değerleri](app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). 
 
-    - **Outlook yapılandırma ayarları** -IOS ve Android için Outlook, yöneticilere birçok uygulama içi ayar için varsayılan yapılandırmayı özelleştirme olanağı sunar. Daha fazla bilgi için bkz. [iOS ve Android Için Outlook-genel uygulama yapılandırma senaryoları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios).
+    - **Outlook yapılandırma ayarları** -IOS ve Android için Outlook, yöneticilere birçok uygulama içi ayar için varsayılan yapılandırmayı özelleştirme olanağı sunar. Daha fazla bilgi için bkz. [iOS ve Android Için Outlook-genel uygulama yapılandırma senaryoları](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#general-app-configuration-scenarios).
    
     - **S/MIME** güvenli çok amaçlı Internet posta uzantıları (s/MIME), kullanıcıların dijital imzalı ve şifrelenmiş e-posta gönderip almasına izin veren bir belirtimdir.
         - **S/MIME 'Yi etkinleştir** -e-posta oluştururken s/MIME denetimlerinin etkinleştirilip etkinleştirilmeyeceğini belirtin. Varsayılan değer: **Yapılandırılmadı**.
         - **Kullanıcının ayarı değiştirmesine Izin ver** -kullanıcının ayarı değiştirmesine izin verilip verilmediğini belirtin. S/MIME etkin olmalıdır. Varsayılan değer: **Evet**.
         
-    Outlook uygulama yapılandırma ilkesi ayarları hakkında daha fazla bilgi için bkz. [iOS ve Android Için Outlook uygulama yapılandırma ayarları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+    Outlook uygulama yapılandırma ilkesi ayarları hakkında daha fazla bilgi için bkz. [iOS ve Android Için Outlook uygulama yapılandırma ayarları](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 7. **Atamalar** sayfasını göstermek için **İleri** ' ye tıklayın.
 8. **Dahil edilecek grupları seç ' e**tıklayın.

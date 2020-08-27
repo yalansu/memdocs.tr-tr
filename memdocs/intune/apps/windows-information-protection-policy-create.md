@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66ea84d8defa1d1d5b79f686537b391452cf3c30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 88eabe07cadf45644f3e10be338a23454c5d1711
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990287"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911997"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-policy-with-intune"></a>Intune ile Windows Information Protection (WıP) ilkesi oluşturma ve dağıtma
 
@@ -47,16 +47,16 @@ Bir WIP ilkesi eklerken kullanılan birkaç kavramı anlamanız gerekir:
 - **Mağaza uygulamaları:** Windows mağazasındaki tüm uygulamaları ilkeye ekleyebilirsiniz.
 - **Windows masaüstü uygulamaları:** İlkeye tüm geleneksel Windows masaüstü uygulamalarını ekleyebilirsiniz (örneğin .exe, .dll)
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 WıP ilkesi oluşturabilmeniz için önce MAM sağlayıcısını yapılandırmanız gerekir. [MAM sağlayıcınızı Intune ile yapılandırma](app-protection-policies-configure-windows-10.md) hakkında daha fazla bilgi edinin.  
 
 > [!IMPORTANT]
-> WIP birden çok kimliği desteklemez; aynı anda yalnızca bir yönetilen kimlik olabilir. WıP 'in özellikleri ve sınırlamaları hakkında daha fazla bilgi için bkz. [Windows Information Protection (WIP) kullanarak kurumsal verilerinizi koruma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+> WIP birden çok kimliği desteklemez; aynı anda yalnızca bir yönetilen kimlik olabilir. WıP 'in özellikleri ve sınırlamaları hakkında daha fazla bilgi için bkz. [Windows Information Protection (WIP) kullanarak kurumsal verilerinizi koruma](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 Ayrıca aşağıdaki lisans ve güncelleştirmeye de sahip olmanız gerekir:
 
-- [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) lisansı
+- [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) lisansı
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
@@ -68,7 +68,7 @@ Ayrıca aşağıdaki lisans ve güncelleştirmeye de sahip olmanız gerekir:
 Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsiniz.
 
 > [!TIP]  
-> Intune için WIP ilkeleri oluşturma hakkında, kullanılabilecek ayarlar ve bunların nasıl yapılandırıldığı dahil konuyla ilgili bilgiler için Windows Güvenlik belgeleri kitaplığındaki [Microsoft Intune için Azure portalını kullanarak MAM ile Windows Bilgi Koruması (WIP) ilkesi oluşturma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) konusuna bakın. 
+> Intune için WIP ilkeleri oluşturma hakkında, kullanılabilecek ayarlar ve bunların nasıl yapılandırıldığı dahil konuyla ilgili bilgiler için Windows Güvenlik belgeleri kitaplığındaki [Microsoft Intune için Azure portalını kullanarak MAM ile Windows Bilgi Koruması (WIP) ilkesi oluşturma](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) konusuna bakın. 
 
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
@@ -78,7 +78,7 @@ Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsi
     - **Açıklama:** (İsteğe bağlı) Bir açıklama yazın.
     - **Platform:** WıP ilkeniz için desteklenen platform olarak **Windows 10** ' ı seçin.
     - **Kayıt durumu:** İlkeniz için kayıt durumu olarak **Kayıt olmadan**’ı seçin.
-4. **Oluştur**’u seçin. İlke oluşturulur ve **Uygulama koruma ilkeleri** bölmesindeki tabloda görüntülenir.
+4. **Oluştur**' a tıklayın. İlke oluşturulur ve **Uygulama koruma ilkeleri** bölmesindeki tabloda görüntülenir.
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Korunan uygulamalar listenize önerilen uygulamalar eklemek için
 
@@ -88,7 +88,7 @@ Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsi
 4. **Intune uygulama koruması** bölmesinden **korumalı uygulamalar** ' ı seçin. **Korunan uygulamalar** bölmesi, bu uygulama koruma ilkesi için listede zaten bulunan tüm uygulamaları gösteren açılır.
 5. **Uygulama ekle**’yi seçin. **Uygulama ekle** bilgileri uygulamaların filtrelenmiş bir listesini gösterir. Bölmenin en üstündeki liste, liste filtresini değiştirmenize izin verir.
 6. Şirket verilerinize erişmesine izin vermek istediğiniz her uygulamayı seçin.
-7. **Tamam**'a tıklayın. **Korumalı uygulamalar** bölmesi, seçilen tüm uygulamaların gösterildiği güncelleştirilmiş.
+7. **Tamam** düğmesine tıklayın. **Korumalı uygulamalar** bölmesi, seçilen tüm uygulamaların gösterildiği güncelleştirilmiş.
 8. **Kaydet**’e tıklayın.
 
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Korunan uygulamalar listenize bir Store uygulaması eklemek için
@@ -102,7 +102,7 @@ Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsi
 5. **Uygulama ekle**’yi seçin. **Uygulama ekle** bilgileri uygulamaların filtrelenmiş bir listesini gösterir. Bölmenin en üstündeki liste, liste filtresini değiştirmenize izin verir.
 6. Listeden **Mağaza uygulamaları**’nı seçin.
 7. **Ad**, **Yayımcı**, **Ürün Adı** ve **Eylem** için değerleri girin. Uygulamanın şirket verilerinize erişebilmesi için **Eylem** değerini **İzin Ver** olarak ayarladığınızdan emin olun.
-9. **Tamam**'a tıklayın. **Korumalı uygulamalar** bölmesi, seçilen tüm uygulamaların gösterildiği güncelleştirilmiş.
+9. **Tamam** düğmesine tıklayın. **Korumalı uygulamalar** bölmesi, seçilen tüm uygulamaların gösterildiği güncelleştirilmiş.
 10. **Kaydet**’e tıklayın.
 
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Korunan uygulamalar listenize bir masaüstü uygulaması eklemek için
@@ -115,7 +115,7 @@ Kuruluşunuzda Intune'u kurduktan sonra WIP’ye özel bir ilke oluşturabilirsi
 5. **Uygulama ekle**’yi seçin. **Uygulama ekle** bilgileri uygulamaların filtrelenmiş bir listesini gösterir. Bölmenin en üstündeki liste, liste filtresini değiştirmenize izin verir.
 6. Listeden **Masaüstü uygulamaları**’nı seçin.
 7. **Ad**, **Yayımcı**, **Ürün Adı**, **Dosya**, **En Düşük Sürüm**, **En Yüksek Sürüm** ve **Eylem** için değerler girin. Uygulamanın şirket verilerinize erişebilmesi için **Eylem** değerini **İzin Ver** olarak ayarladığınızdan emin olun.
-9. **Tamam**'a tıklayın. **Korumalı uygulamalar** bölmesi, seçilen tüm uygulamaların gösterildiği güncelleştirilmiş.
+9. **Tamam** düğmesine tıklayın. **Korumalı uygulamalar** bölmesi, seçilen tüm uygulamaların gösterildiği güncelleştirilmiş.
 10. **Kaydet**’e tıklayın.
 
 ## <a name="wip-learning"></a>WIP Öğrenme
@@ -156,7 +156,7 @@ WIP’yi kapatmanızdan sonra yerel olarak bağlı sürücülerde WIP ile etiket
 
 ### <a name="use-wip-learning"></a>WIP Öğrenme’yi kullanma
 
-1. [Azure Portal](https://portal.azure.com)açın. **Tüm hizmetler**’i seçin. Metin kutusu filtresine **Intune** yazın.
+1. [Azure portalını](https://portal.azure.com) açın. **Tüm hizmetler**’i seçin. Metin kutusu filtresine **Intune** yazın.
 
 3. **Intune**  >  **uygulamalarını**seçin.
 
@@ -194,4 +194,4 @@ WIP uygulama koruma ilkenizi oluşturduktan sonra, bu ilkeyi MAM’yi kullanarak
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Windows Bilgi Koruması hakkında daha fazla bilgi için bkz. [Windows Bilgi Koruması’nı (WIP) kullanarak kurumsal verilerinizi koruma](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
+Windows Bilgi Koruması hakkında daha fazla bilgi için bkz. [Windows Bilgi Koruması’nı (WIP) kullanarak kurumsal verilerinizi koruma](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).

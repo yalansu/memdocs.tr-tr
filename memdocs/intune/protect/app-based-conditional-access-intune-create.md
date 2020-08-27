@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d07b87bca934dac924f2d2c281ecb7b2a2e8a2c
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: a61e92265447f8ceced83d493b9397713b67dca6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989781"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909440"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Intune ile uygulama tabanlı koşullu erişim ilkeleri ayarlama
 
@@ -32,7 +32,7 @@ Onaylanan uygulamalar listesinin parçası olan uygulamalar için uygulama taban
 Uygulama tabanlı koşullu erişim ilkelerini kullanabilmeniz için uygulamalarınıza [Intune uygulama koruma ilkelerinin](../apps/app-protection-policies.md) uygulanması gerekir.
 
 > [!IMPORTANT]
-> Bu makalede, basit uygulama tabanlı bir koşullu erişim ilkesi ekleme adımlarında izlenecek yol gösterilmektedir. Diğer bulut uygulamaları için de aynı adımları kullanabilirsiniz. Daha fazla bilgi için bkz. [koşullu erişim dağıtımını planlayın](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)
+> Bu makalede, basit uygulama tabanlı bir koşullu erişim ilkesi ekleme adımlarında izlenecek yol gösterilmektedir. Diğer bulut uygulamaları için de aynı adımları kullanabilirsiniz. Daha fazla bilgi için bkz. [koşullu erişim dağıtımını planlayın](/azure/active-directory/conditional-access/plan-conditional-access)
 
 ## <a name="create-app-based-conditional-access-policies"></a>Uygulama tabanlı koşullu erişim ilkeleri oluşturma
 
@@ -72,4 +72,4 @@ Microsoft Endpoint Manager yönetim merkezinden koşullu erişim ilkeleri oluşt
 ## <a name="see-also"></a>Ayrıca bkz.
 
 Uygulama [koruma ilkeleriyle](../apps/app-protection-policies.md) 
- uygulama verilerini koruma [Azure Active Directory Koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
+ uygulama verilerini koruma [Azure Active Directory Koşullu erişim](/azure/active-directory/active-directory-conditional-access)

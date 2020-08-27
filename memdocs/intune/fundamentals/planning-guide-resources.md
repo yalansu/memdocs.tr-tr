@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e50d518c3709d71085a57ad9a430444564c24cb9
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: a385b990dfb3c81ea10454b2134f92dec5a2f073
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79331010"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907676"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Intune dağıtımınızı planlamak için ek kaynaklar
 
@@ -50,7 +50,7 @@ Her bölüm için tablo şablonları listesi aşağıdadır.
 
 Intune dağıtım planlama, tasarım ve uygulama süreci sırasında yardımcı olabilecek ek bilgiler için bu kaynaklara göz atın.
 
-- [Microsoft Intune belgeleri](https://docs.microsoft.com/intune/) - Intune belgelerinin tamamı.
+- [Microsoft Intune belgeleri](/intune/) - Intune belgelerinin tamamı.
 
 - [Microsoft Güven Merkezi](https://www.microsoft.com/TrustCenter) - Microsoft’un tüm Microsoft bulut ürünlerinde ve hizmetlerindeki güvenlik, gizlilik, uyumluluk ve şeffaflık yaklaşımını öğrenin.
 

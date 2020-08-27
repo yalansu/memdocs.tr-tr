@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b26bf4910e6745a60634a2b313a37beeb33192d3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 9c7300c03ce0ba703f423aa420e9e47534ef2968
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986904"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908692"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Mevcut şirket içi proxy sunucularıyla çalışma
 
 Bu makalede, Active Directory için Intune bağlayıcısının giden proxy sunucularıyla çalışacak şekilde nasıl yapılandırılacağı açıklanmaktadır. Mevcut proxy 'leri olan ağ ortamları olan müşterilere yöneliktir.
 
-Varsayılan olarak, Active Directory için Intune Bağlayıcısı, Web proxy otomatik bulma (WPAD) kullanarak ağ üzerindeki bir proxy sunucusunu otomatik olarak bulmaya çalışır. Ağınız üzerinde yapılandırılmışsa, ek yapılandırma gerekli olmayabilir.  Değişiklikler gerekiyorsa aşağıdaki bölümlerde, [proxy ayarlarını yapılandırmaya yönelik standart .NET Framework yeteneklerini](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)kullanarak varsayılan ayarların nasıl geçersiz kılındığı açıklanır.  Bu belgelerde ek seçenekler açıklanmaktadır.
+Varsayılan olarak, Active Directory için Intune Bağlayıcısı, Web proxy otomatik bulma (WPAD) kullanarak ağ üzerindeki bir proxy sunucusunu otomatik olarak bulmaya çalışır. Ağınız üzerinde yapılandırılmışsa, ek yapılandırma gerekli olmayabilir.  Değişiklikler gerekiyorsa aşağıdaki bölümlerde, [proxy ayarlarını yapılandırmaya yönelik standart .NET Framework yeteneklerini](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)kullanarak varsayılan ayarların nasıl geçersiz kılındığı açıklanır.  Bu belgelerde ek seçenekler açıklanmaktadır.
 
-Bağlayıcıların nasıl çalıştığı hakkında daha fazla bilgi için bkz. [Azure AD uygulama ara sunucusu bağlayıcıları anlama](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors).
+Bağlayıcıların nasıl çalıştığı hakkında daha fazla bilgi için bkz. [Azure AD uygulama ara sunucusu bağlayıcıları anlama](/azure/active-directory/manage-apps/application-proxy-connectors).
 
 ## <a name="completely-bypass-outbound-proxies"></a>Giden proxy 'leri tamamen atla
 
@@ -64,7 +64,7 @@ Bağlayıcı için giden proxy kullanımını devre dışı bırakmak için: \Pr
 </configuration>
 ```
 
-Bağlayıcı Güncelleştiricisi hizmetinin proxy 'yi de atlayacak emin olmak için, C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config. 'de benzer bir değişiklik yapın
+Bağlayıcı Güncelleştiricisi hizmetinin proxy 'yi de atlayacak emin olmak için, C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config 'de benzer bir değişiklik yapın.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -124,7 +124,7 @@ Farklı bir ara sunucunun (örneğin, kimlik doğrulamasını atlayan bir tane) 
 </configuration>
 ```
 
-Bağlayıcı Güncelleştiricisi hizmetinin proxy 'yi de atlayacak emin olmak için, C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config. 'de benzer bir değişiklik yapın
+Bağlayıcı Güncelleştiricisi hizmetinin proxy 'yi de atlayacak emin olmak için, C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config 'de benzer bir değişiklik yapın.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

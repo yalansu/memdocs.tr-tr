@@ -19,12 +19,12 @@ ms.reviewer: annochiva
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 826515026e578cb993bb706fc61dedb4a80fb3e6
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f0a674753ff23fca509bd21e6b52101104a6803f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464958"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910800"
 ---
 # <a name="store-your-personal-filevault-key"></a>Kişisel dosya Kasası anahtarınızı depolayın 
 
@@ -63,7 +63,7 @@ Kuruluşunuzun ilkelerine bağlı olarak, anahtarınızı karşıya yükleyene k
 2. Şifrelenmiş cihazınızı seçin.
 3. **Mağaza kurtarma anahtarını**seçin.  
 4. 24 karakterlik, alfasayısal dosya Kasası anahtarınızı girin.  
-5. Anahtarı yeniden girin. Ardından **Kaydet**’i seçin.
+5. Anahtarı yeniden girin. Sonra **Kaydet**'i seçin.
 6. Şirket Portalı kişisel kurtarma anahtarınızı doğrulamaya, döndürmeye ve kaydetmeye çalışacaktır. Anahtar kaydedildikten sonra başka bir eylem gerekmez. Karşıya yükleme tamamlanmadan önce Web sitesini bırakırsanız, bir sonraki oturum açışınızda cihaz ayrıntıları sayfasında durumunu görüntüleyebilirsiniz.  
 
 Bu işlem sırasında görebileceğiniz iletiler hakkında daha fazla bilgi için bkz. [Şirket portalı iletileri](store-recovery-key.md#company-portal-messages).  
@@ -81,7 +81,7 @@ Bu işlem sırasında görebileceğiniz iletiler hakkında daha fazla bilgi içi
 
 ## <a name="it-pro-support"></a>BT uzmanı desteği
 
-BT destek sorumlunuza sahipseniz ve kuruluşunuzdaki Mac cihazları için dosya Kasası şifrelemesini yapılandırmak ve yönetmek istiyorsanız, bkz. [Intune Ile macOS Için filekasası disk şifrelemeyi kullanma](https://docs.microsoft.com/mem/intune/protect/encrypt-devices-filevault).  
+BT destek sorumlunuza sahipseniz ve kuruluşunuzdaki Mac cihazları için dosya Kasası şifrelemesini yapılandırmak ve yönetmek istiyorsanız, bkz. [Intune Ile macOS Için filekasası disk şifrelemeyi kullanma](../protect/encrypt-devices-filevault.md).  
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -89,4 +89,4 @@ Anahtarınızı her zaman Şirket Portalı Web sitesinden, Intune uygulamasında
 
 Şirket Portalı Web sitesinde yapabileceğiniz diğer şeyleri öğrenin. Eylemlerin listesi için [Intune şirket portalı Web sitesini kullanma](using-the-intune-company-portal-website.md) konusuna bakın.  
 
-Bu bilgiler yardımcı olmadı mı? BT destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  
+Bu bilgiler yardımcı olmadı mı? BT destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

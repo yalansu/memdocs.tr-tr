@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3a20477b643da961f5c7281d92f3d24a4e7313d
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 2e61e7e8bae436e567bceec5f098170cfb7b7c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443858"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907761"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Power BI ile Veri Ambarına bağlanma
 
@@ -42,7 +42,7 @@ Power BI Uyumluluğu uygulamasını kullanarak Intune kiracınız için etkileş
 Ayrıca kayıt, uyumluluk, cihaz yapılandırma profili ve yazılım güncelleştirmeleri için vurgulanan eğilimler de vardır. Örnek grafikler ve raporlar, tuvale kullanıcı dostu filtreler uygular. Gelişmiş filtreler kullanmak için Power BI Desktop’taki **Filtre** panosuna bakın.
 
 > [!NOTE]
-> Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sahip Power BI uygulamalar oluşturmasına ve bunları herhangi bir Power BI müşteriye dağıtmalarına olanak tanır. Örneğin, V 2.0 'daki Power BI uyumluluk raporu şablonunu kullanabilirsiniz. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [şablon uygulamasını güncelleştirme](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app), [Intune uyumluluk (veri ambarı) uygulaması](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)ve [Power BI şablon uygulamaları nedir?](https://docs.microsoft.com/power-bi/service-template-apps-overview)
+> Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sahip Power BI uygulamalar oluşturmasına ve bunları herhangi bir Power BI müşteriye dağıtmalarına olanak tanır. Örneğin, V 2.0 'daki Power BI uyumluluk raporu şablonunu kullanabilirsiniz. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [şablon uygulamasını güncelleştirme](/power-bi/service-template-apps-install-distribute#update-a-template-app), [Intune uyumluluk (veri ambarı) uygulaması](https://appsource.microsoft.com/product/power-bi/pbi_intune.intune_compliance_dw_app-preview?flightCodes=65ede247-5273-43b8-8a25-b89c7d211fbd)ve [Power BI şablon uygulamaları nedir?](/power-bi/service-template-apps-overview)
 
 Aşağıdaki adımlar, Power BI dosyasını nasıl indireceğinizi ve OData bağlantısını Power BI ile nasıl kullanacağınızı gösterir.
 
@@ -94,7 +94,7 @@ Azure AD’de istemci kimliği doğrulandığı zaman OData URL’si, Veri Ambar
     1. **Kuruluş hesabını** seçin.  
     2. Kullanıcı adınızı ve parolanızı yazın.  
     3. **Oturum aç '** ı seçin.  
-    4. **Bağlan**'ı seçin.  
+    4. **Bağlan**’ı seçin.  
 10. **Yükle**'yi seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar

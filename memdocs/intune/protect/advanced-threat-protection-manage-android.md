@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e3b12251117e689f3b4a5456cf20bae3797083a
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 49423d1d1b887aaf3ed3323ff36678bb7319b1ad
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264485"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909474"
 ---
 # <a name="configure-microsoft-defender-atp-on-android-devices-you-manage-with-intune"></a>Intune ile yönettiğiniz Android cihazlarda Microsoft Defender ATP 'yi yapılandırma
 
@@ -31,7 +31,7 @@ Microsoft Intune ve Microsoft Defender Gelişmiş tehdit koruması 'nı (ATP) t�
 
 ## <a name="configure-web-protection-on-devices-that-run-android"></a>Android çalıştıran cihazlarda web korumasını yapılandırma
 
-Varsayılan olarak, Android için Microsoft Defender ATP, Web Koruması özelliğini içerir ve sunar. [Web koruması](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) , cihazların Web tehditlerine karşı güvenliğini sağlamaya ve kullanıcıların kimlik avı saldırılarına karşı korunmasına yardımcı olur.
+Varsayılan olarak, Android için Microsoft Defender ATP, Web Koruması özelliğini içerir ve sunar. [Web koruması](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) , cihazların Web tehditlerine karşı güvenliğini sağlamaya ve kullanıcıların kimlik avı saldırılarına karşı korunmasına yardımcı olur.
 
 Varsayılan olarak etkinleştirildiğinde, bazı Android cihazlarda bu korumanın devre dışı bırakılması için geçerli nedenler vardır. Örneğin, yalnızca Microsoft Defender ATP uygulama tarama özelliğini kullanmayı veya zararlı URL 'Leri tararken Web korumasının VPN 'nizi kullanmasını engellemek için seçeneğini kullanabilirsiniz.
 
@@ -127,5 +127,5 @@ Cihazlarda web koruması 'nı yapılandırmak için, uygulanabilir yapılandırm
 
 Microsoft Defender ATP belgelerinden daha fazla bilgi edinin:
 
-- [Microsoft Defender ATP koşullu erişimi](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP risk panosu](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Microsoft Defender ATP koşullu erişimi](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP risk panosu](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

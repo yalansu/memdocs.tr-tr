@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27d31e64e99e8dc796b0436052f7220260ab1029
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795678"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906829"
 ---
 # <a name="see-device-details-in-intune"></a>Intune'da cihaz ayrıntılarına bakın
 
@@ -39,7 +39,7 @@ Bu makalede, tüm cihazlarınızı ve özelliklerini Azure portalında nasıl g�
    - **Genel bakış** cihaz adını gösterir ve cihazın kişisel veya kurumsal bir cihaz, seri numarası, birincil kullanıcı ve daha fazlası gibi bazı temel özelliklerini listeler. Cihazda şunları yapabilirsiniz:
       - [Devre dışı bırak](devices-wipe.md#retire)
       - [Silme](devices-wipe.md#wipe)
-      - [Sil](devices-wipe.md#delete-devices-from-the-intune-portal)
+      - [Silme](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Uzaktan kilitleme](device-remote-lock.md)
       - [Eşitle](device-sync.md)
       - [Geçiş kodunu sıfırla](device-passcode-reset.md)
@@ -48,10 +48,10 @@ Bu makalede, tüm cihazlarınızı ve özelliklerini Azure portalında nasıl g�
       - [Autopilot sıfırlaması](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (yalnızca Windows)
       - [Hızlı tarama](../configuration/device-restrictions-windows-10.md) (yalnızca Windows 10)
       - [Tam tarama](../configuration/device-restrictions-windows-10.md) (yalnızca Windows 10)
-      - [Windows Defender güvenlik zekası 'nı güncelleştirme](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
-      - [BitLocker anahtar döndürme](https://docs.microsoft.com/mem/intune/protect/encrypt-devices#to-rotate-the-bitlocker-recovery-key)
+      - [Windows Defender güvenlik zekası 'nı güncelleştirme](/windows/security/threat-protection/microsoft-defender-antivirus/manage-protection-updates-microsoft-defender-antivirus)
+      - [BitLocker anahtar döndürme](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key)
       - [Cihazı yeniden adlandırma](device-rename.md)
-      - [Yeni Uzaktan Yardım oturumu](https://docs.microsoft.com/mem/intune/remote-actions/teamviewer-support)
+      - [Yeni Uzaktan Yardım oturumu](./teamviewer-support.md)
    - **Özellikler**’i kullanarak [oluşturduğunuz bir cihaz kategorisini](../enrollment/device-group-mapping.md) atayabilir ve cihazın sahipliğini kişisel veya şirket olarak değiştirebilirsiniz.
    - **Donanım** cihaz kimliği, işletim sistemi ve sürümü, depolama alanı ve daha fazla ayrıntı gibi cihazla ilgili birçok ayrıntıyı içerir.
    - **Bulunan uygulamalar**, Intune’un cihazda yüklü olduğunu bulduğu tüm uygulamaları ve uygulama sürümlerini listeler. Daha fazla bilgi için bkz. [Intune bulunan uygulamalar](../apps/app-discovered-apps.md).
@@ -70,7 +70,7 @@ Cihazlar tarafından kullanılan taşıyıcıya bağlı olarak, tüm ayrıntıla
 
 |Ayrıntı|Açıklama|Platform| 
 |--------------|----------------------|----|  
-|Name|Cihazın adı.|Windows, iOS|
+|Ad|Cihazın adı.|Windows, iOS|
 |Yönetim adı|Yalnızca konsolda kullanılan cihaz adı. Bu adın değiştirilmesi, cihazdaki adı değiştirmez.|Windows, iOS|
 |UDID|Cihazın Benzersiz Cihaz tanımlayıcısı.|Windows, iOS|
 |Intune Cihaz Kimliği|Cihazı benzersiz şekilde tanımlayan GUID.|Windows, iOS|
@@ -87,7 +87,7 @@ Cihazlar tarafından kullanılan taşıyıcıya bağlı olarak, tüm ayrıntıla
 |IMEI|Cihazın Uluslararası Mobil Ekipman Tanımlayıcısı.|Windows, iOS/ıpados, Android|
 |MEID|Cihazın mobil ekipman tanımlayıcısı.|Windows, iOS/ıpados, Android|
 |Üretici|Cihazın üreticisi.|Windows, iOS/ıpados, Android|
-|Model|Cihazın modeli.|Windows, iOS/ıpados, Android|
+|Modelleme|Cihazın modeli.|Windows, iOS/ıpados, Android|
 |Telefon numarası|Cihaza atanan telefon numarası.|Windows, iOS/ıpados, Android *|
 |Abone operatör|Cihazın kablosuz operatörü.|Windows, iOS/ıpados, Android|
 |Hücresel teknoloji|Cihaz tarafından kullanılan radyo sistemi.|Windows, iOS/ıpados, Android|

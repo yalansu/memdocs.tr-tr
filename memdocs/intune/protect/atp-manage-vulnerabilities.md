@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1d410da2cbedb9bcd2418fac1ddb783529ee8c6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d5c57dcbe91d18b633831bafde3a0feae997ba76
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262600"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909389"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Intune kullanarak Microsoft Defender ATP tarafından tanımlanan güvenlik açıklarını düzeltin
 
 Intune 'U Microsoft Defender Gelişmiş tehdit koruması (ATP) ile tümleştirdiğinizde, ATPs tehdidi & güvenlik açığı yönetimi 'nden (TVM) yararlanabilir ve TVM tarafından tanımlanan uç nokta zayıflılığını düzeltmek için Intune 'U kullanabilirsiniz. Bu tümleştirme, ortamınızda düzeltme yanıt süresini iyileştirebilecek güvenlik açıklarının bulunmasına ve önceliklendirilmesine yönelik risk tabanlı bir yaklaşım sunar.
 
-[Tehdit & güvenlik açığı yönetimi](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) , [Microsoft Defender Gelişmiş tehdit koruması](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection)'nın bir parçasıdır.
+[Tehdit & güvenlik açığı yönetimi](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) , [Microsoft Defender Gelişmiş tehdit koruması](/windows/security/threat-protection/windows-defender-atp/windows-defender-advanced-threat-protection)'nın bir parçasıdır.
 
 ## <a name="how-integration-works"></a>Tümleştirme nasıl çalışacaktır?
 
@@ -108,4 +108,4 @@ Intune ve [Microsoft Defender ATP](advanced-threat-protection.md)hakkında daha 
 
 Intune [Mobile Threat](mobile-threat-defense.md)Defense ' i gözden geçirin.
 
-Microsoft Defender ATP 'de [tehdit & güvenlik açığı yönetimi panosunu](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) gözden geçirin.
+Microsoft Defender ATP 'de [tehdit & güvenlik açığı yönetimi panosunu](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) gözden geçirin.

@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a463742a9511f21a98c277394f8c0d29084d379
-ms.sourcegitcommit: fb77170957f50aa386ff825fb4183b4fd9e3e488
+ms.openlocfilehash: b7486fa6770db03bb47ccf3e069499c02c6d598c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791756"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916053"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Intune ile Windows holographic ve HoloLens cihazlarda farklı cihaz yönetimi özelliklerini yönetme ve kullanma
 
-Microsoft Intune, [Microsoft HoloLens](https://docs.microsoft.com/hololens/) gibi Windows Holographic for Business çalıştıran cihazları yönetmenize yardımcı olan birçok özelliğe sahiptir. Intune ile cihazlarınızın kuruluş kurallarına uygun olduğunu onaylayabilir ve VPN veya WiFi profili ekleyerek cihazları özelleştirebilirsiniz. Bir diğer önemli özellik de cihazı Bilgi noktası olarak kullanmak ve belirli bir uygulamayı veya belirli bir uygulama dizisini çalıştırmaktır.
+Microsoft Intune, [Microsoft HoloLens](/hololens/) gibi Windows Holographic for Business çalıştıran cihazları yönetmenize yardımcı olan birçok özelliğe sahiptir. Intune ile cihazlarınızın kuruluş kurallarına uygun olduğunu onaylayabilir ve VPN veya WiFi profili ekleyerek cihazları özelleştirebilirsiniz. Bir diğer önemli özellik de cihazı Bilgi noktası olarak kullanmak ve belirli bir uygulamayı veya belirli bir uygulama dizisini çalıştırmaktır.
 
 Bu makaledeki görevler yazılım güncelleştirmeleri ve Windows Hello for Business kullanımı dahil olmak üzere Windows Holographic for Business çalıştıran cihazlarınızı yönetme, özelleştirme ve güvenliğini sağlama konusunda yardımcı olacaktır.
 
@@ -35,9 +35,9 @@ Windows Holographic cihazlarını Intune ile birlikte kullanmak için bir Sürü
 
 Azure Active Directory (AD), Windows Holographic for Business çalıştıran cihazlarınızı yönetmeye ve denetlemeye yardımcı olmak için mükemmel bir kaynaktır. Intune ve Azure AD kullanarak şunları yapabilirsiniz: 
 
-- **[Cihazları Azure Active Directory 'a](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)** ekleyin: Azure ACTIVE DIRECTORY (ad) Içinde, Windows holographic for Business çalıştıran cihazlar dahil olmak üzere, Işe ait Windows 10 cihazlarınızı ekleyebilirsiniz. Bu özellik, Azure AD’nin cihazı denetlemesini sağlar. Kullanıcıların şirket kaynaklarına güvenlik ve uyumluluk standartlarına uygun cihazlardan eriştiğini doğrulamaya yardımcı olur.
+- **[Cihazları Azure Active Directory 'a](/azure/active-directory/devices/azureadjoin-plan)** ekleyin: Azure ACTIVE DIRECTORY (ad) Içinde, Windows holographic for Business çalıştıran cihazlar dahil olmak üzere, Işe ait Windows 10 cihazlarınızı ekleyebilirsiniz. Bu özellik, Azure AD’nin cihazı denetlemesini sağlar. Kullanıcıların şirket kaynaklarına güvenlik ve uyumluluk standartlarına uygun cihazlardan eriştiğini doğrulamaya yardımcı olur.
 
-  [Azure AD 'de cihaz yönetimi](https://docs.microsoft.com/azure/active-directory/devices/overview) daha fazla ayrıntı sağlar.
+  [Azure AD 'de cihaz yönetimi](/azure/active-directory/devices/overview) daha fazla ayrıntı sağlar.
 
 - **[Windows cihazlar için toplu kayıt](../enrollment/windows-bulk-enroll.md)**: Çok sayıda yeni Windows cihazı Azure Active Directory (AD) ve Intune’a dahil edebilirsiniz. Bu özellik, toplu kayıt olarak adlandırılır ve sağlama paketleri kullanır. Bu paketler, Windows Holographic for Business çalıştıran cihazları Azure AD kiracınıza dahil eder ve Intune’a kaydeder.
 
@@ -117,7 +117,7 @@ Profillerinizde bazı ayarları özelleştirmek, cihaz kısıtlamaları oluştur
 
 OMA-URI (Açık Mobil Birlik Tekdüzen Kaynak Tanımlayıcısı) ayarlarını yapılandırmak için Intune’da özel bir profil oluşturabilirsiniz. Windows Holographic for Business cihazlarınızda VPN’i etkinleştirmek veya Microsoft Update’te güncelleştirmeleri denetlemek gibi farklı özellikleri kontrol etmek için OMA-URI ayarlarını kullanın.
 
-[Windows Defender uygulama denetimi (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp) 'sini [kullanarak, uygulamaların](../configuration/custom-profile-hololens.md) HoloLens 2 cihazlarında açılmasına izin verin veya bunları engelleyin.
+[Windows Defender uygulama denetimi (WDAC) CSP](/windows/client-management/mdm/applicationcontrol-csp) 'sini [kullanarak, uygulamaların](../configuration/custom-profile-hololens.md) HoloLens 2 cihazlarında açılmasına izin verin veya bunları engelleyin.
 
 ### <a name="configure-kiosk-mode"></a>[Bilgi noktası modunu yapılandırma](../configuration/kiosk-settings-holographic.md)
 

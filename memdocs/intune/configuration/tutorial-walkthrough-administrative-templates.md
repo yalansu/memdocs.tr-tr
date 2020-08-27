@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 682934276a080323976e7045a14450dc382f4574
-ms.sourcegitcommit: 4174f7e485067812c29aea01a4767989ffdbb578
+ms.openlocfilehash: da725c63c340a3ff64e1f69f96f59bd5dea30eb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83406648"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907903"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Öğretici: Windows 10 cihazlarında ADMX şablonları ve Microsoft Intune Grup İlkesi yapılandırmak için bulutu kullanın
 
@@ -37,7 +37,7 @@ ADMX şablonları aşağıdaki hizmetler için kullanılabilir:
 - **Office**: [Microsoft 365 Apps, Office 2019 ve Office 2016 '](https://www.microsoft.com/download/details.aspx?id=49030)de indirin.
 - **Windows**: Windows 10 işletim sisteminde yerleşik olarak.
 
-ADMX ilkeleri hakkında daha fazla bilgi için bkz. [ADMX ile desteklenen Ilkeleri anlama](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies).
+ADMX ilkeleri hakkında daha fazla bilgi için bkz. [ADMX ile desteklenen Ilkeleri anlama](/windows/client-management/mdm/understanding-admx-backed-policies).
 
 Bu Şablonlar Microsoft Intune için yerleşiktir ve **Yönetim Şablonları** profilleri olarak kullanılabilir. Bu profilde, dahil etmek istediğiniz ayarları yapılandırıp daha sonra bu profili cihazlarınıza "atamalısınız".
 
@@ -55,9 +55,9 @@ Bu özellik şu platformlarda geçerlidir:
 
 - Windows 10 sürüm 1709 ve üzeri
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- Intune ve Azure Active Directory (AD) Premium içeren bir Microsoft 365 E3 veya E5 aboneliği. E3 veya E5 aboneliğiniz yoksa [ücretsiz olarak deneyin](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
+- Intune ve Azure Active Directory (AD) Premium içeren bir Microsoft 365 E3 veya E5 aboneliği. E3 veya E5 aboneliğiniz yoksa [ücretsiz olarak deneyin](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
 
   Farklı Microsoft 365 lisanslarıyla neler alacağınız hakkında daha fazla bilgi için bkz. [kuruluşunuzu Microsoft 365 dönüştürme](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
@@ -123,7 +123,7 @@ Ayrıca, [Microsoft 365 Yönetim merkezinden](https://admin.microsoft.com)Endpoi
 
 Şirket içi ilkeler, LSDOU sıralaması-yerel, site, etki alanı ve kuruluş birimine (OU) uygulanır. Bu hiyerarşide, OU ilkeleri yerel ilkelerin üzerine yazılır, etki alanı ilkeleri site ilkelerinin üzerine yazar ve bu şekilde devam eder.
 
-Intune 'da, ilkeler oluşturduğunuz kullanıcılara ve gruplara uygulanır. Hiyerarşi yok. Örneğin:
+Intune 'da, ilkeler oluşturduğunuz kullanıcılara ve gruplara uygulanır. Hiyerarşi yok. Örnek:
 
 - İki ilke aynı ayarı güncelleştiriyorsa, ayar çakışma olarak gösterilir.
 - İki uyumluluk ilkesi çakışırsa, en kısıtlayıcı ilke uygulanır.
@@ -190,10 +190,10 @@ Bu sonraki adımlarda güvenlik grupları oluşturur ve bu gruplara kullanıcıl
 
 - Dinamik Gruplar Azure AD Premium bir özelliktir. Azure AD Premium yoksa, yalnızca atanan gruplar oluşturmaya lisanslanır. Dinamik Gruplar hakkında daha fazla bilgi için bkz.
 
-  - [Azure Active Directory dinamik grup üyeliği (Bölüm 1)](https://blogs.technet.microsoft.com/pauljones/2017/08/28/dynamic-group-membership-in-azure-active-directory-part-1/)
-  - [Azure Active Directory dinamik grup üyeliği (2. bölüm)](https://blogs.technet.microsoft.com/pauljones/2017/08/29/dynamic-group-membership-in-azure-active-directory-part-2/)
+  - [Azure Active Directory dinamik grup üyeliği (Bölüm 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Azure Active Directory dinamik grup üyeliği (2. bölüm)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium, [çok faktörlü kimlik doğrulaması (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks) ve [koşullu erişim](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)de dahil olmak üzere uygulama ve cihazları yönetirken yaygın olarak kullanılan diğer hizmetleri içerir.
+- Azure AD Premium, [çok faktörlü kimlik doğrulaması (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) ve [koşullu erişim](/azure/active-directory/conditional-access/overview)de dahil olmak üzere uygulama ve cihazları yönetirken yaygın olarak kullanılan diğer hizmetleri içerir.
 
 - Birçok yönetici, Kullanıcı gruplarını ne zaman kullanacağınızı ve cihaz gruplarının ne zaman kullanılacağını sorar. Bazı rehberlik için bkz. [Kullanıcı grupları ve cihaz grupları karşılaştırması](device-profile-assign.md#user-groups-vs-device-groups).
 
@@ -202,8 +202,8 @@ Bu sonraki adımlarda güvenlik grupları oluşturur ve bu gruplara kullanıcıl
   - Tüm öğrenciler
   - Tüm Android cihazlar
   - Tüm iOS/ıpados cihazları
-  - Pazarlama
-  - İnsan Kaynakları
+  - Marketing
+  - Human Resources
   - Tüm Charlotte çalışanları
   - Tüm Redmond çalışanları
   - Batı Yakası IT yöneticileri
@@ -420,7 +420,7 @@ Ayarlarınız aşağıdaki ayarlara benzer şekilde görünür:
 > [!div class="mx-imgBorder"]
 > ![Microsoft Intune OneDrive yönetim şablonu oluşturma](./media/tutorial-walkthrough-administrative-templates/one-drive-administrative-template.png)
 
-OneDrive istemci ayarları hakkında daha fazla bilgi için bkz. [OneDrive Sync istemci ayarlarını denetlemek için Grup İlkesi kullanma](https://docs.microsoft.com/onedrive/use-group-policy).
+OneDrive istemci ayarları hakkında daha fazla bilgi için bkz. [OneDrive Sync istemci ayarlarını denetlemek için Grup İlkesi kullanma](/onedrive/use-group-policy).
 
 ### <a name="assign-your-template"></a>Şablonunuzu atama
 
@@ -438,7 +438,7 @@ Bu noktada, bazı yönetim şablonları oluşturdunuz ve bunları oluşturduğun
 Bu bölüm aşağıdaki kaynakları kullanır. Bu kaynakları bu bölüme yükleyeceğiz.
 
 - [Intune PowerShell SDK 'Sı](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [Intune için Microsoft Graph API 'SI](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [Intune için Microsoft Graph API 'SI](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
 
 1. Yönetici **bilgisayarda**, **Windows PowerShell** 'i yönetici olarak açın:
 
@@ -450,17 +450,17 @@ Bu bölüm aşağıdaki kaynakları kullanır. Bu kaynakları bu bölüme yükle
 
 2. Yürütme ilkesini alın ve ayarlayın.
 
-    1. Girmesini`get-ExecutionPolicy`
+    1. Girmesini `get-ExecutionPolicy`
 
         ' Ne ayarlanmış olduğunu, **sınırlı**olabilecek şekilde yazın. Öğreticiyle işiniz bittiğinde, özgün değerine geri ayarlayın.
 
-    2. Girmesini`Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
+    2. Girmesini `Set-ExecutionPolicy -ExecutionPolicy Unrestricted`
 
     3. `Y`Değiştirmek için girin.
 
-    PowerShell 'in yürütme ilkesi kötü amaçlı betiklerin yürütülmesini önlemeye yardımcı olur. Daha fazla bilgi için bkz. [yürütme Ilkeleri hakkında](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+    PowerShell 'in yürütme ilkesi kötü amaçlı betiklerin yürütülmesini önlemeye yardımcı olur. Daha fazla bilgi için bkz. [yürütme Ilkeleri hakkında](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
-3. Girmesini`Install-Module -Name Microsoft.Graph.Intune`
+3. Girmesini `Install-Module -Name Microsoft.Graph.Intune`
 
     Şunu girin `Y` :
 
@@ -472,9 +472,9 @@ Bu bölüm aşağıdaki kaynakları kullanır. Bu kaynakları bu bölüme yükle
     > [!div class="mx-imgBorder"]
     > ![Modül yüklendikten sonra Windows PowerShell istemi](./media/tutorial-walkthrough-administrative-templates/powershell-prompt.png)
 
-4. Web tarayıcınızda öğesine gidin [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases) ve **Intune-PowerShell-SDK_v6.1907.00921.0001. zip** dosyasını seçin.
+4. Web tarayıcınızda öğesine gidin [https://github.com/Microsoft/Intune-PowerShell-SDK/releases](https://github.com/Microsoft/Intune-PowerShell-SDK/releases) ve **Intune-PowerShell-SDK_v6.1907.00921.0001.zip** dosyasını seçin.
 
-    1. **Farklı kaydet**' i seçin ve anımsayabileceğiniz bir klasör seçin. `c:\psscripts`iyi bir seçimdir.
+    1. **Farklı kaydet**' i seçin ve anımsayabileceğiniz bir klasör seçin. `c:\psscripts` iyi bir seçimdir.
     2. Klasörünüzü açın, **Tüm ayıklamayı Ayıkla**>. zip dosyasına sağ tıklayın  >  **Extract**. Klasör yapınız aşağıdaki klasöre benzer şekilde görünür:
 
         > [!div class="mx-imgBorder"]
@@ -500,9 +500,9 @@ Bu bölüm aşağıdaki kaynakları kullanır. Bu kaynakları bu bölüme yükle
 
 8. Intune Yönetim Şablonları, Graf beta sürümünü kullanır:
 
-    1. Girmesini`Update-MSGraphEnvironment -SchemaVersion 'beta'`
+    1. Girmesini `Update-MSGraphEnvironment -SchemaVersion 'beta'`
 
-    2. Girmesini`Connect-MSGraph -AdminConsent`
+    2. Girmesini `Connect-MSGraph -AdminConsent`
 
     3. İstendiğinde, aynı Microsoft 365 yönetici hesabıyla oturum açın. Bu cmdlet 'ler, ilkeyi kiracı kuruluşunuzda oluşturur.
 
@@ -581,7 +581,7 @@ Artık gerekli değilse şunları yapabilirsiniz:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, [Microsoft Endpoint Manager yönetim merkezine](https://go.microsoft.com/fwlink/?linkid=2109431)daha fazla bilgi sahibisiniz, dinamik gruplar oluşturmak için sorgu oluşturucuyu kullandınız ve [ADMX ayarlarını](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)yapılandırmak için Intune 'da Yönetim Şablonları oluşturdunuz. Ayrıca, şirket içinde ve Intune ile bulutta ADMX şablonları kullanmayı da karşılaştırdığınızda. Bir ek olarak, PowerShell cmdlet 'lerini bir yönetim şablonu oluşturmak için kullandınız.
+Bu öğreticide, [Microsoft Endpoint Manager yönetim merkezine](https://go.microsoft.com/fwlink/?linkid=2109431)daha fazla bilgi sahibisiniz, dinamik gruplar oluşturmak için sorgu oluşturucuyu kullandınız ve [ADMX ayarlarını](/windows/client-management/mdm/understanding-admx-backed-policies)yapılandırmak için Intune 'da Yönetim Şablonları oluşturdunuz. Ayrıca, şirket içinde ve Intune ile bulutta ADMX şablonları kullanmayı da karşılaştırdığınızda. Bir ek olarak, PowerShell cmdlet 'lerini bir yönetim şablonu oluşturmak için kullandınız.
 
 Intune 'daki Yönetim Şablonları hakkında daha fazla bilgi için bkz.:
 

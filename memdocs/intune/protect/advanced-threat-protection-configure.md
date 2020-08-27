@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad02078d2a8b9926de463e01d3dcbc675c721e4a
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: a9c3e456722d0b747a07c3f7040edc2cdf28f264
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179528"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909593"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Intune 'da Microsoft Defender ATP 'yi yapılandırma
 
@@ -84,9 +84,9 @@ Intune 'da Microsoft Defender ATP desteğini etkinleştirdiğinizde, Intune ile 
 
 Intune ile Microsoft Defender ATP arasında bağlantı kurduktan sonra Intune, Microsoft Defender ATP 'den bir Microsoft Defender ATP ekleme yapılandırma paketi aldı. Bu yapılandırma paketini, Microsoft Defender ATP için bir cihaz yapılandırma profili ile Windows cihazlarınıza dağıtırsınız.
 
-Yapılandırma paketi, cihazları taramak ve tehditleri algılamak için [Microsoft Defender ATP hizmetleriyle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) iletişim kuracak cihazları yapılandırır. Cihaz ayrıca, oluşturacağınız uyumluluk ilkelerine bağlı olarak cihaz risk düzeyini Microsoft Defender ATP 'ye bildirmek üzere de yapılandırılır.
+Yapılandırma paketi, cihazları taramak ve tehditleri algılamak için [Microsoft Defender ATP hizmetleriyle](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) iletişim kuracak cihazları yapılandırır. Cihaz ayrıca, oluşturacağınız uyumluluk ilkelerine bağlı olarak cihaz risk düzeyini Microsoft Defender ATP 'ye bildirmek üzere de yapılandırılır.
 
-Yapılandırma paketini kullanarak bir cihaz ekledikten sonra, bunu tekrar yapmanız gerekmez. Ayrıca, bir [Grup İlkesi veya Microsoft uç noktası Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints)kullanarak da cihaz ekleyebilirsiniz.
+Yapılandırma paketini kullanarak bir cihaz ekledikten sonra, bunu tekrar yapmanız gerekmez. Ayrıca, bir [Grup İlkesi veya Microsoft uç noktası Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints)kullanarak da cihaz ekleyebilirsiniz.
 
 ### <a name="create-the-device-configuration-profile-to-onboard-windows-devices"></a>Windows cihazlarını eklemek için cihaz yapılandırma profili oluşturma
 
@@ -105,7 +105,7 @@ Yapılandırma paketini kullanarak bir cihaz ekledikten sonra, bunu tekrar yapma
    - **Tüm dosyalar Için örnek paylaşımı**: **Etkinleştir** , örneklerin toplanmasına ve Microsoft Defender ATP ile paylaşılmasına olanak tanır. Örneğin, şüpheli bir dosya görürseniz, ayrıntılı analiz için Microsoft Defender ATP 'ye gönderebilirsiniz. **Yapılandırılmadı** , MICROSOFT Defender ATP 'ye herhangi bir örnek paylaşmaz.
    - **Telemetri raporlama sıklığını**hızlandırın: yüksek riskli olan cihazlar için bu ayarı **etkinleştirin** ve bu AYARı, Microsoft Defender ATP hizmetine daha sık telemetri rapor eder.
 
-     [Microsoft uç noktası Configuration Manager kullanarak Windows 10 makineleri](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) eklemek, bu MICROSOFT Defender ATP ayarları hakkında daha fazla bilgi içerir.
+     [Microsoft uç noktası Configuration Manager kullanarak Windows 10 makineleri](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) eklemek, bu MICROSOFT Defender ATP ayarları hakkında daha fazla bilgi içerir.
 
 7. **Kapsam etiketleri** sayfasını açmak için **İleri ' yi** seçin. Kapsam etiketleri isteğe bağlıdır. Devam etmek için **İleri** seçeneğini belirleyin.
 
@@ -120,7 +120,7 @@ Yapılandırma paketini kullanarak bir cihaz ekledikten sonra, bunu tekrar yapma
 
 Intune ile Microsoft Defender ATP arasında hizmetten hizmete bağlantı kurduktan sonra, Android cihazlarını Microsoft Defender ATP 'ye ekleyebilirsiniz. Ekleme cihazları Defender ATP ile iletişim kuracak şekilde yapılandırır, bu da cihazların risk düzeyiyle ilgili verileri toplar.
 
-Windows cihazlarından farklı olarak, Android çalıştıran cihazlar için bir yapılandırma paketi yoktur. Bunun yerine, Android için Microsoft Defender ATP belgelerindeki Android için Microsoft Defender ATP belgelerine [genel bakış](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) ve Android için ekleme yönergeleri için bkz..
+Windows cihazlarından farklı olarak, Android çalıştıran cihazlar için bir yapılandırma paketi yoktur. Bunun yerine, Android için Microsoft Defender ATP belgelerindeki Android için Microsoft Defender ATP belgelerine [genel bakış](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) ve Android için ekleme yönergeleri için bkz..
 
 Android çalıştıran cihazlar için, Android 'de Microsoft Defender ATP 'yi değiştirmek üzere Intune ilkesini de kullanabilirsiniz. Daha fazla bilgi için bkz. [Microsoft Defender ATP Web koruması](../protect/advanced-threat-protection-manage-android.md).
 
@@ -145,7 +145,7 @@ Uyumluluk ilkesi oluşturma konusunda bilgi sahibi değilseniz *Microsoft Intune
   
 5. **Uyumluluk ayarları** sekmesinde, **Microsoft Defender ATP** grubunu genişletin ve **cihazın makine risk puanı altında veya altında olmasını gerektir** seçeneğini tercih ettiğiniz düzeye ayarlayın.
 
-   Tehdit düzeyi sınıflandırmaları, [Microsoft Defender ATP tarafından belirlenir](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
+   Tehdit düzeyi sınıflandırmaları, [Microsoft Defender ATP tarafından belirlenir](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
    - **Temiz**: En güvenli düzeydir. Cihazda mevcut tehditler bulunamaz ve şirket kaynaklarına erişmeye devam edin. Herhangi bir tehdit bulunursa cihaz uyumsuz olarak değerlendirilir. (Microsoft Defender ATP, *güvenli*değeri kullanır.)
    - **Düşük**: Cihaz, yalnızca düşük düzeydeki tehditler varsa uyumludur. Orta veya yüksek tehdit düzeylerine sahip cihazlar uyumlu değildir.
@@ -194,5 +194,5 @@ Intune belgelerinden daha fazla bilgi edinin:
 
 Microsoft Defender ATP belgelerinden daha fazla bilgi edinin:
 
-- [Microsoft Defender ATP koşullu erişimi](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
-- [Microsoft Defender ATP risk panosu](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)
+- [Microsoft Defender ATP koşullu erişimi](/windows/security/threat-protection/microsoft-defender-atp/conditional-access)
+- [Microsoft Defender ATP risk panosu](/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)

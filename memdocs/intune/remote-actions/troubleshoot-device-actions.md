@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ad644d8438b23f36eccad24bee31ee92de5c040
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: d5b80cd7c90b7899e25b14c4cb2de1590530f43a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078864"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910817"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Intune 'da cihaz eylemlerinin sorunlarını giderme
 
@@ -54,11 +54,11 @@ Hayır. Ve kısa çizgileri girmeniz gerekmez.
 ## <a name="remove-devices-action"></a>Cihazları kaldır eylemi
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Nasıl yaparım? devre dışı bırakmayı/silmeyi kimin başlatdığına söylüyorsunuz?
-[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **Kiracı Yönetimi** > **Denetim günlükleri** ' ne gidin > **tarafından başlatılan** sütununa bakın.
+[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **Kiracı Yönetimi**  >  **Denetim günlükleri** ' ne gidin > **tarafından başlatılan** sütununa bakın.
 Giriş görmüyorsanız, eylemi başlatan en olası kişi cihazın kullanıcısı olur. Büyük olasılıkla Şirket Portalı uygulamasını veya portal.manage.microsoft.com kullandık.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Uygulamam kullanımdan kaldırıldıktan sonra neden kaldırılamadı?
-Yönetilen bir uygulama olarak kabul edilmedi. Bu bağlamda, yönetilen bir uygulama, Intune hizmeti kullanılarak yüklenen bir uygulamadır. Buna aşağıdakiler dahildir:
+Yönetilen bir uygulama olarak kabul edilmedi. Bu bağlamda, yönetilen bir uygulama, Intune hizmeti kullanılarak yüklenen bir uygulamadır. Şunları içerir:
 - Uygulama gerektiği şekilde dağıtıldı
 - Uygulama kullanılabilir olarak dağıtıldı ve sonra Şirket Portalı uygulamasının içinden Son Kullanıcı tarafından yüklendi.
 
@@ -69,7 +69,7 @@ Bu beklenen bir davranıştır. Google, Iş profili cihazlarının MDM sağlayı
 Bir cihazı devre dışı bırakma, erişim belirteçlerini iptal etmez. Bu durumu azaltmak için koşullu erişim ilkelerini kullanabilirsiniz.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Devre dışı bırakma/silme eylemini verildikten sonra nasıl izleyebilirim?
-[Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **Kiracı Yönetimi** > **Denetim günlükleri**' ne gidin.
+[Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **Kiracı Yönetimi**  >  **Denetim günlükleri**' ne gidin.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Wpes neden bazen süresiz olarak bekliyor olarak gösterilmelidir?
 Cihazların durumu, sıfırlama başlatılmadan önce her zaman Intune hizmetine rapor vermez. Bu nedenle, eylem beklemede olarak gösterilir. Eylemi başarıyla onayladıysanız, cihazı hizmetten silin.
@@ -99,7 +99,7 @@ Uyumluluk ilkelerinizin bir geçiş kodu gerektirdiğinden.
 ### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>Silme eylemini kullanarak bir Windows 10 cihazını yeniden başlatamıyorum
 Bu, **silme cihazını seç seçeneğini kullanırsanız ve cihazlar güç kaybediyor olsa bile temizlemeye devam ederse oluşabilir. Bu seçeneği belirlerseniz, bazı Windows 10 cihazlarının yeniden başlatılmasını engelleyebileceğini lütfen unutmayın.** bir Windows 10 cihazında.
 
-Bu durum, Windows yüklemesinde işletim sisteminin yeniden yüklenmesini engelleyen büyük bir bozulma olduğunda meydana gelebilir. Böyle bir durumda, işlem başarısız olur ve sistemi [Windows kurtarma ortamında]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)bırakır.
+Bu durum, Windows yüklemesinde işletim sisteminin yeniden yüklenmesini engelleyen büyük bir bozulma olduğunda meydana gelebilir. Böyle bir durumda, işlem başarısız olur ve sistemi [Windows kurtarma ortamında]( /windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)bırakır.
 
 ### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>Silme eylemini kullandıktan sonra BitLocker ile şifrelenen bir cihazı yeniden başlatamıyorum
 Bu, **silme cihazını seç seçeneğini kullanırsanız ve cihazlar güç kaybediyor olsa bile temizlemeye devam ederse oluşabilir. Bu seçeneği belirlerseniz, bazı Windows 10 cihazlarının yeniden başlatılmasını engelleyebileceğini lütfen unutmayın.** seçeneğini BitLocker ile şifrelenen bir cihazda yapın.

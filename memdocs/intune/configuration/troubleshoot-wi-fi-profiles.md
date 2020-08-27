@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78b7a0ea6e25754e2839e1fda788b3440eaf3880
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: c2183f68cd49c9ca353511aadb4cb3a0b6901e84
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872061"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915764"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Microsoft Intune 'de Wi-Fi cihaz yapılandırma profillerinin sorunlarını giderme
 
@@ -72,7 +72,7 @@ Bu senaryo bir Nokia 6,1 cihazı kullanır. Wi-Fi profili cihaza yüklenmeden ö
 
 Android 'de **Omadmlog. log** dosyası, cihaza yüklendiğinde Wi-Fi profilinin etkinliklerini ayrıntılardır. En fazla beş Omadmlog günlük dosyasına sahip olabilirsiniz. Son eşitlemenin zaman damgasına sahip olduğunuzdan emin olun. Bu, ilgili günlük girdilerini bulmanıza yardımcı olacaktır.
 
-Aşağıdaki örnekte, günlük okumak için [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) 'i kullanın ve "wifimgr" ifadesini aratın:
+Aşağıdaki örnekte, günlük okumak için [CMTrace](/configmgr/core/support/cmtrace) 'i kullanın ve "wifimgr" ifadesini aratın:
 
 > [!div class="mx-imgBorder"]
 > ![Wi-Fi bağlantısı kayıtlı ağ olarak gösterilir](./media/troubleshoot-wi-fi-profiles/android-cmtrace-filter-wifimgr.png)
@@ -201,7 +201,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
       > ![Windows 10 cihazlarında WiFi profili yapılandırmasını gösteren örnek MDM tanılama bilgileri](./media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png)
 
   > [!TIP]
-  > Daha fazla bilgi için bkz. [Windows 10 ' da MDM başarısızlıklarını tanılama](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
+  > Daha fazla bilgi için bkz. [Windows 10 ' da MDM başarısızlıklarını tanılama](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
 
 - Android cihazlarda, güvenilir kök ve SCEP profilleri cihazda yüklü değilse, Şirket Portalı App Omadmlog dosyasında aşağıdaki girişi görürsünüz:
 
@@ -236,7 +236,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Tüm sertifika zincirindeki tüm gerekli sertifikaların Android cihazında olduğunu onaylayın. Aksi halde, Wi-Fi profili cihaza yüklenemez. Daha fazla bilgi için bkz. [ara sertifika yetkilisi eksik](https://developer.android.com/training/articles/security-ssl#MissingCa) (Android 'in Web sitesini açar).
   - Wi-Fi profilinde kullanılan sertifika ve profil başarıyla uygulanmışsa gibi bilgileri aramak için Omadmlog anahtar sözcükleriyle filtreleyin.
 
-    Örneğin, günlükleri okumak için [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) ' i kullanın. "Wifimgr" filtrelemek için arama dizesini kullanın:
+    Örneğin, günlükleri okumak için [CMTrace](/configmgr/core/support/cmtrace) ' i kullanın. "Wifimgr" filtrelemek için arama dizesini kullanın:
 
     > [!div class="mx-imgBorder"]
     > ![Android cihazlarda WiFiMgr yapılandırma profillerini aramak için CMTrace 'i filtrele](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

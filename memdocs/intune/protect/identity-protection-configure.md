@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 835105b12da44f34f23c3d1162ced27a7eca6868
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 233ef8ce9c4ebd8ce5efe91715d653feaba2e88a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252546"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909151"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Microsoft Intune ile Windows 10 cihazlarda Iş için Windows Hello 'Yu kullanma
 
@@ -56,11 +56,11 @@ Bu makalede bir cihaz yapılandırma profili oluşturma konusu gösterilmektedir
 
    - **İş Için Windows Hello 'Yu Yapılandır**: Iş Için Windows Hello 'yu nasıl yapılandırmak istediğinizi seçin:
 
-     - **Yapılandırılmadı** (varsayılan): cihazda [Iş Için Windows Hello 'yu hazırlar](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) . Kimlik koruma profillerini yalnızca kullanıcılara atarken cihaz bağlamı varsayılan olarak **Yapılandırılmadı** olur.
+     - **Yapılandırılmadı** (varsayılan): cihazda [Iş Için Windows Hello 'yu hazırlar](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) . Kimlik koruma profillerini yalnızca kullanıcılara atarken cihaz bağlamı varsayılan olarak **Yapılandırılmadı** olur.
 
      - **Devre dışı**: Iş Için Windows Hello 'yu kullanmak istemiyorsanız, bu seçeneği seçin. Bu seçenek tüm kullanıcılar için Iş için Windows Hello 'Yu devre dışı bırakır.
 
-     - **Etkin**: Intune 'da Iş Için Windows Hello ayarlarını [sağlamak](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)ve yapılandırmak için bu seçeneği belirleyin. Yapılandırmak istediğiniz ayarları girin. Tüm ayarların bir listesi ve ne yaptıkları gibi, bkz. [iş Için Windows Hello 'yu etkinleştirmek Için Windows 10 cihaz ayarları](identity-protection-windows-settings.md).
+     - **Etkin**: Intune 'da Iş Için Windows Hello ayarlarını [sağlamak](/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)ve yapılandırmak için bu seçeneği belirleyin. Yapılandırmak istediğiniz ayarları girin. Tüm ayarların bir listesi ve ne yaptıkları gibi, bkz. [iş Için Windows Hello 'yu etkinleştirmek Için Windows 10 cihaz ayarları](identity-protection-windows-settings.md).
 
    - **Oturum açma için güvenlik anahtarlarını kullan**: Windows Hello güvenlik anahtarını Kiracıdaki tüm bilgisayarlar için oturum açma kimlik bilgileri olarak etkinleştirin.
 

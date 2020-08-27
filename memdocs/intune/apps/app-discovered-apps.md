@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bed118810be877bf4671571814ee6d151d6f727b
-ms.sourcegitcommit: da5bfbe16856fdbfadc40b3797840e0b5110d97d
+ms.openlocfilehash: 358d01a968c98262980f8e121d8e7e92e2880c6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512742"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907829"
 ---
 # <a name="intune-discovered-apps"></a>Intune bulunan uygulamalar
 
@@ -59,12 +59,12 @@ Aşağıdaki liste, uygulama platformu türünü, kişisel cihazlar için izlene
 | Windows 8.1 | Yalnızca yönetilen uygulamalar | Yalnızca yönetilen uygulamalar | Her 7 günde bir cihaz kaydı |
 | Windows RT | Yalnızca yönetilen uygulamalar | Yalnızca yönetilen uygulamalar | Her 7 günde bir cihaz kaydı |
 | iOS/iPadOS | Yalnızca yönetilen uygulamalar | Cihazda yüklü tüm uygulamalar | Her 7 günde bir cihaz kaydı |
-| macOS | Yalnızca yönetilen uygulamalar | Cihazda yüklü tüm uygulamalar | Her 7 günde bir cihaz kaydı |
+| Mac OS | Yalnızca yönetilen uygulamalar | Cihazda yüklü tüm uygulamalar | Her 7 günde bir cihaz kaydı |
 | Android | Yalnızca yönetilen uygulamalar | Cihazda yüklü tüm uygulamalar | Her 7 günde bir cihaz kaydı |
 | Android Kurumsal | Yalnızca yönetilen uygulamalar | Yalnızca Iş profilinde yüklü olan uygulamalar | Her 7 günde bir cihaz kaydı |
 
 > [!NOTE]
-> - Windows 10 ortak yönetilen cihazlar Configuration Manager içindeki [istemci uygulamaları](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) iş yükünde gösterildiği gibi, yukarıdaki zamanlamaya göre şu anda Intune yönetim UZANTıSı (IME) aracılığıyla uygulama envanterini toplamamaktadır. Bu sorunu azaltmak için, IME 'nin cihaza yüklenebilmesi için Configuration Manager 'deki [istemci uygulamaları](https://docs.microsoft.com/mem/configmgr/comanage/workloads#client-apps) Iş yükünün Intune 'a geçiş yapması gerekir (Win32 envanter ve PowerShell DAĞıTıMı için IME gereklidir). Bu davranıştaki tüm değişikliklerin veya güncelleştirmelerin [geliştirme](../fundamentals/in-development.md) ve [/veya yenilikler](../fundamentals/whats-new.md)' de duyurulduğunu unutmayın.
+> - Windows 10 ortak yönetilen cihazlar Configuration Manager içindeki [istemci uygulamaları](../../configmgr/comanage/workloads.md#client-apps) iş yükünde gösterildiği gibi, yukarıdaki zamanlamaya göre şu anda Intune yönetim UZANTıSı (IME) aracılığıyla uygulama envanterini toplamamaktadır. Bu sorunu azaltmak için, IME 'nin cihaza yüklenebilmesi için Configuration Manager 'deki [istemci uygulamaları](../../configmgr/comanage/workloads.md#client-apps) Iş yükünün Intune 'a geçiş yapması gerekir (Win32 envanter ve PowerShell DAĞıTıMı için IME gereklidir). Bu davranıştaki tüm değişikliklerin veya güncelleştirmelerin [geliştirme](../fundamentals/in-development.md) ve [/veya yenilikler](../fundamentals/whats-new.md)' de duyurulduğunu unutmayın.
 > - , Kasım 2019 ' den önce kaydedilen kişiye ait macOS cihazları, cihazlar yeniden kaydedilinceye kadar cihazda yüklü olan tüm uygulamaları göstermeye devam edebilir.
 > - Android kurumsal tam olarak yönetilen ve adanmış, bulunan uygulamaları görüntülemez.
 

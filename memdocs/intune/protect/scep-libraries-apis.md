@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b212bde0f46861b8acb1470588b784c6f2a7fb
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 03c43adb14c854b89ef914f0b9b30ea2be690a92
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565674"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906795"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>API’leri kullanarak Intune’a SCEP için üçüncü taraf CA’ları ekleme
 
@@ -96,7 +96,7 @@ Intune'da kimliğini doğrulamak için, SCEP sunucusuna Azure Uygulama Kimliği,
 
 Bu verileri almak için, SCEP sunucu yöneticisi Azure portalında oturum açar, uygulamayı kaydeder, uygulamaya **Microsoft Intune API\SCEP sınama doğrulaması** izni verir, uygulama için bir anahtar oluşturur ve sonra da uygulama kimliğini, onun anahtarını ve kiracı kimliğini indirir.
 
-Uygulamayı kaydetme ve kimliklerle anahtarları alma yönergeleri için bkz. [Portalı kullanarak kaynaklara erişmek için AAD uygulaması ve hizmet sorumlusu oluşturma](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+Uygulamayı kaydetme ve kimliklerle anahtarları alma yönergeleri için bkz. [Portalı kullanarak kaynaklara erişmek için AAD uygulaması ve hizmet sorumlusu oluşturma](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
 
 ### <a name="java-library-api"></a>Java Kitaplığı API'si
 
@@ -241,7 +241,7 @@ Intune'a SCEP isteği işlenirken hata oluştuğunu bildirir. Bu yöntem, bu sı
 
 - **Işlem kimliği** -SCEP işlem kimliği
 - **certificateRequest** -der-encoded PKCS #10 sertifika isteği Base64 olarak kodlanmış bir dize
-- **hResult** -karşılaşılan hatayı en iyi şekilde açıklayan Win32 hata kodu. Bkz. [Win32 Hata Kodları](https://msdn.microsoft.com/library/cc231199.aspx)
+- **hResult** -karşılaşılan hatayı en iyi şekilde açıklayan Win32 hata kodu. Bkz. [Win32 Hata Kodları](/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d)
 - **ErrorDescription** -karşılaşılan hatanın açıklaması
 
 Şunu **oluşturur**:

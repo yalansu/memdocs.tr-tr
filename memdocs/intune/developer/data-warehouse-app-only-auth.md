@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: daa4d079d60dc7474e5ba6a140e07a77e25b347d
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 28b213ff690dcc745f023f8deb225b0bd6ef9bc1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165983"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908811"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Intune Veri Ambarı uygulaması - yalnızca kimlik doğrulama
 
@@ -31,7 +31,7 @@ Azure Active Directory (Azure AD) kullanarak bir uygulamayı ayarlayabilir ve In
 
 ## <a name="authorization"></a>Yetkilendirme
 
-Azure Active Directory (Azure AD), OAuth 2.0’ı kullanarak Azure AD kiracınızdaki web uygulamalarına ve web API’lerine erişim yetkisi vermenize olanak tanır. Bu kılavuz, uygulamanızın kimliğini C# kullanarak nasıl doğrulayacağınızı gösterir. OAuth 2.0 yetkilendirme kod akışı, OAuth 2.0 belirtiminin 4.1. bölümünde açıklanmıştır. Daha fazla bilgi için bkz. [OAuth 2.0 ve Azure Active Directory kullanarak web uygulamalarına erişim yetkisi verme](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
+Azure Active Directory (Azure AD), OAuth 2.0’ı kullanarak Azure AD kiracınızdaki web uygulamalarına ve web API’lerine erişim yetkisi vermenize olanak tanır. Bu kılavuz, uygulamanızın kimliğini C# kullanarak nasıl doğrulayacağınızı gösterir. OAuth 2.0 yetkilendirme kod akışı, OAuth 2.0 belirtiminin 4.1. bölümünde açıklanmıştır. Daha fazla bilgi için bkz. [OAuth 2.0 ve Azure Active Directory kullanarak web uygulamalarına erişim yetkisi verme](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 
 ## <a name="azure-keyvault"></a>Azure KeyVault
@@ -45,13 +45,13 @@ Bu bölümde, Intune’da yönlendirme yapmak istediğiniz Web uygulaması hakk�
 1. [Azure portalında](https://portal.azure.com) oturum açın.
 2. Azure portalının üst tarafında yer alan **Arama kaynakları, hizmetler ve belgeler** alanını kullanarak **Azure Active Directory**’yi aratın.
 3. Açılan menüde **Hizmetler**’in altında **Azure Active Directory**’yi seçin.
-4. **Uygulama kayıtları**'nı seçin.
+4. **Uygulama kayıtları**’nı seçin.
 5. **Yeni uygulama kaydı**’nı seçerek **Oluştur** dikey penceresini görüntüleyin.
 6. **Oluştur** dikey penceresinde uygulama ayrıntılarınızı ekleyin:
 
     - Bir uygulama adı, örneğin *Intune Uygulaması-Yalnızca Auth*.
     - **Uygulama türü**. **Web uygulaması / API**’yi seçerek bir web uygulamasını, bir web API'sini veya her ikisini temsil eden bir uygulama ekleyin.
-    - Uygulamanın **oturum açma URL’sini**. Bu, kullanıcıların kimlik doğrulama işlemi sırasında otomatik olarak gittiği konumdur. Söyledikleri kişi olduklarını kanıtlamaları gerekir. Daha fazla bilgi için bkz. [Uygulama erişimi ve Azure Active Directory ile çoklu oturum açma nedir?](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)
+    - Uygulamanın **oturum açma URL’sini**. Bu, kullanıcıların kimlik doğrulama işlemi sırasında otomatik olarak gittiği konumdur. Söyledikleri kişi olduklarını kanıtlamaları gerekir. Daha fazla bilgi için bkz. [Uygulama erişimi ve Azure Active Directory ile çoklu oturum açma nedir?](/azure/active-directory/active-directory-appssoaccess-whatis)
 
 7. **Oluştur** dikey penceresinin alt kısmında **Oluştur**’a tıklayın.
 
@@ -164,5 +164,4 @@ Visual Studio’yu kullanarak .NET Framework’ü destekleyen ve kodlama dili ol
     > İlave uygulama kodunu görmek için bkz. [Intune-Veri-Ambarı kod örneği](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp ).
 
 ## <a name="next-steps"></a>Sonraki Adımlar
-Azure Key Vault hakkında daha fazla bilgi edinmek için [Azure Key Vault nedir?](https://docs.microsoft.com/azure/key-vault/key-vault-whatis) bölümünü gözden geçirin.
-
+Azure Key Vault hakkında daha fazla bilgi edinmek için [Azure Key Vault nedir?](/azure/key-vault/key-vault-whatis) bölümünü gözden geçirin.

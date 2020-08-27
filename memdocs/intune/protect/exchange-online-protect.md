@@ -18,11 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9669625225f8ad3960ece39e2a6b04849421ce6
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: 41782c13e3e1cfb8b0c9952a52a60e2ee0baf7ca
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022202"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909168"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Cihaz yönetimi gerektirmeden Office 365 Exchange Online’ı koruma
 
@@ -47,8 +48,8 @@ Bir cihaz yönetim sistemi ayarlamak istiyorsanız, bu da mümkündür. Bu tür 
 
 Şirket verilerinin güvenliğini artırmak için uygulama tabanlı koşullu erişim kullandınız. Sonraki adımların parçası olarak, şirket verilerinizin güvenliğini arttırmak için aşağıdaki gibi diğer yollar hakkında bilgi edinebilirsiniz: 
 
-* [Active Directory ve Azure Active Directory cihaz uyumluluğu, cihaz riski, konum ve Kullanıcı özniteliklerine dayalı koşullu erişimi](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)ayarlama.  
+* [Active Directory ve Azure Active Directory cihaz uyumluluğu, cihaz riski, konum ve Kullanıcı özniteliklerine dayalı koşullu erişimi](/azure/active-directory/active-directory-conditional-access-azure-portal)ayarlama.  
 * Kasıtlı veya kasıtsız veri sızıntılarına karşı şirketinizi korumaya yardımcı olmak adına uygulama koruma ilkeleri ayarlamak. 
 * Şirket verilerini ağınız dışında da korumak adına Azure Information Protection’dan yararlanmak. 
 
-Bunu veya diğer EMS ya da Office 365 senaryolarını etkinleştirmek için yardıma mı ihtiyacınız var? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın. 
+Bunu veya diğer EMS ya da Office 365 senaryolarını etkinleştirmek için yardıma mı ihtiyacınız var? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.

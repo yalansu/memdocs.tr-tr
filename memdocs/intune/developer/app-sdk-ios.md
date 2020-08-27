@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db975d15ec0c93bde8991872f6847364786aa429
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 823e29d1944b4957a24996620bb5467f234544cd
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912422"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908964"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -172,7 +172,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
    |---------------|--------------------------------|
    |- i |  `<Path to the input plist>` |
    |- e | `<Path to the entitlements file>` |
-   |- o |  Seçim`<Path to the output plist>` |
+   |- o |  Seçim `<Path to the output plist>` |
 
 '-o' parametresi belirtilmezse, giriş dosyası yerinde değiştirilir. Araç bir kez etkilidir ve uygulamanın Info.plist dosyası her değiştirildiğinde veya yetkilendirmeler yapıldığında yeniden çalıştırılmalıdır. En son sürümde Info.plist yapılandırma gereksinimlerinin değişmesi durumunda, Intune SDK'sını güncelleştirirken de aracın en son sürümünü indirmeniz ve çalıştırmanız gerekir.
 
@@ -657,7 +657,7 @@ Intune yöneticileri, yapılandırma verilerini Intune Azure portalı ve Intune 
 
 * `IntuneMAMAppConfig` nesnesinde uygun seçiciyi çağırın. Örneğin, uygulamanızın anahtarı bir dizeyse `stringValueForKey` veya `allStringsForKey` kullanmanız uygun olur. Dönüş değerleri ve hata koşullarıyla ilgili ayrıntılı bir açıklama için bkz. `IntuneMAMAppConfig.h`.
 
-Graph API’nin işlevleri hakkında daha fazla bilgi için bkz. [Graph API Başvurusu](https://developer.microsoft.com/graph/docs/concepts/overview).
+Graph API’nin işlevleri hakkında daha fazla bilgi için bkz. [Graph API Başvurusu](/graph/overview).
 
 İOS 'ta MAM hedefli uygulama yapılandırma ilkesi oluşturma hakkında daha fazla bilgi için [iOS/ıpados Microsoft Intune uygulama yapılandırma ilkeleri kullanma](../apps/app-configuration-policies-use-ios.md)konusunun mam hedefli uygulama yapılandırması bölümüne bakın.
 

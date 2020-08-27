@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000ee384ff289b9511b2dde3b1468525ffed63d4
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 55835d5ee8527f54e530da5113f841ed108fa6f5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820009"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915815"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Microsoft Intune'da kullanıcı ve cihaz profilleri atama
 
@@ -31,7 +31,7 @@ Bir profil oluşturursunuz ve girdiğiniz tüm ayarlar burada saklanır. Bir son
 Bu makalede profil atama yöntemlerinin yanı sıra profillerinizde kapsam etiketlerini kullanma adımları hakkında bilgilere yer verilmiştir.
 
 > [!NOTE]  
-> Bir profil kaldırıldığında veya bir cihaza artık atanmadıysa, profildeki ayarlara bağlı olarak farklı şeyler meydana gelebilir. Ayarlar CSP 'lere dayalıdır ve her CSP profil kaldırmayı farklı şekilde işleyebilir. Örneğin, bir ayar varolan değeri tutabilir ve varsayılan değere geri dönmeyebilir. Davranış, işletim sistemindeki her CSP tarafından denetlenir. Windows CSP 'lerin listesi için bkz. [yapılandırma hizmeti sağlayıcısı (CSP) başvurusu](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+> Bir profil kaldırıldığında veya bir cihaza artık atanmadıysa, profildeki ayarlara bağlı olarak farklı şeyler meydana gelebilir. Ayarlar CSP 'lere dayalıdır ve her CSP profil kaldırmayı farklı şekilde işleyebilir. Örneğin, bir ayar varolan değeri tutabilir ve varsayılan değere geri dönmeyebilir. Davranış, işletim sistemindeki her CSP tarafından denetlenir. Windows CSP 'lerin listesi için bkz. [yapılandırma hizmeti sağlayıcısı (CSP) başvurusu](/windows/client-management/mdm/configuration-service-provider-reference).
 >
 > Bir ayarı farklı bir değere değiştirmek için yeni bir profil oluşturun, ayarı **Yapılandırılmadı**olarak yapılandırın ve profili atayın. Cihaza uygulandıktan sonra, kullanıcıların ayarı tercih ettikleri değer olarak değiştirmesi gerekir.
 >

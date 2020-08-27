@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9622a89b8b689dab7ea2d6d332d1d29c38f5668
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: fce643469ec2cf60db78a299580af679bc442316
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80085749"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911378"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Intune 'da desteklenen işletim sistemleri ve tarayıcılar
 
 Microsoft Intune'u ayarlamadan önce, desteklenen işletim sistemleriyle tarayıcıları gözden geçirin.
 
-Intune 'u cihazınıza yükleme konusunda yardım için bkz. iş ve [Intune ağ bant genişliği kullanımını](network-bandwidth-use.md) [almak için yönetilen cihazları kullanma](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done) .
+Intune 'u cihazınıza yükleme konusunda yardım için bkz. iş ve [Intune ağ bant genişliği kullanımını](network-bandwidth-use.md) [almak için yönetilen cihazları kullanma](../user-help/use-managed-devices-to-get-work-done.md) .
 
-Yapılandırma hizmeti sağlayıcısı desteği hakkında daha fazla bilgi için [yapılandırma hizmeti sağlayıcı başvurusunu](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)ziyaret edin.
+Yapılandırma hizmeti sağlayıcısı desteği hakkında daha fazla bilgi için [yapılandırma hizmeti sağlayıcı başvurusunu](/windows/client-management/mdm/configuration-service-provider-reference)ziyaret edin.
 
 > [!NOTE]
 > Intune, uygulama ve cihazların Android için Şirket Portalı uygulaması ve Android için Intune uygulama SDK 'Sı aracılığıyla şirket kaynaklarına erişmesi için artık Android 5. x (Lollipop) veya üstünü gerektirir. Bu gereksinim 4,4 çalıştıran Polycom Android tabanlı takımlar cihazları için geçerlidir. Bu cihazlar desteklenmeye devam edecektir. 
@@ -109,8 +109,8 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 Farklı yönetim görevleri aşağıdaki yönetim web sitelerinden birini kullanmanızı gerektirir.
 
-- [Microsoft 365 yönetici merkezi](https://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Azure portal](https://portal.azure.com/)
+- [Microsoft 365 yönetim merkezi](https://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Azure Portal](https://portal.azure.com/)
 
 Bu portallar için aşağıdaki tarayıcılar desteklenir:
 
@@ -122,7 +122,7 @@ Bu portallar için aşağıdaki tarayıcılar desteklenir:
 
 ### <a name="intune-classic-portal"></a>Intune klasik portalı
 
-Klasik Intune portalı yalnızca Intune PC yazılım istemcisi (https://manage.microsoft.com). Klasik Intune portalı, Silverlight tarayıcı desteği gerektirir.
+Klasik Intune portalı yalnızca Intune PC yazılım istemcisi ( https://manage.microsoft.com) . Klasik Intune portalı, Silverlight tarayıcı desteği gerektirir.
 
 Aşağıdaki Silverlight tarayıcıları klasik Intune konsolunu destekler:
 
@@ -131,6 +131,6 @@ Aşağıdaki Silverlight tarayıcıları klasik Intune konsolunu destekler:
 - Silverlight özellikli Mozilla Firefox (sürüm 56 ' den önceki sürümler)
 
 > [!Note]
-> Microsoft Edge ve mobil tarayıcılar, [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx)’ı desteklemediklerinden klasik Intune portalı için desteklenmez.
+> Microsoft Edge ve mobil tarayıcılar, [Microsoft Silverlight](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838158(v=vs.95))’ı desteklemediklerinden klasik Intune portalı için desteklenmez.
 
 Yalnızca hizmet yöneticisi izinlerine sahip olan veya genel yönetici rolüne sahip bir kiracı yöneticisi olan kullanıcılar bu portalda oturum açabilir. Yönetim konsoluna erişmek için hesabınız Intune kullanma lisansına ve **İzin Verildi** oturum açma durumuna sahip olmalıdır.

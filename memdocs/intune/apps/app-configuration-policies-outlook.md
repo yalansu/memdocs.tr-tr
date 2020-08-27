@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3db207e4c1c75706c1f54762bf74c1757d342ac1
-ms.sourcegitcommit: c7afcc3a2232573091c8f36d295a803595708b6c
+ms.openlocfilehash: 90bbc3bfbe4f7e6120359f86ad9cb1c55b2ed500
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84973052"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907795"
 ---
 # <a name="manage-messaging-collaboration-access-by-using-outlook-for-ios-and-android-with-microsoft-intune"></a>İOS ve Android için Outlook 'U kullanarak mesajlaşma işbirliği erişimini yönetme Microsoft Intune
 
@@ -30,18 +30,18 @@ ms.locfileid: "84973052"
 Office 365 verileri için zengin ve en geniş koruma özellikleri, koşullu erişim gibi Microsoft Intune ve Azure Active Directory Premium özellikleri de içeren Enterprise Mobility + Security Suite 'e abone olduğunuzda kullanılabilir. En azından, mobil cihazlardan iOS ve Android için Outlook 'a bağlantı sağlayan bir koşullu erişim ilkesi ve işbirliği deneyiminin korunmasını sağlayan bir Intune uygulama koruma ilkesi dağıtmanız gerekir.
 
 ## <a name="apply-conditional-access"></a>Koşullu erişim Uygula
-Kuruluşlar, kullanıcıların yalnızca iOS ve Android için Outlook 'U kullanarak iş veya okul içeriğine erişebildiğinden emin olmak için Azure AD koşullu erişim ilkelerini kullanabilir. Bunu yapmak için tüm olası kullanıcıları hedefleyen bir koşullu erişim ilkesine ihtiyacınız olacaktır. Bu ilkeyi oluşturma hakkındaki ayrıntılar, [bulut uygulaması Için koşullu erişimle uygulama koruma Ilkesi iste](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)' de bulunabilir.
+Kuruluşlar, kullanıcıların yalnızca iOS ve Android için Outlook 'U kullanarak iş veya okul içeriğine erişebildiğinden emin olmak için Azure AD koşullu erişim ilkelerini kullanabilir. Bunu yapmak için tüm olası kullanıcıları hedefleyen bir koşullu erişim ilkesine ihtiyacınız olacaktır. Bu ilkeyi oluşturma hakkındaki ayrıntılar, [bulut uygulaması Için koşullu erişimle uygulama koruma Ilkesi iste](/azure/active-directory/conditional-access/app-protection-based-conditional-access)' de bulunabilir.
 
-1. "Adım 1: Office 365 için Azure AD koşullu erişim ilkesi yapılandırma" yı izleyin [. Senaryo 1: office 365 uygulamaları](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), IOS ve Android için Outlook 'a izin veren ve OAuth özellikli Exchange ActiveSync Istemcilerinin Exchange Online 'a bağlanmasını engelleyen uygulama koruma ilkeleriyle onaylanan uygulamalar gerektirir.
+1. "Adım 1: Office 365 için Azure AD koşullu erişim ilkesi yapılandırma" yı izleyin [. Senaryo 1: office 365 uygulamaları](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), IOS ve Android için Outlook 'a izin veren ve OAuth özellikli Exchange ActiveSync Istemcilerinin Exchange Online 'a bağlanmasını engelleyen uygulama koruma ilkeleriyle onaylanan uygulamalar gerektirir.
 
    > [!NOTE]
    > Bu ilke, mobil kullanıcıların tüm Office uç noktalarına ilgili uygulamaları kullanarak erişmesini sağlar.
 
-2. "2. Adım: bir Azure AD koşullu erişim ilkesini ActiveSync (EAS) ile Exchange Online için yapılandırma" adlı [Senaryo 1: Office 365 uygulamaları, uygulama koruma ilkeleriyle onaylanan uygulamalar gerektirir](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies). Bu, temel kimlik doğrulaması kullanan Exchange ActiveSync Istemcilerinin Exchange Online 'a bağlanmasını engeller.
+2. "2. Adım: bir Azure AD koşullu erişim ilkesini ActiveSync (EAS) ile Exchange Online için yapılandırma" adlı [Senaryo 1: Office 365 uygulamaları, uygulama koruma ilkeleriyle onaylanan uygulamalar gerektirir](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies). Bu, temel kimlik doğrulaması kullanan Exchange ActiveSync Istemcilerinin Exchange Online 'a bağlanmasını engeller.
 
-   Yukarıdaki ilkeler, erişim izni vermeden önce iOS ve Android için Outlook 'Ta ilişkili hesaba bir Intune Uygulama Koruması Ilkesinin uygulanmasını sağlayan [uygulama koruması gerektir Ilkesi gerektirir](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference). Kullanıcı bir Intune Uygulama Koruması Ilkesine atanmamışsa, Intune için lisanslı değildir veya uygulama Intune Uygulama Koruması Ilkesine dahil edilmemişse, ilke kullanıcının bir erişim belirteci almasını ve mesajlaşma verilerine erişim sağlamasını önler.
+   Yukarıdaki ilkeler, erişim izni vermeden önce iOS ve Android için Outlook 'Ta ilişkili hesaba bir Intune Uygulama Koruması Ilkesinin uygulanmasını sağlayan [uygulama koruması gerektir Ilkesi gerektirir](/azure/active-directory/active-directory-conditional-access-technical-reference). Kullanıcı bir Intune Uygulama Koruması Ilkesine atanmamışsa, Intune için lisanslı değildir veya uygulama Intune Uygulama Koruması Ilkesine dahil edilmemişse, ilke kullanıcının bir erişim belirteci almasını ve mesajlaşma verilerine erişim sağlamasını önler.
 
-3. Son olarak, iOS ve Android cihazlarda diğer Exchange protokolleri için eski kimlik doğrulamasını engellemek üzere [koşullu erişim Ile Azure AD 'de eski kimlik doğrulamasını engelleme](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) konusuna uyun; Bu ilke yalnızca Office 365 Exchange Online Cloud App ve iOS ve Android cihaz platformlarını hedeflemelidir. Bu, Exchange Web Hizmetleri, ıMAP4 veya POP3 protokollerini temel kimlik doğrulaması ile kullanan mobil uygulamaların Exchange Online 'a bağlanamamasını sağlar.
+3. Son olarak, iOS ve Android cihazlarda diğer Exchange protokolleri için eski kimlik doğrulamasını engellemek üzere [koşullu erişim Ile Azure AD 'de eski kimlik doğrulamasını engelleme](/azure/active-directory/conditional-access/block-legacy-authentication) konusuna uyun; Bu ilke yalnızca Office 365 Exchange Online Cloud App ve iOS ve Android cihaz platformlarını hedeflemelidir. Bu, Exchange Web Hizmetleri, ıMAP4 veya POP3 protokollerini temel kimlik doğrulaması ile kullanan mobil uygulamaların Exchange Online 'a bağlanamamasını sağlar.
 
 ## <a name="create-intune-app-protection-policies"></a>Intune uygulama koruma ilkeleri oluşturma
 
@@ -79,7 +79,7 @@ Uygulama yapılandırması, kayıtlı cihazlarda mobil cihaz yönetimi (MDM) iş
 - S/MIME ayarları
 - Veri koruma ayarları
 
-İOS ve Android için Outlook uygulama yapılandırma ayarları hakkında belirli yordamsal adımlar ve ayrıntılı belgeler için, bkz. [iOS ve Android Için Outlook dağıtımı yapılandırma ayarları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+İOS ve Android için Outlook uygulama yapılandırma ayarları hakkında belirli yordamsal adımlar ve ayrıntılı belgeler için, bkz. [iOS ve Android Için Outlook dağıtımı yapılandırma ayarları](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

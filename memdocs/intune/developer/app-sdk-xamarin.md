@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d54a03290b7d2020b6ec13b64f985613c0a292d
-ms.sourcegitcommit: 4f10625e8d12aec294067a1d9138cbce19707560
+ms.openlocfilehash: 82ee499689a7c7ae85fb72cc4fc9b5f6d5ffc939
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87912313"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908879"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune Uygulama SDK’sı Xamarin Bağlamaları
 
@@ -38,7 +38,7 @@ Microsoft Intune Uygulama SDK’sı Xamarin Bağlamaları, Intune uygulama korum
 
 ### <a name="developer-machines"></a>Geliştirici makineleri
 * Windows (Visual Studio sürüm 15.7+)
-* macOS
+* Mac OS
 
 ### <a name="mobile-app-platforms"></a>Mobil uygulama platformları
 * Android
@@ -56,7 +56,7 @@ Intune Uygulama SDK’sı Xamarin Bağlamaları ile derlenen Xamarin uygulamalar
 
 [Lisans koşullarını](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf)gözden geçirin. Kendi kayıtlarınız için lisans koşullarının bir kopyasını yazdırmalı ve saklamalısınız. Intune Uygulama SDK’sı Xamarin Bağlamalarını indirip kullandığınızda bu lisans koşullarını kabul etmiş olursunuz. Kabul etmiyorsanız, yazılımı kullanmayın.
 
-Intune SDK, [kimlik doğrulama](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) ve koşullu başlatma senaryoları Için [Microsoft kimlik doğrulama KITAPLıĞı 'nı (msal)](https://docs.microsoft.com/azure/active-directory/develop/v2-overview) kullanır ve bu sayede uygulamaların [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)ile yapılandırılması gerekir. 
+Intune SDK, [kimlik doğrulama](/azure/active-directory/develop/authentication-vs-authorization) ve koşullu başlatma senaryoları Için [Microsoft kimlik doğrulama KITAPLıĞı 'nı (msal)](/azure/active-directory/develop/v2-overview) kullanır ve bu sayede uygulamaların [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)ile yapılandırılması gerekir. 
 
 Uygulamanız zaten MSAL kullanacak şekilde yapılandırıldıysa ve Azure Active Directory kimlik doğrulaması için kendi özel istemci KIMLIĞI kullanılıyorsa, Xamarin uygulama izinlerinizi Intune mobil uygulama yönetimi (MAM) hizmetine verme adımlarının izlendiğinden emin olun. [Intune SDK 'sını kullanmaya başlama](app-sdk-get-started.md)konusunun "[uygulamanızın Intune uygulama koruma hizmeti 'Ne erişmesine izin verme](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" bölümündeki yönergeleri kullanın.
 
@@ -69,7 +69,7 @@ Olası yanıltma, bilgi ifşası ve ayrıcalıkların yükseltilmesi saldırıla
   * [MS Intune uygulama SDK 'Sı NuGet profili](https://www.nuget.org/profiles/msintuneappsdk)
   * [Intune uygulama SDK 'Sı Xamarin GitHub deposu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 * İmzalanmış, değiştirilmemiş NuGet paketlerine güvenecek şekilde projeniz için NuGet yapılandırmanızı yapılandırın.
-Daha fazla bilgi için bkz. [imzalı paketleri yükleme](https://docs.microsoft.com/nuget/consume-packages/installing-signed-packages) .
+Daha fazla bilgi için bkz. [imzalı paketleri yükleme](/nuget/consume-packages/installing-signed-packages) .
 * Xamarin uygulamasını içeren çıkış dizinini güvenli hale getirin. Çıkış için kullanıcı düzeyinde bir dizin kullanın.
 
 
@@ -212,9 +212,9 @@ Yeniden eşleştirici projenize eklendikten sonra, MAM denk değişiklikleri yap
 ```
 
 Değişiklikler yapılmadığından, değişiklikleri yapana kadar aşağıdaki derleme hatalarıyla karşılaşabilirsiniz:
-* [Derleyici hatası CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Bu hata genellikle bu biçimde görülür ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed`` .
+* [Derleyici hatası CS0239](/dotnet/csharp/misc/cs0239). Bu hata genellikle bu biçimde görülür ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed`` .
 Bu, yeniden eşleştirici Xamarin sınıflarının devralınmasını değiştirdiğinde, bazı işlevlerin yapılması `sealed` ve bunun yerine geçersiz kılınmasına yeni BIR mam varyantı eklendiği için beklenmektedir.
-* [Derleyici Hatası CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Bu hata genellikle bu biçimde görülür ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...`` . Remapper, Xamarin sınıflarının bazılarının devralınmasını değiştirdiğinde, bazı üye işlevleri olarak değiştirilir `public` . Bu işlevlerden herhangi birini geçersiz kılarsınız, bu geçersiz kılmaların erişim değiştiricilerini de değiştirmeniz gerekecektir `public` .
+* [Derleyici Hatası CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507): Bu hata genellikle bu biçimde görülür ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...`` . Remapper, Xamarin sınıflarının bazılarının devralınmasını değiştirdiğinde, bazı üye işlevleri olarak değiştirilir `public` . Bu işlevlerden herhangi birini geçersiz kılarsınız, bu geçersiz kılmaların erişim değiştiricilerini de değiştirmeniz gerekecektir `public` .
 
 > [!NOTE]
 > Yeniden Eşleştirici, Visual Studio 'Nun IntelliSense otomatik tamamlama için kullandığı bir bağımlılığı yeniden yazar. Bu nedenle, IntelliSense 'in değişiklikleri doğru tanıması için yeniden eşleştirici eklendiğinde projeyi yeniden yüklemeniz ve yeniden oluşturmanız gerekebilir.
@@ -235,4 +235,4 @@ Cihaz kaydı olmadan uygulama koruması için kullanıcının Şirket Portalı u
 Xamarin. Android ve Xamarin. Forms uygulamalarındaki MAM işlevlerini vurgulayan örnek uygulamalar [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps)' da kullanılabilir.
 
 ## <a name="support"></a>Destek
-Kuruluşunuz mevcut bir Intune müşterisiyse, lütfen Microsoft destek temsilcisiyle birlikte çalışarak bir destek bileti açın ve [GitHub sorunları sayfasında](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues)bir sorun oluşturun. Mümkün olduğunca kısa sürede yardım edeceğiz. 
+Kuruluşunuz mevcut bir Intune müşterisiyse, lütfen Microsoft destek temsilcisiyle birlikte çalışarak bir destek bileti açın ve [GitHub sorunları sayfasında](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues)bir sorun oluşturun. Mümkün olduğunca kısa sürede yardım edeceğiz.

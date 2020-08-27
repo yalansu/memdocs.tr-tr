@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5eb3f743e90dc4f2769b455a981676676ab43704
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: ca64791256acbdcd124ee79401d116962671dd71
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462227"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909712"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Microsoft Intune koşullu erişimle Son Kullanıcı benimsemesini sürücü olarak
 
@@ -65,9 +65,9 @@ Bu birçok yaklaşımdan biridir. Her aşama kaydolduktan sonra tüm koşullu er
 
 Aşağıdaki seçeneklerden birini belirleyin:
 
-- [Azure Active Directory Koşullu erişimi yapılandırma](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Azure Active Directory Koşullu erişimi yapılandırma](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
-- [Karma modern kimlik doğrulamasını yapılandırma](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)
+- [Karma modern kimlik doğrulamasını yapılandırma](/office365/enterprise/hybrid-modern-auth-overview)
 
 - [Exchange Online için uygulama tabanlı koşullu erişim ilkeleri ayarlama](../protect/app-based-conditional-access-intune-create.md)
 

@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c8d60a4a943ba2af9ea99f9eb887a9b77a49fcf
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 64e15e05ba7613b8bf2941d00a48c19292fafc90
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693514"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909763"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Microsoft Intune mobil cihaz yönetimi (MDM) yaşam döngüsüne genel bakış
 
-Yönettiğiniz tüm cihazlarda *yaşam döngüsü* adı verilen bir unsur vardır. Intune, kayıt işleminden başlanarak, yapılandırma ve korumadan tutun artık gerekli olmadığında cihazın kullanımdan kaldırılmasına kadarki süreçte bu yaşam döngüsünü yönetmenize yardımcı olabilir. İşte bir örnek: şirketiniz tarafından satın alınan bir iPad, şirketinizin onu yönetmesine izin vermek için Microsoft Intune hesabınızla kaydolmalıdır; ardından, şirketinizin sizin için yapılandırılmış olması gerekir; daha sonra, üzerinde depolanan verilerin bir kullanıcı tarafından korunması gerekir; son olarak, iPad 'e artık gerek duyulmadığında, üzerinde tüm hassas verileri [devre dışı bırakmanız veya](https://docs.microsoft.com/mem/intune/remote-actions/devices-wipe) silmelisiniz.
+Yönettiğiniz tüm cihazlarda *yaşam döngüsü* adı verilen bir unsur vardır. Intune, kayıt işleminden başlanarak, yapılandırma ve korumadan tutun artık gerekli olmadığında cihazın kullanımdan kaldırılmasına kadarki süreçte bu yaşam döngüsünü yönetmenize yardımcı olabilir. İşte bir örnek: şirketiniz tarafından satın alınan bir iPad, şirketinizin onu yönetmesine izin vermek için Microsoft Intune hesabınızla kaydolmalıdır; ardından, şirketinizin sizin için yapılandırılmış olması gerekir; daha sonra, üzerinde depolanan verilerin bir kullanıcı tarafından korunması gerekir; son olarak, iPad 'e artık gerek duyulmadığında, üzerinde tüm hassas verileri [devre dışı bırakmanız veya](../remote-actions/devices-wipe.md) silmelisiniz.
 
 ![Cihaz yaşam döngüsü](./media/device-lifecycle/device-lifecycle.png "Intune cihaz yaşam döngüsü")
 

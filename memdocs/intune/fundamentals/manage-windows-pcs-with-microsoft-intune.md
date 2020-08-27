@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4e917ca63bb671e8dfa46b280a4130051e75ef0
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: dae87983f442661046fa48c63b5691f1bef48240
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79326502"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915900"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Intune yazılımı istemcisi ile Windows PC’leri bilgisayar olarak yönetme
 
@@ -90,7 +90,7 @@ Intune istemci yazılımı, yazılım güncelleştirmelerini, Windows güvenlik 
 
 Windows bilgisayarlarını yönetmek için Intune istemci yazılımını kullandığınızda, yalnızca **Bilgisayar Yönetimi** bölümünün altında gösterilen ilkeleri kullanabilirsiniz.
 
-Intune, Windows Server Active Directory Etki Alanı Hizmetleri (AD DS) Grup İlkesi Nesneleri’ne (GPO'lar) benzer bir biçimde, Windows PC’leri ilkelerle yönetir. Intune ile Active Directory etki alanına katılmış bilgisayarları yönetiyorsanız, kuruluşunuzda kullanılan herhangi bir [GPO ile Intune ilkelerinin çakışmadığından emin olun](resolve-gpo-and-microsoft-intune-policy-conflicts.md). Daha fazla bilgi için bkz. [yeni başlayanlar için Grup İlkesi](https://technet.microsoft.com/library/hh147307.aspx).
+Intune, Windows Server Active Directory Etki Alanı Hizmetleri (AD DS) Grup İlkesi Nesneleri’ne (GPO'lar) benzer bir biçimde, Windows PC’leri ilkelerle yönetir. Intune ile Active Directory etki alanına katılmış bilgisayarları yönetiyorsanız, kuruluşunuzda kullanılan herhangi bir [GPO ile Intune ilkelerinin çakışmadığından emin olun](resolve-gpo-and-microsoft-intune-policy-conflicts.md). Daha fazla bilgi için bkz. [yeni başlayanlar için Grup İlkesi](/previous-versions/windows/it-pro/windows-7/hh147307(v=ws.10)).
 
   ![Yeni Windows bilgisayar ilkesi için şablon seçin](./media/manage-windows-pcs-with-microsoft-intune/select-template-for-pc-policy.png)
 

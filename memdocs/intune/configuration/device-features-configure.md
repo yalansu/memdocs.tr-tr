@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28bf8edb1b7c80e2362e9b145f38bd383dffa625
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 77e51e625fd248a5f60a31e49d015315145d3cf9
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820587"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910001"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune 'da iOS, ıpados veya macOS cihaz özelliği ayarları ekleme
 
@@ -153,7 +153,7 @@ Bu ayarlar iOS, ıpados ve macOS cihazlarınız için çoklu oturum açma (SSO) 
 
 Intune 'da, kuruluşunuz tarafından oluşturulan bir SSO uygulama uzantısını yapılandırmak için bu ayarları kullanın, kimlik sağlayıcınız, Microsoft veya Apple. SSO uygulama uzantısı kullanıcılarınız için kimlik doğrulamasını işler. Bu ayarlar, yeniden yönlendirme türü ve kimlik bilgisi türü SSO uygulama uzantılarını yapılandırır.
 
-- Yeniden yönlendirme türü, OpenID Connect, OAuth ve SAML2 gibi modern kimlik doğrulama protokolleri için tasarlanmıştır. Microsoft Azure AD SSO uzantısı ([Microsoft ENTERPRISE SSO eklentisi](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)) ve genel yeniden yönlendirme uzantısı arasında seçim yapabilirsiniz.
+- Yeniden yönlendirme türü, OpenID Connect, OAuth ve SAML2 gibi modern kimlik doğrulama protokolleri için tasarlanmıştır. Microsoft Azure AD SSO uzantısı ([Microsoft ENTERPRISE SSO eklentisi](/azure/active-directory/develop/apple-sso-plugin)) ve genel yeniden yönlendirme uzantısı arasında seçim yapabilirsiniz.
 - Kimlik bilgisi türü, sınama ve yanıt kimlik doğrulama akışları için tasarlanmıştır. Apple tarafından sunulan, Kerberos 'a özgü kimlik bilgisi uzantısı ve genel kimlik bilgisi uzantısı arasında seçim yapabilirsiniz.
 
 Intune 'da yapılandırabileceğiniz ayarların listesi için bkz. [iOS/ıpados SSO uygulama uzantısı](ios-device-features-settings.md#single-sign-on-app-extension) ve [MacOS SSO uygulama uzantısı](macos-device-features-settings.md#single-sign-on-app-extension).

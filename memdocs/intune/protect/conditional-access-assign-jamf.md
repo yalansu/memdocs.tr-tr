@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f920513fbef101c60ea5caa3e8c6659557213ba3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 08586879f3523d1188f18e2d7024f32fae83febc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989218"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911208"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Jamf Pro ile yönetilen Mac bilgisayarları üzerinde uyumluluğu zorla
 
@@ -124,5 +124,5 @@ JAMF [Pro belgelerinden JAMF ile yönetilen bir cihazı kaldırma](https://www.j
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Azure Active Directory Koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [Azure Active Directory Koşullu erişim ile çalışmaya başlama](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Azure Active Directory Koşullu erişim](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Azure Active Directory Koşullu erişim ile çalışmaya başlama](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

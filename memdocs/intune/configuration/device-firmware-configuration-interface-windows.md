@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb45550f8c38237bebcc54db5531ab244ab10d84
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 6f30b2a3ecac3767da71c999b8920930532b8279
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531528"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915781"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Windows cihazlarında cihaz üretici yazılımı yapılandırma arabirimi profillerini Microsoft Intune (Genel Önizleme) kullanma
 
 Autopilot cihazlarını yönetmek için Intune kullandığınızda, cihaz üretici yazılımı yapılandırma arabirimini (DFCı) kullanarak, UEFı (BIOS) ayarlarını, kaydolduktan sonra yönetebilirsiniz. Avantajlar, senaryolar ve önkoşullara genel bakış için bkz. [DFCı 'Ya genel bakış](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
-DFCı [Windows](https://docs.microsoft.com/windows/client-management/mdm/uefi-csp) 'un yönetim komutlarını ıNTUNE 'dan UEFI 'ye (Birleşik Genişletilebilir Bellenim Arabirimi) geçmesini sağlar.
+DFCı [Windows](/windows/client-management/mdm/uefi-csp) 'un yönetim komutlarını ıNTUNE 'dan UEFI 'ye (Birleşik Genişletilebilir Bellenim Arabirimi) geçmesini sağlar.
 
 Intune 'da, BIOS ayarlarını denetlemek için bu özelliği kullanın. Genellikle, bellenim kötü amaçlı saldırılara karşı daha dayanıklıdır. Son Kullanıcı denetimini BIOS üzerinde sınırlandırır ve bu durum, güvenliği aşılmış olması durumunda iyidir.
 
@@ -45,15 +45,15 @@ Bu özellik şu platformlarda geçerlidir:
 
 - Cihaz, bir [Microsoft bulut çözümü sağlayıcısı (CSP) iş ortağı](https://partner.microsoft.com/cloud-solution-provider)tarafından Windows Autopilot veya doğrudan OEM tarafından kaydedilmiş olmalıdır. 
 
-  Autopilot için el ile kaydedilen cihazların [bir CSV dosyasından içeri aktarılması](../enrollment/enrollment-autopilot.md#add-devices)gıbı, dfcı kullanılmasına izin verilmez. Yönetim sayesinde, DFCı yönetimi, bir OEM veya Microsoft CSP iş ortağı kaydı aracılığıyla cihazın ticari alımı için Windows Autopilot 'e yönelik dış kanıtlama gerektirir.
+  Autopilot için el ile kaydedilen cihazların [bir CSV dosyasından içeri aktarılması](../../autopilot/enrollment-autopilot.md#add-devices)gıbı, dfcı kullanılmasına izin verilmez. Yönetim sayesinde, DFCı yönetimi, bir OEM veya Microsoft CSP iş ortağı kaydı aracılığıyla cihazın ticari alımı için Windows Autopilot 'e yönelik dış kanıtlama gerektirir.
 
   Cihazınız kaydedildikten sonra, seri numarası Windows Autopilot cihazları listesinde gösterilir.
 
-  Gereksinimler dahil Autopilot hakkında daha fazla bilgi için bkz. [Windows Autopilot kullanarak Intune 'Da Windows cihazlarını kaydetme](../enrollment/enrollment-autopilot.md).
+  Gereksinimler dahil Autopilot hakkında daha fazla bilgi için bkz. [Windows Autopilot kullanarak Intune 'Da Windows cihazlarını kaydetme](../../autopilot/enrollment-autopilot.md).
 
 ## <a name="create-your-azure-ad-security-groups"></a>Azure AD güvenlik gruplarınızı oluşturma
 
-Autopilot dağıtım profilleri Azure AD güvenlik gruplarına atanır. DFCı tarafından desteklenen cihazlarınızı içeren gruplar oluşturmayı unutmayın. DFCı cihazlarında çoğu kuruluş, Kullanıcı grupları yerine cihaz grupları oluşturabilir. Aşağıdaki senaryoları göz önünde bulundurun:
+Autopilot dağıtım profilleri Azure AD güvenlik gruplarına atanır. DFCı tarafından desteklenen cihazlarınızı içeren gruplar oluşturmayı unutmayın. DFCı cihazlarında çoğu kuruluş, Kullanıcı grupları yerine cihaz grupları oluşturabilir. Aşağıdaki senaryoları inceleyin:
 
 - İnsan kaynakları (HR) farklı Windows cihazlarına sahiptir. Güvenlik nedenleriyle, bu gruptaki herkesin cihazlarda kamerayı kullanmasını istemezsiniz. Bu senaryoda, ilke türü her ne olursa olsun, ilke HR grubundaki kullanıcılar için geçerli olacak şekilde bir HR güvenlik kullanıcıları grubu oluşturabilirsiniz.
 - Üretim aşamasında 10 cihaz vardır. Tüm cihazlarda cihazların USB cihazından önyüklenmesini engellemek isteyebilirsiniz. Bu senaryoda, bir güvenlik cihazları grubu oluşturabilir ve bu 10 cihazı gruba ekleyebilirsiniz.
@@ -66,7 +66,7 @@ DFCı 'yi kullanmak için aşağıdaki profilleri oluşturun ve bunları grubunu
 
 ### <a name="create-an-autopilot-deployment-profile"></a>Bir Autopilot dağıtım profili oluşturma
 
-Bu profil, yeni cihazları ayarlar ve önceden yapılandırır. [Autopilot dağıtım profilinde](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile) profil oluşturma adımları listelenir.
+Bu profil, yeni cihazları ayarlar ve önceden yapılandırır. [Autopilot dağıtım profilinde](../../autopilot/enrollment-autopilot.md#create-an-autopilot-deployment-profile) profil oluşturma adımları listelenir.
 
 ### <a name="create-an-enrollment-state-page-profile"></a>Kayıt durumu sayfası profili oluşturma
 
@@ -83,7 +83,7 @@ Bu profil, yapılandırdığınız DFCı ayarlarını içerir.
     - **Platform**: **Windows 10 ve üzeri** seçeneğini belirleyin.
     - **Profil**: **cihaz üretici yazılımı yapılandırma arabirimini**seçin.
 
-4. **Oluştur**'u seçin.
+4. **Oluştur**’u seçin.
 5. **Temel bilgiler**bölümünde aşağıdaki özellikleri girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. İlkelerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **Windows: Windows cihazlarında dfcı ayarlarını yapılandırın**.
@@ -171,7 +171,7 @@ Cihazı sildikten sonra, cihazı yeni DFCı ve Autopilot profillerini atayan gru
 
 ### <a name="retire"></a>Devre Dışı Bırakma
 
-Cihazı devre dışı bırakmaya ve yönetimden yayınlamaya hazırsanız, DFCı profilini çıkış durumunda istediğiniz UEFı (BIOS) ayarlarına güncelleştirin. Genellikle tüm ayarların etkinleştirilmesini istersiniz. Örneğin:
+Cihazı devre dışı bırakmaya ve yönetimden yayınlamaya hazırsanız, DFCı profilini çıkış durumunda istediğiniz UEFı (BIOS) ayarlarına güncelleştirin. Genellikle tüm ayarların etkinleştirilmesini istersiniz. Örnek:
 
 1. Dfcı profilinizi açın (**cihazlar**  >  **yapılandırma profilleri**).
 2. **Yerel kullanıcının UEFI (BIOS) ayarlarını** **yalnızca yapılandırılmadı ayarlarına**değiştirmesine izin ver ayarını değiştirin.

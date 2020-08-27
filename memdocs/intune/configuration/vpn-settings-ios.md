@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29ce01f9544db19757f58695eae624b2ac25995b
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c8aeab9ba7f6b6abd42793bf2af9452b4482edf4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819924"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911837"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazlarına VPN ayarları ekleme
 
@@ -31,7 +31,7 @@ Microsoft Intune iOS/ıpados cihazlarınıza dağıtılabilecek birçok VPN ayar
 [Bir cihaz yapılandırma profili oluşturun](vpn-settings-configure.md).
 
 > [!NOTE]
-> Bu ayarlar, Kullanıcı kaydı dışında tüm kayıt türlerinde kullanılabilir. Kullanıcı kaydı, [uygulama BAŞıNA VPN](https://docs.microsoft.com/mem/intune/configuration/vpn-setting-configure-per-app)ile sınırlıdır. Kayıt türleri hakkında daha fazla bilgi için bkz. [iOS/ıpados kaydı](../enrollment/ios-enroll.md).
+> Bu ayarlar, Kullanıcı kaydı dışında tüm kayıt türlerinde kullanılabilir. Kullanıcı kaydı, [uygulama BAŞıNA VPN](./vpn-setting-configure-per-app.md)ile sınırlıdır. Kayıt türleri hakkında daha fazla bilgi için bkz. [iOS/ıpados kaydı](../enrollment/ios-enroll.md).
 
 ## <a name="connection-type"></a>Bağlantı türü
 

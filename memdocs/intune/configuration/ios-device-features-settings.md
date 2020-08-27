@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ccfe079511c90f2ce7ecf6c27d4dfcf1c85327
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820196"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909016"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -304,10 +304,10 @@ Bu özellik şu platformlarda geçerlidir:
   - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi uygulama uzantılarını kullanmaz. Bir uygulama uzantısını devre dışı bırakmak için, SSO uygulama uzantısı türü ' ni **Yapılandırılmadı**' ya geçirebilirsiniz.
   - **Microsoft Azure AD**: bir yeniden YÖNLENDIRME türü SSO uygulama uzantısı olan MICROSOFT Enterprise SSO eklentisini kullanır. Bu eklenti, [Apple 'ın Kurumsal Çoklu oturum açma](https://developer.apple.com/documentation/authenticationservices) özelliğini destekleyen tüm uygulamalarda Active Directory hesapları için SSO sağlar. Azure AD kullanarak kimlik doğrulaması yapan Microsoft uygulamalarında, kuruluş uygulamalarında ve web sitelerinde SSO 'yu etkinleştirmek için bu SSO uygulama uzantısı türünü kullanın.
 
-    SSO eklentisi, güvenlik ve Kullanıcı deneyimi iyileştirmeleri sunan gelişmiş bir kimlik doğrulama Aracısı işlevi görür. Kimlik doğrulaması için Microsoft Authenticator uygulamasını kullanan tüm uygulamalar, [Apple cihazları Için Microsoft ENTERPRISE SSO EKLENTISIYLE](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin)SSO almaya devam eder.
+    SSO eklentisi, güvenlik ve Kullanıcı deneyimi iyileştirmeleri sunan gelişmiş bir kimlik doğrulama Aracısı işlevi görür. Kimlik doğrulaması için Microsoft Authenticator uygulamasını kullanan tüm uygulamalar, [Apple cihazları Için Microsoft ENTERPRISE SSO EKLENTISIYLE](/azure/active-directory/develop/apple-sso-plugin)SSO almaya devam eder.
 
     > [!IMPORTANT]
-    > Microsoft Azure AD SSO uygulama uzantısı türüyle SSO sağlamak için önce cihazlara iOS/ıpados Microsoft Authenticator uygulamasını yüklemeniz gerekir. Authenticator uygulaması Microsoft Enterprise SSO eklentisini cihazlara sunar ve MDM SSO uygulama uzantısı ayarları eklentiyi etkinleştirir. Bir Authenticator ve SSO uygulama uzantısı profili cihazlara yüklendikten sonra, kullanıcıların oturum açması için kimlik bilgilerini girmesi ve cihazlarında oturum kurması gerekir. Bu oturum daha sonra kullanıcıların kimlik doğrulamasını yapmasına gerek kalmadan farklı uygulamalar arasında kullanılır. Doğrulayıcı hakkında daha fazla bilgi için bkz. [Microsoft Authenticator uygulaması nedir?](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-overview).
+    > Microsoft Azure AD SSO uygulama uzantısı türüyle SSO sağlamak için önce cihazlara iOS/ıpados Microsoft Authenticator uygulamasını yüklemeniz gerekir. Authenticator uygulaması Microsoft Enterprise SSO eklentisini cihazlara sunar ve MDM SSO uygulama uzantısı ayarları eklentiyi etkinleştirir. Bir Authenticator ve SSO uygulama uzantısı profili cihazlara yüklendikten sonra, kullanıcıların oturum açması için kimlik bilgilerini girmesi ve cihazlarında oturum kurması gerekir. Bu oturum daha sonra kullanıcıların kimlik doğrulamasını yapmasına gerek kalmadan farklı uygulamalar arasında kullanılır. Doğrulayıcı hakkında daha fazla bilgi için bkz. [Microsoft Authenticator uygulaması nedir?](/azure/active-directory/user-help/user-help-auth-app-overview).
 
   - **Yeniden yönlendir**: SSO 'yu modern kimlik doğrulama akışlarıyla kullanmak için genel, özelleştirilebilir bir yeniden yönlendirme uygulama uzantısı kullanın. Kuruluşunuzun uygulama uzantısının uzantı KIMLIĞINI öğrendiğinizden emin olun.
   - **Kimlik bilgisi**: sınama ve yanıt kimlik doğrulama akışlarıyla SSO 'yu kullanmak için genel, özelleştirilebilir bir kimlik bilgisi uygulama uzantısı kullanın. Kuruluşunuzun uygulama uzantısının uzantı KIMLIĞINI öğrendiğinizden emin olun.
@@ -318,7 +318,7 @@ Bu özellik şu platformlarda geçerlidir:
 
 - **Paylaşılan cihaz modu** (yalnızca Microsoft Azure AD): Azure AD 'nin paylaşılan cihaz modu özelliği Için yapılandırılmış IOS/ıpados cihazlarına MICROSOFT Enterprise SSO eklentisini dağıtıyorsanız **Etkinleştir** ' i seçin. Paylaşılan moddaki cihazlar birçok kullanıcının paylaşılan cihaz modunu destekleyen uygulamaların genel olarak oturum açmasını ve çıkmasına izin verir. **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, iOS/ıpados cihazları birden çok kullanıcı arasında paylaşılmak üzere tasarlanmamıştır.
 
-  Paylaşılan cihaz modu ve bu aygıtın nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. iOS cihazları için [paylaşılan cihaz moduna](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices) ve [paylaşılan cihaz moduna](https://docs.microsoft.com/azure/active-directory/develop/msal-ios-shared-devices)genel bakış.  
+  Paylaşılan cihaz modu ve bu aygıtın nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. iOS cihazları için [paylaşılan cihaz moduna](/azure/active-directory/develop/msal-shared-devices) ve [paylaşılan cihaz moduna](/azure/active-directory/develop/msal-ios-shared-devices)genel bakış.  
 
   Bu özellik şu platformlarda geçerlidir:
   

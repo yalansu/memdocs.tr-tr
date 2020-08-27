@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4782c2a8f2c8791929ca4e585dab96031bf550fa
-ms.sourcegitcommit: f999131e513d50967f88795e400d5b089ebc5878
+ms.openlocfilehash: b487b9f921e40df8730fab235a2ec2c0d3f0f788
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85914616"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910868"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Intune ile Mobile Threat Defense (MTD) uygulamaları ekleme ve atama
 
@@ -45,7 +45,7 @@ Intune 'da aşağıdaki adımları izleyin. İşlemini öğrendiğinizden emin o
 
 ## <a name="configure-microsoft-authenticator-for-ios"></a>iOS için Microsoft Authenticator’ı yapılandırma
 
-iOS cihazlarında, Azure AD'nin kullanıcıların kimlikleri denetleyebilmesi için [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) olması gerekir. Ayrıca, Intune ile kullandığınız MTD iOS uygulamasını ayarlayan bir iOS uygulama yapılandırma ilkesine ihtiyacınız vardır.
+iOS cihazlarında, Azure AD'nin kullanıcıların kimlikleri denetleyebilmesi için [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) olması gerekir. Ayrıca, Intune ile kullandığınız MTD iOS uygulamasını ayarlayan bir iOS uygulama yapılandırma ilkesine ihtiyacınız vardır.
 
 Yönergeler için bkz. [Microsoft Intune'a iOS mağazası uygulamaları ekleme](../apps/store-apps-ios.md). **Uygulama bilgilerini**yapılandırırken bu [Microsoft Authenticator App Store URL 'sini](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) kullanın.
 
@@ -137,7 +137,7 @@ Better Mobile iOS uygulama yapılandırma ilkesini eklemek için [iOS için Micr
   - Sorulduğunda aşağıdaki bilgileri kullanarak Wandera Android uygulama yapılandırma ilkesini eklemek için [Android için Microsoft Intune uygulama yapılandırma ilkeleri kullanma](../apps/app-configuration-policies-use-android.md) yönergelerine bakın.
 
 1. **Radar bir portalda**, **yapılandırma ayarları** biçimi altında **Ekle** düğmesine tıklayın.
-2. **Yapılandırma anahtarları**listesinden **etkinleştirme profili URL 'sini** seçin. **Tamam**'a tıklayın.
+2. **Yapılandırma anahtarları**listesinden **etkinleştirme profili URL 'sini** seçin. **Tamam** düğmesine tıklayın.
 3. **Etkinleştirme profili URL 'si** için **değer türü** menüsünden **dize** ' yi seçin ve ardından, **paylaşılabilir bağlantı URL 'sini** radar içindeki istenen etkinleştirme profilinden kopyalayın.
 4. **Intune yönetici konsolu uygulama yapılandırması Kullanıcı arabiriminde**, **Ayarlar**' ı seçin, **yapılandırma ayarlarını tanımlayın > yapılandırma TASARıMCıSıNı kullanın** ve **paylaşılabilir bağlantı URL**'sini yapıştırın.  
 
@@ -197,7 +197,7 @@ MTD sağlayıcınızı kapsayan bölümü seçin:
     5. Uygulamanıza **Temsilci İzinleri** ekleyin.
 
     > [!NOTE]
-    > Daha fazla ayrıntı için bkz. [Azure AD ile yerel istemci uygulaması yapılandırma](https://azure.microsoft.com/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/#optional-configure-a-native-client-application).
+    > Daha fazla ayrıntı için bkz. [Azure AD ile yerel istemci uygulaması yapılandırma](/azure/app-service/configure-authentication-provider-aad#optional-configure-a-native-client-application).
 
   - **Lookout for Work ipa dosyasını ekleyin.**
 

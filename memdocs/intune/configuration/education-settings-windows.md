@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55e38ac8b5503e98df4878529ac892b55a52be47
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 2c6648f66c585dac5b8913fdb13adfcb98cbf927
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429616"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912704"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Intune kullanarak Windows 10 cihazlarda bir test alma uygulaması yapılandırma
 
@@ -49,7 +49,7 @@ Profili yapılandırdıktan sonra öğrencilerinize atayıp dağıtın.
   - `user@contoso.com`
   - `computerName\username`
 - **Hesap adı**: bir yerel Konuk hesap türü ayarlamak Için, test alma uygulaması ile kullanılan hesabın adını girin. Hesap adı, oturum açma ekranında bir kutucuk olarak görüntülenir. Öğrenciler, testi başlatmak için kutucuğa tıklayın.  
-- **Değerlendirme URL 'si**: kullanıcıların geçirmesine istediğiniz testin URL 'sini girin. URL 'YI alma hakkında daha fazla bilgi için [test alma belgelerine](https://docs.microsoft.com/education/windows/take-tests-in-windows-10)bakın.
+- **Değerlendirme URL 'si**: kullanıcıların geçirmesine istediğiniz testin URL 'sini girin. URL 'YI alma hakkında daha fazla bilgi için [test alma belgelerine](/education/windows/take-tests-in-windows-10)bakın.
 - **Yazıcı bağlantısı**: **gerekli** yalnızca bir yazıcıya bağlı cihazlardan test alma uygulaması erişimine izin verir. Bu ayar ayrıca uygulamanın Yazdır düğmesini test çiciler için kullanılabilir hale getirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğrencilerin bir yazıcıya bağlı olmayan cihazlardan uygulamaya erişmesine izin verebilir.  
 - **Ekran izleme**: **izin ver** , kullanıcılar bir test alırken ekran etkinliğini izler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, sınama sırasında ekranı izlemeden engel olabilir.
 - **Metin önerileri**: **izin ver** ' i seçin, böylece test takiciler metin önerilerini görüntüleyebilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcılar bir test sunarken metin önerilerini engelleyebilir.

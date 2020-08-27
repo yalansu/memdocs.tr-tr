@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: b4581ba6bdc8b5be41d5cf567c631ffaad40d418
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ce4795dd060d29b62887fbf5496b2f2706ba954f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329290"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909117"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Intune 'da Iş için Windows Hello 'Yu etkinleştirmek için Windows 10 cihaz ayarları
 
 Bu makalede, Intune 'da Windows 10 cihazlarında denetleyebilmeniz için Windows Hello ayarlarını listeler ve açıklanmaktadır. Bir Intune Yöneticisi olarak, mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak bu ayarları yapılandırabilir ve Windows 10 cihazlarına atayabilirsiniz. 
 
-Windows Hello belgelerinde [iş Için Windows Hello ilke ayarlarını yapılandırma](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings)bölümünde bu ayarlarla ilgili ek bilgiler bulabilirsiniz.
+Windows Hello belgelerinde [iş Için Windows Hello ilke ayarlarını yapılandırma](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings)bölümünde bu ayarlarla ilgili ek bilgiler bulabilirsiniz.
 
 
 Intune 'da Iş için Windows Hello profilleri hakkında daha fazla bilgi edinmek için bkz. [kimlik korumasını yapılandırma](identity-protection-configure.md).
@@ -72,7 +72,7 @@ Intune 'da Iş için Windows Hello profilleri hakkında daha fazla bilgi edinmek
     - **Gerekli** -kullanıcılar PIN 'e en az bir büyük harf içermelidir. Örneğin, en az bir büyük harfin ve bir özel karakterin zorunlu kılınması yaygın bir uygulamadır.
 
   - **PIN kodunda özel karakterler**  
-    Son kullanıcıların özel karakterler içermesini isteyerek daha güçlü bir PIN zorlayabilirsiniz. Özel karakterler şunlardır:`! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
+    Son kullanıcıların özel karakterler içermesini isteyerek daha güçlü bir PIN zorlayabilirsiniz. Özel karakterler şunlardır: `! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
 
     Seçenekleriniz şunlardır:
     - **İzin verilmiyor** -kullanıcıların PIN 'de özel karakterler kullanmalarını engelleyin. Bu davranış, ayar yapılandırılmamışsa da oluşur.
@@ -125,7 +125,7 @@ Intune 'da Iş için Windows Hello profilleri hakkında daha fazla bilgi edinmek
   - **Şirket içi kaynaklar için sertifika**  
 
     - **Etkinleştir** -Iş Için Windows Hello 'nun şirket içi kaynaklarda kimlik doğrulaması yapmak için sertifikaları kullanmasına izin verir.
-    - **Yapılandırılmadı** -Iş Için Windows Hello 'yu, şirket içi kaynaklarda kimlik doğrulaması yapmak için sertifikaları kullanmasını engeller. Bunun yerine, cihazlar *anahtar güveni şirket içi kimlik doğrulamanın*varsayılan davranışını kullanır. Daha fazla bilgi için bkz. Windows Hello belgelerinde Şirket [içi kimlik doğrulaması Için Kullanıcı sertifikası](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) .  
+    - **Yapılandırılmadı** -Iş Için Windows Hello 'yu, şirket içi kaynaklarda kimlik doğrulaması yapmak için sertifikaları kullanmasını engeller. Bunun yerine, cihazlar *anahtar güveni şirket içi kimlik doğrulamanın*varsayılan davranışını kullanır. Daha fazla bilgi için bkz. Windows Hello belgelerinde Şirket [içi kimlik doğrulaması Için Kullanıcı sertifikası](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) .  
 
   **Varsayılan**: yapılandırılmadı
 

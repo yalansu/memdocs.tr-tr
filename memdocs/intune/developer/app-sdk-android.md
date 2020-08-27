@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1ede68097ef3afe0358154ff7b8802a0b3a7285
-ms.sourcegitcommit: f6b14e6fe694a2a05c6ed92e67089e80a00a0908
+ms.openlocfilehash: 366cb0bbdb20a118013e49073c6c1c76722cf26c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501176"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907447"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Android için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -79,7 +79,7 @@ Ayrıca **Microsoft.Intune.MAM.SDK.Support.XXX.jar** kitaplıkları, ilgili `and
 
 Bir derleme adımı olarak [ProGuard](https://www.guardsquare.com/en/products/proguard) (veya başka bir daraltma/gizleme mekanizması) kullanılırsa, SDK'nın dahil edilmesi gereken ek yapılandırma kuralları vardır. Dahil olmak üzere. Yapımızda AAR, kurallarımız Proguard adımla otomatik olarak tümleştirilir ve gerekli sınıf dosyaları tutulur.
 
-[Microsoft kimlik doğrulama kitaplığı (msal)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview#languages-and-frameworks) kendi Proguard kısıtlamalarına sahip olabilir. Uygulamanız MSAL tümleştirirse, bu kısıtlamaların MSAL belgelerini izlemeniz gerekir.
+[Microsoft kimlik doğrulama kitaplığı (msal)](/azure/active-directory/develop/msal-overview#languages-and-frameworks) kendi Proguard kısıtlamalarına sahip olabilir. Uygulamanız MSAL tümleştirirse, bu kısıtlamaların MSAL belgelerini izlemeniz gerekir.
 
 > [!NOTE]
 > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -181,11 +181,11 @@ Her iki soruyu da 'evet' ile yanıtlıyorsanız, bu kitaplığı `includeExterna
 
 | Senaryo | Dahil edilsin mi? |
 |--|--|
-| Uygulamanıza bir PDF görüntüleyici kitaplığı dahil ediyor ve görüntüleyicinin `Activity` sınıfını kullanıcılarınız PDF'leri görüntülemeye çalıştığında uygulamanızda kullanıyorsunuz | Yes |
+| Uygulamanıza bir PDF görüntüleyici kitaplığı dahil ediyor ve görüntüleyicinin `Activity` sınıfını kullanıcılarınız PDF'leri görüntülemeye çalıştığında uygulamanızda kullanıyorsunuz | Evet |
 | Gelişmiş Web performansı için bir HTTP kitaplığını uygulamanıza dahil ediyorsunuz | Hayır |
-| `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıfları olan React Native gibi bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Yes |
+| `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıfları olan React Native gibi bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Evet |
 | `Activity`, `Application` ve `Fragment` sınıflarından türetilmiş sınıflar içeren React Native gibi bir kitaplığı dahil ediyor, ancak yalnızca statik yardımcıları veya hizmet sınıflarını kullanıyorsunuz | Hayır |
-| `TextView` sınıfından türetilmiş görünüm sınıfları içeren bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Yes |
+| `TextView` sınıfından türetilmiş görünüm sınıfları içeren bir kitaplığı dahil ediyor ve bu sınıfları uygulamanızda kullanıyor veya bunlardan başka sınıflar türetiyorsunuz | Evet |
 
 #### <a name="reporting"></a>Raporlama
 Yapı eklentisi, yaptığı değişikliklerin HTML raporunu oluşturabilir. Bu raporun oluşturulmasını istemek için `report = true` yapılandırma bloğunda ' i belirtin `intunemam` . Oluşturulduysa, rapor `outputs/logs` derleme dizinine yazılır.
@@ -422,7 +422,7 @@ Intune uygulama SDK'sı, tümleştirildiği uygulamalarda üç [Android sistem i
 
 * `android.permission.USE_CREDENTIALS`
 
-Bu izinler, Azure Active Directory Kimlik Doğrulama Kitaplığı ([ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/)) tarafından aracılık edilen kimlik doğrulaması gerçekleştirmek üzere istenir. Bu izinler uygulamaya sağlanmazsa veya kullanıcı tarafından kaldırılırsa, aracı (Şirket Portalı uygulaması) gerektiren kimlik doğrulama akışları devre dışı bırakılır.
+Bu izinler, Azure Active Directory Kimlik Doğrulama Kitaplığı ([ADAL](/azure/active-directory/azuread-dev/active-directory-authentication-libraries)) tarafından aracılık edilen kimlik doğrulaması gerçekleştirmek üzere istenir. Bu izinler uygulamaya sağlanmazsa veya kullanıcı tarafından kaldırılırsa, aracı (Şirket Portalı uygulaması) gerektiren kimlik doğrulama akışları devre dışı bırakılır.
 
 > [!NOTE]
 > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -897,7 +897,7 @@ Uygulamanızın alıcısı döndüğünde, artık şifreleme anahtarlarına eri�
 
 İlk olarak, lütfen [GitHub’da ADAL deposu](https://github.com/AzureAD/azure-activedirectory-library-for-android) konusunda bulunan ADAL tümleştirme yönergelerini okuyun.
 
-SDK; [kimlik doğrulaması](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) ve koşullu başlatma senaryolarında, uygulamaların [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) ile yapılandırılmasını gerektiren [ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) özelliğini kullanır. Yapılandırma değerleri, AndroidManifest meta verileri üzerinden SDK’ya iletilir.
+SDK; [kimlik doğrulaması](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) ve koşullu başlatma senaryolarında, uygulamaların [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/) ile yapılandırılmasını gerektiren [ADAL](/azure/active-directory/azuread-dev/active-directory-authentication-libraries) özelliğini kullanır. Yapılandırma değerleri, AndroidManifest meta verileri üzerinden SDK’ya iletilir.
 
 Uygulamanızı yapılandırmak ve uygun kimlik doğrulamasını sağlamak için AndroidManifest.xml içindeki uygulama düğümüne aşağıdakileri ekleyin. Bu yapılandırmalardan bazıları, yalnızca uygulamanız genel olarak kimlik doğrulaması için ADAL kullanıyorsa gereklidir; bu durumda, uygulamanızın kendisini AAD’ye kaydetmek için kullandığı değerleri kullanmanız gerekir. Bu işlem, AAD’nin iki ayrı kayıt değerini (biri uygulamadan, biri SDK’dan) tanıması nedeniyle son kullanıcıdan kimlik doğrulamasının iki kez istenmesini önlemek amacıyla yapılır.
 
@@ -1154,7 +1154,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 ### <a name="important-implementation-notes"></a>Önemli uygulama notları
 
-#### <a name="authentication"></a>Kimlik Doğrulaması
+#### <a name="authentication"></a>Kimlik doğrulaması
 
 * Uygulama `registerAccountForMAM()` çağrısı yaptığında, bundan kısa süre sonra farklı bir iş parçacığında `MAMServiceAuthenticationCallback` arabiriminde bir geri çağırma alabilir. İdeal olarak, uygulama, istenen belirtecin alımını hızlandırmak için hesabı kaydetmeden önce ADAL 'dan kendi belirtecini almış. Uygulama geri aramadan geçerli bir belirteç döndürürse, kayıt devam eder ve uygulama bir bildirim aracılığıyla nihai sonucu alır.
 
@@ -1489,7 +1489,7 @@ Uygulamanız `Service` amaçları başlatmak için bir bağlam kullanıyorsa, i�
 Veya ile Kullanıcı arabirimi kimliğini güncelleştirirken özel durumları işlemek için `setUIPolicyIdentity` `switchMAMIdentity` her iki yöntemde de bir değer kümesi geçirilebilir `IdentitySwitchOption` .
 
 * `IGNORE_INTENT`: Geçerli etkinlikle ilişkili amacı yoksayması gereken bir kimlik anahtarı istiyorsa kullanın.
-  Örneğin:
+  Örnek:
 
   1. Uygulamanız yönetilen bir belge içeren yönetilen bir kimlikle bir amaç alır ve uygulamanız belgeyi görüntüler.
   2. Kullanıcı kendi kişisel kimlik özelliklerine geçiş yaptığında, uygulamanız bir kullanıcı arabirimi kimlik anahtarı ister. Kişisel kimlik ' te, uygulamanız artık belgeyi görüntülemediğinden, `IGNORE_INTENT` kimlik anahtarını istenirken kullanmanız gerekir.
@@ -1658,7 +1658,7 @@ Bu, zaman uyumsuz işlem bir dosyaya şirket verileri yazabileceği veya diğer 
 
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
-Kullanmak için `MAMAsyncTask` , yalnızca öğesinden devralmalı ve `AsyncTask` ile geçersiz kılmaları ve `doInBackground` ile değiştirin `onPreExecute` `doInBackgroundMAM` `onPreExecuteMAM` . `MAMAsyncTask` oluşturucusu bir etkinlik bağlamı alır. Örneğin:
+Kullanmak için `MAMAsyncTask` , yalnızca öğesinden devralmalı ve `AsyncTask` ile geçersiz kılmaları ve `doInBackground` ile değiştirin `onPreExecute` `doInBackgroundMAM` `onPreExecuteMAM` . `MAMAsyncTask` oluşturucusu bir etkinlik bağlamı alır. Örnek:
 
 ```java
 AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
@@ -1913,7 +1913,7 @@ Varsayılan seçmeli silme, uygulamayı düzgün bir şekilde kapatacak, etkinli
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Android uygulamalarınız için MAM hedefli yapılandırmayı etkinleştirme (isteğe bağlı)
-Uygulamaya özgü anahtar-değer çiftleri, [mam-we](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) ve [Android Enterprise](https://docs.microsoft.com/intune/app-configuration-policies-use-android)için Intune konsolunda yapılandırılabilir.
+Uygulamaya özgü anahtar-değer çiftleri, [mam-we](/intune/app-configuration-policies-managed-app) ve [Android Enterprise](/intune/app-configuration-policies-use-android)için Intune konsolunda yapılandırılabilir.
 Bu anahtar-değer çiftleri, Intune tarafından değiştirilmeden uygulamaya geçirilir. Bu tip bir yapılandırma almak isteyen uygulamalar bunun için `MAMAppConfigManager` ve `MAMAppConfig` sınıflarını kullanabilir. Aynı uygulamaya birden çok ilke hedeflenmişse aynı anahtar için birden çok çakışan değer olabilir.
 
 > [!NOTE] 
@@ -2023,9 +2023,9 @@ Uygulama yapılandırma, yeni bir bildirim türü ekler:
 * **REFRESH_APP_CONFIG**: Bu bildirim, bir `MAMUserNotification` ile gönderilir ve yeni uygulama yapılandırmasının kullanılabilir olduğu hakkında uygulamayı bilgilendirir.
 
 ### <a name="further-reading"></a>Daha Fazla Bilgi
-Android’de MAM hedefli bir uygulama yapılandırma ilkesi oluşturma hakkında daha fazla bilgi için [Android için Microsoft Intune uygulama yapılandırma ilkeleri kullanma](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) konusunun MAM hedefli uygulama yapılandırması hakkındaki bölümüne bakın.
+Android’de MAM hedefli bir uygulama yapılandırma ilkesi oluşturma hakkında daha fazla bilgi için [Android için Microsoft Intune uygulama yapılandırma ilkeleri kullanma](/intune/app-configuration-policies-managed-app) konusunun MAM hedefli uygulama yapılandırması hakkındaki bölümüne bakın.
 
-Uygulama yapılandırması, Graph API kullanılarak da yapılandırılabilir. Bilgi için, [mam hedeflenen yapılandırması için Graph API belgelerine](https://docs.microsoft.com/graph/api/resources/intune-mam-targetedmanagedappconfiguration)bakın.
+Uygulama yapılandırması, Graph API kullanılarak da yapılandırılabilir. Bilgi için, [mam hedeflenen yapılandırması için Graph API belgelerine](/graph/api/resources/intune-mam-targetedmanagedappconfiguration)bakın.
 
 ## <a name="custom-themes-optional"></a>Özel Temalar (isteğe bağlı)
 MAM SDK 'sine, tüm MAM ekranları ve iletişim kutularına uygulanacak özel bir tema sağlayabilirsiniz. Bir tema sağlanmazsa, varsayılan bir MAM teması kullanılacaktır.
@@ -2165,7 +2165,7 @@ Kurulu bir bağlı hizmetle etkileşim kurmak, `SecurityException` ' de ilke zor
 Android için Intune Uygulama SDK’sı, uygulamanızdan veri toplanmasını denetlemez. Şirket Portalı uygulama, varsayılan olarak sistem tarafından oluşturulan verileri günlüğe kaydeder. Bu veriler Microsoft Intune’a gönderilir. Microsoft Ilkesi gereğince, kişisel veri toplamayız.
 
 > [!NOTE]
-> Son kullanıcılar bu verileri göndermemeyi tercih ederse, Şirket Portalı uygulamasının Ayarlar bölümünde telemetriyi kapatmaları gerekir. Daha fazla bilgi için bkz. [Microsoft kullanım verilerini toplamayı devre dışı bırakma](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
+> Son kullanıcılar bu verileri göndermemeyi tercih ederse, Şirket Portalı uygulamasının Ayarlar bölümünde telemetriyi kapatmaları gerekir. Daha fazla bilgi için bkz. [Microsoft kullanım verilerini toplamayı devre dışı bırakma](../user-help/turn-off-microsoft-usage-data-collection-android.md). 
 
 ## <a name="recommended-android-best-practices"></a>Android için önerilen en iyi yöntemler
 
@@ -2175,5 +2175,5 @@ Android için Intune Uygulama SDK’sı, uygulamanızdan veri toplanmasını den
 
 * Tüm gereksiz ve kullanılmayan kitaplıkları kaldırın (örneğin android.support.v4)
 
-## <a name="testing"></a>Sınama
+## <a name="testing"></a>Test Etme
 Bkz. [Test Kılavuzu](app-sdk-android-testing-guide.md).

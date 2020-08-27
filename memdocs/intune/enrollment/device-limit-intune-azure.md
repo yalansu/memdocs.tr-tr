@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8610b619a4ac05f37b893060b3b3a2bcb1dae528
-ms.sourcegitcommit: 97fbb7db14b0c4049c0fe3a36ee16a5c0cf3407a
+ms.openlocfilehash: 63c9d9e4752e4b0d317667162255e368fc5a099c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83864863"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908563"
 ---
 # <a name="understand-intune-and-azure-ads-device-limit-restrictions"></a>Intune ve Azure AD 'nin cihaz sınır kısıtlamalarını anlayın
 
@@ -39,7 +39,7 @@ Intune cihaz sınırı kısıtlamaları, bir kullanıcının denetleyebileceği 
 
 ## <a name="azure-device-limit-restriction"></a>Azure cihaz sınırı kısıtlaması
 
-Azure cihaz sınırı kısıtlamaları, Azure AD 'nin birleşen fazla cihaz sayısını veya Azure AD kayıtlarını ayarlar. **Kullanıcı başına en fazla cihaz sayısını**ayarlamak için Azure Portal > **Azure Active Directory**  >  **cihazlara**gidin. Daha fazla bilgi için bkz. [cihaz ayarlarını yapılandırma](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal)
+Azure cihaz sınırı kısıtlamaları, Azure AD 'nin birleşen fazla cihaz sayısını veya Azure AD kayıtlarını ayarlar. **Kullanıcı başına en fazla cihaz sayısını**ayarlamak için Azure Portal > **Azure Active Directory**  >  **cihazlara**gidin. Daha fazla bilgi için bkz. [cihaz ayarlarını yapılandırma](/azure/active-directory/devices/device-management-azure-portal)
 
 ## <a name="settings-applied-based-on-user-affinity"></a>Kullanıcı benzeşimi temelinde uygulanan ayarlar
 
@@ -47,22 +47,22 @@ Hem Intune hem de Azure cihaz sınırı kısıtlaması varsa, aşağıdaki tablo
 
 | Cihaz platformu | Kullanıcı benzeşimi | Azure geçerlidir | Intune geçerlidir |
 | ----- | ----- | ----- | ----- | ----- |
-| Android kurumsal iş profili | Yes | Yes | Yes|
+| Android kurumsal iş profili | Evet | Evet | Evet|
 | Android kurumsal adanmış cihaz | Hayır | Hayır | Hayır |
-| Android kurumsal tam yönetilen | Yes | Yes | Yes |
-| Android cihaz yöneticisi | Yes | Yes | Yes |
+| Android kurumsal tam yönetilen | Evet | Evet | Evet |
+| Android cihaz yöneticisi | Evet | Evet | Evet |
 | Android Cihaz Yöneticisi DEM | Hayır | | Hayır | 
-| iOS/macOS BYOD | Yes | Yes | Yes |
-| iOS/macOS otomatik cihaz kaydı (ADE) | Yes | Yes | Yes |
-| iOS/macOS ADE | No | Yes | No |
-| Windows BYOD | Yes | Yes | Yes |
-| Yalnızca Windows MD | | Yes | Yes |
-| Windows Azure AD 'ye katılmış| Yes | Yes | No |
-| Windows Autopilot | Yes | Yes | No |
-| Windows hibrit Azure AD 'ye katılmış | Hayır | Hayır | Yes |
-| Windows ortak yönetimi | No | Yes | No |
-| Windows DEM | No | Yes | No |
-| Windows Toplu kaydı | No | Yes | No |
+| iOS/macOS BYOD | Evet | Evet | Evet |
+| iOS/macOS otomatik cihaz kaydı (ADE) | Evet | Evet | Evet |
+| iOS/macOS ADE | Hayır | Evet | Hayır |
+| Windows BYOD | Evet | Evet | Evet |
+| Yalnızca Windows MD | | Evet | Evet |
+| Windows Azure AD 'ye katılmış| Evet | Evet | Hayır |
+| Windows Autopilot | Evet | Evet | Hayır |
+| Windows hibrit Azure AD 'ye katılmış | Hayır | Hayır | Evet |
+| Windows ortak yönetimi | Hayır | Evet | Hayır |
+| Windows DEM | Hayır | Evet | Hayır |
+| Windows Toplu kaydı | Hayır | Evet | Hayır |
 
 
 ## <a name="android-and-ios-devices"></a>Android ve iOS cihazları
@@ -114,6 +114,6 @@ Azure 'daki cihaz sınırı kısıtlaması için, **Kullanıcı başına en fazl
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [Azure 'da bir cihaz sınırı kısıtlaması oluşturun.](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
+- [Azure 'da bir cihaz sınırı kısıtlaması oluşturun.](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings)
 - [Azure 'da cihaz ayarlarını yapılandırın.](enrollment-restrictions-set.md#create-a-device-limit-restriction)
-- [Kayıt ve etki alanına katılmış hakkında daha fazla bilgi edinin.](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad)
+- [Kayıt ve etki alanına katılmış hakkında daha fazla bilgi edinin.](/azure/active-directory/devices/overview#getting-devices-in-azure-ad)

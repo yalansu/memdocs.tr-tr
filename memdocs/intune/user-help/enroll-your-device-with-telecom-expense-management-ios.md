@@ -19,12 +19,12 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: aeb1f6ae1ca666a96eca583d2e3be9c565013e7c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 1c43d2c4ae7ccda2cd0cf9283586a980eb166d22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881310"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912092"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>iOS cihazınızı telekomünikasyon gider yönetimine kaydetme
 
@@ -39,13 +39,13 @@ Uygun seçeneği belirlediğinizde App Store’dan [__Datalert__](https://itunes
 ## <a name="enroll-into-datalert-using-your-microsoft-work-or-school-account"></a>Microsoft iş veya okul hesabınızı kullanarak Datalert’e kaydolma
 
 > [!NOTE]
-> Bu yolla kayıt olmak için telefonunuzda [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) uygulamasının yüklü ve etkin olması gerekir.
+> Bu yolla kayıt olmak için telefonunuzda [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) uygulamasının yüklü ve etkin olması gerekir.
 
 1. __Microsoft Hesabı ile kaydol__’u seçin.
 
    ![Bir Microsoft Office 365 hesabı ve Intune aboneliğiniz olduğunda ekranın üst kısmında telefon numarası alanı ve alt kısmında "Microsoft hesabı ile kaydol" seçenekleri sunan Datalert uygulamasının Ayarlar ekranının görüntüsü.](./media/ios-enroll-11a-tem-datalert-enroll-msft-account.png)
 
-2. __"Datalert" "Authenticator"ı açmak istiyor__ şeklinde bir bildirim alırsınız. __Aç__'ı seçin.
+2. __"Datalert" "Authenticator"ı açmak istiyor__ şeklinde bir bildirim alırsınız. __Aç__’ı seçin.
 
    ![Datalert uygulamasının isteği üzerine kullanıcıdan Authenticator uygulamasını açmasını isteyen açılır pencerenin görüntüsü.](./media/ios-enroll-11b-tem-datalert-open-authenticator.png)
 

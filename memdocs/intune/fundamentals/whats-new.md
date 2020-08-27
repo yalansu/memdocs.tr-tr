@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe94b838ea1da859ee651cf45717118c865a7cad
-ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
+ms.openlocfilehash: 34c69a8263a76b83f81470c214e05a5e02dc873c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 08/26/2020
-ms.locfileid: "88896081"
+ms.locfileid: "88916070"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -191,7 +191,7 @@ Artık Microsoft Endpoint Manager yönetim merkezinden bir kiracıya bağlı cih
 ### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
 
 #### <a name="power-bi-compliance-report-template-v20---636958---"></a>Power BI uyumluluk raporu şablonu V 2.0<!-- 636958 -->
-Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sahip Power BI uygulamalar oluşturmasına ve bunları herhangi bir Power BI müşteriye dağıtmalarına olanak tanır. Yöneticiler, Power BI uyumluluk raporu şablonunun sürümünü V 1.0 'dan V 2.0 'a güncelleştirebilir. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [Power BI Ile veri ambarına bağlanma](../developer/reports-proc-get-a-link-powerbi.md) ve [bir şablon uygulamasını güncelleştirme](https://docs.microsoft.com/power-bi/service-template-apps-install-distribute#update-a-template-app). Ayrıca, [Intune veri ambarı ile Power BI uyumluluk raporunun yeni bir sürümünü duyuran](https://aka.ms/new_compliance_report)blog gönderisine bakın.
+Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sahip Power BI uygulamalar oluşturmasına ve bunları herhangi bir Power BI müşteriye dağıtmalarına olanak tanır. Yöneticiler, Power BI uyumluluk raporu şablonunun sürümünü V 1.0 'dan V 2.0 'a güncelleştirebilir. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [Power BI Ile veri ambarına bağlanma](../developer/reports-proc-get-a-link-powerbi.md) ve [bir şablon uygulamasını güncelleştirme](/power-bi/service-template-apps-install-distribute#update-a-template-app). Ayrıca, [Intune veri ambarı ile Power BI uyumluluk raporunun yeni bir sürümünü duyuran](https://aka.ms/new_compliance_report)blog gönderisine bakın.
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>13 Temmuz 2020 (2007 hizmet sürümü) haftası
@@ -200,10 +200,10 @@ Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sa
 ### <a name="app-management"></a>Uygulama yönetimi
 
 #### <a name="exchange-on-premises-connector-support---7138486----"></a>Exchange şirket Içi bağlayıcı desteği<!-- 7138486  -->
-Intune, 2007 (Temmuz) sürümünden itibaren Intune hizmetinden şirket Içi Exchange Bağlayıcı özelliği desteğini kaldırıyor. Etkin bağlayıcı içeren mevcut müşteriler şu anda geçerli işlevselliğe devam edebilir. Etkin Bağlayıcısı olmayan yeni müşteriler ve mevcut müşteriler, artık yeni bağlayıcılar oluşturamaz veya Intune 'dan Exchange ActiveSync (EAS) cihazlarını yönetemez. Bu müşteriler için, Microsoft şirket içi Exchange 'e erişimi korumak için Exchange [karma modern kimlik doğrulamasının (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) kullanılmasını önerir. HMA hem Intune Uygulama Koruması Ilkelerini (MAM olarak da bilinir) hem de şirket içi Exchange için Outlook Mobile aracılığıyla koşullu erişim imkanı sunar.
+Intune, 2007 (Temmuz) sürümünden itibaren Intune hizmetinden şirket Içi Exchange Bağlayıcı özelliği desteğini kaldırıyor. Etkin bağlayıcı içeren mevcut müşteriler şu anda geçerli işlevselliğe devam edebilir. Etkin Bağlayıcısı olmayan yeni müşteriler ve mevcut müşteriler, artık yeni bağlayıcılar oluşturamaz veya Intune 'dan Exchange ActiveSync (EAS) cihazlarını yönetemez. Bu müşteriler için, Microsoft şirket içi Exchange 'e erişimi korumak için Exchange [karma modern kimlik doğrulamasının (HMA)](/office365/enterprise/hybrid-modern-auth-overview) kullanılmasını önerir. HMA hem Intune Uygulama Koruması Ilkelerini (MAM olarak da bilinir) hem de şirket içi Exchange için Outlook Mobile aracılığıyla koşullu erişim imkanı sunar.
 
 #### <a name="smime-for-outlook-on-ios-and-android-devices-without-enrollment---6517155---"></a>Kayıt olmadan iOS ve Android cihazlarda Outlook için S/MIME<!-- 6517155 -->
-Artık, yönetilen uygulamalar için bir uygulama yapılandırma ilkesi kullanarak iOS ve Android cihazlarda Outlook için S/MIME 'yi etkinleştirebilirsiniz. Bu, cihaz kayıt durumundan bağımsız olarak ilke teslimine izin verir. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen uygulamalar**Ekle ' yi seçin. Ayrıca, kullanıcıların Outlook 'ta bu ayarı değiştirmesine izin verip vermeyeceğinizi de seçebilirsiniz. Ancak, S/MIME sertifikalarını iOS ve Android için Outlook 'a otomatik olarak dağıtmak için cihazın kayıtlı olması gerekir. S/MIME hakkında genel bilgi için bkz. [Intune 'da e-postayı imzalamak ve şifrelemek Için s/MIME 'ye genel bakış](https://docs.microsoft.com/mem/intune/protect/certificates-s-mime-encryption-sign). Outlook yapılandırma ayarları hakkında daha fazla bilgi için bkz. [Microsoft Outlook yapılandırma ayarları](../apps/app-configuration-policies-outlook.md) ve [cihaz kaydı olmadan yönetilen uygulamalar için uygulama yapılandırma ilkeleri ekleme](../apps/app-configuration-policies-managed-app.md). İOS ve Android S/MIME bilgileri için Outlook için bkz. [s/MIME senaryoları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) ve [yapılandırma anahtarları-S/MIME ayarları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings). 
+Artık, yönetilen uygulamalar için bir uygulama yapılandırma ilkesi kullanarak iOS ve Android cihazlarda Outlook için S/MIME 'yi etkinleştirebilirsiniz. Bu, cihaz kayıt durumundan bağımsız olarak ilke teslimine izin verir. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen uygulamalar**Ekle ' yi seçin. Ayrıca, kullanıcıların Outlook 'ta bu ayarı değiştirmesine izin verip vermeyeceğinizi de seçebilirsiniz. Ancak, S/MIME sertifikalarını iOS ve Android için Outlook 'a otomatik olarak dağıtmak için cihazın kayıtlı olması gerekir. S/MIME hakkında genel bilgi için bkz. [Intune 'da e-postayı imzalamak ve şifrelemek Için s/MIME 'ye genel bakış](../protect/certificates-s-mime-encryption-sign.md). Outlook yapılandırma ayarları hakkında daha fazla bilgi için bkz. [Microsoft Outlook yapılandırma ayarları](../apps/app-configuration-policies-outlook.md) ve [cihaz kaydı olmadan yönetilen uygulamalar için uygulama yapılandırma ilkeleri ekleme](../apps/app-configuration-policies-managed-app.md). İOS ve Android S/MIME bilgileri için Outlook için bkz. [s/MIME senaryoları](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-scenarios) ve [yapılandırma anahtarları-S/MIME ayarları](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune#smime-settings). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Cihaz yapılandırması
@@ -252,7 +252,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 - Android kurumsal cihaz sahibi, adanmış cihazlar (COSU)
 
 #### <a name="administrative-templates-updated-for-microsoft-edge-84--7722068--"></a>Microsoft Edge 84 için güncelleştirilmiş Yönetim Şablonları<!--7722068-->
-Microsoft Edge için kullanılabilen ADMX ayarları güncelleştirildi. Son kullanıcılar artık Edge 84 ' de eklenen yeni ADMX ayarlarını yapılandırabilir ve dağıtabilir. Daha fazla bilgi için bkz. [Edge 84 sürüm notları](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
+Microsoft Edge için kullanılabilen ADMX ayarları güncelleştirildi. Son kullanıcılar artık Edge 84 ' de eklenen yeni ADMX ayarlarını yapılandırabilir ve dağıtabilir. Daha fazla bilgi için bkz. [Edge 84 sürüm notları](/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-enrollment"></a>Cihaz kaydı
@@ -610,7 +610,7 @@ Artık Android kurumsal tam olarak yönetilen cihazlarda Outlook ile S/MIME imza
 
 Bu, diğer Android sürümleri (Android 'de Outlook ile S/MIME imzalama ve şifreleme sertifikaları desteği) için geçen aya eklenen desteğe genişletilir. Bu sertifikaları SCEP ve PKCS içeri aktarılan sertifika profillerini kullanarak sağlayabilirsiniz.
 
-Bu destek hakkında daha fazla bilgi için Exchange belgelerindeki [iOS ve Android Için Outlook 'Ta duyarlılık etiketleme ve koruma](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) bölümüne bakın.
+Bu destek hakkında daha fazla bilgi için Exchange belgelerindeki [iOS ve Android Için Outlook 'Ta duyarlılık etiketleme ve koruma](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) bölümüne bakın.
 
 #### <a name="add-a-link-to-your-company-portal-support-website-to-emails-for-noncompliance---7225498------"></a>Uyumsuzluk için e-postalara Şirket Portalı Destek Web sitenizin bağlantısını ekleyin<!-- 7225498    -->
 Uyumsuzluk için e-posta bildirimleri göndermek üzere [bir bildirim iletisi şablonu yapılandırdığınızda](../protect/actions-for-noncompliance.md#create-a-notification-message-template) , Şirket portalı Web sitenizin bağlantısını otomatik olarak eklemek için yeni ayar **Şirket portalı Web sitesi bağlantısını** kullanın. Bu seçenek *etkin*olarak ayarlandığında, bu şablona dayalı e-posta alan uyumlu olmayan cihazlara sahip kullanıcılar, cihazlarının neden uyumlu olmadığı hakkında daha fazla bilgi edinmek için bir Web sitesi açmak üzere bağlantıyı kullanabilir. 
@@ -765,7 +765,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 Artık, kayıt kısıtlamalarına kapsam etiketleri atayabilirsiniz. Bunu yapmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **cihazlar**  >  **Kayıt kısıtlamaları**  >  **oluşturma kısıtlaması**' na gidin. Her iki kısıtlama türünü de oluşturun ve **kapsam etiketleri** sayfasını görürsünüz. Daha fazla bilgi için bkz. [kayıt kısıtlamalarını ayarlama](../enrollment/enrollment-restrictions-set.md).
 
 #### <a name="autopilot-support-for-hololens-2-devices--6305220----"></a>HoloLens 2 cihazları için Autopilot desteği<!--6305220  -->
-Windows Autopilot artık HoloLens 2 cihazlarını desteklemektedir. HoloLens için Autopilot kullanma hakkında daha fazla bilgi için bkz. [HoloLens 2 Için Windows Autopilot](https://docs.microsoft.com/hololens/hololens2-autopilot).
+Windows Autopilot artık HoloLens 2 cihazlarını desteklemektedir. HoloLens için Autopilot kullanma hakkında daha fazla bilgi için bkz. [HoloLens 2 Için Windows Autopilot](/hololens/hololens2-autopilot).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Cihaz yönetimi
@@ -825,7 +825,7 @@ Artık Android 'de Outlook ile S/MIME imzalama ve şifreleme için sertifikalar�
 
 Android kurumsal tam olarak yönetilen cihazlar için destek yakında kullanıma sunulacak.
 
-Bu destek hakkında daha fazla bilgi için Exchange belgelerindeki [iOS ve Android Için Outlook 'Ta duyarlılık etiketleme ve koruma](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) bölümüne bakın.
+Bu destek hakkında daha fazla bilgi için Exchange belgelerindeki [iOS ve Android Için Outlook 'Ta duyarlılık etiketleme ve koruma](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) bölümüne bakın.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -861,7 +861,7 @@ Microsoft Uç Nokta Yöneticisi tek bir konsolda Configuration Manager ve Intune
 ### <a name="app-management"></a>Uygulama yönetimi
 
 #### <a name="microsoft-office-365-proplus-rename---6368143---"></a>Microsoft Office 365 ProPlus yeniden adlandır<!-- 6368143 -->
-Microsoft Office 365 ProPlus, **enterprise Microsoft 365 Apps**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](https://docs.microsoft.com/deployoffice/name-change). Belgelerimizde, yaygın olarak Microsoft 365 uygulamalar olarak başvuracağız. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde uygulamalar Windows Ekle ' **yi seçerek uygulamalar**paketini bulabilirsiniz  >  **Windows**  >  **Add**. Uygulama ekleme hakkında daha fazla bilgi için bkz. [Microsoft Intune uygulama ekleme](../apps/apps-add.md).
+Microsoft Office 365 ProPlus, **enterprise Microsoft 365 Apps**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Belgelerimizde, yaygın olarak Microsoft 365 uygulamalar olarak başvuracağız. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde uygulamalar Windows Ekle ' **yi seçerek uygulamalar**paketini bulabilirsiniz  >  **Windows**  >  **Add**. Uygulama ekleme hakkında daha fazla bilgi için bkz. [Microsoft Intune uygulama ekleme](../apps/apps-add.md).
 
 <!-- ########################## -->
 ## <a name="week-of-april-13-2020-2004-service-release"></a>13 Nisan 2020 (2004 hizmet sürümü) haftası
@@ -1226,7 +1226,7 @@ Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanı
 
 - **Virüsten koruma (Önizleme)**:
   - MacOS
-    - **Virüsten koruma** - [Mac IÇIN Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'Yi yönetmek üzere MacOS için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
+    - **Virüsten koruma** - [Mac IÇIN Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'Yi yönetmek üzere MacOS için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
 
   - Windows 10 ve üzeri:
     - **Microsoft Defender virüsten koruma** -bulut koruması, virüsten koruma dışlamaları, düzeltme, tarama seçenekleri ve daha fazlası Için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-windows.md) yönetin.
@@ -1234,7 +1234,7 @@ Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanı
       *Microsoft Defender virüsten koruma* Için virüsten koruma profili, cihaz kısıtlama profilinin bir parçası olarak bulunan ayarların yeni bir örneğini tanıtan bir özel durumdur. Bu yeni virüsten koruma ayarları:
 
         - , Cihaz kısıtlamalarında bulunan ayarlardır, ancak cihaz kısıtlaması olarak yapılandırıldığında kullanılamayan yapılandırma için üçüncü bir seçeneği destekler.
-        - Endpoint Protection için [ortak yönetim iş yükü kaydırıcısının](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) Intune olarak ayarlandığı durumlarda Configuration Manager ile birlikte yönetilen cihazlara uygulanır.
+        - Endpoint Protection için [ortak yönetim iş yükü kaydırıcısının](/configmgr/comanage/how-to-switch-workloads) Intune olarak ayarlandığı durumlarda Configuration Manager ile birlikte yönetilen cihazlara uygulanır.
 
      Yeni *Virüsten koruma*  >  *Microsoft Defender virüsten koruma* profilini bir cihaz kısıtlama profili aracılığıyla yapılandırma yerine kullanmayı planlayın.
 
@@ -1292,9 +1292,9 @@ Bu özellik, genel olarak önizleme aşamasında müşterilere gönderilir. Sonr
 ### <a name="device-management"></a>Cihaz yönetimi
 
 #### <a name="microsoft-endpoint-manager-tenant-attach-device-sync-and-device-actions---6317104-cm3555758--"></a>Microsoft Uç Nokta Yöneticisi kiracı iliştirme: cihaz eşitleme ve cihaz eylemleri<!-- 6317104, CM3555758-->
-Microsoft Uç Nokta Yöneticisi tek bir konsolda Configuration Manager ve Intune 'U bir araya getiriyor. Configuration Manager Technical Preview sürüm 2002,2 ' den başlayarak, Configuration Manager cihazlarınızı bulut hizmetine yükleyebilir ve yönetici merkezinde bu işlemler üzerinde işlem yapabilirsiniz. Daha fazla bilgi için [Configuration Manager Technical Preview sürüm 2002,2 ' deki Özellikler](https://docs.microsoft.com/configmgr/core/get-started/2020/technical-preview-2002-2#bkmk_attach)bölümüne bakın.
+Microsoft Uç Nokta Yöneticisi tek bir konsolda Configuration Manager ve Intune 'U bir araya getiriyor. Configuration Manager Technical Preview sürüm 2002,2 ' den başlayarak, Configuration Manager cihazlarınızı bulut hizmetine yükleyebilir ve yönetici merkezinde bu işlemler üzerinde işlem yapabilirsiniz. Daha fazla bilgi için [Configuration Manager Technical Preview sürüm 2002,2 ' deki Özellikler](/configmgr/core/get-started/2020/technical-preview-2002-2#bkmk_attach)bölümüne bakın.
 
-Bu güncelleştirmeyi yüklemeden önce [Configuration Manager Technical Preview makalesini](https://docs.microsoft.com/configmgr/core/get-started/technical-preview) gözden geçirin. Bu makale, Technical Preview kullanma, sürümler arasında güncelleştirme ve geri bildirim sağlama ile ilgili genel gereksinimleri ve sınırlamaları tamamladığınızda tercihinize.
+Bu güncelleştirmeyi yüklemeden önce [Configuration Manager Technical Preview makalesini](/configmgr/core/get-started/technical-preview) gözden geçirin. Bu makale, Technical Preview kullanma, sürümler arasında güncelleştirme ve geri bildirim sağlama ile ilgili genel gereksinimleri ve sınırlamaları tamamladığınızda tercihinize.
 
 #### <a name="bulk-remote-actions--4576882--"></a>Toplu uzak eylemler<!--4576882-->
 Artık şu uzak eylemler için toplu komutlar verebilirsiniz: yeniden başlatma, yeniden adlandırma, Autopilot sıfırlama, silme ve silme. Yeni toplu eylemleri görmek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)  >  **cihazlar**  >  **tüm cihazlar**  >  **toplu eylemleri**' ne gidin.
@@ -1304,7 +1304,7 @@ Tüm cihazlar listesi, daha iyi performans, arama, sıralama ve filtreleme için
 
 ### <a name="app-management"></a>Uygulama yönetimi  
 ####  <a name="improved-sign-in-experience-in-company-portal-for-android"></a>Android için Şirket Portalı 'de geliştirilmiş oturum açma deneyimi    
-Daha modern, basit ve kullanıcılar için temiz bir deneyim sunmak amacıyla Android için Şirket Portalı uygulamasındaki çeşitli oturum açma ekranlarının yerleşimini güncelleştirdik. Geliştirmelere göz atmak için bkz. [uygulama kullanıcı arabirimindeki](https://docs.microsoft.com/mem/intune/fundamentals/whats-new-app-ui)yenilikler.
+Daha modern, basit ve kullanıcılar için temiz bir deneyim sunmak amacıyla Android için Şirket Portalı uygulamasındaki çeşitli oturum açma ekranlarının yerleşimini güncelleştirdik. Geliştirmelere göz atmak için bkz. [uygulama kullanıcı arabirimindeki](./whats-new-app-ui.md)yenilikler.
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>24 Şubat 2020 haftası
@@ -1338,7 +1338,7 @@ Cihazlardan dışarı aktarmalar **Devices**  >  **tüm cihazlar** sayfası art�
 ### <a name="app-management"></a>Uygulama yönetimi
 
 #### <a name="microsoft-defender-advanced-threat-protection-atp-app-for-macos---5424618---"></a>MacOS için Microsoft Defender Gelişmiş tehdit koruması (ATP) uygulaması<!-- 5424618 -->
-Intune, macOS için Microsoft Defender Gelişmiş tehdit koruması (ATP) uygulamasını yönetilen Mac cihazlarına dağıtmanın kolay bir yolunu sunar. Daha fazla bilgi için bkz. [Mac için Microsoft Intune ve Microsoft Defender Gelişmiş tehdit koruması](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) [kullanarak MacOS CIHAZLARıNA Microsoft Defender ATP ekleme](../apps/apps-advanced-threat-protection-macos.md) .  
+Intune, macOS için Microsoft Defender Gelişmiş tehdit koruması (ATP) uygulamasını yönetilen Mac cihazlarına dağıtmanın kolay bir yolunu sunar. Daha fazla bilgi için bkz. [Mac için Microsoft Intune ve Microsoft Defender Gelişmiş tehdit koruması](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) [kullanarak MacOS CIHAZLARıNA Microsoft Defender ATP ekleme](../apps/apps-advanced-threat-protection-macos.md) .  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Cihaz yapılandırması
@@ -1452,5 +1452,3 @@ Intune artık Windows 10 cihazlarda Microsoft Edge sürüm 77 ve üstünü kald�
 ## <a name="notices"></a>Bildirimler
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
-
-

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43ebd7a242fbc0b859c7b947b02b330498649296
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 895db60bcd4d484a218289978c2da2d2688b8887
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410887"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910579"
 ---
 # <a name="review-client-app-protection-logs"></a>İstemci uygulama koruma günlüklerini gözden geçirme
 
@@ -31,7 +31,7 @@ Uygulama koruma günlüklerinde inceleyebileceğiniz ayarlar hakkında bilgi edi
 
 Günlükleri etkinleştirme ve toplama işlemi platforma göre farklılık gösterir:
 - **iOS/ıpados cihazları** -günlükleri toplamak için IOS Için Microsoft Edge/ıpados kullanın. Ayrıntılar için bkz. [yönetilen uygulama günlüklerine erişmek Için iOS ve Android Için Edge kullanma](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
-- **Windows 10 cihazları** - *mdmdiag* ve olay günlüklerini kullanın. Windows istemci yönetimi içeriğinde [Windows 10 ' da MDM başarısızlıklarını tanılama](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) ve blog [sorunlarını giderme Windows 10 Intune ilke hatalarıyla ilgili](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/)bilgi için bkz..
+- **Windows 10 cihazları** - *mdmdiag* ve olay günlüklerini kullanın. Windows istemci yönetimi içeriğinde [Windows 10 ' da MDM başarısızlıklarını tanılama](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) ve blog [sorunlarını giderme Windows 10 Intune ilke hatalarıyla ilgili](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures)bilgi için bkz..
 - **Android cihazlar** -günlükleri toplamak için Android Için Microsoft Edge kullanın. Ayrıntılar için bkz. [yönetilen uygulama günlüklerine erişmek Için iOS ve Android Için Edge kullanma](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
   > [!NOTE]
@@ -41,7 +41,7 @@ Aşağıdaki tablolarda, uygulama koruma ilkesi ayarı adı ve günlükte kayded
 
 ## <a name="iosipados-app-protection-policy-settings"></a>iOS/ıpados uygulama koruma ilkesi ayarları
 
-| Name                        | Değer ayrıntıları                                                                                                                                                                                                                                                                                            | Microsoft Endpoint Manager uygulama koruma Ilkesinde ayarlama                                                                                                                            |
+| Ad                        | Değer ayrıntıları                                                                                                                                                                                                                                                                                            | Microsoft Endpoint Manager uygulama koruma Ilkesinde ayarlama                                                                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AccessRecheckOfflineTimeout | x dakika                                                                                                                                                                                                                                                                                                   | **Bölüm**: koşullu başlatma<br>**Ayar**: eylem blok erişimi ile çevrimdışı yetkisiz kullanım süresi (dakika)           |
 | AccessRecheckOnlineTimeout  | _x_ dakika                                                                                                                                                                                                                                                                                                   | **Bölüm**: erişim gereksinimleri<br>**Ayar**: erişim gereksinimlerini sonra yeniden denetle (dakika dışı) |
@@ -96,7 +96,7 @@ Aşağıdaki tablolarda, uygulama koruma ilkesi ayarı adı ve günlükte kayded
 
 ## <a name="android-app-protection-policy-settings"></a>Android uygulama koruma ilkesi ayarları
 
-| Name                        | Değer ayrıntıları                                                                                                                                                                                                                                                                                            | Microsoft Endpoint Manager uygulama koruma Ilkesinde ayarlama                                                                                                                            |
+| Ad                        | Değer ayrıntıları                                                                                                                                                                                                                                                                                            | Microsoft Endpoint Manager uygulama koruma Ilkesinde ayarlama                                                                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AccessRecheckOfflineTimeout | x dakika                                                                                                                                                                                                                                                                                                   | **Bölüm**: koşullu başlatma<br>**Ayar**: eylem blok erişimi ile çevrimdışı yetkisiz kullanım süresi (dakika)           |
 | AccessRecheckOnlineTimeout  | x dakika                                                                                                                                                                                                                                                                                                   | **Bölüm**: erişim gereksinimleri<br>**Ayar**: erişim gereksinimlerini sonra yeniden denetle (dakika dışı) |

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50c1842357a79ce3228b7b0a5283dc9a4e98b2d6
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252348"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906761"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Silme, kullanımdan kaldırma veya el ile kaydını kaldırma yoluyla cihaz kaldırma
 
@@ -119,9 +119,9 @@ Bir Android iş profili cihazdan şirket verilerinin kaldırılması, cihazdaki 
 Yalnızca bilgi noktası cihazlarını silebilirsiniz. Android bilgi noktası cihazlarını kullanımdan kaldıramazsınız.
 
 
-### <a name="macos"></a>macOS
+### <a name="macos"></a>Mac OS
 
-|Veri türü|macOS|
+|Veri türü|Mac OS|
 |-------------|-------|
 |Ayarlar|Intune ilkesi tarafından ayarlanan yapılandırmalar artık zorunlu tutulmaz. Kullanıcılar ayarları değiştirebilir.|
 |Wi-Fi ve VPN profili ayarları|Kaldırıldı.|
@@ -168,7 +168,7 @@ Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak s
 4. **Kaydet**'i seçin.
 
 > [!NOTE]
-> Cihaz temizleme kuralları, [tam olarak yönetilen](https://docs.microsoft.com/mem/intune/enrollment/android-fully-managed-enroll), [adanmış](https://docs.microsoft.com/mem/intune/enrollment/android-kiosk-enroll)ve [şirkete ait iş profili](https://docs.microsoft.com/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)gibi Android kurumsal senaryolarında kullanılamaz. 
+> Cihaz temizleme kuralları, [tam olarak yönetilen](../enrollment/android-fully-managed-enroll.md), [adanmış](../enrollment/android-kiosk-enroll.md)ve [şirkete ait iş profili](../enrollment/android-corporate-owned-work-profile-enroll.md)gibi Android kurumsal senaryolarında kullanılamaz. 
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Azure Active Directory portalından cihazları silme
 
@@ -206,4 +206,3 @@ Windows 10 cihazlarda kullanılabilir. [Yeni Başlangıç](device-fresh-start.md
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Silinen cihazı yeniden kaydetmek istiyorsanız bkz. [Kayıt seçenekleri](../enrollment/enrollment-options.md).
-

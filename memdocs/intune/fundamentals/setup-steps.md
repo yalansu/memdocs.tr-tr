@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 631b2f0fdf0d5cdd79eee9a3645b5769b756d71b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: c0a71ba59a1704e0f6369f611a2922212a2aa8c6
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990709"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911368"
 ---
 # <a name="set-up-intune"></a>Intune’u ayarlama
 
@@ -30,10 +30,10 @@ Bu kurulum adımları, Intune kullanarak mobil cihaz yönetimini (MDM) etkinleş
 
 Intune aboneliği ayarlama ve MDM yetkilisi ayarlama gibi bazı adımlar, çoğu senaryoda gereklidir. Özel bir etki alanı yapılandırma veya uygulama ekleme gibi diğer adımlar ise şirketinizin ihtiyaçlarına göre isteğe bağlıdır.
 
-Şu anda bilgisayarları ve sunucuları yönetmek için Microsoft uç nokta Configuration Manager kullanıyorsanız, [ortak yönetim ile buluta iliştirebilirsiniz Configuration Manager](https://docs.microsoft.com/configmgr/comanage/overview).
+Şu anda bilgisayarları ve sunucuları yönetmek için Microsoft uç nokta Configuration Manager kullanıyorsanız, [ortak yönetim ile buluta iliştirebilirsiniz Configuration Manager](/configmgr/comanage/overview).
 
 >[!TIP]
->Uygun bir planda Intune için en az 150 lisans satın alırsanız *FastTrack Center Avantajını* kullanabilirsiniz. Bu hizmet ile Microsoft uzmanları, ortamınızı Intune’a hazırlamak için sizinle birlikte çalışır. Bkz. [Enterprise Mobility + Security (EMS) için FastTrack Center Avantajı](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
+>Uygun bir planda Intune için en az 150 lisans satın alırsanız *FastTrack Center Avantajını* kullanabilirsiniz. Bu hizmet ile Microsoft uzmanları, ortamınızı Intune’a hazırlamak için sizinle birlikte çalışır. Bkz. [Enterprise Mobility + Security (EMS) için FastTrack Center Avantajı](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 | Adımlar | Durum  |
 |---|---|

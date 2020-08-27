@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89635c9eb2849b4896ea3df85dd081d6e267627e
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 53d267ec6b97579d256b11744768e6bdb7344328
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990197"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910154"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Microsoft Intune 'de Grup İlkesi ayarlarını yapılandırmak için Windows 10 şablonlarını kullanın
 
@@ -33,7 +33,7 @@ Bu özellik şu platformlarda geçerlidir:
 
 - Windows 10 ve üzeri
 
-Windows ayarları Active Directory (AD) içindeki Grup İlkesi (GPO) ayarlarına benzerdir. Bu ayarlar Windows 'da yerleşiktir ve XML kullanan [ADMX ile desteklenen ayarlardır](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) . Office ve Microsoft Edge ayarları, ADMX kullanımına alınır ve [Office Yönetim şablonu dosyaları](https://www.microsoft.com/download/details.aspx?id=49030) ve [Microsoft Edge YÖNETIM şablonu dosyalarında](https://www.microsoftedgeinsider.com/enterprise)ADMX ayarlarını kullanır. Intune şablonları, %100 bulut tabanlı. Ayarları yapılandırmak için basit ve düz ileri bir yol sunar ve istediğiniz ayarları bulur.
+Windows ayarları Active Directory (AD) içindeki Grup İlkesi (GPO) ayarlarına benzerdir. Bu ayarlar Windows 'da yerleşiktir ve XML kullanan [ADMX ile desteklenen ayarlardır](/windows/client-management/mdm/understanding-admx-backed-policies) . Office ve Microsoft Edge ayarları, ADMX kullanımına alınır ve [Office Yönetim şablonu dosyaları](https://www.microsoft.com/download/details.aspx?id=49030) ve [Microsoft Edge YÖNETIM şablonu dosyalarında](https://www.microsoftedgeinsider.com/enterprise)ADMX ayarlarını kullanır. Intune şablonları, %100 bulut tabanlı. Ayarları yapılandırmak için basit ve düz ileri bir yol sunar ve istediğiniz ayarları bulur.
 
 **Yönetim Şablonları** , Intune 'da yerleşik olarak bulunur ve OMA-URI kullanımı dahil olmak üzere herhangi bir özelleştirme gerektirmez. Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak, Windows 10 cihazlarınızı yönetmek için bu şablon ayarlarını tek durdurulmalı bir mağaza olarak kullanın.
 
@@ -43,7 +43,7 @@ Bu makalede, Windows 10 cihazları için şablon oluşturma adımları listeleni
 
 - Bu ayarlardan bazıları Windows 10 sürüm 1709 (RS2/Build 15063) ile başlayarak kullanılabilir. Bazı ayarlar tüm Windows sürümlerinde bulunmaz. En iyi deneyim için, Windows 10 Enterprise sürüm 1903 (19H1/derleme 18362) ve daha yeni bir sürümü kullanmanız önerilir.
 
-- Windows ayarları [Windows Ilkesi CSP 'leri](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)kullanır. CSP 'Ler Home, Professional, Enterprise vb. gibi farklı Windows sürümlerinde çalışır. CSP 'nin belirli bir sürümde çalışıp çalışmadığını görmek için [Windows Ilke CSP 'leri](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)' ne gidin.
+- Windows ayarları [Windows Ilkesi CSP 'leri](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)kullanır. CSP 'Ler Home, Professional, Enterprise vb. gibi farklı Windows sürümlerinde çalışır. CSP 'nin belirli bir sürümde çalışıp çalışmadığını görmek için [Windows Ilke CSP 'leri](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies)' ne gidin.
 
 ## <a name="create-the-template"></a>Şablonu oluşturma
 
@@ -128,7 +128,7 @@ Bu şablonlarda binlerce ayar mevcuttur. Belirli ayarları bulmayı kolaylaştı
 
 - Ayrıca, aramanızı yalnızca **bilgisayar yapılandırması** veya **Kullanıcı Yapılandırması**seçerek daraltabilirsiniz.
 
-  Örneğin, tüm kullanılabilir Internet Explorer Kullanıcı ayarlarını görmek için **Kullanıcı Yapılandırması**' nı seçin ve arama yapın `Internet Explorer` . Yalnızca kullanıcılara uygulanan IE ayarları gösterilir:
+  Örneğin, tüm kullanılabilir Internet Explorer Kullanıcı ayarlarını görmek için  **Kullanıcı Yapılandırması**' nı seçin ve arama yapın `Internet Explorer` . Yalnızca kullanıcılara uygulanan IE ayarları gösterilir:
 
   :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="ADMX şablonunda, Kullanıcı Yapılandırması ' nı seçin ve Microsoft Intune Internet Explorer için arama veya filtreleme yapın.":::
 

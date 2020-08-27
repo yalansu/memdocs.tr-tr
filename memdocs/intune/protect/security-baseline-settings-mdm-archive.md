@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92eafef5bac7f1008284f896b85981d170331382
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 790382e3c7ad92133ffbb69fafa6b92e3d2076fa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079221"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912075"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -44,7 +44,7 @@ Bir temel sürümün kullanım için artık desteklenmemesi durumunda bu makaled
 
 ### <a name="above-lock"></a>Kilidin üstünde  
 
-Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-AboveLock](/windows/client-management/mdm/policy-csp-abovelock) bölümüne bakın.  
 
 - **Bildirim bildirimlerinin görüntülenmesini engelle**  
   Bu ilke ayarı, uygulama bildirimlerinin kilit ekranında görüntülenmesini engellemenizi sağlar. Bu ilke ayarını etkinleştirirseniz, kilit ekranında hiçbir uygulama bildirimi gösterilmez. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, kullanıcılar hangi uygulamaların kilit ekranında bildirim görüntülemesini seçebilirler.
@@ -53,7 +53,7 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-AboveLock](https://doc
 
 ### <a name="app-runtime"></a>Uygulama çalışma zamanı  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-AppRuntime](/windows/client-management/mdm/policy-csp-appruntime
 ) bölümüne bakın.  
 
 - **Microsoft hesapları Windows Mağazası uygulamaları için isteğe bağlı**  
@@ -63,7 +63,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-AppRuntime](https://docs
 
 ### <a name="application-management"></a>Uygulama Yönetimi  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) bölümüne bakın.  
 
 - **Oyun DVR 'ı engelle (yalnızca masaüstü)**  
   Oyunları kaydetmeye ve yayına izin verilip verilmeyeceğini yapılandırır.
@@ -72,7 +72,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-ApplicationManagement](h
 
 ### <a name="auto-play"></a>Otomatik Yürüt  
 
-Daha fazla bilgi için bkz. [Ilke CSP-Windows belgelerinde otomatik kullan](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) .  
+Daha fazla bilgi için bkz. [Ilke CSP-Windows belgelerinde otomatik kullan](/windows/client-management/mdm/policy-csp-autoplay) .  
 
 - **Varsayılan otomatik çalıştırma davranışını Otomatik Yürüt**  
   Bu ayar Autorun komutlarının varsayılan davranışını etkiler. Autorun komutları Autorun. inf dosyalarında depolanır ve yükleme programlarını veya diğer yordamları başlatabilir. *Etkinleştirildiğinde*Yöneticiler, Windows Vista veya üstünü çalıştıran bir cihazda varsayılan otomatik çalıştırma davranışını değiştirebilir. Davranış: a), otomatik çalıştırma komutunu otomatik olarak yürüten Windows Vista öncesi davranışına geri dönmek için şu şekilde ayarlanabilir: a). *Devre dışı* veya *yapılandırılmamış*olarak ayarlandığında, Windows Vista veya sonraki bir sürümü çalıştıran cihazlar kullanıcıdan bir otomatik çalıştırma komutunun çalıştırılıp çalıştırılmayacağı konusunda bilgi ister.
@@ -89,9 +89,9 @@ Daha fazla bilgi için bkz. [Ilke CSP-Windows belgelerinde otomatik kullan](http
   
   **Varsayılan**: etkin  
 
-### <a name="bitlocker"></a>Bitlocker  
+### <a name="bitlocker"></a>Kurulumu  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-BitLocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-BitLocker](/windows/client-management/mdm/policy-csp-bitlocker
 ) bölümüne bakın.  
 
 - **Bit dolabı çıkarılabilir sürücü ilkesi**  
@@ -121,7 +121,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-BitLocker](https://docs.
 
 ### <a name="browser"></a>Tarayıcı  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Browser](/windows/client-management/mdm/policy-csp-browser) bölümüne bakın.  
 
 - **Microsoft Edge için SmartScreen gerektir**  
 
@@ -151,7 +151,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Browser](https://docs.mi
 
 ### <a name="connectivity"></a>Bağlantı  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-bağlantı](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-bağlantı](/windows/client-management/mdm/policy-csp-connectivity) bölümüne bakın.  
 
 - **Web yayımı ve çevrimiçi sipariş sihirbazları için Internet 'ten indirmeyi engelleyin**  
   Bu ilke ayarı, Windows 'un Web yayımı ve çevrimiçi sipariş sihirbazları için sağlayıcı listesini indirip indirmeyeceğini belirtir. Bu sihirbazlar, kullanıcıların çevrimiçi depolama ve fotoğraf baskısı gibi hizmetler sağlayan şirketler listesinden seçmesine olanak sağlar. Varsayılan olarak, Windows, kayıt defterinde belirtilen sağlayıcılara ek olarak Windows Web sitesinden indirilen sağlayıcıları görüntüler. Bu ilke ayarını etkinleştirirseniz, Windows sağlayıcıları indirmez ve yalnızca yerel kayıt defterinde önbelleğe alınan hizmet sağlayıcılarını görüntüler. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, Kullanıcı Web yayımlaması veya çevrimiçi sıralama sihirbazları kullandığında bir sağlayıcı listesi indirilir. Kayıt defterindeki hizmet sağlayıcılarının belirtilmesine ilişkin ayrıntıları içeren daha fazla bilgi için, Web yayımı ve çevrimiçi sipariş sihirbazları belgelerine bakın.  
@@ -165,7 +165,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-bağlantı](https://docs
 
 ### <a name="credentials-delegation"></a>Kimlik bilgileri temsili  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Credentialstemsilciliğini](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Credentialstemsilciliğini](/windows/client-management/mdm/policy-csp-credentialsdelegation
 ) inceleyin.  
 
 - **Dışarı aktarılabilir olmayan kimlik bilgilerinin uzak ana bilgisayar temsili**  
@@ -176,7 +176,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Credentialstemsilciliği
 
 ### <a name="credentials-ui"></a>Kimlik bilgileri kullanıcı arabirimi  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-CredentialsUI](/windows/client-management/mdm/policy-csp-credentialsui) bölümüne bakın.  
 
 - **Yöneticileri listeleme** Bu ilke ayarı, bir Kullanıcı çalışan bir uygulamayı yükseltmeyi denediğinde yönetici hesaplarının görüntülenip görüntülenmeyeceğini denetler. Varsayılan olarak, Kullanıcı çalışan bir uygulamayı yükseltmeyi denediğinde yönetici hesapları görüntülenmez. Bu ilke ayarını etkinleştirirseniz, BILGISAYARDAKI tüm yerel yönetici hesapları kullanıcının hesabı seçmesini ve doğru parolayı girebilmesini sağlayacak biçimde görüntülenir. Bu ilke ayarını devre dışı bırakırsanız, kullanıcıların yükseltmek için her zaman bir Kullanıcı adı ve parola yazmanız gerekir.  
 
@@ -185,7 +185,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-CredentialsUI](https://d
 
 ### <a name="data-protection"></a>Veri Koruma  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DataProtection](/windows/client-management/mdm/policy-csp-dataprotection
 ) bölümüne bakın.  
 
 - **Doğrudan bellek erişimini engelle**  
@@ -196,7 +196,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DataProtection](https://
 
 ### <a name="device-guard"></a>Device Guard  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DeviceGuard](/windows/client-management/mdm/policy-csp-deviceguard
 ) bölümüne bakın.  
 
 - **Credential Guard**  
@@ -214,7 +214,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DeviceGuard](https://doc
 
 ### <a name="device-installation"></a>Cihaz yüklemesi  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Deviceınstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Deviceınstallation](/windows/client-management/mdm/policy-csp-deviceinstallation) bölümüne bakın.  
 
 - **Cihaz tanımlayıcılarına göre donanım cihazı yüklemesi**  
   Bu ilke ayarı, Windows 'un yüklemesi engellenen cihazlar için Tak ve Kullan donanım kimliklerinin ve uyumlu kimliklerin bir listesini belirtmenizi sağlar. Bu ilke ayarı, Windows 'un bir cihaz yüklemesine izin veren diğer tüm ilke ayarlarından önceliklidir. Bu ilke ayarını etkinleştirirseniz, Windows 'un, oluşturduğunuz listede donanım KIMLIĞI veya uyumlu KIMLIĞI görünen bir cihaz yüklemesi engellenir. Uzak Masaüstü sunucusunda bu ilke ayarını etkinleştirirseniz, ilke ayarı, belirtilen cihazların uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, cihazlar diğer ilke ayarları tarafından izin verilen veya engellenen şekilde yükleyebilir ve güncelleştirebilir.
@@ -251,7 +251,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Deviceınstallation](htt
 
 ### <a name="device-lock"></a>Cihaz kilidi  
 
-Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) bölümüne bakın.  
 
 - **Kameranın kullanımını engelle**  
   BILGISAYAR ayarlarındaki kilit ekranı Kamerası geçiş anahtarını devre dışı bırakır ve bir kameranın kilit ekranında çağrılmasını engeller. Varsayılan olarak, kullanıcılar, kilit ekranında kullanılabilir bir kameranın çağrılmasını sağlayabilir. Bu ayarı etkinleştirirseniz, kullanıcılar artık bılgısayar ayarlarında kilit ekranı kamera erişimini etkinleştiremez veya devre dışı bırakamayacaktır ve kamera kilit ekranında çağrılamaz. 
@@ -314,7 +314,7 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-DeviceLock](https://do
 
 ### <a name="event-log-service"></a>Olay günlüğü hizmeti  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice) bölümüne bakın.  
 
 - **KB cinsinden güvenlik günlüğü en büyük dosya boyutu**  
   Bu ilke ayarı, günlük dosyasının en büyük boyutunu kilobayt cinsinden belirtir. Bu ilke ayarını etkinleştirirseniz, en büyük günlük dosyası boyutunu uzunluğu 1 megabayt (1024 kilobayt) ve 2 terabayta (2147483647 kilobayt) kadar kilobayt artışlarla yapılandırabilirsiniz. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, günlük dosyasının en büyük boyutu yerel olarak yapılandırılmış değere ayarlanır. Bu değer, günlük özellikleri iletişim kutusu kullanılarak yerel yönetici tarafından değiştirilebilir ve varsayılan olarak 20 megabaylardır.
@@ -333,7 +333,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-EventLogService](https:/
 
 ### <a name="experience"></a>Deneyim  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-deneyim](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-deneyim](/windows/client-management/mdm/policy-csp-experience) bölümüne bakın.  
 
 - **Windows spot 'u engelle**  
   BT yöneticilerinin tüm Windows spot özelliklerini kapatmasına izin verir-kilit ekranında pencere projektörü, Windows Ipuçları, Microsoft tüketici özellikleri ve diğer ilgili özellikler.
@@ -354,7 +354,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-deneyim](https://docs.mi
 
 ### <a name="exploit-guard"></a>Exploit Guard  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Patıguard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Patıguard](/windows/client-management/mdm/policy-csp-exploitguard) bölümüne bakın.  
 
 - **Exploit Protection XML**  
   BT yöneticisinin, kuruluştaki tüm cihazlara istenen sistem ve uygulama azaltma seçeneklerini temsil eden bir yapılandırma gönderebilmesini sağlar. Yapılandırma bir XML ile temsil edilir. Yararlanma koruması, cihazları yaymak ve bulaşma için kötüye kullanılan kötü amaçlı yazılımlara karşı korumanıza yardımcı olur. Windows güvenlik uygulamasını veya PowerShell 'i kullanarak bir azaltma kümesi (yapılandırma olarak bilinir) oluşturabilirsiniz. Daha sonra bu yapılandırmayı bir XML dosyası olarak dışarı aktarabilir ve ağınızdaki birden fazla makineyle paylaşarak, hepsi aynı azaltma ayarları kümesine sahip olurlar. Ayrıca, var olan bir EMET yapılandırma XML dosyasını bir Exploit Protection yapılandırması XML dosyasına dönüştürebilir ve içeri aktarabilirsiniz.
@@ -363,7 +363,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Patıguard](https://docs
  
 ### <a name="file-explorer"></a>Dosya Gezgini  
 
-Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-FileExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-FileExplorer](/windows/client-management/mdm/policy-csp-fileexplorer) bölümüne bakın.  
 
 - **Veri yürütme engellemesini engelle**  
   Veri yürütme engellemesini devre dışı bırakmak, bazı eski eklenti uygulamalarının gezgin 'i sonlandırmadan çalışmasına izin verebilir.
@@ -378,7 +378,7 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-FileExplorer](https://
 
 ### <a name="internet-explorer"></a>Internet Explorer  
 
-Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) .  
+Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](/windows/client-management/mdm/policy-csp-internetexplorer) .  
 
 - **Veri kaynaklarına Internet Explorer Internet bölgesi erişimi**  
   Bu ilke ayarı, Internet Explorer 'ın Microsoft XML ayrıştırıcısı (MSXML) veya ActiveX Data Objects (ADO) kullanarak başka bir güvenlik bölgesinden veriye erişip erişemeyeceğini yönetmenizi sağlar. Bu ilke ayarını etkinleştirirseniz, kullanıcılar bölgedeki başka bir siteden veriye erişmek için MSXML veya ADO kullanan bölgeye bir sayfa yükleyebilir. Açılır kutuda sor ' u seçerseniz, kullanıcılar bölgedeki başka bir siteden veriye erişmek için MSXML veya ADO kullanan bölgede bir sayfanın yüklenmesine izin verip vermeyeceğinizi belirlemek üzere sorgulanır. Bu ilke ayarını devre dışı bırakırsanız, kullanıcılar bölgedeki başka bir siteden veriye erişmek için MSXML veya ADO kullanan bölgeye bir sayfa yükleyemez. Bu ilke ayarını yapılandırmazsanız kullanıcılar bölgedeki başka bir siteden veriye erişmek için MSXML veya ADO kullanan bölgeye bir sayfa yükleyemez.
@@ -518,7 +518,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](https:
   
 - **Internet Explorer kısıtlı bölge oturum açma seçenekleri**  
   Bu ilke ayarı, oturum açma seçeneklerinin ayarlarını yönetmenizi sağlar. Bu ilke ayarını etkinleştirirseniz, aşağıdaki oturum açma seçenekleri arasından seçim yapabilirsiniz. 
-  - *Anonim* -http kimlik doğrulamasını devre dışı bırakmak ve yalnızca ortak Internet dosya SISTEMI (CIFS) protokolü için konuk hesabını kullanmak üzere anonim oturum açma özelliğini kullanın. 
+  - *Anonim*  -http kimlik doğrulamasını devre dışı bırakmak ve yalnızca ortak Internet dosya SISTEMI (CIFS) protokolü için konuk hesabını kullanmak üzere anonim oturum açma özelliğini kullanın. 
   - *İstem* -Kullanıcı kimlikleri ve parolalar için kullanıcıları sorgulamak üzere Kullanıcı adı ve parola istemi kullanın. Kullanıcı sorgulandıktan sonra bu değerler sessizce oturum geri kalanı için kullanılabilir. 
   - *Yalnızca Intranet bölgesinde otomatik oturum açma* -bu seçeneği, kullanıcıları diğer bölgelerdeki Kullanıcı kimlikleri ve parolalar için sorgulamak üzere kullanın. Kullanıcı sorgulandıktan sonra bu değerler sessizce oturum geri kalanı için kullanılabilir. 
   - *Geçerli Kullanıcı adı ve parolasıyla otomatik oturum aç*-bu seçeneği, Windows NT Challenge yanıtı (NTLM kimlik doğrulaması olarak da bilinir) kullanarak oturum açmayı denemek için kullanın. Sunucu Windows NT Challenge yanıtını destekliyorsa, oturum açma oturum açmak için kullanıcının ağ kullanıcı adını ve parolasını kullanır. Sunucu Windows NT Challenge yanıtını desteklemiyorsa, Kullanıcı Kullanıcı adını ve parolayı sağlamak üzere sorgulanır. 
@@ -950,7 +950,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](https:
   **Varsayılan**: devre dışı  
   
 ### <a name="local-policies-security-options"></a>Yerel Ilkeler güvenlik seçenekleri
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) bölümüne bakın. 
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-LocalPoliciesSecurityOptions](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) bölümüne bakın. 
 
 - **Adlandırılmış kanallara ve Paylaşımlara anonim erişimi kısıtla**  
   Bu güvenlik ayarı etkinleştirildiğinde, paylaşımlar ve kanallar için anonim erişimi, anonim olarak erişilebilen, anonim (2) paylaşımlara erişilebilen adlandırılmış kanallarla kısıtlar.
@@ -1094,7 +1094,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-LocalPoliciesSecurityOpt
 
 ### <a name="ms-security-guide"></a>MS Güvenlik Kılavuzu  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-MSSecurityGuide](/windows/client-management/mdm/policy-csp-mssecurityguide) bölümüne bakın.  
 
 - **Ağ oturum açmada yerel hesaplara UAC kısıtlamalarını uygulama**  
   **Varsayılan**: etkin
@@ -1113,7 +1113,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-MSSecurityGuide](https:/
   
 ### <a name="mss-legacy"></a>Bulunan eski  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-MSSLegacy](/windows/client-management/mdm/policy-csp-msslegacy) bölümüne bakın.  
 
 - **Ağ IP kaynağı yönlendirme koruma düzeyi**  
   **Varsayılan**: en yüksek koruma  
@@ -1127,9 +1127,9 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-MSSLegacy](https://docs.
 - **Ağ ıCMP yeniden yönlendirmeleri geçersiz kılma OSPF oluşturulan**  
   **Varsayılan**: devre dışı
   
-### <a name="power"></a>Üs  
+### <a name="power"></a>Güç  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-güç](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-güç](/windows/client-management/mdm/policy-csp-power) bölümüne bakın.  
 
 - **Prize takılıyken uyanma durumunda parola iste**  
   Bu ilke ayarı, sistem uykudan devam ettiğinde kullanıcıdan bir parola istenip istenmeyeceğine belirtir. Bu ilke ayarını etkinleştirir veya yapılandırmazsanız, sistem uykudan devam ettiğinde kullanıcıdan bir parola istenir. Bu ilke ayarını devre dışı bırakırsanız, sistem uykudan devam ettiğinde kullanıcıdan parola istenmez.
@@ -1153,7 +1153,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-güç](https://docs.micr
   
 ### <a name="remote-desktop-services"></a>Uzak Masaüstü Hizmetleri  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices) bölümüne bakın.  
 
 - **Parola kaydetmeyi engelle**  
   Uzak Masaüstü Bağlantısı 'tan bu bilgisayara parolaların kaydedilip kaydedilmediğini denetler. Bu ayarı etkinleştirirseniz Uzak Masaüstü Bağlantısı ' de parola kaydetme onay kutusu devre dışıdır ve kullanıcılar parolaları kaydedemezler. Kullanıcı Uzak Masaüstü Bağlantısı kullanarak bir RDP dosyası açtığında ve ayarlarını kaydettiğinde, RDP dosyasında daha önce varolan tüm parolalar silinir. Bu ayarı devre dışı bırakırsanız veya yapılandırılmamışsa, Kullanıcı Uzak Masaüstü Bağlantısı kullanarak parolaları kaydedebilir.
@@ -1166,7 +1166,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-RemoteDesktopServices](h
   **Varsayılan**: etkin
   
 - **Sürücü yeniden yönlendirmeyi engelle**  
-  Bu ilke ayarı, Uzak Masaüstü Hizmetleri oturumunda istemci sürücülerinin eşlenmesinin engellenip engellenmeyeceğini belirtir (sürücü yeniden yönlendirme). Varsayılan olarak, bir RD Oturumu Ana Bilgisayarı sunucusu bağlantı kurulduğunda istemci sürücüleri otomatik olarak eşler. Eşlenen sürücüler, * \<ComputerName>* üzerindeki dosya Gezgini veya bilgisayar * \<>* biçimindeki oturum klasörü ağacında görüntülenir. Bu davranışı geçersiz kılmak için bu ilke ayarını kullanabilirsiniz. Bu ilke ayarını etkinleştirirseniz, Uzak Masaüstü Hizmetleri oturumlarında istemci sürücü yönlendirmesine izin verilmez ve Windows Server 2003, Windows 8 ve Windows XP çalıştıran bilgisayarlarda Pano dosya kopyası yeniden yönlendirmesine izin verilmez. Bu ilke ayarını devre dışı bırakırsanız, istemci sürücü yeniden yönlendirmesine her zaman izin verilir. Ayrıca, pano yeniden yönlendirmesine izin veriliyorsa Pano dosya kopyalama yönlendirmesine her zaman izin verilir. Bu ilke ayarını yapılandırmazsanız, istemci sürücü yeniden yönlendirmesi ve Pano dosya kopyalama yönlendirmesi grup ilkesi düzeyinde belirtilmez.
+  Bu ilke ayarı, Uzak Masaüstü Hizmetleri oturumunda istemci sürücülerinin eşlenmesinin engellenip engellenmeyeceğini belirtir (sürücü yeniden yönlendirme). Varsayılan olarak, bir RD Oturumu Ana Bilgisayarı sunucusu bağlantı kurulduğunda istemci sürücüleri otomatik olarak eşler. Eşlenen sürücüler, dosya Gezgini veya bilgisayardaki oturum klasörü ağacında, açık biçimde görüntülenir *\<driveletter>* *\<computername>* . Bu davranışı geçersiz kılmak için bu ilke ayarını kullanabilirsiniz. Bu ilke ayarını etkinleştirirseniz, Uzak Masaüstü Hizmetleri oturumlarında istemci sürücü yönlendirmesine izin verilmez ve Windows Server 2003, Windows 8 ve Windows XP çalıştıran bilgisayarlarda Pano dosya kopyası yeniden yönlendirmesine izin verilmez. Bu ilke ayarını devre dışı bırakırsanız, istemci sürücü yeniden yönlendirmesine her zaman izin verilir. Ayrıca, pano yeniden yönlendirmesine izin veriliyorsa Pano dosya kopyalama yönlendirmesine her zaman izin verilir. Bu ilke ayarını yapılandırmazsanız, istemci sürücü yeniden yönlendirmesi ve Pano dosya kopyalama yönlendirmesi grup ilkesi düzeyinde belirtilmez.
   
   **Varsayılan**: etkin
   
@@ -1187,7 +1187,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-RemoteDesktopServices](h
   
 ### <a name="remote-management"></a>Uzaktan Yönetim  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-RemoteManagement](/windows/client-management/mdm/policy-csp-remotemanagement) bölümüne bakın.  
 
 - **Farklı çalıştır kimlik bilgilerini depolamayı engelle**  
   İstemci temel kimlik doğrulaması
@@ -1222,7 +1222,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-RemoteManagement](https:
 
 ### <a name="remote-procedure-call"></a>Uzak yordam çağrısı  
 
-Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-RemoteProcedureCall](/windows/client-management/mdm/policy-csp-remoteprocedurecall) bölümüne bakın.  
 
 - **RPC kimliği doğrulanmamış istemci seçenekleri**  
   Bu ilke ayarı, RPC sunucusu çalışma zamanının RPC sunucularına bağlanan kimliği doğrulanmamış RPC istemcilerini nasıl işlediğini denetler. Bu ilke ayarı tüm RPC uygulamalarını etkiler. Bir etki alanı ortamında, Grup İlkesi işleme dahil olmak üzere çok çeşitli işlevleri etkileyebileceğinden Bu ilke ayarını dikkatli kullanın. Bu ilke ayarında bir değişikliği geri almak, etkilenen her makinede el ile müdahale gerektirebilir. Bu ilke ayarı, bir etki alanı denetleyicisine hiçbir şekilde uygulanmamalıdır. Bu ilke ayarını devre dışı bırakırsanız, RPC sunucusu çalışma zamanı Windows Istemcisinde "kimliği doğrulanmış" değerini ve bu ilke ayarını destekleyen Windows Server sürümlerinde "none" değerini kullanır. Bu ilke ayarını yapılandırmazsanız, devre dışı kalır. RPC sunucusu çalışma zamanı, Windows Istemcisi için kullanılan "kimliği doğrulanmış" değeri ve bu ilke ayarını destekleyen sunucu SKU 'Ları için kullanılan "none" değeri ile etkinleştirilmiş gibi davranır. Bu ilke ayarını etkinleştirirseniz, bir makinede çalışan RPC sunucularına bağlanan kimliği doğrulanmamış RPC istemcilerini kısıtlamak için RPC sunucusu çalışma zamanını yönlendirir. İstemci, sunucuyla iletişim kurmak için adlandırılmış bir kanal kullanıyorsa veya RPC güvenliği kullanıyorsa, kimliği doğrulanmış bir istemci olarak kabul edilir. Kimliği doğrulanmamış istemciler tarafından erişilebilmesi istenen RPC arabirimleri, bu ilke ayarı için seçilen değere bağlı olarak bu kısıtlamadan muaf kalabilir.  
@@ -1232,9 +1232,9 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-RemoteProcedureCall](h
 
   **Varsayılan**: kimliği doğrulandı
 
-### <a name="search"></a>Arama  
+### <a name="search"></a>Arayın  
 
-Daha fazla bilgi için bkz. [Ilke CSP-](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) Windows belgelerinde arama.  
+Daha fazla bilgi için bkz. [Ilke CSP-](/windows/client-management/mdm/policy-csp-search) Windows belgelerinde arama.  
 
 - **Şifrelenmiş öğelerin dizinini oluşturmayı devre dışı bırak**  
   Öğeler için dizin oluşturulmasına izin verir veya engeller. Bu anahtar, Windows Information Protection (WıP) korumalı dosyalar gibi şifrelenmiş öğelerin dizinini oluşturulup oluşturulmayacağını denetleyen Windows Arama Dizin Oluşturucusu içindir. İlke etkinleştirildiğinde, WIP korumalı öğelerin dizini oluşturulur ve bunlar hakkındaki meta veriler şifrelenmemiş bir konumda depolanır. Meta veriler, dosya yolu ve değiştirilme tarihi gibi veriler içerir. İlke devre dışı bırakıldığında, WıP korumalı öğelerin dizini oluşturulmaz ve Cortana veya dosya Gezgini sonuçlarında gösterilmez. Cihazda çok sayıda WIP korumalı medya dosyası varsa fotoğraflar ve Groove uygulamaları performansını da etkileyebilir.
@@ -1243,7 +1243,7 @@ Daha fazla bilgi için bkz. [Ilke CSP-](https://docs.microsoft.com/windows/clien
   
 ### <a name="smart-screen"></a>Akıllı ekran  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-SmartScreen](/windows/client-management/mdm/policy-csp-smartscreen) bölümüne bakın.  
 
 - **Doğrulanmamış dosyaların yürütülmesini engelle**  
   Kullanıcının doğrulanmamış dosyaları çalıştırmasını engelleyin. 
@@ -1264,7 +1264,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-SmartScreen](https://doc
   
 ### <a name="system"></a>Sistem  
 
-Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-sistem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) .  
+Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-sistem](/windows/client-management/mdm/policy-csp-system) .  
 
 - **Sistem önyüklemesi başlatma sürücüsü başlatma**  
   Bu ilke ayarı, bir erken başlatılan kötü amaçlı yazılımdan koruma önyükleme başlatma sürücüsüyle belirlenen bir sınıflandırmaya göre hangi önyükleme başlatma sürücülerinin başlatıldığını belirtmenizi sağlar. Erken başlatılan kötü amaçlı yazılımdan koruma önyükleme başlatma sürücüsü her bir önyükleme başlatma sürücüsü için aşağıdaki sınıflandırmaları döndürebilir: 
@@ -1280,7 +1280,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-sistem](https://doc
 
 ### <a name="wi-fi"></a>Wi-Fi  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WiFi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WiFi](/windows/client-management/mdm/policy-csp-wifi) bölümüne bakın.  
 
 - **Internet paylaşımını engelle**  
   Cihazda İnternet paylaşımının mümkün olup olmadığını belirtir.  
@@ -1294,7 +1294,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WiFi](https://docs.micro
   
 ### <a name="windows-connection-manager"></a>Windows bağlantı Yöneticisi  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager](/windows/client-management/mdm/policy-csp-windowsconnectionmanager) bölümüne bakın.  
 
 - **Etki alanı olmayan ağlarla bağlantıyı engelle**  
   Bu ilke ayarı, bilgisayarların hem etki alanı tabanlı bir ağa hem de etki alanı tabanlı olmayan bir ağa bağlanmasını engeller. Bu ilke ayarı etkinleştirilirse, bilgisayar aşağıdaki koşullara göre otomatik ve el ile ağ bağlantısı denemesine yanıt verir: 
@@ -1307,7 +1307,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
   
 ### <a name="windows-defender"></a>Windows Defender  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Defender](/windows/client-management/mdm/policy-csp-defender) bölümüne bakın.  
 
 - **Gelen posta iletilerini Tara**  
   E-postanın taranarak veya taramaya izin vermez.
@@ -1421,7 +1421,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Defender](https://docs.m
 
 ### <a name="windows-ink-workspace"></a>Windows Ink Çalışma Alanı  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsInkWorkspace](/windows/client-management/mdm/policy-csp-windowsinkworkspace) bölümüne bakın.  
 
 - **Mürekkep çalışma alanı**  
   Kullanıcının Ink çalışma alanına erişmesine izin verilip verilmeyeceğini belirtir. 
@@ -1433,7 +1433,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsInkWorkspace](htt
  
 ### <a name="windows-powershell"></a>Windows PowerShell  
 
-Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsPowerShell](/windows/client-management/mdm/policy-csp-windowspowershell) bölümüne bakın.  
 
 - **Power Shell kabuğu betik bloğu günlüğü**  
   Bu ilke ayarı, tüm PowerShell betiği girişinin Microsoft-Windows-PowerShell/Işletimsel olay günlüğüne kaydedilmesini sağlar. Bu ilke ayarını etkinleştirirseniz, Windows PowerShell komutların, betik bloklarının, işlevlerin ve betiklerin işlenmesini ister etkileşimli olarak, ister Otomasyon aracılığıyla günlüğe kaydeder. Bu ilke ayarını devre dışı bırakırsanız, PowerShell betik girişinin günlüğe kaydı devre dışı bırakılır. Betik bloğu çağırma günlüğünü etkinleştirirseniz, PowerShell Ayrıca bir komut, betik bloğu, işlev veya komut dosyası başlatıldığında veya durdurulduğunda olayları günlüğe kaydeder. Çağırma günlüğünü etkinleştirmek, yüksek miktarda olay günlüğü oluşturur. Note: Bu ilke ayarı, grup ilkesi düzenleyicisinde hem bilgisayar yapılandırması hem de Kullanıcı Yapılandırması altında bulunur. Bilgisayar yapılandırma ilkesi ayarı, Kullanıcı yapılandırma ilkesi ayarından önceliklidir.

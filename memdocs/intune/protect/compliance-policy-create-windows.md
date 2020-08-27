@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0357f8fe751738bc3f8a5198db96b2113ee16bfc
-ms.sourcegitcommit: 91519f811b58a3e9fd116a4c28e39341ad8af11a
+ms.openlocfilehash: 20d3f3967fa77ab90229915afc8b05043004b125
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559503"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909355"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Cihazları Intune ile uyumlu veya uyumsuz olarak işaretlemek için Windows 10 ve üzeri ayarları
 
@@ -49,14 +49,14 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
   - **Gerektir** -cihaz, sistem kapalı veya hazırda bekleme durumunda sürücüde depolanan verileri yetkisiz erişimden koruyabilir.
   
-  [Cihaz Healthkanıtlama CSP 'si-BitLockerStatus](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)
+  [Cihaz Healthkanıtlama CSP 'si-BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
 - **Cihazda güvenli önyüklemenin etkinleştirilmesini gerektir**:  
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
   - **Gerektir** -sistem, fabrikada güvenilen bir duruma önyükleme yapılmasını zorlanmıştır. Makineyi önyüklemek için kullanılan çekirdek bileşenleri, cihazı üreten kuruluşun güvendiği doğru şifreleme imzalarına sahip olmalıdır. UEFI üretici yazılımı, makinenin başlatılmasına izin vermeden önce imzayı doğrular. Herhangi bir dosya üzerinde değişiklik yapılmışsa ve imzasını kesen sistem önyükleme yapmaz.
 
   > [!NOTE]
-  > **Cihazda güvenli önyüklemenin etkinleştirilmesini gerektir** AYARı bazı TPM 1,2 ve 2,0 cihazlarda desteklenir. TPM 2.0 ve sonrasını desteklemeyen cihazlarda ilke durumu Intune'da **Uyumsuz** olarak gösterilir. Desteklenen sürümler hakkında daha fazla bilgi için bkz.  [cihaz sistem durumu kanıtlama](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
+  > **Cihazda güvenli önyüklemenin etkinleştirilmesini gerektir** AYARı bazı TPM 1,2 ve 2,0 cihazlarda desteklenir. TPM 2.0 ve sonrasını desteklemeyen cihazlarda ilke durumu Intune'da **Uyumsuz** olarak gösterilir. Desteklenen sürümler hakkında daha fazla bilgi için bkz.  [cihaz sistem durumu kanıtlama](/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
 - **Kod bütünlüğü gerektir**:  
   Kod bütünlüğü, bir sürücünün veya sistem dosyasının belleğe her yüklendiğinde bütünlüğünü doğrulayan bir özelliktir.
@@ -65,7 +65,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 
 Daha fazla kaynak:
 
-- Sistem durumu kanıtlama hizmeti 'nin nasıl çalıştığı hakkında ayrıntılı bilgi için bkz. [durum KANıTLAMA CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp)'si.
+- Sistem durumu kanıtlama hizmeti 'nin nasıl çalıştığı hakkında ayrıntılı bilgi için bkz. [durum KANıTLAMA CSP](/windows/client-management/mdm/healthattestation-csp)'si.
 - [Destek İpucu: Intune uyumluluk Ilkenizin kapsamında cihaz sistem durumu kanıtlama ayarlarını kullanma](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
 
 ## <a name="device-properties"></a>Cihaz Özellikleri
@@ -140,8 +140,8 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
     > [!TIP]
     > Alfasayısal parola ilkeleri karmaşık olabilir. Daha fazla bilgi için yöneticilerin CSP 'Leri okumasını öneririz:
     >
-    > - [DeviceLock/alfanümerik ıdevicepasswordrequired CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
-    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
+    > - [DeviceLock/alfanümerik ıdevicepasswordrequired CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
 - **Minimum parola uzunluğu**:  
   Parolanın sahip olması gereken minimum rakam veya karakter sayısını girin.
@@ -169,7 +169,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Yapılandırılmadı** (*varsayılan*)
   - **Gerektir** -kullanım, cihazlarınızda veri depolamayı şifrelemek için *gerektir* .
   
-   [DeviceStatus CSP-DeviceStatus/uyumluluk/Encryptionuyumluluğu](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+   [DeviceStatus CSP-DeviceStatus/uyumluluk/Encryptionuyumluluğu](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
   > **Bir cihazdaki veri depolama şifrelemesi** ayarı cihazdaki genel şifreleme varlığını denetler. Daha güçlü bir şifreleme ayarı için **BitLocker’ı gerektir** ayarını kullanmayı göz önünde bulundurabilirsiniz. Bu ayar, TPM düzeyinde BitLocker durumunu doğrulamak için Windows Cihaz Sistem Durumu Kanıtlama özelliğinden yararlanır.
@@ -180,28 +180,28 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Yapılandırılmadı** (*varsayılan*)-Intune, Microsoft Defender güvenlik duvarını denetlemez ve var olan ayarları değiştirmez.
   - **Gerektir** -Microsoft Defender güvenlik duvarını açın ve kullanıcıların bunu kapatmasını engelleyin.
 
-  [Güvenlik Duvarı CSP 'si](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+  [Güvenlik Duvarı CSP 'si](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > Yeniden başlatmanın ardından cihaz hemen eşitleniyorsa veya uykudan uyandırmaya hemen eşitlendikten sonra, bu ayar bir **hata**olarak rapor verebilir. Bu senaryo genel cihaz uyumluluk durumunu etkilemeyebilir. Uyumluluk durumunu yeniden değerlendirmek için cihazı el ile [eşitleyin](https://docs.microsoft.com/mem/intune/user-help/sync-your-device-manually-windows).
+  > Yeniden başlatmanın ardından cihaz hemen eşitleniyorsa veya uykudan uyandırmaya hemen eşitlendikten sonra, bu ayar bir **hata**olarak rapor verebilir. Bu senaryo genel cihaz uyumluluk durumunu etkilemeyebilir. Uyumluluk durumunu yeniden değerlendirmek için cihazı el ile [eşitleyin](../user-help/sync-your-device-manually-windows.md).
 
 - **Güvenilir Platform Modülü (TPM)**:  
   - **Yapılandırılmadı** (*varsayılan*)-ıNTUNE, cihazı bir TPM yonga sürümü için denetlemez.
   - **Gerektir** -Intune, uyumluluk için TPM yonga sürümünü denetler. TPM yonga sürümü **0** ' dan büyükse cihaz uyumludur (sıfır). Cihazda TPM sürümü yoksa cihaz uyumlu değildir.
 
-  [DeviceStatus CSP-DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP-DeviceStatus/TPM/SpecificationVersion](/windows/client-management/mdm/devicestatus-csp)
   
 - **Virüsten koruma**:  
   - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir virüsten koruma çözümünü denetlemez.
   - **Require** Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı virüsten koruma çözümlerini kullanarak uyumluluğu kontrol edin.
 
-  [DeviceStatus CSP-DeviceStatus/Antivirus/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP-DeviceStatus/Antivirus/Status](/windows/client-management/mdm/devicestatus-csp)
 
 - **Casus yazılımdan koruma**:  
   - **Yapılandırılmadı** (*varsayılan*)-Intune, cihazda yüklü olan herhangi bir casus yazılımdan koruma çözümünü denetlemez.
   - **Require** Symantec ve Microsoft Defender gibi [Windows Güvenlik Merkezi](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/)'ne kayıtlı casus yazılımdan koruma çözümlerini kullanarak uyumluluğu kontrol edin.
 
-  [DeviceStatus CSP-DeviceStatus/antispyware/Status](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  [DeviceStatus CSP-DeviceStatus/antispyware/Status](/windows/client-management/mdm/devicestatus-csp)
 
 ### <a name="defender"></a>Defender
 
@@ -221,7 +221,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Yapılandırılmadı** (*varsayılan*)-Intune hiçbir gereksinimi zorlamaz.
   - **Gerektir** -Microsoft Defender Güvenlik Intelligence 'ın güncel olmasını zorunlu kılın.
 
-  [Defender CSP-Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  [Defender CSP-Defender/Health/SignatureOutOfDate CSP](/windows/client-management/mdm/defender-csp)
   
   Daha fazla bilgi için bkz. [Microsoft Defender virüsten koruma ve diğer Microsoft Antimalware Için güvenlik zekası güncelleştirmeleri](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
@@ -229,7 +229,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
   - **Yapılandırılmadı** (*varsayılan*)-Intune bu özelliği denetlemez ve var olan ayarları değiştirmez.
   - **Gerekli** -kötü amaçlı yazılım, casus yazılım ve diğer istenmeyen yazılımları tarayan gerçek zamanlı korumayı etkinleştirin.  
 
-  [İlke CSP-Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [İlke CSP-Defender/AllowRealtimeMonitoring CSP](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
 ## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
 
@@ -251,7 +251,7 @@ Windows Holographic for Business, **Windows 10 ve sonrası** platformları kulla
 
 - **Sistem güvenliği**  >  **Şifreleme**  >  **Cihazda veri depolama şifreleme**.
 
-Microsoft HoloLens’te cihaz şifrelemesini doğrulamak için bkz. [Cihaz şifrelemesini doğrulama](https://docs.microsoft.com/hololens/security-encryption-data-protection).
+Microsoft HoloLens’te cihaz şifrelemesini doğrulamak için bkz. [Cihaz şifrelemesini doğrulama](/hololens/security-encryption-data-protection).
 
 ## <a name="surface-hub"></a>Surface Hub
 

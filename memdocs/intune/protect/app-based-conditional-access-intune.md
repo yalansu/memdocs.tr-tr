@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27033c2452224bc93e335f3517c9548ad65666c4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5347837a45c40ebc3ec551d2d962b156a38235b4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080156"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909406"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Intune ile uygulama tabanlı koşullu erişim
 
@@ -47,7 +47,7 @@ Daha fazla bilgi için bkz. [Enterprise Mobility fiyatlandırması](https://www.
 
 ## <a name="supported-apps"></a>Desteklenen uygulamalar
 
-Uygulama tabanlı koşullu erişimi destekleyen uygulamaların listesi [Azure Active Directory Koşullu erişim teknik başvuru belgelerinde bulunabilir.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)
+Uygulama tabanlı koşullu erişimi destekleyen uygulamaların listesi [Azure Active Directory Koşullu erişim teknik başvuru belgelerinde bulunabilir.](/azure/active-directory/active-directory-conditional-access-technical-reference)
 
 Uygulama tabanlı koşullu erişim, [iş kolu (LOB) uygulamalarını da destekler](app-modern-authentication-block.md), ancak bu uygulamaların [Office 365 modern kimlik doğrulamasını](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)kullanması gerekir. 
 

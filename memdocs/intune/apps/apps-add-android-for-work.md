@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ce02a86236e390983b4e1ecca8d48d4767e49e
-ms.sourcegitcommit: 9eebe77af18045fceb3d41b43d76b370fe92b30e
+ms.openlocfilehash: 0f6c70bcfa1bf9d23ff3555498cb199ff032bb34
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87821640"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910545"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Intune ile Yönetilen Google Play uygulamalarını Android Kurumsal cihazlarına ekleme
 
@@ -131,7 +131,7 @@ Yönetilen Google Play LOB uygulamaları eklemenin iki yolu vardır:
     > [!NOTE]
     > Özel uygulamaların, eşitleme için kullanılabilir olması birkaç dakika sürebilir. Uygulama ilk kez eşitleme gerçekleştirirken görünmüyorsa, birkaç dakika bekleyip yeni bir eşitleme başlatın.
 
-SSS dahil olmak üzere yönetilen Google Play özel uygulamalar hakkında daha fazla bilgi için bkz. Google 'ın Destek makalesi:https://support.google.com/googleplay/work/answer/9146439
+SSS dahil olmak üzere yönetilen Google Play özel uygulamalar hakkında daha fazla bilgi için bkz. Google 'ın Destek makalesi: https://support.google.com/googleplay/work/answer/9146439
 
 >[!IMPORTANT]
 >Bu yöntem kullanılarak eklenen özel uygulamalar hiçbir şekilde herkese açık hale getirilmez. Bu yayımlama seçeneğini yalnızca, bu uygulamanın kuruluşunuza her zaman özel olduğundan eminseniz kullanın.
@@ -183,7 +183,7 @@ Mağazadan bir uygulamayı onayladıysanız ve **uygulamalar** iş yükünde gö
 
 ## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-and-corporate-owned-work-profile-devices"></a>Android kurumsal iş profiline ve şirkete ait iş profili cihazlarına yönetilen bir Google Play uygulaması atama
 
-Uygulama, **uygulamalar** iş yükü bölmesinin **uygulama lisansları** düğümünde görüntülendiğinde, uygulamayı kullanıcı gruplarına atayarak [bunu başka bir uygulamayı atadığınız gibi atayabilirsiniz](/mem/intune/apps/apps-deploy) .
+Uygulama, **uygulamalar** iş yükü bölmesinin **uygulama lisansları** düğümünde görüntülendiğinde, uygulamayı kullanıcı gruplarına atayarak [bunu başka bir uygulamayı atadığınız gibi atayabilirsiniz](./apps-deploy.md) .
 
 Uygulamayı atadıktan sonra, hedeflediğiniz kullanıcıların cihazlarına yüklenir (veya yükleme için kullanılabilir). Cihazın kullanıcısından yüklemeyi onaylaması istenmez. Android Kurulsal iş profili cihazları hakkında daha fazla bilgi için bkz. [Android Kurumsal iş profili cihazlarının kaydını ayarlama](../enrollment/android-work-profile-enroll.md). 
 
@@ -221,7 +221,7 @@ Android kurumsal iş profili cihazlarına dağıtılan yönetilen Google Play uy
 
 ## <a name="working-with-managed-google-play-closed-testing-tracks"></a>Yönetilen Google Play kapatılan test parçalarıyla çalışma
 
-Yönetilen bir Google Play uygulamasının üretim dışı bir sürümünü bir Android kurumsal senaryosunda (**Android kurumsal Iş profili**, **tam olarak yönetilen**, **adanmış**ve **şirkete ait iş profili**) kaydedilen cihazlara dağıtabilirsiniz. Intune 'da, bir uygulamanın kendisine yayımlanmış bir üretim öncesi derleme testi izlemesine sahip olup olmadığını ve bu izlemeyi AAD Kullanıcı grupları veya cihaz grupları ' na atayabilmesini sağlayabilirsiniz. Mevcut olan bir gruba üretim sürümü atamak için iş akışı, üretim dışı bir kanal atama ile aynıdır. Dağıtımdan sonra her bir izlemenin kurulum durumu, yönetilen Google Play izlemenin sürüm numarasıyla birlikte gelir. Daha fazla bilgi için bkz. [uygulama ön sürümü testi için Google Play kapalı test izleri](https://support.google.com/googleplay/android-developer/answer/3131213).
+Yönetilen bir Google Play uygulamasının üretim dışı bir sürümünü bir Android kurumsal senaryosunda (**Android kurumsal Iş profili**, **tam olarak yönetilen**,  **adanmış**ve **şirkete ait iş profili**) kaydedilen cihazlara dağıtabilirsiniz. Intune 'da, bir uygulamanın kendisine yayımlanmış bir üretim öncesi derleme testi izlemesine sahip olup olmadığını ve bu izlemeyi AAD Kullanıcı grupları veya cihaz grupları ' na atayabilmesini sağlayabilirsiniz. Mevcut olan bir gruba üretim sürümü atamak için iş akışı, üretim dışı bir kanal atama ile aynıdır. Dağıtımdan sonra her bir izlemenin kurulum durumu, yönetilen Google Play izlemenin sürüm numarasıyla birlikte gelir. Daha fazla bilgi için bkz. [uygulama ön sürümü testi için Google Play kapalı test izleri](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 ## <a name="delete-managed-google-play-apps"></a>Yönetilen Google Play uygulamalarını silme
 Gerektiğinde, yönetilen Google Play uygulamalarını Microsoft Intune'dan silebilirsiniz. Yönetilen bir Google Play uygulamasını silmek için, Azure Portal Microsoft Intune açın ve **uygulamalar**  >  **tüm uygulamalar**' ı seçin. Uygulama listesinden, yönetilen Google Play uygulamasının sağ tarafındaki üç noktayı (...) seçin ve görüntülenen listeden **Sil**'i seçin. Uygulama listesinden yönetilen Google Play uygulamasını sildikten sonra, yönetilen Google Play uygulamasının onayı otomatik olarak kaldırılır.

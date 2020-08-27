@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42362d2c4ccc83718721f5ca314b232274ade46a
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: 52dd81efb13bcfcda02c8574e065814f49b5564c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383232"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911854"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Microsoft Intune Uygulama SDK’sını kullanmaya başlayın
 
@@ -94,9 +94,9 @@ Intune Uygulama SDK'sı ile uygulamanızı tümleştirmenize yardımcı olması 
 
 Uygulamanızı uygulama koruma ilkesi için etkinleştirmeye ek olarak, uygulamanızın Azure ActiveDirectory (AAD) uygulama tabanlı koşullu erişim ile düzgün çalışması için aşağıdakiler gereklidir:
 
-* Uygulama, [Azure Active Directory Kimlik Doğrulama Kitaplığı](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) ile oluşturulur ve AAD aracısı kimlik doğrulaması için etkinleştirilir.
+* Uygulama, [Azure Active Directory Kimlik Doğrulama Kitaplığı](/azure/active-directory/develop/active-directory-authentication-libraries) ile oluşturulur ve AAD aracısı kimlik doğrulaması için etkinleştirilir.
 
-* Uygulamanız için [AAD İstemci kimliği](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application), farklı iOS ve Android platformlarında benzersiz olmalıdır.
+* Uygulamanız için [AAD İstemci kimliği](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application), farklı iOS ve Android platformlarında benzersiz olmalıdır.
 
 ## <a name="configure-telemetry-for-your-app"></a>Uygulamanızda Telemetriyi yapılandırma
 
@@ -108,7 +108,7 @@ Microsoft Intune, uygulamanızdaki kullanım istatistikleri hakkında veri topla
 
 * **Android için Intune Uygulama SDK’sı**: Android için Intune Uygulama SDK’sı, uygulamanızdan veri toplanmasını denetlemez. Şirket Portalı uygulaması, varsayılan olarak telemetri verilerini günlüğe kaydeder. Bu veriler Microsoft Intune’a gönderilir. Microsoft İlkesi uyarınca kişisel bilgileri toplamıyoruz. 
 
-  * Son kullanıcılar bu verileri göndermemeyi tercih ederse, Şirket Portalı uygulamasının Ayarlar bölümünde telemetriyi kapatmaları gerekir. Daha fazla bilgi için bkz. [Microsoft kullanım verilerini toplamayı devre dışı bırakma](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android). 
+  * Son kullanıcılar bu verileri göndermemeyi tercih ederse, Şirket Portalı uygulamasının Ayarlar bölümünde telemetriyi kapatmaları gerekir. Daha fazla bilgi için bkz. [Microsoft kullanım verilerini toplamayı devre dışı bırakma](../user-help/turn-off-microsoft-usage-data-collection-android.md). 
 
 ## <a name="line-of-business-app-version-numbers"></a>İş kolu uygulaması sürüm numaraları
 

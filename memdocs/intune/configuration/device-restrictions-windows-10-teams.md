@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b57bc0b7c76a6b67a26c7b1fdacb7880173a055c
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 9f4dafeacb2aabd4d2d2241a26ce52e55c08ce04
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429684"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915747"
 ---
 # <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Intune kullanarak Surface Hub cihazlarda özellikleri izin vermek veya kısıtlamak için Windows 10 Team ayarları
 
@@ -33,7 +33,7 @@ Bu makalede, Surface Hub cihazları dahil olmak üzere Windows 10 Team çalışt
 
 ## <a name="apps-and-experience"></a>Uygulamalar ve deneyim
 
-Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp)kullanır.
+Bu ayarlar [Surçok yönlü hub CSP](/windows/client-management/mdm/surfacehub-csp)kullanır.
 
 - **Oda içinde birisi**: **blok** , algılayıcısı odada birini algıladığında ekranın otomatik olarak uyandırmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Hoş Geldiniz ekranında görüntülenen toplantı bilgileri**: hoş geldiniz ekranının toplantılar kutucuğunda gösterilen bilgileri seçin. Seçenekleriniz şunlardır:
@@ -53,7 +53,7 @@ Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-m
 
 ## <a name="maintenance"></a>Bakım
 
-Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp)kullanır.
+Bu ayarlar [Surçok yönlü hub CSP](/windows/client-management/mdm/surfacehub-csp)kullanır.
 
 - **Güncelleştirmeler Için bakım penceresi**: **Etkinleştir** , güncelleştirmeler yüklenedurumlarda bir bakım penceresi oluşturur. Bakım penceresi **başlangıç saatini**ve **saat cinsinden süreyi**1-5 saatten girin.
 
@@ -61,7 +61,7 @@ Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-m
 
 ## <a name="session"></a>Oturum
 
-Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp)kullanır.
+Bu ayarlar [Surçok yönlü hub CSP](/windows/client-management/mdm/surfacehub-csp)kullanır.
 
 - **Birim**: 0-100 adresinden yeni bir oturum için varsayılan birim değerini girin. Boş bırakılırsa, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi birimi 45 olarak ayarlayabilir.
 - **Ekran zaman aşımı**: hub ekranı kapanana kadar geçecek dakika sayısını girin.
@@ -71,7 +71,7 @@ Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-m
 
 ## <a name="wireless-projection"></a>Kablosuz yansıtma
 
-Bu ayarlar [Surçok yönlü hub CSP](https://docs.microsoft.com/windows/client-management/mdm/surfacehub-csp)kullanır.
+Bu ayarlar [Surçok yönlü hub CSP](/windows/client-management/mdm/surfacehub-csp)kullanır.
 
 - **Kablosuz Projeksiyon Için PIN**: **gerekli** , kullanıcıların cihazda kablosuz PROJEKSIYON özelliklerini kullanmadan önce PIN girmesini zorlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Miracast Kablosuz Projeksiyon**: **blok** , Miracast özellikli cihazların projeye kullanılmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.

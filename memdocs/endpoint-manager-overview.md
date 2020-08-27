@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2095fdd349437e03c673fb9f7906511c5e3af388
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 2466e18d5cf2567f85c59fe1f85bd1436c2da0a4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088386"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915849"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Microsoft Endpoint Manager’a genel bakış
 
@@ -42,40 +42,40 @@ Endpoint Manager aşağıdaki hizmetleri içerir:
 
   Exchange veya Active Directory gibi şirket içi altyapınız varsa, Intune bağlayıcıları da kullanılabilir:
 
-  - **Active Directory Intune Bağlayıcısı** , Windows Autopilot kullanarak kaydeden bilgisayarlar için şirket içi Active Directory etki alanına girişler ekler. Daha fazla bilgi için bkz. [karma Azure AD 'ye katılmış cihazları dağıtma](/mem/intune/enrollment/windows-autopilot-hybrid).
-  - **Intune sertifika Bağlayıcısı** , kimlik doğrulaması ve S/MIME e-posta şifrelemesi için sertifikaları kullanan cihazlardan gelen sertifika isteklerini işler. Daha fazla bilgi için bkz. [kimlik doğrulaması için sertifikaları kullanma](/mem/intune/protect/certificates-configure).
+  - **Active Directory Intune Bağlayıcısı** , Windows Autopilot kullanarak kaydeden bilgisayarlar için şirket içi Active Directory etki alanına girişler ekler. Daha fazla bilgi için bkz. [karma Azure AD 'ye katılmış cihazları dağıtma](./autopilot/windows-autopilot-hybrid.md).
+  - **Intune sertifika Bağlayıcısı** , kimlik doğrulaması ve S/MIME e-posta şifrelemesi için sertifikaları kullanan cihazlardan gelen sertifika isteklerini işler. Daha fazla bilgi için bkz. [kimlik doğrulaması için sertifikaları kullanma](./intune/protect/certificates-configure.md).
 
   Endpoint Manager 'ın bir parçası olarak, Intune 'u kullanarak uyumluluğu oluşturup denetleyin ve bulut kullanarak cihazlarınıza uygulamalar, Özellikler ve ayarlar dağıtın.
 
-  Daha fazla bilgi için bkz. [Microsoft Intune nedir?](https://docs.microsoft.com/intune/fundamentals/what-is-intune).
+  Daha fazla bilgi için bkz. [Microsoft Intune nedir?](/intune/fundamentals/what-is-intune).
 
 - **Configuration Manager**: Configuration Manager, ağınızdaki veya internet tabanlı masaüstü bilgisayarları, sunucuları ve dizüstü bilgisayarları yönetmek için bir şirket içi yönetim çözümüdür. Bu uygulamayı Intune, Azure Active Directory (AD), Microsoft Defender ATP ve diğer bulut hizmetleriyle tümleştirilebilen bulut için etkinleştirebilirsiniz. Uygulamaları, yazılım güncelleştirmelerini ve işletim sistemlerini dağıtmak için Configuration Manager kullanın. Ayrıca uyumluluğu izleyebilir, istemcileri gerçek zamanlı olarak sorgulayabilir ve davranabilir ve çok daha fazlasını yapabilirsiniz.
 
-  Endpoint Manager 'ın bir parçası olarak, her zaman sahip olduğunuz Configuration Manager kullanmaya devam edin. Bazı görevleri buluta taşımaya hazırsanız, [ortak yönetimi](https://docs.microsoft.com/configmgr/comanage/)göz önünde bulundurun.
+  Endpoint Manager 'ın bir parçası olarak, her zaman sahip olduğunuz Configuration Manager kullanmaya devam edin. Bazı görevleri buluta taşımaya hazırsanız, [ortak yönetimi](/configmgr/comanage/)göz önünde bulundurun.
 
-  Daha fazla bilgi için bkz. [Configuration Manager nedir?](https://docs.microsoft.com/configmgr/core/understand/introduction).
+  Daha fazla bilgi için bkz. [Configuration Manager nedir?](/configmgr/core/understand/introduction).
 
 - **Ortak yönetim**: ortak yönetim, Intune ve diğer Microsoft 365 bulut hizmetlerini kullanarak mevcut şirket içi Configuration Manager yatırımınızı buluta birleştirir. Configuration Manager veya Intune 'un yedi farklı iş yükü grubu için yönetim yetkilisi olup olmadığını seçersiniz.
 
   Endpoint Manager 'ın bir parçası olarak ortak yönetim, koşullu erişim de dahil olmak üzere bulut özelliklerini kullanır. Intune ile bulutta diğer görevleri çalıştırırken bazı görevleri şirket içinde saklayın.
 
-  Daha fazla bilgi için bkz. [ortak yönetim nedir?](https://docs.microsoft.com/configmgr/comanage/overview).
+  Daha fazla bilgi için bkz. [ortak yönetim nedir?](/configmgr/comanage/overview).
 
 - **Masaüstü Analizi**: Masaüstü analizi, Configuration Manager ile tümleşen bulut tabanlı bir hizmettir. Windows istemcilerinizin güncelleştirme hazırlığı hakkında daha bilinçli kararlar almanıza yardımcı olmak için içgörüler ve zeka sağlar. Hizmet, Microsoft bulutuna bağlı milyonlarca cihazdan toplanan verileri kuruluşunuzdaki verileri birleştirir. Kuruluşunuzdaki güvenlik güncelleştirmeleri, uygulamalar ve cihazlar hakkında bilgi sağlar ve uygulamalar ve sürücülerle ilgili uyumluluk sorunlarını belirler. Kuruluşunuzdaki varlıklar için en iyi öngörüleri sağlama olasılığı olan cihazlar için bir pilot oluşturun.
 
   Endpoint Manager 'ın bir parçası olarak, Windows 10 cihazlarının güncel kalmasını sağlamak için masaüstü analizinin bulut destekli öngörülerini kullanın.
 
-  Daha fazla bilgi için bkz. [Masaüstü analizi nedir?](https://docs.microsoft.com/configmgr/desktop-analytics/overview).
+  Daha fazla bilgi için bkz. [Masaüstü analizi nedir?](/configmgr/desktop-analytics/overview).
 
 - **Windows Autopilot**: Windows Autopilot yeni cihazları ayarlar ve önceden yapılandırır, kullanıma hazırlanıyor. Windows cihazlarının yaşam döngüsünü, hem BT hem de son kullanıcılar için yaşam süresi boyunca ilk dağıtımdan basitleştirmek üzere tasarlanmıştır.
 
   Endpoint Manager 'ın bir parçası olarak, cihazları önceden yapılandırmak ve cihazları Intune 'a otomatik olarak kaydetmek için Autopilot kullanın. Ayrıca, daha karmaşık cihaz yapılandırması (önizlemede) için Autopilot ile Configuration Manager ve ortak yönetim ile tümleştirilebilir.
 
-  Daha fazla bilgi için bkz. [Windows Autopilot genel bakış](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) ve [Windows cihazlarını Intune 'a kaydetme](/mem/intune/enrollment/enrollment-autopilot).
+  Daha fazla bilgi için bkz. [Windows Autopilot genel bakış](/windows/deployment/windows-autopilot/windows-autopilot) ve [Windows cihazlarını Intune 'a kaydetme](./autopilot/enrollment-autopilot.md).
 
 - **Azure Active Directory (ad)**: Azure AD, Endpoint Manager tarafından cihazların, kullanıcıların, grupların ve çok faktörlü kimlik DOĞRULAMASıNıN (MFA) kimliğini kullanır. Ek bir maliyet olabilecek **Azure AD Premium**, dinamik gruplar, otomatik kayıt ve koşullu erişim dahil cihaz, uygulama ve verilerin korunmasına yardımcı olmak için [ek özelliklere](https://azure.microsoft.com/pricing/details/active-directory/) sahiptir.
 
-  Daha fazla bilgi için bkz. [Kullanıcı ekleme](/mem/intune/fundamentals/users-add), [otomatik kayıt ayarlama](/mem/intune/enrollment/windows-enroll)ve [koşullu erişim hakkında](/mem/intune/protect/conditional-access).
+  Daha fazla bilgi için bkz. [Kullanıcı ekleme](./intune/fundamentals/users-add.md), [otomatik kayıt ayarlama](./intune/enrollment/windows-enroll.md)ve [koşullu erişim hakkında](./intune/protect/conditional-access.md).
 
 - **Endpoint Manager Yönetim Merkezi**: [Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) , ilkeleri oluşturmak ve cihazlarınızı yönetmek için tek seferlik bir Web sitesidir. Bunlar, gruplar, güvenlik, koşullu erişim ve raporlama dahil olmak üzere diğer temel cihaz yönetim hizmetleri ile birlikte yer takar. Bu Yönetim Merkezi Ayrıca Configuration Manager ve Intune tarafından yönetilen cihazları gösterir (önizlemede).
 
@@ -83,7 +83,7 @@ Endpoint Manager aşağıdaki hizmetleri içerir:
 
 Kuruluşunuz için nelerin doğru olduğunu belirlemenin birkaç yolu vardır. Sonraki adımlarınız, kuruluşunuzun yaptığı işe göre değişir. Ne elde etmek istediğinizi göz önünde bulundurun.
 
-Örneğin:
+Örnek:
 
 - Yeni cihazları sürekli temin ediyorsanız Windows Autopilot ile başlayın.
 - Kullanıcılarınız, uygulamalarınız ve cihazlarınız için kurallar ve denetim ayarları ekleyip Intune ile başlayın.
@@ -115,4 +115,4 @@ Microsoft Uç Nokta Yöneticisi, birkaç teknolojiyi birleştiren bir çözüm p
 
 [Öğretici: Microsoft Endpoint Manager’da Intune için izlenecek yol](/intune/fundamentals/tutorial-walkthrough-endpoint-manager)
 
-[Microsoft 365 nedir? Modül öğren](https://docs.microsoft.com/learn/modules/what-is-m365/index)
+[Microsoft 365 nedir? Modül öğren](/learn/modules/what-is-m365/index)

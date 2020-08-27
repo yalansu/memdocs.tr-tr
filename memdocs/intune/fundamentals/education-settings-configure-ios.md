@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf4fc3017ccf3efcf93986544c8a60b60acbf3c8
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 220a57b3e668d47d3f6fd12dde8fd54e240dd0da
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076127"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911582"
 ---
 # <a name="how-to-configure-intune-settings-for-the-iosipados-classroom-app"></a>İOS/ıpados sınıf uygulaması için Intune ayarlarını yapılandırma
 
@@ -68,9 +68,9 @@ Aşağıdaki yöntemlerden birini kullanarak SDS’ye bilgi aktarabilirsiniz:
 
 ### <a name="find-out-more"></a>Daha fazla bilgi edinin
 
-- [Şirket içi okul verilerini Azure AD’ye eşitleme deneyiminin tümü hakkında bilgi edinin](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- [Şirket içi okul verilerini Azure AD’ye eşitleme deneyiminin tümü hakkında bilgi edinin](/azure/active-directory/connect/active-directory-aadconnect)
 - [Microsoft School Data Sync hakkında daha fazla bilgi edinin](https://sds.microsoft.com/)
-- [Azure Active Directory'de lisanslama hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [Azure Active Directory'de lisanslama hakkında daha fazla bilgi edinin](/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 ## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>2. adım-Intune 'da iOS/ıpados eğitim profili oluşturma ve atama
 
@@ -83,7 +83,7 @@ Aşağıdaki yöntemlerden birini kullanarak SDS’ye bilgi aktarabilirsiniz:
 6. **Profil oluştur** bölmesinde, IOS/ıpados eğitim profili Için bir **ad** ve **Açıklama** girin.
 7. **Platform** açılan listesinden **iOS**’yi seçin.
 8. **Profil türü** açılan listesinde **Eğitim**’i seçin.
-9. **Ayarları** > **Yapılandır**' ı seçin.
+9. **Ayarları**  >  **Yapılandır**' ı seçin.
 
 
 Sonraki bölümde, öğretmen ve öğrencilerin iPad cihazları arasında bir güven ilişkisi kurmak için sertifikalar oluşturacaksınız. Sertifikalar, kullanıcı adları ve parolaları girmeye gerek olmadan cihazlar arasında bağlantıların kimliğini sorunsuz ve sessiz bir şekilde doğrulamak için kullanılır.

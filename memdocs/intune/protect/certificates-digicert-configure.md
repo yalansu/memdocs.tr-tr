@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab862efd37bfeffc392d1d18cbf1f8a2f3deb50e
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: d51f7fd47e876a2e91665fb1a6e72f377de31429
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565708"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916019"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>DigiCert PKI platformu için Intune sertifika bağlayıcısını ayarlama
 
@@ -197,7 +197,7 @@ Varsayılan olarak, Intune sertifika Bağlayıcısı **%ProgramFiles%\Microsoft 
 
 1. **Ndesconnectorsvc** klasöründe **NDESConnector.exe.config** dosyasını Not defteri 'nde açın.
 
-   a. `RACertThumbprint`Anahtar değerini, önceki bölümde kopyaladığınız sertifika parmak izi değeriyle güncelleştirin. Örneğin:
+   a. `RACertThumbprint`Anahtar değerini, önceki bölümde kopyaladığınız sertifika parmak izi değeriyle güncelleştirin. Örnek:
 
       ```
       <add key="RACertThumbprint"
@@ -318,12 +318,12 @@ Sertifika profili OID 'si, DigiCert CA 'sında bir sertifika profili şablonuyla
 
 |Öznitelik | Desteklenen Intune biçimleri | DigiCert bulut CA 'sı Desteklenen biçimleri | sonuç |
 | --- | --- | --- | --- |
-| Konu adı |Intune, konu adını yalnızca aşağıdaki üç formatta destekler: <br><br> 1. ortak ad <br> 2. e-posta içeren ortak ad <br> 3. e-posta olarak ortak ad <br><br> Örneğin: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | DigiCert CA 'sı daha fazla öznitelik destekler.  Daha fazla öznitelik seçmek istiyorsanız, bu değerlerin DigiCert sertifika profili şablonunda sabit değerlerle tanımlanması gerekir.| PKCS sertifika isteğinden ortak ad veya e-posta kullanıyoruz. <br><br> Intune sertifika profili ve DigiCert sertifika profili şablonu arasındaki öznitelik seçiminde herhangi bir uyuşmazlık, DigiCert CA 'dan verilen sertifika olmadan sonuçlanır.|
-| SAN | Intune yalnızca aşağıdaki SAN alan değerlerini destekler: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **Altnametypeothername** (kodlanmış değer) | DigiCert bulut CA 'sı de bu parametreleri destekler. Daha fazla öznitelik seçmek istiyorsanız, bu değerlerin DigiCert sertifika profili şablonunda sabit değerlerle tanımlanması gerekir. <br><br> **Altnametypeemail**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı, **Altnametypeupn**' den değeri kullanır.  **Altnametypeupn** de San 'da bulunmazsa, Intune sertifika Bağlayıcısı e-posta biçimindeyse konu adından değeri kullanır.  Tür hala bulunamazsa, Intune sertifika Bağlayıcısı sertifikaları veremez. <br><br> Örnek: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **Altnametypeupn**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı **Altnametypeemail**değerini kullanır. **Altnametypeemail** de San 'da bulunmazsa, Intune sertifika Bağlayıcısı e-posta biçimindeyse konu adından değeri kullanır. Tür hala bulunamazsa, Intune sertifika Bağlayıcısı sertifikaları veremez.  <br><br> Örnek: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **Altnametypeothername**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı sertifikaları veremez. <br><br> Örnek: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  Bu alanın değeri, DigiCert CA 'sı tarafından yalnızca kodlanmış biçimde (onaltılı değer) desteklenir. Bu alandaki herhangi bir değer için, Intune sertifika Bağlayıcısı sertifika isteğini göndermeden önce Base64 kodlamaya dönüştürür. *Intune sertifika Bağlayıcısı, bu değerin zaten kodlanmış olup olmadığını doğrulamaz.* | Yok |
+| Konu adı |Intune, konu adını yalnızca aşağıdaki üç formatta destekler: <br><br> 1. ortak ad <br> 2. e-posta içeren ortak ad <br> 3. e-posta olarak ortak ad <br><br> Örnek: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | DigiCert CA 'sı daha fazla öznitelik destekler.  Daha fazla öznitelik seçmek istiyorsanız, bu değerlerin DigiCert sertifika profili şablonunda sabit değerlerle tanımlanması gerekir.| PKCS sertifika isteğinden ortak ad veya e-posta kullanıyoruz. <br><br> Intune sertifika profili ve DigiCert sertifika profili şablonu arasındaki öznitelik seçiminde herhangi bir uyuşmazlık, DigiCert CA 'dan verilen sertifika olmadan sonuçlanır.|
+| SAN | Intune yalnızca aşağıdaki SAN alan değerlerini destekler: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **Altnametypeothername** (kodlanmış değer) | DigiCert bulut CA 'sı de bu parametreleri destekler. Daha fazla öznitelik seçmek istiyorsanız, bu değerlerin DigiCert sertifika profili şablonunda sabit değerlerle tanımlanması gerekir. <br><br> **Altnametypeemail**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı, **Altnametypeupn**' den değeri kullanır.  **Altnametypeupn** de San 'da bulunmazsa, Intune sertifika Bağlayıcısı e-posta biçimindeyse konu adından değeri kullanır.  Tür hala bulunamazsa, Intune sertifika Bağlayıcısı sertifikaları veremez. <br><br> Örnek: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **Altnametypeupn**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı **Altnametypeemail**değerini kullanır. **Altnametypeemail** de San 'da bulunmazsa, Intune sertifika Bağlayıcısı e-posta biçimindeyse konu adından değeri kullanır. Tür hala bulunamazsa, Intune sertifika Bağlayıcısı sertifikaları veremez.  <br><br> Örnek: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **Altnametypeothername**: Bu tür San 'da bulunmazsa, Intune sertifika Bağlayıcısı sertifikaları veremez. <br><br> Örnek: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  Bu alanın değeri, DigiCert CA 'sı tarafından yalnızca kodlanmış biçimde (onaltılı değer) desteklenir. Bu alandaki herhangi bir değer için, Intune sertifika Bağlayıcısı sertifika isteğini göndermeden önce Base64 kodlamaya dönüştürür. *Intune sertifika Bağlayıcısı, bu değerin zaten kodlanmış olup olmadığını doğrulamaz.* | Hiçbiri |
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Intune sertifika Bağlayıcısı hizmet günlükleri, NDES bağlayıcı makinesindeki **%ProgramFiles%\Microsoft ıntune\ndesconnectorsvc\logs\logs** dizininde bulunur. Günlükleri [SvcTraceViewer](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) içinde açın ve özel durumlar veya hata iletileri arayın.
+Intune sertifika Bağlayıcısı hizmet günlükleri, NDES bağlayıcı makinesindeki **%ProgramFiles%\Microsoft ıntune\ndesconnectorsvc\logs\logs** dizininde bulunur. Günlükleri [SvcTraceViewer](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) içinde açın ve özel durumlar veya hata iletileri arayın.
 
 | Sorun/hata iletisi | Çözüm adımları |
 | --- | --- |

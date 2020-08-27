@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 7f4d3f8193eeaf9597d56c8cf1cd999147915e61
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 15c4ff7a6164517d0193c1830c8e9649f0009d64
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531579"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915866"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Intune 'da uygulama koruma İlkesi dağıtımı sorunlarını giderme
 
@@ -64,7 +64,7 @@ Intune uygulama koruma ilkelerini herhangi bir MDM çözümüyle bağımsız ola
   > [!NOTE]
   > Office mobil uygulamaları şu anda yalnızca SharePoint Online 'ı destekler ve şirket içi SharePoint 'i desteklemez.
 
-- Intune uygulama koruma ilkelerini şirket içi kaynaklarla birlikte kullanıyorsanız (Microsoft Skype Kurumsal ve Microsoft Exchange Server), [Skype Kurumsal ve Exchange Için karma modern kimlik doğrulamasını (HMA)](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview)etkinleştirmeniz gerekir.
+- Intune uygulama koruma ilkelerini şirket içi kaynaklarla birlikte kullanıyorsanız (Microsoft Skype Kurumsal ve Microsoft Exchange Server), [Skype Kurumsal ve Exchange Için karma modern kimlik doğrulamasını (HMA)](/office365/enterprise/hybrid-modern-auth-overview)etkinleştirmeniz gerekir.
 
 Intune uygulama koruma ilkeleri, Kullanıcı kimliğinin uygulama ile [Intune uygulama SDK 'sı](../developer/app-sdk-get-started.md)arasında tutarlı olmasını gerektirir. Bu tutarlılığı güvence altına almanın tek yolu modern kimlik doğrulamadır. Uygulamaların modern kimlik doğrulaması olmadan şirket içi yapılandırmada çalışma senaryosu vardır. Ancak, sonuçlar tutarlı veya garanti edilmez.
 
@@ -73,7 +73,7 @@ Skype Kurumsal karma ve şirket içi yapılandırmalarda HMA 'yı etkinleştirme
 - **Hibrit**<br>
 [SfB ve Exchange için karma modern kimlik doğrulaması GA 'ye gidiyor](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
-- **Şirket içi**<br>
+- **On-premises (Şirket içi)** <br>
 [AAD ile SfB Onpred için modern kimlik doğrulama](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>Uygulama koruma ilkesi durumunu denetleme
@@ -95,9 +95,9 @@ Daha fazla bilgi için bkz. [Microsoft Intune 'de uygulama koruma ilkesi kurulum
 
 Çoğu senaryoda, kullanıcılar kendi hesaplarında Kullanıcı asıl adını (UPN) kullanarak oturum açabilirler. Ancak, bazı ortamlarda (Şirket içi senaryolar gibi), kullanıcılar başka bir oturum açma kimlik bilgisi biçimini kullanabilir. Bu durumlarda, uygulamada kullanılan UPN 'nin Azure AD 'deki UPN nesnesiyle eşleşmemesi fark edebilirsiniz. Bu sorun oluştuğunda, uygulama koruma ilkeleri beklendiği gibi uygulanmaz.
 
-Microsoft 'un önerilen en iyi yöntemleri, UPN 'yi birincil SMTP adresi ile eşleşmedir. Bu uygulama, kullanıcıların tutarlı bir kimliğe sahip olarak yönetilen uygulamalarda, Intune uygulama korumasında ve diğer Azure AD kaynaklarında oturum açmasını sağlar. Daha fazla bilgi için bkz. [Azure AD userPrincipalName popülasyonu](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
+Microsoft 'un önerilen en iyi yöntemleri, UPN 'yi birincil SMTP adresi ile eşleşmedir. Bu uygulama, kullanıcıların tutarlı bir kimliğe sahip olarak yönetilen uygulamalarda, Intune uygulama korumasında ve diğer Azure AD kaynaklarında oturum açmasını sağlar. Daha fazla bilgi için bkz. [Azure AD userPrincipalName popülasyonu](/azure/active-directory/connect/active-directory-aadconnect-userprincipalname).
 
-Ortamınız alternatif oturum açma yöntemleri gerektiriyorsa bkz. alternatif [oturum açma kimliğini yapılandırma](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), özellikle de [alternatif kimlik Ile karma modern kimlik doğrulama](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
+Ortamınız alternatif oturum açma yöntemleri gerektiriyorsa bkz. alternatif [oturum açma kimliğini yapılandırma](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), özellikle de [alternatif kimlik Ile karma modern kimlik doğrulama](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
 
 ### <a name="verify-that-the-user-is-targeted"></a>Kullanıcının hedeflendiğini doğrulama
 
@@ -115,7 +115,7 @@ Açılan **uygulama raporlama** bölmesinde, Kullanıcı aramak Için **Kullanı
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Grupları > tüm gruplar**' ı seçin ve ardından uygulama koruma ilkesi atamalarınız için kullanılan grubu arayıp seçin.
 3. **Yönet** bölümünün altında **Üyeler**' i seçin.
-4. Etkilenen Kullanıcı listede yoksa, Azure Active Directory grupları ve grup üyeliği kurallarınızı [kullanarak uygulama ve kaynak erişimini yönetme](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups) konusunu gözden geçirin. Etkilenen kullanıcının gruba eklendiğinden emin olun.
+4. Etkilenen Kullanıcı listede yoksa, Azure Active Directory grupları ve grup üyeliği kurallarınızı [kullanarak uygulama ve kaynak erişimini yönetme](/azure/active-directory/fundamentals/active-directory-manage-groups) konusunu gözden geçirin. Etkilenen kullanıcının gruba eklendiğinden emin olun.
 5. Etkilenen kullanıcının ilke için hariç tutulan gruplardan hiçbirinde bulunmadığından emin olun.
 
 > [!IMPORTANT]

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9586b27ce5040eb683fa22510c7c9a51aeee1d
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 0206af58be08130e67907bad18d7afa10e236d44
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262549"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912415"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune için ağ uç noktaları  
 
@@ -91,7 +91,7 @@ PowerShell betikleri veya Win32 uygulamaları dağıtmak için Intune kullanıyo
 
 ## <a name="windows-push-notification-services-wns"></a>Windows Push Bildirim Hizmetleri (WNS)  
 
-Mobil cihaz yönetimi (MDM) kullanılarak yönetilen Intune ile yönetilen Windows cihazları için, cihaz eylemleri ve diğer anında Etkinlikler Windows Push Bildirim Hizmetleri (WNS) kullanılmasını gerektirir. Daha fazla bilgi için bkz. [Kurumsal güvenlik duvarları üzerinden Windows Notification trafiğine Izin verme](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
+Mobil cihaz yönetimi (MDM) kullanılarak yönetilen Intune ile yönetilen Windows cihazları için, cihaz eylemleri ve diğer anında Etkinlikler Windows Push Bildirim Hizmetleri (WNS) kullanılmasını gerektirir. Daha fazla bilgi için bkz. [Kurumsal güvenlik duvarları üzerinden Windows Notification trafiğine Izin verme](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
 
 ## <a name="delivery-optimization-port-requirements"></a>Teslim Iyileştirme bağlantı noktası gereksinimleri  
 
@@ -101,7 +101,7 @@ Uçtan uca trafik için, teslim Iyileştirme, NAT çapraz geçişi (isteğe bağ
 
 ### <a name="proxy-requirements"></a>Proxy gereksinimleri  
 
-Teslim Iyileştirme 'yi kullanmak için, bayt aralığı isteklerine izin vermeniz gerekir. Daha fazla bilgi için bkz. [Windows Update Için proxy gereksinimleri](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
+Teslim Iyileştirme 'yi kullanmak için, bayt aralığı isteklerine izin vermeniz gerekir. Daha fazla bilgi için bkz. [Windows Update Için proxy gereksinimleri](/windows/deployment/update/windows-update-troubleshooting).
 
 ### <a name="firewall-requirements"></a>Güvenlik duvarı gereksinimleri  
 
@@ -125,10 +125,10 @@ Daha fazla bilgi için bkz. [Apple yazılım ürünleri tarafından kullanılan 
 
 ## <a name="android-port-information"></a>Android bağlantı noktası bilgileri
 
-Android cihazlarını yönetmeyi seçme seçeneğine bağlı olarak, Google Android kurumsal bağlantı noktalarını ve/veya Android anında iletme bildirimini açmanız gerekebilir. Desteklenen Android yönetim yöntemleri hakkında daha fazla bilgi için bkz. [Android kayıt belgeleri](https://docs.microsoft.com/mem/intune/enrollment/android-enroll). 
+Android cihazlarını yönetmeyi seçme seçeneğine bağlı olarak, Google Android kurumsal bağlantı noktalarını ve/veya Android anında iletme bildirimini açmanız gerekebilir. Desteklenen Android yönetim yöntemleri hakkında daha fazla bilgi için bkz. [Android kayıt belgeleri](../enrollment/android-enroll.md). 
 
 > [!NOTE]
-> Google Mobile Services Çin 'de kullanılamadığından, Çin 'deki cihazlarda Intune tarafından yönetilen cihazlar Google Mobile Services gerektiren özellikleri kullanamaz. Bu özellikler şunlardır Google Play: SafetyNet cihaz kanıtlama gibi özellikleri koruma, uygulamaları Google Play Store, Android kurumsal özelliklerinden yönetme (Bu [Google belgelerine](https://support.google.com/work/android/answer/6270910)bakın). Ayrıca, Android Intune Şirket Portalı uygulaması Microsoft Intune hizmetiyle iletişim kurmak için Google Mobile Services kullanır. Çin 'de Google Play hizmetleri kullanılamadığından, bazı görevlerin tamamlanabilmesi için 8 saate kadar süre gerekebilir. Daha fazla bilgi için bu [makaleye](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)bakın.
+> Google Mobile Services Çin 'de kullanılamadığından, Çin 'deki cihazlarda Intune tarafından yönetilen cihazlar Google Mobile Services gerektiren özellikleri kullanamaz. Bu özellikler şunlardır Google Play: SafetyNet cihaz kanıtlama gibi özellikleri koruma, uygulamaları Google Play Store, Android kurumsal özelliklerinden yönetme (Bu [Google belgelerine](https://support.google.com/work/android/answer/6270910)bakın). Ayrıca, Android Intune Şirket Portalı uygulaması Microsoft Intune hizmetiyle iletişim kurmak için Google Mobile Services kullanır. Çin 'de Google Play hizmetleri kullanılamadığından, bazı görevlerin tamamlanabilmesi için 8 saate kadar süre gerekebilir. Daha fazla bilgi için bu [makaleye](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)bakın.
 
 ### <a name="google-android-enterprise"></a>Google Android kurumsal 
 
@@ -140,4 +140,4 @@ Intune, cihaz eylemleri ve iadelerinin tetiklenmesi için anında iletme bildiri
 
 ## <a name="endpoint-analytics"></a>Uç nokta analizi
 
-Endpoint Analytics için gerekli uç noktalar hakkında daha fazla bilgi için bkz. [Endpoint Analytics proxy yapılandırması](https://docs.microsoft.com/mem/analytics/troubleshoot#bkmk_endpoints).
+Endpoint Analytics için gerekli uç noktalar hakkında daha fazla bilgi için bkz. [Endpoint Analytics proxy yapılandırması](../../analytics/troubleshoot.md#bkmk_endpoints).

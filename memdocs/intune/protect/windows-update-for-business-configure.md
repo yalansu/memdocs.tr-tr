@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4425178dde820bc1f9b0503d50406c007d090ca
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252580"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915985"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Intune’da Windows 10 yazılım güncelleştirmelerini yönetme
 
@@ -38,7 +38,7 @@ Intune, güncelleştirmeleri yönetmek için aşağıdaki ilke türlerini sağla
 
 Cihaz gruplarına Windows 10 güncelleştirme halkaları ve Windows 10 özellik güncelleştirmeleri için ilkeler atarsınız. Windows 10 cihazlarınız için yazılım güncelleştirmelerini yönetmek ve iş gereksinimlerinizi yansıtan bir güncelleştirme stratejisi oluşturmak için aynı Intune ortamında her iki ilke türünü de kullanabilirsiniz.
 
-Daha fazla bilgi için bkz. [İşletmeler için Windows Update'i kullanarak güncelleştirmeleri yönetme](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
+Daha fazla bilgi için bkz. [İşletmeler için Windows Update'i kullanarak güncelleştirmeleri yönetme](/windows/deployment/update/waas-manage-updates-wufb).
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -182,7 +182,7 @@ Kaldırma kullandığınızda aşağıdakileri göz önünde bulundurun:
 
   Örneğin, özellik güncelleştirme kaldırma süresi 20 gün olan bir güncelleştirme halkasını düşünün. 25 gün sonra en son özellik güncelleştirmesini geri alma ve kaldırma seçeneğini kullanma kararı verirsiniz.  Özellik güncelleştirmesini 20 gün önce yükleyen cihazlar, bakımın bir parçası olarak gerekli bitleri kaldırdıklarından bu sürümü kaldıramıyor. Ancak, yalnızca 19 güne kadar olan özellik güncelleştirmesini yükleyen cihazlar, 20 günlük kaldırma dönemini aşmadan önce Uninstall komutunu almak üzere iade ederseniz güncelleştirmeyi kaldırabilir.
 
-Windows Update ilkeleri hakkında daha fazla bilgi için bkz. Windows istemci yönetimi belgelerinde [CSP güncelleştirme](https://docs.microsoft.com/windows/client-management/mdm/update-csp) .
+Windows Update ilkeleri hakkında daha fazla bilgi için bkz. Windows istemci yönetimi belgelerinde [CSP güncelleştirme](/windows/client-management/mdm/update-csp) .
 
 ##### <a name="to-uninstall-the-latest-windows-10-update"></a>En son Windows 10 güncelleştirmesini kaldırmak için
 
@@ -247,7 +247,7 @@ Bu bölmeden şunları yapabilirsiniz:
 
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Windows 10 güncelleştirmeleri için doğrulama ve raporlama
 
-Hem Windows 10 güncelleştirme halkaları hem de Windows 10 özellik güncelleştirmeleri için cihazların güncelleştirme durumunu izlemek üzere [güncelleştirmeler Için Intune uyumluluk raporları](windows-update-compliance-reports.md) ' nı kullanın. Bu çözüm, Azure aboneliğinizle birlikte [güncelleştirme uyumluluğu](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) kullanır.
+Hem Windows 10 güncelleştirme halkaları hem de Windows 10 özellik güncelleştirmeleri için cihazların güncelleştirme durumunu izlemek üzere [güncelleştirmeler Için Intune uyumluluk raporları](windows-update-compliance-reports.md) ' nı kullanın. Bu çözüm, Azure aboneliğinizle birlikte [güncelleştirme uyumluluğu](/windows/deployment/update/update-compliance-monitor) kullanır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

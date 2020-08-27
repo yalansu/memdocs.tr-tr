@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c20d2ef806df46036d3a785bb5f8603d485d3880
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: d14ee52decf1b6ef9b2566b3233a385c1331bcc5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86460476"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910987"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Intune ile cihaz şifrelemesini izleme
 
@@ -34,7 +34,7 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
 
 Şifreleme raporu, yönettiğiniz desteklenen cihazlar genelinde ortak ayrıntıları gösterir. Aşağıdaki bölümlerde, Intune 'un raporda sunduğu bilgiler hakkındaki ayrıntılar sağlanmaktadır.
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 
 Şifreleme raporu, aşağıdaki işletim sistemi sürümlerini çalıştıran cihazlarda raporlamayı destekler:
 
@@ -59,7 +59,7 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
     - Sürüm 1709 veya üzeri, *iş*, *Kurumsal*, *eğitim*veya sürüm 1809 ya da *Pro* 'nun daha yeni sürümü
     - Cihazda bir TPM yongasının olması gerekir
 
-    Daha fazla bilgi için Windows belgelerindeki [BitLocker yapılandırma hizmeti sağlayıcısına (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) bakın.
+    Daha fazla bilgi için Windows belgelerindeki [BitLocker yapılandırma hizmeti sağlayıcısına (CSP)](/windows/client-management/mdm/bitlocker-csp) bakın.
 
   - **Yok**: cihazın tam şifreleme becerileri yoktur, ancak yine de şifrelemeyi destekler. Örneğin, bir Windows cihazı, bir kullanıcı tarafından el ile veya TPM olmadan şifrelemeye izin vermek üzere ayarlanabilir grup ilkesi aracılığıyla şifrelenmiş olabilir.
   - **Uygulanamaz**: Bu cihazı sınıflandırmak için yeterli bilgi yok.
@@ -124,7 +124,7 @@ Raporu bulmak için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.mic
 
     *Göz önünde bulundurun: macOS sürüm 10,15 (Catalina) Ile başlayarak, kullanıcının onayladığı kayıt ayarları, kullanıcıların dosya kasasını şifrelemeyi el ile onaylama gereksinimine neden olabilir. Daha fazla bilgi için bkz. Intune belgelerinde [Kullanıcı onaylı kayıt](../enrollment/macos-enroll.md) *.
 
-  - Bilinmeyen.
+  - Bilinmiyor.
 
     *Göz önünde bulundurun: bilinmeyen bir durumun nedeni, cihazın kilitlenmesinden ve Intune 'un Emanet veya şifreleme işlemini başlatamamasına neden olabilir. Cihazın kilidi açıldıktan sonra, ilerleme devam edebilir*.
 

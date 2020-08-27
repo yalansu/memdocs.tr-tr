@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeab1155a7a0035c5e0db15c3a5402d3636edaca
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 7981f661dd345ea80f9ab92debc9657072de1f4e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461666"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907283"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Microsoft Intune için uygulama yapılandırma ilkeleri
 
@@ -71,7 +71,7 @@ Uygulama yapılandırma ilkelerini, onu destekleyen uygulamalar için kullanabil
 ![Cihaz kayıt türü](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> Microsoft Outlook gibi çok kimlikli uygulamalarda Kullanıcı tercihleri göz önünde bulundurulmayabilir. Odaklanmış gelen kutusu, örneğin, Kullanıcı ayarına göre değişir ve yapılandırmayı değiştirmez. Diğer parametreler, bir kullanıcının ayarı değiştiremeyeceğini veya değiştiremeyeceğini denetlemenize olanak tanır. Daha fazla bilgi için bkz. [iOS Için Outlook dağıtımı/ıpados ve Android uygulama yapılandırma ayarları](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+> Microsoft Outlook gibi çok kimlikli uygulamalarda Kullanıcı tercihleri göz önünde bulundurulmayabilir. Odaklanmış gelen kutusu, örneğin, Kullanıcı ayarına göre değişir ve yapılandırmayı değiştirmez. Diğer parametreler, bir kullanıcının ayarı değiştiremeyeceğini veya değiştiremeyeceğini denetlemenize olanak tanır. Daha fazla bilgi için bkz. [iOS Için Outlook dağıtımı/ıpados ve Android uygulama yapılandırma ayarları](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="android-app-configuration-policies"></a>Android uygulama yapılandırma ilkeleri
 
@@ -165,7 +165,7 @@ Yönetilen uygulama yapılandırması için iOS/ıpados yapılandırmasını yö
 
 Yönetilen uygulama yapılandırması için, yönetilen cihazlarda **Intune tanılama günlüğü** ile Android yapılandırmasını doğrulayabilirsiniz.
 
-Android cihazından günlükleri toplamak için, siz veya son kullanıcının, bir USB bağlantısı aracılığıyla (veya cihazdaki **Dosya Gezgini** eşdeğerini) günlükleri cihazdan indirmesi gerekir. Adımlar aşağıdaki gibidir:
+Android cihazından günlükleri toplamak için, siz veya son kullanıcının, bir USB bağlantısı aracılığıyla (veya cihazdaki **Dosya Gezgini** eşdeğerini) günlükleri cihazdan indirmesi gerekir. Adımlar şunlardır:
 
 1. Android cihazını USB kablosuyla bilgisayarınıza bağlayın.
 2. Bilgisayarda, cihazınızın adına sahip bir dizini arayın. Bu dizinde öğesini bulun `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal` .
@@ -176,7 +176,7 @@ Android cihazından günlükleri toplamak için, siz veya son kullanıcının, b
     
 ## <a name="graph-api-support-for-app-configuration"></a>Uygulama yapılandırması için Graph API desteği
 
-Graph API, uygulama yapılandırma görevlerini gerçekleştirmek için kullanabilirsiniz. Ayrıntılar için bkz. [Graph API Reference mam hedeflenen yapılandırma](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Intune ve Graph hakkında daha fazla bilgi için bkz. [Microsoft Graph Intune Ile çalışma](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
+Graph API, uygulama yapılandırma görevlerini gerçekleştirmek için kullanabilirsiniz. Ayrıntılar için bkz. [Graph API Reference mam hedeflenen yapılandırma](/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Intune ve Graph hakkında daha fazla bilgi için bkz. [Microsoft Graph Intune Ile çalışma](/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
 ## <a name="troubleshooting"></a>Sorun giderme
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52eae65e6735ad655c2e8db53e34383ccc5e3b30
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 7b1a605e456edb525afec306ff594ba7cc3895aa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988392"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912738"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Microsoft Intune 'da Windows 10 cihazlarda bir test alma uygulaması kullanın
 
@@ -30,7 +30,7 @@ Intune 'da eğitim profilleri, öğrenciler için cihazlarda bir test veya sına
 
 - Windows 10 ve üzeri
 
-Kullanıcı oturum açtığında, bir test al uygulaması girdiğiniz test ile otomatik olarak açılır. Test devam ederken cihazda başka hiçbir uygulama çalıştırılamaz. [Windows 10 ' da testleri al](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) test alma uygulaması hakkında daha fazla bilgi sağlar.
+Kullanıcı oturum açtığında, bir test al uygulaması girdiğiniz test ile otomatik olarak açılır. Test devam ederken cihazda başka hiçbir uygulama çalıştırılamaz. [Windows 10 ' da testleri al](/education/windows/take-tests-in-windows-10) test alma uygulaması hakkında daha fazla bilgi sağlar.
 
 Bu makalede Microsoft Intune ' de bir cihaz yapılandırma profili oluşturma adımları listelenir. Ayrıca, Windows 10 cihazlarınıza yönelik kullanılabilir eğitim ayarları hakkında bilgi almak ve bunları öğrenmek için bilgileri de içerir.
 

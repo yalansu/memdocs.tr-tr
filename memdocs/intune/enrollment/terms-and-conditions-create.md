@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66bc3db54ebefe814a14f564abbad42dc226aefe
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: b3d0ae7f0ec42cef3ba792b5c0bf3c913bb9e63e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988997"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906863"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Kullanıcı erişimi için hüküm ve koşullar
 
@@ -39,7 +39,7 @@ Farklı gruplara yönelik olarak, örneğin farklı dillere destek sağlamak iç
 
 Şirketinizin hüküm ve koşullarını oluşturmanın iki yolu vardır:
 - Bu makalede açıklandığı gibi Intune kullanarak.
-- [Azure Active Directory kullanım koşulları özelliğini](https://docs.microsoft.com/azure/active-directory/governance/active-directory-tou) kullanarak
+- [Azure Active Directory kullanım koşulları özelliğini](/azure/active-directory/governance/active-directory-tou) kullanarak
 
 Hangi yöntemin sizin için en uygun olduğunu öğrenmek için [kuruluşunuzun blog gönderisine yönelik doğru terimleri seçme çözümüne](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409)göz atın. 
 
@@ -47,7 +47,7 @@ Hangi yöntemin sizin için en uygun olduğunu öğrenmek için [kuruluşunuzun 
 Hüküm ve koşulları oluşturmak için şu adımları tamamlayın. Görüntü adı ve açıklama yönetimin kullanımına yöneliktir; öte yandan, koşul özellikleri Şirket Portalı’nda kullanıcılara görüntülenir.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **Kiracı Yönetimi**  >  **hüküm ve koşulları**' nı seçin.
-2. **Oluştur**’u seçin.
+2. **Oluştur**' a tıklayın.
 3. **Temel bilgiler** sayfasında, aşağıdaki bilgileri belirtin:
 
    - **Ad**: Azure Portal koşulların adı. Kullanıcılar bu adı görmez.

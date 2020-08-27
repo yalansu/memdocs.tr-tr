@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 607e2303cbec9ec7fc069db602d51684b71e6575
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: c8cc44cb614154df1a128ee1f1708a3259f88169
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80083840"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910052"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Microsoft Intune Android Zeköşeli cihazlarda sorun giderme ve olası sorunları görme
 
@@ -54,14 +54,14 @@ Zeköşeli [Mobility uzantıları Ile zeköşeli cihazlarını kullanın ve yön
 ### <a name="get-logs-using-android-debug-bridge"></a>Android Debug Bridge kullanarak günlükleri al
 Profil zaten Intune ile dağıtıldıktan sonra günlükleri almak için cihazı [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) olan bir bilgisayara bağlayın (Android 'in Web sitesini açar).
 
-Cihazda Günlükler kaydedilir`/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
+Cihazda Günlükler kaydedilir `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
 ### <a name="get-logs-from-email"></a>E-postadaki günlükleri al
-Profil Intune ile zaten dağıtıldıktan sonra günlükleri almak için, son kullanıcılar cihazdaki bir e-posta uygulaması kullanarak günlüklere e-posta gönderebilir. Zeköşeli cihazda Şirket Portalı uygulamasını açın ve [günlükleri gönderin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android). Günlükleri Gönder özelliğinin kullanılması, Microsoft desteği 'ne başvurduğunuzda başvurduğunuzda kullanabileceğiniz bir Powerasansör olay KIMLIĞI de oluşturur.
+Profil Intune ile zaten dağıtıldıktan sonra günlükleri almak için, son kullanıcılar cihazdaki bir e-posta uygulaması kullanarak günlüklere e-posta gönderebilir. Zeköşeli cihazda Şirket Portalı uygulamasını açın ve [günlükleri gönderin](../user-help/send-logs-to-your-it-admin-by-email-android.md). Günlükleri Gönder özelliğinin kullanılması, Microsoft desteği 'ne başvurduğunuzda başvurduğunuzda kullanabileceğiniz bir Powerasansör olay KIMLIĞI de oluşturur.
 
 ## <a name="read-the-logs"></a>Günlükleri okuyun
 
-Günlüklere baktığınızda, `<characteristic-error>` etiketi gördüğünüz zaman bir hata oluştu. Hata ayrıntıları `<parm-error>` etiket > `desc` özelliğine yazılır.
+Günlüklere baktığınızda, etiketi gördüğünüz zaman bir hata oluştu `<characteristic-error>` . Hata ayrıntıları `<parm-error>` etiket > `desc` özelliğine yazılır.
 
 ## <a name="error-types"></a>Hata türleri
 
@@ -113,7 +113,7 @@ Başka bir örnekte, aşağıdaki girişe sahipsiniz:
 </wap-provisioningdoc>
 ```
 
-Günlükte bir `<characteristic-error>` etiketi bulunduğu için günlük bir hata gösterir. Bu senaryoda profil, belirtilen yolda mevcut olmayan bir Android paketini (APK) yüklemeye çalıştı:
+Günlükte bir etiketi bulunduğu için günlük bir hata gösterir `<characteristic-error>` . Bu senaryoda profil, belirtilen yolda mevcut olmayan bir Android paketini (APK) yüklemeye çalıştı:
 
 ```xml
 <wap-provisioningdoc>

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25d3813d79ec20cc396c3127be6be5371c20247f
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a83d6301ffe5663abd6025c8f52b2e7a7e0b7982
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461197"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911123"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Microsoft Intune ' de türetilmiş kimlik bilgilerini kullan
 
@@ -52,7 +52,7 @@ Türetilmiş kimlik bilgileri, özel yayın (SP) 800-157 kapsamında türetilmi�
 - Android ve iOS/ıpados için, kullanıcılar türetilmiş kimlik bilgileri verende kimlik doğrulaması yapmak için bir bilgisayardaki akıllı kartlarını kullanarak türetilmiş bir kimlik bilgisi alır. Veren, daha sonra akıllı kartlarından türetilen bir sertifika olan mobil cihaza sorun verir. Windows için kullanıcılar, uygulamayı daha sonra kullanılmak üzere cihaza yükleyen türetilmiş kimlik bilgisi sağlayıcısından yükler.
 - Cihaz türetilmiş kimlik bilgilerini aldıktan sonra, uygulamalar veya kaynak erişim profilleri türetilmiş kimlik bilgisini gerektirdiğinde, kimlik doğrulaması ve S/MIME imzalama ve şifreleme için kullanılır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Kiracınızı türetilmiş kimlik bilgilerini kullanacak şekilde yapılandırmadan önce aşağıdaki bilgileri gözden geçirin.
 
@@ -69,9 +69,9 @@ Intune, aşağıdaki platformlarda türetilmiş kimlik bilgilerini destekler:
 
 Intune, kiracı başına tek bir türetilmiş kimlik bilgisi veren destekler. Intune 'U, aşağıdaki verenler ile çalışacak şekilde yapılandırabilirsiniz:
 
-- **Dışa purebred**:https://public.cyber.mil/pki-pke/purebred/
-- **Entrust Datacard**:https://www.entrustdatacard.com/
-- **Intercede**:https://www.intercede.com/
+- **Dışa purebred**: https://public.cyber.mil/pki-pke/purebred/
+- **Entrust Datacard**: https://www.entrustdatacard.com/
+- **Intercede**: https://www.intercede.com/
 
 Farklı verenler kullanma hakkında önemli ayrıntılar için bu veren için kılavuzu gözden geçirin. Daha fazla bilgi için bu makaledeki [türetilmiş kimlik bilgilerini planlayın](#plan-for-derived-credentials) bölümüne bakın.
 
@@ -119,8 +119,8 @@ Desteklenen her iş ortağı için önemli konular aşağıda verilmiştir.  Int
 
 Türetilmiş kimlik bilgileriyle kullanacağınız cihazlar için platforma özgü Kullanıcı iş akışını gözden geçirin.
 
-- [iOS ve ıpados](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred)
-- [Android kurumsal tam yönetilen cihazlar](https://docs.microsoft.com/mem/intune/user-help/enroll-android-device-disa-purebred)
+- [iOS ve ıpados](/intune-user-help/enroll-ios-device-disa-purebred)
+- [Android kurumsal tam yönetilen cihazlar](../user-help/enroll-android-device-disa-purebred.md)
 
 **Temel gereksinimler şunlardır**:
 
@@ -138,7 +138,7 @@ DıŞA ınpurebred uygulamasını alma ve yapılandırma hakkında bilgi için b
 
 Türetilmiş kimlik bilgileriyle kullanacağınız cihazlar için platforma özgü Kullanıcı iş akışını gözden geçirin.
 
-- [iOS ve ıpados](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust-datacard)
+- [iOS ve ıpados](/intune-user-help/enroll-ios-device-entrust-datacard)
 - [Android kurumsal tam yönetilen cihazlar](../user-help/enroll-android-device-entrust-datacard.md)
 
 **Temel gereksinimler şunlardır**:
@@ -156,7 +156,7 @@ Türetilmiş kimlik bilgileriyle kullanacağınız cihazlar için platforma özg
 
 Türetilmiş kimlik bilgileriyle kullanacağınız cihazlar için platforma özgü Kullanıcı iş akışını gözden geçirin.
 
-- [iOS ve ıpados](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede)
+- [iOS ve ıpados](/intune-user-help/enroll-ios-device-intercede)
 - [Android kurumsal tam yönetilen cihazlar](../user-help/enroll-android-device-intercede.md)
 
 **Temel gereksinimler şunlardır**:
@@ -180,7 +180,7 @@ Türetilmiş kimlik bilgileri kayıt işlemini başlatma ve size seçtiğiniz ve
 
 Kılavuzunuzu barındıracak bir URL sağlamanızı öneririz. Bu URL 'yi, kiracınız için türetilmiş kimlik bilgisi veren yapılandırdığınızda ve bu URL Şirket Portalı uygulamasının içinden kullanılabilir hale geldiğinde belirtirsiniz. Kendi URL 'nizi belirtmezseniz, Intune genel ayrıntılara bir bağlantı sağlar. Bu ayrıntılar tüm senaryoları kapsamamaktadır ve ortamınız için doğru olmayabilir.
 
-### <a name="dive-idsupported-objects-5-deploy-intune-policies-that-require-derived-credentials"></a><dive id="supported-objects">5) türetilmiş kimlik bilgileri gerektiren Intune ilkelerini dağıtma
+### <a name="dive-idsupported-objects-5-deploy-intune-policies-that-require-derived-credentials"></a><dive id="supported-objects"> 5) türetilmiş kimlik bilgileri gerektiren Intune ilkelerini dağıtma
 
 Türetilmiş kimlik bilgilerini kullanmak için yeni ilkeler oluşturun veya var olan ilkeleri düzenleyin. Türetilmiş kimlik bilgileri aşağıdaki nesneler için diğer kimlik doğrulama yöntemlerinin yerini alır:
 

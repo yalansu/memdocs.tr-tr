@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 923a7c192121530d84ca2034b2ca8a4be3cc32d6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1808743685c6907c11da23f92c5e263860098bea
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990762"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909695"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Microsoft Intune olayları izlemek ve izlemek için Denetim günlüklerini kullanma
 
@@ -65,7 +65,7 @@ Denetim günlükleri ve işletimsel Günlükler de Azure Izleyici 'ye yönlendir
 
 ## <a name="use-graph-api-to-retrieve-audit-events"></a>Denetim olaylarını almak için Graph API kullanma
 
-Grafik API 'SI kullanımıyla ilgili ayrıntılar için, bir yıllık denetim olayları almak üzere bkz. [list auditEvents](https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
+Grafik API 'SI kullanımıyla ilgili ayrıntılar için, bir yıllık denetim olayları almak üzere bkz. [list auditEvents](/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc01428430eb665dc609cff84ee322f28e3b7d79
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 223d3aa55365241983c197d0aa80e82087465d48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165439"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907710"
 ---
 # <a name="reference-for-devices-entities"></a>Cihaz varlıkları için başvuru
 
@@ -50,7 +50,7 @@ ms.locfileid: "84165439"
 
 ### <a name="example"></a>Örnek
 
-| deviceTypeID  | Name | Açıklama |
+| deviceTypeID  | Ad | Açıklama |
 |---------|------------|--------|
 | 0 |Masaüstü |Windows Masaüstü cihaz |
 | 1 |WindowsRT |WindowsRT cihaz |
@@ -118,7 +118,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 | Geçerli değil                  | Kayıt hatası kategorisi geçerli değil.                                                            |
 | Kullanılamaz                   | Kayıt hatası kategorisi kullanılamıyor.                                                             |
 | Bilinmiyor                         | Bilinmeyen hata.                                                                                                |
-| Kimlik Doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
+| Kimlik doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
 | Yetkilendirme                   | Çağrının kimliği doğrulandı, ancak kaydolma yetkisi yok.                                                         |
 | AccountValidation               | Kayıt için Hesap doğrulanamadı. (Hesap engellendi, kayıt etkin değil)                      |
 | Kullanıcı doğrulaması                  | Kullanıcı doğrulanamadı. (Kullanıcı yok, Lisans eksik)                                           |
@@ -170,7 +170,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 | ownerTypeName |Cihazların sahip türünü temsil eder:  <br>Şirket-cihaz, kuruluşa aittir. <br>Kişisel - cihaz kişiye aittir (KCG).  <br>Bilinmiyor - bu cihazda bilgi yok. |Şirket kişisel bilinmiyor |
 
 > [!Note]  
-> `ownerTypeName`Cihazlar Için dinamik gruplar oluştururken AzureAD içinde, filtre değerini olarak ayarlamanız gerekir `deviceOwnership` `Company` . Daha fazla bilgi için bkz. [Cihazlar Için kurallar](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> `ownerTypeName`Cihazlar Için dinamik gruplar oluştururken AzureAD içinde, filtre değerini olarak ayarlamanız gerekir `deviceOwnership` `Company` . Daha fazla bilgi için bkz. [Cihazlar Için kurallar](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>managementStates
 
@@ -184,7 +184,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 
 ### <a name="example"></a>Örnek
 
-| managementStateID  | Name | Açıklama |
+| managementStateID  | Ad | Açıklama |
 |---------|------------|--------|
 | 0 |Yönetilen | Hiçbir bekleyen uzak eylem olmadan yönetilir. |
 | 1 |RetirePending | Cihaz için bekleyen bir devre dışı bırakma komutu vardır. |
@@ -211,7 +211,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 
 ### <a name="example"></a>Örnek
 
-| ManagementAgentTypeID  | Name | Açıklama |
+| ManagementAgentTypeID  | Ad | Açıklama |
 |---------|------------|--------|
 | 1 |EAS | Cihaz, Exchange Active Sync yoluyla yönetiliyor |
 | 2 |MDM | Cihaz bir MDM aracısı kullanılarak yönetiliyor |
@@ -288,4 +288,3 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 | deviceCategoryKey          | Bu cihaz için cihaz kategorisi özniteliğinin anahtarı. 
 | Physicalmemorybytes      | Bayt cinsinden fiziksel bellek.                                                                                                                                                          |
 | totalStorageSpaceInBytes   | Toplam depolama kapasitesi (bayt cinsinden).                                                                                                                                                                |
-

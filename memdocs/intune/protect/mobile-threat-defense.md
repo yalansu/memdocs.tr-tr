@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bc7f526db4cb9fd269d2d48845cc5dc4096b5df
-ms.sourcegitcommit: 0c5d09bfefbedeb561658cf7274483896e84e5d3
+ms.openlocfilehash: 80b725393323484ecb33aad947a95894604c4d5a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87412350"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906897"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Intune ile Mobile Threat Defense tümleştirmesi
 
@@ -35,7 +35,7 @@ Intune, mobil tehdit savunma (MTD) satıcısındaki verileri cihaz uyumluluk ilk
 Intune, Intune uygulama koruma ilkelerini kullanarak, kayıtlı olmayan cihazlar için bu verileri kaynak olarak kullanabilir. Bu nedenle, Yöneticiler bu bilgileri [Microsoft Intune korunan bir uygulamadaki](../apps/apps-supported-intune-apps.md)kurumsal verileri korumak ve bir blok veya seçmeli silme vermek için kullanabilir.
 
 > [!NOTE]
-> Intune GCC High ve DoD teklifiyle mobil tehdit *savunması* tümleştirmesi Şu anda desteklenmiyor. [ABD devlet GCC High support Microsoft Intune](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-intune-govt-service-description)hakkında daha fazla bilgi edinin.
+> Intune GCC High ve DoD teklifiyle mobil tehdit *savunması* tümleştirmesi Şu anda desteklenmiyor. [ABD devlet GCC High support Microsoft Intune](/enterprise-mobility-security/solutions/ems-intune-govt-service-description)hakkında daha fazla bilgi edinin.
 
 ## <a name="protect-corporate-resources"></a>Şirket kaynaklarını koruma
 

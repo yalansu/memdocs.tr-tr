@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 481113dc64418b1579dbf9b478cd3ebd85b6cb72
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: c175d9bba142c9126552a71f1d942e5a7b975b11
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179333"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907595"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Windows cihazınızı Intune Şirket Portalı ile kullanma
 
@@ -33,7 +33,7 @@ Bu bölümde Windows için Şirket Portalı'na özgü görevler ve bilgiler anla
 ## <a name="how-to-get-company-portal"></a>Şirket Portalı'nı edinme
 Şirket Portalı'nın bir Web sitesi sürümü ve bir de indirilebilecek bir uygulaması vardır. [Şirket Portalı Web sitesine erişmek için](https://go.microsoft.com/fwlink/?linkid=2010980) iş veya okul kimlik bilgilerinizle oturum açın.  
 
-Ayrıntılı adımlar ve ekran görüntüleri için bkz. [Şirket Portalı'nda oturum açma](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal).
+Ayrıntılı adımlar ve ekran görüntüleri için bkz. [Şirket Portalı'nda oturum açma](./sign-in-to-the-company-portal.md).
 
 ## <a name="supported-versions"></a>Desteklenen sürümler
 

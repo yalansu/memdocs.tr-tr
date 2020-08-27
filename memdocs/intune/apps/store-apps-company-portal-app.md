@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c41f22e2aa60803067b9015f2ae3a84db43ff894
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179545"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910273"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Microsoft Intune kullanarak Windows 10 Şirket Portalı uygulamasını ekleme
 
@@ -67,7 +67,7 @@ Kullanıcılarınız, cihaz yönetmek ve uygulama yüklemek için Intune Şirket
 
 11. Şirket Portalı uygulamasını seçtiğiniz kullanıcı veya cihaz grupları kümesine gerekli bir uygulama olarak atayın.  
 
-Intune’un Evrensel uygulamaların bağımlılıklarını nasıl işlediği hakkında daha fazla bilgi edinmek için bkz. [Microsoft Intune MDM aracılığıyla bağımlılıkları olan bir appxbundle dağıtma](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/).  
+Intune’un Evrensel uygulamaların bağımlılıklarını nasıl işlediği hakkında daha fazla bilgi edinmek için bkz. [Microsoft Intune MDM aracılığıyla bağımlılıkları olan bir appxbundle dağıtma](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm).  
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular 
 ### <a name="how-do-i-update-the-company-portal-app-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Daha eski uygulamaları mağazadan zaten yüklediklerinde, kullanıcılarımın cihazlarındaki Şirket Portalı uygulamayı güncelleştirmek Nasıl yaparım? mı?
@@ -110,4 +110,3 @@ Betik, çalışması tamamlandığında Windows 10 Şirket Portalı uygulamasın
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Gruplara uygulama ekleme](apps-deploy.md)
-

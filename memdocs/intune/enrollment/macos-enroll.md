@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c0973805a0646ec7df87f36eea183a9456f7e39
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 7f2b2826e8eaf1cf1c1c8680743b582203199aed
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865515"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906846"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Intune’da macOS cihazların kaydını ayarlama
 
@@ -51,7 +51,7 @@ Kullanıcıların kendi kişisel cihazlarını Intune yönetimine kaydetmelerini
 - [Şirket portalı Web sitesine](https://portal.manage.microsoft.com) veya
 - [Aka.MS/EnrollMyMac](https://aka.ms/EnrollMyMac)adresindeki Mac Şirket portalı uygulaması indiriliyor.
 
-Kullanıcılarınıza çevrimiçi kayıt adımları için bir bağlantı da gönderebilirsiniz: [macOS cihazınızı Intune 'A kaydetme](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+Kullanıcılarınıza çevrimiçi kayıt adımları için bir bağlantı da gönderebilirsiniz: [macOS cihazınızı Intune 'A kaydetme](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 Diğer son kullanıcı görevleri hakkında daha fazla bilgi için şu makalelere bakın:
 
@@ -82,7 +82,7 @@ VMware Fusion kullanırsanız, sanal makinenin donanım türü ve seri numarası
 
 Kullanıcı Onaylı MDM kaydı, güvenlik açısından hassas bazı ayarları yönetmek için kullanabileceğiniz bir macOS kayıt türüdür. Daha fazla bilgi için [Apple'ın destek belgelerine](https://support.apple.com/HT208019) bakın.  
  
-Haziran 2020 itibariyle, otomatik cihaz kaydı (ADE) üzerinden yapılmalanlar da dahil olmak üzere Intune 'daki tüm yeni macOS MDM kayıtları Kullanıcı onaylı olarak kabul edilir. Son Kullanıcı, yönetim profilini **Sistem Tercihleri**  >  **profillerine**el ile yüklemelidir ve bu nedenle yönetim profili onayını sağlamalıdır. Sistem Tercihleri, KCG macOS kullanıcıları için Şirket Portalı uygulamasından otomatik olarak başlatılır. [Yönetim profilini yüklemeye yönelik yönergeler](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp) Şirket portalı uygulamasında sunulmaktadır.     
+Haziran 2020 itibariyle, otomatik cihaz kaydı (ADE) üzerinden yapılmalanlar da dahil olmak üzere Intune 'daki tüm yeni macOS MDM kayıtları Kullanıcı onaylı olarak kabul edilir. Son Kullanıcı, yönetim profilini **Sistem Tercihleri**  >  **profillerine**el ile yüklemelidir ve bu nedenle yönetim profili onayını sağlamalıdır. Sistem Tercihleri, KCG macOS kullanıcıları için Şirket Portalı uygulamasından otomatik olarak başlatılır. [Yönetim profilini yüklemeye yönelik yönergeler](../user-help/enroll-your-device-in-intune-macos-cp.md) Şirket portalı uygulamasında sunulmaktadır.     
 
 Haziran 2020 ' den önceki BYOD MacOS MDM kayıtları, Son Kullanıcı **Sistem Tercihleri**profillerindeki yönetim profilini el ile onaylamadıysa Kullanıcı onaylı olmayabilir  >  **Profiles**. Haziran 2020 ' den sonra BYOD kayıtları için Şirket Portalı uygulaması kullanıcı için **sistem tercihlerini** başlatır ve kullanıcının yüklemeyi seçmesini gerekir. Kullanıcı kayıt sırasında yönetim profilini onaylamadıysanız, Kullanıcı **Sistem Tercihleri**  >  **profilleri**' ne gidebilir, yönetim profilini seçebilir ve daha sonraki bir noktada profili onaylamak için **Onayla** ' yı seçin.
 

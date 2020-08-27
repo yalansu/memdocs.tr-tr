@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7858253772b554858209f3524f20bccf08839bd
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: bd15cc44ac3e6d17c36e3b623135b94ddcfcdbc3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217465"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912976"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Mobil uygulama yönetimi sorunlarını giderme
 
@@ -59,7 +59,7 @@ Yaygın son kullanıcı sorunları aşağıdaki kategorilere ayrılmıştır:
 Platform | Senaryo | Açıklama |
 ---| --- | --- |
 iOS | Son Kullanıcı iOS/ıpados Share uzantısını kullanarak, veri aktarım ilkesi **yalnızca yönetilen uygulamalar** veya uygulamalar olarak ayarlanmış şekilde yönetilmeyen uygulamalarda iş veya okul verilerini açabilir **.** Bu veri sızıntısına neden olmaz mı? | Intune uygulama koruma ilkesi, cihazı yönetmeksizin iOS/ıpados paylaşma uzantısını denetlemez. Bu nedenle **Intune, “kurumsal” verileri uygulama dışında paylaşmadan önce şifreler**. Bunu, yönetilen uygulama dışında "kurumsal" dosyayı açmaya çalışarak doğrulayabilirsiniz. Bu dosya şifrelenmiş olmalı ve yönetilen bir uygulama dışında açılamamalıdır.
-iOS | Son kullanıcıdan **Microsoft Authenticator uygulamasını neden yüklemesi isteniyor** | Bu, uygulama tabanlı koşullu erişim uygulandığında gereklidir, bkz. [onaylanan istemci uygulaması gerektir](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
+iOS | Son kullanıcıdan **Microsoft Authenticator uygulamasını neden yüklemesi isteniyor** | Bu, uygulama tabanlı koşullu erişim uygulandığında gereklidir, bkz. [onaylanan istemci uygulaması gerektir](/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | MAM uygulama korumasını cihaz kaydı olmadan kullanıyor olsam bile son kullanıcının neden **Şirket Portalı uygulamasını yüklemesi gerekir**?  | Android’de, uygulama koruma işlevlerinin çoğu Şirket Portalı uygulamasında yerleşik olarak bulunur. **Şirket Portalı uygulaması her zaman gerekli olsa bile cihaz kaydı gerekli değildir**. Kayıt olmadan uygulama koruması için son kullanıcının cihazında Şirket Portalı uygulamasının yüklü olması yeterlidir.
 iOS/Android | Uygulama koruma ilkesi, Outlook uygulamasında taslak e-postasına uygulanmadı | Outlook hem kurumsal hem de kişisel bağlamı desteklediğinden, taslak e-postada MAM uygulamaz.
 iOS/Android | WXP 'de yeni belgelere uygulama koruma ilkesi uygulanmadı (Word, Excel, PowerPoint) | WXP hem kurumsal hem de kişisel bağlamı desteklediğinden, OneDrive gibi tanımlı bir kurumsal konuma kaydedilinceye kadar yeni belgeler üzerinde MAM uygulamaz.

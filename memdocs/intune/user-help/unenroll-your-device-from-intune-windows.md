@@ -19,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 9e9101a46cac488ef8a80858377cbabac8dc7936
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: d6cb9693f0bafcff22f3fce9d3f972e9eac41b22
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881594"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909100"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Windows cihazınızı yönetimden kaldırma
 
@@ -48,7 +48,7 @@ Bir Windows 10 cihazını yönetimden kaldırmak için aşağıdaki adımları t
 2. **Giriş sayfası**'nda **Cihazlarım** bölümüne gidin.
 3. Kaldırmak istediğiniz cihazı seçin.
 3. Uygulamanın sağ üst köşesinde **Daha fazla** simgesini seçin.
-4. **Kaldır**’ı seçin. 
+4. **Kaldır**' ı seçin. 
 5. Cihazın kaldırılmasını onaylamak için **Kaldır**'ı seçin.  
 
 ### <a name="remove-in-company-portal-app-device-context-menu"></a>Şirket Portalı uygulaması cihaz bağlam menüsünde kaldırma  
@@ -57,9 +57,9 @@ Bir Windows 10 cihazını yönetimden kaldırmak için aşağıdaki adımları t
 
     ![Windows için Şirket Portalı uygulaması Giriş sayfasının, Cihazlarım bölümü vurgulanmış olarak örnek ekran görüntüsü.](./media/1809_CheckAccess_Context_Select_Device.png)
 
-2. [Bağlam menüsünü](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) açmak için cihaza sağ tıklayın veya cihazı basılı tutun.  
+2. [Bağlam menüsünü](//windows/uwp/design/controls-and-patterns/menus) açmak için cihaza sağ tıklayın veya cihazı basılı tutun.  
 
-3. **Kaldır**’ı seçin.  
+3. **Kaldır**' ı seçin.  
 
     ![Windows için Şirket Portalı uygulaması Giriş sayfasının örnek ekran görüntüsü. Cihaz bağlam menüsü sayfanın **Cihazlarım** bölümünde görülebilir ve "Yeniden adlandır", "Kaldır" ve "Erişimi denetle" eylemlerini gösterir.](./media/1809_DeviceContextMenu_Windows_CP.png)  
 

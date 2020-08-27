@@ -18,11 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f667b6ad9ba9f7c353d89b4d3fc4ff749499bfaf
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: ee05e72a4837ea894c7163551d0ce79a40ed1d82
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972053"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912160"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Kayıtlı olmayan cihazlara mobil tehdit savunma uygulamaları ekleme
 
@@ -49,7 +50,7 @@ Intune uygulama koruma ilkelerini Mobile Threat Defense ile birlikte kullanırke
 Ancak, uygulamayı Intune Şirket Portalı aracılığıyla son kullanıcılar için kullanılabilir hale getirmek istemeniz gerekir. [Microsoft Intune iOS Mağazası uygulamaları ekleme](../apps/store-apps-ios.md)yönergelerine bakın. **Uygulama bilgilerini Yapılandır** bölümünü tamamlarken bu [Microsoft Authenticator-iOS Uygulama Mağazası URL 'sini](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) kullanın. Son adım olarak [Intune ile gruplara uygulama atamayı](../apps/apps-deploy.md) unutmayın.
 
 > [!NOTE]
-> iOS cihazlarında, Azure AD'nin kullanıcıların kimlikleri denetleyebilmesi için [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) olması gerekir. Intune Şirket Portalı, kullanıcıların kimliklerinin Azure AD tarafından denetlenmesi için Android cihazlarda aracı olarak kullanılır.
+> iOS cihazlarında, Azure AD'nin kullanıcıların kimlikleri denetleyebilmesi için [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) olması gerekir. Intune Şirket Portalı, kullanıcıların kimliklerinin Azure AD tarafından denetlenmesi için Android cihazlarda aracı olarak kullanılır.
 
 ## <a name="making-mobile-threat-defense-apps-available-via-intune-optional"></a>Mobil tehdit savunması uygulamalarını Intune aracılığıyla kullanılabilir hale getirme (isteğe bağlı)
 

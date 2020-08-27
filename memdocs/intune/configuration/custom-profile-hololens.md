@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d2d19b03253725bde7b0ee27f3c94b42adb5917
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f4a1929749c5921714078ec54ac687f4cefe1474
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990134"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915883"
 ---
 # <a name="use-wdac-and-windows-powershell-to-allow-or-blocks-apps-on-hololens-2-devices-with-microsoft-intune"></a>Microsoft Intune ile HoloLens 2 cihazlarındaki uygulamalara izin vermek veya bunları engelleme için WDAC ve Windows PowerShell kullanma
 
-Microsoft HoloLens 2 cihazları, [APPLOCKER CSP](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)'nin yerini alan [Windows Defender uygulama denetimi (WDAC) CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp)'sini destekler.
+Microsoft HoloLens 2 cihazları, [APPLOCKER CSP](/windows/client-management/mdm/applocker-csp)'nin yerini alan [Windows Defender uygulama denetimi (WDAC) CSP](/windows/client-management/mdm/applicationcontrol-csp)'sini destekler.
 
 Windows PowerShell ve Microsoft Intune kullanarak, Microsoft HoloLens 2 cihazlarında belirli uygulamaların açılmasını sağlamak veya engellemek için WDAC CSP 'yi kullanabilirsiniz. Örneğin, Cortana uygulamasının kuruluşunuzdaki HoloLens 2 cihazlarında açılmasını sağlamak veya bunu engellemek isteyebilirsiniz.
 
@@ -33,7 +33,7 @@ Bu özellik şu platformlarda geçerlidir:
 
 - Windows holographic for Business çalıştıran HoloLens 2 cihazları
 
-WDAC CSP, [Windows Defender uygulama denetimi (WDAC) özelliğini](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)temel alır. [Birden çok WDAC ilkesi de kullanabilirsiniz](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
+WDAC CSP, [Windows Defender uygulama denetimi (WDAC) özelliğini](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)temel alır. [Birden çok WDAC ilkesi de kullanabilirsiniz](/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies).
 
 Bu makale, şunları nasıl yapacağınızı gösterir:
 
@@ -45,14 +45,14 @@ Intune 'da, Windows Defender uygulama denetimi (WDAC) CSP 'yi kullanmak için ö
 
 Belirli uygulamaların HoloLens 2 cihazlarında açılmasını sağlamak veya reddetmek için bu makaledeki adımları Şablon olarak kullanın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Windows PowerShell hakkında bilgi sahibi olun.
 - Intune 'da bir üyesi olarak oturum açın:
 
   - **İlke ve Profil Yöneticisi** veya **Intune rol yöneticisi** Intune rolü
 
-    OR
+    VEYA
 
   - **Genel yönetici** veya **Intune HIZMET Yöneticisi** Azure AD rolü
 
@@ -124,13 +124,13 @@ Bu örnek Windows PowerShell 'i kullanarak bir Windows Defender uygulama denetim
     $rule += New-CIPolicyRule -Package $package<2..n>  -Deny
     ```
 
-5. WDAC ilkesini **newpolicy. xml**' ye Dönüştür:
+5. WDAC ilkesini **newPolicy.xml**Dönüştür:
 
     ```powershell
     New-CIPolicy -rules $rule -f .\newPolicy.xml -UserPEs
     ```
 
-    NewPolicy. xml ' de bir uygulamanın tüm sürümlerini hedeflemek için, `PackageVersion="65535.65535.65535.65535"` reddetme düğümü içinde olduğundan emin olun:
+    Bir uygulamanın tüm sürümlerini hedeflemek için newPolicy.xml, reddetme düğümü ' nde olduğundan emin olun `PackageVersion="65535.65535.65535.65535"` :
 
     ```xml
     <Deny ID="ID_DENY_D_1" FriendlyName="Microsoft.WindowsStore_8wekyb3d8bbwe FileRule" PackageFamilyName="Microsoft.WindowsStore_8wekyb3d8bbwe" PackageVersion="65535.65535.65535.65535" />
@@ -141,27 +141,27 @@ Bu örnek Windows PowerShell 'i kullanarak bir Windows Defender uygulama denetim
     - **Izin ver**: ENTER `PackageVersion, 0.0.0.0` , bu, "Bu sürüme ve yukarıya izin ver" anlamına gelir.
     - **Reddet**: ENTER `PackageVersion, 65535.65535.65535.65535` , bu, "Bu sürümü ve aşağıdaki adımları Reddet" anlamına gelir.
 
-6. **Newpolicy. xml** ' i Masaüstü bilgisayarınızdaki varsayılan ilkeyle birleştirin. Bu adım, **Birleştiripolicy. xml**dosyası oluşturur. Örneğin, Windows, WHQL imzalı sürücülere ve imzalı uygulamaları depolamaya izin ver:
+6. **newPolicy.xml** masaüstü bilgisayarınızdaki varsayılan ilkeyle birleştirin. Bu adım **mergedPolicy.xml**oluşturur. Örneğin, Windows, WHQL imzalı sürücülere ve imzalı uygulamaları depolamaya izin ver:
 
     ```powershell
     Merge-CIPolicy -PolicyPaths .\newPolicy.xml,C:\Windows\Schemas\codeintegrity\examplepolicies\DefaultWindows_Audit.xml -o mergedPolicy.xml
     ```
 
-7. Bu **Denetim modu** kuralını, **birleştiripolicy. xml**' de devre dışı bırakın. Birleştirme yaptığınızda Denetim modu otomatik olarak açıktır:
+7. **mergedPolicy.xml**içindeki **Denetim modu** kuralını devre dışı bırakın. Birleştirme yaptığınızda Denetim modu otomatik olarak açıktır:
 
     ```powershell
     Set-RuleOption -o 3 -Delete .\mergedPolicy.xml
     ```
 
-8. **Invalidateeas öğesini, bir sistem** \ **ilke. xml**dosyasındaki yeniden başlatma kuralında etkinleştirin:
+8. **mergedPolicy.xml** **bir yeniden başlatma kuralında ınvalidateeas 'ı** etkinleştirin:
 
     ```powershell
     Set-RuleOption -o 15 .\mergedPolicy.xml
     ```
 
-    Bu kurallar hakkında daha fazla bilgi için bkz. [WDAC ilke kurallarını ve dosya kurallarını anlama](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
+    Bu kurallar hakkında daha fazla bilgi için bkz. [WDAC ilke kurallarını ve dosya kurallarını anlama](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create).
 
-9. **Birleştiripolicy. xml** ' i ikili biçime dönüştürün. Bu adım, **Compiledpolicy. bin**oluşturur. Bu **Compiledpolicy. bin** Ikili dosyasını Intune 'a ekleyeceksiniz.
+9. **mergedPolicy.xml** ikili biçime dönüştürür. Bu adım, **Compiledpolicy. bin**oluşturur. Bu **Compiledpolicy. bin** Ikili dosyasını Intune 'a ekleyeceksiniz.
 
     ```powershell
     ConvertFrom-CIPolicy .\mergedPolicy.xml .\compiledPolicy.bin
@@ -175,11 +175,11 @@ Bu örnek Windows PowerShell 'i kullanarak bir Windows Defender uygulama denetim
 
     2. Profili oluştururken, aşağıdaki ayarları girin:
 
-      - **OMA-URI**: `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>` girin. `<PolicyGUID>`Adım 6 ' da oluşturduğunuz **birleştirilkesi. xml** dosyasındaki policytypeıd düğümü ile değiştirin.
+      - **OMA-URI**: `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>` girin. `<PolicyGUID>`Adım 6 ' da oluşturduğunuz **mergedPolicy.xml** dosyasındaki policytypeıd düğümü ile değiştirin.
 
         Örneğimizi kullanarak girin `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076` .
 
-        İlke GUID 'SI, **birleştirilkesi. xml** dosyasındaki policytypeıd düğümüyle **eşleşmelidir** (adım 6 ' da oluşturulur).
+        İlke GUID 'sinin **mergedPolicy.xml** dosyadaki policytypeıd düğümüyle **eşleşmesi gerekir** (adım 6 ' da oluşturulur).
 
       - **Veri türü**: **base64 dosyası**olarak ayarlanır. Dosyayı otomatik olarak bin 'den Base64 'e dönüştürür.
       - **Sertifika dosyası**: **compiledpolicy. bin** ikili dosyasını yükleyin (adım 9 ' da oluşturulur).

@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f44bd52d12753ae25b8828d6c41d3055721a1fd6
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: fc6201ca73a7599ab05b8a4874a431eed6b81c46
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166000"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912483"
 ---
 # <a name="intune-reports"></a>Intune raporları
 Microsoft Intune raporları, kuruluşunuzdaki uç noktaların sistem durumunu ve etkinliğini daha etkili ve verimli bir şekilde izlemenize olanak tanır ve ayrıca Intune genelinde diğer raporlama verileri sağlar. Örneğin, cihaz uyumluluğu, cihaz sistem durumu ve cihaz eğilimleri hakkındaki raporları görebileceksiniz. Ayrıca, daha belirli verileri almak için özel raporlar da oluşturabilirsiniz. 
@@ -103,7 +103,7 @@ Aşağıdaki adımları kullanarak **eğilimler** raporunu görüntüleyebilirsi
     ![Intune eğilim raporu](./media/intune-reports/intune-reports-03.png)
 
 ## <a name="azure-monitor-integration-reports-specialist"></a>Azure Izleyici tümleştirme raporları (uzman)
-İstediğiniz verileri almak için kendi raporlarınızı özelleştirebilirsiniz. Raporlarınızdaki veriler, [Log Analytics](reports.md#log-analytics) ve [Azure izleyici çalışma kitaplarını](reports.md#workbooks)kullanarak [Azure izleyici](https://docs.microsoft.com/azure/azure-monitor/overview) aracılığıyla isteğe bağlı olarak kullanılabilir. Bu çözümler, özel sorgular oluşturmanıza, uyarıları yapılandırmanıza ve cihaz uyumluluk verilerini istediğiniz şekilde göstermeye yönelik panolar yapmanıza olanak sağlar. Ayrıca, Azure Depolama hesabınızdaki etkinlik günlüklerini koruyabilir, [güvenlik bilgileri ve olay yönetimi (SıEM) araçlarını](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)kullanarak raporlarla tümleştirebilir ve RAPORLARıN Azure ad etkinlik günlükleriyle ilişkilendirilmesi sağlayabilirsiniz. Azure Izleyici çalışma kitapları, özel raporlama ihtiyaçları için panoları içeri aktarmaya ek olarak kullanılabilir.
+İstediğiniz verileri almak için kendi raporlarınızı özelleştirebilirsiniz. Raporlarınızdaki veriler, [Log Analytics](reports.md#log-analytics) ve [Azure izleyici çalışma kitaplarını](reports.md#workbooks)kullanarak [Azure izleyici](/azure/azure-monitor/overview) aracılığıyla isteğe bağlı olarak kullanılabilir. Bu çözümler, özel sorgular oluşturmanıza, uyarıları yapılandırmanıza ve cihaz uyumluluk verilerini istediğiniz şekilde göstermeye yönelik panolar yapmanıza olanak sağlar. Ayrıca, Azure Depolama hesabınızdaki etkinlik günlüklerini koruyabilir, [güvenlik bilgileri ve olay yönetimi (SıEM) araçlarını](/microsoft-365/security/office-365-security/siem-server-integration)kullanarak raporlarla tümleştirebilir ve RAPORLARıN Azure ad etkinlik günlükleriyle ilişkilendirilmesi sağlayabilirsiniz. Azure Izleyici çalışma kitapları, özel raporlama ihtiyaçları için panoları içeri aktarmaya ek olarak kullanılabilir.
 
 > [!NOTE]
 > Karmaşık raporlama işlevselliği, bir Azure aboneliği gerektirir.
@@ -141,21 +141,21 @@ Her Azure kaynağı kendi tanılama ayarını gerektirir. Tanılama ayarı bir k
 
 Tek bir tanılama ayarı, hedeflerin her birinden birini tanımlayabilir. Belirli bir hedef türünden birine (örneğin, iki farklı Log Analytics çalışma alanı) birden fazla veri göndermek istiyorsanız, daha sonra birden çok ayar oluşturun. Her kaynak en fazla 5 tanılama ayarlarına sahip olabilir.
 
-Tanılama ayarları hakkında daha fazla bilgi için bkz. [Azure 'da platform günlüklerini ve ölçümlerini toplamak için tanılama ayarı oluşturma](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-settings).
+Tanılama ayarları hakkında daha fazla bilgi için bkz. [Azure 'da platform günlüklerini ve ölçümlerini toplamak için tanılama ayarı oluşturma](/azure/azure-monitor/platform/diagnostic-settings).
 
 ### <a name="log-analytics"></a>Log Analytics
-Log Analytics, günlük sorgularını yazmak ve sorguların sonuçlarını etkileşimli olarak çözümlemek için Azure portal birincil araçtır. Günlük sorgusu Azure Izleyici 'de başka bir yerde kullanılsa bile, genellikle Log Analytics kullanarak sorguyu yazın ve test edersiniz. Log Analytics kullanma ve günlük sorguları oluşturma hakkında ayrıntılar için bkz. [Azure izleyici 'de günlük sorgularına genel bakış](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
+Log Analytics, günlük sorgularını yazmak ve sorguların sonuçlarını etkileşimli olarak çözümlemek için Azure portal birincil araçtır. Günlük sorgusu Azure Izleyici 'de başka bir yerde kullanılsa bile, genellikle Log Analytics kullanarak sorguyu yazın ve test edersiniz. Log Analytics kullanma ve günlük sorguları oluşturma hakkında ayrıntılar için bkz. [Azure izleyici 'de günlük sorgularına genel bakış](/azure/azure-monitor/log-query/log-query-overview). 
 
-### <a name="workbooks"></a>Çalışma Kitapları
-Çalışma kitapları metin, analiz sorguları, Azure ölçümleri ve parametreleri zengin etkileşimli raporlarla birleştirir. Çalışma kitapları aynı Azure kaynaklarına erişimi olan diğer takım üyeleri tarafından düzenlenebilir. Çalışma kitapları hakkında daha fazla bilgi için bkz. [Azure izleyici çalışma kitapları](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Ayrıca, ile çalışarak çalışma kitabı şablonlarına katkıda bulunabilirsiniz. Daha fazla bilgi için bkz. [Azure Izleyici çalışma kitabı şablonları](https://go.microsoft.com/fwlink/?linkid=867045).
+### <a name="workbooks"></a>Çalışma kitapları
+Çalışma kitapları metin, analiz sorguları, Azure ölçümleri ve parametreleri zengin etkileşimli raporlarla birleştirir. Çalışma kitapları aynı Azure kaynaklarına erişimi olan diğer takım üyeleri tarafından düzenlenebilir. Çalışma kitapları hakkında daha fazla bilgi için bkz. [Azure izleyici çalışma kitapları](/azure/azure-monitor/app/usage-workbooks). Ayrıca, ile çalışarak çalışma kitabı şablonlarına katkıda bulunabilirsiniz. Daha fazla bilgi için bkz. [Azure Izleyici çalışma kitabı şablonları](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## <a name="next-steps"></a>Sonraki adımlar 
 
 Aşağıdaki teknolojiler hakkında daha fazla bilgi edinin:
 - [Blog-Microsoft Intune raporlama çerçevesi](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
-- [Azure İzleyici](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [Log Analytics nedir?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
-- [Günlük sorguları](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
-- [Azure Izleyici 'de Log Analytics kullanmaya başlama](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
-- [Azure Izleyici çalışma kitapları](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)
-- [Güvenlik bilgileri ve olay yönetimi (SıEM) araçları](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)
+- [Azure İzleyici](/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
+- [Log Analytics nedir?](/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Günlük sorguları](/azure/azure-monitor/log-query/log-query-overview)
+- [Azure Izleyici 'de Log Analytics kullanmaya başlama](/azure/azure-monitor/log-query/get-started-portal)
+- [Azure Izleyici çalışma kitapları](/azure/azure-monitor/app/usage-workbooks)
+- [Güvenlik bilgileri ve olay yönetimi (SıEM) araçları](/microsoft-365/security/office-365-security/siem-server-integration)

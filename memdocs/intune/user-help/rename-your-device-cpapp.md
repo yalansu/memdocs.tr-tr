@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 8c71ef5e1abfcccfdeec6c01551a23bf1d1750bd
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881137"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907659"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Windows için Şirket Portalı uygulamasında bir cihazı yeniden adlandırma
 Bir cihazı diğerlerinden ayırt etmeyi kolaylaştırmak için yeniden adlandırın. Windows için Şirket Portalı uygulaması aşağıdaki türlerde bağlı cihazları yeniden adlandırmanıza olanak tanır:  
@@ -47,7 +47,7 @@ Bir cihazı diğerlerinden ayırt etmeyi kolaylaştırmak için yeniden adlandı
      ![Windows için Şirket Portalı uygulaması Cihaz ayrıntıları sayfasının, Yeniden adlandır açılan alanı vurgulanmış olarak örnek ekran görüntüsü.](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Cihazı bağlam menüsünden yeniden adlandırma  
-Cihazı [bağlam menüsü](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) eylemlerini kullanarak kaldırmak için aşağıdaki adımları tamamlayın.  
+Cihazı [bağlam menüsü](//windows/uwp/design/controls-and-patterns/menus) eylemlerini kullanarak kaldırmak için aşağıdaki adımları tamamlayın.  
 
 1. Şirket Portalı uygulamasının **Giriş** sayfasında **Cihazlarım**’a gidin.
 
@@ -61,4 +61,3 @@ Cihazı [bağlam menüsü](https://docs.microsoft.com//windows/uwp/design/contro
      ![Windows için Şirket Portalı uygulaması Giriş sayfasının örnek ekran görüntüsü. Yeniden adlandır açılan alanı, kullanıcının yeni bir ad yazıp Yeniden Adlandır veya İptal'e tıklayabileceği cihazın üst kısmında görünür.](./media/1808_RenameApp_Popup.png)  
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.
-

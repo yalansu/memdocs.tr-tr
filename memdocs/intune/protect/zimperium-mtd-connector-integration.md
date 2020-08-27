@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4666c8c765f15ddd103727ccf2a7d840cb69bd20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 889706a0fcf0d84abcbdb70b429e507233159254
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989372"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915951"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Zimperium'u Intune ile tümleştirme
 
@@ -61,7 +61,7 @@ Zimperium uygulama yetkilendirme işlemi şöyledir:
 
 - Zimperium uygulamasına Azure AD SSO kullanarak oturum açma izni verme.
 
-İzin ve Azure Active Directory uygulamalar hakkında daha fazla bilgi için, *Azure Active Directory v 2.0 uç noktasındaki Azure Active Directory makale izinleri ve onayı*içindeki [Dizin yöneticisinden izinleri isteme](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) konusuna bakın.
+İzin ve Azure Active Directory uygulamalar hakkında daha fazla bilgi için, *Azure Active Directory v 2.0 uç noktasındaki Azure Active Directory makale izinleri ve onayı*içindeki [Dizin yöneticisinden izinleri isteme](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) konusuna bakın.
 
 
 ## <a name="to-set-up-zimperium-integration"></a>Zimperium tümleştirmesini ayarlamak için

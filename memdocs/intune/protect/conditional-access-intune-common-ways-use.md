@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c1d4dacf29aa0c87a8356306d10bf05acbf3afb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: c6b341965516e79d99b0b253151cf5a1e7d4e71e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86462176"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911140"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Intune ile koşullu erişim kullanmanın yaygın yolları nelerdir?
 
@@ -35,17 +35,17 @@ Bu makaledeki bilgiler, Intune mobil *cihaz* uyumluluk özelliklerini ve Intune 
 
 ## <a name="device-based-conditional-access"></a>Cihaz tabanlı koşullu erişim
 
-Intune ve Azure Active Directory, yalnızca yönetilen ve uyumlu cihazların e-postaya, Office 365 hizmetlerine, hizmet olarak yazılım (SaaS) uygulamalarına ve [Şirket içi uygulamalara](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)erişebileceğine emin olmak için birlikte çalışır. Ayrıca, Azure Active Directory ' de bir ilke, yalnızca Intune 'a kayıtlı olan etki alanına katılmış bilgisayarları veya mobil cihazları etkinleştirmek üzere Office 365 hizmetlerine erişmek için ayarlayabilirsiniz.
+Intune ve Azure Active Directory, yalnızca yönetilen ve uyumlu cihazların e-postaya, Office 365 hizmetlerine, hizmet olarak yazılım (SaaS) uygulamalarına ve [Şirket içi uygulamalara](/azure/active-directory/active-directory-application-proxy-get-started)erişebileceğine emin olmak için birlikte çalışır. Ayrıca, Azure Active Directory ' de bir ilke, yalnızca Intune 'a kayıtlı olan etki alanına katılmış bilgisayarları veya mobil cihazları etkinleştirmek üzere Office 365 hizmetlerine erişmek için ayarlayabilirsiniz.
 
 Intune, cihazların uyumluluk durumunu değerlendiren cihaz uyumluluk ilkesi özellikleri sunar. Uyumluluk durumu, Kullanıcı şirket kaynaklarına erişmeye çalıştığında Azure Active Directory oluşturulan koşullu erişim ilkesini zorlamak için onu kullanan Azure Active Directory bildirilir.
 
 Exchange Online ve diğer Office 365 ürünlerine yönelik cihaz tabanlı koşullu erişim ilkeleri [Azure Portal](../fundamentals/what-is-intune.md)aracılığıyla yapılandırılır.
 
-- [Azure Active Directory 'de koşullu erişim ile yönetilen cihazlar gerektirme](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)hakkında daha fazla bilgi edinin.
+- [Azure Active Directory 'de koşullu erişim ile yönetilen cihazlar gerektirme](/azure/active-directory/conditional-access/require-managed-devices)hakkında daha fazla bilgi edinin.
 
 - [Intune cihaz uyumluluğu](device-compliance-get-started.md) hakkında daha fazla bilgi edinin.
 
-- [Azure Active Directory 'de koşullu erişim Ile desteklenen tarayıcılar](https://docs.microsoft.com/azure/active-directory/conditional-access/technical-reference#supported-browsers)hakkında daha fazla bilgi edinin.
+- [Azure Active Directory 'de koşullu erişim Ile desteklenen tarayıcılar](/azure/active-directory/conditional-access/technical-reference#supported-browsers)hakkında daha fazla bilgi edinin.
 
 > [!NOTE]
 > Android cihazlarda, SharePoint Online 'a cihaz tabanlı erişimi veya Exchange Online 'a tarayıcı tabanlı erişim 'i etkinleştirdiğinizde, kullanıcılar kayıtlı cihazda **tarayıcı erişimini etkinleştir** seçeneğini şu şekilde etkinleştirmelidir:
@@ -88,7 +88,7 @@ Bilgisayarlar için koşullu erişim, mobil cihazlarda bulunanlara benzer yetene
 
 - **Çalışma alanına katılma ve Intune yönetimi:** Burada kullanıcı kişisel cihazlarına ve kurumsal kaynak ve hizmetlere erişebilir. Koşullu erişim ölçütlerini değerlendirmek için başka bir seçenek olan cihaz düzeyinde ilkeler almak üzere çalışma alanına katılma ve cihazları Intune MDM 'ye kaydetme kullanabilirsiniz.
 
-[Azure Active Directory 'de cihaz yönetimi](https://docs.microsoft.com/azure/active-directory/devices/overview)hakkında daha fazla bilgi edinin.
+[Azure Active Directory 'de cihaz yönetimi](/azure/active-directory/devices/overview)hakkında daha fazla bilgi edinin.
 
 ## <a name="app-based-conditional-access"></a>Uygulamaya bağlı koşullu erişim
 
@@ -111,7 +111,7 @@ Cihaz uyumluluğu ve koşullu erişim ilkeleri uygulandığında, şirket için 
 Cihazlar koşullar kümesini karşılamıyorsa, Son Kullanıcı cihazı kaydetme işlemi boyunca aygıtı uyumsuz hale getiren sorunu düzeltir.
 
 > [!NOTE]
-> Haziran 2020 ' den başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilmiştir. HMA kullanımı, Intune 'un Exchange bağlayıcısını kurulumunu ve kullanmasını gerektirmez. Bu değişiklik ile, aboneliğiniz ile bir Exchange Bağlayıcısı kullanmıyorsanız, Intune için Exchange bağlayıcısını yapılandırmak ve yönetmek için kullanılan Kullanıcı arabirimi Microsoft Endpoint Manager yönetim merkezinden kaldırılmıştır.
+> Haziran 2020 ' den başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilmiştir. HMA kullanımı, Intune 'un Exchange bağlayıcısını kurulumunu ve kullanmasını gerektirmez. Bu değişiklik ile, aboneliğiniz ile bir Exchange Bağlayıcısı kullanmıyorsanız, Intune için Exchange bağlayıcısını yapılandırmak ve yönetmek için kullanılan Kullanıcı arabirimi Microsoft Endpoint Manager yönetim merkezinden kaldırılmıştır.
 >
 > Ortamınızda ayarlanmış bir Exchange Bağlayıcısı varsa, Intune kiracınız kullanım için desteklenir ve yapılandırmasını destekleyen Kullanıcı arabirimine erişime sahip olmaya devam edersiniz. Daha fazla bilgi için bkz. [Şirket Içi Exchange bağlayıcısını yüklemeye](../protect/exchange-connector-install.md) . Bağlayıcıyı kullanmaya devam edebilir veya HMA 'yı yapılandırabilir ve ardından bağlayıcınızı kaldırabilirsiniz.
 >
@@ -162,7 +162,7 @@ Exchange Server, cihazları karantinaya almak için API ve altyapı sağlar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Azure Active Directory 'de koşullu erişimi yapılandırma](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+[Azure Active Directory 'de koşullu erişimi yapılandırma](/azure/active-directory/active-directory-conditional-access-azure-portal)
 
 [Uygulama tabanlı koşullu erişim ilkeleri ayarlama](app-based-conditional-access-intune-create.md)
 

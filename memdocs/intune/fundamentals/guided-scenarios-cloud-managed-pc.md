@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4991ced4517ffe5902f876c196b47c2c2b50a8a6
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: d1bb0f7a00fb8cf1055488f2ae0d3bd9094ce982
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262770"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911548"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Kılavuzlu senaryo-bulutta yönetilen modern masaüstü
 
@@ -55,7 +55,7 @@ Bu Kılavuzlu senaryoda test cihazınızı ve test kullanıcısını sağlamanı
 
 - Azure Active Directory bir test Kullanıcı hesabı ayarlayın.
 - Windows 10, sürüm 1903 veya üstünü çalıştıran bir test cihazı oluşturun.
-- Seçim [Test cihazını Windows Autopilot 'ye kaydedin](../enrollment/enrollment-autopilot.md#add-devices).
+- Seçim [Test cihazını Windows Autopilot 'ye kaydedin](../../autopilot/enrollment-autopilot.md#add-devices).
 - Seçim [Kuruluşunuzun Azure Active Directory oturum açma sayfasına marka](https://go.microsoft.com/fwlink/?linkid=2102455)özelliğini etkinleştirin.
 
 ## <a name="step-2---user"></a>2. Adım-Kullanıcı
@@ -74,7 +74,7 @@ Windows Autopilot, kullanıcıların bunları BT yardımı olmadan kullanıma ha
 
 ### <a name="option-b--manual-device-enrollment"></a>Seçenek B – El Ile cihaz kaydı
 
-Kullanıcılar, mobil cihaz yönetiminde yeni cihazlarını el ile ayarlayıp kaydeder. Bu senaryoyu tamamladıktan sonra, cihazı sıfırlayın ve birincil kullanıcıya Windows cihazları için kayıt yönergeleri verin. Daha fazla bilgi için, [ilk çalıştırma deneyimi sırasında Windows 10 cihazını Azure AD 'ye katma](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)bölümüne bakın.
+Kullanıcılar, mobil cihaz yönetiminde yeni cihazlarını el ile ayarlayıp kaydeder. Bu senaryoyu tamamladıktan sonra, cihazı sıfırlayın ve birincil kullanıcıya Windows cihazları için kayıt yönergeleri verin. Daha fazla bilgi için, [ilk çalıştırma deneyimi sırasında Windows 10 cihazını Azure AD 'ye katma](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)bölümüne bakın.
 
 ## <a name="step-4---review--create"></a>4. adım-Inceleme ve oluşturma
 
@@ -94,8 +94,8 @@ Son adım, yapılandırdığınız ayarların özetini incelemenizi sağlar. Se�
         - **Tümü** veya,
         - **Bir**olarak ayarlayın. Ayrıca, Bu Kılavuzlu senaryo tarafından oluşturulan kullanıcı grubunu da ekleyin.
 3. Aşağıdaki temel alınarak Azure AD 'ye katmak için cihazda uygun adımları izleyin:
-    - Autopilot. Daha fazla bilgi için bkz. [Windows Autopilot Kullanıcı odaklı mod](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven).
-    - Autopilot olmadan: daha fazla bilgi Için, [ilk çalıştırma deneyimi sırasında Windows 10 cihazını Azure AD 'ye ekleme](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)bölümüne bakın.
+    - Autopilot. Daha fazla bilgi için bkz. [Windows Autopilot Kullanıcı odaklı mod](/windows/deployment/windows-autopilot/user-driven).
+    - Autopilot olmadan: daha fazla bilgi Için, [ilk çalıştırma deneyimi sırasında Windows 10 cihazını Azure AD 'ye ekleme](/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device)bölümüne bakın.
 
 ### <a name="what-happens-when-i-click-deploy"></a>Dağıt 'ı tıkladığımda ne olur?
 Kullanıcı ve cihaz yeni güvenlik gruplarına eklenecektir. Ayrıca, iş veya okul sırasında güvenlik ve üretkenlik için Intune tarafından önerilen ayarlarla de yapılandırılır. Kullanıcı, cihazı Azure AD 'ye katıldıktan sonra cihaza ek uygulamalar ve ayarlar eklenecektir. Bu ek konfigürasyonlar hakkında daha fazla bilgi edinmek için bkz. [hızlı başlangıç: Windows 10 cihazınızı kaydetme](../enrollment/quickstart-enroll-windows-device.md).

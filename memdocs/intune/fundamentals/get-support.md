@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f71a74c69235e8e079f2cd325582dbbe9bb4a3f1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: fd2f930cc1df1ebed6609c5871fb25001dfb735f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820672"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907481"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune için destek alma
 
 Microsoft, Intune için genel teknik, satış öncesi, faturalandırma ve abonelik desteği sağlar. Hem ücretli hem de deneme abonelikleri için çevrimiçi ve telefonla destek mevcuttur. İngilizce ve Japonca dillerinde çevrimiçi teknik destek kullanılabilir. Telefon desteği ve çevrimiçi faturalandırma desteği, ek dillerde mevcuttur.
 
-Intune yöneticisi olarak, Azure portalında Intune için bir çevrimiçi destek bileti çıkartmak üzere **Yardım ve Destek** seçeneğini kullanabilirsiniz. Bir destek olayı oluşturmak ve yönetmek için hesabınızın **Microsoft. office365. Supportbiletleri** *eylemini* Içeren BIR Azure Active Directory (Azure AD) rolü olması gerekir. Destek bileti oluştururken gereken Azure AD rolleri ve izinleri hakkında bilgi için bkz. [Azure Active Directory'de yönetici rolleri](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
+Intune yöneticisi olarak, Azure portalında Intune için bir çevrimiçi destek bileti çıkartmak üzere **Yardım ve Destek** seçeneğini kullanabilirsiniz. Bir destek olayı oluşturmak ve yönetmek için hesabınızın **Microsoft. office365. Supportbiletleri** *eylemini* Içeren BIR Azure Active Directory (Azure AD) rolü olması gerekir. Destek bileti oluştururken gereken Azure AD rolleri ve izinleri hakkında bilgi için bkz. [Azure Active Directory'de yönetici rolleri](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
 
 >[!IMPORTANT]
 > Intune ile birlikte çalışan üçüncü taraf ürünlerle ilgili (Saaswedo, Cisco veya Lookout gibi) teknik destek için önce ürün sağlayıcısıyla görüşün. Intune destekte bir talep açmadan önce diğer ürünü doğru yapılandırdığınızdan emin olun.

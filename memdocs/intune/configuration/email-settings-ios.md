@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aec16e4c3c1eae5614fdf000740dcf8363bec1ca
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 6c9ca334dd4fc55ebb037c5e18790d1ec138a7d3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88145989"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912670"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazları için e-posta ayarları ekleme
 
@@ -64,15 +64,15 @@ Bu makalede iOS/ıpados çalıştıran cihazlarda kullanılabilen tüm e-posta a
 - **SSL**: **Etkinleştir** olarak belirlenirse e-posta gönderirken, alırken ve Exchange sunucusuyla iletişim kurulurken Güvenli Yuva Katmanı (SSL) iletişimi kullanılır.
 - **OAuth**: **Etkinleştir** olarak belirlenirse e-posta gönderirken, alırken ve Exchange ile iletişim kurulurken Open Authorization (OAuth) iletişimi kullanılır. OAuth sunucunuz sertifika kimlik doğrulaması kullanıyorsa, **Kimlik doğrulama yöntemi** olarak **Sertifika**’yı belirleyin ve sertifikayı profile ekleyin. Diğer durumlarda **Kimlik doğrulama yöntemi** olarak **Kullanıcı adı ve parola**’yı belirleyin. OAuth kullanılırken şunları yaptığınızdan emin olun:
 
-  - Bu profili kullanıcılarınıza hedeflemeden önce e-posta çözümünüzün OAuth standardını desteklediğini onaylayın. Office 365 Exchange Online, OAuth standardını destekler. Şirket içi Exchange ve diğer iş ortağı veya üçüncü taraf çözümler ise OAuth’u desteklemeyebilir. Şirket içi Exchange, modern kimlik doğrulaması için yapılandırılabilir. Daha fazla bilgi için bkz. [Şirket Içi Skype Kurumsal ve Exchange sunucuları Için karma modern kimlik doğrulamasına genel bakış ve Önkoşullar](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+  - Bu profili kullanıcılarınıza hedeflemeden önce e-posta çözümünüzün OAuth standardını desteklediğini onaylayın. Office 365 Exchange Online, OAuth standardını destekler. Şirket içi Exchange ve diğer iş ortağı veya üçüncü taraf çözümler ise OAuth’u desteklemeyebilir. Şirket içi Exchange, modern kimlik doğrulaması için yapılandırılabilir. Daha fazla bilgi için bkz. [Şirket Içi Skype Kurumsal ve Exchange sunucuları Için karma modern kimlik doğrulamasına genel bakış ve Önkoşullar](/office365/enterprise/hybrid-modern-auth-overview).
 
     E-posta profili OAuth kullanıyorsa ancak e-posta hizmeti bunu desteklemiyorsa, **Parolayı yeniden gir** seçeneği bozuk görünür. Örneğin kullanıcı Apple’ın cihaz ayarlarında **Parolayı yeniden gir**’i seçerse hiçbir şey olmaz.
 
   - OAuth etkinleştirildiğinde, son kullanıcıların Multi-Factor Authentication 'ı (MFA) destekleyen farklı bir "Modern kimlik doğrulama" e-posta oturum açma deneyimi vardır. 
 
-  - Bazı kuruluşlar, son kullanıcının [self servis uygulama erişimi](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access)yapma yeteneğini devre dışı bırakır. Bu senaryoda, bir yönetici "iOS hesapları" Kurumsal uygulamasını oluşturup kullanıcılara Azure AD 'de uygulama erişimi verene kadar modern kimlik doğrulaması oturum açma işlemi başarısız olabilir.
+  - Bazı kuruluşlar, son kullanıcının [self servis uygulama erişimi](/azure/active-directory/manage-apps/manage-self-service-access)yapma yeteneğini devre dışı bırakır. Bu senaryoda, bir yönetici "iOS hesapları" Kurumsal uygulamasını oluşturup kullanıcılara Azure AD 'de uygulama erişimi verene kadar modern kimlik doğrulaması oturum açma işlemi başarısız olabilir.
 
-    Varsayılan eylem, [Uygulama Erişim Paneli](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Uygulama Ekle** özelliğini **iş onayı olmadan** kullanarak uygulama eklemektir. Daha fazla bilgi için bkz. [uygulamalara kullanıcı atama](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
+    Varsayılan eylem, [Uygulama Erişim Paneli](/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Uygulama Ekle** özelliğini **iş onayı olmadan** kullanarak uygulama eklemektir. Daha fazla bilgi için bkz. [uygulamalara kullanıcı atama](/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
   > OAuth’u etkinleştirdiğinizde şunlar olur:  

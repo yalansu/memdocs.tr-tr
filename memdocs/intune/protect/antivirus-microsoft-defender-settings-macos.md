@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: samyada
-ms.openlocfilehash: 325460e4d487ade7337fc99b8a77fd3182d6cc17
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: a75fe5bac4bb99b30e21ec842dcbbe3be83e9e5b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430119"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909457"
 ---
 # <a name="settings-for-microsoft-defender-atp-for-mac-in-microsoft-intune"></a>Microsoft Intune 'de Mac için Microsoft Defender ATP ayarları
 
-Microsoft Intune ' de Mac için Microsoft Defender ATP için yapılandırabileceğiniz *Virüsten koruma* profili ayarlarını görüntüleyin. Bu ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Mac Için Microsoft Defender Gelişmiş tehdit koruması](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) bölümüne bakın.
+Microsoft Intune ' de Mac için Microsoft Defender ATP için yapılandırabileceğiniz *Virüsten koruma* profili ayarlarını görüntüleyin. Bu ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Mac Için Microsoft Defender Gelişmiş tehdit koruması](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) bölümüne bakın.
 
 Intune 'da [Endpoint Security ilkelerini](../protect/endpoint-security-policy.md) kullanma hakkında bilgi edinin.
 
@@ -58,7 +58,7 @@ Intune 'da [Endpoint Security ilkelerini](../protect/endpoint-security-policy.md
 
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir.
   - **Gerekli**
-  - **İsteğe Bağlı**
+  - **İsteğe bağlı**
 
 - **Taramadan dışlanan klasörler**  
   **Ekle** ' yi seçin ve ardından tarama sırasında yoksayılacak klasörleri belirtin.

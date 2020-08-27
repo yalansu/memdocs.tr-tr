@@ -16,12 +16,12 @@ ms.assetid: 323f384d-8a76-4adc-999b-e508d641bfa1
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e8fdd0de8b276017a51c2fd464eef4b1d8505bc
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 82834dc3a7fc60292228acbd62c7c6a8b8a94ee3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82075396"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909797"
 ---
 # <a name="microsoft-intune-classic-groups-in-the-azure-portal"></a>Azure portalında klasik Microsoft Intune grupları
 
@@ -47,9 +47,9 @@ Intune gruplarının daha önce kullanıyor olabileceğiniz bazı özellikleri A
 ## <a name="how-to-get-started"></a>Nereden başlayacaksınız?
 
 - Azure AD güvenlik grupları ve nasıl çalıştıkları hakkında bilgi edinmek için aşağıdaki konuları okuyun:
-  - [Azure Active Directory gruplarıyla kaynaklara erişimi yönetme](https://azure.microsoft.com/documentation/articles/active-directory-manage-groups/).
-  - [Azure Active Directory grupları yönetme](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-manage-groups/).
-  - [Gelişmiş kurallar oluşturmak için öznitelikleri kullanma](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/).
+  - [Azure Active Directory gruplarıyla kaynaklara erişimi yönetme](/azure/active-directory/fundamentals/active-directory-manage-groups).
+  - [Azure Active Directory grupları yönetme](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+  - [Gelişmiş kurallar oluşturmak için öznitelikleri kullanma](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 - Grup oluşturması gereken yöneticilerin **Intune Hizmet Yöneticisi** Azure AD rolüne eklenmesini sağlayın. Azure AD Hizmet Yöneticisi rolü, **Grubu Yönet** izinlerine sahip değildir.
 - Intune gruplarınız **Belirli üyeleri dışla** seçeneğini kullandıysa, bu grupları dışlamalar olmadan yeniden tasarlama ya da iş gereksinimlerini karşılamak için gelişmiş kurallar kullanma arasında karar verin.
 

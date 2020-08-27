@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdf4fb6499299cd09fcac5673e252dd064120620
-ms.sourcegitcommit: 9a700a72735f9a316bdb51c44f86f9cc3bfb7be2
+ms.openlocfilehash: a447112bc721a87283210ca560b5d6bdbd38d26e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764263"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88912364"
 ---
 # <a name="microsoft-intune-licensing"></a>Microsoft Intune lisanslama
 Microsoft Intune, okullara ve küçük işletmelere yönelik kullanımı kolay yönetim deneyiminden, kurumsal müşterilere gereken daha gelişmiş işlevlere kadar farklı müşteri ihtiyaçları ve kuruluş boyutları için kullanılabilir. Microsoft Intune içeren çoğu lisans, abonelik etkin kaldığı sürece Microsoft uç noktası Configuration Manager kullanma haklarını da verir. Intune 'U yönetmek için yöneticiye atanmış bir lisans olmalıdır.
@@ -48,7 +48,7 @@ Eğitim için Intune aşağıdaki lisanslara dahildir:
 ## <a name="additional-information"></a>Ek bilgiler
 - Microsoft Intune bir Kullanıcı ve cihaz aboneliği, yukarıda listelenen paketler için tek başına olarak kullanılabilir.
 - Yalnızca Microsoft Intune cihaz aboneliği, Kullanıcı tabanlı güvenlik ve yönetim özellikleri gerektirmeyen kiosks, adanmış cihazlar, telefon odası cihazları, IoT ve diğer tek kullanım cihazlarını yönetmek için kullanılabilir.
-- Bir [MICROSOFT API](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use)üzerinden Microsoft Intune hizmetine erişim de dahil olmak üzere, bir kullanıcı veya cihazın Microsoft Intune hizmetten doğrudan veya dolaylı olarak avantajları durumunda uygun Microsoft Intune lisansı gerekir.
+- Bir [MICROSOFT API](/legal/microsoft-apis/terms-of-use)üzerinden Microsoft Intune hizmetine erişim de dahil olmak üzere, bir kullanıcı veya cihazın Microsoft Intune hizmetten doğrudan veya dolaylı olarak avantajları durumunda uygun Microsoft Intune lisansı gerekir.
 - Intune, önceki tablolarda olmayan lisanslara dahil değildir.
 
 Ürün sürümleri, ürün lisanslama güncelleştirmeleri, toplu lisanslama planları ve belirli kullanım durumlarınızla ilgili diğer bilgilerle ilgili en son bilgiler için [Microsoft lisanslama](https://www.microsoft.com/licensing/default) sayfasını ziyaret edin.  

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 572519d8ddf3558f1573f26b84fd6217108a24b3
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 97bdbdfa43ca8aae1de6a74f3a9f3be82c855bf0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988002"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909814"
 ---
 # <a name="configure-a-custom-domain-name"></a>Özel bir etki alanı adı yapılandırma
 
@@ -32,10 +32,10 @@ Kuruluşunuz, Microsoft’un Intune gibi bulut tabanlı bir hizmete kaydolduğun
 
 Kullanıcı hesapları oluşturmadan veya şirket içi Active Directory'nizden eşitlemeden önce, yalnızca .onmicrosoft.com etki alanı adını kullanmaya veya bir veya daha fazla özel etki alanı eklemeye karar vermenizi önemle öneririz. Kullanıcı yönetimini kolaylaştırmak için kullanıcı eklemeden önce özel bir etki alanı ayarlayın. Bir müşteri etki alanı ayarlamak, kullanıcıların diğer etki alanı kaynaklarına erişmek için kullandıkları kimlik bilgileriyle oturum açmalarına olanak tanır.
 
-Microsoft'un sunduğu bulut tabanlı bir hizmete abone olduğunuzda, sizin hizmet örneğiniz bulut tabanlı hizmetiniz için kimlik ve dizin hizmetleri sağlayan bir Microsoft [Azure AD kiracısı](https://technet.microsoft.com/library/jj573650.aspx#BKMK_WhatIsAnAzureADTenant) olur. Ayrıca, kuruluşunuzun özel etki alanını kullanmak için Intune’u yapılandırma görevleri diğer Azure AD kiracılarıyla aynı olduğunda, [Etki alanınızı ekleme](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/) konu başlığı altında bulunan bilgi ve yordamları kullanabilirsiniz.
+Microsoft'un sunduğu bulut tabanlı bir hizmete abone olduğunuzda, sizin hizmet örneğiniz bulut tabanlı hizmetiniz için kimlik ve dizin hizmetleri sağlayan bir Microsoft [Azure AD kiracısı](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant) olur. Ayrıca, kuruluşunuzun özel etki alanını kullanmak için Intune’u yapılandırma görevleri diğer Azure AD kiracılarıyla aynı olduğunda, [Etki alanınızı ekleme](/azure/active-directory/fundamentals/add-custom-domain) konu başlığı altında bulunan bilgi ve yordamları kullanabilirsiniz.
 
 > [!TIP]
-> Özel etki alanları hakkında daha fazla bilgi için bkz. [Azure Active Directory’de özel etki alanlarına kavramsal bir genel bakış](https://azure.microsoft.com/documentation/articles/active-directory-add-domain-concepts/).
+> Özel etki alanları hakkında daha fazla bilgi için bkz. [Azure Active Directory’de özel etki alanlarına kavramsal bir genel bakış](/azure/active-directory/users-groups-roles/domains-manage).
 
 onmicrosoft.com ilk etki alanı adını yeniden adlandıramaz veya kaldıramazsınız. İş kimliğinizi açık tutmak için Intune ile kullanılan özel etki alanı adlarını ekleyebilir, doğrulayabilirsiniz veya kaldırabilirsiniz.
 
@@ -52,7 +52,7 @@ onmicrosoft.com ilk etki alanı adını yeniden adlandıramaz veya kaldıramazs�
     - **Register.com kullanıcıları**: TXT kaydını oluşturmak için [adım adım yönergeleri](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) izleyin.
 5. [Intune kayıtları için ek DNS kayıtları oluşturmanız](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium)gerekebilir.
 
-Özel bir etki alanı ekleme ve doğrulama adımları ayrıca [Azure Active Directory'de gerçekleştirilebilir](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).
+Özel bir etki alanı ekleme ve doğrulama adımları ayrıca [Azure Active Directory'de gerçekleştirilebilir](/azure/active-directory/fundamentals/add-custom-domain).
 
 [Office 365'te, ilk onmicrosoft.com etki alanınız hakkında](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A) daha fazla bilgi edinebilirsiniz
 

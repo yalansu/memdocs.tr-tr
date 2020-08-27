@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b60d37c4da0b706dc109b5800b362d448224f116
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: a8480ec3f7d83ad5819e21ad34b9dfbc67f38999
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410982"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907349"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Yönetilen iOS/ıpados cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -227,7 +227,7 @@ Bir yapılandırma ilkesi atandıktan sonra, yönetilen her cihaz için iOS/ıpa
 
 ## <a name="additional-information"></a>Ek bilgiler
 
-- [İOS için Outlook 'U/ıpados ve Android uygulama yapılandırma ayarlarını dağıtma](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [İOS için Outlook 'U/ıpados ve Android uygulama yapılandırma ayarlarını dağıtma](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

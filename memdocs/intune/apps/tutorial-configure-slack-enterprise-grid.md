@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98ab8fd069b0542a29f61d9b0f5b69d7b82a8a1c
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5daf488d878881c35db689fae0279c0312eb4c6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074784"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915798"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Öğretici: EMM ve uygulama yapılandırması için Intune 'U kullanmak üzere bolluk yapılandırma
 
@@ -45,7 +45,7 @@ Bu öğretici için aşağıdaki abonelik sahip bir test kiracısına ihtiyacın
 Ayrıca, bir [bolluk kurumsal kılavuz](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) planına de ihtiyacınız vardır.
 
 ## <a name="configure-your-slack-enterprise-grid-plan"></a>Bolluk kurumsal kılavuz planınızı yapılandırın
-[Bolluk yönergelerini](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) Izleyerek bolluk kurumsal kılavuz PLANıNıZ için EMM 'yi açın ve kılavuz planınızın kimlik sağlayıcısı (IDP) olarak [Azure Active Directory bağlayın](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) .
+[Bolluk yönergelerini](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) Izleyerek bolluk kurumsal kılavuz PLANıNıZ için EMM 'yi açın ve kılavuz planınızın kimlik sağlayıcısı (IDP) olarak [Azure Active Directory bağlayın](/azure/active-directory/saas-apps/slack-tutorial) .
 
 ## <a name="sign-in-to-intune"></a>Intune'da oturum açma
 [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) genel yönetici veya Intune Hizmet Yöneticisi olarak oturum açın. Intune Deneme aboneliği oluşturduysanız aboneliği oluşturduğunuz hesap Genel yönetici rolüne sahip olur.
@@ -55,7 +55,7 @@ Kuruluşunuz için iOS/ıpados uygulaması bolluğu ' nı Intune kiracınıza ek
 
 ### <a name="add-slack-for-emm-to-intune"></a>Intune 'a EMM için bolluk ekleme
 Intune 'da bir yönetilen iOS/ıpados uygulaması olarak EMM için bolluk ekleyin ve bolluk kullanıcılarınızı atayın. Uygulamalar platforma özgüdür, bu nedenle Android cihazlarda bolluk kullanıcılarınız için ayrı bir Intune uygulaması eklemeniz gerekir.
-1. Yönetim merkezinde, **uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+1. Yönetim merkezinde, **uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 2. **Uygulama türü**altında **iOS** Mağazası uygulamasını seçin.
 3. **App Store’da Ara**’yı seçin. "EMM için bolluk" arama terimini girin ve uygulamayı seçin. **App Store 'Da ara** bölmesinde **Seç** ' e tıklayın.
 4. **Uygulama bilgileri** ' ni seçin ve tüm değişiklikleri uygun gördüğünüz şekilde yapılandırın. Uygulama bilgilerinizi ayarlamak için **Tamam ' ı** seçin.
@@ -70,7 +70,7 @@ Intune 'da bir yönetilen iOS/ıpados uygulaması olarak EMM için bolluk ekleyi
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>EMM için bolluk için bir uygulama yapılandırma ilkesi ekleyin
 EMM iOS/ıpados için bolluk için bir uygulama yapılandırma ilkesi ekleyin. Yönetilen cihazlar için uygulama yapılandırma ilkeleri platforma özgüdür. bu nedenle, Android cihazlarda bolluk kullanıcılarınıza ayrı bir ilke eklemeniz gerekir.
-1. Yönetim merkezinde, **uygulamalar** > **uygulama yapılandırma ilkeleri** > **Add** > **yönetilen cihazlar**Ekle ' yi seçin.
+1. Yönetim merkezinde, **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Add**  >  **yönetilen cihazlar**Ekle ' yi seçin.
 2. Ad alanına ' bolluk uygulama yapılandırma ilkesi test ' girin.
 3. Cihaz kayıt türü ' nün altında, **yönetilen cihazların** ayarlandığını onaylayın.
 4. Platform altında **iOS**' u seçin.
@@ -85,7 +85,7 @@ EMM iOS/ıpados için bolluk için bir uygulama yapılandırma ilkesi ekleyin. Y
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>Seçim İOS cihaz uyumluluk ilkesi oluşturma
 Bir cihazın uyumlu sayılması için karşılaması gereken şartları ayarlamak için bir Intune cihaz uyumluluk ilkesi ayarlayın. Bu öğreticide iOS/ıpados cihazları için bir cihaz uyumluluk ilkesi oluşturacağız. Uyumluluk ilkeleri platforma özgüdür, bu nedenle Android cihazlarda bolluk kullanıcılarınız için ayrı bir ilke oluşturmanız gerekir.
-1. Yönetim merkezinde **cihaz uyumluluk** > **ilkeleri** > **ilke oluştur**' u seçin.
+1. Yönetim merkezinde **cihaz uyumluluk**  >  **ilkeleri**  >  **ilke oluştur**' u seçin.
 2. Ad alanına "iOS uyumluluk ilkesi sınaması" yazın.
 3. Açıklama ' da "iOS uyumluluk ilkesi sınaması" yazın.
 4. Platform altında **iOS**' u seçin.
@@ -99,14 +99,14 @@ Bir cihazın uyumlu sayılması için karşılaması gereken şartları ayarlama
     - Parola zaman aşımı (gün) için 41 değerini girin.
     - Yeniden kullanımı önlemek için önceki parola sayısı için 5 değerini girin.
 7. **Tamam**' a tıklayın ve ardından yeniden **Tamam** ' ı seçin.
-8. **Oluştur**' a tıklayın.
+8. **Oluştur**’a tıklayın.
 
 ## <a name="set-up-slack-on-android-work-profile-devices"></a>Android iş profili cihazlarında bolluk ayarlama
 , Kuruluşların Android kullanıcılarına bir EMM sağlayıcısı olarak Intune ile bolluk erişimi sağlamak için Google Play, bir uygulama yapılandırma ilkesi oluşturun ve bu uygulamaları Intune kiracınıza ekleyin.
 
 ### <a name="add-slack-to-intune"></a>Intune 'a bolluk ekleme
 Intune 'da bir yönetilen Google Play uygulaması olarak bolluk ekleyin ve bolluk kullanıcılarınızı atayın. Uygulamalar platforma özgüdür, bu nedenle iOS/ıpados cihazlarındaki bolluk kullanıcılarınıza ayrı bir Intune uygulaması eklemeniz gerekir.
-1. Intune 'da, **uygulamalar** > **tüm uygulamalar** > **Ekle**' yi seçin.
+1. Intune 'da, **uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 2. Uygulama türü altında **Mağaza uygulaması – yönetilen Google Play**seçin.
 3. **Yönetilen Google Play-Onayla**' yı seçin. "EMM için bolluk" arama terimini girin ve uygulamayı seçin.
 4. **Onayla**seçeneğini belirleyin.
@@ -121,7 +121,7 @@ Intune 'da bir yönetilen Google Play uygulaması olarak bolluk ekleyin ve bollu
 
 ### <a name="add-an-app-configuration-policy-for-slack"></a>Bolluk için bir uygulama yapılandırma ilkesi ekleyin
 Bolluk için bir uygulama yapılandırma ilkesi ekleyin. Yönetilen cihazlar için uygulama yapılandırma ilkeleri platforma özgüdür, bu nedenle iOS/ıpados cihazlarındaki bolluk kullanıcılarınıza ayrı bir ilke eklemeniz gerekir.
-1. Intune 'da **uygulamalar** > **uygulama yapılandırma ilkeleri** > **Ekle**' yi seçin.
+1. Intune 'da **uygulamalar**  >  **uygulama yapılandırma ilkeleri**  >  **Ekle**' yi seçin.
 2. Ad alanına bolluk uygulama yapılandırma ilkesi testi girin.
 3. Cihaz kayıt türü ' nün altında, **yönetilen cihazlar**' ı seçin.
 4. Platform altında **Android**' i seçin.
@@ -137,7 +137,7 @@ Bolluk için bir uygulama yapılandırma ilkesi ekleyin. Yönetilen cihazlar iç
 
 ### <a name="optional-create-an-android-device-compliance-policy"></a>Seçim Android cihaz uyumluluk ilkesi oluşturma
 Bir cihazın uyumlu sayılması için karşılaması gereken şartları ayarlamak için bir Intune cihaz uyumluluk ilkesi ayarlayın. Bu öğreticide, Android cihazlar için bir cihaz uyumluluk ilkesi oluşturacağız. Uyumluluk ilkeleri platforma özgüdür, bu nedenle iOS/ıpados cihazlarında bolluk kullanıcılarınıza ayrı bir ilke oluşturmanız gerekir.
-1. Intune 'da **cihaz uyumluluk** > **ilkeleri** > **ilke oluştur**' u seçin.
+1. Intune 'da **cihaz uyumluluk**  >  **ilkeleri**  >  **ilke oluştur**' u seçin.
 2. Ad alanına "Android uyumluluk ilkesi sınaması" yazın.
 3. Açıklama ' da "Android uyumluluk ilkesi sınaması" yazın.
 4. Platform altında **Android kurumsal**' i seçin.
@@ -151,7 +151,7 @@ Bir cihazın uyumlu sayılması için karşılaması gereken şartları ayarlama
     - Parola zaman aşımı (gün) için 41 değerini girin.
     - Yeniden kullanımı önlemek için önceki parola sayısı için 5 değerini girin.
 8. **Tamam**' a ve ardından yeniden **Tamam** ' a tıklayın.
-9. **Oluştur**' a tıklayın.
+9. **Oluştur**’a tıklayın.
 
 ## <a name="launch-slack"></a>Başlatma bolluğu
 

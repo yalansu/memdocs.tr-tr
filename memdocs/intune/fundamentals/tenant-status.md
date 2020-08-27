@@ -16,19 +16,19 @@ ms.reviewer: crisk
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4d747a38dd8e2f95cafb25ec5705f83199f4c54
-ms.sourcegitcommit: 5dc3545d7f76ce81598f6b1c9734b0ac0a3e9722
+ms.openlocfilehash: cd4c64e08177387561323b1e59bef3b976bf0bf3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83690683"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911191"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Intune kiracı durumu sayfasını kullanın
 
 Microsoft Intune kiracı durumu sayfası, kiracınız hakkındaki güncel ve önemli ayrıntıları görüntüleyebileceğiniz merkezi bir merkezdir. Ayrıntılar lisans kullanılabilirliği ve kullanımı, bağlayıcı durumu ve Intune hizmeti hakkındaki önemli iletişimleri içerir.
 
 > [!TIP]
-> Kiracı, Azure Active Directory (Azure AD) örneğidir. Intune aboneliğiniz bir Azure AD kiracısı tarafından barındırılır. Daha fazla bilgi için bkz. Azure AD belgelerinde [kiracı ayarlama](https://docs.microsoft.com/azure/active-directory/develop/quickstart-create-new-tenant) .
+> Kiracı, Azure Active Directory (Azure AD) örneğidir. Intune aboneliğiniz bir Azure AD kiracısı tarafından barındırılır. Daha fazla bilgi için bkz. Azure AD belgelerinde [kiracı ayarlama](/azure/active-directory/develop/quickstart-create-new-tenant) .
 
 Panoyu görüntülemek için [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) oturum açın **Kiracı Yönetimi**' ne gidin ve ardından **kiracı durumu**' nu seçin.
 

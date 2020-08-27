@@ -2,7 +2,7 @@
 title: LAN 'da uyandırma 'yı yapılandırma
 titleSuffix: Configuration Manager
 description: Configuration Manager LAN'da Uyandırma ayarları ' nı seçin.
-ms.date: 08/11/2020
+ms.date: 08/26/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: dcf6005d0364106df8717a1151dbad617e455ff9
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 33283b13bc28c7d102f014ac3cb4048681343ac2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127044"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907856"
 ---
 # <a name="how-to-configure-wake-on-lan-in-configuration-manager"></a>Configuration Manager 'da LAN 'da uyandırma 'yı yapılandırma
 
@@ -23,11 +23,11 @@ ms.locfileid: "88127044"
 
 Bilgisayarları uyku durumundan çıkarmak istediğinizde Configuration Manager için LAN 'da uyandırma ayarlarını belirtin.
 
-## <a name="wake-on-lan-starting-in-version-1810"></a><a name="bkmk_wol-1810"></a>Sürüm 1810 ' den başlayarak LAN 'da uyandırma
+## <a name="wake-on-lan-starting-in-version-1810"></a><a name="bkmk_wol-1810"></a> Sürüm 1810 ' den başlayarak LAN 'da uyandırma
 <!--3607710-->
 Configuration Manager 1810 ' den başlayarak, Uyuyan makineleri uyandırmaya yönelik yeni bir yol vardır. İstemci, site sunucusuyla aynı alt ağda olmasa bile Configuration Manager konsolundan istemcileri uyandırabilirsiniz. Bakım veya sorgu cihazları yapmanız gerekiyorsa, uykuda olan uzak istemcilerle sınırlı değilsiniz. Site sunucusu aynı uzak alt ağda açık olan diğer istemcileri tanımlamak için istemci bildirim kanalını kullanır ve ardından bu istemcileri LAN 'da uyandırma isteği (Sihirli paket) gönderecek şekilde kullanır. İstemci bildirim kanalının kullanılması, MAC flakandan kaçınmaya yardımcı olur ve bu da bağlantı noktasının yönlendirici tarafından kapatılmasını sağlayabilir. LAN 'da uyandırma 'nın yeni sürümü, [eski sürümle](#bkmk_wol-previous)aynı anda etkinleştirilebilir.
 
-### <a name="limitations"></a>Sınırlamalar
+### <a name="prerequisites-and-limitations"></a>Önkoşullar ve sınırlamalar
 <!--7323898, 7363492-->
 - Hedef alt ağdaki en az bir istemci uyanık olmalıdır.
 - Bu özellik aşağıdaki ağ teknolojilerini desteklemez:
@@ -38,6 +38,8 @@ Configuration Manager 1810 ' den başlayarak, Uyuyan makineleri uyandırmaya yö
 - Makineler yalnızca **uyandırma** istemci bildirimi aracılığıyla onlara bildirimde bulunduğunda uyanma yapılır.
     - Son Tarih gerçekleştiğinde Uyandırma için LAN 'da uyandırma 'nın eski sürümü kullanılır.
     -  Eski sürüm etkinleştirilmemişse, istemci uyandırma ayarları, **Gerekli dağıtımlar için istemcileri uyandırma** veya **uyandırma PAKETLERI göndermek**için LAN 'da uyandırma 'yı kullanır.  
+- DHCP kira süreleri sonsuz olarak ayarlanamaz. <!--8018584-->
+   - SleepAgent_ &lt; *etki alanının* \> @SYSTEM_0.log çok büyük ve muhtemelen DHCP kiralamaları sonsuz olarak ayarlandığı ortamlarda bir yayın fırtınası olduğunu görebilirsiniz.  
 
 ### <a name="security-role-permissions"></a>Güvenlik rolü izinleri
 
@@ -82,7 +84,7 @@ LAN 'da uyandırma 'nın her iki sürümü de etkinse, **uyandırma** istemci bi
 Sürüm 1902 ' den başlayarak, **uyandırma** istemci bildirimi, mevcut **LAN'da Uyandırma bağlantı noktası numarası (UDP)** ayarını geliştirir.
 
 
-## <a name="wake-on-lan-for-version-1806-and-earlier"></a><a name="bkmk_wol-previous"></a>Sürüm 1806 ve önceki sürümlerde LAN 'da uyandırma
+## <a name="wake-on-lan-for-version-1806-and-earlier"></a><a name="bkmk_wol-previous"></a>  Sürüm 1806 ve önceki sürümlerde LAN 'da uyandırma
 
 Yazılım güncelleştirmeleri, uygulamalar, görev dizileri ve programlar gibi gerekli yazılımları yüklemek için bilgisayarları uyku durumundan çıkarmak istediğinizde Configuration Manager için LAN 'da uyandırma ayarlarını belirtin.
 

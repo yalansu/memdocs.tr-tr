@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5d673c5688c4ab4f3219256412a098855af63ec
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: a82eb416021e86347818c333e74f31318b0661ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461888"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908675"
 ---
 # <a name="what-is-device-enrollment-in-intune"></a>Intune 'da cihaz kaydı nedir?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -40,8 +40,8 @@ Varsayılan olarak tüm platform cihazları Intune'a kaydedilebilir. Ancak [ciha
 | | Kayıt sırasında cihazlar silinir. | Her bir cihazı bir kullanıcıyla ilişkilendirir.| Yanıt Evet ise, kullanıcılar cihazların kaydını geri kaydedemez. | |
 |**[KCG](#bring-your-own-device)** | Hayır| Evet | Hayır | [Daha fazla bilgi](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| Hayır |Hayır |Hayır | [Daha fazla bilgi](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Yes | İsteğe Bağlı | İsteğe Bağlı|[Daha fazla bilgi](device-enrollment-program-enroll-ios.md)|
-|**[USB-SA](#usb-sa)**| Yes | İsteğe Bağlı | Hayır| [Daha fazla bilgi](apple-configurator-enroll-ios.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Evet | İsteğe Bağlı | İsteğe Bağlı|[Daha fazla bilgi](device-enrollment-program-enroll-ios.md)|
+|**[USB-SA](#usb-sa)**| Evet | İsteğe Bağlı | Hayır| [Daha fazla bilgi](apple-configurator-enroll-ios.md)|
 |**[USB-Direct](#usb-direct)**| Hayır | Hayır | Hayır|[Daha fazla bilgi](apple-configurator-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>macOS kayıt yöntemleri
@@ -50,7 +50,7 @@ Varsayılan olarak tüm platform cihazları Intune'a kaydedilebilir. Ancak [ciha
 |:---:|:---:|:---:|:---:|:---:|
 |**[KCG](#bring-your-own-device)** | Hayır| Evet | Hayır | [Daha fazla bilgi](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Hayır |Hayır |Hayır  | [Daha fazla bilgi](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Yes | İsteğe Bağlı | İsteğe Bağlı|[Daha fazla bilgi](device-enrollment-program-enroll-macos.md)|
+|**[ADE](#apple-automated-device-enrollment)**| Evet | İsteğe Bağlı | İsteğe Bağlı|[Daha fazla bilgi](device-enrollment-program-enroll-macos.md)|
 
 ## <a name="windows-enrollment-methods"></a>Windows kayıt yöntemleri
 
@@ -59,16 +59,16 @@ Varsayılan olarak tüm platform cihazları Intune'a kaydedilebilir. Ancak [ciha
 |**[KCG](#bring-your-own-device)** | Hayır | Evet | Hayır | [Daha fazla bilgi](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Hayır |Hayır |Hayır |[Daha fazla bilgi](device-enrollment-manager-enroll.md)|
 |**Otomatik kayıt** | Hayır |Evet |Hayır | [Daha fazla bilgi](windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Autopilot** |Yes |Yes |Hayır | [Daha fazla bilgi](enrollment-autopilot.md)
+|**Otomatik Pilot** |Evet |Evet |Hayır | [Daha fazla bilgi](../../autopilot/enrollment-autopilot.md)
 |**Toplu kayıt** |Hayır |Hayır |Hayır | [Daha fazla bilgi](windows-bulk-enroll.md) |
-|**Ortak yönetim** |Hayır |Evet |Hayır | [Daha fazla bilgi](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |Hayır |Evet |Hayır | [Daha fazla bilgi](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+|**Ortak yönetim** |Hayır |Evet |Hayır | [Daha fazla bilgi](/configmgr/core/clients/manage/co-management-overview)
+|**GPO** |Hayır |Evet |Hayır | [Daha fazla bilgi](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Android kayıt yöntemleri
 
 | **Kişisel** | **Kayıt Yöntemleri** | **Sıfırlama Gerekli** | **Kullanıcı Benzeşimi** | **Kilitli** | **Ayrıntılar**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**Android Cihaz Yöneticisi**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı** | Hayır | Evet | Hayır | [Daha fazla bilgi](https://docs.microsoft.com/mem/intune/user-help/enroll-device-android-company-portal)|
+|**Android Cihaz Yöneticisi**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı** | Hayır | Evet | Hayır | [Daha fazla bilgi](../user-help/enroll-device-android-company-portal.md)|
 |**Android kurumsal Iş profili**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı**| Hayır | Evet | Hayır | [Daha fazla bilgi](android-work-profile-enroll.md)|
 
 
@@ -80,8 +80,8 @@ Varsayılan olarak tüm platform cihazları Intune'a kaydedilebilir. Ancak [ciha
 |**Android Cihaz Yöneticisi**|**(Önceden tanımlanmış ıMEı veya SN) Şirket Portalı aracılığıyla başlatılan Kullanıcı**| Hayır | Evet | Hayır | [Daha fazla bilgi](corporate-identifiers-add.md)|
 |**Zeköşeli Mobility uzantılarına sahip Android Cihaz Yöneticisi**|**Şirket Portalı aracılığıyla başlatılan Kullanıcı veya [dem](#device-enrollment-manager)**| Hayır | Kullanıcı başlatılmışsa Evet, [dem](#device-enrollment-manager) başlatılmışsa Hayır | Hayır | [Daha fazla bilgi](../configuration/android-zebra-mx-overview.md)|
 |**Android kurumsal adanmış**|**NFC, Token, QR kodu, sıfır Touch**| Evet | Hayır | İlke aracılığıyla yapılandırılabilir | [Daha fazla bilgi](android-kiosk-enroll.md)|
-|**Android kurumsal tam yönetilen**|**NFC, Token, QR kodu, sıfır Touch**| Yes | Yes | İlke aracılığıyla yapılandırılabilir | [Daha fazla bilgi](android-dedicated-devices-fully-managed-enroll.md)|
-|**Android kurumsal şirkete ait Iş profili** | **NFC, Token, QR kodu, sıfır Touch** | Yes | Yes | İlke aracılığıyla yapılandırılabilir | [Daha fazla bilgi](android-corporate-owned-work-profile-enroll.md)|
+|**Android kurumsal tam yönetilen**|**NFC, Token, QR kodu, sıfır Touch**| Evet | Evet | İlke aracılığıyla yapılandırılabilir | [Daha fazla bilgi](android-dedicated-devices-fully-managed-enroll.md)|
+|**Android kurumsal şirkete ait Iş profili** | **NFC, Token, QR kodu, sıfır Touch** | Evet | Evet | İlke aracılığıyla yapılandırılabilir | [Daha fazla bilgi](android-corporate-owned-work-profile-enroll.md)|
 
 ## <a name="bring-your-own-device"></a>Kendi cihazını getir
 Kendi cihazlarınızı getir (KCG), kişisel telefonlar, tabletleri ve bilgisayarları içerir. Kullanıcılar, KCG’leri kaydetmek için Şirket Portalı uygulamasını yükleyip çalıştırır. Bu program, kullanıcıların e-posta gibi şirket kaynaklarına erişmesini sağlar.

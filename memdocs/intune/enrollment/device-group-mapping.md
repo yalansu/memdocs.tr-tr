@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 761e668ae2c774bb52dbe6971d343d60b3e95516
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: e6dae19e466d3d0e88ae07d1c82a63b098439632
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986095"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88908624"
 ---
 # <a name="categorize-devices-into-groups"></a>Cihazları gruplar halinde kategorilere ayırma
 
@@ -35,7 +35,7 @@ Cihaz kategorileri aşağıdaki iş akışını kullanır:
 2. İOS/ıpados ve Android cihazlarının kullanıcıları bir cihazı kaydettiğinde, yapılandırdığınız kategori listesinden bir kategori seçmesi gerekir. Bir Windows cihaza kategori atamak için kullanıcıların Şirket Portalı web sitesini kullanmaları gerekir.
 3. Ardından bu gruplara ilkeler ve uygulamalar dağıtabilirsiniz.
 
-İstediğiniz herhangi bir cihaz kategorisini oluşturabilirsiniz. Örneğin:
+İstediğiniz herhangi bir cihaz kategorisini oluşturabilirsiniz. Örnek:
 - Satış noktası cihazı
 - Tanıtım cihazı
 - Sales
@@ -55,7 +55,7 @@ Cihaz kategorileri aşağıdaki iş akışını kullanır:
 ### <a name="step-2-create-azure-active-directory-security-groups"></a>2. Adım: Active Directory güvenlik grupları oluşturma
 Bu adımda, Azure portalında cihaz kategorisi ve cihaz kategorisi adına dayalı dinamik gruplar oluşturacaksınız.
 
-Devam etmek için Azure AD belgelerindeki [Gelişmiş kurallar oluşturmak için öznitelikleri kullanma](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) konusuna bakın.
+Devam etmek için Azure AD belgelerindeki [Gelişmiş kurallar oluşturmak için öznitelikleri kullanma](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) konusuna bakın.
 
 **deviceCategory** özniteliğini kullanarak gelişmiş bir kural ile bir cihaz grubu oluşturmak için bu bölümdeki bilgilerden yararlanın. Örneğin (**device.deviceCategory -eq** “*Azure portalından aldığınız cihaz kategorisi adı*”.
 

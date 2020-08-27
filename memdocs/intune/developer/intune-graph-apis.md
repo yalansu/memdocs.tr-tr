@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 541c607bebb57b1ee23df1af3ab80d29cdd0c6fc
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: 720328ebe260c967bef4a879bd0ee33ae2f332a0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866137"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915696"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Microsoft Graph’ta Intune API’lerine erişmek için Azure AD kullanma
 
@@ -53,9 +53,9 @@ Bu makalede:
 
 Daha fazla bilgi için bkz:
 
-- [OAuth 2.0 ve Azure Active Directory kullanarak web uygulamalarına erişim yetkisi verme](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [OAuth 2.0 ve Azure Active Directory kullanarak web uygulamalarına erişim yetkisi verme](/azure/active-directory/develop/active-directory-protocols-oauth-code)
 - [Azure AD kimlik doğrulamasına başlarken](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
-- [Uygulamaları Azure Active Directory ile tümleştirme](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)
+- [Uygulamaları Azure Active Directory ile tümleştirme](/azure/active-directory/develop/active-directory-integrating-applications)
 - [OAuth 2.0’ı anlama](https://oauth.net/2/)
 
 ## <a name="register-apps-to-use-the-microsoft-graph-api"></a>Uygulamaları Microsoft Graph API kullanmak üzere kaydetme
@@ -80,7 +80,7 @@ Uygulamaları Microsoft Graph API kullanmak üzere kaydetmek için:
 
     2. **Uygulama türü** ve **Yeniden yönlendirme URI'si** değerleri.
 
-        Bunlar, gereksinimlerinize göre farklılık gösterir. Örneğin, Azure AD [Kimlik Doğrulama Kitaplığı](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) kullanıyorsanız **Uygulama Türü**’nü `Native` ve **Yeniden Yönlendirme URI'sini**`urn:ietf:wg:oauth:2.0:oob` olarak ayarlayın.
+        Bunlar, gereksinimlerinize göre farklılık gösterir. Örneğin, Azure AD [Kimlik Doğrulama Kitaplığı](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) kullanıyorsanız **Uygulama Türü**’nü `Native` ve **Yeniden Yönlendirme URI'sini**`urn:ietf:wg:oauth:2.0:oob` olarak ayarlayın.
 
         > [!NOTE]
         > Azure Active Directory (Azure AD) kimlik doğrulama kitaplığı (ADAL) ve Azure AD Graph API kullanım dışı bırakılacak. Daha fazla bilgi için bkz. [Microsoft kimlik doğrulama kitaplığı 'nı (msal) ve Microsoft Graph API 'sini kullanacak şekilde uygulamalarınızı güncelleştirme](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
@@ -88,7 +88,7 @@ Uygulamaları Microsoft Graph API kullanmak üzere kaydetmek için:
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        Daha fazla bilgi için bkz. [Azure AD İçin Kimlik Doğrulama Senaryoları](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
+        Daha fazla bilgi için bkz. [Azure AD İçin Kimlik Doğrulama Senaryoları](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 5. Uygulama dikey penceresinden:
 
@@ -106,7 +106,7 @@ Uygulamaları Microsoft Graph API kullanmak üzere kaydetmek için:
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
-    İlgili adların soluna onay işareti koyarak uygulamanız için gereken rolleri seçin.  Belirli Intune izin kapsamları hakkında bilgi edinmek için bkz. [Intune izin kapsamları](#intune-permission-scopes).  Diğer Graph API'si izin kapsamları hakkında bilgi edinmek için bkz. [Microsoft Graph izinleri başvurusu](https://developer.microsoft.com/graph/docs/concepts/permissions_reference).
+    İlgili adların soluna onay işareti koyarak uygulamanız için gereken rolleri seçin.  Belirli Intune izin kapsamları hakkında bilgi edinmek için bkz. [Intune izin kapsamları](#intune-permission-scopes).  Diğer Graph API'si izin kapsamları hakkında bilgi edinmek için bkz. [Microsoft Graph izinleri başvurusu](/graph/permissions-reference).
 
     En iyi sonuçlar için, uygulamanızı uygulamak için gereken en düşük rolü seçin.
 
@@ -141,8 +141,8 @@ Azure AD ve Microsoft Graph, kurumsal kaynaklara erişimi denetlemek için izin 
 İzin kapsamları (_OAuth kapsamları_ olarak da bilinir) belirli Intune varlıkları ve bunların özelliklerine erişimi denetler. Bu bölümde Intune API’si özellikleri için izin kapsamları özetlenir.
 
 Daha fazlasını öğrenin:
-- [Azure AD kimlik doğrulaması](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
-- [Uygulama izin kapsamları](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
+- [Azure AD kimlik doğrulaması](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [Uygulama izin kapsamları](/azure/active-directory/develop/active-directory-v2-scopes)
 
 Microsoft Graph’a izin verdiğinizde, Intune özelliklerine erişimi denetlemek için aşağıdaki kapsamları belirtebilirsiniz: Intune API’si izin kapsamları aşağıdaki tabloda özetlenmiştir.  İlk sütun özelliğin adını Azure portalında görüntülenen şekliyle gösterir ve ikinci sütun izin kapsam adını sağlar.
 

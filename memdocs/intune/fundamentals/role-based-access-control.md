@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cb4631b31d33e53b6ef172f142735d24a5c3cb6
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 0a0b1913b200c8316be98cc7df5de4b8d63d0d18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80220175"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911446"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Microsoft Intune ile rol tabanlı erişim denetimi (RBAC)
 
@@ -37,7 +37,7 @@ Intune RBAC hakkında öneri ve öneriler için, örnekleri ve izlenecek yollar�
 ## <a name="roles"></a>Roller
 Rol, bu role atanan kullanıcılara verilen izin kümesini tanımlar.
 Hem yerleşik hem de özel rolleri kullanabilirsiniz. Yerleşik roller bazı yaygın Intune senaryolarını kapsar. İhtiyaç duyduğunuz tam izinler kümesiyle [kendi özel rollerinizi oluşturabilirsiniz](create-custom-role.md) . Çeşitli Azure Active Directory rollerinin Intune izinleri vardır.
-Bir rolü görmek için, **Intune** > **rolleri** > **tüm roller** ' i seçin > bir rol seçin. Aşağıdaki sayfaları görürsünüz:
+Bir rolü görmek için, **Intune**  >  **rolleri**  >  **tüm roller** ' i seçin > bir rol seçin. Aşağıdaki sayfaları görürsünüz:
 
 - **Özellikler**: rolün adı, açıklaması, türü, atamaları ve kapsam etiketleri. 
 - **İzinler**: rolün hangi izinlere sahip olduğunu tanımlayan uzun bir geçiş kümesini listeler.
@@ -65,13 +65,13 @@ Daha fazla yapılandırma olmadan, gruplara yerleşik roller atayabilirsiniz. Ye
 | Koşullu Erişim Yöneticisi | Hiçbiri | Hiçbiri |
 | Güvenlik Yöneticisi | Salt okuma (uç nokta güvenlik düğümü için tam yönetim izinleri) | Salt okunur |
 | Güvenlik operatörü | Salt okunur | Salt okunur |
-| Güvenlik okuyucusu | Salt okunur | Salt okunur |
+| Güvenlik Okuyucusu | Salt okunur | Salt okunur |
 | Uyumluluk Yöneticisi | Hiçbiri | Salt okunur |
 | Uyumluluk verileri Yöneticisi | Hiçbiri | Salt okunur |
 | Genel okuyucu | Salt Okunur | Salt Okunur |
 
 > [!TIP]
-> Intune, Azure AD RBAC ile denetlenen üç Azure AD uzantısını da gösterir: **Kullanıcılar**, **gruplar**ve **koşullu erişim**. Bunlara ek olarak, **Kullanıcı Hesabı Yöneticisi** yalnızca AAD kullanıcısı/grubu etkinliklerini gerçekleştirir ve Intune'daki tüm etkinlikleri gerçekleştirme izinlerinin tümüne sahip değildir. Daha fazla bilgi için bkz. [Azure AD Ile RBAC](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
+> Intune, Azure AD RBAC ile denetlenen üç Azure AD uzantısını da gösterir: **Kullanıcılar**, **gruplar**ve **koşullu erişim**. Bunlara ek olarak, **Kullanıcı Hesabı Yöneticisi** yalnızca AAD kullanıcısı/grubu etkinliklerini gerçekleştirir ve Intune'daki tüm etkinlikleri gerçekleştirme izinlerinin tümüne sahip değildir. Daha fazla bilgi için bkz. [Azure AD Ile RBAC](/azure/active-directory/active-directory-assign-admin-roles).
 
 ## <a name="role-assignments"></a>Rol atamaları
 Rol ataması şunları tanımlar:
@@ -81,7 +81,7 @@ Rol ataması şunları tanımlar:
 - değiştirebilecekleri kaynaklar.
 
 Kullanıcılarınıza hem özel hem de yerleşik roller atayabilirsiniz. Bir Intune rolü atamak için kullanıcının bir Intune lisansı olması gerekir.
-Rol atamasını görmek için, **Intune** > **rolleri** > **tüm roller** ' i seçin > bir rol seçin > bir atama seçin. Aşağıdaki sayfaları görürsünüz:
+Rol atamasını görmek için, **Intune**  >  **rolleri**  >  **tüm roller** ' i seçin > bir rol seçin > bir atama seçin. Aşağıdaki sayfaları görürsünüz:
 
 - **Özellikler**: atamanın adı, açıklaması, rolü, üyeleri, kapsamları ve etiketleri.
 - **Üyeler**: listelenen Azure güvenlik gruplarındaki tüm kullanıcıların, kapsam (gruplar) bölümünde listelenen kullanıcıları/cihazları yönetme izni vardır.

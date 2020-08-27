@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4f98f0f1e60ff08e86dedb2dd34ac9f55157ac
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b3d422978fe6e2cbb123b87311e5c175483b9f66
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820400"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88916002"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Altyapıyı Intune ile SCEP destekleyecek şekilde yapılandırma
 
@@ -40,7 +40,7 @@ Devam etmeden önce, SCEP sertifika profillerini kullanacak cihazlara [bir *Güv
 
 Aşağıdaki şirket içi altyapının, Web uygulaması ara sunucusu dışında Active Directory etki alanına katılmış sunucularda çalışması gerekir.
 
-- **Sertifika yetkilisi** : Windows Server 2008 R2 Service Pack 1 veya üzeri bir Enterprise sürümünde çalışan bir Microsoft Active Directory Sertifika Hizmetleri kuruluş sertifika YETKILISINI (CA) kullanın. Kullandığınız Windows Server sürümü Microsoft tarafından desteklenen bir sürüm olmalıdır. Tek Başına CA desteklenmez. Daha fazla bilgi için bkz. [sertifika yetkilisini yüklemeyi](https://technet.microsoft.com/library/jj125375.aspx). CA 'nız Windows Server 2008 R2 SP1 çalıştırıyorsa, [DÜZELTMEYI KB2483564 adresinden yüklemelisiniz](https://support.microsoft.com/kb/2483564/).
+- **Sertifika yetkilisi** : Windows Server 2008 R2 Service Pack 1 veya üzeri bir Enterprise sürümünde çalışan bir Microsoft Active Directory Sertifika Hizmetleri kuruluş sertifika YETKILISINI (CA) kullanın. Kullandığınız Windows Server sürümü Microsoft tarafından desteklenen bir sürüm olmalıdır. Tek Başına CA desteklenmez. Daha fazla bilgi için bkz. [sertifika yetkilisini yüklemeyi](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj125375(v=ws.11)). CA 'nız Windows Server 2008 R2 SP1 çalıştırıyorsa, [DÜZELTMEYI KB2483564 adresinden yüklemelisiniz](https://support.microsoft.com/kb/2483564/).
 
 - **NDES sunucu rolü** – Windows Server 2012 R2 veya sonraki sürümlerde bir ağ cihazı kayıt HIZMETI (NDES) sunucu rolü yapılandırmanız gerekir. Bu makalenin sonraki bir bölümünde [NDES yükleme](#set-up-ndes)sırasında size kılavuzluk ederiz.
 
@@ -48,7 +48,7 @@ Aşağıdaki şirket içi altyapının, Web uygulaması ara sunucusu dışında 
   - Kurumsal CA 'yı barındıran sunucuda yüklü NDES 'yi kullanamazsınız.
   - Microsoft Intune sertifikası bağlayıcısını NDES 'yi barındıran sunucuya yüklersiniz.
 
-  NDES hakkında daha fazla bilgi edinmek için Windows Server belgelerindeki [ağ aygıtı kayıt hizmeti Kılavuzu](https://technet.microsoft.com/library/hh831498.aspx) ' na bakın ve [ağ cihazı kayıt hizmeti Ile bir ilke modülü](https://technet.microsoft.com/library/dn473016.aspx)kullanın.
+  NDES hakkında daha fazla bilgi edinmek için Windows Server belgelerindeki [ağ aygıtı kayıt hizmeti Kılavuzu](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) ' na bakın ve [ağ cihazı kayıt hizmeti Ile bir ilke modülü](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11))kullanın.
 
 - **Microsoft Intune sertifika Bağlayıcısı** : Microsoft Intune sertifika Bağlayıcısı, ıNTUNE ile SCEP sertifika profillerini kullanmak için gereklidir. Bu makale, [Bu bağlayıcıyı yükleme](#install-the-intune-certificate-connector)sırasında size kılavuzluk eder.
 
@@ -56,21 +56,21 @@ Aşağıdaki şirket içi altyapının, Web uygulaması ara sunucusu dışında 
   - Bağlayıcı, [yönetilen cihazlarla](../fundamentals/intune-endpoints.md#access-for-managed-devices)aynı ağ gereksinimlerine sahiptir.
   - Bağlayıcının Windows Server 2012 R2 veya üstünü çalıştıran bir sunucu olan NDES sunucu rolüyle aynı sunucuda çalışması gerekir.
   - .NET 4,5 Framework Bağlayıcısı için gereklidir ve Windows Server 2012 R2 'ye otomatik olarak dahildir.
-  - Internet Explorer Artırılmış Güvenlik Yapılandırması [NDES ve Microsoft Intune sertifika Bağlayıcısı barındıran sunucuda devre dışı](https://technet.microsoft.com/library/cc775800(v=WS.10).aspx) bırakılmalıdır.
+  - Internet Explorer Artırılmış Güvenlik Yapılandırması [NDES ve Microsoft Intune sertifika Bağlayıcısı barındıran sunucuda devre dışı](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) bırakılmalıdır.
 
 Aşağıdaki şirket içi altyapı isteğe bağlıdır:
 
 İnternet üzerindeki cihazların sertifika almasını sağlamak için, NDES URL 'nizi kurumsal ağınız için harici olarak yayımlamanız gerekir. Azure AD Uygulama Ara Sunucusu, Web uygulaması ara sunucusu ya da başka bir ters proxy kullanabilirsiniz.
 
-- **Azure ad uygulama ara sunucusu** (isteğe bağlı) – NDES URL 'nizi Internet 'te yayımlamak için adanmış bir Web uygulaması proxy (WAP) sunucusu yerine Azure AD uygulama ara sunucusu kullanabilirsiniz. Bu, hem intranet hem de internet 'e yönelik cihazların sertifikaları almasına olanak tanır. Daha fazla bilgi için bkz. [Şirket içi uygulamalara güvenli uzaktan erişim sağlama](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Azure ad uygulama ara sunucusu** (isteğe bağlı) – NDES URL 'nizi Internet 'te yayımlamak için adanmış bir Web uygulaması proxy (WAP) sunucusu yerine Azure AD uygulama ara sunucusu kullanabilirsiniz. Bu, hem intranet hem de internet 'e yönelik cihazların sertifikaları almasına olanak tanır. Daha fazla bilgi için bkz. [Şirket içi uygulamalara güvenli uzaktan erişim sağlama](/azure/active-directory/manage-apps/application-proxy).
 
 - **Web uygulaması ara sunucusu** (isteğe bağlı)-NDES URL 'nizi internet 'e yayımlamak Için Windows Server 2012 R2 veya üstünü çalıştıran bir sunucuyu Web uygulaması ara sunucusu (WAP) sunucusu olarak kullanın.  Bu, hem intranet hem de internet 'e yönelik cihazların sertifikaları almasına olanak tanır.
 
-  WAP'ı barındıran sunucular, Ağ Cihazı Kayıt Hizmeti tarafından kullanılan uzun URL'ler için destek sağlayan [bir güncelleştirmeyi yüklemelidir](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) . Bu güncelleştirme, [aralık 2014 güncelleştirme toplamasına](https://support.microsoft.com/kb/3013769)dahildir veya [KB3011135](https://support.microsoft.com/kb/3011135)adresinden ayrı ayrı.
+  WAP'ı barındıran sunucular, Ağ Cihazı Kayıt Hizmeti tarafından kullanılan uzun URL'ler için destek sağlayan [bir güncelleştirmeyi yüklemelidir](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) . Bu güncelleştirme, [aralık 2014 güncelleştirme toplamasına](https://support.microsoft.com/kb/3013769)dahildir veya [KB3011135](https://support.microsoft.com/kb/3011135)adresinden ayrı ayrı.
 
   WAP sunucusunun, dış istemcilere yayımlanan adla eşleşen bir SSL sertifikası olmalı ve NDES hizmetini barındıran bilgisayarda kullanılan SSL sertifikasına güvenmelidir. Bu sertifikalar, WAP sunucusunun istemcilerden gelen SSL bağlantısını sonlandırmayı ve NDES hizmetine yeni bir SSL bağlantısı oluşturmasını sağlar.
 
-  Daha fazla bilgi için bkz. [WAP için sertifikaları planlama](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) ve [WAP sunucuları hakkında genel bilgiler](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
+  Daha fazla bilgi için bkz. [WAP için sertifikaları planlama](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) ve [WAP sunucuları hakkında genel bilgiler](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
 ### <a name="accounts"></a>Hesaplar
 
@@ -82,7 +82,7 @@ Aşağıdaki şirket içi altyapı isteğe bağlıdır:
   - **Hizmet olarak oturum açma**
   - **Toplu iş olarak oturum açma**
 
-  Daha fazla bilgi için bkz. [NDES hizmet hesabı olarak davranacak bir etki alanı kullanıcı hesabı oluşturma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account).
+  Daha fazla bilgi için bkz. [NDES hizmet hesabı olarak davranacak bir etki alanı kullanıcı hesabı oluşturma](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)#to-create-a-domain-user-account-to-act-as-the-ndes-service-account).
 
 - **NDES hizmetini barındıran bilgisayara erişim** -Windows Server rollerini NDES 'yi yüklediğiniz sunucuya yüklemek ve yapılandırmak için gerekli izinlere sahip bir etki alanı kullanıcı hesabına ihtiyacınız vardır.
 
@@ -90,7 +90,7 @@ Aşağıdaki şirket içi altyapı isteğe bağlıdır:
 
 ### <a name="network-requirements"></a>Ağ gereksinimleri
 
-NDES hizmetini [Azure AD uygulama proxy 'si, Web erişimi proxy](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/)veya üçüncü taraf ara sunucu gibi bir ters proxy üzerinden yayımlamayı öneririz. Ters proxy kullanmıyorsanız, bağlantı noktası 443 üzerinde internet 'teki tüm konaklardan ve IP adreslerinden NDES hizmetine TCP trafiğine izin verin.
+NDES hizmetini [Azure AD uygulama proxy 'si, Web erişimi proxy](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)veya üçüncü taraf ara sunucu gibi bir ters proxy üzerinden yayımlamayı öneririz. Ters proxy kullanmıyorsanız, bağlantı noktası 443 üzerinde internet 'teki tüm konaklardan ve IP adreslerinden NDES hizmetine TCP trafiğine izin verin.
 
 NDES hizmeti ile ortamınızdaki herhangi bir destekleyici altyapı arasındaki iletişim için gereken tüm bağlantı noktalarına ve protokollere izin verin. Örneğin, NDES hizmetini barındıran bilgisayarın CA, DNS sunucuları, etki alanı denetleyicileri ve ortamınızdaki diğer hizmet veya sunucularla (Configuration Manager gibi) iletişim kurması gerekir.
 
@@ -234,11 +234,11 @@ Varsayılan olarak, Intune şablonda yapılandırılan değeri kullanır, ancak 
 
 ## <a name="set-up-ndes"></a>NDES 'yi ayarlama
 
-Aşağıdaki yordamlar, Intune ile kullanmak üzere ağ cihazı kayıt hizmeti 'ni (NDES) yapılandırmanıza yardımcı olabilir. NDES hakkında daha fazla bilgi için bkz. [ağ cihazı kayıt hizmeti Kılavuzu](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v%3dws.11)).
+Aşağıdaki yordamlar, Intune ile kullanmak üzere ağ cihazı kayıt hizmeti 'ni (NDES) yapılandırmanıza yardımcı olabilir. NDES hakkında daha fazla bilgi için bkz. [ağ cihazı kayıt hizmeti Kılavuzu](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)).
 
 ### <a name="install-the-ndes-service"></a>NDES hizmetini yükler
 
-1. NDES hizmetinizi barındıracak sunucuda bir **Kuruluş Yöneticisi**olarak oturum açın ve ardından NDES 'yi yüklemek için [rol ve Özellik Ekleme Sihirbazı](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) ' nı kullanın:
+1. NDES hizmetinizi barındıracak sunucuda bir **Kuruluş Yöneticisi**olarak oturum açın ve ardından NDES 'yi yüklemek için [rol ve Özellik Ekleme Sihirbazı](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) ' nı kullanın:
 
    1. Sihirbaz'da, AD CS Rol Hizmetleri'ne erişmek için **Active Directory Sertifika Hizmetleri** 'ni seçin. **Ağ cihazı kayıt hizmeti**' ni seçin, **sertifika yetkilisinin**işaretini kaldırın ve Sihirbazı doldurun.
 

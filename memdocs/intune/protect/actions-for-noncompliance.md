@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d262041c982d3d9a629ccb550a1376e5e479a759
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: fa533ea8a34fae0c3460d207bb88e6b64b0957eb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252784"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909661"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune 'da uyumsuz cihazlar için eylemleri yapılandırma
 
@@ -29,7 +29,7 @@ Uyumluluk ilkelerinizi veya kurallarınızı karşılamayan cihazlarda **uyumsuz
 
 ## <a name="overview"></a>Genel Bakış
 
-Varsayılan olarak, her uyumluluk ilkesi, sıfır gün (**0**) zamanlamasıyla **uyumsuz olarak işaretle cihaz** uyumsuzluğu için eylemi içerir. Bu varsayılan değer, Intune 'un bir cihazın uyumlu olmadığını algıladığında, Intune 'un cihazı uyumsuz olarak işaretlediği bir sonucudur. Bir cihaz uyumsuzluk olarak işaretlendikten sonra, Azure Active Directory (AD) [koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) cihazı engelleyebilir.
+Varsayılan olarak, her uyumluluk ilkesi, sıfır gün (**0**) zamanlamasıyla **uyumsuz olarak işaretle cihaz** uyumsuzluğu için eylemi içerir. Bu varsayılan değer, Intune 'un bir cihazın uyumlu olmadığını algıladığında, Intune 'un cihazı uyumsuz olarak işaretlediği bir sonucudur. Bir cihaz uyumsuzluk olarak işaretlendikten sonra, Azure Active Directory (AD) [koşullu erişim](/azure/active-directory/active-directory-conditional-access-azure-portal) cihazı engelleyebilir.
 
 **Uyumsuzluk Için eylemler** yapılandırarak, uyumlu olmayan cihazlarla ilgili ne yapacağınıza karar verme esnekliği elde edersiniz ve ne zaman yapılacağını belirleyin. Örneğin, cihazı hemen engellememeyi ve kullanıcıya uyumlu hale gelmesi için bir yetkisiz kullanım süresi vermenizi tercih edebilirsiniz.
 
@@ -62,7 +62,7 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
     - Android kurumsal Iş profili
     - Android kurumsal bilgi noktası cihazları
   - iOS/iPadOS
-  - macOS
+  - Mac OS
 
 - **Uyumsuz cihazı devre dışı bırak**: Bu eylem tüm şirket verilerini cihazdan kaldırır ve cihazı Intune yönetiminden kaldırır. Bir cihazın yanlışlıkla silinmesini engellemek için, bu eylem en az **30** günlük zamanlamayı destekler.
 
@@ -72,7 +72,7 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
     - Android kurumsal cihaz sahibi
     - Android kurumsal Iş profili
   - iOS/iPadOS
-  - macOS
+  - Mac OS
 
   [Cihazları devre dışı bırakma](../remote-actions/devices-wipe.md#retire)hakkında daha fazla bilgi edinin.
 
@@ -107,7 +107,7 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
 
 Cihaz Uyumluluk ilkesini yapılandırırken veya daha sonra ilkeyi düzenleyerek [uyumsuzluk için eylemler ekleyebilirsiniz](#add-actions-for-noncompliance) . İhtiyaçlarınızı karşılamak için her ilkeye ek eylemler ekleyebilirsiniz. Her uyumluluk ilkesinin, cihazları uyumsuz olarak işaretleyen, bir zamanlama sıfır güne ayarlanmış şekilde, uyumsuzluk için varsayılan eylemi otomatik olarak içerdiğine dikkat edin.
 
-Cihaz uyumluluk ilkelerini, cihazları kurumsal kaynaklardan engellemek üzere kullanmak için Azure AD koşullu erişiminin ayarlanmış olması gerekir. Rehberlik için [Intune Ile koşullu erişim kullanmanın Azure Active Directory veya genel yollarla](conditional-access-intune-common-ways-use.md) [koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) bölümüne bakın.
+Cihaz uyumluluk ilkelerini, cihazları kurumsal kaynaklardan engellemek üzere kullanmak için Azure AD koşullu erişiminin ayarlanmış olması gerekir. Rehberlik için [Intune Ile koşullu erişim kullanmanın Azure Active Directory veya genel yollarla](conditional-access-intune-common-ways-use.md) [koşullu erişim](/azure/active-directory/active-directory-conditional-access-azure-portal) bölümüne bakın.
 
 Bir cihaz uyumluluk ilkesi oluşturmak için platforma özgü aşağıdaki kılavuza bakın:
 

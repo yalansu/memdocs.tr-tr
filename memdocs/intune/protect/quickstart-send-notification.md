@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d02329f65d7b7ecec1dbfeaf84ecbe5c8fb53013
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: e986021bb4d575ec3269e97b228cc381e1f2cf72
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079493"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910902"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Hızlı Başlangıç: Uyumsuz cihazlara bildirim gönderme
 
 Bu hızlı başlangıçta, uyumsuz cihazlara sahip olan iş gücünüzün üyelerine e-posta bildirimi göndermek için Microsoft Intune kullanacaksınız.
 
-Varsayılan olarak, Intune uyumlu olmayan bir cihaz algıladığında hemen cihazı uyumsuz olarak işaretler. Azure Active Directory (Azure AD) [koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) daha sonra cihazı engeller. Bir cihaz uyumlu olmadığında Intune, uyumsuzluk için Eylemler eklemenize olanak tanır. Bu, size ne yapacaklarınız için esneklik sağlar. Örneğin uyumsuz cihazları engellemeden önce kullanıcılara uyumlu olmaları için yetkisiz kullanım süresi sağlayabilirsiniz.
+Varsayılan olarak, Intune uyumlu olmayan bir cihaz algıladığında hemen cihazı uyumsuz olarak işaretler. Azure Active Directory (Azure AD) [koşullu erişim](/azure/active-directory/active-directory-conditional-access-azure-portal) daha sonra cihazı engeller. Bir cihaz uyumlu olmadığında Intune, uyumsuzluk için Eylemler eklemenize olanak tanır. Bu, size ne yapacaklarınız için esneklik sağlar. Örneğin uyumsuz cihazları engellemeden önce kullanıcılara uyumlu olmaları için yetkisiz kullanım süresi sağlayabilirsiniz.
 
 Bir cihaz uyumluluğu karşılamıyorsa gerçekleştirilecek bir eylem, cihazlar kullanıcısına e-posta göndermektir. Göndermeden önce bir e-posta bildirimi de özelleştirebilirsiniz. Özellikle şirket logosu ve kişi bilgileri dahil olmak üzere alıcılar, konu ve ileti gövdesini özelleştirebilirsiniz. Intune, e-posta bildiriminde uyumsuz cihaz hakkındaki ayrıntıları da içerir.
 
@@ -37,7 +37,7 @@ Intune aboneliğiniz yoksa [ücretsiz deneme hesabı için kaydolun](../fundamen
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-Cihazları kurumsal kaynaklardan engellemek için cihaz uyumluluk ilkelerini kullanırken, Azure AD koşullu erişiminin ayarlanması gerekir. [Cihaz uyumluluk Ilkesi oluşturma](quickstart-set-password-length-android.md) hızlı başlangıcı ' nı tamamladıysanız Azure Active Directory kullanıyorsunuz demektir. Azure AD hakkında daha fazla bilgi için bkz. [Azure Active Directory Koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) ve [Intune ile koşullu erişim kullanmanın yaygın yolları](../protect/conditional-access-intune-common-ways-use.md).
+Cihazları kurumsal kaynaklardan engellemek için cihaz uyumluluk ilkelerini kullanırken, Azure AD koşullu erişiminin ayarlanması gerekir. [Cihaz uyumluluk Ilkesi oluşturma](quickstart-set-password-length-android.md) hızlı başlangıcı ' nı tamamladıysanız Azure Active Directory kullanıyorsunuz demektir. Azure AD hakkında daha fazla bilgi için bkz. [Azure Active Directory Koşullu erişim](/azure/active-directory/active-directory-conditional-access-azure-portal) ve [Intune ile koşullu erişim kullanmanın yaygın yolları](../protect/conditional-access-intune-common-ways-use.md).
 
 ## <a name="sign-in-to-intune"></a>Intune'da oturum açma
 
@@ -47,7 +47,7 @@ Cihazları kurumsal kaynaklardan engellemek için cihaz uyumluluk ilkelerini kul
 
 Kullanıcılarınıza e-posta göndermek için bir bildirim iletisi şablonu oluşturun. Cihazın uyumsuz olması durumunda, şablona girdiğiniz ayrıntılar kullanıcılarınıza gönderilen e-postada görüntülenir.
 
-1. Intune ' da, **cihaz** > **uyumluluk ilkeleri** > **bildirimleri** > **oluşturma bildirimi**' ni seçin.
+1. Intune ' da, **cihaz**  >  **uyumluluk ilkeleri**  >  **bildirimleri**  >  **oluşturma bildirimi**' ni seçin.
 2. Aşağıdaki bilgileri girin:
 
    - **Ad**: *Contoso Yöneticisi*
@@ -76,7 +76,7 @@ Cihaz uyumluluğu ilkesi oluşturduğunuzda, Intune uyumsuzluk için otomatik ol
 
 Aşağıdaki adımlar, Windows 10 cihazları için uyumluluk ilkesi oluşturmayı gösterir.
 
-1. Intune ' da, **cihaz** > **uyumluluk ilkeleri** > **ilke oluştur**' u seçin.
+1. Intune ' da, **cihaz**  >  **uyumluluk ilkeleri**  >  **ilke oluştur**' u seçin.
 
 2. Aşağıdaki bilgileri girin:
 
@@ -84,7 +84,7 @@ Aşağıdaki adımlar, Windows 10 cihazları için uyumluluk ilkesi oluşturmay�
    - **Açıklama**: *Windows 10 uyumluluk ilkesi*
    - **Platform**: Windows 10 ve üzeri
 
-3. Cihaz güvenliğiyle ilgili ayarları göstermek için **Ayarlar** > **sistem güvenliği** ' ni seçin.
+3. **Settings**  >  Cihaz güvenliğiyle ilgili ayarları göstermek için ayarlar**sistem güvenliği** ' ni seçin.
 
 4. Aşağıdaki seçenekleri yapılandırın:
 
@@ -94,21 +94,21 @@ Aşağıdaki adımlar, Windows 10 cihazları için uyumluluk ilkesi oluşturmay�
 
    ![Yeni bir uyumluluk ilkesi için Sistem Güvenliği ayarları](./media/quickstart-send-notification/system-security-settings-01.png)
 
-5. Uyumluluk ilkenizi oluşturmak için **Tamam** > **Tamam** > **Oluştur** ' u seçin.
+5. **OK**  >  **OK**  >  Uyumluluk ilkenizi oluşturmak için Tamam Tamam**Oluştur** ' u seçin.
 
-6.  > **Uyumsuzluk** **Properties** > **ekleme**için özellikler eylemini seçin.
+6. **Properties**  >  **Uyumsuzluk ekleme için özellikler eylemini**seçin  >  **Add**.
 
 7. Açılan **Eylem** kutusunda **Son kullanıcılara e-posta gönder** seçeneğinin belirlendiğini doğrulayın.
 
 8. **İleti şablonu**' nu, bu makalede daha önce oluşturduğunuz şablonu seçin **ve ardından ileti şablonunu seçin.**
 
-9. Değişikliklerinizi kaydetmek için**Tamam** > **Kaydet** **Ekle** > ' yi seçin.
+9. **ADD**  >  **OK**  >  Değişikliklerinizi kaydetmek için Tamam**Kaydet** Ekle ' yi seçin.
 
 ## <a name="assign-the-policy"></a>İlke atama
 
 Uyumluluk ilkesini belirli bir kullanıcı grubuna veya tüm kullanıcılara atayabilirsiniz. Intune bir cihazın uyumsuz olduğunu tanırsa, kullanıcıya Uyumluluk ilkesini karşılamak üzere cihazlarını güncelleştirmesi gerektiğini bildirilir. İlkeyi atamak için aşağıdaki adımları kullanın.
 
-1. Intune ' da, **cihaz** > **uyumluluk ilkeleri** ' ne gidin ve daha önce oluşturduğunuz **Windows 10 uyumluluk** ilkesini seçin.
+1. Intune ' da, **cihaz**  >  **uyumluluk ilkeleri** ' ne gidin ve daha önce oluşturduğunuz **Windows 10 uyumluluk** ilkesini seçin.
 
 2. **Atamalar**' ı seçin.
 

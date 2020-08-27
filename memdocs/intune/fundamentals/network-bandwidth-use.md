@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3052d8d213ce3190ed29b43f580a8de9c840b7
-ms.sourcegitcommit: 0f02742301e42daaa30e1bde8694653e1b9e5d2a
+ms.openlocfilehash: c99300e1c29aa7d3ec7519727dd6d12527626bfa
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82943850"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911497"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Intune ağ yapılandırma gereksinimleri ve bant genişliği
 
@@ -44,10 +44,10 @@ Bu tabloda her istemci için ağ üzerinden geçen ortak içeriğin yaklaşık b
 |Operations Manager aracısı|11 MB|**Tek seferlik**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
 |İlke aracısı|3 MB|**Tek seferlik**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
 |Microsoft Easy Assist aracısı üzerinden Uzak Yardım|6 MB|**Tek seferlik**<br /><br />Bu içerik türü için güncelleştirmeler olduğunda ek indirmeler yapılabilir.|
-|Günlük istemci işlemleri|6 MB|**Günlük**<br /><br />Intune istemcisi güncelleştirmeleri ve ilkeleri denetlemek ve istemcinin durumunu hizmete bildirmek için Intune hizmetiyle düzenli olarak iletişim kurar.|
-|Endpoint Protection kötü amaçlı yazılım tanımı güncelleştirmeleri|Değişir<br /><br />Genellikle 40 KB ile 2 MB arasında|**Günlük**<br /><br />Günde en fazla üç kez.|
-|Endpoint Protection altyapı güncelleştirmesi|5 MB|**Aylık**|
-|Yazılım güncelleştirmeleri|Değişir<br /><br />Boyut, dağıttığınız güncelleştirmelere bağlıdır.|**Aylık**<br /><br />Genellikle, yazılım güncelleştirmeleri her ayın ikinci Salı günü yayınlanır.<br /><br />Yeni kaydedilen veya dağıtılan bir bilgisayar, daha önce yayınlanmış güncelleştirmelerinin tamamını indirirken daha fazla ağ bant genişliği kullanabilir.|
+|Günlük istemci işlemleri|6 MB|**Günlük olarak**<br /><br />Intune istemcisi güncelleştirmeleri ve ilkeleri denetlemek ve istemcinin durumunu hizmete bildirmek için Intune hizmetiyle düzenli olarak iletişim kurar.|
+|Endpoint Protection kötü amaçlı yazılım tanımı güncelleştirmeleri|Değişir<br /><br />Genellikle 40 KB ile 2 MB arasında|**Günlük olarak**<br /><br />Günde en fazla üç kez.|
+|Endpoint Protection altyapı güncelleştirmesi|5 MB|**Aylık olarak**|
+|Yazılım güncelleştirmeleri|Değişir<br /><br />Boyut, dağıttığınız güncelleştirmelere bağlıdır.|**Aylık olarak**<br /><br />Genellikle, yazılım güncelleştirmeleri her ayın ikinci Salı günü yayınlanır.<br /><br />Yeni kaydedilen veya dağıtılan bir bilgisayar, daha önce yayınlanmış güncelleştirmelerinin tamamını indirirken daha fazla ağ bant genişliği kullanabilir.|
 |Hizmet paketleri|Değişir<br /><br />Boyut, dağıttığınız her bir hizmet paketi için değişir.|**Değişir**<br /><br />Hizmet paketlerini ne zaman dağıttığınızda bağlıdır.|
 |Yazılım dağıtımı|Değişir<br /><br />Boyut, dağıttığınız yazılıma bağlıdır.|**Değişir**<br /><br />Yazılımı ne zaman dağıttığınızda bağlıdır.|
 
@@ -79,7 +79,7 @@ Intune istemcileri için içerikleri önbelleğe alan bir proxy sunucunun kullan
 
 Teslim Iyileştirme, Windows 10 cihazlarınız uygulamaları ve güncelleştirmeleri indirdiğinizde bant genişliği tüketimini azaltmak için Intune 'U kullanmanızı sağlar. Kendini düzenleme dağıtılan bir önbellek kullanarak, indirme işlemleri geleneksel sunuculardan ve diğer kaynaklardan (ağ eşleri gibi) çekerek yapılabilir.
 
-Teslim Iyileştirme tarafından desteklenen Windows 10 sürümlerinin ve içerik türlerinin tam listesini görmek için, bkz. [Windows 10 Için teslim iyileştirme güncelleştirmeleri makalesi](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
+Teslim Iyileştirme tarafından desteklenen Windows 10 sürümlerinin ve içerik türlerinin tam listesini görmek için, bkz. [Windows 10 Için teslim iyileştirme güncelleştirmeleri makalesi](/windows/deployment/update/waas-delivery-optimization#requirements).
 
 [Teslim iyileştirme](../configuration/delivery-optimization-settings.md) 'yi cihaz yapılandırma profillerinizin bir parçası olarak ayarlayabilirsiniz.
 
@@ -95,14 +95,14 @@ Ağ bant genişliğini azaltmak için belirlediğiniz saatlerde Windows yüklü 
 > [!NOTE]
 > Windows üzerinde MDM yönetimi için yalnızca MobileMSI uygulama türü için işletim sisteminin yönetim arabirimi, indirmek için BIT kullanır. AppX/MsiX, kendi BITS olmayan indirme yığınını kullanırken Intune aracısı üzerinden erişilene Win32 uygulamaları da BITS yerine Teslim İyileştirme özelliğinden faydalanır.
 
-BITS ve Windows bilgisayarlar hakkında daha fazla bilgi için TechNet Kitaplığında [Arka Plan Akıllı Aktarım Hizmeti](https://technet.microsoft.com/library/bb968799.aspx) konusuna bakın.
+BITS ve Windows bilgisayarlar hakkında daha fazla bilgi için TechNet Kitaplığında [Arka Plan Akıllı Aktarım Hizmeti](/windows/win32/bits/background-intelligent-transfer-service-portal) konusuna bakın.
 
 
 #### <a name="use-branchcache-on-computers-requires-intune-software-client"></a>Bilgisayarlarda BranchCache kullanın (Intune yazılım istemcisi gerekir)
 
 Intune istemcileri geniş alan ağı (WAN) trafiğini azaltmak için BranchCache kullanabilir. Aşağıdaki işletim sistemleri BranchCache’i desteklemektedir:
 
-- Windows 7
+- Windows 7
 - Windows 8.0
 - Windows 8.1
 - Windows 10
@@ -111,7 +111,7 @@ BranchCache özelliğini kullanmak için istemci bilgisayarda BranchCache etkin 
 
 Intune istemcisi bilgisayarlara yüklendiğinde BranchCache ve dağıtılmış önbellek modu varsayılan olarak etkindir. Ancak bir Grup İlkesi, BranchCache’i devre dışı bıraktıysa Intune bu ilkeyi geçersiz kılmaz ve BranchCache devre dışı kalmaya devam eder.
 
-BranchCache kullanıyorsanız Grup İlkesini ve Intune Güvenlik Duvarı ilkesini yönetmek için kuruluşunuzdaki diğer yöneticilerle birlikte çalışın. Diğer yöneticilerin, BranchCache veya Güvenlik Duvarı özel durumlarını devre dışı bırakan bir ilke dağıtmadığından emin olun. BranchCache hakkında daha fazla bilgi için bkz. [BranchCache 'e genel bakış](https://technet.microsoft.com/library/hh831696.aspx).
+BranchCache kullanıyorsanız Grup İlkesini ve Intune Güvenlik Duvarı ilkesini yönetmek için kuruluşunuzdaki diğer yöneticilerle birlikte çalışın. Diğer yöneticilerin, BranchCache veya Güvenlik Duvarı özel durumlarını devre dışı bırakan bir ilke dağıtmadığından emin olun. BranchCache hakkında daha fazla bilgi için bkz. [BranchCache 'e genel bakış](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11)).
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

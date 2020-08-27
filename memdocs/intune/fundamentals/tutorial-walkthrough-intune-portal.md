@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22910604d19aecb37adef2452d01d46c1435f7ef
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 544257bfb0fc844560cdbb1522345f4f8be63555
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330302"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907016"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Öğretici: Azure portal Microsoft Intune Izlenecek yol
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) , çok sayıda bulut bilgi işlem senaryosu ve olasılıklarıyla size yardımcı olmak için 100 'den fazla hizmet içerir. Azure 'da bulunan çeşitli hizmetlerden biridir Microsoft Intune. Intune, şirketinizin cihazlarınızın, uygulamalarının ve verilerinin şirketinizin güvenlik gereksinimlerini karşıladığından emin olmanıza yardımcı olur. Hangi gereksinimlerin denetlenmesi gerektiğini ve bu gereksinimler karşılanmazsa ne olacağını ayarlamaya yönelik denetime sahipsiniz. [Azure portalı](https://portal.azure.com), Microsoft Intune hizmetini bulabileceğiniz yerdir. Intune 'da kullanılabilen özellikleri anlamak çeşitli mobil cihaz yönetimi (MDM) ve mobil uygulama yönetimi (MAM) görevlerini gerçekleştirmenize yardımcı olur.
+[Azure](/learn/modules/welcome-to-azure) , çok sayıda bulut bilgi işlem senaryosu ve olasılıklarıyla size yardımcı olmak için 100 'den fazla hizmet içerir. Azure 'da bulunan çeşitli hizmetlerden biridir Microsoft Intune. Intune, şirketinizin cihazlarınızın, uygulamalarının ve verilerinin şirketinizin güvenlik gereksinimlerini karşıladığından emin olmanıza yardımcı olur. Hangi gereksinimlerin denetlenmesi gerektiğini ve bu gereksinimler karşılanmazsa ne olacağını ayarlamaya yönelik denetime sahipsiniz. [Azure portalı](https://portal.azure.com), Microsoft Intune hizmetini bulabileceğiniz yerdir. Intune 'da kullanılabilen özellikleri anlamak çeşitli mobil cihaz yönetimi (MDM) ve mobil uygulama yönetimi (MAM) görevlerini gerçekleştirmenize yardımcı olur.
 
 Bu öğreticide şunları yapacaksınız:
 > [!div class="checklist"]

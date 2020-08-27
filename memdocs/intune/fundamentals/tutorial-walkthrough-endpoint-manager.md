@@ -18,16 +18,16 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81ea88bc72e6bcd52dbfe51cb4fa12803605de18
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 650188df0c5e19b3eeb9bfa06197b77414cecb20
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330390"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910188"
 ---
 # <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Öğretici: Microsoft Endpoint Manager’da Intune için izlenecek yol
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) , çok sayıda bulut bilgi işlem senaryosu ve olasılıklarıyla size yardımcı olmak için 100 'den fazla hizmet içerir. Azure 'da bulunan çeşitli hizmetlerden biridir Microsoft Intune. Intune, şirketinizin cihazlarınızın, uygulamalarının ve verilerinin şirketinizin güvenlik gereksinimlerini karşıladığından emin olmanıza yardımcı olur. Hangi gereksinimlerin denetlenmesi gerektiğini ve bu gereksinimler karşılanmazsa ne olacağını ayarlamaya yönelik denetime sahipsiniz. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) , Microsoft Intune hizmetini ve cihaz yönetimiyle ilgili diğer ayarları bulabileceğiniz yerdir. Intune 'da kullanılabilen özellikleri anlamak çeşitli mobil cihaz yönetimi (MDM) ve mobil uygulama yönetimi (MAM) görevlerini gerçekleştirmenize yardımcı olur.
+[Azure](/learn/modules/welcome-to-azure) , çok sayıda bulut bilgi işlem senaryosu ve olasılıklarıyla size yardımcı olmak için 100 'den fazla hizmet içerir. Azure 'da bulunan çeşitli hizmetlerden biridir Microsoft Intune. Intune, şirketinizin cihazlarınızın, uygulamalarının ve verilerinin şirketinizin güvenlik gereksinimlerini karşıladığından emin olmanıza yardımcı olur. Hangi gereksinimlerin denetlenmesi gerektiğini ve bu gereksinimler karşılanmazsa ne olacağını ayarlamaya yönelik denetime sahipsiniz. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) , Microsoft Intune hizmetini ve cihaz yönetimiyle ilgili diğer ayarları bulabileceğiniz yerdir. Intune 'da kullanılabilen özellikleri anlamak çeşitli mobil cihaz yönetimi (MDM) ve mobil uygulama yönetimi (MAM) görevlerini gerçekleştirmenize yardımcı olur.
 
 > [!NOTE]
 > Microsoft Uç Nokta Yöneticisi, tüm uç noktalarınızı yönetmek için tek ve tümleşik bir uç nokta yönetim platformudur. Bu Microsoft Endpoint Manager Yönetim Merkezi ConfigMgr ve Microsoft Intune tümleştirir.
@@ -110,7 +110,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 
     Koşullu erişim, e-postanıza ve şirket kaynaklarınıza bağlanmasına izin verilen cihazları ve uygulamaları denetleyebilmeniz için yollar anlamına gelir. Cihaz tabanlı ve uygulama tabanlı koşullu erişim hakkında bilgi edinmek ve Intune ile koşullu erişim kullanmak için sık karşılaşılan senaryolar bulmak için bkz. [koşullu erişim nedir?](../protect/conditional-access.md)
 
-6. Gezinti bölmesinden, Intune 'da cihaz profilleriyle ilgili ayrıntıları göstermek için **cihazlar** > **yapılandırma profilleri** ' ni seçin.
+6. Gezinti bölmesinden, **Devices**  >  Intune 'da cihaz profilleriyle ilgili ayrıntıları göstermek için cihazlar**yapılandırma profilleri** ' ni seçin.
 
     ![Microsoft Endpoint Manager yönetim merkezi-yapılandırma profillerinin ekran görüntüsü](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-06.png)
     
@@ -121,14 +121,14 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 
     Cihaz yapılandırması hakkında daha fazla bilgi için bkz. [Microsoft Intune cihaz profillerini kullanarak cihazlarınızda özellik ayarlarını uygulama](../configuration/device-profiles.md).
 
-7. Gezinti bölmesinden, Intune kiracınızın kayıtlı cihazlarınızla ilgili ayrıntıları göstermek için **cihazlar** > **tüm cihazlar** ' ı seçin. Yeni bir Intune kaydı ile başlıyorsanız, henüz kayıtlı cihazlarınızın olmaması gerekir.
+7. Gezinti bölmesinden, **Devices**  >  Intune kiracınızın kayıtlı cihazlarınızla ilgili ayrıntıları göstermek için cihazlar**tüm cihazlar** ' ı seçin. Yeni bir Intune kaydı ile başlıyorsanız, henüz kayıtlı cihazlarınızın olmaması gerekir.
 
     ![Microsoft Endpoint Manager Yönetim Merkezi 'nin ekran görüntüsü-tüm cihazlar](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-07.png)
 
     Bu cihaz listesi uyumluluk, işletim sistemi sürümü ve son iade etme tarihiyle ilgili önemli ayrıntıları gösterir.
 
     > [!TIP]
-    > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **cihazlar** > **tüm cihazlar**' ı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
+    > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **cihazlar**  >  **tüm cihazlar**' ı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
  
 8. Uygulama durumuna genel bir bakış göstermek için gezinti bölmesinden **uygulamalar** ' ı seçin. Bu bölme aşağıdaki sekmelere göre uygulama yükleme durumu sağlar:
 
@@ -151,7 +151,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 9. **Uygulamalar-genel bakış** bölmesinden, Intune 'a eklenmiş uygulamaların listesini görmek için **tüm uygulamalar** ' ı seçin.
 
     > [!TIP]
-    > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **istemci uygulamaları** > **uygulamaları**' nı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
+    > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **istemci uygulamaları**uygulamaları ' nı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz  >  **Apps**.
 
     Platforma, Intune 'a göre çeşitli farklı uygulama türleri ekleyebilirsiniz. Bir uygulama eklendikten sonra, Kullanıcı gruplarına atayabilirsiniz. 
 
@@ -188,7 +188,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 
     Daha fazla bilgi için bkz. [Intune kiracı durumu](tenant-status.md).
 
-13. Gezinti bölmesinden, belirli bir kullanıcının durum ayrıntılarını denetlemek için **sorun giderme + Destek** > **sorunlarını** giderme ' yi seçin. 
+13. Gezinti bölmesinden, **Troubleshooting + support**  >  belirli bir kullanıcının durum ayrıntılarını denetlemek için sorun giderme + Destek**sorunlarını** giderme ' yi seçin. 
 
     > [!TIP]
     > Daha önce Azure portal Intune kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **sorun giderme**' yi seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
@@ -199,7 +199,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 
     Intune 'da sorun giderme hakkında daha fazla bilgi için bkz. [şirketinizde kullanıcılara yardımcı olmak için sorun giderme portalını kullanma](help-desk-operators.md).
 
-14. Gezinti bölmesinden, yardım istemek için **sorun giderme + Destek** > **Yardım ve destek** ' i seçin.
+14. Gezinti bölmesinden, yardım istemek için **sorun giderme + Destek**  >  **Yardım ve destek** ' i seçin.
 
     > [!TIP]
     > Intune 'u Azure portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **Yardım ve destek '** i seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
@@ -212,7 +212,7 @@ Intune 'U Microsoft Endpoint Manager Yönetim Merkezi 'nde daha iyi anlamak içi
 
     Daha fazla bilgi için bkz. [Microsoft Intune için destek alma](get-support.md).
 
-15. Gezinti bölmesinden, kullanılabilir Intune destekli senaryoları göstermek için **sorun giderme + Destek** > **temelli senaryolar** ' ı seçin.
+15. Gezinti bölmesinden, kullanılabilir Intune destekli senaryoları göstermek için **sorun giderme + Destek**  >  **temelli senaryolar** ' ı seçin.
 
     Kılavuzlu senaryo, bir uçtan uca kullanım örneği etrafında ortalanan özelleştirilmiş bir adım serisidir. Yaygın senaryolar, bir yönetici, Kullanıcı veya cihazın kuruluşunuzda oynadığı role dayalıdır. Bu roller genellikle en iyi kullanıcı deneyimini ve güvenliğini sağlamak için dikkatle düzenlenmiş profiller, ayarlar, uygulamalar ve güvenlik denetimleri koleksiyonu gerektirir.
 

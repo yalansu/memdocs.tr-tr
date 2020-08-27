@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba826620d1589d081f683e3b4c807115c4a137ae
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 82b85ad64bbb4783cd8ca43817d4446efd771297
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819720"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915968"
 ---
 # <a name="windows-update-settings-for-intune"></a>Intune için Windows Update ayarları  
 
@@ -34,7 +34,7 @@ Güncelleştirme ayarları, bir cihazın indirileceği bitleri ve ne zaman yapı
 
 - **Hizmet kanalı**  
   **Varsayılan**: yarı yıllık Kanal  
-  Windows Update CSP: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
+  Windows Update CSP: [Update/BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 
   Cihazın Windows güncelleştirmelerini alacağı kanalı (dalı) ayarlayın. Farklı kanallar, güncelleştirmeler teslim edilmeden önce farklı erteleme dönemleri kullanabilir.  
 
@@ -48,7 +48,7 @@ Güncelleştirme ayarları, bir cihazın indirileceği bitleri ve ne zaman yapı
   - Windows Insider – yavaş  
   - Windows Insider Yayımlama  
 
-  Bir Insider kanalı seçerseniz, Intune, Insider Build 'ın çalışması için [Update/Managepreview derlemelerini](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) Windows güncelleştirme ayarını otomatik olarak yapılandırır.  
+  Bir Insider kanalı seçerseniz, Intune, Insider Build 'ın çalışması için [Update/Managepreview derlemelerini](/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) Windows güncelleştirme ayarını otomatik olarak yapılandırır.  
 
 
   > [!IMPORTANT]  
@@ -56,21 +56,21 @@ Güncelleştirme ayarları, bir cihazın indirileceği bitleri ve ne zaman yapı
  
 - **Microsoft ürün güncelleştirmeleri**  
   **Varsayılan**: izin ver  
-  Windows Update CSP: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
+  Windows Update CSP: [Update/AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
   - **Izin ver** -Microsoft Update uygulama güncelleştirmelerini taramaya *izin ver* ' i seçin.  
   - **Engelle** -uygulama güncelleştirmelerinin taranmasını engellemek için blok ' ı seçin.  
 
 - **Windows sürücüleri**  
   **Varsayılan**: izin ver  
-  Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
+  Windows Update CSP: [Update/ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)  
 
   - **Izin ver** -seçme *izin ver* seçeneği, güncelleştirmeler sırasında Windows Update sürücüleri içerir.  
   - **Engelle** -sürücülerin taranmasını engellemek için blok ' ı seçin.  
 
 - **Kalite güncelleştirmesi erteleme süresi (gün)**  
   **Varsayılan**: 0  
-  Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
+  Windows Update CSP: [Update/DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
   Kalite güncelleştirmelerinin ertelenmesi için 0 ile 30 arasında gün sayısını belirtin. Bu süre, seçtiğiniz hizmet kanalının bir parçası olan herhangi bir erteleme dönemine ek olarak yapılır. Erteleme süresi, ilke cihaz tarafından alındığında başlar.  
 
@@ -78,7 +78,7 @@ Güncelleştirme ayarları, bir cihazın indirileceği bitleri ve ne zaman yapı
 
 - **Özellik Güncelleştirmesi erteleme süresi (gün)**  
   **Varsayılan**: 0  
-  Windows Update CSP: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
+  Windows Update CSP: [Update/PauseFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
   Özellik güncelleştirmelerinin ertelenmesi gereken gün sayısını belirtin. Bu süre, seçtiğiniz hizmet kanalının bir parçası olan herhangi bir erteleme dönemine ek olarak yapılır. Erteleme süresi, ilke cihaz tarafından alındığında başlar.  
 
@@ -90,7 +90,7 @@ Güncelleştirme ayarları, bir cihazın indirileceği bitleri ve ne zaman yapı
 
 - **Özellik güncelleştirmesini kaldırma süresini ayarla (2 – 60 gün)**  
   **Varsayılan**: 10  
-  Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
+  Windows Update CSP: [Update/ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
 
   Özellik güncelleştirmelerinin kaldırılması için bir saat yapılandırın.  
 
@@ -104,7 +104,7 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
 
 - **Otomatik güncelleştirme davranışı**  
   **Varsayılan**: bakım zamanında otomatik olarak yüklenir  
-  Windows Update CSP: [güncelleştirme/Allowotomatik güncelleştirme](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  Windows Update CSP: [güncelleştirme/Allowotomatik güncelleştirme](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
   Otomatik güncelleştirmelerin nasıl yükleneceğini ve gerekirse cihazın ne zaman yeniden başlatılması gerektiğini seçin.  
 
@@ -118,11 +118,11 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
 
     - **Etkin saatler başlangıcı** -güncelleştirme yüklemeleri nedeniyle yeniden başlatma işlemlerini gizleme için bir başlangıç saati belirtin.  
       **Varsayılan**: 8 ÖÖ  
-      Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+      Windows Update CSP: [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Etkin saatler bitiş** -güncelleştirme yüklemeleri nedeniyle yeniden başlatmaları gizleme için bitiş saati belirtin.  
       **Varsayılan**: 5 pm  
-      Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+      Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **Bakım zamanında otomatik olarak yükle ve yeniden Başlat** -güncelleştirmeler otomatik olarak indirilir ve cihaz kullanımda olmadığında veya pil gücüyle çalışırken otomatik bakım sırasında yüklenir. Yeniden başlatma gerektiğinde cihaz, kullanılmayacağı zaman yeniden başlatılır. (Bu, yönetilmeyen cihazlar için varsayılandır.)  
 
@@ -130,14 +130,14 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
 
     - **Etkin saatler başlangıcı** -güncelleştirme yüklemeleri nedeniyle yeniden başlatma işlemlerini gizleme için bir başlangıç saati belirtin.  
       **Varsayılan**: 8 ÖÖ  
-      Windows Update CSP: [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+      Windows Update CSP: [Update/ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
   
     - **Etkin saatler bitiş** -güncelleştirme yüklemeleri nedeniyle yeniden başlatmaları gizleme için bitiş saati belirtin.  
       **Varsayılan**: 5 pm  
-      Windows Update CSP: [Update/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+      Windows Update CSP: [Update/ActiveHoursEnd](/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
 
   - **Zamanlanan saatte otomatik olarak yükleme ve yeniden başlatma** -yükleme gününü ve saatini belirtin. Belirtilmemişse, yükleme 3 ' te günlük olarak çalışır ve ardından yeniden başlatmaya 15 dakikalık bir geri sayım gelir. Oturum açan kullanımlar geri sayıma erteleyebilir ve yeniden başlatılabilir.   
-  Windows Update CSP: [güncelleştirme/Allowotomatik güncelleştirme](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  Windows Update CSP: [güncelleştirme/Allowotomatik güncelleştirme](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
     Bu seçenek ek ayarları destekler.  
 
@@ -157,7 +157,7 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
 
 - **Yeniden başlatma denetimleri**  
   **Varsayılan**: izin ver  
-  Windows Update CSP: [Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
+  Windows Update CSP: [Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
   Cihazı yeniden başlattığınızda bu denetimleri atlamak için **Atla**’yı seçin. 
   
@@ -167,28 +167,28 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
 
 - **Kullanıcının Windows güncelleştirmelerini duraklatmasını engelle**  
   **Varsayılan**: izin ver  
-  Windows Update CSP: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
+  Windows Update CSP: [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
   - **Izin ver** -cihaz kullanıcılarının bir güncelleştirmenin yüklenmesini duraklatmasını sağlar.  
   - **Engelle** -cihaz kullanıcılarının bir güncelleştirmenin yüklenmesini duraklatmasını engeller.  
 
 - **Kullanıcının Windows güncelleştirmelerini taramasını engelle**  
   **Varsayılan**: izin ver  
-  Windows Update CSP: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
+  Windows Update CSP: [Update/SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
 
   - **Izin ver** -cihaz kullanıcılarının güncelleştirmeleri bulmak ve indirmek için Windows Update taraması kullanmasına izin verin ve özellikleri yükleyin.
   - **Engelle** -cihaz kullanıcılarının Windows Update taramaya erişmesini, güncelleştirmeleri karşıdan yüklemesini ve özellikleri yüklemeyi engeller.  
 
 - **Yeniden başlatma bildirimini kapatmak için Kullanıcı onayı gerektir**  
   **Varsayılan**: yapılandırılmadı  
-  Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+  Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
   - 25 saniye sonra otomatik olarak **Boşyok** .
   - **Evet** -Kullanıcı yanıltıcı iste.
    
 - **Kullanıcıyı, kabul edilebilir anımsatıcı (saatler) ile gerekli otomatik yeniden başlatmadan önce hatırlat**  
   **Varsayılan**: 4  
-  Windows Update CSP: [Update/ScheduleRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
+  Windows Update CSP: [Update/ScheduleRestartWarning](/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
 
   Bir otomatik yeniden başlatmanın ne kadar ilerlemek üzere bir cihaz kullanıcısına bu yeniden başlatma ile ilgili bir bildirimi görüntüleme süresini belirtin. **2**, **4**, **8**, **12**veya **24** saatlik değerler desteklenir.  
   
@@ -196,7 +196,7 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
 
 - **Kalıcı anımsatıcı ile kullanıcıyı gerekli otomatik yeniden başlatmadan önce hatırlat (dakika)**  
   **Varsayılan**: 15  
-  Windows Update CSP: [Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
+  Windows Update CSP: [Update/ScheduleImminentRestartWarning](/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning)  
 
   Bir otomatik yeniden başlatmanın ne kadar ilerlecereceğine ilişkin bir cihaz kullanıcısına, bu yeniden başlatma ile ilgili olmayan bir uyarının nasıl görüntüleneceğini belirtin. **15**, **30** veya **60** dakikalık değerler desteklenir.  
 
@@ -204,7 +204,7 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
 
 - **Güncelleştirme bildirim düzeyini Değiştir**  
   **Varsayılan**: varsayılan Windows Update bildirimleri kullanın  
-  Windows Update CSP: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+  Windows Update CSP: [Update/UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
   
   Kullanıcıların göreceği Windows Update bildirimi düzeyini belirtin. Bu ayar güncelleştirmelerin nasıl ve ne zaman indirildiğini ve yüklendiğini denetlemez.  
 
@@ -226,23 +226,23 @@ Kullanıcı deneyimi ayarları, cihaz yeniden başlatma ve anımsatıcıları i�
 
   - **Özellik güncelleştirmeleri için son tarih**  
     **Varsayılan**: *Yapılandırılmadı*  
-    Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
+    Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     Bir kullanıcının, cihazlarına otomatik olarak yüklenmesi için gereken gün sayısını belirtir (2-30).
 
   - **Kalite güncelleştirmeleri için son tarih**  
     **Varsayılan**: *Yapılandırılmadı*  
-    Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
+    Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     Bir kullanıcının, kalite güncelleştirmelerinin cihazlarına otomatik olarak yüklenmesi için gereken gün sayısını belirtir (2-30).
 
   - **Yetkisiz kullanım süresi**  
-    **Varsayılan**: *Yapılandırılmadı* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Varsayılan**: *Yapılandırılmadı* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( /windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
     Yeniden başlatmalar otomatik olarak gerçekleşene kadar geçen en az gün sayısını belirtir (0-7).
 
   - **Son tarihten önce otomatik yeniden başlatma**  
-    **Varsayılan**: Evet Windows Update CSP: [Update/Configuredeadlinenooto reboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
+    **Varsayılan**: Evet Windows Update CSP: [Update/Configuredeadlinenooto reboot](/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
 
     Cihazın son tarihten önce otomatik olarak yeniden başlatılması gerekip gerekmediğini belirtir.
     - **Evet**

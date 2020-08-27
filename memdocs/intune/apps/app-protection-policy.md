@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9688397218539ef3cc16f6fed91380e1820dbb15
-ms.sourcegitcommit: 693932432270ab3df1df9f5e6783c7f5c6f31252
+ms.openlocfilehash: 09ab90a67a9a1e722d1417b356ab9a54d464501e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87997978"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910630"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -52,7 +52,7 @@ Aşağıdaki özelliklere sahip cihazlarda çalıştırılan uygulamalar için u
 - **Herhangi bir mobil cihaz yönetimi çözümüne kayıtlı değil:** Bu cihazlar genellikle, Intune veya diğer MDM çözümlerinde yönetilmeyen veya kayıtlı olmayan, çalışana ait cihazlardır.
 
 > [!IMPORTANT]
-> Office 365 hizmetlerine bağlanan Office mobil uygulamaları için mobil uygulama yönetimi ilkeleri oluşturabilirsiniz. İOS için Outlook ve karma modern kimlik doğrulamasıyla etkinleştirilmiş Android için Intune uygulama koruma ilkeleri oluşturarak şirket içi Exchange posta kutularına erişimi de koruyabilirsiniz. Bu özelliği kullanmadan önce [iOS Için Outlook/ıpados ve Android gereksinimlerini](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx)karşıladığınızdan emin olun. Uygulama koruma ilkeleri, şirket içi Exchange veya SharePoint hizmetlerine bağlanan diğer uygulamalar için desteklenmez.
+> Office 365 hizmetlerine bağlanan Office mobil uygulamaları için mobil uygulama yönetimi ilkeleri oluşturabilirsiniz. İOS için Outlook ve karma modern kimlik doğrulamasıyla etkinleştirilmiş Android için Intune uygulama koruma ilkeleri oluşturarak şirket içi Exchange posta kutularına erişimi de koruyabilirsiniz. Bu özelliği kullanmadan önce [iOS Için Outlook/ıpados ve Android gereksinimlerini](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)karşıladığınızdan emin olun. Uygulama koruma ilkeleri, şirket içi Exchange veya SharePoint hizmetlerine bağlanan diğer uygulamalar için desteklenmez.
 
 ## <a name="benefits-of-using-app-protection-policies"></a>Uygulama koruma ilkelerini kullanmanın avantajları
 
@@ -149,7 +149,7 @@ Intune [SDK](../developer/app-sdk.md) ile tümleştirilmiş veya [Intune uygulam
 
 Intune SDK geliştirme ekibi, yerel Android, iOS/ıpados (obj-C, Swift), Xamarin ve Xamarin. Forms platformları ile oluşturulmuş uygulamalar için desteği etkin bir şekilde sınar ve bakımını sağlar. Bazı müşteriler, bir Kullanıcı ve NativeScript gibi diğer platformlarla Intune SDK tümleştirmesi ile başarılı olmuş olsa da, desteklenen platformlarımızdan başka herhangi bir şeyi kullanarak uygulama geliştiricileri için açık rehberlik veya eklentiler sağlamayız.
 
-[INTUNE SDK](../developer/app-sdk.md) 'sı, hem 1. taraf hem de SDK 'nın 3. taraf sürümleri Için[Azure Active Directory kimlik doğrulama kitaplıklarından](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) gelişmiş modern kimlik doğrulama özellikleri kullanır. Bu nedenle, [Microsoft kimlik doğrulama kitaplığı](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (msal), Intune uygulama koruması hizmetinde kimlik doğrulaması ve koşullu başlatma gibi temel senaryolarımızda iyi çalışmaz. Microsoft 'un kimlik ekibinin tüm Microsoft Office uygulamalar için MSAL 'e geçiş yapması, [Intune SDK 'sının](../developer/app-sdk.md) bu uygulamayı desteklemesi gerekir, ancak bugün bir plan yoktur.
+[INTUNE SDK](../developer/app-sdk.md) 'sı, hem 1. taraf hem de SDK 'nın 3. taraf sürümleri Için[Azure Active Directory kimlik doğrulama kitaplıklarından](/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) gelişmiş modern kimlik doğrulama özellikleri kullanır. Bu nedenle, [Microsoft kimlik doğrulama kitaplığı](/azure/active-directory/develop/reference-v2-libraries) (msal), Intune uygulama koruması hizmetinde kimlik doğrulaması ve koşullu başlatma gibi temel senaryolarımızda iyi çalışmaz. Microsoft 'un kimlik ekibinin tüm Microsoft Office uygulamalar için MSAL 'e geçiş yapması, [Intune SDK 'sının](../developer/app-sdk.md) bu uygulamayı desteklemesi gerekir, ancak bugün bir plan yoktur.
 
 ## <a name="end-user-requirements-to-use-app-protection-policies"></a>Uygulama koruma ilkelerini kullanmak için son kullanıcı gereksinimleri
 
@@ -174,7 +174,7 @@ Uygulama koruma ilkelerini Microsoft Office uygulamalarla kullanırken farkında
 - Son kullanıcının, Azure Active Directory hesabına bağlı bir [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) posta kutusuna ve lisansına sahip olması gerekir.
 
   >[!NOTE]
-  > Outlook mobil uygulaması şu anda yalnızca Microsoft Exchange Online için Intune Uygulama Koruması’nı ve [Hibrit modern kimlik doğrulaması ile Exchange Server](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx)’ı destekler ve Exchange’deki Office 365 Özel’i desteklemez.
+  > Outlook mobil uygulaması şu anda yalnızca Microsoft Exchange Online için Intune Uygulama Koruması’nı ve [Hibrit modern kimlik doğrulaması ile Exchange Server](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)’ı destekler ve Exchange’deki Office 365 Özel’i desteklemez.
 
 ### <a name="word-excel-and-powerpoint"></a>Word, Excel ve PowerPoint
 [Word, Excel ve PowerPoint](https://products.office.com/business/office) uygulamalarını kullanmak için ek gereksinimler şunlardır:

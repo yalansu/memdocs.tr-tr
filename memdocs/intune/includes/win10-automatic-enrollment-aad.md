@@ -9,7 +9,7 @@ Otomatik kayıt, kullanıcıların Windows 10 cihazlarını Intune’a kaydetmes
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Otomatik MDM kaydını yapılandırma
 
-1. [Azure portalında](https://portal.azure.com) oturum açın ve **Azure Active Directory**’yi seçin.
+1. [Azure Portal](https://portal.azure.com)oturum açın ve **Azure Active Directory**' ı seçin.
 
    ![Azure portalının ekran görüntüsü](../enrollment/media/windows-enroll/auto-enroll-azure-main.png)
 
@@ -46,4 +46,4 @@ Otomatik kayıt, kullanıcıların Windows 10 cihazlarını Intune’a kaydetmes
 
 6. **Kaydet**’i seçin.
 
-Varsayılan olarak hizmet için iki öğeli kimlik doğrulama etkin değildir. Yine de bir cihaz kaydedilirken iki öğeli kimlik doğrulama önerilir. İki öğeli kimlik doğrulamasını etkinleştirmek için Azure AD’de bir iki öğeli kimlik doğrulaması sağlayıcısı yapılandırmanız ve çok faktörlü kimlik doğrulaması için kullanıcı hesaplarınızı yapılandırmanız gerekir. Bkz. [Azure Multi-Factor Authentication Sunucusunu kullanmaya başlama](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).
+Varsayılan olarak hizmet için iki öğeli kimlik doğrulama etkin değildir. Yine de bir cihaz kaydedilirken iki öğeli kimlik doğrulama önerilir. İki öğeli kimlik doğrulamasını etkinleştirmek için Azure AD’de bir iki öğeli kimlik doğrulaması sağlayıcısı yapılandırmanız ve çok faktörlü kimlik doğrulaması için kullanıcı hesaplarınızı yapılandırmanız gerekir. Bkz. [Azure Multi-Factor Authentication Sunucusunu kullanmaya başlama](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).

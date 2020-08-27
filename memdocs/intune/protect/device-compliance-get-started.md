@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bb3397432f1c171418ea99510cb04f1bdefc639
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 0ae39f91c4daa67c40c42022f63137f0b23daf80
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252801"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88911072"
 ---
 # <a name="use-compliance-policies-to-set-rules-for-devices-you-manage-with-intune"></a>Intune ile yönettiğiniz cihazların kurallarını ayarlamak için uyumluluk ilkelerini kullanma
 
@@ -143,8 +143,8 @@ Cihaz uyumluluk ilkelerinizle koşullu erişimi kullanma hakkında daha fazla bi
 
 Azure AD belgelerinde koşullu erişim hakkında daha fazla bilgi edinin:
 
-- [Koşullu erişim nedir?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-- [Cihaz kimliği nedir?](https://docs.microsoft.com/azure/active-directory/device-management-introduction)
+- [Koşullu erişim nedir?](/azure/active-directory/conditional-access/overview)
+- [Cihaz kimliği nedir?](/azure/active-directory/device-management-introduction)
 
 ### <a name="reference-for-non-compliance-and-conditional-access-on-the-different-platforms"></a>Farklı platformlarda uyumsuzluk ve koşullu erişim için başvuru
 

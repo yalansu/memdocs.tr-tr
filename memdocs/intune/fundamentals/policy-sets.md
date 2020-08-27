@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 752e2b1948c1c56c77866b69365d0da2859dd279
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 09da822557e27eca29da2afc342c93a76d698d6c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531649"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88909933"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Yönetim nesnelerinin koleksiyonlarını gruplamak için ilke kümelerini kullanma
 
@@ -71,7 +71,7 @@ Bir ilke kümesi oluşturduğunuzda, tek bir atama birimi oluşturur ve farklı 
 5. **İleri**' ye tıklayın.<br>
    Cihaz **yönetimi** sayfası, ilke kümesine cihaz [yapılandırma profilleri](../configuration/device-profiles.md) ve [cihaz uyumluluk ilkeleri](../protect/device-compliance-get-started.md)gibi cihaz yönetimi nesneleri eklemenize olanak tanır. Diğer ilkeler, sertifikalar ve güvenlik temel profilleri gibi tüm ilişkili nesneleri eklediğinizden emin olun.
 6. Ileri ' ye tıklayın **: cihaz kaydı**.<br>
-   Cihaz **kayıt** sayfası, ilke kümesine [cihaz türü kısıtlamaları](../enrollment/enrollment-restrictions-set.md), [Windows Autopilot dağıtım profilleri](../enrollment/enrollment-autopilot.md)ve [kayıt durumu sayfa profilleri](../enrollment/windows-enrollment-status.md)gibi cihaz kayıt nesneleri eklemenize olanak tanır.
+   Cihaz **kayıt** sayfası, ilke kümesine [cihaz türü kısıtlamaları](../enrollment/enrollment-restrictions-set.md), [Windows Autopilot dağıtım profilleri](../../autopilot/enrollment-autopilot.md)ve [kayıt durumu sayfa profilleri](../enrollment/windows-enrollment-status.md)gibi cihaz kayıt nesneleri eklemenize olanak tanır.
 7. **İleri: atamalar**' a tıklayın.<br>
    **Atamalar** sayfası, ilke kümesini kullanıcılara ve cihazlara atamanıza olanak tanır. Cihazın Intune tarafından yönetilip yönetilmediğini bir cihaza bir ilke kümesi atayabileceğinizi unutmayın.
 8. Ileri ' ye tıklayın, profil için girdiğiniz değerleri gözden geçirmek için **+ Oluştur** ' a tıklayın.

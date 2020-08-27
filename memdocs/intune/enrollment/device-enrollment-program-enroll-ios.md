@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05a0c4e5a78281f78a986d0512abfeca155494dd
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051681"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907305"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -154,7 +154,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 4. **İleri ' yi seçin: cihaz yönetimi ayarları**.
 
 5. **Kullanıcı Benzeşimi** için bu profile sahip cihazların atanan kullanıcıyla mı yoksa atanan kullanıcı olmadan mı kaydedilmesi gerektiğini seçin.
-    - **Kullanıcı Benzeşimi ile Kaydet** - Uygulamaları yükleme gibi hizmetler için Şirket Portalı’nı kullanmak isteyen kullanıcılara ait cihazlar için bu seçeneği seçin. ADFS kullanıyorsanız ve [WS-Trust 1,3 Kullanıcı adı/karma uç nokta](https://technet.microsoft.com/library/adfs2-help-endpoints) kimlik doğrulaması Için Kurulum Yardımcısı 'nı kullanıyorsanız [daha fazla bilgi edinin](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) .
+    - **Kullanıcı Benzeşimi ile Kaydet** - Uygulamaları yükleme gibi hizmetler için Şirket Portalı’nı kullanmak isteyen kullanıcılara ait cihazlar için bu seçeneği seçin. ADFS kullanıyorsanız ve [WS-Trust 1,3 Kullanıcı adı/karma uç nokta](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) kimlik doğrulaması Için Kurulum Yardımcısı 'nı kullanıyorsanız [daha fazla bilgi edinin](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) .
 
     - **Kullanıcı Benzeşimi Olmadan Kaydetme** - Tek bir kullanıcıyla bağlantılı olmayan cihazlar için bu seçeneği seçin. Yerel Kullanıcı verilerine erişolmayan cihazlar için bu seçeneği kullanın. Son kullanıcının iOS Şirket Portalı oturum açmasını ve kendilerini cihazın birincil kullanıcısı olarak kurmasını sağlamak için, `IntuneUDAUserlessDevice` anahtarı, yönetilen cihazlar için bir uygulama yapılandırma Ilkesinde ios Şirket portalı 'ye gönderin. Birincil kullanıcı olarak yalnızca ilk oturum açan kullanıcının kurulduğu unutulmamalıdır. İlk Kullanıcı oturumu kapattığında ve ikinci Kullanıcı oturum açarsa, ilk Kullanıcı cihazın birincil kullanıcısı olarak kalır. Daha fazla bilgi için bkz. [Şirket Portalı uygulamasını iOS ve ıpados DEP cihazlarını destekleyecek şekilde yapılandırma](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices). 
 
@@ -233,7 +233,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 17. **Kurulum Yardımcısı özelleştirmesi** sayfasında, aşağıdaki profil ayarlarını yapılandırın: ![ Kurulum Yardımcısı özelleştirmesi.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Departman ayarları | Description |
+    | Departman ayarları | Açıklama |
     |---|---|
     | <strong>Bölüm Adı</strong> | Kullanıcı, etkinleştirme sırasında <strong>Yapılandırma Hakkında</strong> öğesine dokunduğunda görüntülenir. |
     |    <strong>Departman Telefonu</strong>     | Kullanıcı, etkinleştirme sırasında <strong>Yardım Gerekli</strong> düğmesine dokunduğunda görüntülenir. |
@@ -266,9 +266,9 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
     | <strong>SIM Ayarları</strong> | Kullanıcıya hücresel plan ekleme seçeneği sunar. İOS/ıpados 12,0 ve üzeri için. |
     | <strong>Görünüm</strong> | Kullanıcıya Görünüm ekranını gösterir. MacOS 10,14 ve üzeri ve iOS/ıpados 13,0 ve üzeri için. |
     | <strong>Hızlı dil</strong>| Kullanıcı için hızlı dil ekranını görüntüleyin. |
-    | <strong>Tercih edilen dil</strong> | Kullanıcıya **tercih edilen dilini**seçme seçeneğini sunun. |
+    | <strong>Tercih edilen dil</strong> | Kullanıcıya  **tercih edilen dilini**seçme seçeneğini sunun. |
     | <strong>Cihazdan cihaza geçişe</strong> | Kullanıcıya verileri eski cihazlarından bu cihaza geçirme seçeneğini sunun. İOS/ıpados 13,0 ve üzeri için. |
-    | <strong>Kayıt</strong> | Kullanıcının kayıt ekranını görüntüleyin. MacOS 10,9 ve üzeri için. |
+    | <strong>Kaydını</strong> | Kullanıcının kayıt ekranını görüntüleyin. MacOS 10,9 ve üzeri için. |
     | <strong>FileVault</strong> | Kullanıcının dosya Kasası 2 şifreleme ekranını görüntüleyin. MacOS 10,10 ve üzeri için. |
     | <strong>iCloud tanılama</strong> | Kullanıcıya iCloud Analytics ekranını görüntüleyin. MacOS 10.12.4 ve üzeri için. |
     | <strong>iCloud Depolama</strong> | Kullanıcıya iCloud belgelerini ve masaüstü ekranını görüntüleyin. MacOS 10.13.4 ve üzeri için. |

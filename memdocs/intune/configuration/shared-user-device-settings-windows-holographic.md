@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49d1b8f407814fd368a7ff45bb94bc4c5ef7fd9d
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 88b7f41b873697a7ec34bd1fc2f1098384ab1c18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556294"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915730"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Intune kullanarak paylaşılan cihazları yönetmek için Windows holographic for Business ayarları
 
@@ -32,7 +32,7 @@ Microsoft Intune kullanarak, kullanıcılar bu paylaşılan cihazlarda Konuk hes
 
 Bu makalede, bir Windows holographic for Business cihaz yapılandırma profilinde kullandığınız ayarlar listelenir ve açıklanmaktadır. Profil Intune 'da oluşturulduğunda, profili dağıtırsınız veya kuruluşunuzdaki cihaz gruplarına atarsınız. Ayrıca, bu profili karma cihaz türleri ve işletim sistemi sürümleri ile bir cihaz grubuna da atayabilirsiniz.
 
-Intune 'da bu özellik hakkında daha fazla bilgi için bkz. [PAYLAŞıLAN bilgisayar veya birden çok Kullanıcı cihazlarındaki erişimi, hesapları ve güç özelliklerini denetleme](shared-user-device-settings.md). Windows CSP hakkında daha fazla bilgi için bkz. [AccountManagement CSP](https://docs.microsoft.com/windows/client-management/mdm/accountmanagement-csp).
+Intune 'da bu özellik hakkında daha fazla bilgi için bkz. [PAYLAŞıLAN bilgisayar veya birden çok Kullanıcı cihazlarındaki erişimi, hesapları ve güç özelliklerini denetleme](shared-user-device-settings.md). Windows CSP hakkında daha fazla bilgi için bkz. [AccountManagement CSP](/windows/client-management/mdm/accountmanagement-csp).
 
 ## <a name="before-your-begin"></a>Başlamadan önce
 

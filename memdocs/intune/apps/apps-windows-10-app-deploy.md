@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ed491fd379879369ead35ceb2c618def91d3e53
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 170a5b22362ee3bd9e347af2addc03ef3b542de2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83985935"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907828"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Microsoft Intune kullanarak Windows 10 uygulama dağıtımı 
 
@@ -46,15 +46,15 @@ Belirli uygulama türleri, kullanıcılarınızın çalıştırdığı Windows 1
 
 | Uygulama türü | Giriş Sayfası | Pro | İş | Enterprise | Eğitim | S modu | HoloLens <sup> 1 | Surface Hub | WCOS | Mobil |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
-|  . DEFTERI | No | Yes | Yes | Yes | Yes | Hayır | Hayır | Hayır | Hayır | Hayır |
-| . Intunewin | No | Yes | Yes | Yes | Yes | 19H2 + | Hayır | Hayır | Hayır | Hayır |
-| Office C2R 'NDA | No | Yes | Yes | Yes | Yes | RS4 + | Hayır | Hayır | Hayır | Hayır |
-| LOB: APPX/MALTı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| MSFB çevrimdışı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| MSFB çevrimiçi | Yes | Yes | Yes | Yes | Yes | Yes | RS4 + | No | Yes | Yes |
-| Web Apps | Yes | Yes | Yes | Yes | Yes | Yes | Evet<sup>2 | Evet<sup>2 | Yes | Evet<sup>2 |
-| Mağaza bağlantısı | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
-| Microsoft Edge | No | Yes | Yes | Yes | Yes | 19H2 + <sup> 3 | Hayır | Hayır | Hayır | Hayır |
+|  . DEFTERI | Hayır | Evet | Evet | Evet | Evet | Hayır | Hayır | Hayır | Hayır | Hayır |
+| . Intunewin | Hayır | Evet | Evet | Evet | Evet | 19H2 + | Hayır | Hayır | Hayır | Hayır |
+| Office C2R 'NDA | Hayır | Evet | Evet | Evet | Evet | RS4 + | Hayır | Hayır | Hayır | Hayır |
+| LOB: APPX/MALTı | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet |
+| MSFB çevrimdışı | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet |
+| MSFB çevrimiçi | Evet | Evet | Evet | Evet | Evet | Evet | RS4 + | Hayır | Evet | Evet |
+| Web Apps | Evet | Evet | Evet | Evet | Evet | Evet | Evet<sup>2 | Evet<sup>2 | Evet | Evet<sup>2 |
+| Mağaza bağlantısı | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet | Evet |
+| Microsoft Edge | Hayır | Evet | Evet | Evet | Evet | 19H2 + <sup> 3 | Hayır | Hayır | Hayır | Hayır |
 
 <sup>1</sup> uygulama yönetiminin kilidini açmak Için, Hololens cihazınızı [holographic for Business](../fundamentals/windows-holographic-for-business.md)'a yükseltin.<br />
 yalnızca Şirket Portalı <sup>2</sup> ' den başlatın.<br />
@@ -69,7 +69,7 @@ Windows 10 LOB uygulamalarını imzalayabilir ve Intune yönetim konsoluna yükl
 
 ## <a name="microsoft-store-for-business-apps"></a>İş İçin Microsoft Mağazası uygulamaları
 
-Iş uygulamaları için Microsoft Store, Microsoft Store for Business yönetici portalından satın alınan modern uygulamalardır. Daha sonra yönetim için Microsoft Intune için eşitlenir. Uygulamalar çevrimiçi lisanslanabileceği gibi çevrimdışı da lisanslanabilir. Microsoft Store, yönetici tarafından hiçbir ek eylem gerekmeden güncelleştirmeleri doğrudan yönetir. Ayrıca, özel bir Tekdüzen Kaynak tanımlayıcısı (URI) kullanarak belirli uygulamalara yönelik güncelleştirmeleri engelleyebilirsiniz. Daha fazla bilgi için bkz. [Kurumsal uygulama yönetimi - Uygulamaların otomatik güncelleştirmeleri almasını engelleme](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Kullanıcı aynı zamanda cihazdaki tüm Iş uygulamaları için Microsoft Store güncelleştirmelerini devre dışı bırakabilir. 
+Iş uygulamaları için Microsoft Store, Microsoft Store for Business yönetici portalından satın alınan modern uygulamalardır. Daha sonra yönetim için Microsoft Intune için eşitlenir. Uygulamalar çevrimiçi lisanslanabileceği gibi çevrimdışı da lisanslanabilir. Microsoft Store, yönetici tarafından hiçbir ek eylem gerekmeden güncelleştirmeleri doğrudan yönetir. Ayrıca, özel bir Tekdüzen Kaynak tanımlayıcısı (URI) kullanarak belirli uygulamalara yönelik güncelleştirmeleri engelleyebilirsiniz. Daha fazla bilgi için bkz. [Kurumsal uygulama yönetimi - Uygulamaların otomatik güncelleştirmeleri almasını engelleme](/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Kullanıcı aynı zamanda cihazdaki tüm Iş uygulamaları için Microsoft Store güncelleştirmelerini devre dışı bırakabilir. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Iş uygulamaları için Microsoft Store kategorilere ayırın 
 Iş uygulamalarına yönelik Microsoft Store kategorilere ayırmak için: 
@@ -106,7 +106,7 @@ Cihaz bağlamına yüklemeyi seçtiğiniz Windows LOB uygulamaları (özellikle 
   - Hata: bir Kullanıcı, cihaz bağlamı yüklemesi ile hedeflenmiyor.
 
 > [!IMPORTANT]
-> Bir Autopilot White with sağlama senaryosu ile birlikte kullanıldığında, bir cihaz grubunu hedeflemek üzere cihaz bağlamında dağıtılan Iş uygulamalarına yönelik LOB uygulamaları ve Microsoft Store için gereksinim yoktur. Daha fazla bilgi için bkz. [Windows Autopilot White and Deployment](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove).
+> Bir Autopilot White with sağlama senaryosu ile birlikte kullanıldığında, bir cihaz grubunu hedeflemek üzere cihaz bağlamında dağıtılan Iş uygulamalarına yönelik LOB uygulamaları ve Microsoft Store için gereksinim yoktur. Daha fazla bilgi için bkz. [Windows Autopilot White and Deployment](/windows/deployment/windows-autopilot/white-glove).
 
 > [!Note]
 > Belirli bir dağıtıma sahip bir uygulama atamasını kaydettikten sonra, modern uygulamalar haricinde, bu atamanın bağlamını değiştiremezsiniz. Modern uygulamalar için, bağlamı Kullanıcı bağlamından cihaz bağlamına dönüştürebilirsiniz. 

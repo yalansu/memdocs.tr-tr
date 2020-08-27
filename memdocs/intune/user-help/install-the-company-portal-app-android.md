@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 042a89016127fe7a088aa31ce64468c9337c77bc
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: de24c1b008fa6332f89f0d7006a33556af87f84a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880985"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915934"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Android için Şirket Portalı uygulamasını yükleme
 
@@ -46,6 +46,6 @@ ms.locfileid: "83880985"
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
-Şirket Portalı uygulamasını indirdikten sonra, iş bilgilerinizin tamamına tam erişim sağlamak için [cihazınızı Intune 'a kaydetmek](enroll-device-android-company-portal.md) isteyeceksiniz. Ayrıca [başka bir cihaz kullanarak da oturum açabilirsiniz](https://docs.microsoft.com/mem/intune/user-help/sign-in-to-the-company-portal#sign-in-from-another-device).  
+Şirket Portalı uygulamasını indirdikten sonra, iş bilgilerinizin tamamına tam erişim sağlamak için [cihazınızı Intune 'a kaydetmek](enroll-device-android-company-portal.md) isteyeceksiniz. Ayrıca [başka bir cihaz kullanarak da oturum açabilirsiniz](./sign-in-to-the-company-portal.md#sign-in-from-another-device).  
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

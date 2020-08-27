@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f013074ac67b7622b509d8b9781de3ab5f4041e0
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: d3a1a66988f922a293187f3ed30e3659dee567b1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429501"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915713"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Intune kullanarak paylaşılan cihazları yönetmek için Windows 10 ve üzeri ayarları
 
@@ -32,7 +32,7 @@ Microsoft Intune kullanarak, son kullanıcılar bu paylaşılan cihazlarda Konuk
 
 Bu makalede, bir Windows 10 (ve üzeri) cihaz yapılandırma profilinde kullandığınız ayarlar listelenir ve açıklanmaktadır. Profil Intune 'da oluşturulduğunda, profilinizi kuruluşunuzdaki cihaz gruplarına dağıtır veya atarsınız. Ayrıca, bu profili karma cihaz türleri ve işletim sistemi sürümleri ile cihaz gruplarına da atayabilirsiniz.
 
-Intune 'da bu özellik hakkında daha fazla bilgi için bkz. [PAYLAŞıLAN bilgisayar veya birden çok Kullanıcı cihazlarındaki erişimi, hesapları ve güç özelliklerini denetleme](shared-user-device-settings.md). Windows CSP hakkında daha fazla bilgi için bkz. [Sharedpc CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+Intune 'da bu özellik hakkında daha fazla bilgi için bkz. [PAYLAŞıLAN bilgisayar veya birden çok Kullanıcı cihazlarındaki erişimi, hesapları ve güç özelliklerini denetleme](shared-user-device-settings.md). Windows CSP hakkında daha fazla bilgi için bkz. [Sharedpc CSP](/windows/client-management/mdm/sharedpc-csp).
 
 ## <a name="before-your-begin"></a>Başlamadan önce
 
@@ -40,7 +40,7 @@ Intune 'da bu özellik hakkında daha fazla bilgi için bkz. [PAYLAŞıLAN bilgi
 
 ## <a name="shared-multi-user-device-settings"></a>Paylaşılan çok kullanıcılı cihaz ayarları
 
-Bu ayarlar [Sharedpc CSP](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp)kullanır.
+Bu ayarlar [Sharedpc CSP](/windows/client-management/mdm/sharedpc-csp)kullanır.
 
 - **PAYLAŞıLAN bilgisayar modu**: **Etkinleştir** ayarı, paylaşılan bilgisayar modunu etkinleştirir. Bu modda, tek seferde cihazda yalnızca bir Kullanıcı oturum açar. Birinci Kullanıcı oturumu kapatana kadar başka bir Kullanıcı oturum açamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Konuk hesabı**: oturum açma ekranında Konuk seçeneği oluşturmayı seçin. Konuk hesapları için Kullanıcı kimlik bilgileri veya kimlik doğrulaması gerekmez. Bu ayar her kullanıldığında yeni bir yerel hesap oluşturur. Seçenekleriniz şunlardır:
@@ -76,7 +76,7 @@ Bu ayarlar [Sharedpc CSP](https://docs.microsoft.com/windows/client-management/m
   - **Etkin**: kullanıcılar hazırda beklemeyi kapatamaz, tüm uyku işlemlerini geçersiz kılamazsınız (kapağı kapatma gibi) ve güç ayarlarını değiştiremezler.
   - **Devre dışı**: kullanıcılar cihazı hazırda beklemeye alabilir, cihazı uyku moduna almak için kapağı kapatabilir ve güç ayarlarını değiştirebilir.
 
-- **Uyku zaman aşımı (saniye cinsinden)**: Cihaz uyku moduna geçmeden önce etkin olmayan saniyeler (0-18000) sayısını girin. `0`, cihazın hiçbir şekilde uyku moduna geçme anlamına gelir. Bir zaman ayarlamazsanız, cihaz 3600 saniye (60 dakika) sonra uyku moduna geçer.
+- **Uyku zaman aşımı (saniye cinsinden)**: Cihaz uyku moduna geçmeden önce etkin olmayan saniyeler (0-18000) sayısını girin. `0` , cihazın hiçbir şekilde uyku moduna geçme anlamına gelir. Bir zaman ayarlamazsanız, cihaz 3600 saniye (60 dakika) sonra uyku moduna geçer.
 
 - **Bilgisayar uyandığında oturum açma**: Cihaz uyku modundan çıktıktan sonra kullanıcıların oturum açması gerekiyorsa seçin. Seçenekleriniz şunlardır:
   - **Yapılandırılmadı** (varsayılan): Intune bu ayarı değiştirmez veya güncelleştirmez.
@@ -92,10 +92,10 @@ Bu ayarlar [Sharedpc CSP](https://docs.microsoft.com/windows/client-management/m
   - **Etkin**: okulda kullanılan ve daha kısıtlayıcı olan cihazlar için önerilen ayarları kullanır.
   - **Devre dışı**: varsayılan ve önerilen eğitim ilkeleri kullanılmaz.
 
-  Eğitim ilkelerinin ne yaptığı hakkında daha fazla bilgi için bkz. [Eğitim müşterileri Için Windows 10 yapılandırma önerileri](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+  Eğitim ilkelerinin ne yaptığı hakkında daha fazla bilgi için bkz. [Eğitim müşterileri Için Windows 10 yapılandırma önerileri](/education/windows/configure-windows-for-education).
 
 > [!TIP]
-> [Paylaşılan veya Konuk BIR bilgisayar ayarlama](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (başka bir Belgeler Web sitesini açar), paylaşılan modda ayarlanulabilecek kavramlar ve grup ilkeleri de dahil olmak üzere bu Windows 10 özelliğindeki harika bir kaynaktır.
+> [Paylaşılan veya Konuk BIR bilgisayar ayarlama](/windows/configuration/set-up-shared-or-guest-pc) (başka bir Belgeler Web sitesini açar), paylaşılan modda ayarlanulabilecek kavramlar ve grup ilkeleri de dahil olmak üzere bu Windows 10 özelliğindeki harika bir kaynaktır.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

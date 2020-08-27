@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: a7ce95d5c28b1b85f27fdd0aee74e3148abfb554
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: a6984f4e6eafee1f81340f483dc557fdb6091ec9
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882263"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88910766"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Cihaz şifrelendi, ancak uygulamalar bu şekilde söyleniyor
 
@@ -51,7 +51,7 @@ Bu bölüm yalnızca Şirket Portalı uygulaması için geçerlidir. Cihazınız
 
 Sürüm 7,0 ve üzeri sürümlerde bazı Android cihazlar, belirli Android Platform standartları ile tutarsız yollarla verileri şifreler. Bu şifreleme yöntemleri cihaz bilgilerini riske koyar. Sonuç olarak, bu cihazlar desteklenmez.
 
-Desteklenen Android cihazlarının ayrıntılı olmayan bir listesi için bkz. [Intune 'Da desteklenen işletim sistemleri ve tarayıcılar](https://docs.microsoft.com/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices)makalesi. Cihazınız listede yoksa, cihaz üreticisine başvurun veya destek sorumlunuza başvurun.
+Desteklenen Android cihazlarının ayrıntılı olmayan bir listesi için bkz. [Intune 'Da desteklenen işletim sistemleri ve tarayıcılar](/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices)makalesi. Cihazınız listede yoksa, cihaz üreticisine başvurun veya destek sorumlunuza başvurun.
 
 > [!Note]
 > Microsoft, test ederken veya kullanıcıların bize rapor verdiği sorunları ele almak için üreticilerle birlikte çalışmaktadır. Yeni bilgiler mevcut oldukça bu makaleyi güncelleştireceğiz.
@@ -62,4 +62,4 @@ Cihazınızı en son Android sürümüne güncelleştirmediyseniz, cihazınızı
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu bilgiler yardımcı olmadı mı? Şirketinizin destek birimine başvurun (iletişim bilgileri için [Şirket Portalı web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın) veya <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android ekibine</a> yazın.  
+Bu bilgiler yardımcı olmadı mı? Şirketinizin destek birimine başvurun (iletişim bilgileri için [Şirket Portalı web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın) veya <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">Microsoft Android ekibine</a> yazın.

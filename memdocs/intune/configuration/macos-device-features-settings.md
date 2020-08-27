@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79c389767ad3cb796e2cc7b4cd9a35015e17a837
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 83da63ef78d8b97cad47b811fee0cc3fde8a5502
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819669"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88907464"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 'da macOS cihaz özelliği ayarları
 
@@ -324,7 +324,7 @@ Bu özellik şu platformlarda geçerlidir:
 - Otomatik **bulma** (yalnızca Kerberos): **blok**olarak ayarlandığında, Kerberos uzantısı Active Directory site adını BELIRLEYEBILMEK için OTOMATIK olarak LDAP ve DNS kullanmaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi uzantının Active Directory site adını otomatik olarak bulmasına izin verebilir.
 - **Parola değişiklikleri** (yalnızca Kerberos): **Block** , kullanıcıların, girdiğiniz etki alanlarında oturum açmak için kullandıkları parolaları değiştirmelerini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi parola değişikliklerine izin verebilir.  
 - **Parola eşitleme** (yalnızca Kerberos): kullanıcılarınızın yerel PAROLALARıNı Azure AD 'ye eşitlemek için **Etkinleştir** ' i seçin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi Azure AD 'ye parola eşitlemeyi devre dışı bırakabilir. Bu ayarı, SSO için alternatif veya yedekleme olarak kullanın. Kullanıcılar bir Apple mobil hesabıyla oturum açmışsa bu ayar çalışmaz.
-- **Windows Server Active Directory parola karmaşıklığı** (yalnızca Kerberos): kullanıcı parolalarının Active Directory parola karmaşıklığı gereksinimlerini karşılamasına zorlamak için **gerektir** ' i seçin. Daha fazla bilgi için bkz. [parolanın karmaşıklık gereksinimlerini karşılaması gerekir](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Active Directory parola gereksinimini karşılamasını gerektirmeyebilir.
+- **Windows Server Active Directory parola karmaşıklığı** (yalnızca Kerberos): kullanıcı parolalarının Active Directory parola karmaşıklığı gereksinimlerini karşılamasına zorlamak için **gerektir** ' i seçin. Daha fazla bilgi için bkz. [parolanın karmaşıklık gereksinimlerini karşılaması gerekir](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Active Directory parola gereksinimini karşılamasını gerektirmeyebilir.
 - **Minimum parola uzunluğu** (yalnızca Kerberos): kullanıcıların parolalarını yapabilirler en az karakter sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcılara en az parola uzunluğu zorlayamayabilir.
 - **Parola yeniden kullanım sınırı** (yalnızca Kerberos): etki alanında önceki bir parolanın yeniden kullanılabilmesi için kullanılan yeni parola sayısını 1-24 ' dan girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi parola yeniden kullanım sınırını zorlayamayabilir.
 - **En az parola yaşı** (yalnızca Kerberos): kullanıcıların değiştirebilmesi için, etki alanında bir parolanın kullanıldığı gün sayısını girin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi değiştirilebilmesi için en az bir parola yaşı zorlamayamayabilir.

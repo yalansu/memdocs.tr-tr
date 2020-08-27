@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 92fa75794022123fd9456c40a50780a50f604662
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ff5c8208cb1ee9357c501a3c457bc346879b241d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819788"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88906710"
 ---
 # <a name="settings-for-windows-10-microsoft-defender-antivirus-policy-in-microsoft-intune"></a>Microsoft Intune 'de Windows 10 Microsoft Defender virüsten koruma ilkesi ayarları
 
@@ -36,7 +36,7 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
 **Ayarlar**:
 
 - **Buluta teslim edilen korumayı aç**  
-  CSP: [Allowcloudprotection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [Allowcloudprotection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Varsayılan olarak, Windows 10 masaüstü cihazlarındaki Defender, bulduğu sorunlar hakkında Microsoft 'a bilgi gönderir. Microsoft, sizi ve diğer müşterileri etkileyen sorunlar hakkında daha fazla bilgi edinmek için bu bilgileri çözümleyerek geliştirilmiş çözümler sunar.
 
@@ -45,7 +45,7 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   - **Evet** -buluta teslim edilen koruma açıktır.  Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Buluta teslim edilen koruma düzeyi**  
-  CSP: [Cloudblocklevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP: [Cloudblocklevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Agresif Defender virüsten koruma 'nın şüpheli dosyaları engelleme ve tarama hakkında daha fazla yapılandırma.
   - **Yapılandırılmadı** (*varsayılan*)-varsayılan Defender engelleme düzeyi.
@@ -54,7 +54,7 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   - **Sıfır toleransı** -tüm bilinmeyen yürütülebilir dosyaları engelle.
 
 - **Defender bulut uzatılmış zaman aşımı (saniye)**  
-  CSP: [Cloudextendedtimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP: [Cloudextendedtimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender virüsten koruma, güvenli olduklarından emin olmak için, şüpheli dosyaları bulutta taradığından otomatik olarak 10 saniye engeller. Bu zaman aşımı için en fazla 50 ek saniye ekleyebilirsiniz.
 
@@ -70,17 +70,17 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
 Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir ve sonra dışlama için bir değer belirtebilirsiniz.
 
 - **Dışlanacak Defender işlemi**  
-  CSP: [Excludedprocesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP: [Excludedprocesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   Bir tarama sırasında yoksayılacak işlem tarafından açılan dosyaların listesini belirtin. İşlemin kendisi taramadan çıkarılmaz.
 
 - **Taramalardan ve gerçek zamanlı korumanın dışında tutulacak dosya uzantıları**  
-  CSP: [ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   Tarama sırasında yoksayılacak dosya türü uzantılarının listesini belirtin.
 
 - **Dışlanacak Defender dosyaları ve klasörleri**  
-  CSP: [Excludedpaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP: [Excludedpaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   Tarama sırasında yoksayılacak dosya ve Dizin yollarının listesini belirtin.
 
@@ -93,7 +93,7 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
 **Ayarlar**:
 
 - **Gerçek zamanlı korumayı aç**  
-  CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   Windows 10 Masaüstü cihazlarında Defender 'ın gerçek zamanlı Izleme işlevini kullanmasını gerektir.
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir
@@ -127,7 +127,7 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   - **Evet** -gerçek zamanlı davranış izlemenin kullanımını zorunlu tutun. Cihaz kullanıcıları bu ayarı değiştiremezler.
 
 - **Ağ korumasını aç**  
-  CSP: [Enablenetworkprotection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  CSP: [Enablenetworkprotection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
   Herhangi bir uygulamanın kimlik avı dolandırıcılığı, yararlanma siteleri ve Internet 'teki kötü amaçlı içeriklere erişmesini kullanarak cihaz kullanıcılarını koruyun. Koruma, üçüncü taraf tarayıcıların tehlikeli sitelere bağlanmasını engellemeyi de kapsar.
 
@@ -321,14 +321,14 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   İmzaları denetlemek için kullanılan aralığı sıfır ile 24 arasında (saat cinsinden) belirtin. Sıfır değeri, yeni imzalar için denetim yok sonucunu vermez. 2 değeri her iki saatte bir denetlenir ve bu şekilde devam eder.
 
 - **Tanım güncelleştirmelerini indirmek için dosya paylaşımlarını tanımlayın**  
-  CSP: [Signatureupdatefallkarşılanamayan](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
+  CSP: [Signatureupdatefallkarşılanamayan](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefallbackorder)
 
   Tanım güncelleştirmelerini almak için bir indirme kaynağı konumu olarak bir UNC dosya paylaşma gibi konumları yönetin. Tanım güncelleştirmeleri belirtilen bir kaynaktan başarıyla indirildikten sonra, listedeki kalan kaynaklara başvurulmaz.
 
   Ayrı konumlar **ekleyebilir** veya konumların bir listesini. csv dosyası olarak **içeri aktarabilirsiniz** .
 
 - **Tanım güncelleştirmelerini indirmek için kaynak sırasını tanımlayın**  
-  CSP: [Signatureupdatefilesharessources](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
+  CSP: [Signatureupdatefilesharessources](/windows/client-management/mdm/policy-csp-defender#defender-signatureupdatefilesharessources)
 
   Tanım güncelleştirmelerini almak için belirttiğiniz kaynak konumlarına hangi sırada başvurdığınızı belirtin. Tanım güncelleştirmeleri belirtilen bir kaynaktan başarıyla indirildikten sonra, listedeki kalan kaynaklara başvurulmaz.
 
@@ -346,4 +346,3 @@ Bu ayarlar aşağıdaki profillerde mevcuttur:
   - **Yapılandırılmadı** (*varsayılan*)-ayar, Kullanıcı arabirimi ve bildirimlerine izin verilen istemci varsayılan değerini döndürür.
   - **Hayır** -Defender Kullanıcı ARABIRIMINE (UI) erişilemiyor ve bildirimler Ware gizlendi.
   - **Evet**
-
