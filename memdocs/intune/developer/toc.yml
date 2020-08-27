@@ -69,11 +69,11 @@
                   href: reports-ref-user.md
         - name: Intune Veri Ambarı hesabı verilerinizi taşıma
           href: data-warehouse-account-move.md
-    - name: Microsoft Graph’te Intune API’lerine erişme
+    - name: Microsoft Graph’ta Intune API’lerine erişme
       items:
         - name: Microsoft Graph Intune API'lere erişmek için Azure AD kullanın
           href: intune-graph-apis.md
         - name: Intune API başvurusu
-          href: 'https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview'
+          href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
         - name: Cihazları yapılandırmak için kullanılan Graph API’ler
           href: graph-apis-used-by-intune-device-configuration-windows.md
