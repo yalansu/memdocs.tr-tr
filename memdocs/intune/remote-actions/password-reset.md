@@ -15,12 +15,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d491fba013df10b6576f49b1e00ab9a1ea18f482
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: cb73653684251be46789104a6c98b627fa4a529e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79324978"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914302"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Self servis parola sıfırlama ile yardım masası maliyetlerini azaltma
 
@@ -32,16 +32,16 @@ ms.locfileid: "79324978"
 
 ## <a name="action-plan"></a>Eylem planı
 
-1. [Azure Active Directory self servis parola sıfırlamayı](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-overview) öğrenin. 
-2. Çalışanlardan ve öğrencilerden [self servis parola sıfırlamaya kaydolmalarını](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-reset-register) isteyin.
-3. Gelecek başvurular için, çalışanlara ve öğrencilere [parola sıfırlama veya değiştirme](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-update-your-own-password) hakkında yönergeler sağlayın.
-4. [Self servis parola sıfırlamayı etkinleştirin](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-getting-started).
+1. [Azure Active Directory self servis parola sıfırlamayı](/azure/active-directory/active-directory-passwords-overview) öğrenin. 
+2. Çalışanlardan ve öğrencilerden [self servis parola sıfırlamaya kaydolmalarını](/azure/active-directory/active-directory-passwords-reset-register) isteyin.
+3. Gelecek başvurular için, çalışanlara ve öğrencilere [parola sıfırlama veya değiştirme](/azure/active-directory/active-directory-passwords-update-your-own-password) hakkında yönergeler sağlayın.
+4. [Self servis parola sıfırlamayı etkinleştirin](/azure/active-directory/active-directory-passwords-getting-started).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Aşağıdaki makalelerde daha fazla bilgi edinin:
 
-* [Parolalarla ilgili en iyi yöntemler](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 
-* [Self servis parola sıfırlama lisansı](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords)
+* [Parolalarla ilgili en iyi yöntemler](/azure/active-directory/active-directory-secure-passwords) 
+* [Self servis parola sıfırlama lisansı](/azure/active-directory/active-directory-secure-passwords)
 
-Bunu veya diğer EMS ya da Office 365 senaryolarını etkinleştirmek için yardıma mı ihtiyacınız var? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.
+Bunu veya diğer EMS ya da Office 365 senaryolarını etkinleştirmek için yardıma mı ihtiyacınız var? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.

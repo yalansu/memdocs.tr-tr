@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69b4df0b5ceb947ab875f82a0d6f5ac59ce89eef
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: e2a00ef50676ee24de30f93ad5b5ddd88192b6db
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252631"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915087"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Intune kullanarak cihazları korumak için Windows 10 (ve üzeri) ayarları
 
@@ -34,7 +34,7 @@ Microsoft Defender virüsten koruma yapılandırmak için bkz. [Windows 10 cihaz
 
 [Endpoint Protection cihaz yapılandırma profili oluşturun](endpoint-protection-configure.md).  
 
-Yapılandırma hizmeti sağlayıcıları (CSP 'Ler) hakkında daha fazla bilgi için bkz. [yapılandırma hizmeti sağlayıcısı başvurusu](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).  
+Yapılandırma hizmeti sağlayıcıları (CSP 'Ler) hakkında daha fazla bilgi için bkz. [yapılandırma hizmeti sağlayıcısı başvurusu](/windows/client-management/mdm/configuration-service-provider-reference).  
 
 ## <a name="microsoft-defender-application-guard"></a>Microsoft Defender Application Guard  
 
@@ -44,7 +44,7 @@ Application Guard yalnızca Windows 10 (64 bit) cihazlar için kullanılabilir. 
 
 - **Application Guard**  
   **Varsayılan**: yapılandırılmadı  
-   Application Guard CSP: [Settings/Allowwindowssavunma Derapplicationguard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
+   Application Guard CSP: [Settings/Allowwindowssavunma Derapplicationguard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
 
   - **Edge Için etkinleştirildi** -güvenilmeyen siteleri bir Hyper-V sanallaştırılmış gözatma kapsayıcısında açan bu özelliği açar.  
   - **Yapılandırılmadı** -cihazda herhangi bir site (güvenilen ve güvenilmeyen) açılabilir.  
@@ -63,7 +63,7 @@ Application Guard yalnızca Windows 10 (64 bit) cihazlar için kullanılabilir. 
 - **Pano içeriği**  
   Bu ayar yalnızca *Pano davranışı* *izin verme* ayarlarından birine ayarlandığında kullanılabilir.  
   **Varsayılan**: yapılandırılmadı  
-  Application Guard CSP: [Ayarlar/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
+  Application Guard CSP: [Ayarlar/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
   İzin verilen Pano içeriğini seçin.  
   - **Yapılandırılmadı**  
@@ -315,19 +315,19 @@ Bir veya daha fazla özel güvenlik duvarı kuralı **ekleyebilirsiniz** . Daha 
 
 - **Görünüm**   
   **Varsayılan**: yapılandırılmadı  
-  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Direction](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#direction)  
+  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Direction](/windows/client-management/mdm/firewall-csp#direction)  
   
   Bu kuralın **gelen**veya **giden** trafiğe uygulanacağını belirtin. **Yapılandırılmadı**olarak ayarlandığında, kural otomatik olarak giden trafiğe uygulanır.  
 
 - **Eylem**  
   **Varsayılan**: yapılandırılmadı  
-  Güvenlik Duvarı CSP: [FirewallRules/*firewallrulename*/Action](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#action)ve [FirewallRules/*firewallrulename*/Action/Type](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#type)  
+  Güvenlik Duvarı CSP: [FirewallRules/*firewallrulename*/Action](/windows/client-management/mdm/firewall-csp#action)ve [FirewallRules/*firewallrulename*/Action/Type](/windows/client-management/mdm/firewall-csp#type)  
 
   **Izin ver** veya **Engelle**arasından seçim yapın. **Yapılandırılmadı**olarak ayarlandığında, kural varsayılan trafiğe izin verir.  
 
 - **Ağ türü**  
   **Varsayılan**: 0 seçili  
-  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Profiles](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#profiles)  
+  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Profiles](/windows/client-management/mdm/firewall-csp#profiles)  
 
   Bu kuralın ait olduğu üç tür ağ türünü seçin. **Etki alanı**, **özel**ve **ortak**seçenekleri içerir.  Herhangi bir ağ türü seçilmezse, kural üç ağ türüne uygulanır.  
 
@@ -338,13 +338,13 @@ Bir veya daha fazla özel güvenlik duvarı kuralı **ekleyebilirsiniz** . Daha 
 
   Bir uygulama veya program için bağlantıları denetleme. Aşağıdaki seçeneklerden birini belirleyin ve ardından ek yapılandırmayı doldurun:  
   - **Paket aile adı** – bir paket aile adı belirtin. Paket aile adını bulmak için **Get-AppxPackage**PowerShell komutunu kullanın.   
-    Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
+    Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/App/PackageFamilyName](/windows/client-management/mdm/firewall-csp#packagefamilyname)  
  
   - **Dosya yolu** – istemci cihazında bir uygulamanın yolunu, mutlak bir yol veya göreli bir yol olabilen bir dosya yolu belirtmeniz gerekir. Örneğin: C:\Windows\System\Notepad.exe veya% WINDIR% \Notepad.exe.  
-    Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
+    Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)  
 
   - **Windows hizmeti** – trafik gönderen veya alan bir uygulama değil, bir hizmet Ise, Windows hizmeti kısa adını belirtin. Hizmet kısa adını bulmak için, **Get-Service**PowerShell komutunu kullanın.  
-    Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
+    Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)  
 
   - **Tümü**– *ek yapılandırma kullanılamaz*.  
 
@@ -354,7 +354,7 @@ Bu kuralın uygulandığı yerel ve uzak adresleri belirtin.
 
 - **Yerel adresler**    
   **Varsayılan**: herhangi bir adres  
-  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Localportranges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
+  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Localportranges](/windows/client-management/mdm/firewall-csp#localportranges)  
 
   **Herhangi bir adresi** veya **belirtilen adresi**seçin.  
 
@@ -367,7 +367,7 @@ Bu kuralın uygulandığı yerel ve uzak adresleri belirtin.
 
 - **Uzak adresler**  
   **Varsayılan**: herhangi bir adres  
-  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Remoteaddressranges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Remoteaddressranges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
  
   **Herhangi bir adresi** veya **belirtilen adresi**seçin.  
 
@@ -392,21 +392,21 @@ Bu kuralın uygulandığı yerel ve uzak bağlantı noktalarını belirtin.
 
 - **Protokol**  
   **Varsayılan**: any  
-  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)  
+  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/Protocol](/windows/client-management/mdm/firewall-csp#protocol)  
   Aşağıdakilerden birini seçin ve gerekli tüm konfigürasyonları doldurun:  
   - **Tümü** – ek yapılandırma kullanılamaz.  
   - **TCP** – yerel ve uzak bağlantı noktalarını yapılandırın. Her iki seçenek de tüm bağlantı noktalarını veya belirtilen bağlantı noktalarını destekler. Virgülle ayrılmış bir liste kullanarak belirtilen bağlantı noktalarını girin.  
-    - **Yerel bağlantı noktaları** -GÜVENLIK duvarı CSP: [FirewallRules/*firewallrulename*/localportranges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **Uzak bağlantı noktaları** -GÜVENLIK duvarı CSP: [FirewallRules/*firewallrulename*/remoteportranges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **Yerel bağlantı noktaları** -GÜVENLIK duvarı CSP: [FirewallRules/*firewallrulename*/localportranges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Uzak bağlantı noktaları** -GÜVENLIK duvarı CSP: [FirewallRules/*firewallrulename*/remoteportranges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **UDP** – yerel ve uzak bağlantı noktalarını yapılandırın. Her iki seçenek de tüm bağlantı noktalarını veya belirtilen bağlantı noktalarını destekler. Virgülle ayrılmış bir liste kullanarak belirtilen bağlantı noktalarını girin.  
-    - **Yerel bağlantı noktaları** -GÜVENLIK duvarı CSP: [FirewallRules/*firewallrulename*/localportranges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
-    - **Uzak bağlantı noktaları** -GÜVENLIK duvarı CSP: [FirewallRules/*firewallrulename*/remoteportranges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+    - **Yerel bağlantı noktaları** -GÜVENLIK duvarı CSP: [FirewallRules/*firewallrulename*/localportranges](/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Uzak bağlantı noktaları** -GÜVENLIK duvarı CSP: [FirewallRules/*firewallrulename*/remoteportranges](/windows/client-management/mdm/firewall-csp#remoteportranges)  
   - **Özel** – 0 ile 255 arasında özel bir **protokol** belirtin.  
 
 #### <a name="advanced-configuration"></a>Gelişmiş yapılandırma  
 - **Arabirim türleri**  
   **Varsayılan**: 0 seçili  
-  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/InterfaceType](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#interfacetypes)  
+  Güvenlik Duvarı CSP: [FirewallRules/*Firewallrulename*/InterfaceType](/windows/client-management/mdm/firewall-csp#interfacetypes)  
 
   Aşağıdaki seçeneklerden seçim yapın:  
   - **Uzaktan erişim**  
@@ -483,7 +483,7 @@ Temel ayarlar, tüm veri sürücüsü türleri için evrensel BitLocker ayarlar�
   - **Standart kullanıcıların Azure AD katılımı sırasında şifrelemeyi etkinleştirmesine izin ver**  
     *Bu ayar yalnızca Azure Active Directory katılmış (Azure SıFATı) cihazları için geçerlidir ve önceki ayara bağlıdır `Warning for other disk encryption` .*  
     **Varsayılan**: yapılandırılmadı  
-    BitLocker CSP: [Allowstandarduserencryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
+    BitLocker CSP: [Allowstandarduserencryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
      - **Izin ver** -standart kullanıcılar (yönetici olmayanlar), oturum açıldığında BitLocker şifrelemesini etkinleştirebilir.  
      - **Yapılandırılmamış** yalnızca Yöneticiler cihazda BitLocker şifrelemesini etkinleştirebilir.  
@@ -656,7 +656,7 @@ Bu ayarlar, belirli işletim sistemi veri sürücüleri için geçerlidir.
 
   - **İstemci tabanlı kurtarma parolası döndürme**  
     **Varsayılan**: Azure AD 'ye katılmış cihazlar için anahtar döndürme etkin  
-    BitLocker CSP: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
+    BitLocker CSP: [ConfigureRecoveryPasswordRotation](/windows/client-management/mdm/bitlocker-csp)  
     
     Bu ayar, bir işletim sistemi sürücü kurtarmasından sonra (Bootmgr veya WinRE kullanarak) istemci tabanlı bir kurtarma parolası dönüşü başlatır.  
 
@@ -780,7 +780,7 @@ Bu ayarlar özellikle çıkarılabilir veri sürücülerine uygulanır.
  
 ## <a name="microsoft-defender-exploit-guard"></a>Microsoft Defender Exploit Guard  
 
-Çalışanlarınız tarafından kullanılan uygulamaların saldırı yüzeyini yönetmek ve azaltmak için [Exploit Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) 'ı kullanın.  
+Çalışanlarınız tarafından kullanılan uygulamaların saldırı yüzeyini yönetmek ve azaltmak için [Exploit Protection](/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) 'ı kullanın.  
 
 ### <a name="attack-surface-reduction"></a>Saldırı Yüzeyini Azaltma  
 
@@ -790,7 +790,7 @@ Saldırı yüzeyi azaltma kuralları, bir kötü amaçlı yazılımın kötü am
 
 - **Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalma eylemlerine bayrak ekleme**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalınmasını engelle (lsass.exe)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
+  Kural: [Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalınmasını engelle (lsass.exe)](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem)
 
   Genellikle makinelere bulaşmak için açık arayan kötü amaçlı yazılımlar tarafından kullanılan eylem ve uygulamaları önlemeye yardımcı olun.  
 
@@ -800,7 +800,7 @@ Saldırı yüzeyi azaltma kuralları, bir kötü amaçlı yazılımın kötü am
 
 - **Adobe Reader 'dan işlem oluşturma (Beta)**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [Adobe Reader 'ın alt işlem oluşturmasını engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
+  Kural: [Adobe Reader 'ın alt işlem oluşturmasını engelle](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes)  
 
   - **Yapılandırılmadı**  
   - **Enable** -Adobe Reader 'dan oluşturulan alt süreçlerini engelleyin.  
@@ -812,7 +812,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
 
 - **Office uygulamalarının diğer işlemlere katılması (özel durum yok)**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [Office uygulamalarının ekleme koddan diğer Işlemlere engel](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
+  Kural: [Office uygulamalarının ekleme koddan diğer Işlemlere engel](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **Yapılandırılmadı**  
   - **Engelle** -Office uygulamalarının diğer işlemlere ekleme engelleyin.  
@@ -820,7 +820,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
 
 - **Office uygulamaları/makrolarının yürütülebilir içerik oluşturması**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [Office uygulamalarının yürütülebilir içerik oluşturmasını engelleyin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
+  Kural: [Office uygulamalarının yürütülebilir içerik oluşturmasını engelleyin](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **Yapılandırılmadı**  
   - **Engelle** -Office uygulamalarının ve makroların yürütülebilir içerik oluşturmasını engelleyin.  
@@ -828,7 +828,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
 
 - **Office uygulamalarının alt işlemler başlatması**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [tüm Office uygulamalarının alt işlem oluşturmasını engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
+  Kural: [tüm Office uygulamalarının alt işlem oluşturmasını engelle](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **Yapılandırılmadı**  
   - **Engelle** -Office uygulamalarının alt işlemlerin başlatılmasını engelleyin.  
@@ -836,7 +836,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
   
 - **Win32’nin Office makro kodundan içeri aktarması**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [Office makrolarından gelen Win32 API çağrıları engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
+  Kural: [Office makrolarından gelen Win32 API çağrıları engelle](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **Yapılandırılmadı**  
   - **Block** -Office 'teki makro kodundan Win32 içeri aktarmaları engelleyin.  
@@ -844,7 +844,7 @@ Office uygulamalarının aşağıdaki eylemleri yapmasını engelleyin:
   
 - **Office iletişim ürünlerinden işlem oluşturma**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [Office iletişim uygulamasının alt işlem oluşturmasını engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
+  Kural: [Office iletişim uygulamasının alt işlem oluşturmasını engelle](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
   - **Yapılandırılmadı**  
   - **Enable** -Office iletişim uygulamalarından alt işlem oluşturmayı engelleyin.  
@@ -856,7 +856,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
 
 - **Karartılmış js/vbs/ps/makro kod**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [büyük olasılıkla karıştırılmış betiklerin yürütülmesini engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
+  Kural: [büyük olasılıkla karıştırılmış betiklerin yürütülmesini engelle](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - **Yapılandırılmadı**  
   - **Block** -tüm karıştırılmış js/vbs/PS/makro kodunu engelleyin.  
@@ -864,7 +864,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
 
 - **İnternetten indirilen zararlı yükü yürüten js/vbs(özel durum yok)**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [JavaScript veya VBScript 'in indirilen yürütülebilir içeriği başlatmasını engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
+  Kural: [JavaScript veya VBScript 'in indirilen yürütülebilir içeriği başlatmasını engelle](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **Yapılandırılmadı**  
   - **Block** -Block js/vbs, Internet 'ten indirilen yükü yürütmeyi engelliyor.  
@@ -872,7 +872,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
 
 - **PSExec ve WMI komutlarından işlem oluşturma**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [PSExec ve WMI komutlarından kaynaklanan işlem oluşturma Işlemlerini engelleyin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
+  Kural: [PSExec ve WMI komutlarından kaynaklanan işlem oluşturma Işlemlerini engelleyin](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
   - **Yapılandırılmadı**  
   - **Blok** -PSExec ve WMI komutlarından kaynaklanan işlem oluşturma işlemlerini engelleyin.  
@@ -881,7 +881,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
 
 - **USB’den çalışan güvenilmeyen ve imzasız işlemler**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [USB 'den çalıştırılan güvenilmeyen ve imzasız Işlem engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
+  Kural: [USB 'den çalıştırılan güvenilmeyen ve imzasız Işlem engelle](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb)    
 
   - **Yapılandırılmadı**  
   - **Engelle** -USB 'den çalıştırılan güvenilmeyen ve imzasız işlem engelle.  
@@ -889,7 +889,7 @@ Komut dosyası tehditlerini önlemeye yardımcı olmak için aşağıdakileri en
   
 - **Yaygınlık, Yaş veya güvenilen liste ölçütlerine uymayan yürütülebilir dosyalar**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [bir Preter, Age veya güvenilir liste ölçütüne uymadıkları takdirde yürütülebilir dosyaların çalıştırılmasını engelleyin](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
+  Kural: [bir Preter, Age veya güvenilir liste ölçütüne uymadıkları takdirde yürütülebilir dosyaların çalıştırılmasını engelleyin](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
   - **Yapılandırılmadı**  
   - **Blok** blokları, bir Preter, Age veya güvenilir liste ölçütlerine uymadığı müddetçe yürütülebilir dosyaların çalıştırılmasını engeller.  
@@ -901,7 +901,7 @@ E-posta tehditlerini önlemeye yardımcı olmak için aşağıdakileri engelleyi
 
 - **E-postadan (web posta/posta istemcisi) gelen yürütülebilir içeriklerin (exe, dll, ps, js, vbs vb.) yürütülmesi**  
   **Varsayılan**: yapılandırılmadı  
-  Kural: [e-posta istemcisinden ve Web postasından 'ten yürütülebilir içeriği engelle](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
+  Kural: [e-posta istemcisinden ve Web postasından 'ten yürütülebilir içeriği engelle](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **Yapılandırılmadı**  
   - **Block** -email (exe, dll, PS, js, vbs, vb.), e-postadan (Webmail/mail-Client) bırakılan yürütülebilir içeriklerin (exe, dll, PS  
@@ -911,7 +911,7 @@ E-posta tehditlerini önlemeye yardımcı olmak için aşağıdakileri engelleyi
 
 - **Gelişmiş fidye yazılımı koruması**  
   Varsayılan: yapılandırılmadı  
-  Kural: [fidye yazılımı ile gelişmiş koruma kullan](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
+  Kural: [fidye yazılımı ile gelişmiş koruma kullan](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
   - **Yapılandırılmadı**  
   - **Enable** -agresif fidye yazılımı korumasını kullanın.  
@@ -940,7 +940,7 @@ E-posta tehditlerini önlemeye yardımcı olmak için aşağıdakileri engelleyi
 
 ### <a name="controlled-folder-access"></a>Denetlenen klasör erişimi  
 
-Fidye yazılımı gibi kötü amaçlı uygulamalardan ve tehditlerden [değerli verileri korumaya](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) yardımcı olun.  
+Fidye yazılımı gibi kötü amaçlı uygulamalardan ve tehditlerden [değerli verileri korumaya](/windows/security/threat-protection/microsoft-defender-atp/controlled-folders) yardımcı olun.  
 
 - **Klasör koruması**  
   **Varsayılan**: yapılandırılmadı  
@@ -986,7 +986,7 @@ Herhangi bir uygulamadan gelen giden bağlantıları, düşük itibarlı sahip I
 - **XML 'yi karşıya yükle**  
   **Varsayılan**: *Yapılandırılmadı*  
 
-  [Cihazların kötüye kullanımını korumak](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)üzere Exploit Protection 'ı kullanmak için, istediğiniz sistem ve uygulama azaltma ayarlarını IÇEREN bir XML dosyası oluşturun. XML dosyasını oluşturmak için iki yöntem vardır:  
+  [Cihazların kötüye kullanımını korumak](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)üzere Exploit Protection 'ı kullanmak için, istediğiniz sistem ve uygulama azaltma ayarlarını IÇEREN bir XML dosyası oluşturun. XML dosyasını oluşturmak için iki yöntem vardır:  
 
   - *PowerShell* - *Get-processhafifletme*, *set-Processazaltma*ve *ConvertTo-ProcessMitigationPolicy* PowerShell cmdlet 'lerinden bir veya daha fazlasını kullanın. Cmdlet'ler risk azaltma ayarlarını yapılandırır ve bunların XML gösterimini dışarı aktarır.  
 
@@ -1043,7 +1043,7 @@ Microsoft Defender Credential Guard, kimlik bilgilerinin hırsızlık saldırıl
 
 ## <a name="microsoft-defender-security-center"></a>Microsoft Defender Güvenlik Merkezi  
 
-Microsoft Defender Güvenlik Merkezi, her bir özelliklerden ayrı bir uygulama veya işlem olarak çalışır. İşlem Merkezi aracılığıyla bildirimler gösterir. Durumu görmek için bir toplayıcı veya tek bir yer görevi görür ve özelliklerin her biri için bir yapılandırma çalıştırın. [Microsoft Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) belgeleri ' nde daha fazla bilgi edinin.  
+Microsoft Defender Güvenlik Merkezi, her bir özelliklerden ayrı bir uygulama veya işlem olarak çalışır. İşlem Merkezi aracılığıyla bildirimler gösterir. Durumu görmek için bir toplayıcı veya tek bir yer görevi görür ve özelliklerin her biri için bir yapılandırma çalıştırın. [Microsoft Defender](/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) belgeleri ' nde daha fazla bilgi edinin.  
 
 ### <a name="microsoft-defender-security-center-app-and-notifications"></a>Microsoft Defender Güvenlik Merkezi uygulaması ve bildirimleri  
 
@@ -1257,7 +1257,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
 
 - **Oturum açmadan cihazı çıkar**  
   **Varsayılan**: yapılandırılmadı  
-  LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
+  LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
 
   - **Engelle** -bir kullanıcının cihazda oturum açması ve cihazı yuvadan çıkarmak için izin alması gerekir.
   - **Yapılandırılmadı** -kullanıcılar, cihazı güvenle çıkarmak için sabitlenmiş bir taşınabilir cihazın fiziksel çıkarma düğmesine basabilir.
@@ -1321,7 +1321,7 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
 
 - **Kilit ekranında Kullanıcı bilgileri**  
   **Varsayılan**: yapılandırılmadı  
-  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
 
   Oturum kilitlendiğinde görüntülenen kullanıcı bilgilerini yapılandırın. Yapılandırılmazsa, kullanıcı görünen adı, etki alanı ve kullanıcı adı gösterilir.  
 
@@ -1648,4 +1648,4 @@ Windows 10 cihazlarında yerel güvenlik ayarlarını yapılandırmak için bu s
 
 Profil oluşturulur ancak henüz herhangi bir işlem gerçekleştirmez. Sonra, [profili atayın](../configuration/device-profile-assign.md)ve [durumunu izleyin](../configuration/device-profile-monitor.md).  
 
-[MacOS](endpoint-protection-macos.md) cihazlarında Endpoint korumaların ayarlarını yapılandırın.  
+[MacOS](endpoint-protection-macos.md) cihazlarında Endpoint korumaların ayarlarını yapılandırın.

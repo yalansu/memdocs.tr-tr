@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 1acbb00e5da0766685233cf7136caf8320564200
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 199bd8f267cc84492b21af83bf0761474080f11b
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83878079"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913418"
 ---
 # <a name="effects-of-company-portal-ios-device-reset"></a>Şirket Portalı iOS cihaz sıfırlamasının etkileri 
 
@@ -42,6 +42,6 @@ Cihazınız yalnızca iş veya okul e-postasına erişmek için ayarlandıysa:
 
 - İş veya okul e-posta hesabınız silinecek. Kaydedilmemiş e-postalar silinir.   
 
-Cihaz sıfırlama seçeneği tüm iOS cihazları için kullanılamaz. BT destek sorumlunuza sahipseniz ve bu sınırlamalar hakkında daha fazla bilgi edinmek istiyorsanız, bkz. [cihazı silme, devre dışı bırakma veya el ile kaldırma kullanarak cihazları kaldırma](https://docs.microsoft.com/intune/devices-wipe).  
+Cihaz sıfırlama seçeneği tüm iOS cihazları için kullanılamaz. BT destek sorumlunuza sahipseniz ve bu sınırlamalar hakkında daha fazla bilgi edinmek istiyorsanız, bkz. [cihazı silme, devre dışı bırakma veya el ile kaldırma kullanarak cihazları kaldırma](/intune/devices-wipe).  
 
 Sorularınız varsa BT destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

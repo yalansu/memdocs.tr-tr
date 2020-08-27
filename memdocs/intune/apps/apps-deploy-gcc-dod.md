@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e98171955ed4f026da4c983e6ca8959cfe2606a
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 9fb3556d363d2e831861a15aeadfb78bc2fa7dbb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217232"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914115"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>GCC High ve DoD ortamlarında Intune kullanarak uygulama dağıtma 
 
@@ -38,7 +38,7 @@ Intune kullanarak GCC High veya DoD ortamına yönelik bir iş kolu uygulaması 
 
 ## <a name="distribute-offline-apps-from-the-store-for-business-using-intune"></a>Intune kullanarak Iş için mağazadan çevrimdışı uygulamalar dağıtma  
 
-Iş için Microsoft Store [çevrimdışı lisansa sahip bir uygulamayı indirmeniz](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) gerekiyorsa, uygulamayı indirmek için şu adımları izleyin: 
+Iş için Microsoft Store [çevrimdışı lisansa sahip bir uygulamayı indirmeniz](/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) gerekiyorsa, uygulamayı indirmek için şu adımları izleyin: 
 
 1. [İş Için mağazada](https://businessstore.microsoft.com/)oturum açın.
 2. Ayarları **Yönet**' i seçin  >  **Settings**.
@@ -48,7 +48,7 @@ Uygulamalar için alışveriş yaparken, çevrimdışı bir sürüm varsa, lisan
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>Intune 'U Iş için mağazaya eşitleme 
 
-Ticari (kamu dışı) bir ortamda yönetici, Intune 'u Iş için Microsoft Store eşitlenebilir. Bu, kamu ortamlarında kullanılabilir bir özellik değildir. Ticari ortamlarda Intune ve kamu ortamları için Intune arasındaki farklılıklar hakkında daha fazla bilgi için bkz. [US kamu hizmet açıklaması için Enterprise Mobility + Security](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description).  
+Ticari (kamu dışı) bir ortamda yönetici, Intune 'u Iş için Microsoft Store eşitlenebilir. Bu, kamu ortamlarında kullanılabilir bir özellik değildir. Ticari ortamlarda Intune ve kamu ortamları için Intune arasındaki farklılıklar hakkında daha fazla bilgi için bkz. [US kamu hizmet açıklaması için Enterprise Mobility + Security](/enterprise-mobility-security/solutions/ems-govt-service-description).  
 
 Intune 'U Iş için mağaza hesabınıza eşitlemek için, [Microsoft Intune iş için Microsoft Store satın aldığınız uygulamaları yönetme](windows-store-for-business.md)bölümüne bakın.  
 
@@ -60,4 +60,3 @@ Uygulamaların gizlilik ve Uyumluluk bildirimlerini gözden geçirin ve bu hizme
 
 Uygulama dağıtma ve atama hakkında daha fazla bilgi edinmek için bkz. [Microsoft Intune olan gruplara uygulama atama](apps-deploy.md).
 
- 

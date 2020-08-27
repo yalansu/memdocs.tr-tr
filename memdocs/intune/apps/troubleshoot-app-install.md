@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a1ed521067548f43dbcdca3dcbbf7455f255adf
-ms.sourcegitcommit: 6e9375afc0ba21893f51a40cce16d03a8ed21038
+ms.openlocfilehash: 287306a8a583dcb6a9617a2933cecb0223a25df4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86285292"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913112"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Uygulama yükleme sorunlarını giderme
 
@@ -113,8 +113,8 @@ Günlük dosyalarını toplamak için izlenmesi gereken belirli gereksinimler va
 ARM64 cihazlarında desteklenen uygulama türleri şunlardır:
 - Managed Browser 'ın açılmasını gerektirmeyen Web Apps. 
 - `.appx`Aşağıdaki ve öğelerinden herhangi biriyle iş uygulamaları veya Windows UNIVERSAL LOB uygulamaları () için Microsoft Store `TargetDeviceFamily` `ProcessorArchitectures` :
-  - `TargetDeviceFamily`Masaüstü uygulamaları, evrensel uygulamalar ve Windows8x uygulamaları içerir. Windows8x uygulamaları yalnızca Iş uygulamaları için çevrimiçi Microsoft Store olarak geçerlidir.
-  - `ProcessorArchitecture`x86 uygulamaları, ARM uygulamaları, ARM64 uygulamaları ve bağımsız uygulamalar içerir.
+  - `TargetDeviceFamily` Masaüstü uygulamaları, evrensel uygulamalar ve Windows8x uygulamaları içerir. Windows8x uygulamaları yalnızca Iş uygulamaları için çevrimiçi Microsoft Store olarak geçerlidir.
+  - `ProcessorArchitecture` x86 uygulamaları, ARM uygulamaları, ARM64 uygulamaları ve bağımsız uygulamalar içerir.
 - Windows Mağazası uygulamaları
 - Mobil MSI LOB uygulamaları
 - 32 bitlik gereksinim kuralına sahip Win32 uygulamaları.
@@ -125,7 +125,7 @@ ARM64 cihazlarında desteklenen uygulama türleri şunlardır:
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Microsoft Mağazası'ndan uygulama sorunlarını giderme
 
-[Microsoft Mağazası uygulamalarının paketleme, dağıtım ve sorgu sorunlarını giderme](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) konusunda yer alan bilgiler, Intune’u veya diğer araçları kullanarak Microsoft Mağazası’nden uygulama yüklerken karşılaşabileceğiniz genel sorunları gidermenize yardımcı olur.
+[Microsoft Mağazası uygulamalarının paketleme, dağıtım ve sorgu sorunlarını giderme](/windows/win32/appxpkg/troubleshooting) konusunda yer alan bilgiler, Intune’u veya diğer araçları kullanarak Microsoft Mağazası’nden uygulama yüklerken karşılaşabileceğiniz genel sorunları gidermenize yardımcı olur.
 
 ## <a name="app-troubleshooting-resources"></a>Uygulama sorun giderme kaynakları
 - [Microsoft 365 Apps dağıtımınızın bir parçası olarak Visio ve proje dağıtma](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Deploying-Visio-and-Project-as-part-of-your-Office/ba-p/701795)

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87f81c9f33fd267bcd57a14b59c88d36a937fecd
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: e700af4ef48f231f55fe515dadc2e852734d9ad3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865831"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915560"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune cihaz kaydı sorunlarını giderme
 
@@ -47,8 +47,8 @@ Ayrıca kullanıcının cihazında saatin ve tarihin doğru ayarlandığından e
 
 Yönetilen cihaz kullanıcılarınız, gözden geçirmeniz için kayıt ve tanılama günlüklerini toplayabilir. Kullanıcılar için günlükleri toplama yönergeleri, şu konu başlıkları altında sağlanır:
 
-- [Android kayıt hatalarını BT yöneticinize gönderme](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android)
-- [BT yöneticinize iOS/ıpados hataları gönderme](https://docs.microsoft.com/mem/intune/user-help/send-errors-to-your-it-admin-ios)
+- [Android kayıt hatalarını BT yöneticinize gönderme](../user-help/send-logs-to-your-it-admin-using-cable-android.md)
+- [BT yöneticinize iOS/ıpados hataları gönderme](../user-help/send-errors-to-your-it-admin-ios.md)
 
 
 ## <a name="general-enrollment-issues"></a>Genel kayıt sorunları
@@ -126,7 +126,7 @@ Cihaz sınırlarına ulaşmaktan kaçınmak için, eski cihaz kayıtlarını kal
 - kuruluşlarında kullanıcı UPN sonekleri için birden çok en üst düzey etki alanına sahip olma (örneğin @contoso.com veya @fabrikam.com).
 
 
-AD FS sunucusunun bu senaryoyu ek AD FS 2.0 sunucularına gerek kalmadan destekleyebilmesi için, bir [AD FS 2.0 dağıtımı](https://support.microsoft.com/kb/2607496)<strong>SupportMultipleDomain</strong> anahtarıyla birlikte çalışır. Daha fazla bilgi için [Bu bloga](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/)bakın.
+AD FS sunucusunun bu senaryoyu ek AD FS 2.0 sunucularına gerek kalmadan destekleyebilmesi için, bir [AD FS 2.0 dağıtımı](https://support.microsoft.com/kb/2607496)<strong>SupportMultipleDomain</strong> anahtarıyla birlikte çalışır. Daha fazla bilgi için [Bu bloga](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365)bakın.
 
 
 ## <a name="android-issues"></a>Android sorunları
@@ -215,7 +215,7 @@ Kullanıcı, [Cihazınızda gerekli bir sertifika eksik](../user-help/your-devic
 
 Kullanıcılar, şirket kimlik bilgilerini girdikten ve federe oturum açmaya yönlendirildikten sonra eksik sertifika hatasını hala görebilir. Bu durumda hata, Active Directory Federasyon Hizmetleri (AD FS) sunucunuzda bir ara sertifikanın eksik olduğu anlamına gelebilir
 
-Sertifika hatasının nedeni, Android cihazlarında [SSL Sunucu selamlamasına](https://technet.microsoft.com/library/cc783349.aspx) sertifikaların hemen eklenmesinin gerekli olmasıdır. Şu anda, varsayılan AD FS sunucusu veya WAP - AD FS Proxy sunucusu yüklemesi SSL İstemci selamlamasına yanıt olarak SSL sunucu selamlamasında yalnızca AD FS hizmeti SSL sertifikasını gönderir.
+Sertifika hatasının nedeni, Android cihazlarında [SSL Sunucu selamlamasına](/previous-versions/windows/it-pro/windows-server-2003/cc783349(v=ws.10)) sertifikaların hemen eklenmesinin gerekli olmasıdır. Şu anda, varsayılan AD FS sunucusu veya WAP - AD FS Proxy sunucusu yüklemesi SSL İstemci selamlamasına yanıt olarak SSL sunucu selamlamasında yalnızca AD FS hizmeti SSL sertifikasını gönderir.
 
 Sorunu düzeltmek için AD FS sunucusunda veya proxy’lerdeki Bilgisayar Kişisel Sertifikaları’na sertifikaları aşağıdaki gibi içeri aktarın:
 
@@ -294,9 +294,9 @@ Kullanıcı benzeşimi ile ADE cihazlarını kaydetme, Kullanıcı belirteçleri
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
 ```
 
-Daha fazla bilgi için [Get-AdfsEndpoint belgelerine](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) bakın.
+Daha fazla bilgi için [Get-AdfsEndpoint belgelerine](/powershell/module/adfs/get-adfsendpoint?view=win10-ps) bakın.
 
-Daha fazla bilgi için bkz. [Active Directory Federasyon Hizmetleri’nin güvenliğini sağlamak için en iyi yöntemler](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/operations/best-practices-securing-ad-fs). WS-Trust 1.3 Kullanıcı adı/Karma'nın kimlik federasyon sağlayıcınızda etkin olup olmadığının belirlenmesine yardımcı olması için:
+Daha fazla bilgi için bkz. [Active Directory Federasyon Hizmetleri’nin güvenliğini sağlamak için en iyi yöntemler](/windows-server/identity/ad-fs/deployment/Best-Practices-Securing-AD-FS). WS-Trust 1.3 Kullanıcı adı/Karma'nın kimlik federasyon sağlayıcınızda etkin olup olmadığının belirlenmesine yardımcı olması için:
 - ADFS kullanıyorsanız Microsoft Desteği'ne başvurun
 - üçüncü taraf kimlik satıcınıza başvurun.
 

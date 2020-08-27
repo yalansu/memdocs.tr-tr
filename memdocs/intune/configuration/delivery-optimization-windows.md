@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: e42d7f303d3d79e2683845b50c7d3dceb11f1686
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3ffef32f4f33e79b25145dd4c0257b8a5bcfd32a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820451"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913775"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Microsoft Intune teslim Iyileştirme ayarları
 
@@ -30,7 +30,7 @@ Bu makalede, teslim Iyileştirme ayarlarının cihaz yapılandırma profilinin b
 
 Intune 'un desteklediği teslim Iyileştirme ayarlarının listesini görüntülemek için, bkz. [Intune Için teslim iyileştirme ayarları](delivery-optimization-settings.md).  
 
-Windows 10 ' da teslim Iyileştirmesi hakkında bilgi edinmek için Windows belgelerindeki [teslim iyileştirme güncelleştirmeleri](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) bölümüne bakın.  
+Windows 10 ' da teslim Iyileştirmesi hakkında bilgi edinmek için Windows belgelerindeki [teslim iyileştirme güncelleştirmeleri](/windows/deployment/update/waas-delivery-optimization) bölümüne bakın.  
 
 ## <a name="create-the-profile"></a>Profili oluşturma
 

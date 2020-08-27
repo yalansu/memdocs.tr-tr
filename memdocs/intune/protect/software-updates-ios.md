@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d1aefab1e222ddb20b1c033c787ba7d323f59e5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0a81e0e59eca03c9c15d7553376ea0c524251a18
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988293"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914863"
 ---
 # <a name="add-iosipados-software-update-policies-in-intune"></a>Intune 'da iOS/ıpados yazılım güncelleştirme ilkeleri ekleme
 
@@ -35,7 +35,7 @@ Bu özellik şu platformlarda geçerlidir:
 Varsayılan olarak, cihazlar, her 8 saatte bir Intune ile oturum iade ediyor. Güncelleştirme ilkesi aracılığıyla bir güncelleştirme varsa, cihaz güncelleştirmeyi indirir. Daha sonra cihaz, güncelleştirmeleri zamanlama yapılandırmanızın sonraki iadeye yükleme sırasında yüklenir. Güncelleştirme işlemi genellikle herhangi bir kullanıcı etkileşimini kapsamaz, ancak cihazın bir geçiş kodu varsa, yazılım güncelleştirmesini başlatmak için kullanıcının parolayı girmesi gerekir. Profiller, kullanıcıların işletim sistemini el ile güncelleştirmesine engel olmaz. Yazılım güncelleştirmelerinin görünürlüğünü kısıtlamak için, kullanıcıların işletim sistemini bir cihaz yapılandırma ilkesiyle el ile güncelleştirmelerini engellemiş olabilir.
 
 > [!NOTE]
-> [Otonom tek uygulama modu (ASAM)](https://docs.microsoft.com/mem/intune/configuration/device-restrictions-ios#autonomous-single-app-mode-asam)kullanılıyorsa, işletim sistemi güncelleştirmelerinin etkisi, sonuçta ortaya çıkan davranış istenmeyen bir şekilde düşünülmelidir.
+> [Otonom tek uygulama modu (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam)kullanılıyorsa, işletim sistemi güncelleştirmelerinin etkisi, sonuçta ortaya çıkan davranış istenmeyen bir şekilde düşünülmelidir.
 ASAM 'da çalıştırdığınız uygulamada işletim sistemi güncelleştirmelerinin etkisini değerlendirmek için test etmeyi düşünün.
 
 ## <a name="configure-the-policy"></a>İlkeyi yapılandırma

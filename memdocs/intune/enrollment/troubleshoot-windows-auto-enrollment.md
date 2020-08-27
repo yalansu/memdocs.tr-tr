@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 968aa9b2f7127e9b7f092f36a99b491a75f0b78c
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: 6aff5dfe62c1c44ec22f56c287220b59b98a7536
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546875"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915492"
 ---
 # <a name="troubleshoot-windows-10-group-policy-based-auto-enrollment-in-intune"></a>Intune 'da Windows 10 Grup İlkesi tabanlı otomatik kayıt sorunlarını giderme
 
-Active Directory (AD) etki alanına katılmış cihazlar için otomatik kaydı MDM 'ye tetikleyebilmeniz için Grup İlkesi kullanabilirsiniz. Bu özellik hakkında daha fazla bilgi için bkz. [Grup İlkesi kullanarak Windows 10 cihazını otomatik olarak kaydetme](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
+Active Directory (AD) etki alanına katılmış cihazlar için otomatik kaydı MDM 'ye tetikleyebilmeniz için Grup İlkesi kullanabilirsiniz. Bu özellik hakkında daha fazla bilgi için bkz. [Grup İlkesi kullanarak Windows 10 cihazını otomatik olarak kaydetme](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy).
 
 ## <a name="verify-the-configuration"></a>Yapılandırmayı doğrulama
 
@@ -37,7 +37,7 @@ Sorun gidermeye başlamadan önce, her şeyin doğru şekilde yapılandırıldı
 
    ![Intune lisansını doğrulama](./media/troubleshoot-windows-auto-enrollment/intune-license.png)
 
-- Cihazların Intune 'A kaydolabileceği tüm kullanıcılar için otomatik kaydın etkinleştirildiğini doğrulayın. Daha fazla bilgi için bkz. [Azure AD ve Microsoft Intune: yeni portalda OTOMATIK MDM kaydı](https://docs.microsoft.com/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
+- Cihazların Intune 'A kaydolabileceği tüm kullanıcılar için otomatik kaydın etkinleştirildiğini doğrulayın. Daha fazla bilgi için bkz. [Azure AD ve Microsoft Intune: yeni portalda OTOMATIK MDM kaydı](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
    ![Otomatik kaydı doğrulama](./media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png)
 
@@ -106,7 +106,7 @@ Olay KIMLIĞI 75, aşağıdaki durumlarda günlüğe kaydedilmez:
 
   Bu hatayı doğrulamak için olay KIMLIĞI 76 (olay iletisi: otomatik MDM kaydı: başarısız (bilinmeyen Win32 hata kodu: 0x8018002b) bölümüne bakın. Bu olay, başarısız bir otomatik kaydı gösterir.
 
-  Bu hatayla ilgili bir çözüm için bkz. [Microsoft Intune Windows cihaz kaydı sorunlarını giderme](https://docs.microsoft.com/intune/troubleshoot-windows-enrollment-errors).
+  Bu hatayla ilgili bir çözüm için bkz. [Microsoft Intune Windows cihaz kaydı sorunlarını giderme](/intune/troubleshoot-windows-enrollment-errors).
 
 - Kayıt, hiç tetiklenmedi.Bu durumda, olay KIMLIĞI 75 ve olay KIMLIĞI 76 günlüğe kaydedilmez.
   

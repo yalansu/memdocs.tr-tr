@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d23eaeee839122bad46cd9619a790b9ca6332a6
-ms.sourcegitcommit: e2ef7231d3abaf3c925b0e5ee9f66156260e3c71
+ms.openlocfilehash: a33555043a742f923e5cf181d0e79991e380a05d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85383266"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913231"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>İOS ve Android için Office kullanarak işbirliği deneyimlerini Microsoft Intune ile yönetin
 
@@ -35,9 +35,9 @@ ms.locfileid: "85383266"
 Office 365 verileri için zengin ve en geniş koruma özellikleri, koşullu erişim gibi Microsoft Intune ve Azure Active Directory Premium özellikleri de içeren Enterprise Mobility + Security Suite 'e abone olduğunuzda kullanılabilir. En azından, mobil cihazlardan iOS ve Android için Office bağlantısına izin veren bir koşullu erişim ilkesi ve işbirliği deneyiminin korunmasını sağlayan bir Intune uygulama koruma ilkesi dağıtmanız gerekir.
 
 ## <a name="apply-conditional-access"></a>Koşullu erişim Uygula
-Kuruluşlar, kullanıcıların yalnızca iOS ve Android için Office kullanarak iş veya okul içeriğine erişebildiğinden emin olmak için Azure AD koşullu erişim ilkelerini kullanabilir. Bunu yapmak için tüm olası kullanıcıları hedefleyen bir koşullu erişim ilkesine ihtiyacınız olacaktır. Bu ilkeyi oluşturma hakkındaki ayrıntılar, [bulut uygulaması Için koşullu erişimle uygulama koruma Ilkesi iste](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access)' de bulunabilir.
+Kuruluşlar, kullanıcıların yalnızca iOS ve Android için Office kullanarak iş veya okul içeriğine erişebildiğinden emin olmak için Azure AD koşullu erişim ilkelerini kullanabilir. Bunu yapmak için tüm olası kullanıcıları hedefleyen bir koşullu erişim ilkesine ihtiyacınız olacaktır. Bu ilkeyi oluşturma hakkındaki ayrıntılar, [bulut uygulaması Için koşullu erişimle uygulama koruma Ilkesi iste](/azure/active-directory/conditional-access/app-protection-based-conditional-access)' de bulunabilir.
 
-1. "Adım 1: Office 365 için Azure AD koşullu erişim ilkesi yapılandırma" yı izleyin. [Senaryo 1: office 365 uygulamaları](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), IOS ve Android için Office 'e izin veren ve üçüncü taraf OAuth özellikli mobil cihaz istemcilerinin Office 365 uç noktalarına bağlanmasını engelleyen uygulama koruma ilkeleriyle onaylanan uygulamalar gerektirir.
+1. "Adım 1: Office 365 için Azure AD koşullu erişim ilkesi yapılandırma" yı izleyin. [Senaryo 1: office 365 uygulamaları](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-1-office-365-apps-require-approved-apps-with-app-protection-policies), IOS ve Android için Office 'e izin veren ve üçüncü taraf OAuth özellikli mobil cihaz istemcilerinin Office 365 uç noktalarına bağlanmasını engelleyen uygulama koruma ilkeleriyle onaylanan uygulamalar gerektirir.
 
    >[!NOTE]
    > Bu ilke, mobil kullanıcıların tüm Office uç noktalarına ilgili uygulamaları kullanarak erişmesini sağlar.

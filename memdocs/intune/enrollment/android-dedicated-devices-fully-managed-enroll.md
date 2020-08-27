@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 858d813d3df2b020a869e1f18327d35e68bde7e0
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461734"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915254"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Android kurumsal adanmış, tam olarak yönetilen veya şirkete ait iş profili cihazlarına kaydetme
 
@@ -35,11 +35,11 @@ Android kurumsal [adanmış cihazlarınızı](android-kiosk-enroll.md), [tam ola
 | Belirteç girişi | 6.0 |
 | QR kodu | 7.0 |
 | Zero Touch  | 8.0<br><br> Katılımcı üreticilerle. |
-| [Knox mobil kaydı](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)  | 6.0<br><br> Yalnızca Samsung KNOX 2,8 veya üzeri cihazlarda. |
+| [Knox mobil kaydı](./android-samsung-knox-mobile-enroll.md)  | 6.0<br><br> Yalnızca Samsung KNOX 2,8 veya üzeri cihazlarda. |
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Yakın Alan İletişimi (NFC) kullanarak kaydetme
 
-NFC 'yi destekleyen cihazlar 6 ve üzeri için, özel olarak biçimlendirilmiş bir NFC etiketi oluşturarak cihazlarınızı sağlayabilirsiniz. Kendi uygulamanızı veya NFC etiketi oluşturan bir araç kullanabilirsiniz. Daha fazla bilgi için, bkz. Microsoft Intune ve [Google 'ın Android yönetim API 'si belgeleri](https://developers.google.com/android/management/provision-device#nfc_method) [Ile C tabanlı Android kurumsal cihaz kaydı](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) .
+NFC 'yi destekleyen cihazlar 6 ve üzeri için, özel olarak biçimlendirilmiş bir NFC etiketi oluşturarak cihazlarınızı sağlayabilirsiniz. Kendi uygulamanızı veya NFC etiketi oluşturan bir araç kullanabilirsiniz. Daha fazla bilgi için, bkz. Microsoft Intune ve [Google 'ın Android yönetim API 'si belgeleri](https://developers.google.com/android/management/provision-device#nfc_method) [Ile C tabanlı Android kurumsal cihaz kaydı](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) .
 
 ## <a name="enroll-by-using-a-token"></a>Belirteç kullanarak kaydetme
 
@@ -91,9 +91,8 @@ Google’ın Zero Touch sistemini kullanmak için cihazın bunu destekliyor olma
 4. **Uygula**'yı seçin.
 
 ## <a name="enroll-by-using-knox-mobile-enrollment"></a>Knox mobil kayıt kullanarak kaydolma
-Samsung 'in Knox mobil kaydını kullanmak için cihazda Android OS sürüm 6 veya üzeri ile Samsung KNOX 2,8 veya üzeri bir sürümü çalışıyor olmalıdır. Daha fazla bilgi için, [cihazlarınızın Knox Mobile kaydıyla otomatik olarak nasıl kaydedileceğini](https://docs.microsoft.com/mem/intune/enrollment/android-samsung-knox-mobile-enroll)öğrenin.
+Samsung 'in Knox mobil kaydını kullanmak için cihazda Android OS sürüm 6 veya üzeri ile Samsung KNOX 2,8 veya üzeri bir sürümü çalışıyor olmalıdır. Daha fazla bilgi için, [cihazlarınızın Knox Mobile kaydıyla otomatik olarak nasıl kaydedileceğini](./android-samsung-knox-mobile-enroll.md)öğrenin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - [Android uygulamalarını dağıtma](../apps/apps-deploy.md)
 - [Android yapılandırma ilkelerini ekleme](../configuration/device-profiles.md)
-

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baaec1e48579313085c039872cc931891c367132
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: abf2ad4a1b0857f1a839de49bb709fc4ff27f369
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531545"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913962"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Microsoft Intune Windows 10 için Microsoft Edge ekleyin
 
@@ -37,7 +37,7 @@ Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeni
 >
 > Çalışma alanına katılma bilgisayarları için Microsoft Edge 'in yerleşik uygulama dağıtımını kullanamazsınız. Yerleşik uygulama dağıtımı, yalnızca AAD 'ye katılmış cihazlar için mevcut olan Intune yönetim uzantısını gerektirir. Microsoft Edge *sürüm 77 ve üstünü* **uygulamalara**yüklenmiş bir *. msi* kullanarak dağıtmaya devam edebilirsiniz. [Microsoft Intune için Windows iş kolu uygulaması ekleme](lob-apps-windows.md)bölümüne bakın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Windows 10 sürüm 1709 veya üzeri.
 - Kullanıcı bağlamlarındaki tüm kanallar için Microsoft Edge *sürüm 77 ve üzeri* sürümlerin önceden yüklenmiş sürümlerinin, sistem bağlamında yüklü olan bir kenara üzerine yazılır.
@@ -121,7 +121,7 @@ Kullanıcının cihazlarından Microsoft Edge 'i kaldırmanız gerektiğinde aş
 
 ## <a name="troubleshooting"></a>Sorun giderme
 **Windows 10 için Microsoft Edge sürüm 77 ve üzeri:**<br>
-Intune, Microsoft Edge yükleyicisini indirmek ve Windows 10 cihazlarına atamak için Intune yönetim uzantısını kullanır ve ardından Microsoft Edge tarayıcısını doğrudan CDN 'den indiren ve yükleyen Microsoft Edge yükleyicisi ile dağıtım ayarlarını iletişim kurar. [Intune yönetim uzantısının ön koşullarını](intune-management-extension.md#prerequisites)ve ağ yapılandırmanızın Windows 10 cihazlarının bu konumlara erişmesine izin verdiğinden emin olmak Için Azure Update HIZMETINE ve CDN 'ye erişme bölümünde özetlenen en iyi yöntemleri başvuru. Ayrıca, tarayıcıyı yüklemek üzere bir CDN 'den yükleme dosyalarına erişim izni vermek için Windows Update uç noktalara erişime izin vermeniz gerekir. Daha fazla bilgi için, bkz. [Windows 10, sürüm 1809 – Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) ve [Microsoft Intune ağ uç noktaları](../fundamentals/intune-endpoints.md)Için bağlantı uç noktalarını yönetme.
+Intune, Microsoft Edge yükleyicisini indirmek ve Windows 10 cihazlarına atamak için Intune yönetim uzantısını kullanır ve ardından Microsoft Edge tarayıcısını doğrudan CDN 'den indiren ve yükleyen Microsoft Edge yükleyicisi ile dağıtım ayarlarını iletişim kurar. [Intune yönetim uzantısının ön koşullarını](intune-management-extension.md#prerequisites)ve ağ yapılandırmanızın Windows 10 cihazlarının bu konumlara erişmesine izin verdiğinden emin olmak Için Azure Update HIZMETINE ve CDN 'ye erişme bölümünde özetlenen en iyi yöntemleri başvuru. Ayrıca, tarayıcıyı yüklemek üzere bir CDN 'den yükleme dosyalarına erişim izni vermek için Windows Update uç noktalara erişime izin vermeniz gerekir. Daha fazla bilgi için, bkz. [Windows 10, sürüm 1809 – Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update) ve [Microsoft Intune ağ uç noktaları](../fundamentals/intune-endpoints.md)Için bağlantı uç noktalarını yönetme.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 - [Gruplara uygulama ekleme](apps-deploy.md)

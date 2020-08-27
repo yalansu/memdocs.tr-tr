@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: d29240dcbcbbcd5a4399dbfb3648c2a6df47764c
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 322e3be8e7421b0c622a8e656a3312791ed7feac
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663439"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913452"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="atp-april-2020"
@@ -55,12 +55,12 @@ Bu makaledeki ayrıntılar, 1 Mart 2020 ' de kullanıma sunulan Microsoft Defend
 
 Microsoft Defender Gelişmiş tehdit koruması temeli, ortamınız [Microsoft Defender Gelişmiş tehdit koruması](advanced-threat-protection.md#prerequisites)kullanımı için önkoşulları karşılıyorsa kullanılabilir.
 
-Bu taban çizgisi fiziksel cihazlar için iyileştirilmiştir ve şu anda sanal makinelerde (VM) veya VDı uç noktalarında kullanılması önerilmez. Belirli taban çizgisi ayarları, sanallaştırılmış ortamlarda uzak etkileşimli oturumları etkileyebilir. Daha fazla bilgi için bkz. Windows belgelerindeki [Microsoft Defender ATP güvenlik temeliyle uyumluluğu artırma](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
+Bu taban çizgisi fiziksel cihazlar için iyileştirilmiştir ve şu anda sanal makinelerde (VM) veya VDı uç noktalarında kullanılması önerilmez. Belirli taban çizgisi ayarları, sanallaştırılmış ortamlarda uzak etkileşimli oturumları etkileyebilir. Daha fazla bilgi için bkz. Windows belgelerindeki [Microsoft Defender ATP güvenlik temeliyle uyumluluğu artırma](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
 
 
 ## <a name="application-guard"></a>Application Guard
 
-Daha fazla bilgi için Windows belgelerindeki [Windowssavunma Derapplicationguard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) bölümüne bakın.  
+Daha fazla bilgi için Windows belgelerindeki [Windowssavunma Derapplicationguard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) bölümüne bakın.  
 
 Microsoft Edge kullanırken, Microsoft Defender Application Guard, ortamınızı kuruluşunuz tarafından güvenilmeyen sitelerden korur. Kullanıcılar yalıtılmış ağ sınırlarında listelenmeyen siteleri ziyaret ettiğinde, siteler bir Hyper-V sanal gözatma oturumunda açılır. Güvenilen siteler bir ağ sınırı tarafından tanımlanır.  
 
@@ -89,7 +89,7 @@ Microsoft Edge kullanırken, Microsoft Defender Application Guard, ortamınızı
     - **Bilgisayar ve tarayıcı arasında kopyalama ve yapıştırmaya Izin ver** -içerik için hiçbir blok yok.
 
 - **Windows ağ yalıtımı ilkesi**  
-  CSP: [Ilke CSP-NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation)
+  CSP: [Ilke CSP-NetworkIsolation](/windows/client-management/mdm/policy-csp-networkisolation)
 
   Bulutta barındırılan ve Application Guard 'ın kuruluş siteleri olarak davrandığı kurumsal kaynaklar olan *ağ etki alanlarının*bir listesini belirtin
   - **Yapılandır** (*varsayılan*)
@@ -102,7 +102,7 @@ Microsoft Edge kullanırken, Microsoft Defender Application Guard, ortamınızı
 
 ## <a name="bitlocker"></a>BitLocker
 
-Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) .
+Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) .
 
 - **Depolama kartlarının şifrelenmesini gerektir (yalnızca mobil)**  
   CSP: [Requirestooygecardencryption](https://go.microsoft.com/fwlink/?linkid=872524)
@@ -290,7 +290,7 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
 ## <a name="dma-guard"></a>DMA koruyucusu
 
 - **Çekirdek DMA koruması ile uyumsuz dış cihazların numaralandırması**  
-  CSP: [Dmaguard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [Dmaguard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   Bu ilke, dış DMA özellikli cihazlara karşı ek güvenlik sağlayabilir. DMA yeniden eşleme/cihaz belleği yalıtımı ve korumalı alana alma ile uyumsuz olan dış DMA özellikli cihazların numaralandırılması üzerinde daha fazla denetim sağlar.
   
@@ -302,10 +302,10 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
 
 ## <a name="endpoint-detection-and-response"></a>Uç nokta algılama ve yanıt
 
-Aşağıdaki ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Windowsadvancedthreatprotection](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP bölümüne bakın.
+Aşağıdaki ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Windowsadvancedthreatprotection](/windows/client-management/mdm/windowsadvancedthreatprotection-csp) CSP bölümüne bakın.
 
 - **Tüm dosyalar için örnek paylaşımı**  
-  CSP: [yapılandırma/SampleSharing](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [yapılandırma/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Microsoft Defender Gelişmiş tehdit koruması örnek paylaşımı yapılandırma parametresini döndürür veya ayarlar.  
   
@@ -313,7 +313,7 @@ Aşağıdaki ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Wi
   - **Yapılandırılmadı**
 
 - **Telemetri raporlama sıklığını hızlandırın**  
-  CSP: [yapılandırma/TelemetryReportingFrequency](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
+  CSP: [yapılandırma/TelemetryReportingFrequency](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
   Microsoft Defender Gelişmiş tehdit koruması telemetri raporlama sıklığını hızlandırın.  
 
@@ -322,7 +322,7 @@ Aşağıdaki ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Wi
 
 ## <a name="firewall"></a>Güvenlik duvarı
 
-Daha fazla bilgi için Windows belgelerindeki [güvenlik DUVARı CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) bölümüne bakın.
+Daha fazla bilgi için Windows belgelerindeki [güvenlik DUVARı CSP](/windows/client-management/mdm/firewall-csp) bölümüne bakın.
 
 - **Durum bilgisi Dosya Aktarım Protokolü devre dışı bırak (FTP)**  
   CSP: [Mdmstore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
@@ -590,7 +590,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   Varsayılan olarak, bu **2**olarak ayarlanır.
 
 - **Zamanlanan Taramalar için düşük CPU önceliğini yapılandırma**  
-  CSP: [Defender/Enablelowcpupriınıd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
+  CSP: [Defender/Enablelowcpupriınıd](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
 
   -**Evet** (*varsayılan*)
   - **Yapılandırılmadı**
@@ -630,7 +630,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   Silinmeden önce, maddelerin karantina klasöründe tutulması gereken gün sayısını yapılandırın. Varsayılan değer sıfırdır (**0**) ve bu, karantinaya alınan dosyaların neden kaldırılmayacağı anlamına gelir.
 
 - **Defender sistem tarama zamanlaması**  
-  CSP: [Defender/ScheduleScanDay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
+  CSP: [Defender/ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
   Defender 'ın cihazları taradığı günü zamanlayın. Tarama, varsayılan olarak **Kullanıcı tanımlı** *, ancak*haftanın her gününde veya *Zamanlanmış tarama olmadan*ayarlanabilir.
 
@@ -754,7 +754,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   - **Yapılandırılmadı** -istemci, ağ dosyalarının taranmasını devre dışı bırakan varsayılan değerini döndürür.
   
 - **Defender istenmeyebilecek uygulama eylemi**  
-  CSP: [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
   İstenmeyebilecek uygulamalar için algılama düzeyini belirtin (PUAs). Defender, istenmeyebilecek yazılımların indirileceği veya bir cihaza yüklenmeye çalıştığı durumlarda kullanıcıları uyarır.
   - **Cihaz varsayılanı**
@@ -762,7 +762,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   - **Denetim** -Defender, istenmeyebilecek uygulamaları algılar, ancak hiçbir işlem gerçekleşmez. Olay Görüntüleyicisi Defender tarafından oluşturulan olayları arayarak, uygulama Defender ile ilgili bilgileri gözden geçirebilirsiniz.
 
 - **Buluta teslim edilen korumayı aç**  
-  CSP: [Allowcloudprotection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [Allowcloudprotection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Varsayılan olarak, Windows 10 masaüstü cihazlarındaki Defender, bulduğu sorunlar hakkında Microsoft 'a bilgi gönderir. Microsoft, sizi ve diğer müşterileri etkileyen sorunlar hakkında daha fazla bilgi edinmek için bu bilgileri çözümleyerek geliştirilmiş çözümler sunar.
 
@@ -879,7 +879,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 
 ## <a name="windows-hello-for-business"></a>İş İçin Windows Hello
 
-Daha fazla bilgi için Windows belgelerindeki [Passportforwork CSP](https://docs.microsoft.com/windows/client-management/mdm/passportforwork-csp) bölümüne bakın.
+Daha fazla bilgi için Windows belgelerindeki [Passportforwork CSP](/windows/client-management/mdm/passportforwork-csp) bölümüne bakın.
 
 - **Iş için Windows Hello 'Yu engelle**  
 

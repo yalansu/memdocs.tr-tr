@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96074f4bea22b7468b1f210d631f0912eeafe7b5
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 28a867c735a05cfa4a4765534d200b806711f9b5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428984"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913027"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Intune’da Windows 10 cihazlar için özel ayarlar kullanma
 
@@ -36,7 +36,7 @@ Bu özellik şu platformlarda geçerlidir:
 
 Windows 10 özel profilleri, Open Mobile Alliance Tekdüzen Kaynak Tanımlayıcısı (OMA-URI) ayarlarını kullanarak farklı özellikleri yapılandırır. Bu ayarlar normalde mobil cihaz üreticileri tarafından cihazdaki özellikleri denetlemek için kullanılır.
 
-Windows 10, [İlke Yapılandırma Hizmet Sağlayıcısı (İlke CSP’si)](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers) gibi pek çok Yapılandırma Hizmeti Sağlayıcısı (CSP) ayarını kullanıma sunar.
+Windows 10, [İlke Yapılandırma Hizmet Sağlayıcısı (İlke CSP’si)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers) gibi pek çok Yapılandırma Hizmeti Sağlayıcısı (CSP) ayarını kullanıma sunar.
 
 Belirli bir ayarı arıyorsanız [Windows 10 cihaz kısıtlama profilinde](device-restrictions-windows-10.md) yerleşik olarak pek çok ayar bulunduğunu unutmayın. Bu sayede, özel değerler girmeniz gerekmeyebilir.
 
@@ -67,11 +67,11 @@ Bazı ayarları ekledikten sonra **Dışarı Aktar**’ı seçebilirsiniz. **Dı
 
 ## <a name="find-the-policies-you-can-configure"></a>Yapılandırabileceğiniz ilkeleri bulma
 
-[Yapılandırma hizmet sağlayıcısı başvurusu](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) konusunda, Windows 10’un desteklediği tüm yapılandırma hizmet sağlayıcılarının (CSP) tam listesi bulunur.
+[Yapılandırma hizmet sağlayıcısı başvurusu](/windows/client-management/mdm/configuration-service-provider-reference) konusunda, Windows 10’un desteklediği tüm yapılandırma hizmet sağlayıcılarının (CSP) tam listesi bulunur.
 
-Tüm ayarlar, Windows 10 sürümlerinin tümüyle uyumlu değildir. [Yapılandırma hizmet sağlayıcısı başvurusu](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference), her bir CSP için hangi sürümlerin desteklendiğini açıklar.
+Tüm ayarlar, Windows 10 sürümlerinin tümüyle uyumlu değildir. [Yapılandırma hizmet sağlayıcısı başvurusu](/windows/client-management/mdm/configuration-service-provider-reference), her bir CSP için hangi sürümlerin desteklendiğini açıklar.
 
-Ayrıca Intune, [Yapılandırma hizmet sağlayıcısı başvurusu](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) konusundaki tüm ayarları desteklemez. İstediğiniz ayarı Intune’un destekleyip desteklemediğini öğrenmek için ilgili ayarın makalesini açın. Her ayar sayfası, desteklediği işlemi gösterir. Intune ile çalışmak için, ayarın **Add**, **Replace**ve **Get** işlemlerini desteklemesi gerekir. **Get** işlemi tarafından döndürülen değer **ekleme** veya **değiştirme** Işlemleri tarafından sağlanan değerle eşleşmiyorsa, Intune bir uyumluluk hatası bildirir.
+Ayrıca Intune, [Yapılandırma hizmet sağlayıcısı başvurusu](/windows/client-management/mdm/configuration-service-provider-reference) konusundaki tüm ayarları desteklemez. İstediğiniz ayarı Intune’un destekleyip desteklemediğini öğrenmek için ilgili ayarın makalesini açın. Her ayar sayfası, desteklediği işlemi gösterir. Intune ile çalışmak için, ayarın **Add**, **Replace**ve **Get** işlemlerini desteklemesi gerekir. **Get** işlemi tarafından döndürülen değer **ekleme** veya **değiştirme** Işlemleri tarafından sağlanan değerle eşleşmiyorsa, Intune bir uyumluluk hatası bildirir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

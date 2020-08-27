@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c4e567c7812f53a7497f368ded47d72640443f6
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: d652bea6e60417654ac06ebc1d0baa300f229a05
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137383"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915390"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Çin'de 21Vianet tarafından çalıştırılan Intune  
 
@@ -44,11 +44,11 @@ Microsoft, hizmetin kendisini işlemez. 21Vianet, hizmetin teslimini sağlar, sa
 - Windows 10 ' un yönetimi modern MDM kanalı kullanılarak desteklenir.
 - 21Vianet tarafından işletilen Intune şirket içi Exchange bağlayıcısını desteklemez.
 - Windows Autopilot ve Iş Mağazası özellikleri şu anda kullanılamıyor.
-- Google Mobile Services Çin 'de kullanılamadığından, 21Vianet tarafından çalıştırılan Intune 'da müşteriler Google Mobile Services gerektiren özellikleri kullanamaz. Bu özellikler şunlardır:
+- Google Mobile Services Çin 'de kullanılamadığından, 21Vianet tarafından çalıştırılan Intune 'da müşteriler Google Mobile Services gerektiren özellikleri kullanamaz. Bu özellikler şunları içerir:
   - SafetyNet cihaz kanıtlama gibi özellikleri koruma Google Play.
   - Google Play Store uygulamaları yönetme.
   - Android kurumsal özellikleri. Daha fazla bilgi için bu [Google belgelerine](https://support.google.com/work/android/answer/6270910?hl=en)bakın.
-- Android için Intune Şirket Portalı uygulaması, Microsoft Intune hizmetiyle iletişim kurmak için Google Mobile Services kullanır. Çin 'de Google Play hizmetleri kullanılamadığından, bazı görevlerin tamamlanabilmesi için 8 saate kadar süre gerekebilir. Daha fazla bilgi için bu [makaleye](https://docs.microsoft.com/mem/intune/apps/manage-without-gms#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)bakın. 
+- Android için Intune Şirket Portalı uygulaması, Microsoft Intune hizmetiyle iletişim kurmak için Google Mobile Services kullanır. Çin 'de Google Play hizmetleri kullanılamadığından, bazı görevlerin tamamlanabilmesi için 8 saate kadar süre gerekebilir. Daha fazla bilgi için bu [makaleye](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable)bakın. 
 - Yerel düzenlemeleri izlemek ve gelişmiş işlevsellik sağlamak için, Intune istemci deneyimi (Şirket Portalı uygulaması) Çin 'de farklılık gösterebilir.
 - Sınırlama kullanılamıyor.
 - Mobil uygulama yönetimi (MAM) kullanılabilirliği, Çin Halk Cumhuriyeti 'nde mevcut olan uygulamalar üzerinde şartlı bir uygulamadır.
@@ -72,8 +72,8 @@ Microsoft Azure, Intune, Office 365 ve 21Vianet tarafından çalıştırılan Po
 
 21Vianet tarafından işletilen Intune için Kiracı Yöneticisi rolü, veri konularıyla ilgili verileri aşağıdaki yollarla isteyebilir:
 
-- Azure Active Directory Yönetim merkezini kullanarak bir Kiracı Yöneticisi, Azure Active Directory ve ilgili hizmetlerden bir veri konusunun kalıcı olarak silinmesine neden olabilir. Daha fazla bilgi için bkz. [Azure veri konu istekleri-silme](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
-- 21Vianet tarafından çalıştırılan Microsoft Hizmetleri için sistem tarafından oluşturulan Günlükler, veri günlüğü dışarı aktarma kullanılarak kiracı yöneticileri tarafından dışarı aktarılabilir. Daha fazla bilgi için bkz. [Azure veri konu istekleri-dışarı aktarma](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
+- Azure Active Directory Yönetim merkezini kullanarak bir Kiracı Yöneticisi, Azure Active Directory ve ilgili hizmetlerden bir veri konusunun kalıcı olarak silinmesine neden olabilir. Daha fazla bilgi için bkz. [Azure veri konu istekleri-silme](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-5-delete)
+- 21Vianet tarafından çalıştırılan Microsoft Hizmetleri için sistem tarafından oluşturulan Günlükler, veri günlüğü dışarı aktarma kullanılarak kiracı yöneticileri tarafından dışarı aktarılabilir. Daha fazla bilgi için bkz. [Azure veri konu istekleri-dışarı aktarma](/microsoft-365/compliance/gdpr-dsr-azure?view=o365-worldwide#step-6-export).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

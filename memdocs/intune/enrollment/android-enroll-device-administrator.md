@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5200f0476e3f692b02cbac9b0934c35e522ee906
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 1c342fcb4c7930861e4b851cba5c7d203f159dee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983620"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915220"
 ---
 # <a name="android-device-administrator-enrollment"></a>Android cihaz yöneticisi kaydı
 
@@ -49,7 +49,7 @@ Bir kullanıcı kaydolduktan sonra [uyumluluk ilkeleri atama](../protect/complia
 
 Diğer kullanıcı görevleri hakkında daha fazla bilgi için şu makalelere bakın:
 - [Microsoft Intune’da son kullanıcı deneyimi hakkında kaynaklar](../fundamentals/end-user-educate.md)
-- [Android cihazınızı Intune ile kullanma](https://docs.microsoft.com/mem/intune/user-help/why-enroll-android-device)
+- [Android cihazınızı Intune ile kullanma](../user-help/why-enroll-android-device.md)
 
 
 ## <a name="block-device-administrator-enrollment"></a>Cihaz Yöneticisi kaydını engelle

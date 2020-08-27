@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3c1b074e2fa35fa36bfb4f759ef348020c0dbed
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 0814fd11b2597c2a78dda70ba560e17fe2b742a1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983228"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914387"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Microsoft Intune cihaz yönetimi nedir?
 
@@ -43,7 +43,7 @@ BT yöneticisi olarak, kullanıcılarınızın işlerini yapması için gereken 
 
      Donanım ayrıntıları, yüklü uygulamalar, ilkeler ve daha fazlası gibi [Bu cihazla ilgili ek ayrıntıları görüntülemek](device-inventory.md)için herhangi bir cihaz seçin.
 
-   - **Azure AD cihazları**, Azure Active Directory (AD) ile kaydedilen veya bu hizmete katılan cihazların listesini gösterir. [Azure AD cihaz yönetimi](https://docs.microsoft.com/azure/active-directory/device-management-introduction) hakkında daha fazla bilgi edinin.
+   - **Azure AD cihazları**, Azure Active Directory (AD) ile kaydedilen veya bu hizmete katılan cihazların listesini gösterir. [Azure AD cihaz yönetimi](/azure/active-directory/device-management-introduction) hakkında daha fazla bilgi edinin.
    - **Cihaz eylemleri** , farklı cihazlarda çalıştırılan ve eylem, durumu, kimin başlattığı ve zaman dahil olmak üzere uzak eylemlerin bir geçmişini içerir.
 
      ![Cihaz eylemlerini izleme ekran görüntüsü](./media/device-management/monitor-device-actions.png)
@@ -57,9 +57,9 @@ Kullanılabilir eylemler, cihaz platformuna ve cihazın yapılandırmasına bağ
 
 - [Cihaz envanterini görüntüleme](device-inventory.md)
 - Uzak cihaz eylemlerini çalıştırın:
-  - [Autopilot sıfırlaması](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+  - [Autopilot sıfırlaması](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
   - [BitLocker anahtar döndürme](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (yalnızca Windows)
-  - [Sil](devices-wipe.md#delete-devices-from-the-intune-portal)
+  - [Silme](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Etkinleştirme Kilidi devre dışı bırak](device-activation-lock-disable.md) (yalnızca iOS)
   - [Yeni başlangıç](device-fresh-start.md) (yalnızca Windows)
   - [Tam tarama](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (yalnızca Windows 10)
@@ -72,7 +72,7 @@ Kullanılabilir eylemler, cihaz platformuna ve cihazın yapılandırmasına bağ
   - [Geçiş kodunu sıfırla](device-passcode-reset.md)
   - [Yeniden başlatma](device-restart.md) (yalnızca Windows)
   - [Devre dışı bırak](devices-wipe.md#retire)
-  - [Windows Defender güvenlik zekası 'nı güncelleştirme](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
+  - [Windows Defender güvenlik zekası 'nı güncelleştirme](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Windows 10 PIN sıfırlama](device-windows-pin-reset.md)
   - [Silme](devices-wipe.md#wipe)
   - [Özel bildirim gönder](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, IOS/ıpados)

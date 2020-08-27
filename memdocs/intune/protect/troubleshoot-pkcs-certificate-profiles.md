@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c6f2eb7d6174c706cdd8a3910df1d0ddc2e6ef0
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: acc61df344cb4134a863d75fff517047e78d067d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110690"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914795"
 ---
 # <a name="troubleshoot-pkcs-certificate-deployment-in-microsoft-intune"></a>Microsoft Intune 'de PKCS sertifika dağıtımı sorunlarını giderme
 
@@ -39,7 +39,7 @@ PKCS sertifika profilleri için en yaygın sorun kaynakları, PKCS sertifika pro
 - **Sertifika yetkilisi**: sertifika yetkilisi bilgisayarının iç FQDN 'si. Örneğin, sunucu1. domain. Local.
 - **Sertifika yetkilisi adı**: SERTIFIKA yetkilisi MMC 'de gösterildiği gibi sertifika yetkilisi adı. **Sertifika yetkilisi (yerel)** bölümüne bakın
 
-Sertifika yetkilisi ve sertifika yetkilisi adı için doğru adı doğrulamak üzere CA 'daki [Certutil komut satırı programını](https://docs.microsoft.com/windows-server/administration/windows-commands/certutil) kullanabilirsiniz.
+Sertifika yetkilisi ve sertifika yetkilisi adı için doğru adı doğrulamak üzere CA 'daki [Certutil komut satırı programını](/windows-server/administration/windows-commands/certutil) kullanabilirsiniz.
 
 ## <a name="pkcs-communication-overview"></a>PKCS iletişimine genel bakış
 
@@ -76,7 +76,7 @@ Bu roller için günlük dosyaları, Windows Olay Görüntüleyicisi, sertifika 
 
 - **NDESConnector_date_time. svclog**:
 
-  Bu günlük Microsoft Intune Sertifika Bağlayıcısı ile Intune bulut hizmeti arasındaki iletişimi gösterir. Bu günlük dosyasını görüntülemek için [hizmet Izleme Görüntüleyicisi aracını](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) kullanabilirsiniz.
+  Bu günlük Microsoft Intune Sertifika Bağlayıcısı ile Intune bulut hizmeti arasındaki iletişimi gösterir. Bu günlük dosyasını görüntülemek için [hizmet Izleme Görüntüleyicisi aracını](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) kullanabilirsiniz.
 
   İlgili kayıt defteri anahtarı: *Hklm\sw\microsoft\microsofıntune\ndesconnector\connectionstatus*
 
@@ -84,7 +84,7 @@ Bu roller için günlük dosyaları, Windows Olay Görüntüleyicisi, sertifika 
 
 - **CertificateRegistrationPoint_date_time. svclog**:
 
-  Bu günlük, sertifika isteklerini alıp doğrulayan NDES ilke modülünü gösterir. Bu günlük dosyasını görüntülemek için [hizmet Izleme Görüntüleyicisi aracını](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) kullanabilirsiniz.
+  Bu günlük, sertifika isteklerini alıp doğrulayan NDES ilke modülünü gösterir. Bu günlük dosyasını görüntülemek için [hizmet Izleme Görüntüleyicisi aracını](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) kullanabilirsiniz.
 
   Konum: NDES 'Yi barındıran sunucuda *% Program_Files% \ Microsoft ıntune\ndesconnectorsvc\logs\logs*
 
@@ -217,7 +217,7 @@ Bu sorun, Intune NDES bağlayıcısını barındıran bilgisayar bir sertifika k
 
 **Çözüm**:
 
-NDES bağlayıcısını barındıran bilgisayardaki sertifika kayıt ilkesi sunucusunun adını el ile yapılandırın. Adı yapılandırmak için [Add-Certificatekayıtlarını Mentpolicyserver](https://docs.microsoft.com/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell cmdlet 'ini kullanın.
+NDES bağlayıcısını barındıran bilgisayardaki sertifika kayıt ilkesi sunucusunun adını el ile yapılandırın. Adı yapılandırmak için [Add-Certificatekayıtlarını Mentpolicyserver](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver?view=win10-ps) PowerShell cmdlet 'ini kullanın.
 
 ### <a name="the-submission-is-pending"></a>Gönderim Beklemede
 

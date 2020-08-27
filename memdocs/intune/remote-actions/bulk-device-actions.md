@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c1b9a695830380c00900d0fe94ec075b21def0a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 3c00e124c9f2741c3b94b08b51a6d1d897086087
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989341"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914421"
 ---
 # <a name="use-bulk-device-actions"></a>Toplu cihaz eylemlerini kullanma
 
 Aşağıdaki uzak eylemler için toplu cihaz eylemlerini kullanabilirsiniz:
-- [Autopilot sıfırlaması](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+- [Autopilot sıfırlaması](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
 - [Özel bildirimler](custom-notifications.md#send-a-custom-notification-to-a-single-device)
-- [Sil](devices-wipe.md#delete-devices-from-the-intune-portal)
+- [Silme](devices-wipe.md#delete-devices-from-the-intune-portal)
 - [Yeniden Adlandır](device-rename.md)
 - [Yeniden başlat](device-restart.md)
 - [Eşitle](device-sync.md)

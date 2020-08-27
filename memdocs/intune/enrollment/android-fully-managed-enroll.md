@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78ed3fe234fb4ab236fe35b5e1778582f3eb731d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b0324755ef4706e1642357ae7a4e7dc90e719a7e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461717"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915203"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Android kurumsal tam olarak yönetilen cihazların Intune kaydını ayarlama 
 
@@ -60,7 +60,7 @@ Android kurumsal tam olarak yönetilen cihaz yönetimini ayarlamak için aşağ�
 2. **Kullanıcıların şirkete ait Kullanıcı cihazlarını kaydetmesine Izin ver**altında **Evet**' i seçin.
 
 > [!NOTE]
-> Bir cihazın uyumlu izin denetimi veya bir engelleme ilkesi *olarak işaretlenmesini gerektir* ve **tüm bulut uygulamaları**, **Android**ve **TARAYıCıLAR**Için geçerli olmasını gerektiren bir Azure AD koşullu erişim ilkeniz varsa, bu ilkeden **Microsoft Intune** Cloud App 'i dışarıda bırakmanız gerekir. Bunun nedeni, Android Kurulum işleminin kayıt sırasında kullanıcılarınızın kimliğini doğrulamak için bir Chrome sekmesi kullanmamasıdır. Daha fazla bilgi için bkz. [Azure AD koşullu erişim belgeleri](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> Bir cihazın uyumlu izin denetimi veya bir engelleme ilkesi *olarak işaretlenmesini gerektir* ve **tüm bulut uygulamaları**, **Android**ve **TARAYıCıLAR**Için geçerli olmasını gerektiren bir Azure AD koşullu erişim ilkeniz varsa, bu ilkeden **Microsoft Intune** Cloud App 'i dışarıda bırakmanız gerekir. Bunun nedeni, Android Kurulum işleminin kayıt sırasında kullanıcılarınızın kimliğini doğrulamak için bir Chrome sekmesi kullanmamasıdır. Daha fazla bilgi için bkz. [Azure AD koşullu erişim belgeleri](/azure/active-directory/conditional-access/).
 
 Bu ayar **Evet**olarak ayarlandığında, Intune kiracınız için bir kayıt belirteci (rastgele bir dize) ve QR kodu sağlar. Bu tek kayıt belirteci tüm kullanıcılarınız için geçerlidir ve sona ermez. Cihazın Android işletim sistemine ve sürümüne bağlı olarak, cihazı kaydetmek için belirteci veya QR kodunu kullanabilirsiniz.
 
@@ -70,4 +70,3 @@ Artık [tam olarak yönetilen cihazlarınızı](android-dedicated-devices-fully-
 ## <a name="next-steps"></a>Sonraki adımlar
 - [Android kurumsal tam yönetilen cihaz yapılandırma ilkeleri ekleme](../configuration/device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile)
 - [Android kurumsal tam olarak yönetilen cihazlar için uygulama yapılandırma ilkelerini yapılandırma](../apps/app-configuration-policies-use-android.md)
-

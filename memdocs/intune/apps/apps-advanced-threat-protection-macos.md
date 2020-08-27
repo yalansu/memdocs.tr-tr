@@ -18,24 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc226279ea72a804a0d6ac0fa63f0b9bb90fe7a
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: 17f039bede5b179b85abd66cc4c1f3b7aaefcb3a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531562"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914183"
 ---
 # <a name="add-microsoft-defender-atp-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak macOS cihazlarına Microsoft Defender ATP ekleme
 
 Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeniz için önce bunları Intune 'a eklemeniz gerekir. Kullanılabilir [uygulama türlerinden](apps-add.md#app-types-in-microsoft-intune) biri Microsoft Defender Gelişmiş tehdit KORUMASı (ATP). Intune 'da bu uygulama türünü seçerek, Microsoft Defender ATP 'yi yönettiğiniz cihazlara macOS Çalıştır ' ı atayabilir ve yükleyebilirsiniz. Bu uygulama türü, macOS uygulaması sarmalama aracı 'nı kullanmanıza gerek kalmadan, macOS cihazlarına Microsoft Defender ATP 'yi atamanızı kolaylaştırır. Uygulamalar daha güvenli ve güncel tutmaya yardımcı olmak için, uygulama Microsoft otomatik güncelleştirme (MAU) ile birlikte gelir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 - MacOS cihazının macOS 10,13 veya sonraki bir sürümü çalıştırması gerekir.
 - MacOS cihazında en az 650 MB disk alanı olmalıdır.
 - Intune 'da çekirdek uzantısı dağıtın. Daha fazla bilgi için bkz. [Intune 'Da macOS çekirdek uzantıları ekleme](../configuration/kernel-extensions-overview-macos.md).
 
 > [!IMPORTANT]
-> Çekirdek uzantısı yalnızca, cihazda Microsoft Defender ATP uygulaması yüklenmeden önce varsa otomatik olarak onaylanabilir. Aksi takdirde, kullanıcılar Mac 'teki "sistem uzantısı engellendi" iletisini görür ve **Güvenlik tercihleri** ' ne, **Sistem Tercihleri**  >  **güvenlik & gizliliği** ' ne gidip **izin ver**' i seçerek uzantıyı onaylaması gerekir. Daha fazla bilgi için bkz. [Mac Için Microsoft Defender ATP içindeki çekirdek uzantısı sorunlarını giderme](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
+> Çekirdek uzantısı yalnızca, cihazda Microsoft Defender ATP uygulaması yüklenmeden önce varsa otomatik olarak onaylanabilir. Aksi takdirde, kullanıcılar Mac 'teki "sistem uzantısı engellendi" iletisini görür ve **Güvenlik tercihleri** ' ne, **Sistem Tercihleri**  >  **güvenlik & gizliliği** ' ne gidip **izin ver**' i seçerek uzantıyı onaylaması gerekir. Daha fazla bilgi için bkz. [Mac Için Microsoft Defender ATP içindeki çekirdek uzantısı sorunlarını giderme](/windows/security/threat-protection/microsoft-defender-atp/mac-support-kext).
 
 ## <a name="add-microsoft-defender-atp-to-intune"></a>Microsoft Defender ATP 'yi Intune 'a ekleme
 Aşağıdaki adımları kullanarak Microsoft Defender ATP 'yi Intune 'a ekleyebilirsiniz:
@@ -80,4 +80,3 @@ Oluşturduğunuz uygulama, uygulamalar listesinde görüntülenir ve burada uygu
 - Intune 'da Endpoint Security için bir virüsten koruma ilkesi uygulama hakkında bilgi edinmek için bkz. [Intune 'da Endpoint Security Için virüsten koruma ilkesi](../protect/endpoint-security-antivirus-policy.md) 
 - Kullanıcı gruplarında uygulama atamalarını dahil etme ve dışlama hakkında bilgi edinmek için, bkz. [Uygulama atamalarını dahil etme ve dışlama](apps-inc-exl-assignments.md).
 - Intune 'da uygulamaları gruplara atamayı öğrenmek için bkz. [uygulamaları gruplara atama](apps-deploy.md).
-

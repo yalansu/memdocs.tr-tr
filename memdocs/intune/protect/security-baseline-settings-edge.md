@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c20489b8da3080506065d68aeb1b19dae362c2fb
-ms.sourcegitcommit: 169e279ba686c28d9a23bc0a54f0a2a0d20bdee4
+ms.openlocfilehash: 8fd6943be69f66d4cd6fde2e9c08bec9323005a5
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83556328"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914438"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -74,7 +74,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
     - **Anlaş** *(varsayılan olarak seçilidir)*
 
 - **Varsayılan Adobe Flash ayarı**  
-  CSP: [Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash)ve [Browser/Allowflashtıklatorun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
+  CSP: [Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)ve [Browser/Allowflashtıklatorun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
 
   Adobe Flash eklentisini çalıştırmaya yönelik davranışı yapılandırabileceğiniz aşağıdaki ayara erişimi etkinleştirin.  
 
@@ -110,7 +110,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
   - **Yapılandırılmadı** -varsayılan olarak, Microsoft Edge kullanıcı düzeyindeki yerel mesajlaşma ana bilgisayarlarının kullanımına izin verir.
 
 - **Parola yöneticisine parolaların kaydedilmesini etkinleştir**  
-  Microsoft Edge CSP: [Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP: [Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Kullanıcı parolalarını kaydetmek için Microsoft Edge 'i etkinleştirin.
 
@@ -119,7 +119,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
   - **Yapılandırılmadı** -kullanıcılar parolaları kaydedebilir ve bu özelliği kapatabilir.
 
 - **Siteler için Microsoft Defender SmartScreen istemlerinin atlanmasını engelle**  
-  CSP: [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   Kullanıcıların olası kötü amaçlı Web siteleri hakkında Microsoft Defender SmartScreen uyarılarını geçersiz kılıp kılamayacağını belirleyin.
 
@@ -128,7 +128,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
   - **Yapılandırılmadı** Kullanıcılar Microsoft Defender SmartScreen uyarılarını yoksayabilir ve siteye devam edebilir
 
 - **İndirmeler hakkında Microsoft Defender SmartScreen uyarılarını atlamayı engelle**  
-  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   Kullanıcıların doğrulanmamış indirmeler hakkında Microsoft Defender SmartScreen uyarılarını geçersiz kılıp kılamayacağını belirleme.
 
@@ -143,10 +143,10 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
   - **Devre dışı** -kullanıcılar, site yalıtımına geri çevirebilir. Site yalıtımı kapalı değil.
   - **Yapılandırılmadı** -kullanıcılar site yalıtımını devre dışı bırakabilirsiniz. Site yalıtımı kapalı değil.
 
-  Microsoft Edge Ayrıca, ek ve daha ayrıntılı kaynakları ayırabilmek için de [ısotekaynakları](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins) ilkesini destekler.  Intune, ısotekaynaklar ilkesini yapılandırmayı desteklemez.
+  Microsoft Edge Ayrıca, ek ve daha ayrıntılı kaynakları ayırabilmek için de [ısotekaynakları](/deployedge/microsoft-edge-policies#isolateorigins) ilkesini destekler.  Intune, ısotekaynaklar ilkesini yapılandırmayı desteklemez.
   
 - **Microsoft Defender SmartScreen 'i yapılandırma**  
-  CSP: [tarayıcı/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
+  CSP: [tarayıcı/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)  
   
   Microsoft Defender SmartScreen, kullanıcıların olası kimlik avı dolandırıcılarından ve kötü amaçlı yazılımlardan korunmasına yardımcı olmak için uyarı iletileri sağlar. Varsayılan olarak, Microsoft Defender SmartScreen açıktır.
   
@@ -166,7 +166,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
   Bu ilke yalnızca Microsoft etkin bir etki alanına katılmış Windows örneklerinde veya cihaz yönetimi için kaydedilen Windows 10 Pro veya Enterprise örneklerinde kullanılabilir.
 
 - **Kullanıcıların SSL uyarı sayfasından devam edebilsin**  
-   CSP: [Browser/Preventcerterrorkılmalar](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+   CSP: [Browser/Preventcerterrorkılmalar](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   Microsoft Edge, kullanıcılar SSL hatalarına sahip siteleri ziyaret ettiğinde bir uyarı sayfası gösterir.
   - **Etkin** -kullanıcılar, uyarı sayfalarına tıklabilirler.
@@ -193,7 +193,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
 
 - **Siteler için Microsoft Defender SmartScreen istemlerinin atlanmasını engelle**  
   **Varsayılan**: etkin  
-  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverride](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
   Bu ilke ayarı, kullanıcıların olası kötü amaçlı Web siteleri hakkında Microsoft Defender SmartScreen uyarılarını geçersiz kılıp kılamayacağını belirlemenize olanak sağlar. 
   - Bu ayarı etkinleştirirseniz, kullanıcılar Microsoft Defender SmartScreen uyarılarını yok sayamazlar ve siteye devam etmeleri engellenir. 
@@ -213,7 +213,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
 
 - **İndirmeler hakkında Microsoft Defender SmartScreen uyarılarını atlamayı engelle**  
   **Varsayılan**: etkin  
-  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
+  Microsoft Edge CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)  
 
   Bu ilke, kullanıcıların doğrulanmamış indirmeler hakkında Microsoft Defender SmartScreen uyarılarını geçersiz kılıp kılamayacağını belirlemenizi sağlar.
   - Bu ilkeyi etkinleştirirseniz kuruluşunuzdaki kullanıcılar Microsoft Defender SmartScreen uyarılarını yok sayamazlar ve doğrulanmamış İndirmeleri tamamlamada engellenirler.
@@ -221,13 +221,13 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
 
 - **Kullanıcıların SSL uyarı sayfasından devam edebilsin**  
   **Varsayılan**: devre dışı  
-  Microsoft Edge CSP: [Browser/Preventcerterrorkılmalar](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
+  Microsoft Edge CSP: [Browser/Preventcerterrorkılmalar](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
 
   Microsoft Edge, kullanıcılar SSL hatalarına sahip siteleri ziyaret ettiğinde bir uyarı sayfası gösterir. Bu ilkeyi *etkin* veya *yapılandırılmamış*olarak ayarlarsanız, kullanıcılar bu uyarı sayfalarında tıklabilirler. Bu ilke *devre dışı*bırakıldığında, kullanıcıların herhangi bir uyarı sayfasında tıklamakla engellenir. 
 
 - **Varsayılan Adobe Flash ayarı**  
   **Varsayılan**: etkin  
-  Microsoft Edge CSP: [Browser/AllowFlash](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflash)ve [Browser/Allowflashtıklatorun](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
+  Microsoft Edge CSP: [Browser/AllowFlash](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)ve [Browser/Allowflashtıklatorun](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)  
 
   ' Pluginsallodilimforurls ' veya ' PluginsBlockedForUrls ' tarafından kapsanmayan Web sitelerinin Adobe Flash eklentisini otomatik olarak çalıştırıp çalıştıramayacağını belirler. 
 
@@ -264,7 +264,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
 
 - **Parola yöneticisine parolaların kaydedilmesini etkinleştir**  
   **Varsayılan**: devre dışı  
-  Microsoft Edge CSP: [Browser/AllowPasswordManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
+  Microsoft Edge CSP: [Browser/AllowPasswordManager](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
 
   Kullanıcı parolalarını kaydetmek için Microsoft Edge 'i etkinleştirin.
   - Bu ilkeyi etkinleştirirseniz kullanıcılar parolalarını Microsoft Edge 'e kaydedebilir. Siteyi daha sonra ziyaret ettiklerinde, Microsoft Edge parolayı otomatik olarak girer.
@@ -288,7 +288,7 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
 
 - **Microsoft Defender SmartScreen 'i yapılandırma**  
   **Varsayılan**: etkin  
-  Microsoft Edge CSP: [tarayıcı/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  Microsoft Edge CSP: [tarayıcı/AllowSmartScreen](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
   Bu ilke ayarı, Microsoft Defender SmartScreen 'i açıp kullanmayacağınızı yapılandırmanızı sağlar. Microsoft Defender SmartScreen, kullanıcılarınızın olası kimlik avı dolandırıcılarından ve kötü amaçlı yazılımlardan korunmasına yardımcı olmak için uyarı iletileri sağlar.
   

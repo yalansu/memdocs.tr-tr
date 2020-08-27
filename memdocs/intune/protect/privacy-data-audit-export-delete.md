@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6aa9195e8d0559a106be323108487579eb068b91
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 508741d0cdb88e19bc5b2f27942e9e797f501356
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084805"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914472"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Intune’da kişisel verileri denetleme, dışarı aktarma veya silme
 
@@ -60,13 +60,13 @@ Kişisel verileri Intune yönetiminden kaldırmanın üç yolu vardır:
 
 ### <a name="delete-a-user-from-intune"></a>Intune’dan kullanıcı silmek
 
-Son kullanıcının Intune 'daki kişisel verilerini silmek için bir yöneticinin [kullanıcıyı Azure Active Directory (AAD) ' dan silmesi](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)gerekir. Kullanıcı AAD 'den (kalıcı olarak silindi) silindiğinde, Intune, AAD 'den silme sinyali alır ve bu kullanıcının tüm kişisel verilerini Intune hizmetinden temizlemeyi otomatik olarak başlatır. Kullanıcının bilgileri, kaldırma eyleminin 30 gün içinde Intune hizmetinden silinir.
+Son kullanıcının Intune 'daki kişisel verilerini silmek için bir yöneticinin [kullanıcıyı Azure Active Directory (AAD) ' dan silmesi](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)gerekir. Kullanıcı AAD 'den (kalıcı olarak silindi) silindiğinde, Intune, AAD 'den silme sinyali alır ve bu kullanıcının tüm kişisel verilerini Intune hizmetinden temizlemeyi otomatik olarak başlatır. Kullanıcının bilgileri, kaldırma eyleminin 30 gün içinde Intune hizmetinden silinir.
 
 ### <a name="reset-device-to-factory-settings"></a>Cihazı fabrika ayarlarına sıfırlama
 Fabrika ayarlarına sıfırlama, tüm şirkete ait ve kişisel veri ve ayarlar yerine orijinal fabrika ayarlarını geri yükler. Bu, cihazı yeni bir çalışana vermek için kullanışlıdır. Kullanıcı dosyaları, kullanıcının yüklediği uygulamalar ve varsayılan olmayan ayarlar kaldırılır ve bu veriler kaldırma eylemini izleyen 30 gün içerisinde Intune hizmetinden silinir.
 
 ### <a name="user-self-removal-from-intune-management"></a>Kullanıcının kendisini Intune yönetiminden kaldırması
-Kullanıcılar, yönetici yardımı olmadan kendi [Android, Apple veya Windows](https://docs.microsoft.com/mem/intune/user-help/unenroll-your-device-from-intune-android) cihazlarını Intune’dan kaldırabilir.   
+Kullanıcılar, yönetici yardımı olmadan kendi [Android, Apple veya Windows](../user-help/unenroll-your-device-from-intune-android.md) cihazlarını Intune’dan kaldırabilir.   
 
 ### <a name="retire"></a>Devre Dışı Bırakma
 **Kullanımdan kaldırma** eylemi; şirket uygulamaları, Intune'un yönettiği uygulamalara ilişkin veriler, ilke ayarları ve Intune yoluyla sağlanan e-posta profilleri gibi Intune tarafından sağlanan verileri kaldırır. Bu eylem, kullanıcının kişisel verilerini cihazda bırakır.

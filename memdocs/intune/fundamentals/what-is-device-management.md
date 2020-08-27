@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dedb4746c40ff1cc2f5a2f166b1e0277997cb88
-ms.sourcegitcommit: 22e1095a41213372c52d85c58b18cbabaf2300ac
+ms.openlocfilehash: d2b7deb7d3c09a41a16b1ebf3da26075f0cc70eb
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353624"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915356"
 ---
 # <a name="device-management-overview"></a>Cihaz yönetimine genel bakış
 
@@ -59,17 +59,17 @@ Intune hakkında daha fazla bilgi için bkz. [Intune nedir](what-is-intune.md).
 
 ## <a name="co-management"></a>Ortak yönetim
 
-Birçok kuruluş, masaüstleri ve sunucular dahil olmak üzere cihazları yönetmek için şirket içi Configuration Manager kullanır. Şirket içi Configuration Manager Microsoft Intune için buluta ekleyebilirsiniz. Bulut iliştirmeye alışdığınızda, [koşullu erişim](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-conditional-access), [uzak eylemler çalıştırma](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-remote-actions), [Windows Autopilot](https://docs.microsoft.com/mem/configmgr/comanage/quickstart-autopilot)ve daha fazlası dahil olmak üzere Intune ve bulutun avantajlarından yararlanabilirsiniz.
+Birçok kuruluş, masaüstleri ve sunucular dahil olmak üzere cihazları yönetmek için şirket içi Configuration Manager kullanır. Şirket içi Configuration Manager Microsoft Intune için buluta ekleyebilirsiniz. Bulut iliştirmeye alışdığınızda, [koşullu erişim](../../configmgr/comanage/quickstart-conditional-access.md), [uzak eylemler çalıştırma](../../configmgr/comanage/quickstart-remote-actions.md), [Windows Autopilot](../../configmgr/comanage/quickstart-autopilot.md)ve daha fazlası dahil olmak üzere Intune ve bulutun avantajlarından yararlanabilirsiniz.
 
-[Microsoft Uç Nokta Yöneticisi](https://docs.microsoft.com/mem/endpoint-manager-overview) , çeşitli hizmetleri birleştiren bir çözüm platformudur. Bulut tabanlı cihaz yönetimi için [Microsoft Intune](what-is-intune.md) ve bulut-ekleme cihaz yönetimi için [Configuration Manager + Intune](https://docs.microsoft.com/mem/configmgr/comanage/overview) ' u içerir.
+[Microsoft Uç Nokta Yöneticisi](../../endpoint-manager-overview.md) , çeşitli hizmetleri birleştiren bir çözüm platformudur. Bulut tabanlı cihaz yönetimi için [Microsoft Intune](what-is-intune.md) ve bulut-ekleme cihaz yönetimi için [Configuration Manager + Intune](../../configmgr/comanage/overview.md) ' u içerir.
 
 Configuration Manager kullanıyorsanız ve bazı görevleri buluta taşımaya hazırsanız, bu durumda ortak yönetim yanıtınız olur.
 
-Bulut-Configuration Manager iliştirme hakkında daha fazla bilgi için bkz. [ortak yönetim](https://docs.microsoft.com/mem/configmgr/comanage/overview)nedir.
+Bulut-Configuration Manager iliştirme hakkında daha fazla bilgi için bkz. [ortak yönetim](../../configmgr/comanage/overview.md)nedir.
 
 ## <a name="integration-with-secure-and-protect-services"></a>Güvenli tutma ve koruma hizmetleri ile tümleştirme
 
-Cihaz yönetim çözümlerinin başlıca görevlerinden biri güvenlik ve koruma sağlamaktır. Intune bu görevi gerçekleştirmek için başka hizmetlerle mükemmel bir şekilde tümleşir. Örneğin:
+Cihaz yönetim çözümlerinin başlıca görevlerinden biri güvenlik ve koruma sağlamaktır. Intune bu görevi gerçekleştirmek için başka hizmetlerle mükemmel bir şekilde tümleşir. Örnek:
 
 - **Microsoft 365** yaygın BT görevlerini basitleştirmek için temel bir bileşenidir. Microsoft 365 Yönetim merkezinde, kullanıcılar oluşturur ve grupları yönetirsiniz. Intune, Azure AD ve daha fazlası gibi diğer hizmetlere da erişebilirsiniz.
 
@@ -108,11 +108,11 @@ Cihaz Yönetimi yönetim merkezinde şunları yapabilirsiniz:
 - Yazılım güncelleştirmelerini yönetme
   - [Windows 10 güncelleştirmelerini yönetme](../protect/windows-update-for-business-configure.md)  
   - [İOS/ıpados güncelleştirmelerini yönetme](../protect/software-updates-ios.md)  
-- [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
-- [Kullanıcıları yönetme](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
-- [Grupları ve üyeleri yönetme](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
+- [Azure Active Directory](/azure/active-directory)  
+- [Kullanıcıları yönetme](/azure/active-directory/fundamentals/add-users-azure-active-directory)
+- [Grupları ve üyeleri yönetme](/azure/active-directory/fundamentals/active-directory-manage-groups)
 - [Sorun giderme](help-desk-operators.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bir MDM veya MAM çözümüne başlamak için hazırsanız, Intune 'u ayarlama, cihazları kaydetme ve ilke oluşturmaya başlama gibi farklı adımları gözden geçir. [Microsoft 365 Için mobil cihaz yönetimi](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure) de harika bir kaynaktır.
+Bir MDM veya MAM çözümüne başlamak için hazırsanız, Intune 'u ayarlama, cihazları kaydetme ve ilke oluşturmaya başlama gibi farklı adımları gözden geçir. [Microsoft 365 Için mobil cihaz yönetimi](/microsoft-365/enterprise/mobility-infrastructure) de harika bir kaynaktır.

@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d90870a60ea292939926816bb74b5d285dc6a09f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 49be1ae762e50ade9e2881137a97b379ad380f7a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431292"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915033"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için güvenlik duvarı ilke ayarları
 
@@ -29,7 +29,7 @@ Bir [uç nokta güvenlik ilkesinin](../protect/endpoint-security-policy.md)parç
 
 Desteklenen platformlar ve profiller:
 
-- **MacOS**:
+- **macOS**:
   - Profil: **MacOS güvenlik duvarı**
 
 - **Windows 10 ve üzeri**:
@@ -91,7 +91,7 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
   *UTF-8*gerekmiyorsa, önceden PAYLAŞıLMıŞ anahtarlar UTF-8 kullanılarak kodlanır. Bundan sonra cihaz kullanıcıları başka bir kodlama yöntemi seçebilirler.
 
   - **Yapılandırılmadı** (*varsayılan*)
-  - **Yok**
+  - **Hiçbiri**
   - **UTF8**
 
 - **Güvenlik Duvarı IP sn muafiyetleri komşu bulmaya izin ver**  
@@ -123,7 +123,7 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
 
    Sertifika iptal listesi (CRL) doğrulamanın nasıl uygulanacağını belirtin.
   - **Yapılandırılmadı** (*varsayılan*)-istemci varsayılanı CRL doğrulamasını devre dışı bırakır.
-  - **Yok**
+  - **Hiçbiri**
   - **Girişimde**
   - **Gerektirme**
 
@@ -174,7 +174,7 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
 
 #### <a name="windows-firewall-rule"></a>Windows güvenlik duvarı kuralı
 
-- **Adı**  
+- **Ad**  
   Kuralınız için bir kolay ad belirtin. Bu ad, bu adı belirlemenize yardımcı olacak kurallar listesinde görünür.
 
 - **Açıklama**  
@@ -192,28 +192,28 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
 
 - **Ağ türü**  
   Kuralın ait olduğu ağ türünü belirtin. Aşağıdakilerden birini veya birkaçını seçebilirsiniz. Bir seçenek seçmezseniz, kural tüm ağ türlerine uygulanır.
-  - **Domain**
-  - **Özelleştirme**
-  - **Geneldir**
+  - **Etki alanı**
+  - **Özel**
+  - **Genel**
   - **Yapılandırılmadı**
 
 - **Paket ailesi adı**  
-  [Get-AppxPackage](https://docs.microsoft.com/previous-versions//hh856044(v=technet.10))
+  [Get-AppxPackage](/previous-versions//hh856044(v=technet.10))
 
   Paket aile adları, PowerShell 'den Get-AppxPackage komutu çalıştırılarak alınabilir.
 
 - **Dosya yolu**  
-  CSP: [FirewallRules/FirewallRuleName/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)
+  CSP: [FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
-  Bir uygulamanın dosya yolunu belirtmek için, istemci cihazında uygulamalar konumunu girin. Örneğin: `C:\Windows\System\Notepad.exe` veya`%WINDIR%\Notepad.exe`
+  Bir uygulamanın dosya yolunu belirtmek için, istemci cihazında uygulamalar konumunu girin. Örneğin: `C:\Windows\System\Notepad.exe` veya `%WINDIR%\Notepad.exe`
 
 - **Hizmet adı**  
-  [FirewallRules/FirewallRuleName/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)
+  [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)
 
   Bir uygulama değil, trafik gönderirken veya alırken bir Windows hizmeti kısa adı kullanın. Hizmet kısa adları, `Get-Service` PowerShell 'den komut çalıştırılarak alınır.
 
 - **Protokol**  
-  CSP: [FirewallRules/FirewallRuleName/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)
+  CSP: [FirewallRules/FirewallRuleName/Protocol](/windows/client-management/mdm/firewall-csp#protocol)
 
   Bu bağlantı noktası kuralı için protokolü belirtin.
   - *TCP (6)* ve *UDP (17)* gibi aktarım katmanı protokolleri, bağlantı noktalarını veya bağlantı noktası aralıklarını belirtmenize olanak tanır.
@@ -228,7 +228,7 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
   - **Yapılandırılmadı**
 
 - **Yetkili kullanıcılar**  
-  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
+  [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
 
   Bu kural için yetkili yerel kullanıcıların bir listesini belirtin. Bu ilkedeki *hizmet adı* bir Windows hizmeti olarak ayarlandıysa yetkili kullanıcıların listesi belirtilemez. Yetkili Kullanıcı belirtilmemişse, varsayılan olarak *tüm kullanıcılar*' dır.
 
@@ -237,7 +237,7 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
   - **Evet** -herhangi bir yerel adresi destekler ve bir adres aralığı yapılandırmayın.
 
 - **Yerel adres aralıkları**  
-  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
   Kuralın kapsadığı yerel adreslerin virgülle ayrılmış bir listesi olarak bir veya daha fazla adres ekleyin. Geçerli girişler (belirteçler) aşağıdaki seçenekleri içerir:
   - **Bir yıldız işareti** ( \* ) herhangi bir yerel adresi belirtir. Varsa, yıldız işareti dahil edilen tek belirteç olmalıdır.
@@ -253,7 +253,7 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
   - **Evet** -herhangi bir uzak adresi destekler ve bir adres aralığı yapılandırmayın.
 
 - **Uzak adres aralıkları**  
-  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+  CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
   Kuralın kapsadığı uzak adreslerin virgülle ayrılmış bir listesi olarak bir veya daha fazla adres ekleyin. Geçerli girişler (belirteçler) aşağıdakileri içerir ve büyük/küçük harfe duyarlı değildir:
   - **Bir yıldız işareti** (), \* herhangi bir uzak adresi belirtir. Varsa, yıldız işareti dahil edilen tek belirteç olmalıdır.

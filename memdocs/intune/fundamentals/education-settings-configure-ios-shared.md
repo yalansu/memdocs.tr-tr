@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21b1fb333ce77fdf358e268eb22db17708bbfe11
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 5749ed0e31d9eec661acb2930e4d244b8f383cbc
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82076144"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913758"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Paylaşılan iPad cihazları için Intune eğitim ayarlarını yapılandırma
 
@@ -59,9 +59,9 @@ Aşağıdaki yöntemlerden birini kullanarak SDS’ye bilgi aktarabilirsiniz:
 
 ### <a name="find-out-more"></a>Daha fazla bilgi edinin
 
-- [Şirket içi okul verilerini Azure AD’ye eşitleme deneyiminin tümü hakkında bilgi edinin](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- [Şirket içi okul verilerini Azure AD’ye eşitleme deneyiminin tümü hakkında bilgi edinin](/azure/active-directory/connect/active-directory-aadconnect)
 - [Microsoft School Data Sync hakkında daha fazla bilgi edinin](https://sds.microsoft.com/)
-- [Azure Active Directory'de lisanslama hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+- [Azure Active Directory'de lisanslama hakkında daha fazla bilgi edinin](/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 
 ## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>2. adım-Intune 'da iOS/ıpados eğitim profili oluşturma ve atama
@@ -75,7 +75,7 @@ Aşağıdaki yöntemlerden birini kullanarak SDS’ye bilgi aktarabilirsiniz:
 6. **Profil oluştur** bölmesinde, IOS/ıpados eğitim profili Için bir **ad** ve **Açıklama** girin.
 7. **Platform** açılan listesinden **iOS**’yi seçin.
 8. **Profil türü** açılan listesinde **Eğitim**’i seçin.
-9. **Ayarları** > **Yapılandır**' ı seçin.
+9. **Ayarları**  >  **Yapılandır**' ı seçin.
 
 Ardından, öğretmen ve öğrencilerin iPad cihazları arasında bir güven ilişkisi kurmak için sertifikalara ihtiyacınız olacaktır. Sertifikalar, kullanıcı adları ve parolaları girmeye gerek olmadan cihazlar arasında bağlantıların kimliğini sorunsuz ve sessiz bir şekilde doğrulamak için kullanılır.
 
@@ -183,9 +183,9 @@ Cihaz artık cihaz kategorisiyle ilişkilendirilmiştir. Bu işlemi, oluşturdu�
 4. **Cihaz yapılandırması** bölmesinde **Yönet** > **Sepet Profilleri**'ni seçin.
 5. Profiller bölmesinde **Profil Oluştur**’u seçin.
 6. **İlişkilendirme Oluştur** bölmesinde, bir **Ad** ve **Açıklama** girin.
-7. Grupları sepet profili ile ilişkilendirmek için **sınıfları** > Seç**Yapılandır** ' ı seçin.
+7. **Select Classes**  >  Grupları sepet profili ile ilişkilendirmek için sınıfları Seç**Yapılandır** ' ı seçin.
 8. Sepet Profili'ne dahil edilecek sınıfları seçin sonra **Seç**'i işaretleyin. 
-9. Grupları sepet profili ile ilişkilendirmek için **HTS** > **Yapılandır** ' ı seçin.
+9. **Select Carts**  >  Grupları sepet profili ile ilişkilendirmek için HTS**Yapılandır** ' ı seçin.
 10. Sepet Profili'ne dahil etmek istediğiniz grupları seçin, sonra **Seç**'i işaretleyin.
 11. **İlişkilendirme Oluştur** bölmesinde, Sepet Profili'ni kaydetmek için **Kaydet**'i seçin.
 

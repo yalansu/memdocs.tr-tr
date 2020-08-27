@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f4e6d425923637d991ef62bb0e3c8090e657403
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 90ff1f6380e16fa5c970557ca1409fd5e4a8d035
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079561"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914948"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Intune’da veri güvenliği ve paylaşımı
 
@@ -72,7 +72,7 @@ Belirli üçüncü taraflarla paylaşılan veriler hakkında daha fazla bilgi i�
 
 Microsoft Intune Configuration Manager hiçbir veri paylaşmaz. Configuration Manager, doğrudan müşteri tarafından dağıtılan, yönetilen ve çalıştırılan şirket içi bir üründür. Configuration Manager tarafından toplanan tanılama ve kullanım verileri yalnızca gelecek sürümlerin yükleme deneyimini, kalitesini ve güvenliğini geliştirmek için kullanılır.
 
-Daha fazla bilgi için bkz. [Configuration Manager Için tanılama ve kullanım verileri](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+Daha fazla bilgi için bkz. [Configuration Manager Için tanılama ve kullanım verileri](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

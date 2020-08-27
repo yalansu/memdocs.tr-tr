@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61053fff9d28193c8f4fc1731f72fe0052aba154
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c7e2964281e26e695dcd58629601a34043ab0e55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820502"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913792"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -56,7 +56,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows 8.1
 - Windows 10 ve üzeri
 
@@ -69,7 +69,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 
 ## <a name="delivery-optimization"></a>Teslim iyileştirme
 
@@ -97,7 +97,7 @@ Bu özellik şunları destekler:
 Bu özellik şunları destekler:
 
 - iOS/iPadOS
-- macOS
+- Mac OS
 
 ## <a name="device-firmware-configuration-interface"></a>Cihaz üretici yazılımı yapılandırma arabirimi
 
@@ -116,7 +116,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows 10 ve üzeri
 - Windows 10 Team
 
@@ -138,7 +138,7 @@ Bu özellik şunları destekler:
 
 ## <a name="education"></a>Eğitim
 
-[Eğitim ayarları - Windows 10](education-settings-configure.md), [Windows Sınav Zamanı uygulamasının](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) seçeneklerini yapılandırır. Bu seçenekleri yapılandırdığınızda, sınav tamamlanana kadar cihazda başka uygulama çalıştırılamaz.
+[Eğitim ayarları - Windows 10](education-settings-configure.md), [Windows Sınav Zamanı uygulamasının](/education/windows/take-tests-in-windows-10) seçeneklerini yapılandırır. Bu seçenekleri yapılandırdığınızda, sınav tamamlanana kadar cihazda başka uygulama çalıştırılamaz.
 
 [Eğitim ayarları-iOS/ıpados](../fundamentals/education-settings-configure-ios-shared.md) , ders içindeki öğrenci cihazlarını öğrenmeye ve denetlemeye kılavuzluk etmek için IOS/ıpados derslik uygulamasını kullanır. iPad cihazlarını, çok sayıda öğrencinin aynı cihazı paylaşmasını sağlamak için yapılandırabilirsiniz.
 
@@ -157,11 +157,11 @@ Bu özellik şunları destekler:
 
 [Endpoint Protection](../protect/endpoint-protection-configure.md) , BitLocker ve Windows 10 cihazları Için Microsoft Defender ayarlarını yapılandırır. Ve, macOS cihazlarındaki güvenlik duvarını, ağ geçidini ve diğer kaynakları yapılandırın.
 
-Microsoft Intune ile Microsoft Defender Gelişmiş tehdit koruması (WDADTP) eklemek için bkz. [mobil cihaz yönetimi (MDM) araçlarını kullanarak uç noktaları yapılandırma](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
+Microsoft Intune ile Microsoft Defender Gelişmiş tehdit koruması (WDADTP) eklemek için bkz. [mobil cihaz yönetimi (MDM) araçlarını kullanarak uç noktaları yapılandırma](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 Bu özellik şunları destekler:
 
-- macOS
+- Mac OS
 - Windows 10 ve üzeri
 
 ## <a name="esim-cellular---public-preview"></a>eSIM hücresel - Genel önizleme
@@ -172,13 +172,13 @@ Bu özellik şunları destekler:
 
 - Windows 10 Fall Creators Update ve üzeri
 
-## <a name="extensions"></a>Uzantıları
+## <a name="extensions"></a>Uzantılar
 
 [MacOS sistem uzantıları ve çekirdek uzantıları](kernel-extensions-overview-macos.md) , yöneticilerin işletim sisteminin yerel yeteneklerini genişleten özellikler veya programlar eklemesine olanak tanır. Bu ayarları, belirli bir geliştirici veya iş ortağındaki tüm uzantılara güvenmek veya belirli uzantılara izin vermek üzere yapılandırın.
 
 Bu özellik şunları destekler:
 
-- macOS
+- Mac OS
 
 ## <a name="identity-protection"></a>Kimlik koruması
 
@@ -238,7 +238,7 @@ MacOS cihazlarındaki [tercih dosyaları](preference-file-settings-macos.md) , u
 
 Bu özellik şunları destekler:
 
-- macOS
+- Mac OS
 
 ## <a name="shared-multi-user-device"></a>Paylaşılan çok kullanıcılı cihaz
 
@@ -272,7 +272,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows 8.1
 - Windows 10 ve üzeri
 
@@ -285,7 +285,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows 8.1 (yalnızca içeri aktarma)
 - Windows 10 ve üzeri
 
@@ -297,7 +297,7 @@ Profili atadığınızda macOS masaüstü kullanıcıları, kendisini yapıland�
 
 Bu özellik şunları destekler:
 
-- macOS
+- Mac OS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Uzantıları (MX)
 

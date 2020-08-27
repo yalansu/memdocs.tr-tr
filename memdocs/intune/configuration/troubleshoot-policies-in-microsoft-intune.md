@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc307f22e3caa77357d8d3054a432c8d42c38fc4
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 1daad2fb9f681c0372bfd0848e2162175c8dd771
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146516"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915679"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>İlke ve profillerin ve Intune 'da sorun giderme
 
@@ -122,9 +122,9 @@ Bu makalede bazı yaygın sorun giderme teknikleri listelenmekte ve karşılaşa
 ## <a name="policy-troubleshooting-resources"></a>İlke sorunlarını giderme kaynakları
 
 - [İOS/ıpados veya Android ilkeleri cihazlara uygulanmıyor](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (başka bir Microsoft sitesi açar) sorun giderme
-- [Windows 10 Intune ilkesi hatalarında sorun giderme](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (bir blog açar)
+- [Windows 10 Intune ilkesi hatalarında sorun giderme](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (bir blog açar)
 - [Windows 10 IÇIN CSP özel ayarları sorunlarını giderme](https://support.microsoft.com/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (başka bir Microsoft sitesi açar)
-- [Windows 10 Grup İlkesi vs ıNTUNE MDM ilkesi](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (başka bir Microsoft sitesini açar)
+- [Windows 10 Grup İlkesi vs ıNTUNE MDM ilkesi](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (başka bir Microsoft sitesini açar)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Uyarı: Erişim Kuralları Exchange’e Kaydedilemedi
 

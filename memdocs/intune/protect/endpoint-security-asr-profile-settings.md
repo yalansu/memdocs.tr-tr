@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 36dca5ce8bb0fc3523bcd72441e3ecf22931609b
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: a2b404e1741c93a6dbf5023f394f3b9528020617
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146040"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913469"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da Endpoint Security için saldırı yüzeyi Azaltma ilkesi ayarları
 
@@ -177,7 +177,7 @@ Desteklenen platformlar ve profiller:
 ### <a name="microsoft-defender-application-control"></a>Microsoft Defender uygulama denetimi
 
 - **Uygulama dolabı uygulama denetimi**  
-  CSP: [AppLocker](https://docs.microsoft.com/windows/client-management/mdm/applocker-csp)
+  CSP: [AppLocker](/windows/client-management/mdm/applocker-csp)
 
   - **Yapılandırılmadı** (*varsayılan*)
   - **Bileşenleri zorlama ve uygulamaları depolama**
@@ -397,7 +397,7 @@ Desteklenen platformlar ve profiller:
   - **Evet** -Kullanıcı Windows 'a oturum açana kadar, tüm ETKIN takılabilir PCI akış bağlantı noktaları için doğrudan bellek ERIŞIMINI (DMA) engelleyin. Kullanıcı oturum açtıktan sonra, Windows, ana bilgisayar eklentisi PCI bağlantı noktalarına bağlı PCI cihazlarını numaralandırır. Kullanıcı makineyi her kilitlediğinde, Kullanıcı yeniden oturum açana kadar alt cihazları olmayan hot plug PCI bağlantı noktalarında DMA engellenir. Makine kilidi açıldığında zaten numaralandırılan cihazlar, söküle kadar çalışmaya devam eder.
 
 - **Çekirdek DMA koruması ile uyumsuz dış cihazların numaralandırması**  
-  CSP: [Dmaguard/DeviceEnumerationPolicy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
+  CSP: [Dmaguard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   Bu ilke, dış DMA özellikli cihazlara karşı ek güvenlik sağlayabilir. DMA yeniden eşleme/cihaz belleği yalıtımı ve korumalı alana alma ile uyumsuz olan dış DMA özellikli cihazların numaralandırılması üzerinde daha fazla denetim sağlar.
 
@@ -408,40 +408,40 @@ Desteklenen platformlar ve profiller:
   - **Tümüne izin ver**
 
 - **Bluetooth bağlantılarını engelle**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Yapılandırılmadı** (*varsayılan*)
   - **Evet** -cihaza ve cihazdan Bluetooth bağlantılarını engelleyin.
 
 - **Bluetooth bulunabilirliği engelle**  
-  CSP: [Bluetooth/AllowDiscoverableMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
+  CSP: [Bluetooth/AllowDiscoverableMode](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowdiscoverablemode)
 
   - **Yapılandırılmadı** (*varsayılan*)
   - **Evet** -cihazın diğer Bluetooth özellikli cihazlar tarafından keşfedilmesini önler.
 
 - **Bluetooth ön eşleştirmesini engelle**  
-  CSP: [Bluetooth/Allowpreeşleştirmeyi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
+  CSP: [Bluetooth/Allowpreeşleştirmeyi](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowprepairing)
 
   - **Yapılandırılmadı** (*varsayılan*)
   - **Evet** -belirli Bluetooth cihazlarının konak cihazla otomatik olarak eşleştirilmesini önler.
 
 - **Bluetooth Advertising 'i engelle**  
-  CSP: [Bluetooth/AllowAdvertising](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
+  CSP: [Bluetooth/AllowAdvertising](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowadvertising)
 
   - **Yapılandırılmadı** (*varsayılan*)
   - **Evet** -cihazın Bluetooth tanıtımları göndermesini engeller.  
 
 - **Bluetooth proxden bağlantıyı engelle**  
-  CSP: [Bluetooth/AllowPromptedProximalConnections](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) , kullanıcıların Swift çiftini ve diğer yakınlık tabanlı senaryoları kullanmasını engeller
+  CSP: [Bluetooth/AllowPromptedProximalConnections](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections) , kullanıcıların Swift çiftini ve diğer yakınlık tabanlı senaryoları kullanmasını engeller
 
   - **Yapılandırılmadı** (*varsayılan*)
   - **Evet** -bir cihaz kullanıcısının Swift çiftini ve diğer yakınlık tabanlı senaryoları kullanmasını önler.  
 
-  [Bluetooth/AllowPromptedProximalConnections CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
+  [Bluetooth/AllowPromptedProximalConnections CSP](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-allowpromptedproximalconnections)
 
 - **Bluetooth izin verilen hizmetler**  
-  CSP: [Bluetooth/ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
-  Hizmet listesi hakkında daha fazla bilgi için bkz. [Servicesallowedlist kullanım kılavuzu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
+  CSP: [Bluetooth/ServicesAllowedList](/windows/client-management/mdm/policy-csp-bluetooth#bluetooth-servicesallowedlist).  
+  Hizmet listesi hakkında daha fazla bilgi için bkz. [Servicesallowedlist kullanım kılavuzu](/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide)
 
   - **Ek** olarak Izin verilen Bluetooth hizmetleri ve profillerini, gibi onaltılı dizeler olarak belirtin `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` .
   - **Içeri aktarma** -Bluetooth hizmetleri ve profillerinin bir listesini içeren bir. csv dosyasını, örneğin `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 534a7f60668091e613ff9dd9fc8a388ec59a247a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: d2b344395cec06839ff8c24db21aec62bc210ed0
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989420"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915407"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Kullanıcıları ve cihazları düzenlemek için grup ekleme
 
@@ -70,8 +70,8 @@ Yeni bir grup oluşturmak için aşağıdaki adımları kullanın.
 
     Bu üyelik türleri ve dinamik ifadeler oluşturma hakkında daha fazla bilgi için bkz.:
 
-    - [Azure AD kullanarak temel Grup oluşturma ve üye ekleme](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Azure AD 'de gruplar için dinamik üyelik kuralları](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [Azure AD kullanarak temel Grup oluşturma ve üye ekleme](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Azure AD 'de gruplar için dinamik üyelik kuralları](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
     > Bu yönetim merkezinde, kullanıcıları veya grupları oluştururken **Azure Active Directory** markalamayı göremeyebilirsiniz. Ancak, kullanmakta olduğunuz şeydir.
@@ -84,7 +84,7 @@ Yeni bir grup oluşturmak için aşağıdaki adımları kullanın.
 > - Contoso Yüksek okuldaki tüm öğrenciler
 > - Tüm Android Kurumsal cihazları
 > - Tüm iOS 11 ve eski cihazlar
-> - Pazarlama
+> - Marketing
 > - Human Resources
 > - Tüm Charlotte çalışanları
 > - Tüm WA çalışanları
@@ -106,4 +106,4 @@ Yapılandırma profili önerileri ve Kılavuzu için bkz. [Kullanıcı grupları
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Microsoft Intune ile rol tabanlı erişim denetimi (RBAC)](role-based-access-control.md)
-- [Azure AD grupları ile kaynaklara erişimi yönetin](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
+- [Azure AD grupları ile kaynaklara erişimi yönetin](/azure/active-directory/active-directory-manage-groups)

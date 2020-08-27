@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4934115915c41d696258aa54ee8f4b7c84d1809c
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 9a19a78002d0655cf63a8b757ea252fb8992603f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86464949"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915271"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-corporate-owned-devices-with-work-profile"></a>İş profiliyle şirkete ait Android kurumsal cihazların Intune kaydını ayarlama
 
@@ -83,7 +83,7 @@ Uygulama ve ilkeleri, atanmış veya dinamik cihaz gruplarına hedefleyebilirsin
     - **Cihaz eklenecek konum**: enrollmentProfileName
     - Ortadaki kutuda **eşittir**' i seçin.
     - Son alana ise daha önce oluşturduğunuz kayıt profili adını girin.
-    Dinamik üyelik kuralları hakkında daha fazla bilgi için bkz: [AAD grupları için dinamik üyelik kuralları](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    Dinamik üyelik kuralları hakkında daha fazla bilgi için bkz: [AAD grupları için dinamik üyelik kuralları](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. **Add sorgu**  >  **Oluştur**' a tıklayın.
 
 ### <a name="revoke-tokens"></a>Belirteçleri iptal et

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dec48b7037788c8951cd5bc5fcd4206809ca69f6
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: d0b9af43c149912d4972e2f79f5e89840823ca94
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531597"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914047"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak macOS cihazlarına Microsoft Edge ekleme
 
@@ -35,7 +35,7 @@ Uygulamaları dağıtmadan, yapılandırmadan, izleyebilmeniz veya koruyabilmeni
 > [!NOTE]
 > Microsoft Edge *sürüm 77 ve üzeri sürümleri* de Windows 10 ' da kullanılabilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - MacOS cihazı, Microsoft Edge 'i yüklemeden önce macOS 10,12 veya sonraki bir sürümü çalıştırmalıdır.
 
@@ -95,6 +95,6 @@ Oluşturduğunuz uygulama, uygulamalar listesinde görüntülenir ve burada uygu
 > Şu anda Apple, Intune 'un macOS cihazlarında Microsoft Edge 'i kaldırması için bir yol sağlamaz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
-- MacOS cihazlarında Microsoft Edge 'i yapılandırma hakkında bilgi edinmek için bkz. [macOS cihazlarında Microsoft Edge 'ı yapılandırma](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
+- MacOS cihazlarında Microsoft Edge 'i yapılandırma hakkında bilgi edinmek için bkz. [macOS cihazlarında Microsoft Edge 'ı yapılandırma](/deployedge/configure-microsoft-edge-on-mac).
 - Kullanıcı gruplarında uygulama atamalarını dahil etme ve dışlama hakkında bilgi edinmek için, bkz. [Uygulama atamalarını dahil etme ve dışlama](apps-inc-exl-assignments.md).
 - [Gruplara uygulama ekleme](apps-deploy.md)

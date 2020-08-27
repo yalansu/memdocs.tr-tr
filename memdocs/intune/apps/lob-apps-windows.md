@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2614dfc903bf7f10633bf05414ed8a71cdd2e03b
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 5b70f36873200d0adbbc356d9a482cf13cc2ea49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990630"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913333"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Microsoft Intune’a bir Windows iş kolu uygulaması ekleme
 
@@ -39,7 +39,7 @@ ms.locfileid: "83990630"
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, **diğer** uygulama türleri altında **iş kolu uygulaması**' nı seçin.
-4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 
 ## <a name="step-1---app-information"></a>1. adım-uygulama bilgileri
 
@@ -50,7 +50,7 @@ ms.locfileid: "83990630"
    Uygulama ayrıntıları görüntülenir.
 
     > [!NOTE]
-    > Windows uygulamaları için dosya uzantıları **.msi**, **.appx**, **.appxbundle**, **.msix** ve **.msixbundle**'dır. **. Msix**hakkında daha fazla bilgi için bkz. [maltı belge](https://docs.microsoft.com/windows/msix/) ve [maltı uygulama dağıtımı](https://docs.microsoft.com/windows/msix/desktop/managing-your-msix-deployment-enterprise).
+    > Windows uygulamaları için dosya uzantıları **.msi**, **.appx**, **.appxbundle**, **.msix** ve **.msixbundle**'dır. **. Msix**hakkında daha fazla bilgi için bkz. [maltı belge](/windows/msix/) ve [maltı uygulama dağıtımı](/windows/msix/desktop/managing-your-msix-deployment-enterprise).
 
 3. İşiniz bittiğinde uygulamayı eklemek için **uygulama paketi dosyası** bölmesinde **Tamam** ' ı seçin.
 
@@ -62,7 +62,7 @@ ms.locfileid: "83990630"
     - **Yayımcı**: Uygulama yayımcısının adını girin.
     - **Uygulama yüklemesi bağlamı**: Bu uygulamayla ilişkilendirilecek yüklemeyi seçin. Çift modlu uygulamalar için, bu uygulama için istenen bağlamı seçin. Diğer tüm uygulamalar için, bu paket temel alınarak önceden seçilmiştir ve değiştirilemez.
     - **Uygulama sürümünü yoksay**: Uygulama geliştiricisi uygulamayı otomatik olarak güncelleştiriyorsa bunu **Evet** olarak ayarlayın. Bu seçenek, yalnızca mobil .msi uygulamalarında geçerlidir.
-    - **Komut satırı bağımsız değişkenleri**: İsteğe bağlı olarak, çalıştığında .msi dosyasına uygulamak istediğiniz komut satırı bağımsız değişkenleri girin.  Örneğin **/q**. Otomatik olarak kullanıldıkları için, MSIEXEC komutunu veya **/ı** veya **/x**gibi bağımsız değişkenleri eklemeyin. Daha fazla bilgi için bkz. [komut satırı seçenekleri](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). . MSI dosyası için ek komut satırı seçenekleri gereklidir [Win32 App Management](app-management.md)kullanmayı düşünün.
+    - **Komut satırı bağımsız değişkenleri**: İsteğe bağlı olarak, çalıştığında .msi dosyasına uygulamak istediğiniz komut satırı bağımsız değişkenleri girin.  Örneğin **/q**. Otomatik olarak kullanıldıkları için, MSIEXEC komutunu veya **/ı** veya **/x**gibi bağımsız değişkenleri eklemeyin. Daha fazla bilgi için bkz. [komut satırı seçenekleri](/windows/desktop/Msi/command-line-options). . MSI dosyası için ek komut satırı seçenekleri gereklidir [Win32 App Management](app-management.md)kullanmayı düşünün.
     - **Kategori**: Yerleşik uygulama kategorilerinden birini veya kendi oluşturduğunuz bir kategoriyi seçin. Kategoriler, kullanıcıların Şirket Portalı’na göz atarken uygulamayı daha kolay bulabilmesini sağlar.
     - **Bunu şirket portalı öne çıkan uygulama olarak göster**: kullanıcılar uygulamalara gözatarken, uygulamayı şirket portalının ana sayfasında göze çarpacak şekilde görüntüleyin.
     - **Bilgi URL’si**: İsteğe bağlı olarak, bu uygulama hakkında bilgi içeren bir web sitesinin URL’sini girin. URL Şirket Portalı’nda görünür.
@@ -99,7 +99,7 @@ Oluşturduğunuz uygulama artık uygulamalar listesinde görünür. Bu listede, 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
    > [!NOTE]
-   > Intune hizmetinin yeni bir APPX dosyasını cihaza başarıyla dağıtması için, `Version` appx paketinizin AppxManifest. xml dosyasındaki dizeyi artırmanız gerekir.
+   > Intune hizmetinin yeni bir APPX dosyasını cihaza başarıyla dağıtması için, `Version` appx paketinizin AppxManifest.xml dosyasındaki dizeyi artırmanız gerekir.
 
 ## <a name="configure-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Sürüm denetim işlemini yoksaymak için bir kendi kendini güncelleştiren MSI uygulaması yapılandırma
 

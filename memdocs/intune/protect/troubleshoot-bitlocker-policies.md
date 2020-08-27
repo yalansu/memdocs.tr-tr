@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92d1e1c5d1e2a66ed036d0ed7a5a75d40c737bf3
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 771c1133d10c256d29755ebc146197a6cb35ceee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83428966"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914914"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Microsoft Intune 'de BitLocker ilkeleri sorunlarını giderme
 
@@ -35,7 +35,7 @@ Microsoft Intune, Windows 10 cihazlarda BitLocker 'ı yönetmek için aşağıda
 
 - **Cihaz yapılandırma ilkeleri** -Endpoint Protection 'ı yönetmek üzere bir cihaz yapılandırma profili oluşturduğunuzda Intune 'da belirli yerleşik ilke seçenekleri mevcuttur. Bu seçenekleri bulmak için, [Endpoint Protection için bir cihaz profili oluşturun](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), *Platform*için **Windows 10 ve üzeri** ' i seçin ve ardından *Ayarlar*için **Windows şifreleme** kategorisi ' ni seçin. 
 
-   Kullanılabilir seçenekler ve özellikler hakkında buradan bilgi edinebilirsiniz: [Windows şifrelemesi](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+   Kullanılabilir seçenekler ve özellikler hakkında buradan bilgi edinebilirsiniz: [Windows şifrelemesi](/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Güvenlik temelleri**  -  [Güvenlik temelleri](security-baselines.md) , Windows cihazlarının güvenli hale getirilmesine yardımcı olmak üzere ilgili güvenlik ekibinin önerdiği, bilinen ayar ve varsayılan değer gruplarıdır. *MDM güvenlik temeli* veya *Microsoft Defender ATP temeli* gibi farklı temel kaynaklar aynı ayarları ve birbirinden farklı ayarları yönetebilir. Ayrıca, cihaz yapılandırma ilkeleriyle yönettiğiniz ayarların aynısını yönetebilirler. 
 
@@ -43,12 +43,12 @@ Intune 'a ek olarak, modern bekleme ve HSTı ile uyumlu donanımlar için, bu ö
 
 Ayrıca, BitLocker ayarları grup ilkesi gibi diğer yollarla veya bir cihaz kullanıcısı tarafından el ile ayarlanmış olabilir.
 
-Ayarların cihaza uygulanma biçimi ne olduğuna bakılmaksızın, BitLocker ilkeleri cihazda şifrelemeyi yapılandırmak için [BITLOCKER CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) 'yi kullanır. BitLocker CSP, Windows 'da yerleşiktir ve Intune atanan bir cihaza bir BitLocker ilkesi dağıttığında, ilkeden gelen ayarların etkili olabilmesi için Windows kayıt defterine uygun değerleri yazan cihazdaki BitLocker CSP 'dir.
+Ayarların cihaza uygulanma biçimi ne olduğuna bakılmaksızın, BitLocker ilkeleri cihazda şifrelemeyi yapılandırmak için [BITLOCKER CSP](/windows/client-management/mdm/bitlocker-csp) 'yi kullanır. BitLocker CSP, Windows 'da yerleşiktir ve Intune atanan bir cihaza bir BitLocker ilkesi dağıttığında, ilkeden gelen ayarların etkili olabilmesi için Windows kayıt defterine uygun değerleri yazan cihazdaki BitLocker CSP 'dir.
 
 BitLocker hakkında daha fazla bilgi edinmek istiyorsanız, aşağıdaki kaynaklara bakın:
 
-- [Kurulumu](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [BitLocker genel bakış ve gereksinimler SSS](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
+- [BitLocker](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker genel bakış ve gereksinimler SSS](/windows/security/information-protection/bitlocker/bitlocker-overview-and-requirements-faq)
 
 Bu ilkelerin ne yaptığını ve bunların nasıl çalıştığını genel olarak anlayadığınıza göre, BitLocker ayarlarının bir Windows istemcisine başarıyla uygulandığını nasıl doğrulayabileceğinize göz atın.
 
@@ -105,11 +105,11 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>Cihazlar kayıt defteri anahtarı yapılandırmasını gözden geçirin
 
-BitLocker ilkesi bir cihaza başarıyla dağıtıldıktan sonra, cihazda BitLocker ayarlarının yapılandırmasını gözden geçirebileceğiniz aşağıdaki kayıt defteri anahtarını görüntüleyin: *HKEY_LOCAL_MACHINE \Software\microsoft\policymanager\current\devıcebitlocker*. İşte bir örnek:
+BitLocker ilkesi bir cihaza başarıyla dağıtıldıktan sonra, cihazda BitLocker ayarlarının yapılandırmasını gözden geçirebileceğiniz aşağıdaki kayıt defteri anahtarını görüntüleyin:  *HKEY_LOCAL_MACHINE \Software\microsoft\policymanager\current\devıcebitlocker*. Aşağıda bir örnek verilmiştir:
 
 ![BitLocker kayıt defteri anahtarı](./media/troubleshooting-bitlocker-policies/registry.png)
 
-Bu değerler BitLocker CSP tarafından yapılandırılır. Anahtarların değerlerinin, Intune Windows şifreleme ilkenizin kaynağında belirtilen ayarlarla eşleştiğinden emin olun. Bu ayarların her biri hakkında daha fazla bilgi için bkz. [BITLOCKER CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
+Bu değerler BitLocker CSP tarafından yapılandırılır. Anahtarların değerlerinin, Intune Windows şifreleme ilkenizin kaynağında belirtilen ayarlarla eşleştiğinden emin olun. Bu ayarların her biri hakkında daha fazla bilgi için bkz. [BITLOCKER CSP](/windows/client-management/mdm/bitlocker-csp).
 
 > [!NOTE]
 > Windows Olay Görüntüleyicisi, BitLocker ile ilgili çeşitli bilgileri de içerir. Burada listelemek için çok fazla yer vardır ancak **BitLocker API 'sine** yönelik arama size çok sayıda faydalı bilgi sağlayacaktır.
@@ -136,7 +136,7 @@ EncryptionMethodWithXtsFdvDropDown: 6 (The value 6 refers to the 128 bit encrypt
 EncryptionMethodWithXtsRdvDropDown: 6 (The value 6 refers to the 128 bit encryption)
 ```
 
-Her bir değerin ne anlama geldiğini görmek için [BITLOCKER CSP belgelerine](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) başvurabilirsiniz. Bu örnekte, bir kod parçacığı aşağıdaki görüntüde paylaşılır.
+Her bir değerin ne anlama geldiğini görmek için [BITLOCKER CSP belgelerine](/windows/client-management/mdm/bitlocker-csp) başvurabilirsiniz. Bu örnekte, bir kod parçacığı aşağıdaki görüntüde paylaşılır.
 
 ![Değerlerin amaçları](./media/troubleshooting-bitlocker-policies/shared-example.png)
 
@@ -162,10 +162,10 @@ Intune ilkeniz herhangi bir kapasitede mevcut olmadığında **, ilke cihaza ula
 - **Tüm ilkenin dağıtımı başarısız mi veya yalnızca uygulanan belirli ayarlar mı?** Kendinizi yalnızca bazı ilke ayarlarının uygulandığı bir senaryoya göre görürseniz, aşağıdaki noktalara dikkat edin:
 
   1. Tüm **Windows sürümlerinde tüm BitLocker ayarları desteklenmez**.
-     İlke tek bir birim olarak bir cihaza gelir. bu nedenle, bazı ayarlar uygulanır ve diğerleri yoksa, ilkenin kendine ait alındığından emin olabilirsiniz. Bu senaryoda, cihazdaki Windows sürümü sorunlu ayarları desteklemiyor olabilir. Her bir ayarın sürüm gereksinimleriyle ilgili ayrıntılar için bkz. Windows belgelerindeki [BITLOCKER CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) .
+     İlke tek bir birim olarak bir cihaza gelir. bu nedenle, bazı ayarlar uygulanır ve diğerleri yoksa, ilkenin kendine ait alındığından emin olabilirsiniz. Bu senaryoda, cihazdaki Windows sürümü sorunlu ayarları desteklemiyor olabilir. Her bir ayarın sürüm gereksinimleriyle ilgili ayrıntılar için bkz. Windows belgelerindeki [BITLOCKER CSP](/windows/client-management/mdm/bitlocker-csp) .
 
   2. **BitLocker tüm donanımlar üzerinde desteklenmez**.
-     Windows 'un doğru sürümüne sahip olsanız bile, temeldeki cihaz donanımının BitLocker şifrelemesi gereksinimlerini karşılamamanız mümkündür. Windows belgelerindeki [BitLocker için sistem gereksinimlerini](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) bulabilirsiniz, ancak denetlenecek ana şey, cihazın uyumlu bir TPM yongasına (1,2 veya üzeri) ve Trusted COMPUTING Group (TCG) uyumlu bir BIOS veya UEFI bellenimine sahip olması olabilir.
+     Windows 'un doğru sürümüne sahip olsanız bile, temeldeki cihaz donanımının BitLocker şifrelemesi gereksinimlerini karşılamamanız mümkündür. Windows belgelerindeki [BitLocker için sistem gereksinimlerini](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) bulabilirsiniz, ancak denetlenecek ana şey, cihazın uyumlu bir TPM yongasına (1,2 veya üzeri) ve Trusted COMPUTING Group (TCG) uyumlu bir BIOS veya UEFI bellenimine sahip olması olabilir.
      
 **BitLocker şifrelemesi sessizce gerçekleştirilmez** -"diğer disk şifrelemesi için uyarı" ayarı engellenmeye ayarlanmış bir Endpoint Protection ilkesi yapılandırdınız ve şifreleme Sihirbazı hala görünür:
 
@@ -209,11 +209,11 @@ Intune ile BitLocker ilke sorunlarını giderirken ve bu ilkenin amaçlanan ciha
 
 BitLocker ile çalışırken size yardımcı olabilecek daha fazla kaynak aşağıda verilmiştir:
 
-- [BitLocker ürün belgeleri](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview)
-- [BitLocker sistem gereksinimleri](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
-- [BitLocker hakkında sık sorulan sorular](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
-- [BitLocker CSP belgeleri](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)
-- [Intune Windows şifreleme ilkesi ayarları](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption)
-- [AAD/MDM kullanan donanımdan bağımsız otomatik BitLocker şifrelemesi](https://blogs.technet.microsoft.com/home_is_where_i_lay_my_head/2017/06/07/hardware-independent-automatic-bitlocker-encryption-using-aadmdm/)
+- [BitLocker ürün belgeleri](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [BitLocker sistem gereksinimleri](/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements)
+- [BitLocker hakkında sık sorulan sorular](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions)
+- [BitLocker CSP belgeleri](/windows/client-management/mdm/bitlocker-csp)
+- [Intune Windows şifreleme ilkesi ayarları](/intune/endpoint-protection-windows-10#windows-encryption)
+- [AAD/MDM kullanan donanımdan bağımsız otomatik BitLocker şifrelemesi](/archive/blogs/home_is_where_i_lay_my_head/hardware-independent-automatic-bitlocker-encryption-using-aadmdm)
 - [Otomatik pilot cihazlarda BitLocker şifrelemesi için CSP Ilkesi](https://techcommunity.microsoft.com/t5/Windows-10-security/CSP-policy-for-bitLocker-encryption-on-autopilot-devices/m-p/284537)
-- [Intune ile BitLocker ilkesi oluşturma ve dağıtma ile ilgili izlenecek yol](https://blogs.technet.microsoft.com/cbernier/2017/07/11/windows-10-intune-windows-bitlocker-management-yes/)
+- [Intune ile BitLocker ilkesi oluşturma ve dağıtma ile ilgili izlenecek yol](/archive/blogs/cbernier/windows-10-intune-windows-bitlocker-management-yes)

@@ -19,12 +19,12 @@ ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 77643d689a2a5693b71f85a7e82b98bddec9a646
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: b61265a1c278b83a91ac1e353794a358dcc5fdb3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881475"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915526"
 ---
 # <a name="reset-device-from-company-portal-website"></a>Şirket Portalı Web sitesinden cihaz sıfırlama
 
@@ -32,7 +32,7 @@ Kullanılan, kaybolan veya çalınan bir cihazı Şirket Portalı Web sitesinden
 
 Sıfırlandıktan sonra cihaz Şirket Portalı’nda gösterilmez. Önceden var olan uygulama ve dosyalar silinir ve cihaz varsayılan fabrika ayarlarına geri yüklenir. 
 
-Şirket Portalı cihaz sıfırlama tüm iOS cihazlarda kullanılamaz. BT desteği olan bir kişiyse ve cihaz sıfırlama hakkında daha fazla bilgi edinmek istiyorsanız, bkz. [cihaz silme, devre dışı bırakma veya el ile kaldırma aracılığıyla cihazları kaldırma](https://docs.microsoft.com/intune/devices-wipe).  
+Şirket Portalı cihaz sıfırlama tüm iOS cihazlarda kullanılamaz. BT desteği olan bir kişiyse ve cihaz sıfırlama hakkında daha fazla bilgi edinmek istiyorsanız, bkz. [cihaz silme, devre dışı bırakma veya el ile kaldırma aracılığıyla cihazları kaldırma](/intune/devices-wipe).  
 
 > [!Note]
 > Bu adımları, kaydettiğiniz başka bir cihazdan da gerçekleştirebilirsiniz. Şirket Portalı uygulamasını açın ve benzer bir sıfırlama deneyimi için adımları doldurun. 

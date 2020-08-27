@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d935e79dfe2fd0d786dae596cafe173b66018c9
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663303"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915577"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Intune 'da e-posta imzalama ve şifreleme için S/MIME 'ye Genel Bakış
 
@@ -28,12 +28,12 @@ S/MIME sertifikası olarak da bilinen e-posta sertifikaları, şifreleme ve şif
 
 - Android
 - iOS/iPadOS
-- macOS
+- Mac OS
 - Windows 10 ve üzeri
 
 İOS/ıpados cihazlarında, gelen ve giden e-postaları imzalamak ve şifrelemek için S/MIME ve sertifikaları kullanan bir Intune ile yönetilen e-posta profili oluşturabilirsiniz. Diğer platformlarda S/MIME desteklenmiyor olabilir. Destekleniyorsa, S/MIME imzalama ve şifreleme kullanan sertifikaları yükler. Ardından, son kullanıcı e-posta uygulamasında S/MIME 'yi etkinleştirmesine izin vermez.
 
-S/MIME e-posta imzalama ve Exchange ile şifreleme hakkında daha fazla bilgi için bkz. [s/MIME, ileti imzalama ve şifreleme için](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
+S/MIME e-posta imzalama ve Exchange ile şifreleme hakkında daha fazla bilgi için bkz. [s/MIME, ileti imzalama ve şifreleme için](/Exchange/policy-and-compliance/smime).
 
 Bu makalede, cihazlarınızdaki e-postaları imzalamak ve şifrelemek için S/MIME sertifikaları kullanma hakkında genel bakış sunulmaktadır.
 
@@ -41,7 +41,7 @@ Bu makalede, cihazlarınızdaki e-postaları imzalamak ve şifrelemek için S/MI
 
 İmzalama için kullanılan sertifikalar, istemci e-posta uygulamasının e-posta sunucusuyla güvenli bir iletişim kurmasını sağlar.
 
-İmzalama sertifikalarını kullanmak için, sertifika yetkiliniz (CA) üzerinde imzalamaya odaklanan bir şablon oluşturun. Microsoft Active Directory Sertifika Yetkilisinde [Sunucu sertifikası şablonu yapılandırma](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) başlığı altında sertifika şablonları oluşturmak için gerekli adımlar listelenir.
+İmzalama sertifikalarını kullanmak için, sertifika yetkiliniz (CA) üzerinde imzalamaya odaklanan bir şablon oluşturun. Microsoft Active Directory Sertifika Yetkilisinde [Sunucu sertifikası şablonu yapılandırma](/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) başlığı altında sertifika şablonları oluşturmak için gerekli adımlar listelenir.
 
 Intune’da imzalama sertifikaları PKCS sertifikalarını kullanır. [PKCS sertifikaları yapılandırma ve kullanma](certficates-pfx-configure.md) başlığı altında, Intune ortamınızda nasıl PKCS sertifikası dağıtıp kullanacağınız açıklanır. Bu adımlar şunlardır:
 

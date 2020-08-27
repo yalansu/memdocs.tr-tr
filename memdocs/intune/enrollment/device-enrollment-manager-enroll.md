@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5dec2fd96c5b5dfe0b82bb30bf653250786c95
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: f674cc7b0c7d7314c7152d530cff210319c568df
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83986764"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913146"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Cihaz kayıt yöneticisi hesabı kullanarak cihazları Intune 'A kaydetme
 
@@ -49,7 +49,7 @@ DEM kullanıcı hesapları ve bir DEM kullanıcı hesabıyla kaydedilen cihazlar
 
 DEM hesaplarını kullanarak cihazları kaydetmek için aşağıdaki yöntemleri kullanabilirsiniz:
 
-- [Windows Autopilot](enrollment-autopilot.md)
+- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows cihazları toplu kaydı](windows-bulk-enroll.md)
 - DEM Şirket Portalı aracılığıyla başlatıldı
 
@@ -57,7 +57,7 @@ DEM hesaplarını kullanarak cihazları kaydetmek için aşağıdaki yöntemleri
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar**  >  **kayıt cihazları**  >  **Cihaz Kayıt yöneticileri**' ni seçin.
 
-2. **Add (Ekle)** seçeneğini belirleyin.
+2. **Ekle**’yi seçin.
 
 3. **Kullanıcı Ekle** dikey penceresinde, DEM kullanıcısı için bir kullanıcı asıl adı girin ve **Ekle**’yi seçin. DEM kullanıcısı, DEM kullanıcıları listesine eklenir.
 
@@ -77,4 +77,3 @@ Cihaz kayıt yöneticisinin kaldırılması, kayıtlı cihazları etkilemez.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın, **cihazlar**  >  **kayıt cihazları**  >  **Cihaz Kayıt yöneticileri**' ni seçin.
 2. **Cihaz kayıt yöneticileri** dikey penceresinde DEM kullanıcısını ve **Sil**’i seçin.
-

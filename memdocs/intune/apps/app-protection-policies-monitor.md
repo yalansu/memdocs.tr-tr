@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10c715bcff63e6ec5a9ec9002926f6ee6608360e
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: 3a64d3f58541194ed4c1a63ac57cddec70ff6873
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455081"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913486"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Uygulama koruma ilkelerini izleme
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -92,7 +92,7 @@ Tek bir kullanıcıyı arayabilir ve o kullanıcının uyumluluk durumunu denetl
 - **Son eşitleme**: uygulama Intune ile son kez eşitlendiğinde.
 
 >[!NOTE]
-> **Son eşitleme** sütunu, hem konsol içi Kullanıcı durumu raporunda hem de uygulama koruma ilkesi [verilebilir. csv raporunda](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities)aynı değeri temsil eder. Bu fark, iki rapordaki değer arasındaki eşitlemede küçük bir gecikme olur.
+> **Son eşitleme** sütunu, hem konsol içi Kullanıcı durumu raporunda hem de uygulama koruma ilkesi [verilebilir. csv raporunda](/intune/app-protection-policies-monitor#export-app-protection-activities)aynı değeri temsil eder. Bu fark, iki rapordaki değer arasındaki eşitlemede küçük bir gecikme olur.
 >
 > Son eşitlemede başvurulan süre, Intune 'un uygulama örneğini son gördüğünüz. Bir Kullanıcı bir uygulamayı başlattığında, en son ne zaman iade edilene bağlı olarak bu başlatma zamanında Intune Uygulama Koruması hizmetine bildirimde bulunabilir. [Uygulama koruma ilkesi için yeniden deneme aralığı zamanlarını](app-protection-policy-delivery.md)inceleyin. Bir Kullanıcı bu uygulamayı son iade aralığında (genellikle etkin kullanım için 30 dakika) kullanmadıysanız ve uygulamayı başlamışsa:
 >

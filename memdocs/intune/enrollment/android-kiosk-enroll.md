@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 544db0c11894967eca71a5b8c2e107e0fab47ef5
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4e151f45f8b65050496504ecdc95c0084b74e7c2
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989013"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915169"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Android Kurumsal ayrılmış cihazları için Intune kaydını ayarlama
 
@@ -71,7 +71,7 @@ Uygulama ve ilkeleri, atanmış veya dinamik cihaz gruplarına hedefleyebilirsin
 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431) ' nde oturum açın ve **gruplar**  >  **tüm gruplar**  >  **Yeni Grup**' ı seçin.
 2. **Grup** dikey penceresinde gerekli alanları aşağıdaki gibi doldurun:
-    - **Grup türü**: güvenlik
+    - **Grup türü**: Güvenlik
     - **Grup adı**: Kullanımı kolay bir ad yazın (Fabrika 1 cihazlar gibi)
     - **Üyelik türü**: Dinamik cihaz
 3. **Dinamik sorgu ekle**’yi seçin.
@@ -80,7 +80,7 @@ Uygulama ve ilkeleri, atanmış veya dinamik cihaz gruplarına hedefleyebilirsin
     - **Cihaz eklenecek konum**: enrollmentProfileName
     - Ortadaki kutuda **eşittir**' i seçin.
     - Son alana ise daha önce oluşturduğunuz kayıt profili adını girin.
-    Dinamik üyelik kuralları hakkında daha fazla bilgi için bkz: [AAD grupları için dinamik üyelik kuralları](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    Dinamik üyelik kuralları hakkında daha fazla bilgi için bkz: [AAD grupları için dinamik üyelik kuralları](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. **Add sorgu**  >  **Oluştur**' a tıklayın.
 
 ### <a name="replace-or-remove-tokens"></a>Belirteçleri kaldırma veya değiştirme

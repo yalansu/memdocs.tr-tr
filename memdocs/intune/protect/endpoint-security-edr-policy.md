@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: cba7b357dfae0c9dae06e8a21ddd0583fd96bcae
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ff880b564562b3e6d67dc852f97ef7a9f5d6b814
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820536"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915050"
 ---
 # <a name="endpoint-detection-and-response-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için uç nokta algılama ve yanıt ilkesi
 
@@ -191,4 +191,4 @@ Hem platformlar hem de profiller için yapılandırabileceğiniz [ayarları gör
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Uç nokta güvenlik ilkelerini yapılandırma](endpoint-security-policy.md#create-an-endpoint-security-policy)
-- Microsoft Defender ATP belgelerindeki [uç nokta algılama ve yanıt](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) hakkında daha fazla bilgi edinin.
+- Microsoft Defender ATP belgelerindeki [uç nokta algılama ve yanıt](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) hakkında daha fazla bilgi edinin.

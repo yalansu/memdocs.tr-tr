@@ -15,12 +15,12 @@ ms.reviewer: pfetty
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a264b9a3b8f0ba15debe7e7323c106f09fa12c6
-ms.sourcegitcommit: 0b30c8eb2f5ec2d60661a5e6055fdca8705b4e36
+ms.openlocfilehash: b4523db7f2c7bb27542e7cb3e909ece7c93a996f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84455251"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915424"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>KCG'yi Microsoft Enterprise Mobility + Security (EMS) ile etkinleştirmeye yönelik teknoloji kararları
 
@@ -33,7 +33,7 @@ Bu konu başlığı altında, şirket e-postasına KCG erişimini etkinleştirme
 * E-posta hesaplarınız Exchange Online'da barındırılıyor
 
 ## <a name="common-reasons-to-manage-the-device-mdm"></a>Cihazı yönetmek için yaygın nedenler (MDM)
-Exchange Online 'da [koşullu erişim](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) ilkesi dağıtarak, kullanıcıların cihazlarını cihaz yönetimine kaydetmelerini kolayca sağlayabilirsiniz. Aşağıdaki nedenlerle kişisel cihazları yönetmek isteyebilirsiniz:
+Exchange Online 'da [koşullu erişim](/azure/active-directory/active-directory-conditional-access-azure-portal) ilkesi dağıtarak, kullanıcıların cihazlarını cihaz yönetimine kaydetmelerini kolayca sağlayabilirsiniz. Aşağıdaki nedenlerle kişisel cihazları yönetmek isteyebilirsiniz:
 
 **WiFi/VPN** – Kullanıcılarınızın üretken olmak için bir şirket bağlantı profiline ihtiyaçları varsa, bu rahatça yapılandırılabilir.
 

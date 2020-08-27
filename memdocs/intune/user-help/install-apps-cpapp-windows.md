@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: de3d4eb47a6a08c0ba2bdddb20312f7e95eb8c84
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 73201375c9416b3a30181062d310a1d9bd60756d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83882193"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914625"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Cihazınızda uygulama yükleme ve paylaşma
 
@@ -58,11 +58,11 @@ Windows için Şirket Portalı uygulamasından cihazınıza uygulama yükleyin.
 ## <a name="share-apps"></a>Uygulamaları paylaşma  
 Uygulamaları iş veya okuldaki tanıdığınız kişilerle paylaşın veya bu kişilere önerin. Aşağıdaki adımlar bir bağlantıyı doğrudan Şirket Portalı'ndan nasıl paylaşabileceğinizi anlatmaktadır.
 
-1. Şirket Portalı'nda, bir uygulamanın [bağlam menüsünü](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus) açmak için üzerine sağ tıklayın veya simgeyi basılı tutun.  
+1. Şirket Portalı'nda, bir uygulamanın [bağlam menüsünü](//windows/uwp/design/controls-and-patterns/menus) açmak için üzerine sağ tıklayın veya simgeyi basılı tutun.  
 
     ![Windows 10 için Şirket Portalı uygulaması ön sayfası uygulamaların ve cihazların bir listesini gösterirken. Tıklanabilen "Paylaş" bağlam menüsü, örnek uygulama simgesinin üzerinde görülebilir. ](./media/1808_ShareContext_CP_Windows.png)  
 
-2. **Paylaşma**' yı seçin.
+2. **Paylaş**'ı seçin.
 3. Bir gruba göndermek için kişiler arasından birini veya OneNote gibi başka bir programı seçin. Kullanmak istediğiniz bir uygulamayı görmüyorsanız, bulunan diğer uygulamaları görmek için **Store'dan uygulama edin**'i seçin.  
 
     ![Windows 10 için Şirket Portalı uygulamasının açılmış Paylaş sayfasıyla örnek ekran görüntüsü. Sayfada "<örnek uygulama adı> hakkında Şirket Portalı uygulamasında bilgi edinin" deniyor. Bağlantıyı göndermek için seçilebilecek bir kişi ve 2 uygulama ve bir "Store'dan uygulama edinin" bağlantısı gösteriliyor. ](./media/1808_ShareApps_CP_Windows.png) 
@@ -97,4 +97,4 @@ Bu sayfaya ulaşmak için, gezinti menüsüne gidin ve **yüklü uygulamalar**' 
 
 Uygulamalar atama türünü, yayımcıyı, ada göre alfabetik olarak veya yayımlama tarihine göre kronolojik olarak yeniden düzenlemek için **sıralama ölçütü** ' nu kullanın. Yükleme durumuna göre gördüğünüz uygulamaları sınırlamak için **filtre ölçütü** ' ni kullanın.  Kullanılabilir uygulama yoksa, hiçbir şirket uygulaması yüklenmediğini belirten bir ileti görürsünüz.  
 
-Ek Yardım mı gerekiyor? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  
+Ek Yardım mı gerekiyor? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

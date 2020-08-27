@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6fb5702b7c809c7810004a53d084f19fa94dea9e
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: f08282fe6bd8675474415290d50c0b07b4e1fc25
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431368"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915067"
 ---
 # <a name="account-protection-policy-for-endpoint-security-in-intune"></a>Intune 'da Endpoint Security için hesap koruma ilkesi
 
@@ -30,7 +30,7 @@ Kullanıcılarınızın kimliğini ve hesaplarını korumak için hesap korumas�
 - *İş Için Windows Hello* , bilgisayarlarda ve mobil cihazlarda güçlü iki öğeli kimlik doğrulama ile parolaları değiştirir.
 - *Credential Guard* , cihazlarınızla birlikte kullandığınız kimlik bilgilerini ve gizli dizileri korumanıza yardımcı olur.
 
-Daha fazla bilgi edinmek için bkz. Windows kimlik ve erişim yönetimi belgelerindeki [kimlik ve erişim yönetimi](https://docs.microsoft.com/windows/security/identity-protection/) .
+Daha fazla bilgi edinmek için bkz. Windows kimlik ve erişim yönetimi belgelerindeki [kimlik ve erişim yönetimi](/windows/security/identity-protection/) .
 
 [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'Nin **uç nokta güvenlik** düğümünde *Yönet* bölümünde hesap koruması için uç nokta güvenlik ilkelerini bulun.
 

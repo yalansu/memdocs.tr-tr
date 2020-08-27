@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6cddd94400874c508a31b11b22fa4417798e2da
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 865a6f33053d9e1fe011d6c2cddf94d0e3995148
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80084769"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914982"
 ---
 # <a name="view-and-correct-personal-data"></a>Görünüm ve doğru kişisel veriler
 
@@ -37,7 +37,7 @@ Intune yöneticileri, erişim izinlerine bağlı olarak bazı kişisel verileri 
 Yöneticiler, Intune kullanıcı arabirimindeki çeşitli dikey pencerelerde son kullanıcı kişisel bilgilerini görebilir. Aşağıdaki makalelerde, yöneticilerin hangi bilgileri yaptığını ve erişimi yok açıklanmaktadır:
 - Intune 'da [cihaz ayrıntılarına bakın](../remote-actions/device-inventory.md) son kullanıcının cihazına ilişkin ayrıntıları nasıl gözden geçirebileceğinizi açıklar.
 - [Uygulama bilgilerini ve atamalarını izleme,](../apps/apps-monitor.md) son kullanıcının cihazında yüklü olan uygulamalarla ilgili ayrıntıları nasıl görebileceğinizi açıklar.
-- [Cihazımı kaydettiğimde şirketim hangi bilgileri görebilir? makalesi](https://docs.microsoft.com/mem/intune/user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) , son kullanıcılara, şirketlerinin görebileceği ve görebilecekleri verilerin bir listesini sağlar. Kullanıcılarınıza ne tür verileri topladığınızı ve neden topladığınızı açıkça söylemek en iyisidir. Bu şeffaflığın sağlanması için bu makale ilk adımınız olabilir.
+- [Cihazımı kaydettiğimde şirketim hangi bilgileri görebilir? makalesi](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) , son kullanıcılara, şirketlerinin görebileceği ve görebilecekleri verilerin bir listesini sağlar. Kullanıcılarınıza ne tür verileri topladığınızı ve neden topladığınızı açıkça söylemek en iyisidir. Bu şeffaflığın sağlanması için bu makale ilk adımınız olabilir.
 
 ### <a name="who-can-view-the-data"></a>Verileri kim görebilir?
 

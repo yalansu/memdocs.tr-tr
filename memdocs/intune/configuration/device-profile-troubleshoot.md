@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6004526d8c9340e70e5149f2261eea07a916ed7
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 849be91ccedab1f97b68b14e5bc2a51bc5a62f19
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871993"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915305"
 ---
 # <a name="common-questions-and-answers-with-device-policies-and-profiles-in-microsoft-intune"></a>Microsoft Intune 'deki cihaz ilkeleri ve profillerle ilgili yaygın sorular ve yanıtlar
 
@@ -39,7 +39,7 @@ Bir cihaz, ilk bildirimden sonra ilkeyi veya profili almak için iade vermezse, 
 | Platform | Döngü süresi|
 | --- | --- |
 | iOS/iPadOS | Her 8 saatte bir |
-| macOS | Her 8 saatte bir |
+| Mac OS | Her 8 saatte bir |
 | Android | Her 8 saatte bir |
 | Cihaz olarak kaydedilen Windows 10 bilgisayarlar | Her 8 saatte bir |
 | Windows Phone | Her 8 saatte bir |
@@ -47,10 +47,10 @@ Bir cihaz, ilk bildirimden sonra ilkeyi veya profili almak için iade vermezse, 
 
 Cihaz son zamanlarda kaydedildiyse, uyumluluk, uyumsuzluk ve yapılandırma iadede daha sık çalışır ve bu da **tahmin** edilir:
 
-| Platform | Sıklık |
+| Platform | Frequency |
 | --- | --- |
 | iOS/iPadOS | 1 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir |  
-| macOS | 1 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
+| Mac OS | 1 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 | Android | 15 dakika boyunca 3 dakikada bir, sonra 2 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 | Cihaz olarak kaydedilen Windows 10 bilgisayarlar | 15 dakika boyunca 3 dakikada bir, sonra 2 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
 | Windows Phone | 15 dakika boyunca 5 dakikada bir, sonra 2 saat boyunca 15 dakikada bir ve daha sonra 8 saatte bir | 
@@ -149,7 +149,7 @@ Windows 10 cihazlarında bazı ayarlar "uygulanamaz" olarak gösterilebilir. Bu 
 - Ayar, cihazdaki geçerli işletim sistemi (OS) sürümü değil, yalnızca Windows 'un daha yeni sürümlerinde kullanılabilir.
 - Bu ayar yalnızca belirli Windows sürümleri veya giriş, profesyonel, kurumsal ve eğitim gibi belirli SKU 'Lar için kullanılabilir.
 
-Farklı ayarların sürümü ve SKU gereksinimleri hakkında daha fazla bilgi edinmek için bkz. [yapılandırma hizmeti sağlayıcısı (CSP) başvurusu](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+Farklı ayarların sürümü ve SKU gereksinimleri hakkında daha fazla bilgi edinmek için bkz. [yapılandırma hizmeti sağlayıcısı (CSP) başvurusu](/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

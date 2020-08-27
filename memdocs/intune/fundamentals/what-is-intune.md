@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28a5bc7a1ee00e9595c50d274605af1b33c1ea90
-ms.sourcegitcommit: 411e9d93cbafc7585f5a0f9a05097fe589de804f
+ms.openlocfilehash: 26d944911f475fbd719161d9b0f7077e0bc1e64f
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85332810"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913707"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune, cihazlarınız için MDM ve MAM sağlayıcısıdır
 
@@ -34,7 +34,7 @@ Intune, Microsoft 'un [Enterprise Mobility + Security (EMS) paketinin](https://w
 
 Intune ile şunları yapabilirsiniz:
 
-- Intune ile %100 bulut veya Configuration Manager ile Intune ile [birlikte yönetilen](https://docs.microsoft.com/configmgr/comanage/overview) bir şekilde seçin.
+- Intune ile %100 bulut veya Configuration Manager ile Intune ile [birlikte yönetilen](/configmgr/comanage/overview) bir şekilde seçin.
 - Verilere ve ağlara erişmek için kuralları ayarlayın ve kişisel ve kuruluşa ait cihazlarda ayarları yapılandırın.
 - Şirket içi ve mobil cihazlarda uygulamaları dağıtın ve kimlik doğrulaması yapın.
 - Kullanıcıların bilgilere erişme ve paylaşma şeklini denetleyerek şirket bilgilerinizi koruyun.
@@ -108,7 +108,7 @@ Intune kullanılabilir:
 - [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) ve [Microsoft 365 Kamu](https://www.microsoft.com/microsoft-365/government) ile birlikte
 - Bazı sınırlı Intune özelliklerinden oluşan [Office 365 ' de mobil cihaz yönetimi](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)olarak
 
-Intune, [kamu](https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description), [eğitim](https://www.microsoft.com/en-us/education/intune), [bilgi noktası veya](../configuration/kiosk-settings.md) üretim ve perakende için adanmış cihaz gibi birçok sektörde kullanılır ve daha fazlasını yapın.
+Intune, [kamu](/enterprise-mobility-security/solutions/ems-govt-service-description), [eğitim](https://www.microsoft.com/en-us/education/intune), [bilgi noktası veya](../configuration/kiosk-settings.md) üretim ve perakende için adanmış cihaz gibi birçok sektörde kullanılır ve daha fazlasını yapın.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

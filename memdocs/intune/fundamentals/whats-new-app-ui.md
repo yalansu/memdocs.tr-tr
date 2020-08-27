@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbb66833397d16ec18ce015d26a19bd28a1113c4
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: 42bcbcdbc6cc6f3256ece2f24114f2d2a52083ce
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048166"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915016"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Intune son kullanıcı uygulamaları arabirimlerinde yapılan güncelleştirmeler
 
@@ -32,7 +32,7 @@ Microsoft Intune uygulamalarına yönelik en son güncelleştirmeler hakkında b
 * Öğrenci ve çalışanları uygulama ve kayıt değişikliklerine karşı uyarır.
 * Kuruluşunuzun belgelerini veya yardım masası yordamlarını güncelleştirin.  
 
-Bir çalışan ya da öğrenciyseniz, Şirket Portalı yardım belgelerinin ekran görüntülerini ve bağlantılarını kontrol ettiğinizden emin olun. Şirket Portalı uygulamasının nasıl kullanılacağı hakkında daha fazla bilgi için, [Şirket portalı Kullanıcı Yardım belgelerine](https://docs.microsoft.com/mem/intune/user-help/use-managed-devices-to-get-work-done)bakın.  
+Bir çalışan ya da öğrenciyseniz, Şirket Portalı yardım belgelerinin ekran görüntülerini ve bağlantılarını kontrol ettiğinizden emin olun. Şirket Portalı uygulamasının nasıl kullanılacağı hakkında daha fazla bilgi için, [Şirket portalı Kullanıcı Yardım belgelerine](../user-help/use-managed-devices-to-get-work-done.md)bakın.  
 
 ## <a name="week-of-august-10-2020"></a>10 Ağustos 2020 haftası
 
@@ -193,7 +193,7 @@ Uygulama menüsünün örnek ekran görüntüsü:
 * Yönetim profilini cihazlarına yüklemek için Ayarlar uygulamasını açın.  
 * Kaydı tamamlamaya yönelik Şirket Portalı uygulamasına geri dönün.  
 
-Güncelleştirilmiş kayıt adımları ve ekranları için bkz. [iOS cihazını Intune 'A kaydetme](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-ios).  
+Güncelleştirilmiş kayıt adımları ve ekranları için bkz. [iOS cihazını Intune 'A kaydetme](../user-help/enroll-your-device-in-intune-ios.md).  
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>iOS için Şirket Portalı uygulamasında kullanıcı deneyimi güncelleştirmesi <!-- 2536024 -->
 İOS cihazları için Şirket Portalı uygulamasının ana sayfası yeniden tasarlanmıştır. Bu değişiklik ile, giriş sayfası iOS Kullanıcı arabirimi desenlerini daha iyi izler ve ayrıca uygulamalar ve e-kitaplar için geliştirilmiş bulunabilirliği sağlar.  
@@ -217,7 +217,7 @@ Microsoft Intune yöneticisi olarak, iOS Şirket Portalı uygulamasındaki kulla
 ## <a name="week-of-august-27-2018"></a>27 Ağustos 2018 Haftası  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Şirket Portalı web sitesi için yeni kullanıcı deneyimi güncelleştirmesi <!--2000968 -->  
-Müşterilerin geri bildirimlerine göre Şirket Portalı Web sitesine yeni özellikler ekledik. Cihazlarınızın mevcut işlevselliğinde ve kullanılabilirliğinde önemli gelişmeler göreceksiniz. Sitenin cihaz ayrıntıları, geri bildirim ve destek ve cihaza genel bakış gibi belirli alanlarında, artık yeni, modern ve hızlı yanıt veren bir tasarıma sahiptir. [Intune Şirket Portalı belgeleri](https://docs.microsoft.com/mem/intune/user-help/using-the-intune-company-portal-website) de bu değişiklikleri yansıtacak şekilde güncelleştirildi.   
+Müşterilerin geri bildirimlerine göre Şirket Portalı Web sitesine yeni özellikler ekledik. Cihazlarınızın mevcut işlevselliğinde ve kullanılabilirliğinde önemli gelişmeler göreceksiniz. Sitenin cihaz ayrıntıları, geri bildirim ve destek ve cihaza genel bakış gibi belirli alanlarında, artık yeni, modern ve hızlı yanıt veren bir tasarıma sahiptir. [Intune Şirket Portalı belgeleri](../user-help/using-the-intune-company-portal-website.md) de bu değişiklikleri yansıtacak şekilde güncelleştirildi.   
 
 Karşılaşacağınız güncelleştirmeler şunlardır:  
 
@@ -257,7 +257,7 @@ Ayrıntılar görünümünü gösteren örnek ekran görüntüsü:
 
 ## <a name="week-of-april-23-2018"></a>23 Nisan 2018 Haftası
 ### <a name="updated-navigation-view-in-the-company-portal-app-for-windows-10----1195010---"></a>Windows 10 için Şirket Portalı uygulamasında güncelleştirilen gezinti görünümü  <!-- 1195010 -->
-Windows 10 için Intune Şirket Portalı, [Fluent Design System'in gezinti görünümü](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics) ile güncelleştirildi. Uygulamanın yan tarafı boyunca tüm en üst düzey sayfaların statik, dikey bir listesini göreceksiniz. Sayfaları hızla görüntülemek ve aralarında geçiş yapmak için herhangi bir bağlantıya tıklayın. Bu, Intune'da sürekli daha iyi uyarlanmış, anlayışlı ve tanıdık bir deneyim oluşturma çabalarımız kapsamında göreceğiniz birkaç güncelleştirmeden ilkidir. 
+Windows 10 için Intune Şirket Portalı, [Fluent Design System'in gezinti görünümü](/windows/uwp/design/basics/navigation-basics) ile güncelleştirildi. Uygulamanın yan tarafı boyunca tüm en üst düzey sayfaların statik, dikey bir listesini göreceksiniz. Sayfaları hızla görüntülemek ve aralarında geçiş yapmak için herhangi bir bağlantıya tıklayın. Bu, Intune'da sürekli daha iyi uyarlanmış, anlayışlı ve tanıdık bir deneyim oluşturma çabalarımız kapsamında göreceğiniz birkaç güncelleştirmeden ilkidir. 
 
 ![Fluent Design gezinti görünümünün gösterildiği Şirket Portalı uygulama panosunun ekran görüntüsü](./media/whats-new-app-ui/1804_WindowsCP_Fluent_01.png)
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58e22af70a3cf119cb044a15b40ba581fe6452c
-ms.sourcegitcommit: 5c15b59cde085787b85f032f88add70a11d8e9a2
+ms.openlocfilehash: 1eb64f8ed2bc67b4800a4583010dea150ade421d
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86452837"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914166"
 ---
 # <a name="add-the-macos-company-portal-app"></a>MacOS Şirket Portalı uygulamasını ekleme
 
@@ -40,7 +40,7 @@ Uygulamaları yükledikten sonra uygulamaların daha güvenli ve güncel kalmas�
 > Şirket Portalı uygulaması yalnızca doğrudan kaydolma veya otomatik cihaz kaydı kullanılarak kaydedilmiş Intune kullanan cihazlara otomatik olarak yüklenebilir. Kişisel cihaz veya el ile kaydolma için Şirket Portalı uygulamasının kayıt başlatmak üzere indirilmesi ve yüklenmesi gerekir. Bkz. [kullanıcıların şirket portalı indirip yüklemesini isteyin](#instruct-users-to-download-and-install-company-portal).
 ## <a name="instruct-users-to-download-and-install-company-portal"></a>Kullanıcılara Şirket Portalı indirip yüklemelerini bildirin
 
-Kullanıcılara macOS için Şirket Portalı indirme, yükleme ve oturum açma izni verebilirsiniz. Şirket Portalı indirme, yükleme ve oturum açma yönergeleri için bkz. [Şirket Portalı uygulamasını kullanarak macOS cihazınızı kaydetme](https://docs.microsoft.com/mem/intune/user-help/enroll-your-device-in-intune-macos-cp).
+Kullanıcılara macOS için Şirket Portalı indirme, yükleme ve oturum açma izni verebilirsiniz. Şirket Portalı indirme, yükleme ve oturum açma yönergeleri için bkz. [Şirket Portalı uygulamasını kullanarak macOS cihazınızı kaydetme](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
 ##  <a name="install-company-portal-for-macos-as-a-macos-lob-app"></a>MacOS için Şirket Portalı macOS LOB uygulaması olarak yükler
 
@@ -66,5 +66,5 @@ MacOS için Şirket Portalı, [MacOS kabuğu betikleri](macos-shell-scripts.md) 
 > Betiği, macOS için Şirket Portalı geçerli sürümünü indirmek üzere çalıştırıldığında Internet erişimi gerektirir. 
 ## <a name="next-steps"></a>Sonraki adımlar
 - Uygulama atama hakkında daha fazla bilgi için bkz. [uygulamaları gruplara atama](apps-deploy.md).
-- Otomatik cihaz kaydını yapılandırma hakkında daha fazla bilgi için bkz. [aygıt kayıt programı-macOS 'U kaydetme](https://docs.microsoft.com/mem/intune/enrollment/device-enrollment-program-enroll-macos).
-- MacOS 'ta Microsoft otomatik güncelleştirme ayarlarını yapılandırma hakkında daha fazla bilgi için bkz. [Mac Updates](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/mac-updates).
+- Otomatik cihaz kaydını yapılandırma hakkında daha fazla bilgi için bkz. [aygıt kayıt programı-macOS 'U kaydetme](../enrollment/device-enrollment-program-enroll-macos.md).
+- MacOS 'ta Microsoft otomatik güncelleştirme ayarlarını yapılandırma hakkında daha fazla bilgi için bkz. [Mac Updates](/windows/security/threat-protection/microsoft-defender-atp/mac-updates).

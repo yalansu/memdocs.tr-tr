@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7c71a35c41e319d6a224868889a77fdad3ec35f
-ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
+ms.openlocfilehash: 77959edc21bc6912dc540407b21cbc2018e81d49
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 08/26/2020
-ms.locfileid: "88895997"
+ms.locfileid: "88915152"
 ---
 # <a name="using-the-intune-docs"></a>Intune belgelerini kullanma
 
@@ -48,7 +48,7 @@ Intune için genel yardım ve destek için bkz. [Intune için destek alın](get-
 
 ## <a name="provide-doc-feedback"></a>Belge geri bildirimi sağla
 
-Geri bildirim bölümü her bir makalenin en altında bulunur. Bu bölüme gitmek için herhangi bir makalenin sağ üst kısmındaki **geri bildirim** bağlantısına tıklayın. Geri bildirim, GitHub sorunlarıyla tümleşiktir. GitHub sorunlarıyla tümleştirme hakkında daha fazla bilgi için bu [docs platform Web günlüğü gönderisine](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)bakın.
+Geri bildirim bölümü her bir makalenin en altında bulunur. Bu bölüme gitmek için herhangi bir makalenin sağ üst kısmındaki **geri bildirim** bağlantısına tıklayın. Geri bildirim, GitHub sorunlarıyla tümleşiktir. GitHub sorunlarıyla tümleştirme hakkında daha fazla bilgi için bu [docs platform Web günlüğü gönderisine](/teamblog/a-new-feedback-system-is-coming-to-docs)bakın.
 
 Intune hizmeti (docs değil) hakkında geri bildirim paylaşmak için **ürün geri bildirimi**' ne tıklayın.
 
@@ -74,7 +74,7 @@ Docs.microsoft.com platformunda geri bildirim paylaşmak için bkz. [docs feedba
 
 ## <a name="contribute-to-docs"></a>Belgelere katkı yapın
 
-Intune belgeleri, docs.microsoft.com üzerindeki içeriğin birçoğu gibi, GitHub üzerinde açık kaynaklıdır. Bu kitaplık, topluluk katkılarını kabul eder ve teşvik eder. Kullanmaya başlama hakkında daha fazla bilgi için bkz. katkıda bulunan [Kılavuzu](https://docs.microsoft.com/contribute). [GitHub hesabı](https://github.com/join) oluşturma tek önkoşuldur.
+Intune belgeleri, docs.microsoft.com üzerindeki içeriğin birçoğu gibi, GitHub üzerinde açık kaynaklıdır. Bu kitaplık, topluluk katkılarını kabul eder ve teşvik eder. Kullanmaya başlama hakkında daha fazla bilgi için bkz. katkıda bulunan [Kılavuzu](/contribute). [GitHub hesabı](https://github.com/join) oluşturma tek önkoşuldur.
 
 ### <a name="basic-steps-to-contribute-to-docs"></a>Docs 'a katkıda bulunmak için temel adımlar
 
@@ -82,7 +82,7 @@ Intune belgeleri, docs.microsoft.com üzerindeki içeriğin birçoğu gibi, GitH
 
 2. Kaynak dosyayı düzenlemek için kalem simgesine tıklayın.  
 
-3. Markaşağı kaynağında değişiklik yapın. Daha fazla bilgi için bkz. [belgeleri yazmak Için Marku kullanma](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown).  
+3. Markaşağı kaynağında değişiklik yapın. Daha fazla bilgi için bkz. [belgeleri yazmak Için Marku kullanma](/contribute/contribute-how-to-write-use-markdown).  
 
 4. Dosya değişikliğini öner bölümünde, *nelerin* değiştirildiğini açıklayan genel teslim açıklamasını girin. Ardından **dosya değişikliği öner**' e tıklayın.  
 
@@ -109,7 +109,7 @@ Intune belgelerine katkıda bulunmak için aşağıdaki genel yönergeleri izley
 
 - Büyük çekme istekleri konusunda sürmeyin. Bunun yerine [bir sorun verin](#provide-doc-feedback) ve bir tartışma başlatın. Daha sonra, büyük bir süre yatırmadan önce bir yönü kabul eteceğiz.  
 
-- [Microsoft Stil Kılavuzu ' nu](https://aka.ms/MicrosoftStyle)okuyun. [Microsoft stili ve sesi Için en iyi 10 ipucunu](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)öğrenin.  
+- [Microsoft Stil Kılavuzu ' nu](https://aka.ms/MicrosoftStyle)okuyun. [Microsoft stili ve sesi Için en iyi 10 ipucunu](/style-guide/top-10-tips-style-voice)öğrenin.  
 
 - [GitHub Flow iş akışını](https://guides.github.com/introduction/flow/)izleyin.  
 
@@ -117,7 +117,7 @@ Intune belgelerine katkıda bulunmak için aşağıdaki genel yönergeleri izley
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Microsoft Uç Nokta Yöneticisi belgelerinin birleştirilmesi
 
-Intune ve Configuration Manager birleştirilmiş senaryoları daha iyi desteklemek için Intune ve Configuration Manager belgelerinin Microsoft Endpoint Manager sitesinde birleştirilmesi gerekir. Intune belgeleri şu anda [https://docs.microsoft.com/mem/intune](https://docs.microsoft.com/mem/intune) ve Configuration Manager belge kitaplığı ' da kullanılabilir [https://docs.microsoft.com/mem/configmgr](https://docs.microsoft.com/mem/configmgr) . Eski bir URL kullanıyorsanız, tüm bağlantılar otomatik olarak yönlendirilir, bu nedenle bu içeriği okumak için herhangi bir değişiklik yapmanız gerekmez.
+Intune ve Configuration Manager birleştirilmiş senaryoları daha iyi desteklemek için Intune ve Configuration Manager belgelerinin Microsoft Endpoint Manager sitesinde birleştirilmesi gerekir. Intune belgeleri şu anda.. [. /Index.yıml](../index.yml) ve Configuration Manager belge kitaplığı, adresinde bulunabilir [. /.. /ConfigMgr/Index.yıml](../../configmgr/index.yml). Eski bir URL kullanıyorsanız, tüm bağlantılar otomatik olarak yönlendirilir, bu nedenle bu içeriği okumak için herhangi bir değişiklik yapmanız gerekmez.
 
 Geribildirim sağlar veya makalelere katkıda bulunun, bazı değişiklikler gereklidir:
 

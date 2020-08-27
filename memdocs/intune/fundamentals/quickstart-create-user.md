@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf5c76e276722fb9bab2b5d6fac511f0b22ae1f2
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 6def2806bc35acf8becbbedfb031af99378711ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330750"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913843"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-the-user-a-license"></a>Hızlı başlangıç: Intune 'da Kullanıcı oluşturma ve kullanıcıya lisans atama
 
@@ -39,9 +39,9 @@ Bu hızlı başlangıçta bir Kullanıcı oluşturacak ve sonra kullanıcıya bi
 
 Kullanıcının Intune cihaz yönetimine kaydolması için bir kullanıcı hesabı olması gerekir. Yeni bir kullanıcı oluşturmak için:
 
-1. Microsoft Endpoint Manager 'da **Kullanıcılar** > **tüm kullanıcılar** > **Yeni Kullanıcı**: Microsoft uç ![nokta Yöneticisi ' nde Yeni Kullanıcı ' yı seçin.](./media/quickstart-create-user/create-user.png)
-2. **Ad** kutusuna bir ad girin (örneğin, *Dewey Kellum*: ![kullanıcı ayrıntıları ekleme)](./media/quickstart-create-user/create-user-02.png)
-3. **Kullanıcı adı** kutusuna, gibi bir kullanıcı tanımlayıcısı girin Dewey@contoso.onmicrosoft.com.
+1. Microsoft Endpoint Manager 'da **Kullanıcılar** > **tüm kullanıcılar** > **Yeni Kullanıcı**:  ![ Microsoft Uç Nokta Yöneticisi ' nde Yeni Kullanıcı ' yı seçin.](./media/quickstart-create-user/create-user.png)
+2. **Ad** kutusuna bir ad girin (örneğin, *Dewey Kellum*: ![ kullanıcı ayrıntıları ekleme)](./media/quickstart-create-user/create-user-02.png)
+3. **Kullanıcı adı** kutusuna, gibi bir kullanıcı tanımlayıcısı girin Dewey@contoso.onmicrosoft.com .
 
     > [!NOTE]
     > Müşteri etki alanı adınızı yapılandırmadıysanız, Intune aboneliğini (veya [ücretsiz denemeyi](free-trial-sign-up.md#sign-up-for-a-microsoft-intune-free-trial)) oluşturmak için kullandığınız doğrulanmış etki alanı adını kullanın. 
@@ -56,10 +56,10 @@ Bir kullanıcı oluşturduktan sonra, kullanıcıya bir Intune lisansı atamak i
 Bir kullanıcıya bir Intune lisansı atamak için:
 
 1. [Microsoft 365 Yönetim merkezinde](https://go.microsoft.com/fwlink/p/?LinkId=698854) Intune 'da oturum açmak için kullandığınız kimlik bilgileriyle oturum açın.
-2. **Kullanıcılar** > **etkin kullanıcılar**' ı seçin ve ardından yeni oluşturduğunuz kullanıcıyı seçin.
+2. **Kullanıcılar**  >  **etkin kullanıcılar**' ı seçin ve ardından yeni oluşturduğunuz kullanıcıyı seçin.
 3. **Lisanslar ve uygulamalar** sekmesini seçin.
 4. **Konum Seç**' in altında, henüz ayarlanmamışsa Kullanıcı için bir konum seçin.
-2. **Lisanslar** bölümünde **Intune** onay kutusunu seçin. Başka bir lisans Intune içeriyorsa, bu lisansı seçebilirsiniz. Görüntülenmiş [ürün adı](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference) , Azure yönetiminde hizmet planı olarak kullanılır.
+2. **Lisanslar** bölümünde **Intune** onay kutusunu seçin. Başka bir lisans Intune içeriyorsa, bu lisansı seçebilirsiniz. Görüntülenmiş [ürün adı](/azure/active-directory/users-groups-roles/licensing-service-plan-reference) , Azure yönetiminde hizmet planı olarak kullanılır.
 
     ![Konumu ve Intune lisansını seçin](./media/quickstart-create-user/create-user-03.png)
 
@@ -72,7 +72,7 @@ Yeni etkin Intune kullanıcısı artık bir **Intune** lisansı kullandığını
 
 ## <a name="clean-up-resources"></a>Kaynakları temizleme
 
-Bu kullanıcıya artık ihtiyacınız yoksa, [Microsoft 365 yönetim merkezine](https://go.microsoft.com/fwlink/p/?LinkId=698854) gidip **Kullanıcılar** > *the user* > Kullanıcı*Sil simgesini* > **Kullanıcı Sil** > simgesini**seçerek kullanıcıyı silebilirsiniz.**
+Bu kullanıcıya artık ihtiyacınız yoksa, [Microsoft 365 yönetim merkezine](https://go.microsoft.com/fwlink/p/?LinkId=698854) gidip **Kullanıcılar**  >  *Kullanıcı*  >  *Sil simgesini*  >  **Delete user**Kullanıcı Sil simgesini  >  **seçerek kullanıcıyı silebilirsiniz**.
 
    ![Sil simgesini seçin](./media/quickstart-create-user/create-user-04.png)
 

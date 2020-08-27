@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25950311b5a6936340dbdba01961a5dab6f6ff91
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 25bb413aefa7d91ea825bbe96e057994b1375413
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461361"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915509"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Intune kullanarak VPN bağlantıları eklemek için Windows 10 ve Windows holographic cihaz ayarları
 
@@ -82,14 +82,14 @@ Seçtiğiniz ayarlara bağlı olarak, değerlerden bazıları yapılandırılama
 
     - **Makine sertifikaları** (yalnızca Ikev2): cihazın kimliğini doğrulamak için var olan bir cihaz istemci sertifikası profilini seçin.
 
-      [Cihaz tüneli bağlantıları](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)kullanıyorsanız, bu seçeneği seçmeniz gerekir.
+      [Cihaz tüneli bağlantıları](/windows-server/remote/remote-access/vpn/vpn-device-tunnel-config)kullanıyorsanız, bu seçeneği seçmeniz gerekir.
 
       Intune 'da sertifika profilleri oluşturmak için bkz. [kimlik doğrulaması için sertifikaları kullanma](../protect/certificates-configure.md).
 
     - **EAP** (yalnızca Ikev2): kimlik doğrulamak için mevcut bir Genişletilebilir Kimlik Doğrulama Protokolü (EAP) istemci sertifikası profili seçin. **EAP XML** ayarında kimlik doğrulama parametrelerini girin.
   - **Her oturum açışta kimlik bilgilerini hatırla**: Kimlik doğrulama bilgilerini önbelleğe almak için bunu seçin.
   - **Özel XML**: VPN bağlantısını yapılandıran tüm özel XML komutlarını girin.
-  - **EAP XML**: VPN bağlantısını yapılandıran HERHANGI BIR EAP XML komutunu girin. Daha fazla bilgi için bkz. [EAP yapılandırması](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+  - **EAP XML**: VPN bağlantısını yapılandıran HERHANGI BIR EAP XML komutunu girin. Daha fazla bilgi için bkz. [EAP yapılandırması](/windows/client-management/mdm/eap-configuration).
 
   - **Cihaz tüneli** (yalnızca Ikev2): **Etkinleştir** ayarı, cihazı Kullanıcı ETKILEŞIMI olmadan otomatik olarak VPN 'e bağlar veya oturum açın. Bu ayar Azure Active Directory (AD) 'ye katılmış bilgisayarlar için geçerlidir.
 
@@ -159,7 +159,7 @@ Seçtiğiniz ayarlara bağlı olarak, değerlerden bazıları yapılandırılama
 ### <a name="writing-custom-xml"></a>Özel XML yazma
 Özel XML komutları yazma hakkında daha fazla bilgi için her bir üreticinin VPN belgelerine başvurun.
 
-Özel EAP XML oluşturma hakkında daha fazla bilgi için bkz. [EAP yapılandırması](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
+Özel EAP XML oluşturma hakkında daha fazla bilgi için bkz. [EAP yapılandırması](/windows/client-management/mdm/eap-configuration).
 
 ## <a name="apps-and-traffic-rules"></a>Uygulamalar ve Trafik Kuralları
 

@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d50d7f8e4edeaf6d88875fafef977936909d71f
-ms.sourcegitcommit: 532a06163f462527254d23e7dc505b18c0c4f938
+ms.openlocfilehash: 5c7a83f07ce9c3da2fa953a3ea0d97e05b928a6a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88110741"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915475"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Windows cihazlar için toplu kayıt
 
@@ -78,7 +78,7 @@ Azure AD kullanıcıları, bu cihazlarda standart kullanıcılardır ve atanan I
    - Sağlama paketini bir USB sürücüye yerleştirin, USB sürücüyü toplu kaydetmek istediğiniz cihaza yerleştirin ve ilk kurulum sırasında uygulayın
    - Sağlama paketini bir ağ klasörüne yerleştirin ve ilk kurulumdan sonra uygulayın
 
-   Sağlama paketi uygulama ile ilgili adım adım yönergeler için bkz. [Sağlama paketi uygulama](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
+   Sağlama paketi uygulama ile ilgili adım adım yönergeler için bkz. [Sağlama paketi uygulama](/windows/configuration/provisioning-packages/provisioning-apply-package).
 
 3. Paketi uyguladıktan sonra, cihaz bir dakika içinde otomatik olarak yeniden başlatılır.
    ![Windows Yapılandırma Tasarımcısı uygulamasında ad, proje klasörü ve açıklama belirtilen ekran görüntüsü](./media/windows-bulk-enroll/bulk-enroll-add.png)

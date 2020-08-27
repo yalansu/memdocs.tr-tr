@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 685f2a51c7a2bfacbc95fb2a7615f0e459b97245
-ms.sourcegitcommit: b0ae4a9972bac3518d0d4f33e033ac492eefe3c1
+ms.openlocfilehash: fb62a7b592b492d4092b7af7ee29b2bfd50c66e8
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84126524"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915186"
 ---
 # <a name="move-android-devices-from-device-administrator-to-work-profile-management"></a>Android cihazlarını cihaz yöneticisinden iş profili yönetimine taşıma
 
@@ -34,13 +34,13 @@ Kullanıcılar bu nedenle uyumsuz olduklarını görtiklerinde, **Çözümle**' 
 2. İş profili yönetimine kaydolma
 3. Tüm uyumluluk sorunlarını çözme. 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Kullanıcıların Android Şirket Portalı Version 5.0.4720.0 veya üzeri bir sürümü olan [Android Cihaz Yöneticisi 'ne kayıtlı cihazları](android-enroll-device-administrator.md) olmalıdır.
 - [Intune kiracı Hesabınızı Android Kurumsal hesabınıza bağlayarak](connect-intune-android-enterprise.md)Android iş profili yönetimini ayarlayın.
 - Android iş profiline taşınan Kullanıcı grubu için [Android kurumsal iş profili kaydını ayarlayın](android-work-profile-enroll.md) .
 - Kullanıcı cihaz limitlerinizi artırmayı göz önünde bulundurun. Cihazların cihaz yöneticisi yönetiminden kaydı kaldırıldığında, cihaz kayıtları hemen kaldırılmayabilir. Bu süre boyunca Cushion sağlamak için, kullanıcıların iş profili yönetimine kaydolabilmesi için cihaz sınırı kapasitesini artırmanız gerekebilir.
-  - Kullanıcı başına en fazla cihaz sayısı için [Azure Active Directory cihaz ayarlarını yapılandırın](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) .
+  - Kullanıcı başına en fazla cihaz sayısı için [Azure Active Directory cihaz ayarlarını yapılandırın](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) .
   - Cihaz sınırını ayarlayarak [Intune cihaz sınır kısıtlamalarını](enrollment-restrictions-set.md#create-a-device-limit-restriction) ayarlayın. 
 
 ## <a name="create-device-compliance-policy"></a>Cihaz uyumluluk ilkesi oluştur
@@ -56,7 +56,7 @@ Kullanıcılar bu nedenle uyumsuz olduklarını görtiklerinde, **Çözümle**' 
     
 4. **Uyumluluk ayarları** sayfasında, **cihaz durumu** bölümünde, **cihaz yöneticisiyle yönetilen blok cihazların** ileri ' ye Evet ' i belirleyin **Yes**  >  **Next**.
 
-    ![Cihazları engelle](./media/android-move-device-admin-work-profile/block-devices.png)
+    ![Blok kullanan cihazlar](./media/android-move-device-admin-work-profile/block-devices.png)
 
 5. **Konumlar** sayfasında, bir **sonraki**> isterseniz konum ekleyebilirsiniz.
 

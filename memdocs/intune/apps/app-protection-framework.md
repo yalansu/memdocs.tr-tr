@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 444fb116150cf3d7a3ab4dcfe4eb450b20119df0
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 0803563dc525b0835602d54d4bde3de1345aeb33
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410938"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913384"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Uygulama koruma ilkeleri kullanan veri koruma altyapısı 
 
@@ -64,7 +64,7 @@ Geçerli uygulamalar için aşağıdaki uygulama koruma Ilkesi ayarlarının etk
 Microsoft, kullanım senaryolarını gözden geçirmeyi ve kategorilere ayırmak ve daha sonra bu düzeyin yönetim kılavuzunu kullanarak kullanıcıları yapılandırmak için önerilir. Her çerçevede olduğu gibi, veri koruma, tehdit ortamını değerlendirmeli, risk uygulama ve kullanışlılık etkisi olması gerektiği için ilgili düzeyin içindeki ayarların kuruluşun ihtiyaçlarına göre ayarlanması gerekebilir.  
 
 ### <a name="conditional-access-policies"></a>Koşullu erişim Ilkeleri
-Yalnızca uygulama koruma ilkelerini destekleyen uygulamaların iş veya okul hesabı verilerine erişmesini sağlamak için Azure Active Directory Koşullu erişim ilkeleri gerekir. Bkz **. Senaryo 1: Office 365 uygulamaları** , belirli ilkeleri uygulama adımları Için [koşullu erişimle Cloud App erişimi için uygulama koruma ilkesi gerektirir](https://docs.microsoft.com/azure/active-directory/conditional-access/app-protection-based-conditional-access) .
+Yalnızca uygulama koruma ilkelerini destekleyen uygulamaların iş veya okul hesabı verilerine erişmesini sağlamak için Azure Active Directory Koşullu erişim ilkeleri gerekir. Bkz **. Senaryo 1: Office 365 uygulamaları** , belirli ilkeleri uygulama adımları Için [koşullu erişimle Cloud App erişimi için uygulama koruma ilkesi gerektirir](/azure/active-directory/conditional-access/app-protection-based-conditional-access) .
 
 ### <a name="apps-to-include-in-the-app-protection-policies"></a>Uygulama koruma Ilkelerine dahil edilecek uygulamalar  
 
@@ -120,7 +120,7 @@ Düzey 1 ' deki ilkeler, Microsoft Endpoint Manager 'da uygulama koruma Ilkesi o
 | Erişim için PIN yerine biyometrik öğesini geçersiz kıl  | Gerektirme  | iOS/ıpados, Android  |   |
 | Zaman aşımı (etkinlik dakikası)  | 720  | iOS/ıpados, Android  |   |
 | Erişim için PIN yerine yüz KIMLIĞI  | İzin Ver  | iOS/iPadOS  |   |
-| Belirtilen sayıda gün sonra PIN sıfırlama  | No  | iOS/ıpados, Android  |   |
+| Belirtilen sayıda gün sonra PIN sıfırlama  | Hayır  | iOS/ıpados, Android  |   |
 | Cihaz PIN'i ayarlı olduğunda uygulama PIN'i  | Gerektirme  | iOS/ıpados, Android  | Cihaz Intune 'A kaydedildiyse, Yöneticiler cihaz uyumluluk ilkesi aracılığıyla güçlü bir cihaz PIN 'ı zorlarsa bunu "gerekli değil" olarak ayarlamayı düşünebilirler.  |
 | Erişim için iş veya okul hesabı kimlik bilgileri  | Gerekli değil  | iOS/ıpados, Android  |   |
 | Erişim gereksinimlerini yeniden denetle (eylemsizlik dakika sayısı)  | 30  | iOS/ıpados, Android  |   |
@@ -190,7 +190,7 @@ Düzey 3 ' te zorlanan ilke ayarları, düzey 2 için önerilen tüm ilke ayarla
 |-----------------------------------------------------------|--------------------|---------------------------------|
 |       Basit PIN  |          Blok  |          iOS/ıpados, Android  |
 |       Minimum PIN uzunluğunu seçin  |          6  |          iOS/ıpados, Android  |
-|       Gün sayısından sonra PIN sıfırlama  |          Yes  |          iOS/ıpados, Android  |
+|       Gün sayısından sonra PIN sıfırlama  |          Evet  |          iOS/ıpados, Android  |
 |       Gün sayısı  |          365  |          iOS/ıpados, Android  |
 
 #### <a name="conditional-launch"></a>Koşullu başlatma
@@ -199,7 +199,7 @@ Düzey 3 ' te zorlanan ilke ayarları, düzey 2 için önerilen tüm ilke ayarla
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Cihaz koşulları  |       En düşük işletim sistemi sürümü  |          *Biçim: Ana. ikincil <br>   Örnek: 8,0* /erişimi engelle   |          Android        | Microsoft, en düşük Android ana sürümünün Microsoft uygulamaları için desteklenen Android sürümleriyle eşleşecek şekilde yapılandırılmasını önerir. Android kurumsal gereksinimleri olan OEM 'Ler ve cihazlar, geçerli sevkiyat sürümü + bir mektup yükseltmesi desteklemelidir.   Android, bilgi çalışanları için Android 8,0 ve üstünü öneriyor.   Android 'in en son önerileri için bkz. [Android Enterprise önerilen gereksinimleri](https://www.android.com/enterprise/recommended/requirements/) |
 |       Cihaz koşulları  |          Jailbreak uygulanmış/kök erişim izni verilmiş cihazlar  |        N/A/silme verisi  |          iOS/ıpados, Android        |  |
-|       Cihaz koşulları  |          İzin verilen en fazla tehdit düzeyi  |          Güvenli/blok erişimi  |          iOS/ıpados, Android        | <p>Kayıtlı olmayan cihazlar, mobil tehdit savunması kullanılarak tehditler için incelenebilir. Daha fazla bilgi için bkz. [kayıtlı olmayan cihazlar Için mobil tehdit savunması](https://aka.ms/mtdmamdocs).      </p><p>     Cihaz kaydedildiyse bu ayar, kayıtlı cihazlar için Mobile Threat Defense 'in dağıtılmasıyla ilgili olarak atlanabilir. Daha fazla bilgi için bkz. [Kayıtlı cihazlar Için mobil tehdit savunması](../protect/mtd-device-compliance-policy-create.md).</p> |
+|       Cihaz koşulları  |          İzin verilen en fazla tehdit düzeyi  |          Güvenli/blok erişimi  |          iOS/ıpados, Android        | <p>Kayıtlı olmayan cihazlar, mobil tehdit savunması kullanılarak tehditler için incelenebilir. Daha fazla bilgi için bkz.  [kayıtlı olmayan cihazlar Için mobil tehdit savunması](https://aka.ms/mtdmamdocs).      </p><p>     Cihaz kaydedildiyse bu ayar, kayıtlı cihazlar için Mobile Threat Defense 'in dağıtılmasıyla ilgili olarak atlanabilir. Daha fazla bilgi için bkz. [Kayıtlı cihazlar Için mobil tehdit savunması](../protect/mtd-device-compliance-policy-create.md).</p> |
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

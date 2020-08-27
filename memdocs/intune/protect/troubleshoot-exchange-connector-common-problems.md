@@ -17,11 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57f8b8193fd2f4e871f744743b768ec6248ae0b9
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: b1ed3cd24c05586bd5dc9d9a2443a33ffcdc2a48
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972139"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914812"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Intune Exchange Connector ile ilgili yaygın sorunları çözme
  
@@ -55,7 +56,7 @@ E-posta bildirim sorunlarını gidermek için aşağıdaki bölümleri gözden g
 
 ### <a name="check-the-notification-account-that-retrieves-autodiscover-settings"></a>Otomatik bulma ayarlarını alan bildirim hesabını denetleyin
 
-1. Otomatik bulma hizmeti 'nin ve EWS 'nın Exchange Istemci erişim Hizmetleri 'nde yapılandırıldığından emin olun. Daha fazla bilgi için bkz. [Exchange Server 'Da](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019) [istemci erişim Hizmetleri](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) ve otomatik bulma hizmeti.
+1. Otomatik bulma hizmeti 'nin ve EWS 'nın Exchange Istemci erişim Hizmetleri 'nde yapılandırıldığından emin olun. Daha fazla bilgi için bkz. [Exchange Server 'Da](/Exchange/architecture/client-access/autodiscover?view=exchserver-2019) [istemci erişim Hizmetleri](/Exchange/architecture/client-access/client-access) ve otomatik bulma hizmeti.
 
 2. Bildirim hesabınızın aşağıdaki gereksinimleri karşıladığından emin olun:
 
@@ -70,20 +71,20 @@ E-posta bildirim sorunlarını gidermek için aşağıdaki bölümleri gözden g
    2. *Autodiscover.SMTPdomain.com*girin. Çıktının aşağıdaki görüntüye benzer olması gerekir: ![ nslookup sonuçları](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
       )
 
-   Ayrıca, otomatik bulma hizmetini adresinden internetten test edebilirsiniz https://testconnectivity.microsoft.com . Ya da Microsoft bağlantı çözümleyici aracını kullanarak yerel bir etki alanından test edin. Daha fazla bilgi için bkz. [Microsoft bağlantı çözümleyici aracı](https://docs.microsoft.com/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
+   Ayrıca, otomatik bulma hizmetini adresinden internetten test edebilirsiniz https://testconnectivity.microsoft.com . Ya da Microsoft bağlantı çözümleyici aracını kullanarak yerel bir etki alanından test edin. Daha fazla bilgi için bkz. [Microsoft bağlantı çözümleyici aracı](/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)).
 
 
 ### <a name="check-autodiscover"></a>Otomatik bulma denetimi
 
 Otomatik bulma başarısız olursa, aşağıdaki adımları deneyin:
 
-1. [Geçerli bir otomatik bulma DNS kaydı yapılandırın](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
+1. [Geçerli bir otomatik bulma DNS kaydı yapılandırın](/previous-versions/exchange-server/exchange-150/mt473798(v=exchg.150)).
 
 2. Intune Exchange Connector yapılandırma dosyasında EWS URL 'sini sabit kodlayın:
 
    1. EWS URL 'sini belirleme. Exchange için varsayılan EWS URL 'si `https://<mailServerFQDN>/ews/exchange.asmx` , ancak URL 'niz farklılık gösterebilir. Ortamınız için doğru URL 'YI doğrulamak üzere Exchange yöneticisine başvurun.
 
-   2. *OnPremisesExchangeConnectorServiceConfiguration.xml* dosyasını düzenleyin. Varsayılan olarak, dosya Exchange bağlayıcısını çalıştıran bilgisayardaki *%ProgramData%\Microsoft\Windows Intune Exchange Bağlayıcısı* ' nda bulunur. Dosyayı bir metin düzenleyicisinde açın ve ardından aşağıdaki satırı, ortamınız için EWS URL 'sini yansıtacak şekilde değiştirin:`<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. *OnPremisesExchangeConnectorServiceConfiguration.xml* dosyasını düzenleyin. Varsayılan olarak, dosya Exchange bağlayıcısını çalıştıran bilgisayardaki *%ProgramData%\Microsoft\Windows Intune Exchange Bağlayıcısı* ' nda bulunur. Dosyayı bir metin düzenleyicisinde açın ve ardından aşağıdaki satırı, ortamınız için EWS URL 'sini yansıtacak şekilde değiştirin: `<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
 
 3. Dosyayı kaydedin ve ardından bilgisayarı yeniden başlatın veya Exchange Connector hizmetini Microsoft Intune yeniden başlatın.
 

@@ -17,18 +17,18 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d296137f71b89abf65f20493fbc1151ffebf28
-ms.sourcegitcommit: c333fc6627f5577cde9d2fa8f59e642202a7027b
+ms.openlocfilehash: 80d3a0d66821037fba53813b8ae7b1e415e4f29a
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795593"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915458"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune Windows cihaz kaydı sorunlarını giderme
 
 Bu makale, Intune yöneticilerinin Windows cihazlarını Intune 'A kaydetme sırasında sorunları anlamalarına ve sorunlarını gidermenize yardımcı olur.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 Sorun gidermeye başlamadan önce bazı temel bilgilerin toplanması önemlidir. Bu bilgiler sorunu daha iyi anlamanıza ve çözüm bulma süresini azaltmanıza yardımcı olabilir.
 
 Sorunla ilgili olarak aşağıdaki bilgileri toplayın:
@@ -162,7 +162,7 @@ Hata 80180026: "bir sorun oluştu. Doğru oturum açma bilgilerini kullandığı
 Bu sorunu gidermek için aşağıdaki yöntemlerden birini kullanın:
 
 ##### <a name="disable-mdm-automatic-enrollment-in-azure"></a>Azure 'da MDM otomatik kaydını devre dışı bırakın.
-1. [Azure Portal](https://portal.azure.com/) oturum açın.    
+1. [Azure portalında](https://portal.azure.com/) oturum açın.    
 2. **Azure Active Directory**  >  **Mobility (MDM ve MAM)**  >  **Microsoft Intune**gidin.    
 3. **MDM Kullanıcı kapsamını** **none**olarak ayarlayın ve ardından **Kaydet**' e tıklayın.    
      
@@ -216,9 +216,9 @@ Tek başına bir Intune ortamında bu sorunu onarmak için aşağıdaki adımlar
 
    **Seçili**' i seçerseniz, **Seçili**' e tıklayın ve ardından, cihazlarını Azure AD 'ye birleştirebilen tüm kullanıcıları eklemek için **üye Ekle** ' ye tıklayın. Sağlama paketi için tüm Azure AD hesaplarının eklendiğinden emin olun.
  
-Windows yapılandırma Tasarımcısı için sağlama paketi oluşturma hakkında daha fazla bilgi için bkz. [Windows 10 için sağlama paketi oluşturma](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
+Windows yapılandırma Tasarımcısı için sağlama paketi oluşturma hakkında daha fazla bilgi için bkz. [Windows 10 için sağlama paketi oluşturma](/windows/configuration/provisioning-packages/provisioning-create-package).
 
-Okul bilgisayarlarını ayarlama uygulaması hakkında daha fazla bilgi için bkz. [okul bilgisayarlarını ayarlama uygulamasını kullanma](https://docs.microsoft.com/education/windows/use-set-up-school-pcs-app).
+Okul bilgisayarlarını ayarlama uygulaması hakkında daha fazla bilgi için bkz. [okul bilgisayarlarını ayarlama uygulamasını kullanma](/education/windows/use-set-up-school-pcs-app).
 
 
 ### <a name="auto-mdm-enroll-failed"></a>Otomatik MDM kaydı: başarısız 
@@ -276,7 +276,7 @@ Adlandırma biçiminin aşağıdaki gereksinimleri karşıladığından emin olu
 **Neden:** Bu sorun, kimlik sağlayıcısına (IDP) erişimi engelleyen bir ara sunucu, güvenlik duvarı veya başka bir ağ aygıtı varsa oluşur.
 
 #### <a name="resolution"></a>Çözüm
-Autopilot için internet tabanlı hizmetlere gereken erişimin engellenmediğinden emin olun. Daha fazla bilgi için bkz. [Windows Autopilot ağ gereksinimleri](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
+Autopilot için internet tabanlı hizmetlere gereken erişimin engellenmediğinden emin olun. Daha fazla bilgi için bkz. [Windows Autopilot ağ gereksinimleri](/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
 
 ### <a name="autopilot-device-enrollment-failed-with-error-hresult--0x80180022"></a>Autopilot cihaz kaydı HRESULT = 0x80180022 hatasıyla başarısız oldu
 
@@ -294,7 +294,7 @@ TPM yongasını 2,0 sürümüne yükseltin.
 
 Sorun devam ederse, her gruba farklı bir Autopilot profili atanması halinde aynı cihazın iki atanmış grupta olup olmadığını kontrol edin. İki grupda varsa, cihaza hangi Autopilot profilinin uygulanacağını belirleyip, ardından diğer profilin atamasını kaldırın.
 
-Windows cihazını Autopilot ile bilgi noktası modunda dağıtma hakkında daha fazla bilgi için bkz. [Windows Autopilot kullanarak bilgi noktası dağıtma](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+Windows cihazını Autopilot ile bilgi noktası modunda dağıtma hakkında daha fazla bilgi için bkz. [Windows Autopilot kullanarak bilgi noktası dağıtma](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
 
 ### <a name="securing-your-hardware-failed-0x800705b4"></a>Donanımınızın güvenliğini sağlama (başarısız: 0x800705b4).
@@ -317,7 +317,7 @@ Registering your device for mobile management (Previous step failed)
 #### <a name="resolution"></a>Çözüm
 Hedeflenen cihazın **neden** bölümünde açıklanan gereksinimleri karşıladığından emin olun.
 
-Windows cihazını Autopilot ile bilgi noktası modunda dağıtma hakkında daha fazla bilgi için bkz. [Windows Autopilot kullanarak bilgi noktası dağıtma](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+Windows cihazını Autopilot ile bilgi noktası modunda dağıtma hakkında daha fazla bilgi için bkz. [Windows Autopilot kullanarak bilgi noktası dağıtma](/archive/blogs/mniehaus/deploying-a-kiosk-using-windows-autopilot).
 
 
 ### <a name="something-went-wrong-error-code-80070774"></a>Bir sorun oluştu. Hata kodu 80070774.
@@ -365,7 +365,7 @@ Description:
 }
 ```
 
-Bu sorun genellikle Windows Autopilot cihazlarının oluşturulduğu kuruluş birimine izinlerin yanlış şekilde verilmesine neden olur. Daha fazla bilgi için bkz. [kuruluş birimindeki bilgisayar hesabı sınırını artırma](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
+Bu sorun genellikle Windows Autopilot cihazlarının oluşturulduğu kuruluş birimine izinlerin yanlış şekilde verilmesine neden olur. Daha fazla bilgi için bkz. [kuruluş birimindeki bilgisayar hesabı sınırını artırma](../../autopilot/windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
 
 1. **Active Directory Kullanıcıları ve bilgisayarları (dsa. msc)** açın.
 2. **Temsilci denetim**>, karma Azure AD 'ye katılmış bilgisayarları oluşturmak için kullanacağınız kurumsal birimi sağ tıklatın.
@@ -377,7 +377,7 @@ Bu sorun genellikle Windows Autopilot cihazlarının oluşturulduğu kuruluş bi
 8. Klasör onay kutusunda **yalnızca şu nesneleri** seçin ve ardından **bilgisayar nesnelerini**seçin, **Bu klasörde seçili nesneleri oluşturun**ve **Seçili nesneleri bu klasörde silin** onay kutularını işaretleyin.
 9. **İleri**’yi seçin.
 10. **İzinler**altında **tam denetim** onay kutusunu seçin. Bu eylem diğer tüm seçenekleri seçer.
-11. **İleri**  >  **son**' u seçin.
+11. **Sonraki** > **Son** seçeneğini belirleyin.
 
 ### <a name="the-enrollment-status-page-times-out-before-the-sign-in-screen"></a>Kayıt durumu sayfası, oturum açma ekranından önce zaman aşımına uğrar
 
@@ -398,4 +398,4 @@ Aşağıdakilerden birini deneyin:
 - [Microsoft Intune destek ekibi blogunu denetleyin](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Microsoft Enterprise Mobility ve Security blogunu denetleyin](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Microsoft Intune için destek alın](../fundamentals/get-support.md)
-- [Ortak yönetim kayıt hatalarını bulma](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)
+- [Ortak yönetim kayıt hatalarını bulma](/configmgr/comanage/how-to-monitor#enrollment-errors)

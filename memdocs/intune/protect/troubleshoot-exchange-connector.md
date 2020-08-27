@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35c19c777a96842f405fa1d68477fa4c7e937dee
-ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
+ms.openlocfilehash: 57a7b232b7391d6b8716d4c2a56d69b44f6c07ee
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 08/26/2020
-ms.locfileid: "88896043"
+ms.locfileid: "88914761"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Intune Exchange Connector sorunlarını giderme
 
@@ -31,7 +31,7 @@ Bu makalede, Intune Exchange Connector ile ilgili sorunların nasıl giderilece�
 
 > [!IMPORTANT]
 >
-> 2020 Temmuz 'dan başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilir ve Intune 'A bir Exchange Connector ekleme özelliği kaldırılmıştır.
+> 2020 Temmuz 'dan başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilir ve Intune 'A bir Exchange Connector ekleme özelliği kaldırılmıştır.
 >
 > Exchange bağlayıcısını daha önce yapılandırmış ve kullanan müşteriler bağlayıcı için destek sağlamaya devam eder.
 
@@ -66,7 +66,7 @@ Ortamınızın ve bağlayıcının doğru yapılandırıldığından emin olmak 
 
 - Intune Exchange bağlayıcısını ve Exchange Istemci erişim sunucusunu (CAS) barındıran bilgisayar, etki alanına katılmış ve aynı LAN üzerinde olmalıdır. Intune Exchange Connector tarafından kullanılan hesap için gerekli izinlerin eklendiğinden emin olun.
 
-- Bildirim hesabı otomatik *bulma* ayarlarını almak için kullanılır. Exchange 'de otomatik kaldır hakkında daha fazla bilgi için bkz. [Exchange Server 'da otomatik bulma hizmeti](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
+- Bildirim hesabı otomatik *bulma* ayarlarını almak için kullanılır. Exchange 'de otomatik kaldır hakkında daha fazla bilgi için bkz. [Exchange Server 'da otomatik bulma hizmeti](/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
 
 - Intune Exchange Bağlayıcısı, bildirim e-posta iletilerini (Intune 'a kaydolmak için) kullanmaya *başlama* bağlantısıyla birlikte göndermek üzere bildirim hesabı kimlik BILGILERINI kullanarak EWS URL 'sine bir istek gönderir. Kayıt için kullanmaya *başlama* bağlantısı, Android Knox olmayan cihazlar için bir gereksinimdir. Aksi takdirde, bu cihazlar koşullu erişim tarafından engellenir.
 
@@ -86,4 +86,4 @@ Aşağıdaki makaleler, yaygın sorunların ve belirli hataların çözümlenmes
 Destek veya Intune Community 'den yardım arama:
 
 - Sorunu gidermeye yardımcı olması veya Microsoft ile bir destek talebi açmak için bkz. Intune konsolunu kullanma [desteği alın](../fundamentals/get-support.md) . 
-- Sorununuzu [Microsoft Intune forumlarına](https://docs.microsoft.com/answers/products/mem)gönderin.  
+- Sorununuzu [Microsoft Intune forumlarına](/answers/products/mem)gönderin.  

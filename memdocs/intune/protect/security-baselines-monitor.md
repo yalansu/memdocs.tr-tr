@@ -16,16 +16,16 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cecd39bcba7e16cc933086c99bbc0b403381d75d
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: 1ccf9801c7a5977485c6c1864a69be2e46a4af55
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461802"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914880"
 ---
 # <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>Microsoft Intune 'de güvenlik temellerini ve profillerini izleme
 
-Intune, güvenlik temellerinizi izlemek için çeşitli seçenekler sunar. Şunları yapabilirsiniz:
+Intune, güvenlik temellerinizi izlemek için çeşitli seçenekler sunar. Seçenekleriniz şunlardır:
 
 - Bir güvenlik taban çizgisini ve önerilen değerler ile eşleşen (veya eşleşmeyen) cihazları izleyin.
 - Kullanıcılarınız ve cihazlarınız için geçerli olan güvenlik temelleri profilini izleyin.
@@ -168,7 +168,7 @@ Windows 10 cihazlarında, yerleşik bir MDM tanılama bilgileri raporu vardır. 
 
   Örneğin, **kayıtlı yapılandırma kaynakları ve hedef kaynaklar** bölümüne veya **yönetilmeyen ilkeler** bölümüne bakın. Neden bir hata veya çakışmaya neden olduğuna ilişkin bir fikir alabilirsiniz.
 
-[Windows 10 ' da MDM başarısızlıklarını tanılama](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) bu yerleşik rapor hakkında daha fazla bilgi sağlar.
+[Windows 10 ' da MDM başarısızlıklarını tanılama](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) bu yerleşik rapor hakkında daha fazla bilgi sağlar.
 
 > [!TIP]
 >

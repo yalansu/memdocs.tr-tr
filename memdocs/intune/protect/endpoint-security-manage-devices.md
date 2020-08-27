@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/15/2020
+ms.date: 05/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 55a73806e343ac23525dbd2a28950d46285bf9a3
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: 98b1380254a784dfe8939c607ab574f7bdaa8752
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088539"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914999"
 ---
 # <a name="manage-devices-with-endpoint-security-in-microsoft-intune"></a>Microsoft Intune uç nokta güvenliği olan cihazları yönetme
 
-Güvenlik Yöneticisi olarak, cihazlarınızı gözden geçirmek ve yönetmek için Microsoft Uç Nokta Yöneticisi Yönetim Merkezi 'ndeki *tüm cihazlar* görünümünü kullanın. Görünüm, Azure Active Directory (Azure AD) tüm cihazlarınızın bir listesini görüntüler. Bu, Intune ve Configuration Manager ile [birlikte ortak yönetim](https://docs.microsoft.com/configmgr/comanage/overview) aracılığıyla ıntune, Configuration Manager ve ile yönetilen cihazları içerir. Cihazlar, Azure AD 'niz ile tümleştirildiğinde bulutta ve şirket içi altyapınızdan olabilir.
+Güvenlik Yöneticisi olarak, cihazlarınızı gözden geçirmek ve yönetmek için Microsoft Uç Nokta Yöneticisi Yönetim Merkezi 'ndeki *tüm cihazlar* görünümünü kullanın. Görünüm, Azure Active Directory (Azure AD) tüm cihazlarınızın bir listesini görüntüler. Bu, Intune ve Configuration Manager ile [birlikte ortak yönetim](/configmgr/comanage/overview) aracılığıyla ıntune, Configuration Manager ve ile yönetilen cihazları içerir. Cihazlar, Azure AD 'niz ile tümleştirildiğinde bulutta ve şirket içi altyapınızdan olabilir.
 
  Görünümü bulmak için [Microsoft Endpoint Manager yönetim merkezini](https://go.microsoft.com/fwlink/?linkid=2109431) açın ve **uç nokta güvenliği**  >  **tüm cihazlar**' ı seçin.
 
@@ -49,7 +49,7 @@ Aşağıdaki alanları göz önünde bulundurun:
 
 - **Yöneten** : Bu sütun cihazın nasıl yönetildiğini tanımlar. Yöneten seçenekleri şunlardır:
 
-  - **MDM** -bu cihazlar Intune tarafından yönetilir. Uyumluluk verileri Intune tarafından yönetim merkezine toplanır ve raporlanır.
+  - **MDM**  -bu cihazlar Intune tarafından yönetilir. Uyumluluk verileri Intune tarafından yönetim merkezine toplanır ve raporlanır.
 
   - **ConfigMgr** : Bu cihazlar, Configuration Manager ile yönettiğiniz cihazları eklemek için *kiracı ekleme* kullandığınızda Microsoft Endpoint Manager Yönetim merkezinde görüntülenir. Yönetilmek üzere cihazın Configuration Manager istemcisini çalıştırması ve şunları yapmanız gerekir:
 
@@ -59,15 +59,13 @@ Aşağıdaki alanları göz önünde bulundurun:
 
     Configuration Manager tarafından yönetilen cihazların uyumluluk durumu, Microsoft Endpoint Manager Yönetim merkezinde görünmez.
 
-    Daha fazla bilgi için, Configuration Manager belgelerinde [kiracı eklemeyi etkinleştirme](https://docs.microsoft.com/configmgr/tenant-attach/device-sync-actions) konusuna bakın.
+    Daha fazla bilgi için, Configuration Manager belgelerinde [kiracı eklemeyi etkinleştirme](/configmgr/tenant-attach/device-sync-actions) konusuna bakın.
 
   - **MDM/ConfigMgr Aracısı** – bu cihazlar, ıntune ile Configuration Manager arasında ortak yönetim altındadır.
 
-    Ortak yönetim sayesinde, hangi yönlerinin Configuration Manager veya Intune tarafından yönetildiğini belirlemek için [farklı ortak yönetim iş yüklerini seçersiniz](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) . Bu seçimler, cihazın hangi ilkelere uygulanacağını ve uyumluluk verilerinin yönetim merkezine nasıl raporlanacağı ile ilgilidir.
+    Ortak yönetim sayesinde, hangi yönlerinin Configuration Manager veya Intune tarafından yönetildiğini belirlemek için [farklı ortak yönetim iş yüklerini seçersiniz](/configmgr/comanage/how-to-switch-workloads) . Bu seçimler, cihazın hangi ilkelere uygulanacağını ve uyumluluk verilerinin yönetim merkezine nasıl raporlanacağı ile ilgilidir.
 
     Örneğin, virüsten koruma, güvenlik duvarı ve şifreleme için ilkeyi yapılandırmak üzere Intune 'u kullanabilirsiniz. Bu ilke türleri *Endpoint Protection*ilke olarak değerlendirilir. Ortak yönetilen bir cihazın Configuration Manager ilkelerini değil Intune ilkelerini kullanması için, Endpoint Protection için ortak yönetim kaydırıcısını *Intune* veya *pilot Intune*olarak ayarlayın. Kaydırıcı Configuration Manager olarak ayarlandıysa, cihaz bunun yerine Configuration Manager ilkeleri ve ayarları kullanır.
-
-  - **Çalışma alanı tek** -bu cihazlar üçüncü taraf cihaz uyumluluk ortağı ve çalışma alanı tarafından yönetilir. Daha fazla bilgi için bkz. [cihaz uyumluluk iş ortakları](../protect/device-compliance-partners.md).
 
 - **Uyumluluk**: uyumluluk, cihaza atanan uyumluluk ilkelerine göre değerlendirilir. Bu ilkelerin kaynağı ve konsolundaki bilgiler cihazın yönetilme yöntemine bağlıdır; Intune, Configuration Manager veya ortak yönetim. Ortak yönetilen cihazlarda uyumluluğu raporlamak üzere cihaz uyumluluğu için ortak yönetim kaydırıcısını Intune veya pilot Intune olarak ayarlayın.  
 

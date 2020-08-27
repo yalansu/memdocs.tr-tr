@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4772743bc85df54251dc8926c69b9a5afbab559
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: d11f3d38923e50492992586bfb263a530e6da9e3
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663285"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915543"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Microsoft Intune kullanarak şirket verilerine yetkisiz erişimi engelleme
 
@@ -40,15 +40,15 @@ Aşağıdaki koşulları yerine getirdiğinizde aşağıdaki eylem planı kullan
 
 ## <a name="action-plan"></a>Eylem planı
 
-[Azure Information Protection için hızlı başlangıç öğreticisi](https://docs.microsoft.com/information-protection/get-started/infoprotect-quick-start-tutorial)'ni tamamlayın.  
+[Azure Information Protection için hızlı başlangıç öğreticisi](/information-protection/get-started/infoprotect-quick-start-tutorial)'ni tamamlayın.  
 
 ## <a name="what-to-tell-employees-and-students"></a>Çalışanlara ve öğrencilere söylenecekler
 
-[Hassas bilgiler içeren belge ve e-postaları nasıl ve ne zaman koruyacağınızın](https://docs.microsoft.com/information-protection/deploy-use/help-users) ayrıntılarını paylaşabilirsiniz.
+[Hassas bilgiler içeren belge ve e-postaları nasıl ve ne zaman koruyacağınızın](/information-protection/deploy-use/help-users) ayrıntılarını paylaşabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Sonraki adımların parçası olarak, şirket verilerinizin güvenliğini arttırmak için aşağıdaki gibi diğer yollar hakkında bilgi edinebilirsiniz: 
 
-* [İOS/ıpados ve Android cihazlarda Azure Information Protection](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq)kullanmayı öğrenin.
-* Mac bilgisayarlar için [Microsoft Rights Management Sharing uygulaması](https://technet.microsoft.com/dn451248)hakkında bilgi edinin.
+* [İOS/ıpados ve Android cihazlarda Azure Information Protection](/information-protection/rms-client/mobile-app-faq)kullanmayı öğrenin.
+* Mac bilgisayarlar için [Microsoft Rights Management Sharing uygulaması](/previous-versions/msdn10/dn451248(v=msdn.10))hakkında bilgi edinin.

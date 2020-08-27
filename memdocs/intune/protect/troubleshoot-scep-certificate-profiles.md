@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7163a8a615edd8f1b813801aab1e499ab30e0c20
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4ce8f787c8ba2b08cc47d8f1431ea7d4bdce5e58
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991011"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88914744"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Microsoft Intune ile SCEP sertifika profillerinde sorun gidermeye genel bakış
 
@@ -80,7 +80,7 @@ Aşağıdaki listede, sonraki SCEP sorun giderme makalelerinde başvurulan Günl
 
 - **NDESConnector_date_time. svclog**:
 
-  Bu günlük Microsoft Intune Sertifika Bağlayıcısı ile Intune bulut hizmeti arasındaki iletişimi gösterir. Bu günlük dosyasını görüntülemek için [hizmet Izleme Görüntüleyicisi aracını](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) kullanabilirsiniz.
+  Bu günlük Microsoft Intune Sertifika Bağlayıcısı ile Intune bulut hizmeti arasındaki iletişimi gösterir. Bu günlük dosyasını görüntülemek için [hizmet Izleme Görüntüleyicisi aracını](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) kullanabilirsiniz.
 
   İlgili kayıt defteri anahtarı: *Hklm\sw\microsoft\microsofıntune\ndesconnector\connectionstatus*
 
@@ -88,7 +88,7 @@ Aşağıdaki listede, sonraki SCEP sorun giderme makalelerinde başvurulan Günl
 
 - **CertificateRegistrationPoint_date_time. svclog**:
 
-  Bu günlük, sertifika isteklerini alıp doğrulayan NDES ilke modülünü gösterir. Bu günlük dosyasını görüntülemek için [hizmet Izleme Görüntüleyicisi aracını](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) kullanabilirsiniz.
+  Bu günlük, sertifika isteklerini alıp doğrulayan NDES ilke modülünü gösterir. Bu günlük dosyasını görüntülemek için [hizmet Izleme Görüntüleyicisi aracını](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) kullanabilirsiniz.
 
   Konum: NDES 'Yi barındıran sunucuda *% Program_Files% \ Microsoft ıntune\ndesconnectorsvc\logs\logs*
 
@@ -148,4 +148,4 @@ Cihazda **Olay Görüntüleyicisi**  >  **uygulamalar ve hizmet günlükleri**  
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[SCEP Sertifika profillerinin dağıtımını](troubleshoot-scep-certificate-profile-deployment.md) gözden geçirme 
+[SCEP Sertifika profillerinin dağıtımını](troubleshoot-scep-certificate-profile-deployment.md) gözden geçirme

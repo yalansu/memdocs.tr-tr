@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 63400c81ee678a98a83ed17cf192335acf9c047b
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: db1ad3250d04f79abd000a23f9f2064862b1dbd7
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820314"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915101"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için virüsten koruma ilkesi
 
@@ -39,7 +39,7 @@ Virüsten koruma ilkeleri, *uç nokta koruma* veya cihaz [yapılandırma](../con
 
 - **macOS**
   - Tüm desteklenen macOS sürümleri
-  - Intune 'un bir cihazdaki virüsten koruma ayarlarını yönetmesi için, bu cihaza Microsoft Defender ATP 'nin yüklü olması gerekir. Bakýn. [MacOS Için Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (MICROSOFT Defender ATP belgeleri)
+  - Intune 'un bir cihazdaki virüsten koruma ayarlarını yönetmesi için, bu cihaza Microsoft Defender ATP 'nin yüklü olması gerekir. Bakýn. [MacOS Için Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (MICROSOFT Defender ATP belgeleri)
 
 - **Windows 10 ve üzeri**
   - Ek önkoşul gerekmez.
@@ -65,7 +65,7 @@ Intune ile yönettiğiniz cihazlar için aşağıdaki profiller desteklenir:
 
   - Profil: **Virüsten koruma** -MacOS Için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
 
-    [Mac Için Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'yi kullandığınızda, dosyaları kullanarak bu ayarları yapılandırmak yerine, yönetilen MacOS cihazlarınıza Intune aracılığıyla bir virüsten koruma ayarları yapılandırabilir ve dağıtabilirsiniz `.plist` .
+    [Mac Için Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'yi kullandığınızda, dosyaları kullanarak bu ayarları yapılandırmak yerine, yönetilen MacOS cihazlarınıza Intune aracılığıyla bir virüsten koruma ayarları yapılandırabilir ve dağıtabilirsiniz `.plist` .
 
 **Windows 10**:
 
@@ -117,9 +117,9 @@ Aşağıdaki ayarlar ilke birleştirmeyi destekler:
 
 [Microsoft Defender virüsten koruma ilkeleri](../protect/antivirus-microsoft-defender-settings-windows.md)
 
-- **Defender dışlama Için işlem** -CSP: [Defender/excludedprocesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
-- **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya uzantıları** -CSP: [Defender/ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
-- **Defender dosyaları ve hariç tutulacak klasörler** -CSP: [Defender/excludedpaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+- **Defender dışlama Için işlem** -CSP: [Defender/excludedprocesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+- **Taramaların ve gerçek zamanlı korumanın dışında tutulacak dosya uzantıları** -CSP: [Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+- **Defender dosyaları ve hariç tutulacak klasörler** -CSP: [Defender/excludedpaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
 ## <a name="antivirus-policy-reports"></a>Virüsten koruma ilkesi raporları
 

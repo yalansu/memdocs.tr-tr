@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 737301d8171cd123224017a32c03db8365f4a90c
-ms.sourcegitcommit: 3d895be2844bda2177c2c85dc2f09612a1be5490
+ms.openlocfilehash: eb30db6043a1b2f02db8baa93f324fa38449769c
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79364757"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88915662"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Intune’da kullanılan Graph API’leri ve eşleşen Windows 10 CSP’leri
 
-Microsoft Intune, Windows 10 ve üstünü çalıştıran cihazları (**ıntune** > **cihaz yapılandırması**) yapılandırmak için [Graph API varlıklarını](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (başka bir docs sitesini açar) kullanır. Graph API, cihazlarda yapılandırma ayarlarını okumak, ayarlamak, değiştirmek ve/veya silmek için yapılandırma hizmeti sağlayıcılarını (CSP) kullanır.
+Microsoft Intune, Windows 10 ve üzeri çalıştıran cihazları (**Intune**cihaz yapılandırması) yapılandırmak için [Graph API varlıklarını](/graph/api/resources/intune-graph-overview) (başka bir docs sitesini açar) kullanır  >  **Device configuration**. Graph API, cihazlarda yapılandırma ayarlarını okumak, ayarlamak, değiştirmek ve/veya silmek için yapılandırma hizmeti sağlayıcılarını (CSP) kullanır.
 
 Bu liste şu şekilde geçerlidir:
 
@@ -37,13 +37,13 @@ Bu bilgiler çeşitli senaryolar için yararlıdır. Örneğin, bkz. Intune tara
 
 ## <a name="windows-10-csps"></a>Windows 10 CSP 'Leri
 
-Windows 10 yapılandırma hizmeti sağlayıcıları hakkında daha fazla bilgi için bkz. [yapılandırma hizmeti sağlayıcısı başvurusu](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (başka bir docs sitesi açar).
+Windows 10 yapılandırma hizmeti sağlayıcıları hakkında daha fazla bilgi için bkz. [yapılandırma hizmeti sağlayıcısı başvurusu](/windows/client-management/mdm/configuration-service-provider-reference) (başka bir docs sitesi açar).
 
 ## <a name="graph-api-properties-to-csp-mapping"></a>CSP eşleme Graph API Özellikler
 
 Aşağıdaki listede, Windows 10 cihaz yapılandırması için Microsoft Intune tarafından kullanılan Graph API varlıkların çoğunluğu gösterilmektedir. Ayrıca buna karşılık gelen Windows 10 CSP ve konum URI 'sini de gösterir.
 
-Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yapılandırma hizmeti sağlayıcı başvurusunu](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) kullanın (başka bir docs sitesini açar).
+Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yapılandırma hizmeti sağlayıcı başvurusunu](/windows/client-management/mdm/configuration-service-provider-reference) kullanın (başka bir docs sitesini açar).
 
 ### <a name="editionupgradeconfigurationlicense"></a>Sürümupgradeconfiguration. Lisans 
 **CSP**:./Device/Vendor/MSFT/windowslisanslama  
@@ -258,7 +258,7 @@ Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yap�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderemailcontentexecutiontype"></a>Windows10EndpointProtectionConfiguration. Savunderemailcontentexecutiontype 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Fark URI 'si**:/config/savunma der/saldırıda ksurfacvductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. Savunderofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. Savunderofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, windows10endpointprotection/ Configuration. savunma Deruntrustedusbprocesstype
+**Konum URI 'si**:/config/savunma der/, ksurfacereductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. savunma Derofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. savunma Derofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, Windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, Windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, Windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, Windows10endpointprotection/Configuration. Savunderuntrustedusbprocesstype
 
 ### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration. savunma Derpatıprotectionxml 
 **CSP**:./Device/Vendor/MSFT/Policy **kayması URI 'si**:/config/patıguard/patıprotectionsettings
@@ -283,7 +283,7 @@ Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yap�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunchtype"></a>Windows10EndpointProtectionConfiguration. Savunderofficeappsexecutablecontentcreationorlaunchtype
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Fark URI 'si**:/config/savunma der/saldırıda ksurfacvductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. Savunderofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. Savunderofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, windows10endpointprotection/ Configuration. savunma Deruntrustedusbprocesstype
+**Konum URI 'si**:/config/savunma der/, ksurfacereductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. savunma Derofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. savunma Derofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, Windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, Windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, Windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, Windows10endpointprotection/Configuration. Savunderuntrustedusbprocesstype
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocess"></a>Windows10EndpointProtectionConfiguration. Savunderofficeappslaunchchildprocess 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -291,7 +291,7 @@ Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yap�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocesstype"></a>Windows10EndpointProtectionConfiguration. Savunderofficeappslaunchchildprocesstype 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Fark URI 'si**:/config/savunma der/saldırıda ksurfacvductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. Savunderofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. Savunderofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, windows10endpointprotection/ Configuration. savunma Deruntrustedusbprocesstype
+**Konum URI 'si**:/config/savunma der/, ksurfacereductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. savunma Derofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. savunma Derofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, Windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, Windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, Windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, Windows10endpointprotection/Configuration. Savunderuntrustedusbprocesstype
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjection"></a>Windows10EndpointProtectionConfiguration. Savunderofficeappsotherprocessınjection 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -299,7 +299,7 @@ Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yap�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjectiontype"></a>Windows10EndpointProtectionConfiguration. Savunderofficeappsotherprocessınjectiontype 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Fark URI 'si**:/config/savunma der/saldırıda ksurfacvductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. Savunderofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. Savunderofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, windows10endpointprotection/ Configuration. savunma Deruntrustedusbprocesstype 
+**Konum URI 'si**:/config/savunma der/, ksurfacereductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. savunma Derofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. savunma Derofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, Windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, Windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, Windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, Windows10endpointprotection/Configuration. Savunderuntrustedusbprocesstype 
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32imports"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32Imports 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -307,11 +307,11 @@ Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yap�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32importstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32ImportsType 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Fark URI 'si**:/config/savunma der/saldırıda ksurfacvductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. Savunderofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. Savunderofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, windows10endpointprotection/ Configuration. savunma Deruntrustedusbprocesstype
+**Konum URI 'si**:/config/savunma der/, ksurfacereductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. savunma Derofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. savunma Derofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, Windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, Windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, Windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, Windows10endpointprotection/Configuration. Savunderuntrustedusbprocesstype
 
 ### <a name="windows10endpointprotectionconfigurationdefenderpreventcredentialstealingtype"></a>Windows10EndpointProtectionConfiguration. savunma Derpreventcredentialstealingtype 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Fark URI 'si**:/config/savunma der/saldırıda ksurfacvductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. Savunderofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. Savunderofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, windows10endpointprotection/ Configuration. savunma Deruntrustedusbprocesstype
+**Konum URI 'si**:/config/savunma der/, ksurfacereductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. savunma Derofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. savunma Derofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, Windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, Windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, Windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, Windows10endpointprotection/Configuration. Savunderuntrustedusbprocesstype
 
 ### <a name="windows10endpointprotectionconfigurationdefenderprocesscreation"></a>Windows10EndpointProtectionConfiguration. savunma Derprocessoluşturma 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -331,7 +331,7 @@ Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yap�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptdownloadedpayloadexecutiontype"></a>Windows10EndpointProtectionConfiguration. Savunderscriptdownloadedpayloadexecutiontype 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Fark URI 'si**:/config/savunma der/saldırıda ksurfacvductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. Savunderofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. Savunderofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, windows10endpointprotection/ Configuration. savunma Deruntrustedusbprocesstype
+**Konum URI 'si**:/config/savunma der/, ksurfacereductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. savunma Derofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. savunma Derofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, Windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, Windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, Windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, Windows10endpointprotection/Configuration. Savunderuntrustedusbprocesstype
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocode"></a>Windows10EndpointProtectionConfiguration. savunma Derscriptobfuscatedmacrocode 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -339,7 +339,7 @@ Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yap�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocodetype"></a>Windows10EndpointProtectionConfiguration. savunma Derscriptobfuscatedmacrocodetype 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Fark URI 'si**:/config/savunma der/saldırıda ksurfacvductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. Savunderofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. Savunderofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, windows10endpointprotection/ Configuration. savunma Deruntrustedusbprocesstype
+**Konum URI 'si**:/config/savunma der/, ksurfacereductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. savunma Derofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. savunma Derofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, Windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, Windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, Windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, Windows10endpointprotection/Configuration. Savunderuntrustedusbprocesstype
 
 ### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration. Savundersecuritycenterblockpatıprotectionoverride 
 **CSP**:./Device/Vendor/MSFT/Policy **kayması URI 'si**:/config/windowssavunma Dersecuritycenter/disallowpatıprotectionoverride
@@ -414,7 +414,7 @@ Aşağıdaki API 'Lerin Windows 10 sürümlerini görmek için, Windows 10 [yap�
 
 ### <a name="windows10endpointprotectionconfigurationdefenderuntrustedusbprocesstype"></a>Windows10EndpointProtectionConfiguration. savunma Deruntrustedusbprocesstype 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Fark URI 'si**:/config/savunma der/saldırıda ksurfacvductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. Savunderofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. Savunderofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, windows10endpointprotection/ Configuration. savunma Deruntrustedusbprocesstype
+**Konum URI 'si**:/config/savunma der/, ksurfacereductionrules (CSP/yapılandırma grafik özellikleri gerektirir: Windows10endpointprotection/Configuration. savunma Derofficeappsotherprocessınjectiontype, Windows10endpointprotection/Configuration. savunma Derofficeappsexecutablecontentcreationorlaunchtype, Windows10endpointprotection/Configuration. savunma Derofficeappslaunchchildprocesstype, Windows10endpointprotection/Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, Windows10endpointprotection/Configuration. savunma Derscriptobfuscatedmacrocodetype, Windows10endpointprotection/Configuration. savunma Derscriptdownloadedpayloadexecutiontype, Windows10endpointprotection/Configuration. savunma Deremailcontentexecutiontype, Windows10endpointprotection/Configuration. Savunmapreventcredentialstealingtype, Windows10endpointprotection/Configuration. Savunderuntrustedusbprocesstype
 
 ### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -565,7 +565,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 
 ### <a name="windows10endpointprotectionconfigurationlanmanagerauthenticationlevel"></a>Windows10EndpointProtectionConfiguration. LanManagerAuthenticationLevel 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity\_LANManagerAuthenticationLevel
+**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity \_ lanmanagerauthenticationlevel
 
 ### <a name="windows10endpointprotectionconfigurationlanmanagerworkstationdisableinsecureguestlogons"></a>Windows10EndpointProtectionConfiguration.LanManagerWorkstationDisableInsecureGuestLogons 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -577,195 +577,195 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratoraccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorAccountName 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts\_Renameyönetimtoraccount
+**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts \_ renameyönetimtoraccount
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratorelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsadministratoretavationpromptbehavior
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_BehaviorOfTheElevationPromptForAdministrators
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ BehaviorOfTheElevationPromptForAdministrators
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowanonymousenumerationofsamaccountsandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
+**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess \_ DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowpku2uauthenticationrequests"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowPKU2UAuthenticationRequests 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity\_AllowPKU2UAuthenticationRequests
+**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity \_ AllowPKU2UAuthenticationRequests
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanager"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
+**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess \_ RestrictClientsAllowedToMakeRemoteCallsToSAM
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanagerhelperbool"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
+**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess \_ RestrictClientsAllowedToMakeRemoteCallsToSAM
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowsystemtobeshutdownwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/kapatmadan\_AllowSystemToBeShutDownWithoutHavingToLogOn
+**Konum URI 'si**:/config/localpoliciessecurityoptions/kapatmadan \_ AllowSystemToBeShutDownWithoutHavingToLogOn
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationElevation 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_AllowUIAccessApplicationsToPromptForElevation
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ AllowUIAccessApplicationsToPromptForElevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationsforsecurelocations"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowundockwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUndockWithoutHavingToLogon 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/Devices\_AllowUndockWithoutHavingToLogon
+**Konum URI 'si**:/config/localpoliciessecurityoptions/Devices \_ AllowUndockWithoutHavingToLogon
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockmicrosoftaccounts"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsBlockMicrosoftAccounts 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts\_BlockMicrosoftAccounts
+**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts \_ blockmicrosoftaccounts
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremotelogonwithblankpassword"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsBlockRemoteLogonWithBlankPassword 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts\_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly
+**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts \_ limitlocalaccountuseofblankpasswordstoconsolelogononly
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremoteopticaldriveaccess"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockRemoteOpticalDriveAccess 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/Devices\_Kısıttcdromaccesstolocallyloggedonuseronly
+**Konum URI 'si**:/config/localpoliciessecurityoptions/Devices \_ kısıttcdromaccesstolocallyloggedonuseronly
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockusersinstallingprinterdrivers"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsblockusersınstallingprinterdrivers 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/Devices\_Preventusersfromınstallingprinterdrivers Whenconnectingtosharedprinters
+**Kaydırma URI 'si**:/config/localpoliciessecurityoptions/Devices \_ preventusersfromınstallingprinterdrivers whenconnectingtosharedprinters
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclearvirtualmemorypagefile"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsClearVirtualMemoryPageFile 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/kapanıyor\_ClearVirtualMemoryPageFile
+**Konum URI 'si**:/config/localpoliciessecurityoptions/kapatmadan \_ clearvirtualmemorypagefile
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsclientdigıtallysigncommunicationsalyollar 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkclient\_Digitallysigncommunicationsalyollar
+**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkclient \_ digitallysigncommunicationsalyollarla
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientsendunencryptedpasswordtothirdpartysmbservers"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsclientsendunencryptedpasswordtoüçe Dpartysmbservers 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkclient\_Sendunencryptedpasswordtoüçe Dpartysmbservers
+**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkclient \_ sendunencryptedpasswordtoüçe dpartysmbservers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdetectapplicationinstallationsandpromptforelevation"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsdetectapplicationınstalsandpromptforelevation 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_Detectapplicationınstallationpromptforelevation
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ algılayıcısı tapplicationınstallationpromptforelevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableadministratoraccount"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsdisableyönetimtoraccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts\_Enableyönetimtoraccountstatus
+**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts \_ enableyönetimtoraccountstatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableclientdigitallysigncommunicationsifserveragrees"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsdisableclientdigitallysigncommunicationsıfserverkabul 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkclient\_Digitallysigncommunicationsıfserverkabul
+**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkclient \_ digitallysigncommunicationsıfserverkabul
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableguestaccount"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsDisableGuestAccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts\_EnableGuestAccountStatus
+**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts \_ enableguestaccountstatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsdisableserverdigitallysigncommunicationsalyollar 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkserver\_Digitallysigncommunicationsalyollar
+**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkserver \_ digitallysigncommunicationsalyollarla
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsifclientagrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkserver\_DigitallySignCommunicationsIfClientAgrees
+**Konum URI 'si**:/config/localpoliciessecurityoptions/microsoftnetworkserver \_ DigitallySignCommunicationsIfClientAgrees
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotallowanonymousenumerationofsamaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSAMAccounts
+**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess \_ DoNotAllowAnonymousEnumerationOfSAMAccounts
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotrequirectrlaltdel"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsDoNotRequireCtrlAltDel 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotRequireCTRLALTDEL
+**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ donotrequirectrlaltdel
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotstorelanmanagerhashvalueonnextpasswordchange"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity\_DoNotStoreLANManagerHashValueOnNextPasswordChange
+**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity \_ donotstorelanmanagerhashvalueonnextpasswordchange
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableadministratoraccount"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsenableyönetimtoraccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts\_Enableyönetimtoraccountstatus
+**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts \_ enableyönetimtoraccountstatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableguestaccount"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsEnableGuestAccount 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts\_EnableGuestAccountStatus
+**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts \_ enableguestaccountstatus
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsformatandejectofremovablemediaalloweduser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/Devices\_AllowedToFormatAndEjectRemovableMedia
+**Konum URI 'si**:/config/localpoliciessecurityoptions/Devices \_ AllowedToFormatAndEjectRemovableMedia
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsguestaccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsGuestAccountName 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts\_RenameGuestAccount
+**Konum URI 'si**:/config/localpoliciessecurityoptions/accounts \_ renameguestaccount
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshidelastsignedinuser"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionshıdelastsignedınuser 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_Donotdisplaylastsignedın
+**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ donotdisplaylastsignedın
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshideusernameatsignin"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionshıdeusernameatsignın 
 **CSP**:./Vendor/MSFT/Policy  
-**Kayan URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_donotdisplayusernameatsign
+**Kayan URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ donotdisplayusernameatsign
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationdisplayedonlockscreen"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsInformationDisplayedOnLockScreen 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_Displayuserınformationwhenthesessioniskilitlendi
+**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ displayuserınformationwhenthesessioniskilitlendi
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationshownonlockscreen"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsInformationShownOnLockScreen 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_Displayuserınformationwhenthesessioniskilitlendi
+**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ displayuserınformationwhenthesessioniskilitlendi
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetext"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsLogOnMessageText 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTextForUsersAttemptingToLogOn
+**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ messagetextforusersattemptingtologon
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetitle"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsLogOnMessageTitle 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTitleForUsersAttemptingToLogOn
+**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ messagetitleforusersattemptingtologon
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimit"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsmachineınactivitylimit 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_Machineınactivitylimit
+**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ machineınactivitylimit
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimitinminutes"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsmachineınactivitylimitınminutes 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_Machineınactivitylimit
+**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ machineınactivitylimit
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedclients"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity\_MinimumSessionSecurityForNTLMSSPBasedClients
+**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity \_ minimumsessionsecurityforntlmsspbasedclients
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedservers"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity\_MinimumSessionSecurityForNTLMSSPBasedServers
+**Konum URI 'si**:/config/localpoliciessecurityoptions/networksecurity \_ minimumsessionsecurityforntlmsspbasedservers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsonlyelevatesignedexecutables"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsonlyelivatesignedexecutables 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_Onlyelivateexecutablefilesthataresignedanddoğrulanan
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ onlyelivateexecutablefilesthataresignedanddoğrulanan
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsrestrictanonymousaccesstonamedpipesandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess\_RestrictAnonymousAccessToNamedPipesAndShares
+**Konum URI 'si**:/config/localpoliciessecurityoptions/NetworkAccess \_ RestrictAnonymousAccessToNamedPipesAndShares
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionssmartcardremovalbehavior"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsSmartCardRemovalBehavior 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_SmartCardRemovalBehavior
+**Konum URI 'si**:/config/LocalPoliciesSecurityOptions/InteractiveLogon \_ smartcardremovalbehavior
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsstandarduserelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration. Localsecurityoptionsstandarduseryükseltir Tionpromptbehavior 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_BehaviorOfTheElevationPromptForStandardUsers
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ BehaviorOfTheElevationPromptForStandardUsers
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsswitchtosecuredesktopwhenpromptingforelevation"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_SwitchToTheSecureDesktopWhenPromptingForElevation
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ switchtothesecuredesktopwhenpromptingforelevation
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmode"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsUseAdminApprovalMode 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_UseAdminApprovalMode
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ useadminapprovalmode
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmodeforadministrators"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsUseAdminApprovalModeForAdministrators 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_Runalladministratorsınadminapprovalmode
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ runalladministratorsınadminapprovalmode
 
 ### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsvirtualizefileandregistrywritefailurestoperuserlocations"></a>Windows10EndpointProtectionConfiguration. LocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations 
 **CSP**:./Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/localpoliciessecurityoptions/UserAccountControl\_Virtualizefileandregistrywritefailuırestoperuserlocations
+**Konum URI 'si**:/config/localpoliciessecurityoptions/userAccountControl \_ virtualizefileandregistrywritefailurestoperuserlocations
 
 ### <a name="windows10endpointprotectionconfigurationnetworkicmpredirectsoverrideospfgeneratedroutes"></a>Windows10EndpointProtectionConfiguration.NetworkIcmpRedirectsOverrideOspfGeneratedRoutes 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -821,7 +821,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientbasicauthentication"></a>Windows10EndpointProtectionConfiguration. RemoteManagementClientBasicAuthentication 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/RemoteManagement/allowbasicauthentication\_Client
+**Konum URI 'si**:/config/RemoteManagement/allowbasicauthentication \_ Client
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientdigestauthentication"></a>Windows10EndpointProtectionConfiguration. RemoteManagementClientDigestAuthentication 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -829,11 +829,11 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementclientunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration. RemoteManagementClientUnencryptedTraffic 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/RemoteManagement/allowunencryptedtraffic\_istemcisi
+**Konum URI 'si**:/config/RemoteManagement/allowunencryptedtraffic \_ Client
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementservicebasicauthentication"></a>Windows10EndpointProtectionConfiguration. RemoteManagementServiceBasicAuthentication 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/RemoteManagement/allowbasicauthentication\_hizmeti
+**Konum URI 'si**:/config/RemoteManagement/allowbasicauthentication \_ Service
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementservicestoringrunascredentials"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceStoringRunAsCredentials 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -841,7 +841,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 
 ### <a name="windows10endpointprotectionconfigurationremotemanagementserviceunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration. RemoteManagementServiceUnencryptedTraffic 
 **CSP**:./Device/Vendor/MSFT/Policy  
-**Konum URI 'si**:/config/RemoteManagement/allowunencryptedtraffic\_hizmeti
+**Konum URI 'si**:/config/RemoteManagement/allowunencryptedtraffic \_ Service
 
 ### <a name="windows10endpointprotectionconfigurationrpcunauthenticatedclientoptions"></a>Windows10EndpointProtectionConfiguration. Rpcundoğrulayıcısı Tedclientoptions 
 **CSP**:./Device/Vendor/MSFT/Policy  
@@ -881,7 +881,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/UserRights/AccessCredentialManagerAsTrustedCaller
 
-### <a name="windows10endpointprotectionconfigurationuserrightsaccessfromnetwork"></a>windows10EndpointProtectionConfiguration.UserRightsAccessFromNetwork 
+### <a name="windows10endpointprotectionconfigurationuserrightsaccessfromnetwork"></a>windows10EndpointProtectionConfiguration. UserRightsAccessFromNetwork 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/usersağts/accessfromnetwork
 
@@ -889,7 +889,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/UserRights/ActAsPartOfTheOperatingSystem
 
-### <a name="windows10endpointprotectionconfigurationuserrightsallowaccessfromnetwork"></a>Windows10EndpointProtectionConfiguration.UserRightsAllowAccessFromNetwork 
+### <a name="windows10endpointprotectionconfigurationuserrightsallowaccessfromnetwork"></a>Windows10EndpointProtectionConfiguration. Usersağtsallowaccessfromnetwork 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/usersağts/accessfromnetwork
 
@@ -921,7 +921,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/usersağts/createsemboliclinks
 
-### <a name="windows10endpointprotectionconfigurationuserrightscreatetoken"></a>Windows10EndpointProtectionConfiguration.UserRightsCreateToken 
+### <a name="windows10endpointprotectionconfigurationuserrightscreatetoken"></a>Windows10EndpointProtectionConfiguration. Usersağtscreatetoken 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/usersağts/CreateToken
 
@@ -933,7 +933,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/usersağts/enabletemsili
 
-### <a name="windows10endpointprotectionconfigurationuserrightsdenyaccessfromnetwork"></a>windows10EndpointProtectionConfiguration.UserRightsDenyAccessFromNetwork 
+### <a name="windows10endpointprotectionconfigurationuserrightsdenyaccessfromnetwork"></a>windows10EndpointProtectionConfiguration. Usersağtsdenyaccessfromnetwork 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/userlıts/denyaccessfromnetwork
 
@@ -1001,7 +1001,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/usersağts/takesahiplik
 
-### <a name="windows10endpointprotectionconfigurationwindowsconnectionmanagerconnectiontonondomainnetworks"></a>Windows10EndpointProtectionConfiguration.WindowsConnectionManagerConnectionToNonDomainNetworks 
+### <a name="windows10endpointprotectionconfigurationwindowsconnectionmanagerconnectiontonondomainnetworks"></a>Windows10EndpointProtectionConfiguration. WindowsConnectionManagerConnectionToNonDomainNetworks 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/windowsconnectionmanager/prohitconnectiontonondomainnetworkswhenconnectedtodomaindoğrulayıcısı tednetwork
 
@@ -1025,7 +1025,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 **CSP**:./Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/SystemServices/XboxServicesLiveGameSaveServiceStartupMode
 
-### <a name="windows10endpointprotectionconfigurationxboxserviceslivenetworkingservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveNetworkingServiceStartupMode 
+### <a name="windows10endpointprotectionconfigurationxboxserviceslivenetworkingservicestartupmode"></a>Windows10EndpointProtectionConfiguration. XboxServicesLiveNetworkingServiceStartupMode 
 **CSP**:./Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/systemservices/configurexboxlivenetworkingservicestartupmode
 
@@ -2517,7 +2517,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 **CSP**:./Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/ApplicationManagement/kısıttapptosystemvolume
 
-### <a name="windows10generalconfigurationsystembootstartdriverinitialization"></a>Windows10GeneralConfiguration. Systembootstartdriverınitialization 
+### <a name="windows10generalconfigurationsystembootstartdriverinitialization"></a>Windows10GeneralConfiguration.SysTembootstartdriverınitialization 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/System/bootstartdriverınitialization
 
@@ -2641,11 +2641,11 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 **CSP**:./Vendor/MSFT/secureastement  
 **Konum URI 'si**:/Allowtextönerilere
 
-### <a name="windows10secureassessmentconfigurationconfigurationaccount"></a>Windows10SecureAssessmentConfiguration. ConfigurationAccount 
+### <a name="windows10secureassessmentconfigurationconfigurationaccount"></a>Windows10SecureAssessmentConfiguration.ConfigurationAccount 
 **CSP**:./Vendor/MSFT/secureastement  
 **Konum URI 'si**:/Testeraccount
 
-### <a name="windows10secureassessmentconfigurationconfigurationaccounttype"></a>Windows10SecureAssessmentConfiguration. ConfigurationAccountType 
+### <a name="windows10secureassessmentconfigurationconfigurationaccounttype"></a>Windows10SecureAssessmentConfiguration.ConfigurationAccountType 
 **CSP**:./Vendor/MSFT/secureastement  
 **Konum URI 'si**:/Testeraccount
 
@@ -2979,7 +2979,7 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Uzaklığa göre URI**:/config/Update/ScheduledInstallEveryWeek,/config/Update/scheduledınstallfirstweek,/config/Update/scheduledınstallonthweek,/config/Update/scheduledınstallsecondweek,/config/Update/scheduledınstallüçe dweek
 
-### <a name="windowsupdateforbusinessconfigurationuserpauseaccess"></a>WindowsUpdateForBusinessConfiguration.UserPauseAccess 
+### <a name="windowsupdateforbusinessconfigurationuserpauseaccess"></a>WindowsUpdateForBusinessConfiguration. UserPauseAccess 
 **CSP**:./Device/Vendor/MSFT/Policy  
 **Konum URI 'si**:/config/Update/setdisablepauseuxaccess
 
@@ -2987,4 +2987,4 @@ Sınır **URI 'si**:/EnableFirewall,/DisableStealthMode,/ekranlı,/DisableUnicas
 ## <a name="next-steps"></a>Sonraki adımlar
 
 - [Cihaz yapılandırmasına genel bakış](../configuration/device-profiles.md)
-- [Yapılandırma hizmeti sağlayıcısı başvurusu](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (başka bir docs sitesini açar)
+- [yapılandırma hizmeti sağlayıcısı başvurusu](/windows/client-management/mdm/configuration-service-provider-reference) (başka bir docs sitesini açar)

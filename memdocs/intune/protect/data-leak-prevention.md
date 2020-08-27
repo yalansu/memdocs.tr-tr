@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d694a2221dff705d6ec2c1dc1db426740d95cdbe
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d51b1ded77ac9d7e1a619c56cb87501c70a9447e
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79329430"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913095"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak yönetilmeyen cihazlarda veri sızıntılarını önleme
 
@@ -55,7 +55,7 @@ Aşağıdaki koşulları yerine getirdiğinizde aşağıdaki eylem planı kullan
 
 Windows 10 cihazları için:
 
-1. [Windows Bilgi Koruması’nın (WIP) nasıl çalıştığını](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) öğrenin.
+1. [Windows Bilgi Koruması’nın (WIP) nasıl çalıştığını](/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) öğrenin.
 2. [Windows 10 için uygulama koruma ilkelerini](../apps/app-protection-policies-configure-windows-10.md)yapılandırmaya hazırlanın.
 3. [Intune ile WIP uygulama koruma ilkeleri oluşturun ve dağıtın](../apps/windows-information-protection-policy-create.md).
 
@@ -68,4 +68,4 @@ Gerektiğinde, ek bilgi sağlamak için aşağıdaki bağlantıları paylaşın:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bunu veya diğer EMS ya da Office 365 senaryolarını etkinleştirmek için yardıma mı ihtiyacınız var? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.
+Bunu veya diğer EMS ya da Office 365 senaryolarını etkinleştirmek için yardıma mı ihtiyacınız var? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.

@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: ''
-ms.openlocfilehash: ede37e43740d6b8e7627df017f0c7acc5f712b3c
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 5b2c14e4447ddf968eaba1874260ad3f684dfb52
+ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880763"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88913044"
 ---
 # <a name="you-need-to-enable-secure-boot"></a>Güvenli Önyüklemeyi etkinleştirmeniz gerekir
 
@@ -32,6 +32,6 @@ Kuruluşunuz, cihazınızı korumaya yardımcı olan Windows Güvenli Önyüklem
 
 Güvenli Önyükleme özelliğinin etkinleştirilmesi gelişmiş bir görevdir. Bir mobil cihaz kullanıyorsanız yardım için şirketinizin destek birimine başvurun.
 
-BILGISAYAR kullanıyorsanız, şirketinizin destek birimine başvurabilirsiniz veya güvenli önyüklemeyi [devre dışı bırakma](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) sayfasındaki "güvenli önyüklemeyi yeniden etkinleştirmek için" bölümüne bakabilirsiniz. böylece güvenli önyüklemeyi kendi başınıza etkinleştirmeyi deneyebilirsiniz.
+BILGISAYAR kullanıyorsanız, şirketinizin destek birimine başvurabilirsiniz veya güvenli önyüklemeyi [devre dışı bırakma](/windows-hardware/manufacture/desktop/disabling-secure-boot) sayfasındaki "güvenli önyüklemeyi yeniden etkinleştirmek için" bölümüne bakabilirsiniz. böylece güvenli önyüklemeyi kendi başınıza etkinleştirmeyi deneyebilirsiniz.
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.
