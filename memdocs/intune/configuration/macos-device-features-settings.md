@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83da63ef78d8b97cad47b811fee0cc3fde8a5502
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5d25aec032483c496d2cf01cc253ea1e3024ca83
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907464"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970541"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 'da macOS cihaz özelliği ayarları
 
@@ -267,7 +267,12 @@ Bu özellik şu platformlarda geçerlidir:
 - **SSO uygulama uzantısı türü**: SSO uygulama uzantısının türünü seçin. Seçenekleriniz şunlardır:
 
   - **Yapılandırılmadı**: uygulama uzantıları kullanılmıyor. Bir uygulama uzantısını devre dışı bırakmak için, SSO uygulama uzantısı türünü **Yapılandırılmadı**olarak değiştirin.
-  - **Microsoft Azure AD**: bir yeniden YÖNLENDIRME türü SSO uygulama uzantısı olan MICROSOFT Enterprise SSO eklentisini kullanır. Bu eklenti, [Apple 'ın Kurumsal Çoklu oturum açma](https://developer.apple.com/documentation/authenticationservices) özelliğini destekleyen tüm MacOS uygulamalarında Active Directory hesapları için SSO sağlar. Azure AD kullanarak kimlik doğrulaması yapan Microsoft uygulamalarında, kuruluş uygulamalarında ve web sitelerinde SSO 'yu etkinleştirmek için bu SSO uygulama uzantısı türünü kullanın.
+  - **Microsoft Azure AD**: 
+
+    > [!IMPORTANT]
+    > Microsoft Azure AD SSO uzantısı hala geliştirilmeye devam ediyor. Intune kullanıcı arabiriminde listelenir, ancak beklendiği gibi çalışmaz. SSO uygulama uzantısı türü için **Microsoft Azure AD** kullanmayın.
+
+    , Bir yeniden yönlendirme türü SSO uygulama uzantısı olan Microsoft Enterprise SSO eklentisini kullanır. Bu eklenti, [Apple 'ın Kurumsal Çoklu oturum açma](https://developer.apple.com/documentation/authenticationservices) özelliğini destekleyen tüm MacOS uygulamalarında Active Directory hesapları için SSO sağlar. Azure AD kullanarak kimlik doğrulaması yapan Microsoft uygulamalarında, kuruluş uygulamalarında ve web sitelerinde SSO 'yu etkinleştirmek için bu SSO uygulama uzantısı türünü kullanın.
 
     SSO eklentisi, güvenlik ve Kullanıcı deneyimi iyileştirmeleri sunan gelişmiş bir kimlik doğrulama Aracısı işlevi görür.
 

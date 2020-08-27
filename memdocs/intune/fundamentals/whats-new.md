@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 08/27/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34c69a8263a76b83f81470c214e05a5e02dc873c
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: f768b34b1516dda5ed23debf554bb2685b96503c
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88916070"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970575"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -94,6 +94,10 @@ Aşağıdakiler cihazlar için geçerlidir:
 - Windows 10 ve üzeri
 
 #### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>MacOS Microsoft Enterprise SSO eklentisini yapılandırma<!-- 5627576  idstaged -->
+
+> [!IMPORTANT]
+> Microsoft Azure AD SSO uzantısı hala geliştirilmeye devam ediyor. Intune kullanıcı arabiriminde listelenir, ancak beklendiği gibi çalışmaz. SSO uygulama uzantısı türü için **Microsoft Azure AD** kullanmayın.
+
 Microsoft Azure AD ekibi, macOS 10.15 + kullanıcılarına Microsoft uygulamalarına, kuruluş uygulamalarına ve Apple 'ın SSO özelliğini destekleyen ve Azure AD 'yi kullanarak kimlik doğrulaması yapan, tek bir oturum açma işlemiyle erişim elde etmesine izin vermek için bir yeniden yönlendirme çoklu oturum açma (SSO) uygulama uzantısı oluşturdu. Microsoft Enterprise SSO eklentisi sürümü sayesinde, SSO uzantısını yeni Microsoft Azure AD uygulama uzantısı türüyle**yapılandırabilirsiniz (cihaz**  >  **yapılandırma profilleri**,  >  **Create profile**  >  profil için**MacOS** for platform > **cihaz özellikleri** > **Çoklu oturum açma uygulama** uzantısı > SSO uygulama uzantısı türü > **Microsoft Azure AD**).
 
 Microsoft Azure AD SSO uygulama uzantısı türüyle SSO sağlamak için, kullanıcıların macOS cihazlarındaki Şirket Portalı uygulamasını yüklemesi ve üzerinde oturum açması gerekir. 

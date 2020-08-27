@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84dfb93480095c1045c73e08b536b9f1ba0aaab5
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: b0f360509f456489a321e072c2acfbf26c14bf98
+ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913639"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970507"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune ile PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -121,9 +121,9 @@ VPN, WiFi veya diğer kaynaklarla bir cihazın kimliğini doğrulamak için bir 
 6. **İstek İşleme**'de **Özel anahtar dışarı aktarılabilsin**'i seçin.
     
     > [!NOTE]
-    > SCEP 'in aksine, PKCS, sertifika özel anahtarı bağlayıcının yüklendiği ve cihaza olmadığı sunucuda oluşturulur. Sertifika bağlayıcısının PFX sertifikasını dışarı aktarıp cihaza gönderebilmesi için, sertifika şablonunun özel anahtarın dışarı verilmesine izin verilmesi gerekir. 
+    > SCEP 'in aksine, PKCS, sertifika özel anahtarı bağlayıcının yüklendiği ve cihaza olmadığı sunucuda oluşturulur. Sertifika bağlayıcısının PFX sertifikasını dışarı aktarıp cihaza gönderebilmesi için, sertifika şablonunun özel anahtarın dışarı verilmesine izin verdiğinden emin olmanız gerekir. 
     >
-    > Ancak, sertifikaların cihaza yüklendiği şekilde, özel anahtarın dışarı aktarılabilir olarak işaretlenmediğine lütfen emin olun.
+    > Ancak, sertifikaların, dışarı aktarılabilir değil olarak işaretlenen özel anahtarla cihazın kendisinde yüklü olduğunu lütfen unutmayın.
     
 7. **Şifreleme**'de **En az anahtar boyutu**’nun 2048 olarak ayarlandığını onaylayın.
 8. **Konu Adı**'nda **İstekte sağla**'yı seçin.
