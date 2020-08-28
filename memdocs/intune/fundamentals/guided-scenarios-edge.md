@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fc1e75f38767de77f89dce2a85c747a7390e76d
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: ee6961de9a33f54db4f3fa8bb4c5a2bfa9406fbb
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217399"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993843"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Kılavuzlu senaryo-mobil için Microsoft Edge dağıtma
 
@@ -34,12 +34,12 @@ Microsoft Edge, kullanıcıların, iş içeriğini birleştirmelerine, düzenlem
 > Kullanıcıların iOS/ıpados veya Android cihazlarını kaydetmelerine izin verirseniz, bu senaryo kaydı etkinleştirmez ve kullanıcıların kendi için Edge yüklemesi gerekir.
 Intune ilkeleri tarafından etkinleştirilen aşağıdaki Microsoft Edge kurumsal özellikleri şunları içerir:
 
-- **Çift kimlik**: Kullanıcılar hem iş hesabı hem de kişisel hesap ekleyerek göz atabilir. Office 365 ve Outlook mimarilerinde ve deneyimlerinde olduğu gibi iki kimlik arasında belirgin bir ayrım vardır. Intune yöneticileri, iş hesabını kullanarak korumalı bir göz atma deneyimi sağlamak üzere istenen ilkeleri belirleyebilir.
+- **Çift kimlik**: Kullanıcılar hem iş hesabı hem de kişisel hesap ekleyerek göz atabilir. Microsoft 365 ve Outlook 'ta mimari ve deneyimle benzer iki kimlik arasında tüm ayrım vardır. Intune yöneticileri, iş hesabını kullanarak korumalı bir göz atma deneyimi sağlamak üzere istenen ilkeleri belirleyebilir.
 - **Intune uygulama koruma ilkesi tümleştirmesi**: Yöneticiler artık uygulama koruma ilkeleri için Microsoft Edge'i hedefleyerek kes, kopyala ve yapıştır denetimi, ekran görüntüsü almayı engelleme ve kullanıcı tarafından seçilen bağlantıların yalnızca diğer yönetilen uygulamalarda açılmasını sağlama gibi denetimlere sahip olabilir.
 - **Azure Uygulama Ara Sunucusu tümleştirmesi**: Yöneticiler artık SaaS ve web uygulamaları erişimini denetleyerek kullanıcıların şirket ağı veya İnternet üzerinden bağlanma durumlarından bağımsız olarak tarayıcı tabanlı uygulamaların yalnızca güvenli Microsoft Edge tarayıcısında çalıştırılmasının sağlanmasına yardımcı olabilir.
 - **Yönetilen Sık Kullanılanlar ve Giriş Sayfası kısayolları**: Yöneticiler, erişim kolaylığı sunmak için şirket bağlamına geçen son kullanıcıların sık kullanılanlar listesinde yer alacak URL'ler belirleyebilir. Yöneticiler, şirket kullanıcıları Microsoft Edge'de yeni bir sayfa veya sekme açtığında birincil kısayol olarak görüntülenecek bir giriş sayfası kısayolu ayarlayabilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [MDM yetkilisini Intune olarak ayarlama](mdm-authority-set.md#set-mdm-authority-to-intune) -mobil cihaz YÖNETIMI (MDM) yetkilisi ayarı, cihazlarınızı nasıl yöneteceğinizi belirler. Kullanıcıların yönetilmek üzere cihaz kaydedebilmeleri için, BT yöneticisi olarak bir MDM yetkilisi ayarlamanız gerekir.
 - Gerekli Intune yönetici izinleri:

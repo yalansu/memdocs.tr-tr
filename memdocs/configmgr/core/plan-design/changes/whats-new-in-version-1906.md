@@ -10,12 +10,12 @@ ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0401207ec98331c33e87a0ac03b5cd7f750c17e7
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3736e5343e10bdfc8d5be8abf79ee27e46749834
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698723"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995118"
 ---
 # <a name="whats-new-in-version-1906-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1906 ' deki yenilikler
 
@@ -505,7 +505,7 @@ Artık belirli bir yazılım güncelleştirmesi gerektiren cihazları görmek i�
    - **Yazılım kitaplığı**  >  **Windows 10 Bakımı**  >  **Tüm Windows 10 güncelleştirmeleri**
    - **Yazılım kitaplığı**  >  **Office 365 Istemci yönetimi**  >  **Office 365 güncelleştirmeleri**
 
-Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows 'u hizmet olarak yönetme](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)ve [Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../../sum/deploy-use/monitor-software-updates.md#drill-through-required-updates), [Windows 'u hizmet olarak yönetme](../../../osd/deploy-use/manage-windows-as-a-service.md#drill-through-required-updates)ve [Microsoft 365 Apps güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ## <a name="office-management"></a><a name="bkmk_o365"></a> Office yönetimi
@@ -514,7 +514,7 @@ Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../../s
 
 <!--4021125-->
 
-Hangi cihazların Office 365 ProPlus sürümüne yükseltmeye hazır olduğunu belirlemenize yardımcı olmak için yeni bir hazır olma panosu vardır. Bu, geçerli sürüm 1902 Configuration Manager yayınlanan **Office 365 ProPlus yükseltme hazırlığı** kutucuğunu içerir. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **Office 365 istemci yönetimi**' ni genişletin ve **Office 365 ProPlus yükseltme hazırlığı** düğümünü seçin.
+Hangi cihazların kuruluş için Microsoft 365 uygulamalarına yükseltilmeye hazır olduğunu belirlemenize yardımcı olmak için, yeni bir hazır olma panosu vardır. Bu, geçerli sürüm 1902 Configuration Manager yayınlanan **Office 365 ProPlus yükseltme hazırlığı** kutucuğunu içerir. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **Office 365 istemci yönetimi**' ni genişletin ve **Office 365 ProPlus yükseltme hazırlığı** düğümünü seçin.
 
 Pano, Önkoşullar ve bu verileri kullanma hakkında daha fazla bilgi için bkz. [Office 365 ProPlus hazırlığı Için tümleştirme](../../../sum/deploy-use/office-365-dashboard.md#bkmk_readiness-dash).
 

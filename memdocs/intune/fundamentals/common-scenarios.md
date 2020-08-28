@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 644235178d39ff1e7c641383c4fb45dde80cf4b5
-ms.sourcegitcommit: 48ec5cdc5898625319aed2893a5aafa402d297fc
+ms.openlocfilehash: b5ed8b6974971e3e2e8182d32cad39a5481331b2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84531885"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994132"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Microsoft Intune’u kullanmanın yaygın yolları
 
@@ -50,21 +50,21 @@ Böyle durumlarda, şirket verilerine erişmenin tek yolu cihazı yönetime kayd
 
 <!-- Learn more about how to plan and deploy Intune to help secure on-premises email and data. -->
 
-## <a name="protecting-your-office-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Office 365 e-postanızı ve verilerinizi koruyarak mobil cihazların bunlara güvenle erişmesini sağlama
+## <a name="protecting-your-microsoft-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Microsoft 365 e-postanızı ve verilerinizi koruyarak mobil cihazların güvenle erişmesini sağlayabilirsiniz
 
-Office 365’teki şirket verilerinin (e-posta, belgeler, anlık iletiler, kişiler) korunması sizin için bundan kolay ve kullanıcılarınız için bundan rahat olamazdı.
+Microsoft 365 (e-posta, belgeler, anlık iletiler, kişiler) şirket verilerinin korunması, kullanıcılarınız için sizin veya daha sorunsuz hale getirilemedi.
 
-Intune ve [Microsoft Enterprise Mobility + Security, şirketinizin](../enrollment/multi-factor-authentication.md)uyumluluk gereksinimlerini (yönetilen uygulama, desteklenen işletim sistemi sürümü, cihaz pin 'i, düşük Kullanıcı riski profili, vb. kullanarak, Intune 'a kayıtlı) karşılamayan hiçbir kullanıcının, uygulamanın veya cihazın Office 365 verilerine erişememesini sağlayan benzersiz bir şekilde tümleştirilmiş koşullu erişim çözümü sağlar.
+Intune ve Microsoft Enterprise Mobility + Security, şirketinizin uyumluluk gereksinimlerini (yönetilen uygulama, desteklenen işletim sistemi sürümü, cihaz pin 'i, düşük Kullanıcı riski profili, vb. kullanarak, Intune 'a kaydolmuş [multi-factor authentication](../enrollment/multi-factor-authentication.md)) karşılamayan hiçbir kullanıcının, uygulamanın veya cihazın Microsoft 365 verilere erişememesini sağlayan benzersiz bir şekilde tümleştirilmiş koşullu erişim çözümü sağlar.
 
-Uygulama mağazalarındaki Office mobil uygulamaları, Intune üzerinden yapılandırabileceğiniz veri kapsama ilkelerine sahiptir. Bu, verilerin uygulamalarla paylaşılmasını engellemenizi sağlar (örneğin, yerel e-posta uygulamaları ile) ve depolama konumları (örneğin, Dropbox) tarafından yönetilmez. Bu işlevsellik tümüyle Office 365 ve EMS’de yerleşik olarak bulunur. Bu değerli işlevselliği elde etmek için ek altyapı dağıtımı yapmanız gerekmez.
+Uygulama mağazalarındaki Office mobil uygulamaları, Intune üzerinden yapılandırabileceğiniz veri kapsama ilkelerine sahiptir. Bu, verilerin uygulamalarla paylaşılmasını engellemenizi sağlar (örneğin, yerel e-posta uygulamaları ile) ve depolama konumları (örneğin, Dropbox) tarafından yönetilmez. Bu işlevlerin tümü Microsoft 365 ve EMS 'de yerleşik olarak bulunur. Bu değerli işlevselliği elde etmek için ek altyapı dağıtımı yapmanız gerekmez.
 
-Yaygın bir Office 365 dağıtım uygulaması, şirkete ait cihazlardaki yaygın bir senaryo olarak şirket uygulamaları, sertifikalar, Wi-Fi veya VPN yapılandırmaları ile tam olarak ayarlanması gereken cihazların yönetime kaydolmalarını gerektirmektir.  
+Ortak bir Microsoft 365 dağıtım uygulaması, şirkete ait cihazlar için yaygın bir senaryo olan kurumsal uygulamalar, sertifikalar, Wi-Fi veya VPN yapılandırmalarına tam olarak ayarlanması gereken cihazların yönetime kaydolmasını gerektirmelidir.  
 
 Ancak, yalnızca kişisel cihazlarda olduğu gibi, kullanıcının yalnızca şirket e-postasına ve belgelerine erişmesi gerekiyorsa, kullanıcının Office mobil uygulamalarını ( [Uygulama koruma ilkelerini](../apps/app-protection-policies.md) uyguladığınız ve cihazı kaydetme işlemini tamamen atlayarak) kullanmasını zorunlu kılabilirsiniz.  
 
-Her iki durumda da, Office 365 verileri tanımladığınız ilkelerle korunmuş olur.
+Her iki durumda da, Microsoft 365 veriler tanımladığınız ilkelerle karşı güvence altına alınır.
 
-<!-- Learn more about how to plan and deploy Intune to help secure Office 365 email and data. -->
+<!-- Learn more about how to plan and deploy Intune to help secure Microsoft 365 email and data. -->
 
 ## <a name="offer-a-bring-your-own-device-program-to-all-employees"></a>Tüm çalışanlara kendi cihazını getir programı sunma
 
@@ -72,7 +72,7 @@ Donanım harcamalarını azaltmaya veya çalışanlar için mobil üretkenlik se
 
 Cihaz kaydının uygulanabilir bir seçenek olmadığı durumlarda, Intune alternatif bir KCG yaklaşımı olarak [şirket verilerini içeren uygulamaları yönetme](../apps/app-protection-policies.md) yaklaşımını sunar. Intune, Office mobil uygulamalarında olduğu gibi söz konusu uygulamanın hem şirket verilerine hem de kişisel verilere eriştiği durumlarda bile şirket verilerini korur.  
 
-Bir yönetici olarak, kullanıcıların Office mobil uygulamalarına Office 365’ten erişmelerini ve uygulamaları, verileri koruma altına alan (şifreleme, pin ile koruma vs.) ilkelerle yapılandırmalarını zorunlu tutabilirsiniz. Bu uygulama koruma ilkeleri, yönetilmeyen uygulamalardan ve bu uygulamaların içindeki ve dışındaki depolama konumlarından veri kaybetmeyi önler. Örneğin, ilkeler kullanıcın şirket e-posta profilinden tüketici e-posta profiline (her iki profil de Outlook Mobile içinde yapılandırılmış olsa bile) metin kopyalamasını önler. KCG kullanıcılarınıza gereken diğer hizmetler ve uygulamalar için de benzer yapılandırmalar dağıtılabilir.
+Yönetici olarak, kullanıcıların Office mobil uygulamalarından Microsoft 365 erişmesini ve uygulamaları, verileri korunan ilkelerle (örneğin, şifreleme, PIN ile koruma vb.) erişmelerini zorunlu tutabilirsiniz. Bu uygulama koruma ilkeleri, yönetilmeyen uygulamalardan ve bu uygulamaların içindeki ve dışındaki depolama konumlarından veri kaybetmeyi önler. Örneğin, ilkeler kullanıcın şirket e-posta profilinden tüketici e-posta profiline (her iki profil de Outlook Mobile içinde yapılandırılmış olsa bile) metin kopyalamasını önler. KCG kullanıcılarınıza gereken diğer hizmetler ve uygulamalar için de benzer yapılandırmalar dağıtılabilir.
 
 <!-- Learn more about how to plan and deploy Intune to support BYOD.-->
 
@@ -96,7 +96,7 @@ Bu örnekte, kullanıcı deneyiminin basitliği kritik önem taşır. Bu nedenle
 
 <!-- Learn more about how to plan and deploy Intune to support shared tablets. -->
 
-## <a name="enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk"></a>Çalışanlarınızın yönetilmeyen genel bir bilgi noktasından Office 365’e güvenle erişmesini sağlama
+## <a name="enable-your-employees-to-securely-access-microsoft-365-from-an-unmanaged-public-kiosk"></a>Çalışanlarınızın yönetilmeyen genel bir bilgi noktasından Microsoft 365 güvenle erişmesini sağlama
 
 Bazen çalışanlarınızın, ticaret fuarlarındaki kamu bilgisayarları ve otel lobileri 'leri gibi, yönetimizin veren cihazları, uygulamaları veya tarayıcıları kullanması gerekir.
 

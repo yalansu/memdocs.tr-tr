@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37724c4d9acdfcdb9e371a21a7b15c509de78c60
-ms.sourcegitcommit: 2ee50bfc416182362ae0b8070b096e1cc792bf68
+ms.openlocfilehash: c81216ae7350beafcf1e090b278d5975d6fea086
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865481"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993300"
 ---
 # <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune 'de iOS/ıpados cihaz kaydı sorunlarını giderme
 
@@ -87,7 +87,7 @@ Sorunla ilgili olarak aşağıdaki bilgileri toplayın:
 **Neden:** Cihazı kaydetmeye çalışan kullanıcının Microsoft Intune lisansı yok.
 
 #### <a name="resolution"></a>Çözüm
-1. [Office 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından **etkin kullanıcılar > kullanıcılar**' ı seçin.
+1. [Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından **Kullanıcılar > etkin kullanıcılar**' ı seçin.
 2. Intune kullanıcı lisansı atamak istediğiniz kullanıcı hesabını seçin ve ardından **düzenle > ürün lisansları**' nı seçin.
 3. Bu kullanıcıya atamak istediğiniz lisansın konumunu **Açık** konumuna geçirin ve ardından **Kaydet**' i seçin.
 4. Cihazı yeniden kaydedin.
@@ -181,7 +181,7 @@ APNs sertifikasını yenileyin ve sonra cihazı yeniden kaydedin.
 > APNs sertifikasını yenilediğinizden emin olun. APNs sertifikasını değiştirme. Sertifikayı değiştirirseniz, tüm iOS/ıpados cihazlarını Intune 'a yeniden kaydetmeniz gerekir. 
 
 - Tek başına Intune 'da APNs sertifikasını yenilemek için bkz. [Apple MDM anında iletme sertifikasını yenileme](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- Office 365 ' de APNs sertifikasını yenilemek için bkz. [iOS/ıpados cihazları Için APNs sertifikası oluşturma](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
+- Microsoft 365 'de APNs sertifikasını yenilemek için bkz. [iOS/ıpados cihazları Için APNs sertifikası oluşturma](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### <a name="xpc_type_error-connection-invalid"></a>XPC_TYPE_ERROR bağlantı geçersiz
 

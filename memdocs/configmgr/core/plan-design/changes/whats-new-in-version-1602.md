@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9a54ee5fb427f276ec755e748513b178d0c026ab
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 334397cfa52c90694823107c2144bfbbcbd509ac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698580"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993633"
 ---
 # <a name="what39s-new-in-version-1602-of-configuration-manager"></a>Sürüm 1602 ' deki yenilikler&#39;Configuration Manager
 
@@ -98,8 +98,8 @@ Bu uygulamaları Configuration Manager konsolunun **uygulamalar** düğümünde 
 
 ## <a name="software-updates"></a>Yazılım güncelleştirmeleri  
 
-### <a name="manage-office-365-client-updates"></a>Office 365 istemci güncelleştirmelerini yönetme  
- Configuration Manager, yazılım güncelleştirme yönetimi iş akışını kullanarak Office 365 istemci güncelleştirmelerini yönetme olanağına sahiptir. Daha fazla bilgi için bkz. [Configuration Manager Ile Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
+### <a name="manage-microsoft-365-client-updates"></a>Microsoft 365 istemci güncelleştirmelerini yönetme  
+ Configuration Manager, yazılım güncelleştirme yönetimi iş akışını kullanarak Microsoft 365 istemci güncelleştirmelerini yönetme olanağına sahiptir. Daha fazla bilgi için bkz. [Configuration Manager Ile Office 365 uygulama güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).  
 
 ## <a name="compliance-settings"></a>Uyumluluk ayarları  
 
@@ -119,7 +119,7 @@ Bu uygulamaları Configuration Manager konsolunun **uygulamalar** düğümünde 
 
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>Cihazların sistem durumuna göre erişimi kısıtlama  
- Artık sistem durumu kanıtlama hizmeti tarafından bildirilen cihazların sistem durumuna bağlı olarak e-posta ve Office 365 hizmetlerine erişimi kısıtlayabilirsiniz. Ayrıca, Intune tarafından yönetilen cihazlar cihaz sistem durumu raporlarına dahil edilir.  
+ Artık sistem durumu kanıtlama hizmeti tarafından bildirilen cihazların sistem durumuna bağlı olarak e-posta ve Microsoft 365 hizmetlerine erişimi kısıtlayabilirsiniz. Ayrıca, Intune tarafından yönetilen cihazlar cihaz sistem durumu raporlarına dahil edilir.  
 
  Configuration Manager konsolu, cihazların sistem durumlarına göre erişim izni verilip verilmeyeceğini belirtmenize izin veren yeni bir uyumluluk kuralı sunar. Sistem durumu kanıtlama hizmeti ve Intune 'da cihazların sistem durumunun nasıl bildirildiği hakkında ayrıntılar için bkz. [Configuration Manager Için durum kanıtlama](../../../core/servers/manage/health-attestation.md).  
 

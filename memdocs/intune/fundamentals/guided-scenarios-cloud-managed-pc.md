@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1bb0f7a00fb8cf1055488f2ae0d3bd9094ce982
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1bfb903cbff6f4e2a47117f504981759c00b1d27
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88911548"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993860"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Kılavuzlu senaryo-bulutta yönetilen modern masaüstü
 
@@ -62,7 +62,7 @@ Bu Kılavuzlu senaryoda test cihazınızı ve test kullanıcısını sağlamanı
 
 Cihazda ayarlanacak bir kullanıcı seçin. Bu kişi, cihazın birincil kullanıcısı olacak.
 
-Bu yapılandırmaya daha fazla Kullanıcı veya cihaz eklemek istiyorsanız, Kullanıcı ve cihazları sihirbaz tarafından oluşturulan AAD güvenlik gruplarına eklemeniz yeterlidir. Diğer Kılavuzlu senaryolardan farklı olarak, yapılandırma özelleştirilemez olduğundan Sihirbazı birden çok kez çalıştırmanız gerekmez. Oluşturulan AAD gruplarına daha fazla Kullanıcı ve cihaz eklemeniz yeterlidir. Sihirbazı tamamladıktan sonra, dağıtılan önerilen ilkeler ile oluşturulan grubu görüntüleyebileceksiniz.
+Bu yapılandırmaya daha fazla Kullanıcı veya cihaz eklemek istiyorsanız, Kullanıcı ve cihazları sihirbaz tarafından oluşturulan Azure AD güvenlik gruplarına eklemeniz yeterlidir. Diğer Kılavuzlu senaryolardan farklı olarak, yapılandırma özelleştirilemez olduğundan Sihirbazı birden çok kez çalıştırmanız gerekmez. Oluşturulan Azure AD gruplarına daha fazla Kullanıcı ve cihaz eklemeniz yeterlidir. Sihirbazı tamamladıktan sonra, dağıtılan önerilen ilkeler ile oluşturulan grubu görüntüleyebileceksiniz.
 
 ## <a name="step-3---device"></a>3. adım-cihaz
 
@@ -90,7 +90,7 @@ Son adım, yapılandırdığınız ayarların özetini incelemenizi sağlar. Se�
         - **Microsoft Intune** uygulaması veya için **tümüne** ayarla
         - **Bir**olarak ayarlayın. Ayrıca, Bu Kılavuzlu senaryo tarafından oluşturulan kullanıcı grubunu da ekleyin.
 2. Seçili kullanıcının cihazlara Azure Active Directory katılabildiğini doğrulayın.
-    - AAD JOIN 'in olduğundan emin olun:
+    - Azure AD birleştirdiğinizden emin olun:
         - **Tümü** veya,
         - **Bir**olarak ayarlayın. Ayrıca, Bu Kılavuzlu senaryo tarafından oluşturulan kullanıcı grubunu da ekleyin.
 3. Aşağıdaki temel alınarak Azure AD 'ye katmak için cihazda uygun adımları izleyin:
@@ -122,7 +122,7 @@ Ayrıca, Kılavuzlu senaryo kişiselleştirilmiş bir kurulum deneyimi için kul
 
 Kullanıcı cihazı Azure Active Directory katıldıktan sonra cihaza aşağıdaki yapılandırma uygulanır:
 
-1. Microsoft 365 uygulamalar, bulut tarafından yönetilen BILGISAYARA otomatik olarak yüklenir. Erişim, Excel, OneNote, Outlook, PowerPoint, Yayımcı, Skype Kurumsal ve Word dahil olmak üzere, bildiğiniz uygulamaları içerir. Bu uygulamaları, SharePoint Online, Exchange Online ve Skype Kurumsal Çevrimiçi gibi Office 365 hizmetleriyle bağlantı kurmak için kullanabilirsiniz. Microsoft 365 uygulamalar, Office 'in abonelik dışı sürümlerinden farklı olarak yeni özelliklerle düzenli olarak güncelleştirilir. Yeni özelliklerin listesi için bkz. Office 365 ' deki yenilikler.
+1. Microsoft 365 uygulamalar, bulut tarafından yönetilen BILGISAYARA otomatik olarak yüklenir. Erişim, Excel, OneNote, Outlook, PowerPoint, Yayımcı, Skype Kurumsal ve Word dahil olmak üzere, bildiğiniz uygulamaları içerir. Bu uygulamaları, SharePoint Online, Exchange Online ve Skype Kurumsal Çevrimiçi gibi Microsoft 365 hizmetlerle bağlantı kurmak için kullanabilirsiniz. Microsoft 365 uygulamalar, Office 'in abonelik dışı sürümlerinden farklı olarak yeni özelliklerle düzenli olarak güncelleştirilir. Yeni özelliklerin listesi için bkz. Microsoft 365 yenilikleri.
 2. Windows güvenlik temelleri, bulut tarafından yönetilen BILGISAYARA yüklenir. Microsoft Defender Gelişmiş tehdit koruması kurulumu yaptıysanız, Kılavuzlu senaryo da Defender için taban çizgisi ayarlarını yapılandırır. Defender Gelişmiş tehdit koruması, Windows 10 güvenlik yığınına yeni bir ihlal sonrası koruma katmanı sağlar. Windows 10 ' da ve güçlü bir bulut hizmetinde yerleşik olarak bulunan istemci teknolojisinin bir birleşimi sayesinde, diğer savunmaları geçmiş tehditleri algılamaya yardımcı olur. 
 
 ## <a name="next-steps"></a>Sonraki adımlar

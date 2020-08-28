@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 4443d2319bceca2e92f1655660ec384674dac1e7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: c3859d77726b49973257da47233fedde28f705a1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128789"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994829"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-configuration-manager"></a>Configuration Manager sürüm 1702 için tanılama kullanım verileri toplama düzeyleri
 
@@ -340,7 +340,7 @@ Configuration Manager sürüm 1702 için, bu düzey aşağıdakileri içerir:
 
     - Etkin Windows 10 bakım planları için kullanılan konfigürasyonlar  
 
-    - Dağıtılan Office 365 güncelleştirmeleri sayısı  
+    - Dağıtılan Microsoft 365 güncelleştirme sayısı  
 
     - Güncelleştirme grupları ve atamalarının sayısı  
 

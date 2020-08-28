@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd2f930cc1df1ebed6609c5871fb25001dfb735f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2a476be4fb8c9d40150648e72d3203df564893dd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907481"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994353"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Microsoft Intune için destek alma
 
@@ -50,7 +50,7 @@ Intune için yeni oluşturulmuş bir kiracı kullandığınızda, *Yardım ve de
 
 Hata ayrıntıları bir *oturum kimliği*, *uzantı* ayrıntıları ve daha fazlasını içerir.
 
-Bu sorun, yeni kiracı hesabınızı üzerinde **M365 Yönetim Merkezi** https://admin.microsoft.com veya ' de **Office 365 Portalı** aracılığıyla kimlik doğrulamasından geçmediğinde oluşur https://portal.office.com . Bu sorunu çözmek için, iletideki *M365 Yönetim Merkezi* bağlantısını seçin veya adresini ziyaret edin https://portal.office.com ve oturum açın. Her iki sitede da aşağıdaki kimlik doğrulaması, Intune için *Yardım ve destek* erişilebilir hale gelir.
+Bu sorun, ' de **Microsoft 365 Yönetim Merkezi** https://admin.microsoft.com veya ' de **Office 365 Portalı** aracılığıyla yeni kiracı hesabınızı doğrulamadıysanız oluşur https://portal.office.com . Bu sorunu çözmek için, iletideki *Microsoft 365 yönetim merkezine* yönelik bağlantıyı seçin veya adresini ziyaret edin https://portal.office.com ve oturum açın. Her iki sitede da aşağıdaki kimlik doğrulaması, Intune için *Yardım ve destek* erişilebilir hale gelir.
 
 **Yardım ve desteğe erişin**:
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f768b34b1516dda5ed23debf554bb2685b96503c
-ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
+ms.openlocfilehash: 77546387a5443e6f46ad0ab45d80d8038d53e64a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970575"
+ms.locfileid: "88996240"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -371,7 +371,7 @@ Bu rolleri görmek için [Microsoft Endpoint Manager Yönetim Merkezi](https://g
 #### <a name="additional-data-warehouse-v10-properties---6125732----"></a>Ek veri ambarı v 1.0 özellikleri<!-- 6125732  -->
 Intune veri ambarı v 1.0 kullanılarak ek özellikler mevcuttur. Aşağıdaki özellikler artık [cihazlar](../developer/reports-ref-devices.md#devices) varlığı aracılığıyla kullanıma sunulmuştur:
 - `ethernetMacAddress` -Bu cihazın benzersiz ağ tanımlayıcısı.
-- `office365Version` -Cihaza yüklü Office 365 sürümü.
+- `office365Version` -Cihaza yüklü Microsoft 365 sürümü.
 
 Aşağıdaki özellikler artık [Devicepropertygeçmişin](../developer/reports-ref-devices.md#devicepropertyhistories) varlığı aracılığıyla kullanıma sunulmuştur:
 - `physicalMemoryInBytes` -Bayt cinsinden fiziksel bellek.
@@ -879,8 +879,8 @@ Android Enterprise çalıştıran cihazlarda Outlook için S/MIME ayarını yön
 #### <a name="pre-release-testing-for-managed-google-play-apps---2681933----"></a>Yönetilen Google Play uygulamaları için yayın öncesi test<!-- 2681933  -->
 [Uygulama ön sürümü testi için Google Play kapalı test izlerini](https://support.google.com/googleplay/android-developer/answer/3131213) kullanan kuruluşlar, bu parçaları Intune ile yönetebilir. Test yapmak için Google Play 'in ön üretim izlerine yayımlanan uygulamaları, pilot gruplara seçerek atayabilirsiniz. Intune 'da, bir uygulamanın kendisine yayımlanmış bir üretim öncesi derleme testi izlemesine sahip olup olmadığını ve bu izlemeyi Azure AD Kullanıcı veya cihaz grupları ' na atayabilmesini sağlayabilirsiniz. Bu özellik, şu anda desteklenen Android kurumsal senaryolarımız (iş profili, tam olarak yönetilen ve adanmış) için kullanılabilir. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **uygulamalar**  >  **Android**  >  **Ekle**' yi seçerek yönetilen bir Google Play uygulaması ekleyebilirsiniz. Daha fazla bilgi için bkz. [yönetilen Google Play kapatılan test parçalarıyla çalışma](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
 
-#### <a name="microsoft-teams-is-now-included-in-the-office-365-suite-for-macos---5903936----"></a>Microsoft ekipleri artık macOS için Office 365 Suite 'e eklenmiştir<!-- 5903936  -->
-Microsoft Endpoint Manager 'da macOS için Microsoft Office atanan kullanıcılar artık mevcut Microsoft Office uygulamalarına (Word, Excel, PowerPoint, Outlook ve OneNote) ek olarak Microsoft ekipleri alacak. Intune, diğer Office macOS uygulamaları yüklü olan mevcut Mac cihazlarını algılar ve cihaz Intune ile bir dahaki sefer iade ettiğinde Microsoft ekipleri yüklemeye çalışır. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, MacOS için **Office 365 paketini** , **Apps**  >  **MacOS**  >  **Add**uygulamaları ' nı seçerek bulabilirsiniz. Daha fazla bilgi için bkz. [Microsoft Intune Ile macOS cihazlarına Office 365 atama](../apps/apps-add-office365-macos.md).
+#### <a name="microsoft-teams-is-now-included-in-microsoft-365-for-macos---5903936----"></a>Microsoft ekipleri artık macOS için Microsoft 365 eklenmiştir<!-- 5903936  -->
+Microsoft Endpoint Manager 'da macOS için Microsoft 365 atanan kullanıcılar artık mevcut Microsoft 365 uygulamalarına (Word, Excel, PowerPoint, Outlook ve OneNote) ek olarak Microsoft ekipleri alacak. Intune, diğer Office macOS uygulamaları yüklü olan mevcut Mac cihazlarını algılar ve cihaz Intune ile bir dahaki sefer iade ettiğinde Microsoft ekipleri yüklemeye çalışır. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, MacOS için **Office 365 paketini** , **Apps**  >  **MacOS**  >  **Add**uygulamaları ' nı seçerek bulabilirsiniz. Daha fazla bilgi için bkz. [Microsoft Intune Ile macOS cihazlarına Office 365 atama](../apps/apps-add-office365-macos.md).
 
 #### <a name="update-to-android-app-configuration-policies---6113334----"></a>Android uygulama yapılandırma ilkelerine güncelleştirme<!-- 6113334  -->
 Android uygulama yapılandırma ilkeleri, yöneticilerin uygulama yapılandırma profili oluşturmadan önce cihaz kayıt türünü seçmesine izin verecek şekilde güncelleştirilmiştir. İşlev, kayıt türü (Iş profili veya cihaz sahibi) tabanlı sertifika profillerinin hesabına ekleniyor.  Bu güncelleştirme aşağıdakileri sağlar:
@@ -1202,7 +1202,7 @@ Intune veri ambarı, `EthernetMacAddress` `device` yöneticilerin Kullanıcı ve
 Intune veri ambarı kullanılarak ek cihaz envanteri özellikleri kullanılabilir. Aşağıdaki özellikler artık [cihazlar](../developer/reports-ref-devices.md#devices) Beta koleksiyonu aracılığıyla kullanıma sunulmuştur:
 - `ethernetMacAddress` -Bu cihazın benzersiz ağ tanımlayıcısı.
 - `model` -Cihaz modeli.
-- `office365Version` -Cihaza yüklü Office 365 sürümü.
+- `office365Version` -Cihaza yüklü Microsoft 365 sürümü.
 - `windowsOsEdition` -Işletim sistemi sürümü.
 
 Aşağıdaki özellikler artık [Devicepropertyhistory](../developer/reports-ref-devices.md#devicepropertyhistories) Beta koleksiyonu aracılığıyla kullanıma sunulmuştur:

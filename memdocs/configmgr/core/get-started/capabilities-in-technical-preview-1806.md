@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 44fcea129b6f45c292bcdd6b83004131ce2d4e96
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 01c482700b56a1835e46cf5d48da75710f380496
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694432"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995407"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-configuration-manager"></a>Configuration Manager için Technical Preview 1806 ' deki yetenekler
 
@@ -75,7 +75,7 @@ Aşağıdaki üçüncü taraf yazılım güncelleştirme katalogları bu sürüm
 SCUP, diğer katalogları ve senaryoları desteklemeye devam etmektedir. Configuration Manager konsolunun üçüncü taraf yazılım güncelleştirme katalogları düğümündeki katalogların listesi dinamiktir ve ek kataloglar kullanılabilir ve desteklenir olarak güncelleştirilir.
 
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 - HTTPS etkin bir yazılım güncelleştirme noktasıyla yazılım güncelleştirmeleri yönetimini ayarlayın. Daha fazla bilgi için bkz. [yazılım güncelleştirme yönetimi Için hazırlanma](../../sum/get-started/prepare-for-software-updates-management.md).  
   - Bu sürümdeki bu özellik için yazılım güncelleştirme noktası site sunucusunda olmalıdır. <!--515810--> 
 
@@ -102,7 +102,7 @@ SCUP, diğer katalogları ve senaryoları desteklemeye devam etmektedir. Configu
 
 2. Hiyerarşide en üst düzey siteyi seçin. Şeritte, **site bileşenlerini Yapılandır**' a tıklayın ve **yazılım güncelleştirme noktası**' nı seçin.  
 
-3. **Üçüncü taraf güncelleştirmeleri** sekmesine geçin. **üçüncü taraf yazılım güncelleştirmelerini etkinleştirme**seçeneğini belirleyin. Sertifika seçenekleri hakkında daha fazla bilgi için bkz. [üçüncü taraf yazılım güncelleştirme desteğini etkinleştirme geliştirmeleri](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support).  
+3. **Üçüncü taraf güncelleştirmeleri** sekmesine geçin. **Üçüncü taraf yazılım güncelleştirmelerini etkinleştirme**seçeneğini belirleyin. Sertifika seçenekleri hakkında daha fazla bilgi için bkz. [üçüncü taraf yazılım güncelleştirme desteğini etkinleştirme geliştirmeleri](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support).  
 
    > [!Note]  
    > Bu sertifikayı yönetmek için Configuration Manager varsayılan seçeneğini kullanırsanız, **Yönetim** çalışma alanındaki **güvenlik** altındaki **Sertifikalar** düğümünde **üçüncü taraf WSUS imzalama** türünde yeni bir sertifika oluşturulur.  
@@ -176,14 +176,15 @@ Bu sürümden itibaren [ortak yönetim iş yükünü](../../comanage/how-to-swit
 
 
 
-## <a name="transition-office-365-workload-to-intune-using-co-management"></a>Ortak yönetimi kullanarak Office 365 iş yükünü Intune 'a geçirme
+## <a name="transition-microsoft-365-workload-to-intune-using-co-management"></a>Ortak yönetim kullanarak Intune 'a iş yükünü Microsoft 365 geçiş
 <!--1357841-->
-Artık, ortak yönetimi etkinleştirdikten sonra Configuration Manager Office 365 iş yükünü Microsoft Intune olarak geçiş yapabilirsiniz. Bu iş yükünü dengelemek için ortak yönetim özellikleri sayfasına gidin ve kaydırıcı çubuğunu Configuration Manager 'den pilot 'a veya tümüne taşıyın. Daha fazla bilgi için bkz. [Windows 10 cihazlar Için ortak yönetim](../../comanage/overview.md).
+Artık ortak yönetimi etkinleştirdikten sonra Configuration Manager Microsoft 365 iş yükünü Microsoft Intune 'e geçiş yapabilirsiniz. Bu iş yükünü dengelemek için ortak yönetim özellikleri sayfasına gidin ve kaydırıcı çubuğunu Configuration Manager 'den pilot 'a veya tümüne taşıyın. Daha fazla bilgi için bkz. [Windows 10 cihazlar Için ortak yönetim](../../comanage/overview.md).
 
-Ayrıca yeni bir genel koşul da vardır. Bu, **cihazda Intune tarafından yönetilen Office 365 uygulamalardır**. Bu koşul, varsayılan olarak yeni Office 365 uygulamalarına bir gereksinim olarak eklenir. Bu iş yükünü geçiş yaparken, ortak yönetilen istemciler uygulamadaki gereksinimi karşılamıyor, bu nedenle Configuration Manager aracılığıyla dağıtılan Office 365 ' i yüklemez.
+Ayrıca yeni bir genel koşul da vardır. Bu, **cihazda Intune tarafından yönetilen Office 365 uygulamalardır**. Bu koşul, yeni Microsoft 365 uygulamalarına yönelik bir gereksinim olarak varsayılan olarak eklenir. Bu iş yükünü geçiş yaparken, ortak yönetilen istemciler uygulamadaki gereksinimi karşılamıyor, bu nedenle Configuration Manager ile dağıtılan Microsoft 365 yüklemez.
 
 ### <a name="known-issue"></a>Bilinen sorun
-- Bu iş yükü geçişi Şu anda yalnızca Office 365 dağıtımları için geçerlidir. Configuration Manager, Office 365 güncelleştirmelerini yönetmeye devam eder.<!--510876--> Olası bir geçici çözüm hakkında daha fazla bilgi için, Configuration Manager sürüm 1802 sürüm notunda [Office 365 istemci ayarını değiştirme uygulanmadığını](../servers/deploy/install/release-notes.md)inceleyin.
+
+- Bu iş yükü geçişi Şu anda yalnızca Microsoft 365 dağıtımlar için geçerlidir. Configuration Manager Microsoft 365 güncelleştirmelerini yönetmeye devam eder.<!--510876--> Olası bir geçici çözüm hakkında daha fazla bilgi için, Configuration Manager sürüm 1802 yayın notunun [Microsoft 365 istemci ayarının değişmediğini](../servers/deploy/install/release-notes.md)inceleyin.
 
 
 
@@ -233,14 +234,14 @@ Artık yazılım güncelleştirmelerini, yazılım güncelleştirme içeriğini 
 <!--1358149-->
 Office özelleştirme aracı artık Configuration Manager konsolundaki Office 365 yükleyicisiyle tümleşiktir. Office 365 için bir dağıtım oluştururken, artık en son Office yönetilebilirlik ayarlarını dinamik olarak yapılandırabilirsiniz. Office Özelleştirme Aracı, yeni Office 365 Derlemeleriyle aynı anda güncelleştirilir. Artık kullanılabilir oldukları anda Office 365 ' deki yeni yönetilebilirlik ayarlarından yararlanabilirsiniz. 
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 - Configuration Manager konsolunu çalıştıran bilgisayarda HTTPS bağlantı noktası 443 üzerinden internet erişimi gerekir. Office 365 Istemci Yükleme Sihirbazı, açmak için bir Windows standart Web tarayıcısı API 'SI kullanır https://config.office.com . Bir internet proxy 'si kullanılıyorsa, Kullanıcı bu URL 'ye erişebilmelidir.
 
 ### <a name="try-it-out"></a>Deneyin!
  Görevleri tamamlamayı deneyin. Daha sonra nasıl çalıştığını bize bildirmek için [geri bildirim](capabilities-in-technical-preview-1804.md#bkmk_feedback) gönderin.
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin ve **Office 365 istemci yönetimi** düğümünü seçin.
-2. Office 365 Istemci Yükleme Sihirbazı 'nı başlatmak için panoda **office 365 yükleyicisi** kutucuğuna tıklayın. Daha fazla bilgi için bkz. [Office 365 uygulamalarını dağıtma](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+2. Office 365 Istemci Yükleme Sihirbazı 'nı başlatmak için panoda **office 365 yükleyicisi** kutucuğuna tıklayın. Daha fazla bilgi için bkz. [Microsoft 365 uygulamaları dağıtma](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 3. **Office ayarı** sayfasında, **Office Web sayfasına git ' e**tıklayın. Bu dağıtımın ayarlarını belirtmek için çevrimiçi Office Özelleştirme Aracı 'nı kullanın. 
 4. Tamamlandığında sağ üst köşedeki **Gönder** ' e tıklayın. Office 365 Istemci Yükleme Sihirbazı 'Nı sona erdirin.
 

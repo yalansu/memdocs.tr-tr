@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: ce5043f090dd9c08a7a1e9ada5cb2020aabda11f
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: dd188b80375861cd08784d0574e737bfce7f2d92
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819737"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993155"
 ---
 # <a name="whats-new-in-desktop-analytics"></a>Masaüstü Analizinizdeki yenilikler
 
@@ -72,7 +72,7 @@ Artık, masaüstü Analizi portalı bildirim başlık başlıklarını görünt�
 
 ### <a name="improvement-to-prerequisites"></a>Önkoşullardan iyileştirme
 
-Masaüstü Analizi artık Azure Active Directory (Azure AD) kiracınızda bir Office 365 hizmeti dağıtmanızı gerektirmez. Azure AD 'de **Office 365 istemci Yöneticisi** uygulaması, hizmetten bilgi ve durum bilgilerinin Configuration Manager alınmasını sağlamak Için artık **Masaüstü Analizi** uygulamasıdır.
+Masaüstü Analizi artık, Azure Active Directory (Azure AD) kiracınızda bir Microsoft 365 hizmeti dağıtmanızı gerektirmez. Azure AD 'de **Office 365 istemci Yöneticisi** uygulaması, hizmetten bilgi ve durum bilgilerinin Configuration Manager alınmasını sağlamak Için artık **Masaüstü Analizi** uygulamasıdır.
 
 ## <a name="may-2020"></a>Mayıs 2020
 

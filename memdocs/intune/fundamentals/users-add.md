@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c5452f77362f48ab299de1b423d2458f96cd538
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 56d632da8480e0beedac7f086928638633dbe49c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915917"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996325"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Kullanıcı ekleme ve Intune'a yönetici izni verme
 
@@ -36,7 +36,7 @@ Intune aboneliğinize [Microsoft 365 yönetim merkezi](https://admin.microsoft.c
 ### <a name="add-intune-users-in-the-microsoft-365-admin-center"></a>Microsoft 365 yönetim merkezinde Intune kullanıcısı ekleme
 
 1. Bir genel yönetici veya kullanıcı yönetimi yönetici hesabıyla [Microsoft 365 yönetim merkezinde](https://admin.microsoft.com) oturum açın.
-2. Office 365 menüsünde **Yönetici**’yi seçin.
+2. Microsoft 365 menüsünde, **yönetici**' yi seçin.
 3. Yönetim merkezinde **Kullanıcı ekle**’yi seçin.
 
    ![Kullanıcı ekle bölümünün ekran görüntüsü](./media/users-add/office-add-user.png)
@@ -76,10 +76,10 @@ Intune aboneliğinize [Microsoft 365 yönetim merkezi](https://admin.microsoft.c
 
 Intune aboneliğinize kullanıcı ekledikten sonra, bazı kullanıcılara yönetici izinleri vermenizi öneririz.  Yönetici izinleri vermek için aşağıdaki adımları izleyin:
 
-### <a name="give-admin-permissions-in-office-365"></a>Office 365’te yönetici izinleri verme
+### <a name="give-admin-permissions-in-microsoft-365"></a>Microsoft 365 'de yönetici izinleri verme
 
 1. [Microsoft 365 yönetim merkezinde](https://admin.microsoft.com) bir genel yönetici hesabıyla oturum açın.
-2. Office 365 menüsünde **Yönetici**’yi seçin.
+2. Microsoft 365 menüsünde, **yönetici**' yi seçin.
 3. Yönetim merkezinde **Etkin kullanıcılar**’ı ve ardından yönetici izinleri vereceğiniz kullanıcıyı seçin.
 
 4. **Roller** sütununda **Düzenle**’yi seçin.
@@ -102,11 +102,11 @@ Intune aboneliğinize kullanıcı ekledikten sonra, bazı kullanıcılara yönet
 
 Kullanıcılara bir veya daha fazla yönetici izni atayın. Bu izinler, kullanıcıların yönetim kapsamını ve yönetebilecekleri görevleri tanımlar. Yönetici izinleri, farklı Microsoft bulut hizmetlerinde ortak kullanılır ancak bazı hizmetler bazı izinleri desteklemeyebilir. Azure portalında ve Microsoft 365 yönetim merkezinde Intune tarafından kullanılmayan sınırlı yönetici rolleri listelenir. Intune yönetici izinleri aşağıdaki seçenekleri içerir:
 
-- **Genel yönetici** - (Office 365 ve Intune) Intune’daki tüm yönetim özelliklerine erişir. Varsayılan olarak, Intune 'A kaydolan kişi genel yönetici olur. Genel Yöneticiler, diğer yönetici rollerini atayabilen tek yöneticilerden yalnızca Yöneticiler vardır. Kuruluşunuzda birden fazla genel yönetici olabilir. İş riskinizi azaltmak için, şirketinizde yalnızca birkaç kişinin bu role sahip olmasını öneririz.
-- **Parola yöneticisi** - (Office 365 ve Intune) Parolaları sıfırlar, hizmet isteklerini yönetir ve hizmetin sistem durumunu izler. Parola yöneticileri yalnızca kullanıcıların parolalarını sıfırlayabilir.
-- **Hizmet yöneticisi** - (Office 365 ve Intune) Microsoft’ta destek istekleri açar ve hizmet panosuyla ileti merkezini görüntüler. Destek biletleri açma ve bunları okuma dışında "yalnızca görüntüleme" izinlerine sahiptir.
-- **Faturalama yöneticisi** - (Office 365 ve Intune) Satın alma işlemleri yapar, aboneliklerle destek biletlerini yönetir ve hizmetin sistem durumunu izler.
-- **Kullanıcı yöneticisi** - (Office 365 ve Intune) Parolaları sıfırlar, hizmetin sistem durumunu izler, kullanıcı hesapları ekleyip siler ve hizmet isteklerini yönetir. Kullanıcı Yönetimi Yöneticisi bir genel yöneticiyi silemez, başka yönetici rolleri oluşturamaz veya diğer yöneticilerin parolalarını sıfırlayabilir.
+- **Genel yönetici** -(Microsoft 365 ve Intune), Intune 'daki tüm yönetim özelliklerine erişir. Varsayılan olarak, Intune 'A kaydolan kişi genel yönetici olur. Genel Yöneticiler, diğer yönetici rollerini atayabilen tek yöneticilerden yalnızca Yöneticiler vardır. Kuruluşunuzda birden fazla genel yönetici olabilir. İş riskinizi azaltmak için, şirketinizde yalnızca birkaç kişinin bu role sahip olmasını öneririz.
+- **Parola Yöneticisi** -(Microsoft 365 ve Intune) parolaları sıfırlar, hizmet isteklerini yönetir ve hizmetin sistem durumunu izler. Parola yöneticileri yalnızca kullanıcıların parolalarını sıfırlayabilir.
+- **Hizmet Yöneticisi** -(Microsoft 365 ve Intune), Microsoft ile destek istekleri açar ve hizmet panosu ile ileti merkezini görüntüler. Destek biletleri açma ve bunları okuma dışında "yalnızca görüntüleme" izinlerine sahiptir.
+- **Faturalama yöneticisi** -(Microsoft 365 ve Intune) satın alma işlemleri yapar, abonelikleri yönetir, destek biletlerini yönetir ve hizmetin sistem durumunu izler.
+- **Kullanıcı Yöneticisi** (Microsoft 365 ve Intune) parolaları sıfırlar, hizmet durumunu izler, Kullanıcı hesaplarını ekler ve siler ve hizmet isteklerini yönetir. Kullanıcı Yönetimi Yöneticisi bir genel yöneticiyi silemez, başka yönetici rolleri oluşturamaz veya diğer yöneticilerin parolalarını sıfırlayabilir.
 - **Intune Hizmet yöneticisi** - **Dizin Rolü** seçenekleriyle yönetici oluşturma izni hariç tüm Intune Genel yönetici izinlerine sahiptir.
 
 Microsoft Intune aboneliğinizi oluşturmak için kullandığınız hesap bir genel yöneticidir. Günlük yönetim görevleri için bir genel yönetici kullanmamanız önerilir. Bir yöneticinin Azure portalında Intune’a erişmek için Intune lisansına ihtiyacı olmasa da, Exchance Hizmet Bağlayıcısını ayarlamak gibi belirli yönetim görevlerini yerine getirmek için bir Intune lisansı gereklidir.

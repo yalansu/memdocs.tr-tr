@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: d54354c82a6487690aa571eb72554f4eee45747b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 38ea77e44b1d1754d80d0ec902929f5de620c063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700574"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993344"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
@@ -312,13 +312,13 @@ Configuration Manager artık bir bakım yığını güncelleştirmesinin (SSU) b
 
 Daha fazla bilgi için bkz. [plan for Software Updates](../../../sum/plan-design/plan-for-software-updates.md#bkmk_ssu).
 
-### <a name="office-365-updates-for-disconnected-software-update-points"></a>Office 365 bağlantısı kesilen yazılım güncelleştirme noktaları için güncelleştirmeler
+### <a name="microsoft-365-updates-for-disconnected-software-update-points"></a>Bağlantısı kesilen yazılım güncelleştirme noktaları için Microsoft 365 güncelleştirmeleri
 
 <!-- 4065163 -->
 
-Office 365 güncelleştirmelerini Internet 'e bağlı bir WSUS sunucusundan bağlantısı kesilen Configuration Manager ortamına aktarmak için yeni bir araç kullanabilirsiniz. Daha önce, bağlantısı kesilen ortamlarda güncelleştirilmiş yazılım için meta verileri verdiğinizde ve içeri aktardığınızda, Office 365 güncelleştirmelerini dağıtamazsınız. Office 365 güncelleştirmeleri Office API 'sinden ve Office CDN 'den indirilen, bağlantısı kesilen ortamlar için mümkün olmayan ek meta veriler gerektirir.
+İnternet 'e bağlı bir WSUS sunucusundan bağlantısı kesilen bir Configuration Manager ortamına Microsoft 365 güncelleştirmeleri içeri aktarmak için yeni bir araç kullanabilirsiniz. Daha önce, bağlantısı kesilen ortamlarda güncelleştirilmiş yazılım için meta verileri verildiğinde ve içeri aktardığınızda Microsoft 365 güncelleştirmelerini dağıtamazsınız. Microsoft 365 güncelleştirmeler Office API 'sinden ve Office CDN 'den indirilen, bağlantısı kesilen ortamlar için mümkün olmayan ek meta veriler gerektirir.
 
-Daha fazla bilgi için bkz. [Office 365 güncelleştirmelerini bağlantısı kesilen bir yazılım güncelleştirme noktasından Synchronize](../../../sum/get-started/synchronize-office-updates-disconnected.md).
+Daha fazla bilgi için bkz. [bağlantısı kesilmiş bir yazılım güncelleştirme noktasından Microsoft 365 güncelleştirmelerini eşitler](../../../sum/get-started/synchronize-office-updates-disconnected.md).
 
 <!-- ## <a name="bkmk_o365"></a> Office management -->
 

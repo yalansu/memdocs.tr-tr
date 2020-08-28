@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 279b9fc91d26827dbca7eeb294023d2be29e7580
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 7e51f7dc4bf76b9dc35b3eb560bc2dcbe9c48916
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914829"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993826"
 ---
 # <a name="troubleshoot-conditional-access"></a>Koşullu erişim sorunlarını giderme
 Bu makalede, kullanıcılarınız koşullu erişimle korunan kaynaklara erişim izni alamazsanız veya kullanıcılar korumalı kaynaklara erişebiliyorsa ve engellenmesi gereken durumlarda ne yapılacağını açıklar.
 
 Intune ve koşullu erişimle, şu gibi hizmetlere erişimi koruyabilirsiniz:
-- Exchange Online, SharePoint Online ve Skype Kurumsal Çevrimiçi gibi Office 365 hizmetleri
+
+- Exchange Online, SharePoint Online ve Skype Kurumsal Çevrimiçi gibi hizmetler Microsoft 365
 - Exchange Şirket İçi
 - Diğer çeşitli hizmetler
 
@@ -77,11 +78,11 @@ Azure Yönetim Portalı’nda ve cihaz envanteri raporunda her cihaz için bu ko
 
 - Kayıtlı ve uyumlu bir Android cihaz hala engellenebilir ve ilk olarak şirket kaynaklarına erişmeye çalışırken bir karantina bildirimi alabilir. Bu durumda, Şirket Portalı uygulamasının çalışmadığından emin olun ve değerlendirmeyi tetiklemek için karantina e-postasında **Şimdi kullanmaya başlayın** bağlantısını seçin. Bunun yalnızca koşullu erişim ilk kez etkinleştirildiğinde yapılması gerekir.
 
-- Kayıtlı bir Android cihaz, kullanıcıdan "sertifika bulunamadı" ve O365 kaynaklarına erişim izni verilmeyebilir. Kullanıcı kayıtlı cihazda *tarayıcı erişimini etkinleştir* seçeneğini şu şekilde etkinleştirmelidir:
+- Kayıtlı bir Android cihaz, kullanıcıdan "sertifika bulunamadı" ve Microsoft 365 kaynaklarına erişim izni verilmeyebilir. Kullanıcı kayıtlı cihazda *tarayıcı erişimini etkinleştir* seçeneğini şu şekilde etkinleştirmelidir:
   1. Şirket Portalı uygulamasını açın.
   2. Üçlü noktalar (...) veya donanım menü düğmesinden Ayarlar sayfasına gidin.
   3. *Tarayıcı erişimini etkinleştir* düğmesini seçin.
-  4. Chrome tarayıcısında, Office 365 oturumunu kapatın ve Chrome’u yeniden başlatın.  
+  4. Chrome tarayıcısında Microsoft 365 oturumunuzu kapatın ve Chrome 'u yeniden başlatın.  
 
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Cihazlar engelleniyor ve hiçbir karantina e-postası alınmıyor

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 223d3aa55365241983c197d0aa80e82087465d48
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 852d119d7b80df28436f5a8e25fe39782e1e5cc0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907710"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996393"
 ---
 # <a name="reference-for-devices-entities"></a>Cihaz varlıkları için başvuru
 
@@ -65,7 +65,7 @@ ms.locfileid: "88907710"
 | 10 |IPod |iPod cihaz |
 | 11 |Android |Android cihaz-Cihaz Yöneticisi ile yönetilen |
 | 12 |ISocConsumer |iSoc Consumer cihaz |
-| 14 |MacMDM |Yerleşik MDM aracısıyla yönetilen Mac OS X cihaz |
+| 14 |MacMDM |Yerleşik MDM aracısıyla yönetilen OS X cihazı |
 | 15 |HoloLens |HoloLens cihazı |
 | 16 |SurfaceHub |Surface Hub cihaz |
 | 17 |AndroidForWork |Android Profil Sahibi kullanılarak yönetilen Android cihaz |
@@ -118,7 +118,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 | Geçerli değil                  | Kayıt hatası kategorisi geçerli değil.                                                            |
 | Kullanılamaz                   | Kayıt hatası kategorisi kullanılamıyor.                                                             |
 | Bilinmiyor                         | Bilinmeyen hata.                                                                                                |
-| Kimlik doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
+| Kimlik Doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
 | Yetkilendirme                   | Çağrının kimliği doğrulandı, ancak kaydolma yetkisi yok.                                                         |
 | AccountValidation               | Kayıt için Hesap doğrulanamadı. (Hesap engellendi, kayıt etkin değil)                      |
 | Kullanıcı doğrulaması                  | Kullanıcı doğrulanamadı. (Kullanıcı yok, Lisans eksik)                                           |
@@ -266,7 +266,7 @@ Kayıtsahibi **türü** varlığı, bir cihazın kurumsal, kişisel veya bilinme
 | windowsOsEdition           | Windows Işletim sistemi sürümü.                                                                                                                             |
 | ethernetMacAddress           | Bu cihazın benzersiz ağ tanımlayıcısı.                                                                                                                                        |
 | model                      | Cihaz modeli.                                                                                                                                                                      |
-| office365Version           | Cihaza yüklü Office 365 sürümü.                                                                                                                             |
+| office365Version           | Cihaza yüklü Microsoft 365 sürümü.                                                                                                                             |
 
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories

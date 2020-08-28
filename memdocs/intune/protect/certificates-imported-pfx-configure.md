@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b73a8322b0eb96e6dc22c806a7029213a162c5e8
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906880"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992581"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune ile içeri aktarılan PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -104,7 +104,7 @@ Bir kullanıcıya **içeri aktarılan BIR PFX sertifikasını** dağıtmak için
 5. Microsoft Intune için PFX Sertifika Bağlayıcısı yüklendikten sonra **Kayıt** sekmesini açar. Intune bağlantısını etkinleştirmek için **Oturum Aç**'ı seçin ve Azure genel yöneticisi veya Intune yöneticisi izinleri olan bir hesap girin.
 
    > [!WARNING]
-   > Varsayılan olarak, Windows Server **IE artırılmış güvenlik yapılandırması** **Açık** olarak ayarlanır ve bu, Office 365 ' de oturum açma sorunları oluşmasına neden olabilir.
+   > Varsayılan olarak, Windows Server **IE artırılmış güvenlik yapılandırması** **Açık** olarak ayarlanır ve bu, Microsoft 365 oturum açma ile ilgili sorunlara neden olabilir.
 
 6. Pencereyi kapatın.
 
@@ -210,7 +210,7 @@ Anahtarı oluşturmak için kullandığınız sağlayıcıyla eşleşen anahtar 
 
 8. Sertifikanın içeri aktarıldığını doğrulamak için şunu çalıştırın `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
 
-9.  AAD belirteci önbelleğinin kendi üzerinde süre sonu beklemeden temizlenmesi için en iyi uygulama olarak, şunu çalıştırın `Remove-IntuneAuthenticationToken`
+9.  Azure AD belirteç önbelleğini temizlemek için bir en iyi uygulama olarak, bunun kendi üzerinde sona ermesini beklemeden, şunu çalıştırın `Remove-IntuneAuthenticationToken`
 
 Kullanılabilir diğer komutlar hakkında daha fazla bilgi için, [GitHub 'da, Pfxımport PowerShell projesinde](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)bulunan Benioku dosyasına bakın.
 

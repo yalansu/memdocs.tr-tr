@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c77d69e076956ab66deeb5fb8256afc6038225b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: d3c42683e1c9a9d67f6fadd51878ebf2da3e0cac
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820043"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996614"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Intune Veri Ambarı API’si için değişiklik günlüğü
 
@@ -41,7 +41,7 @@ Aşağıdaki tabloda, Intune veri ambarındaki [cihaz](../developer/intune-data-
 |    Koleksiyon                          |    Değiştir     |    Açıklama bilgileri                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    Eklendi    |    Bu cihazın benzersiz ağ tanımlayıcısı.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    Eklendi    |    Cihaza yüklü Office 365 sürümü.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Eklendi    |    Cihaza yüklü Microsoft 365 sürümü.                                                                                                                                                                                                                                                                     |
 
 Aşağıdaki tabloda, Intune veri ambarındaki [Devicepropertygeçmişvarlığına](../developer/intune-data-warehouse-collections.md#devicepropertyhistories) eklenen özellik listelenmektedir.
 
@@ -80,7 +80,7 @@ Aşağıdaki tabloda, Intune veri ambarındaki **cihaz** varlığına eklenen ö
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    ethernetMacAddress    |    Eklendi    |    Bu cihazın benzersiz ağ tanımlayıcısı.                                                                                                                                                                                                                                                                     |
 |    model    |    Eklendi    |    Cihaz modeli.                                                                                                                                                                                                                                                                     |
-|    office365Version    |    Eklendi    |    Cihaza yüklü Office 365 sürümü.                                                                                                                                                                                                                                                                     |
+|    office365Version    |    Eklendi    |    Cihaza yüklü Microsoft 365 sürümü.                                                                                                                                                                                                                                                                     |
 
 Aşağıdaki tabloda, Intune veri ambarındaki **Devicepropertyhistory** varlığına eklenen özellikler listelenmiştir.
 

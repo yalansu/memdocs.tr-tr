@@ -10,12 +10,12 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c66200041bcc643dc7306b76c540daf2b0b1058
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: bfd7818622ca536fd3a7a00de95bd5400b060fd5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128632"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994625"
 ---
 # <a name="diagnostic-and-usage-data-for-version-1902"></a>Sürüm 1902 için tanılama ve kullanım verileri
 
@@ -154,7 +154,7 @@ Configuration Manager sürüm 1902 için, bu düzey aşağıdaki verileri içeri
 
 - Uygulama Kataloğu için farklı marka sayısı  
 
-- Pano kullanılarak oluşturulan Office 365 uygulamalarının sayısı  
+- Pano kullanılarak oluşturulan Microsoft 365 uygulamalarının sayısı  
 
 - Türe göre paket sayısı  
 
@@ -441,7 +441,7 @@ Configuration Manager sürüm 1902 için, bu düzey aşağıdaki verileri içeri
 
 - Etkin Windows 10 bakım planları için kullanılan konfigürasyonlar  
 
-- Dağıtılan Office 365 güncelleştirmeleri sayısı  
+- Dağıtılan Microsoft 365 güncelleştirme sayısı  
 
 - Eşitlenmiş Microsoft Surface sürücü sayısı  
 

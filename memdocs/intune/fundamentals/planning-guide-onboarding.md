@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19de56bfab6e4f4cf2f1243c6cbaf98053e6ba5e
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 0b479f770053051e580a68aa810a60c35d745ac5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663268"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996359"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Microsoft Intune planınızı uygulama
 
@@ -37,7 +37,7 @@ Tek başına Intune temel gereksinimleri şöyledir:
 
 - Enterprise Mobility + Security (EMS)/Intune aboneliği
 
-- Office 365 aboneliği (Office uygulamaları ve uygulama koruma ilkesiyle yönetilen uygulamalar için)
+- Microsoft 365 aboneliği (Office uygulamaları ve uygulama koruma-ilkeyle yönetilen uygulamalar için)
 
 - Apple APNs sertifikası (iOS/ıpados cihaz platformu yönetimini etkinleştirmek için)
 
@@ -60,11 +60,11 @@ Yukarıdaki Intune gereksinimleri bölümünde belirtildiği gibi bir EMS veya I
 
 - [Microsoft Intune satın alma](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing) hakkında daha fazla bilgi edinin.
 
-### <a name="task-2-add-office-365-subscription"></a>Görev 2: Office 365 aboneliği ekleme
+### <a name="task-2-add-microsoft-365-subscription"></a>Görev 2: Microsoft 365 abonelik ekleyin
 
-Bu adım isteğe bağlıdır. Exchange Online’ı kullanmak Office mobil uygulamalarını uygulama koruma ilkeleriyle yönetmek istiyorsanız Office 365 aboneliğiniz olmalıdır. Kuruluşunuzun Office 365 aboneliği yoksa Office 365 satın almak istediğinize dair Microsoft’la veya Microsoft hesap ekibiyle iletişime geçin.
+Bu adım isteğe bağlıdır. Exchange Online 'ı kullanmayı planlarsanız ve Office mobil uygulamalarını uygulama koruma ilkeleriyle yönetmek istiyorsanız bir Microsoft 365 aboneliğine sahip olmanız gerekir. Kuruluşunuzun bir Microsoft 365 aboneliği yoksa, Microsoft 365 satın alma konusunda ilgilendiğiniz ilginizle ilgili olarak Microsoft 'a veya Microsoft hesabı ekibinize başvurun.
 
-- [Office 365 satın alma](https://products.office.com/business/compare-office-365-for-business-plans) hakkında daha fazla bilgi edinin.
+- [Microsoft 365 satın alma](https://products.office.com/business/compare-office-365-for-business-plans)hakkında daha fazla bilgi edinin.
 
 ### <a name="task-3-add-users-groups-in-azure-ad"></a>Görev 3: Azure AD'de kullanıcı grupları ekleme
 
@@ -74,9 +74,9 @@ Intune dağıtımı kullanım örneği senaryolarına ve gereksinimlerine bağl�
 <!---why not send them to the AAD connect topic? Question out to Andre: https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect--->
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Görev 4: Intune ve Office 365 kullanıcı lisansları atama
+### <a name="task-4-assign-intune-and-microsoft-365-user-licenses"></a>Görev 4: Intune ve Microsoft 365 kullanıcı lisansları atama
 
-EMS/Intune ve Office 365 dağıtımı için hedeflediğiniz tüm kullanıcıların kendilerine atanmış bir lisansı olması gerekir. Microsoft 365 Yönetim merkezinde EMS/Intune ve Office 365 lisansları atayabilirsiniz.
+EMS/Intune ve Microsoft 365 dağıtımı için hedeflediğiniz tüm kullanıcılara kendisine atanmış bir lisans olması gerekir. Microsoft 365 Yönetim merkezinde EMS/Intune ve Microsoft 365 lisansları atayabilirsiniz.
 
 - [Intune lisansları atama](licenses-assign.md) hakkında daha fazla bilgi edinin.
 
@@ -130,7 +130,7 @@ Intune, Exchange Online, şirket içi Exchange, SharePoint Online, Skype Kurumsa
 
 ### <a name="task-13-enroll-devices"></a>Görev 13: Cihazları kaydetme
 
-Intune, iOS/ıpados, Mac OS, Android ve Windows Masaüstü cihaz platformlarını destekler. Mobil cihaz platformlarını Intune dağıtımı kullanım örneklerinize ve gereksinimlerinize göre uygun şekilde kaydedin.
+Intune, iOS/ıpados, macOS, Android ve Windows Masaüstü cihaz platformlarını destekler. Mobil cihaz platformlarını Intune dağıtımı kullanım örneklerinize ve gereksinimlerinize göre uygun şekilde kaydedin.
 
 - [Cihazları kaydetme](../enrollment/device-enrollment.md) hakkında daha fazla bilgi edinin.
 

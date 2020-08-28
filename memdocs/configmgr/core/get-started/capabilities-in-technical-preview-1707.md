@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 6ff280a01b7388f3e4d296625a94c0184a0e6b09
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9ea860568d7f094588e628955f128e5b8a3aa154
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692987"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995424"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-configuration-manager"></a>Configuration Manager için Technical Preview 1707 ' deki yetenekler
 
@@ -54,9 +54,9 @@ Bu makalede, sürüm 1707 Configuration Manager için Technical Preview 'da kull
  -  Task 2              
 -->
 
-## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Windows 10 ve Office 365 için hızlı yükleme dosyaları için istemci eş önbelleği desteği
+## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Windows 10 ve Microsoft 365 için hızlı yükleme dosyaları için istemci eş önbelleği desteği
 <!-- 1352486 -->
-Bu sürümden itibaren, eş önbellek Windows 10 için içerik hızlı yükleme dosyalarının ve Office 365 güncelleştirme dosyalarının dağıtımını destekler. Ek yapılandırma gerekmez.
+Bu sürümden itibaren, eş önbellek Windows 10 için içerik hızlı yükleme dosyalarının dağıtımını ve Microsoft 365 için güncelleştirme dosyalarını destekler. Ek yapılandırma gerekmez.
 
 ## <a name="surface-device-dashboard"></a>Surface cihaz panosu
 <!--1355788-->
@@ -70,7 +70,7 @@ Cihazların tüm listesi için **yüzey modelleri** grafiğinin bir bölümüne 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Windows Defender Application Guard ilkelerini yapılandırma ve dağıtma
 <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) , güvenilir olmayan Web sitelerini işletim sisteminin diğer bölümleri tarafından erişilemeyen güvenli bir yalıtılmış kapsayıcıda açarak kullanıcılarınızı korumaya yardımcı olan yeni bir Windows özelliğidir. Bu Technical Preview sürümünde, yapılandırdığınız Configuration Manager uyumluluk ayarlarını kullanarak bu özelliği yapılandırmak ve ardından bir koleksiyona dağıtmak için destek ekledik. Bu özellik, Windows 10 Fall Creator güncelleştirmesinin (kod adı: RS3) 64 bit sürümü için önizleme aşamasında kullanıma sunulacaktır. Bu özelliği şimdi test etmek için bu güncelleştirmenin bir önizleme sürümünü kullanıyor olmanız gerekir.
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) , güvenilir olmayan Web sitelerini işletim sisteminin diğer bölümleri tarafından erişilemeyen güvenli bir yalıtılmış kapsayıcıda açarak kullanıcılarınızı korumaya yardımcı olan yeni bir Windows özelliğidir. Bu Technical Preview sürümünde, yapılandırdığınız Configuration Manager uyumluluk ayarlarını kullanarak bu özelliği yapılandırmak ve ardından bir koleksiyona dağıtmak için destek ekledik. Bu özellik, Windows 10 Fall oluşturucusunun güncelleştirme 64 bit sürümü (kod adı: RS3) için önizleme aşamasında kullanıma sunulacaktır. Bu özelliği şimdi test etmek için bu güncelleştirmenin bir önizleme sürümünü kullanıyor olmanız gerekir.
 
 ### <a name="before-you-start"></a>Başlamadan önce
 

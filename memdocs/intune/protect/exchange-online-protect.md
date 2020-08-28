@@ -1,8 +1,8 @@
 ---
 title: Cihaz yönetimi olmadan Exchange
 titleSuffix: Microsoft Intune
-description: Microsoft Intune'u kullanarak, bir cihaz yönetim sistemi ayarlamadan çalışanlara Office 365 Exchange Online e-postalarına erişim verin.
-keywords: Office 365 Exchange e-posta erişimi
+description: Çalışanlara bir cihaz yönetim sistemi ayarlamadan Microsoft 365 Exchange Online e-postasına erişim sağlamak için Microsoft Intune kullanın.
+keywords: Exchange e-posta erişimi Microsoft 365
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41782c13e3e1cfb8b0c9952a52a60e2ee0baf7ca
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 8491d716751a4d370003583059546f17b689657e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909168"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996138"
 ---
-# <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Cihaz yönetimi gerektirmeden Office 365 Exchange Online’ı koruma
+# <a name="protect-microsoft-365-exchange-online-without-requiring-device-management"></a>Cihaz yönetimine gerek kalmadan Exchange Online Microsoft 365 koruma
 
-Bir cihaz yönetim sistemi ayarlama zahmetine katlanmaksızın çalışanların e-posta adreslerine erişimini sağlamak istiyorsanız, bu mümkündür. Intune aracılığıyla Office 365 Exchange Online’a erişim verebilirsiniz. Gerekli adımları tamamlamak için Microsoft 365 veya Azure Active Directory (premium) ve Intune lisanslarınızın olduğunu onaylayın. Çalışanların [desteklenen bir iOS/ıpados veya Android cihazı](../fundamentals/supported-devices-browsers.md)olması gerekir. 
+Bir cihaz yönetim sistemi ayarlama zahmetine katlanmaksızın çalışanların e-posta adreslerine erişimini sağlamak istiyorsanız, bu mümkündür. Exchange Online 'a Intune aracılığıyla Microsoft 365 erişim izni verebilirsiniz. Gerekli adımları tamamlamak için Microsoft 365 veya Azure Active Directory (premium) ve Intune lisanslarınızın olduğunu onaylayın. Çalışanların [desteklenen bir iOS/ıpados veya Android cihazı](../fundamentals/supported-devices-browsers.md)olması gerekir. 
 
 Bir cihaz yönetim sistemi ayarlamak istiyorsanız, bu da mümkündür. Bu tür bir uygulama koruması, cihaz yönetiminden bağımsız olarak çalışır. 
 
@@ -52,4 +52,4 @@ Bir cihaz yönetim sistemi ayarlamak istiyorsanız, bu da mümkündür. Bu tür 
 * Kasıtlı veya kasıtsız veri sızıntılarına karşı şirketinizi korumaya yardımcı olmak adına uygulama koruma ilkeleri ayarlamak. 
 * Şirket verilerini ağınız dışında da korumak adına Azure Information Protection’dan yararlanmak. 
 
-Bunu veya diğer EMS ya da Office 365 senaryolarını etkinleştirmek için yardıma mı ihtiyacınız var? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.
+Bu veya diğer EMS veya Microsoft 365 senaryolarını etkinleştirmeye yardım mı istiyorsunuz? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.

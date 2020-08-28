@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5347837a45c40ebc3ec551d2d962b156a38235b4
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: e1619f3dde57b002ce8884e4af7d4a02e3d71b9f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909406"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992768"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Intune ile uygulama tabanlı koşullu erişim
 
 [Intune uygulama koruma ilkeleri](../apps/app-protection-policy.md) Intune’da kayıtlı cihazlarda şirket verilerinizi korumaya yardımcı olur. Uygulama koruma ilkelerini, yönetilmek üzere Intune’da kaydedilmemiş çalışan cihazları üzerinde de uygulayabilirsiniz. Bu durumda, şirketiniz cihazı yönetmiyor olmasına rağmen, şirket verilerinizin ve kaynaklarınızın korunmasını sağlamanız gerekir.
 
-Uygulama tabanlı koşullu erişim ve istemci uygulama yönetimi, yalnızca Intune uygulama koruma ilkelerini destekleyen istemci uygulamalarının Exchange Online ve diğer Office 365 hizmetlerine erişebilmesini sağlayarak bir güvenlik katmanı ekler.
+Uygulama tabanlı koşullu erişim ve istemci uygulama yönetimi, yalnızca Intune uygulama koruma ilkelerini destekleyen istemci uygulamalarının Exchange Online ve diğer Microsoft 365 hizmetlerine erişebilmesini sağlamak için bir güvenlik katmanı ekler.
 
 > [!NOTE]
 > Yönetilen bir uygulama, uygulama koruma ilkelerinin uygulandığı ve Intune tarafından yönetilebilen bir uygulamadır.
@@ -49,7 +49,7 @@ Daha fazla bilgi için bkz. [Enterprise Mobility fiyatlandırması](https://www.
 
 Uygulama tabanlı koşullu erişimi destekleyen uygulamaların listesi [Azure Active Directory Koşullu erişim teknik başvuru belgelerinde bulunabilir.](/azure/active-directory/active-directory-conditional-access-technical-reference)
 
-Uygulama tabanlı koşullu erişim, [iş kolu (LOB) uygulamalarını da destekler](app-modern-authentication-block.md), ancak bu uygulamaların [Office 365 modern kimlik doğrulamasını](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)kullanması gerekir. 
+Uygulama tabanlı koşullu erişim, [iş kolu (LOB) uygulamalarını da destekler](app-modern-authentication-block.md), ancak bu uygulamaların [modern kimlik doğrulama Microsoft 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)kullanması gerekir. 
 
 ## <a name="how-app-based-conditional-access-works"></a>Uygulama tabanlı Koşullu erişimin nasıl çalıştığı
 

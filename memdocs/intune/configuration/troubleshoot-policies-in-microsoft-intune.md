@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1daad2fb9f681c0372bfd0848e2162175c8dd771
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 26545af603e71c0adff5a0c5dcdcbbc337ce4eb3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915679"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995186"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>İlke ve profillerin ve Intune 'da sorun giderme
 
@@ -130,7 +130,7 @@ Bu makalede bazı yaygın sorun giderme teknikleri listelenmekte ve karşılaşa
 
 **Sorun**: Yönetici konsolunda **Erişim Kuralları Exchange’e Kaydedilemedi**  hatasını alıyorsunuz.
 
-Şirket Içi Exchange Ilkesi çalışma alanında (Yönetici Konsolu) ilkeler oluşturursanız, ancak Office 365 kullanıyorsanız, yapılandırılan ilke ayarları Intune tarafından zorlanmaz. Uyarıda, ilke kaynağını aklınızda edin. Şirket içi Exchange Ilkesi çalışma alanında eski kuralları silin. Eski kurallar, şirket içi Exchange için Intune 'daki genel Exchange kurallarıdır ve Office 365 ile ilgili değildir. Ardından, Office 365 için yeni ilke oluşturun.
+Şirket Içi Exchange Ilkesi çalışma alanında (Yönetici Konsolu) ilkeler oluşturursanız, ancak Microsoft 365 kullanıyorsanız, yapılandırılan ilke ayarları Intune tarafından zorlanmaz. Uyarıda, ilke kaynağını aklınızda edin. Şirket içi Exchange Ilkesi çalışma alanında eski kuralları silin. Eski kurallar, şirket içi Exchange için Intune 'daki genel Exchange kurallarıdır ve Microsoft 365 ilgili değildir. Sonra, Microsoft 365 için yeni ilke oluşturun.
 
 [Intune şirket Içi Exchange Connector 'Da sorun giderme](../protect/troubleshoot-exchange-connector.md) iyi bir kaynak olabilir.
 

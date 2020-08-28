@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c9ca334dd4fc55ebb037c5e18790d1ec138a7d3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 72c4405d68d2a1c9a5294a7d05acffb106837f60
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88912670"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996410"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazları için e-posta ayarları ekleme
 
@@ -64,7 +64,7 @@ Bu makalede iOS/ıpados çalıştıran cihazlarda kullanılabilen tüm e-posta a
 - **SSL**: **Etkinleştir** olarak belirlenirse e-posta gönderirken, alırken ve Exchange sunucusuyla iletişim kurulurken Güvenli Yuva Katmanı (SSL) iletişimi kullanılır.
 - **OAuth**: **Etkinleştir** olarak belirlenirse e-posta gönderirken, alırken ve Exchange ile iletişim kurulurken Open Authorization (OAuth) iletişimi kullanılır. OAuth sunucunuz sertifika kimlik doğrulaması kullanıyorsa, **Kimlik doğrulama yöntemi** olarak **Sertifika**’yı belirleyin ve sertifikayı profile ekleyin. Diğer durumlarda **Kimlik doğrulama yöntemi** olarak **Kullanıcı adı ve parola**’yı belirleyin. OAuth kullanılırken şunları yaptığınızdan emin olun:
 
-  - Bu profili kullanıcılarınıza hedeflemeden önce e-posta çözümünüzün OAuth standardını desteklediğini onaylayın. Office 365 Exchange Online, OAuth standardını destekler. Şirket içi Exchange ve diğer iş ortağı veya üçüncü taraf çözümler ise OAuth’u desteklemeyebilir. Şirket içi Exchange, modern kimlik doğrulaması için yapılandırılabilir. Daha fazla bilgi için bkz. [Şirket Içi Skype Kurumsal ve Exchange sunucuları Için karma modern kimlik doğrulamasına genel bakış ve Önkoşullar](/office365/enterprise/hybrid-modern-auth-overview).
+  - Bu profili kullanıcılarınıza hedeflemeden önce e-posta çözümünüzün OAuth standardını desteklediğini onaylayın. Microsoft 365 Exchange Online, OAuth 'ı destekler. Şirket içi Exchange ve diğer iş ortağı veya üçüncü taraf çözümler ise OAuth’u desteklemeyebilir. Şirket içi Exchange, modern kimlik doğrulaması için yapılandırılabilir. Daha fazla bilgi için bkz. [Şirket Içi Skype Kurumsal ve Exchange sunucuları Için karma modern kimlik doğrulamasına genel bakış ve Önkoşullar](/office365/enterprise/hybrid-modern-auth-overview).
 
     E-posta profili OAuth kullanıyorsa ancak e-posta hizmeti bunu desteklemiyorsa, **Parolayı yeniden gir** seçeneği bozuk görünür. Örneğin kullanıcı Apple’ın cihaz ayarlarında **Parolayı yeniden gir**’i seçerse hiçbir şey olmaz.
 

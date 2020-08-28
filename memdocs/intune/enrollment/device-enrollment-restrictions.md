@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6c9cee236900c4620d8c28ac8ae8a7ebd35b42f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 618be398d963e0a796ad9be7e8810201fc5e12f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907693"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995101"
 ---
 # <a name="android-enterprise-device-enrollment-restrictions"></a>Android kurumsal cihaz kaydı kısıtlamaları
 
@@ -60,7 +60,7 @@ Kuruluşun, [tam olarak yönetilen cihazları kaydetmeyi](android-fully-managed-
 ## <a name="conditional-access-policies"></a>Koşullu erişim ilkeleri
 Kuruluşlar, kullanıcıların yalnızca kayıtlı Android cihazlarda iş veya okul içeriğine erişebildiğinden emin olmak için Azure AD koşullu erişim ilkelerini kullanabilir. Bunu yapmak için tüm olası kullanıcıları hedefleyen bir koşullu erişim ilkesine ihtiyacınız olacaktır. Bu ilkeyi oluşturma hakkındaki ayrıntılar, [bulut uygulaması için yönetilen cihazlar Için koşullu erişimle erişim gerektir](/azure/active-directory/conditional-access/require-managed-devices)bölümünde bulunabilir. 
 
-Senaryodaki adımları izleyin [: iOS ve Android cihazlar için cihaz kaydı gerektir](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices)ve yalnızca uyumlu olan kayıtlı mobil cihazların Office 365 uç noktalarına bağlanabilmesini sağlar.
+Senaryodaki adımları izleyin [: iOS ve Android cihazlar için cihaz kaydı gerektir](/azure/active-directory/conditional-access/require-managed-devices#scenario-require-device-enrollment-for-ios-and-android-devices)ve yalnızca uyumlu olan kayıtlı mobil cihazların Microsoft 365 uç noktalarına bağlanabilmesini sağlar.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

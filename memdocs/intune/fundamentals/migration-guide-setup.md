@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 864f1367125a495c932eeaf5ce7f5db14a79bd44
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c39174dded9fae0055786b6132b3f964f187b1b1
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909729"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992717"
 ---
 # <a name="basic-setup"></a>Temel kurulum
 
@@ -31,7 +31,7 @@ Ortamınızı değerlendirdikten sonra Microsoft Intune ayarlama zamanı vardır
 
 ### <a name="identity"></a>Kimlik
 
-Intune, kimlik ve kullanıcı gruplama sağlayıcısı olarak Azure Active Directory (AAD) gerektirir. Aşağıdakiler hakkında daha fazla bilgi edinin:
+Intune, kimlik ve Kullanıcı gruplama sağlayıcısı olarak Azure Active Directory (Azure AD) gerektirir. Aşağıdakiler hakkında daha fazla bilgi edinin:
 
 - [Kimlik gereksinimleri](/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
@@ -43,7 +43,7 @@ Intune, kimlik ve kullanıcı gruplama sağlayıcısı olarak Azure Active Direc
 
 - [Kullanıcı ve cihaz grupları oluşturma](groups-get-started.md)
 
-Kuruluşunuzda zaten Office 365 kullanılıyorsa Intune’un aynı Azure Active Directory ortamını kullanması gerekir.
+Kuruluşunuz zaten Microsoft 365 kullanıyorsa, Intune 'un aynı Azure Active Directory ortamını kullanması gerekir.
 
 ### <a name="pki-optional"></a>PKI (isteğe bağlı)
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46a9fedc230dd730d4161b719825fa68a356d8d1
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 20d217246be59a612c1a022251f89559ad940894
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907430"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996444"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>MAM ve uygulama koruma hakkında sık kullanılan sorular
 
@@ -66,13 +66,13 @@ Daha fazla bilgi için bkz. [Uygulama koruma ilkelerini izleme](app-protection-p
 
 **Intune ile yönetilen bir uygulamada uygulama koruma ilkelerini kullanmak için temel gereksinimler nelerdir?**
 
-- Son kullanıcının bir Azure Active Directory (AAD) hesabı olması gerekir. Azure Active Directory’de Intune kullanıcılarını nasıl oluşturacağınızı öğrenmek için [Kullanıcı ekleme ve Intune'a yönetici izni verme](../fundamentals/users-add.md) konusuna bakın.
+- Son kullanıcının bir Azure Active Directory (Azure AD) hesabı olmalıdır. Azure Active Directory’de Intune kullanıcılarını nasıl oluşturacağınızı öğrenmek için [Kullanıcı ekleme ve Intune'a yönetici izni verme](../fundamentals/users-add.md) konusuna bakın.
 
 - Son kullanıcının Azure Active Directory hesabına atanmış bir Microsoft Intune lisansının olması gerekir. Son kullanıcılara Intune lisanslarını nasıl atayacağınızı öğrenmek için [Intune lisanslarını yönetme](../fundamentals/licenses-assign.md) konusuna bakın.
 
 - Son kullanıcı bir uygulama koruma ilkesi tarafından hedeflenen bir güvenlik grubuna ait olmalıdır. Aynı uygulama koruma ilkesi, kullanılan belirli uygulamayı hedeflemelidir. Uygulama koruma ilkeleri [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oluşturulabilir ve dağıtılabilir. Güvenlik grupları Şu anda [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)oluşturulabilir.
 
-- Son kullanıcının AAD hesabını kullanarak uygulamada oturum açması gerekir.
+- Son kullanıcının Azure AD hesabını kullanarak uygulamada oturum açması gerekir.
 
 **Intune Uygulama Koruması olan bir uygulamayı etkinleştirmek istersem, ancak desteklenen bir uygulama geliştirme platformu kullandığımda ne olur?**
 
@@ -85,14 +85,14 @@ Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryolarınd
 
 - Son kullanıcının cihazında Outlook mobil uygulamasının yüklü olması gerekir.
 
-- Son kullanıcının, Azure Active Directory hesabına bağlı bir [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) posta kutusuna ve lisansına sahip olması gerekir.
+- Son kullanıcının, Azure Active Directory hesaplarına bağlı bir [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) posta kutusu ve lisansına sahip olması gerekir.
 
   >[!NOTE]
   > Outlook mobil uygulaması şu anda yalnızca Microsoft Exchange Online için Intune Uygulama Koruması’nı ve [Hibrit modern kimlik doğrulaması ile Exchange Server](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)’ı destekler ve Exchange’deki Office 365 Özel’i desteklemez.
 
 **[Word, Excel ve PowerPoint](https://products.office.com/business/office) uygulamalarını kullanmak için ek gereksinimler nelerdir?**
 
-- Son kullanıcının, Azure Active Directory hesaplarına bağlı [iş için Microsoft 365 uygulamaları veya kurumsal](https://products.office.com/business/compare-more-office-365-for-business-plans) bir lisansa sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Office 365 lisansları, bu [yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
+- Son kullanıcının, Azure Active Directory hesaplarına bağlı [iş için Microsoft 365 uygulamaları veya kurumsal](https://products.office.com/business/compare-more-office-365-for-business-plans) bir lisansa sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Microsoft 365 lisansları, bu [yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
 
 - Son kullanıcının, "kuruluş verilerinin kopyalarını Kaydet" uygulama koruma ilkesi ayarının altında parçalı farklı kaydet işlevi kullanılarak yapılandırılmış bir yönetilen konumu olmalıdır. Örneğin, yönetilen konum OneDrive ise [OneDrive](https://onedrive.live.com/about/) uygulaması son kullanıcının Word, Excel veya PowerPoint uygulamasında yapılandırılmalıdır.
 
@@ -105,7 +105,7 @@ Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryolarınd
 Intune, uygulamadaki tüm verileri “kurumsal” veya “kişisel” olarak işaretler. Veriler bir iş konumundan geliyorsa “kurumsal” olarak kabul edilir. Office uygulamaları söz konusu olduğunda Intune, aşağıdakileri iş konumu olarak kabul eder: e-posta (Exchange) veya bulut depolama (OneDrive İş hesabı içeren OneDrive uygulaması).
 
 **Skype Kurumsal’ı kullanmak için ek gereksinimler nelerdir?**<br></br>
-[Skype Kurumsal](https://products.office.com/skype-for-business/it-pros) lisans gereksinimlerine bakın. Skype Kurumsal (SfB) hibrit ve şirket içi yapılandırmaları için bkz. [Skype Kurumsal ve Exchange için Hibrit Modern Kimlik Doğrulaması Genel Kullanıma Sunuldu](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) ve [AAD ile Skype Kurumsal için Modern Kimlik Doğrulaması](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910).
+[Skype Kurumsal](https://products.office.com/skype-for-business/it-pros) lisans gereksinimlerine bakın. Skype Kurumsal (SfB) hibrit ve şirket içi yapılandırmalarda, bkz. [SFB Için karma modern kimlik doğrulama](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) ve [Azure AD Ile SFB OnPrem Için modern kimlik doğrulama](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910), sırasıyla.
 
 ## <a name="app-protection-features"></a>Uygulama koruma özellikleri
 

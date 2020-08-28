@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 717ad28625b5eac97c26bcd09a21ef34250a7d39
-ms.sourcegitcommit: d3992eda0b89bf239cea4ec699ed4711c1fb9e15
+ms.openlocfilehash: 3d011d6111ede4bb5879e53e771d20b792bf00d3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86565725"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995135"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Microsoft Intune 'daki e-posta profilleriyle ilgili yaygın sorunlar ve çözümler
 
@@ -51,7 +51,7 @@ Bu senaryolarda, cihaz gruplarını kullanmak için daha fazla önemli olup olma
 
 ## <a name="device-already-has-an-email-profile-installed"></a>Cihazda zaten yüklü bir e-posta profili var
 
-Kullanıcılar Intune veya Office 365 MDM 'ye kaydolmadan önce bir e-posta profili oluşturmazsa, Intune tarafından dağıtılan e-posta profili beklendiği gibi çalışmayabilir:
+Kullanıcılar Intune 'A veya MDM Microsoft 365 kaydedilmeden önce bir e-posta profili oluşturmazsa, Intune tarafından dağıtılan e-posta profili beklendiği gibi çalışmayabilir:
 
 - **iOS/ıpados**: Intune, ana bilgisayar adı ve e-posta adresine dayalı mevcut, yinelenen bir e-posta profili Kullanıcı tarafından oluşturulan e-posta profili, Intune tarafından oluşturulan profilin dağıtımını engeller. Bu senaryo, iOS/ıpados kullanıcıları tipik olarak bir e-posta profili oluştururken ve ardından kaydolmasına neden olan yaygın bir sorundur. Şirket Portalı uygulama, kullanıcının uyumlu olmadığını ve kullanıcıdan e-posta profilini kaldırmasını isteyebilir.
 

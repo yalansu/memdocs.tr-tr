@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3b153dad513107b118d11fa95e3feaa035a1bc90
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692647"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995016"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1806 ' deki yenilikler
 
@@ -235,7 +235,7 @@ Aşağıdaki iş yükleri artık ortak yönetim etkinleştirildikten sonra Confi
 
 - **Cihaz yapılandırması**<!--1357903-->: Bu iş yükü, uygulamaları dağıtmak için Configuration Manager kullanmaya devam ederken MDM ilkelerini dağıtmak için Intune 'U kullanmanıza olanak sağlar.  
 
-- **Office 365**<!--1357841-->: Cihazlar Configuration Manager 'den Office 365 dağıtımlarını yüklemez.  
+- **Office 365**<!--1357841-->: Cihazlar Configuration Manager Microsoft 365 dağıtımlarını yüklemez.  
 
 - **Mobil uygulamalar**<!--1357892-->: Intune 'dan dağıtılan tüm kullanılabilir uygulamalar Şirket Portalı kullanılabilir. Configuration Manager 'ten dağıttığınız uygulamalar yazılım merkezi 'nde kullanılabilir. Bu özellik, [yayın öncesi bir özelliktir](../../servers/manage/pre-release-features.md).  
 
@@ -294,9 +294,9 @@ Daha fazla bilgi için bkz. [Windows uygulamaları oluşturma](../../../apps/get
 
 ### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Office Özelleştirme Aracı tümleştirmesiyle Office 365 yükleyicisi
 <!--1358149-->
-Office özelleştirme aracı artık Configuration Manager konsolundaki Office 365 yükleyicisiyle tümleşiktir. Office 365 için bir dağıtım oluştururken, en yeni Office yönetilebilirlik ayarlarını dinamik olarak yapılandırın. Microsoft, Office Özelleştirme Aracı 'nı yeni Office 365 derlemelerini yayınlarsa güncelleştirir. Bu tümleştirme, Office 365 ' deki yeni yönetilebilirlik ayarlarından yararlanarak kullanılabilir duruma gelir. 
+Office özelleştirme aracı artık Configuration Manager konsolundaki Office 365 yükleyicisiyle tümleşiktir. Microsoft 365 için bir dağıtım oluştururken, en yeni Office yönetilebilirlik ayarlarını dinamik olarak yapılandırın. Microsoft, Microsoft 365 yeni derlemeler yayınlarsa Office Özelleştirme Aracı 'nı güncelleştirir. Bu tümleştirme, Microsoft 365 yeni yönetilebilirlik ayarlarından yararlanarak kullanılabilir duruma gelir. 
 
-Daha fazla bilgi için bkz. [Office 365 uygulamalarını dağıtma](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Daha fazla bilgi için bkz. [Microsoft 365 uygulamaları dağıtma](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 
 ### <a name="support-for-new-windows-app-package-formats"></a>Yeni Windows uygulama paketi biçimleri için destek

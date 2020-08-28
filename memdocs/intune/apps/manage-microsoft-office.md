@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a33555043a742f923e5cf181d0e79991e380a05d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 06d53789bb80475528bd413d14015e30d09fca64
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913231"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996665"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>İOS ve Android için Office kullanarak işbirliği deneyimlerini Microsoft Intune ile yönetin
 
@@ -32,7 +32,7 @@ ms.locfileid: "88913231"
 - Görüntüyü düzenlenebilir Word ve Excel belgelerine dönüştürme, PDF 'Leri tarama ve içeriği daha kolay okunabilir hale getirmek için otomatik dijital geliştirmeler ile beyaz tahtaların yakalanması gibi yetenekler sayesinde, Office Lens teknolojisini tümleştirme.
 - Genellikle bir telefonda çalışırken karşılaştığı yaygın görevler için yeni işlevsellik ekleme; hızlı not oluşturma, PDF imzalama, QR kodlarını tarama ve cihazlar arasında dosya aktarma gibi şeyler.
 
-Office 365 verileri için zengin ve en geniş koruma özellikleri, koşullu erişim gibi Microsoft Intune ve Azure Active Directory Premium özellikleri de içeren Enterprise Mobility + Security Suite 'e abone olduğunuzda kullanılabilir. En azından, mobil cihazlardan iOS ve Android için Office bağlantısına izin veren bir koşullu erişim ilkesi ve işbirliği deneyiminin korunmasını sağlayan bir Intune uygulama koruma ilkesi dağıtmanız gerekir.
+Microsoft 365 verilerine yönelik zengin ve en geniş koruma özellikleri, koşullu erişim gibi Microsoft Intune ve Azure Active Directory Premium özellikleri içeren Enterprise Mobility + Security Suite 'e abone olduğunuzda kullanılabilir. En azından, mobil cihazlardan iOS ve Android için Office bağlantısına izin veren bir koşullu erişim ilkesi ve işbirliği deneyiminin korunmasını sağlayan bir Intune uygulama koruma ilkesi dağıtmanız gerekir.
 
 ## <a name="apply-conditional-access"></a>Koşullu erişim Uygula
 Kuruluşlar, kullanıcıların yalnızca iOS ve Android için Office kullanarak iş veya okul içeriğine erişebildiğinden emin olmak için Azure AD koşullu erişim ilkelerini kullanabilir. Bunu yapmak için tüm olası kullanıcıları hedefleyen bir koşullu erişim ilkesine ihtiyacınız olacaktır. Bu ilkeyi oluşturma hakkındaki ayrıntılar, [bulut uygulaması Için koşullu erişimle uygulama koruma Ilkesi iste](/azure/active-directory/conditional-access/app-protection-based-conditional-access)' de bulunabilir.

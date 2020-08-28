@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88f8a2ff04f536370f613341170e7fae0a808ff6
-ms.sourcegitcommit: 19f5838eb3eb8724d22382f36f9564ac9a978b97
+ms.openlocfilehash: 265b92229d687c7dafb2c6de196990c29ffc0cb8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87365534"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996104"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Intune ile Mobile Threat Defense (MTD) cihaz uyumluluk ilkesi oluşturma
 
@@ -68,7 +68,7 @@ MTD ile cihaz uyumluluk ilkesinin önkoşulları:
 7. **Gözden geçir + oluştur** sayfasında, Işiniz bittiğinde **Oluştur**' u seçin. Oluşturduğunuz profilin ilke türünü seçtiğinizde yeni profil listede görüntülenir.
 
 > [!IMPORTANT]
-> Office 365 veya diğer hizmetler için koşullu erişim ilkeleri oluşturursanız, cihaz uyumluluk değerlendirmesi değerlendirilir ve uyumlu olmayan cihazların, tehdit cihazda çözümlenene kadar kurumsal kaynaklara erişmesi engellenir.
+> Microsoft 365 veya diğer hizmetler için koşullu erişim ilkeleri oluşturursanız, cihaz uyumluluk değerlendirmesi değerlendirilir ve uyumlu olmayan cihazların, tehdit cihazda çözümlenene kadar kurumsal kaynaklara erişmesi engellenir.
 
 ## <a name="to-assign-an-mtd-device-compliance-policy"></a>MTD cihaz uyumluluk ilkesini atamak için
 

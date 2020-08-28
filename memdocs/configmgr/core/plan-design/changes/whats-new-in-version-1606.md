@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 2fa46770adfbf3e688bbdc561d8193967f3913cd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3817551c75557a275c98e8c62faef46185438a25
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698597"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993616"
 ---
 # <a name="what39s-new-in-version-1606-of-configuration-manager"></a>Sürüm 1606 ' deki yenilikler&#39;Configuration Manager
 
@@ -47,7 +47,7 @@ Configuration Manager konsolundaki güncelleştirmeler ve bakım düğümündeki
 
     Bir sitenin güncelleştirme yükleme durumunu görüntülediğinizde, konsol artık aşağıdaki eylemler için ayrı Ayrıntılar görüntüler:
     - **İndir** (Bu yalnızca hizmet bağlantı noktası site sistemi rolünün yüklü olduğu en üst katman sitesi için geçerlidir.)
-    - **Çoğaltma**
+    - **Yinelemesi**
     - **Önkoşul Denetimi**
     - **Yükleme**
 
@@ -126,10 +126,10 @@ Bir uygulama veya paketin özelliklerinde, sizi bu nesnenin durumuna götüren b
 
 ## <a name="software-updates"></a>Yazılım güncelleştirmeleri
 
-### <a name="client-setting-to-manage-the-office-365-client-agent"></a>Office 365 istemci Aracısı 'nı yönetmek için istemci ayarı
-Artık Office 365 istemci aracısını yönetmek için bir Configuration Manager istemci ayarı kullanabilirsiniz. Office 365 güncelleştirmelerini ayarlayıp dağıttıktan sonra, Configuration Manager istemci Aracısı Office 365 istemci aracısında çalışarak bir dağıtım noktasından Office 365 güncelleştirmelerini indirip yükler.
+### <a name="client-setting-to-manage-the-microsoft-365-client-agent"></a>Microsoft 365 istemci aracısını yönetmek için istemci ayarı
+Artık Microsoft 365 istemci aracısını yönetmek için bir Configuration Manager istemci ayarı kullanabilirsiniz. Microsoft 365 güncelleştirmelerini ayarlayıp dağıttıktan sonra, Configuration Manager istemci Aracısı bir dağıtım noktasından Microsoft 365 güncelleştirmeleri indirmek ve yüklemek için Microsoft 365 istemci aracısında çalışır.
 
-Ayrıntılar için bkz. [Configuration Manager Ile Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Ayrıntılar için bkz. [Configuration Manager ile Microsoft 365 Apps güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="manually-switch-clients-to-a-new-software-update-point"></a>İstemcileri el ile yeni bir yazılım güncelleştirme noktasına değiştirme
 Artık, etkin yazılım güncelleştirme noktasıyla ilgili sorunlar olduğunda Configuration Manager istemcilerinin yeni bir yazılım güncelleştirme noktasına geçiş yapmanızı sağlayan bir seçeneği etkinleştirebilirsiniz. Etkinleştirildiğinde, istemciler bir sonraki taramada başka bir yazılım güncelleştirme noktası arar.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09aa4bf48b459b4df04c7c7b5706902010a8fde2
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 7dc7fb7b01add52b75fcc4a4a42f57951decf484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88911293"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993138"
 ---
 # <a name="configure-exchange-on-premises-access-for-intune"></a>Intune için Exchange şirket içi erişimini yapılandırma
 
@@ -59,7 +59,7 @@ Koşullu erişimi yapılandırmadan önce, aşağıdaki yapılandırmaların mev
   - Intune’a **kayıtlı** veya etki alanına katılmış bir bilgisayar olmalıdır.
   - **Azure Active Directory’de kayıtlı olmalıdır**. Buna ek olarak, istemci Exchange ActiveSync kimliği Azure Active Directory’de kayıtlı olmalıdır.
 
-- Azure AD Cihaz Kayıt Hizmeti (DRS), Intune ve Office 365 müşterileri için otomatik olarak etkinleştirilir. ADFS cihaz kayıt hizmeti 'ni zaten dağıtan müşteriler, kayıtlı cihazları şirket içi Active Directory göremez. **Bu, Windows bilgisayarları ve cihazları için geçerlidir**.
+- Azure AD cihaz kayıt hizmeti (DRS), Intune ve Microsoft 365 müşterileri için otomatik olarak etkinleştirilir. ADFS cihaz kayıt hizmeti 'ni zaten dağıtan müşteriler, kayıtlı cihazları şirket içi Active Directory göremez. **Bu, Windows bilgisayarları ve cihazları için geçerlidir**.
 
 - Söz konusu cihaza dağıtılan cihaz uyumluluk ilkeleriyle **uyumluluk**.
 

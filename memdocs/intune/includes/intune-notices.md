@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7027eac119ef36adfdb9a0057a74d276696620b3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c201136acd842fa0ba8ca3f38e40483cea5cea81
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820078"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996239"
 ---
 Bu bildirimler, gelecekteki Intune değişiklik ve özelliklerine hazırlanmanıza yardımcı olabilecek önemli bilgiler sağlar.
 
@@ -27,7 +27,7 @@ Windows 10 Mobile için Microsoft temel desteği Aralık 2019 ' de sona erdi. De
 
 Eski PC yönetimi, 15 Ekim 2020 ' de destek altına geçiyor. Cihazları Windows 10 ' a yükseltin ve Intune tarafından yönetilmek üzere bunları mobil cihaz yönetimi (MDM) cihazları olarak yeniden kaydedin.
 
-[Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2107122)
+[Daha fazla bilgi](https://go.microsoft.com/fwlink/?linkid=2107122)
 
 ### <a name="move-to-the-microsoft-endpoint-manager-admin-center-for-all-your-intune-management"></a>Tüm Intune yöneti, Microsoft Endpoint Manager yönetim merkezine gidin
 MC208118 son Mart sürümünde, Microsoft Endpoint Manager için yeni ve basit bir URL sunuyoruz – Intune yönetimi: [https://endpoint.microsoft.com](https://endpoint.microsoft.com) . Microsoft Uç Nokta Yöneticisi, Microsoft Intune ve Configuration Manager içeren Birleşik bir platformdur. **1 ağustos 2020**' den itibaren, ' de Intune yönetimini kaldıracağız [https://portal.azure.com](https://portal.azure.com) ve bunun yerine [https://endpoint.microsoft.com](https://endpoint.microsoft.com) tüm uç nokta yönetiminiz için kullanmanızı öneririz. 
@@ -76,15 +76,6 @@ Cihazlar aşağıdakilerden biri olursa etkilenmeyecektir:
 
 ![Android uyumluluk ilkesi sayfasının ekran ucu](../fundamentals/media/notices/android-compliance-settings.png)
 
-###### <a name="additional-impacts-based-on-android-os-version"></a>Android işletim sistemi sürümüne dayalı ek etkiler
-
-**Android 10**: Android 10 ve üzeri çalıştıran tüm cihaz yönetici tarafından yönetilen cihazlar (Samsung dahil) Için, Google Şirket portalı cihaz kimliği bilgilerine erişmek için cihaz yönetici yönetim aracılarıyla sınırlı değildir. Bu kısıtlama, bir cihaz Android 10 veya sonraki bir sürüme güncelleştirildikten sonra aşağıdaki Intune özelliklerini etkiler:
-- VPN için ağ erişim denetimi artık çalışmayacak
-- Cihazları bir ıMEı veya seri numarası ile şirkete ait olarak tanımlamak cihazları şirkete ait olarak otomatik olarak işaretlemez
-- IMEı ve seri numarası artık Intune 'da BT yöneticileri için görünür olmayacaktır
-
-**Android 11**: Cihaz yönetici tarafından yönetilen cihazlarda etkiye neden olup olmadığını değerlendirmek için en son Geliştirici Beta sürümünde Android 11 desteğini test ediyoruz.
-
 #### <a name="user-experience-of-impacted-settings-on-impacted-devices"></a>Etkilenen cihazlarda etkilenen ayarların Kullanıcı deneyimi
 
 Etkilenen yapılandırma ayarları:
@@ -95,6 +86,9 @@ Etkilenen uyumluluk ayarları:
 - Ayarları uygulanmış olan zaten kayıtlı olan cihazlarda, etkilenen uyumluluk ayarları "cihaz ayarlarını güncelleştirme" sayfasında uyumsuzluk nedeniyle yine de görünür, cihazın uyumsuz olacağı ve parola gereksinimleri Ayarlar uygulamasında zorlanacaktır.
 - Yeni kaydedilen cihazlar, yeni atanan ayarlar ve güncelleştirilmiş ayarlar için, etkilenen uyumluluk ayarları "cihaz ayarlarını güncelleştirme" sayfasında uyumsuzluğa neden olmaya devam eder ve cihaz uyumsuz olacaktır, ancak Ayarlar uygulamasında daha sıkı parola gereksinimleri zorlanmaz.
 
+Wi-Fi profilleri için ek kullanıcı deneyimi değişikliği
+- Kullanıcıların, dağıtıldıklarında ek izinleri kabul etmesi ve Wi-Fi yapılandırmalarının açıkça kabul etmesi gerekir. Wi-Fi yapılandırması bilinen Wi-Fi ağları listesinde görünmez, ancak aralığa göre otomatik olarak bağlanır. Mevcut Wi-Fi profillerinin davranışında değişiklik yoktur. Ayrıca Endpoint Manager Yönetim merkezinde yönetici deneyiminde değişiklik yoktur.  
+
 #### <a name="cause-of-impact"></a>Etki nedeni 
 Cihazlar 2020 Ekim ayının başında etkilenecektir. Bu sırada, Şirket Portalı API hedefini, 28 düzeyinden düzey 29 düzeyine ([Google 'ın gerektirdiği gibi](https://www.blog.google/products/android-enterprise/da-migration/)) artıracak Şirket portalı bir uygulama güncelleştirmesi olacaktır. 
 
@@ -102,10 +96,28 @@ Bu noktada, Kullanıcı bu eylemleri tamamladıktan sonra, Samsung tarafından �
 - Android 10 veya sonraki sürümleri için güncelleştirmeler.
 - Şirket Portalı uygulamasını, API düzeyi 29 ' i hedefleyen sürüme güncelleştirir.
 
+#### <a name="additional-impacts-based-on-android-os-version"></a>Android işletim sistemi sürümüne dayalı ek etkiler 
+**Android 10**: Android 10 ve üzeri sürümlerde çalışan tüm cihaz yönetici yönetim aygıtları (Samsung dahil) Için, Google, cihaz tanımlayıcı bilgilerine erişmek için şirket portalı gibi cihaz yönetici yönetim aracılarıyla sınırlı değildir. Bu kısıtlama, bir cihaz Android 10 veya sonraki bir sürüme güncelleştirildikten sonra aşağıdaki Intune özelliklerini etkiler: 
+- VPN için ağ erişim denetimi artık çalışmayacak 
+- Cihazları bir ıMEı veya seri numarası ile şirkete ait olarak tanımlamak cihazları şirkete ait olarak otomatik olarak işaretlemez 
+- IMEı ve seri numarası artık Intune 'da BT yöneticileri için görünür olmayacaktır 
+
+**Android 11**: Cihaz Yöneticisi tarafından yönetilen cihazlardaki etkiyi değerlendirmek için en son Android 11 beta sürümünü sınamaya devam ediyoruz. İşte şunları bulduk: 
+- Android 11 ve sonraki sürümleri çalıştıran Cihaz Yöneticisi cihazlarda (Samsung hariç), Google, Şirket Portalı uygulamasına yönelik Ekim güncelleştirmesinden önce bile, kamerayı engellemeyi zorlamak için Şirket Portalı gibi yönetim aracılarına yönelik özelliği kaldırılmıştır. Cihazlara Android 11 ' e güncelleştirmeden önce uygulanan kamerayı engelleyen ilkeler uygulanmaya devam edecektir.  
+- Android 11 ile, güvenilen kök sertifikalar artık cihaz yöneticisiyle kaydedilmiş cihazlara dağıtılamaz (Samsung cihazlar hariç). Kullanıcıların, güvenilen kök sertifikayı cihaza el ile yüklemesi gerekir. Güvenilir kök sertifika bir cihaza el ile yüklendiğinde, cihaza sertifika sağlamak için SCEP kullanabilirsiniz. Bu senaryoda, hala cihaza güvenilir bir sertifika ilkesi oluşturup dağıtmanız ve bu ilkeyi SCEP sertifika profiline bağlamanız gerekir. 
+    - Güvenilir kök sertifika cihazdayken, SCEP sertifika profili başarıyla yüklenir.  
+    - Güvenilen sertifika bulunamazsa, SCEP sertifika profili başarısız olur. 
+
+
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Bu değişikliğe hazırlanmak için ne yapmam gerek?
 2020 Ekim 'de gerçekleştirilen işlevsellikten kaçınmak için şunları yapmanızı öneririz:
 - **Yeni**kayıtlar: [Android kurumsal](../enrollment/connect-intune-android-enterprise.md) yönetimine yeni cihazlar ekleme (varsa) ve/veya [Uygulama koruma ilkeleri](../apps/app-protection-policies.md). Cihaz Yöneticisi yönetimine yeni cihaz ekleme kullanmaktan kaçının. 
 - **Daha önce kaydedilen cihazlar**: Cihaz yönetici tarafından yönetilen bir cihaz Android 10 veya üzerini çalıştırıyorsa ya da Android 10 veya sonraki bir sürüme (özellikle bir Samsung cihaz değilse) güncelleştirebilir, Cihaz Yöneticisi yönetiminin dışına [Android kurumsal](../enrollment/connect-intune-android-enterprise.md) yönetim ve/veya [Uygulama koruma ilkelerine](../apps/app-protection-policies.md)taşıyın. [Android cihazlarını cihaz yöneticisinden iş profili yönetimine taşımak](../enrollment/android-move-device-admin-work-profile.md)için kolaylaştırılmış akıştan yararlanabilirsiniz.
+- **Parola karmaşıklığını yapılandırma**: Android 10 ve üzeri çalıştıran etkilenen cihazlarda, parola karmaşıklığı adlı gelecekteki bir ayar, parola kısıtlamalarını ve uyumluluğu zorlamaya devam etmenizi sağlar. Parola karmaşıklığı, parola türü, uzunluğu ve kalitedeki bir parola gücünden oluşan bir ölçüdür.
+
+#### <a name="what-if-i-have-non-samsung-devices-that-cannot-move-to-android-enterprise"></a>Android kurumsal 'e taşınamayan Samsung olmayan bir cihazım varsa ne yapmalıyım? 
+Bazı cihazlar cihaz yöneticisinden Android kurumsal yönetimine taşınamaz. Örneğin, [Google bazı pazarlarda Android kurumsal kullanıma sunuldu](https://support.google.com/work/android/answer/6270910?hl=en). Cihaz yöneticisiyle, Samsung olmayan cihazları yönetmek için Intune 'u kullanmaya devam edebilirsiniz, ancak bu gönderiyle bahsedilen işlevlerde yapılan değişiklikler uygulanır. Android Enterprise kullanılamadığında cihazları yönetme hakkında yönergeler için bkz. [Google Mobile Services olmayan ortamlarda Intune 'u kullanma](../apps/manage-without-gms.md). 
+
 
 #### <a name="additional-information"></a>Ek bilgiler
 - [Android cihazlarını cihaz yöneticisinden iş profili yönetimine taşıma](../enrollment/android-move-device-admin-work-profile.md)

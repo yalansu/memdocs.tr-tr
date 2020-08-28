@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd98355424ed949f4e3423aa6c3e609a7ada8337
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ecb0e1864fd47cf7aad65fa88de765cb47fce583
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910596"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996733"
 ---
 # <a name="protecting-application-extensions"></a>Uygulama uzantılarını koruma
 
@@ -39,7 +39,7 @@ Son kullanıcılarınızın Outlook eklentilerine erişmesini ve bunları yükle
 - Kullanıcıların dışarıdan eklenti yüklemesini engellemek için, onlardan Özel Uygulamalarım rolünü kaldırın.
 - Kullanıcıların tüm eklentileri yüklemesini engellemek için, onlardan hem Özel Uygulamalarım rolünü hem de Marketim rolünü kaldırın.
 
-Bu yönergeler Office 365, Exchange 2016, Exchange 2013’te Web üzerinde Outlook genelinde, Windows, Mac ve mobil için geçerlidir.
+Bu yönergeler Microsoft 365, Exchange 2016, Web 'de Outlook üzerinde Exchange 2013, Windows, Mac ve mobil için geçerlidir.
 
 - [Outlook için eklentiler](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/add-ins-for-outlook) hakkında daha fazla bilgi edinin.
 - [Outlook uygulaması için eklentileri yükleyebilecek ve yönetebilecek kullanıcıları ve yöneticileri belirleme](/exchange/clients-and-mobile-in-exchange-online/add-ins-for-outlook/specify-who-can-install-and-manage-add-ins) hakkında daha fazla bilgi edinin.
@@ -51,7 +51,7 @@ LinkedIn hesap bağlantıları, kullanıcıların belirli Microsoft uygulamalar�
 > [!NOTE]
 > LinkedIn tümleştirmesi şu anda Birleşik Devletler Kamu müşterileri ve Avustralya, Kanada, Çin, Fransa, Almanya, Hindistan, Güney Kore, Birleşik Krallık, Japonya ve Güney Afrika’da barındırılan Exchange Online posta kutularına sahip olan kuruluşlar için kullanılamamaktadır.
 
-Intune SDK’sı ve Intune uygulama koruma ilkeleri, LinkedIn hesap bağlantılarını yönetme desteği içermez. Ancak bunları yönetmenin başka yolları vardır. Tüm kuruluşunuz için LinkedIn hesabı bağlantılarını devre dışı bırakabilir veya kuruluşunuzda seçili kullanıcı grupları için LinkedIn bağlantılarını etkinleştirebilirsiniz. Bu ayar tüm platformlarda (web, mobil ve masaüstü) tüm Office 365 uygulamalarındaki LinkedIn bağlantılarını etkiler. Seçenekleriniz şunlardır:
+Intune SDK’sı ve Intune uygulama koruma ilkeleri, LinkedIn hesap bağlantılarını yönetme desteği içermez. Ancak bunları yönetmenin başka yolları vardır. Tüm kuruluşunuz için LinkedIn hesabı bağlantılarını devre dışı bırakabilir veya kuruluşunuzda seçili kullanıcı grupları için LinkedIn bağlantılarını etkinleştirebilirsiniz. Bu ayarlar, tüm platformlarda (Web, mobil ve Masaüstü) Microsoft 365 uygulamalar arasında LinkedIn bağlantılarını etkiler. Seçenekleriniz şunlardır:
 
 - Azure portalında kiracınız için LinkedIn hesap bağlantılarını etkinleştirin veya devre dışı bırakın. 
 - Grup İlkesini kullanarak kuruluşunuzun Office 2016 uygulamalarında LinkedIn hesabı bağlantılarını etkinleştirin veya devre dışı bırakın.
@@ -69,12 +69,13 @@ Bir kullanıcı, Office eklentilerinde olduğu gibi hesaplar arasında veri payl
 |[Kişiler](/graph/permissions-reference#people-permissions) için okuma izinleri     |Uygulamanın oturum açan kullanıcıyla ilgili kişilerin puanlanmış bir listesini okumasına izin verir. Liste; yerel kişileri, sosyal ağ veya kuruluşunuzun dizinindeki kişileri ve son iletişim kurulan kişileri (e-posta ve Skype gibi) içerebilir.         |
 |[Takvimler](/graph/permissions-reference#calendars-permissions) için okuma izinleri     |Uygulamanın kullanıcı takvimlerindeki etkinlikleri okumasına izin verir. Oturum açan kullanıcının takvimindeki toplantıları, zamanlarını, yerlerini ve katılımcıları içerir.         |
 |[Kullanıcı Profili](/graph/permissions-reference#user-permissions) için okuma izinleri     |Kullanıcıların uygulamada oturum açmasını sağlar ve uygulamanın oturum açan kullanıcıların profilini okumasına izin verir. Ayrıca uygulamanın oturum açan kullanıcılar için temel şirket bilgilerini okumasına izin verir.         |
-|Abonelikler     |Bu kapsam mevcut değil ve henüz kullanılmıyor. Kullanıcının kuruluşu tarafından sağlanan Office 365 gibi Microsoft uygulamaları ve hizmetleri aboneliklerini içerir.         |
+|Abonelikler     |Bu kapsam mevcut değil ve henüz kullanılmıyor. Bu, kullanıcının kuruluşu tarafından Microsoft 365 gibi Microsoft uygulamalarına ve hizmetlerine sunulan abonelikleri içerir.         |
 |Insights     |Bu kapsam mevcut değil ve henüz kullanılmıyor. Oturum açan kullanıcı hesabıyla ilişkili Microsoft hizmetleri kullanımını temel alan ilgi alanlarını içerir.         |
 
 ### <a name="learn-more"></a>Daha fazla bilgi edinin
 
 - [Microsoft uygulamalarınızdaki LinkedIn bilgileri ve özellikleri](https://go.microsoft.com/fwlink/?linkid=850740) hakkında bilgi edinin.
-- [Office 365 Yol haritası sayfasında](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc) LinkedIn hesap bağlantıları yayını hakkında bilgi edinin. 
+- [Microsoft 365 yol haritası sayfasında](https://products.office.com/en-US/business/office-365-roadmap?filters=%26freeformsearch=linkedin#abc)LinkedIn hesap bağlantıları sürümü hakkında bilgi edinin. 
 - [LinkedIn hesap bağlantılarını yapılandırma](/azure/active-directory/linkedin-integration) hakkında bilgi edinin.
 - Kullanıcıların LinkedIn ve Microsoft iş veya okul hesapları arasında paylaşılan veriler hakkında daha fazla bilgi için, [iş veya okulunuzdaki Microsoft uygulamalarında LinkedIn](https://www.linkedin.com/help/linkedin/answer/84077)'e bakın.
+

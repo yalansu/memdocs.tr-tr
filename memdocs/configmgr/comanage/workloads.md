@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.assetid: 4c90befe-9c4e-4c27-a947-625887e15052
-ms.openlocfilehash: e44576401d601c8c510aaf50b28e5924f5c4d6db
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0425b937062acd96b8df66df38ec53a04e91b4de
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694874"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995237"
 ---
 # <a name="co-management-workloads"></a>Ortak yönetim iş yükleri
 
@@ -110,9 +110,9 @@ Bu iş yükü, ortak yönetilen cihazlarda Microsoft 365 uygulamalarını yönet
 
 - Office güncelleştirmelerinin, cihazlar yeniden başlatılana kadar istemcinin gösterilmesi 24 saat sürebilir  
 
-- Yeni bir genel koşul mevcuttur, **cihazda Intune tarafından yönetilen Office 365 uygulamaları vardır**. Bu koşul, varsayılan olarak yeni Office 365 uygulamalarına bir gereksinim olarak eklenir. Bu iş yükünü geçiş yaparken, ortak yönetilen istemciler uygulamadaki gereksinimi karşılamıyor. Ardından, Configuration Manager aracılığıyla dağıtılan Office 365 ' i yüklemez.  
+- Yeni bir genel koşul mevcuttur, **cihazda Intune tarafından yönetilen Office 365 uygulamaları vardır**. Bu koşul, yeni Microsoft 365 uygulamalarına yönelik bir gereksinim olarak varsayılan olarak eklenir. Bu iş yükünü geçiş yaparken, ortak yönetilen istemciler uygulamadaki gereksinimi karşılamıyor. Ardından, Configuration Manager aracılığıyla dağıtılan Microsoft 365 yüklemez.  
 
-Intune özelliği hakkında daha fazla bilgi için bkz. [Microsoft Intune Ile Office 365 uygulamalarını Windows 10 cihazlarına atama](/intune/apps-add-office365).
+Intune özelliği hakkında daha fazla bilgi için bkz. [Microsoft Intune Ile Windows 10 cihazlarına Microsoft 365 uygulamaları atama](https://docs.microsoft.com/intune/apps-add-office365).
 
 ## <a name="client-apps"></a>İstemci uygulamaları
 

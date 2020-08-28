@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 0ddad23dfde87fa402c01d4eaa21a1b76db27d93
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692936"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995458"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager için Technical Preview 1705 ' deki yetenekler
 
@@ -57,7 +57,7 @@ Konsol içi bir güncelleştirme henüz yüklenmemişse ve hatalı durumdaysa bu
 
 Aracı çalıştırdığınızda, belirttiğiniz güncelleştirmede karşı çalışır. Araç, varsayılan olarak, başarıyla yüklenen veya indirilen güncelleştirmeleri silmez.  
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 Aracı çalıştırmak için kullandığınız hesap aşağıdaki izinleri gerektirir:
 -   Merkezi yönetim sitesinin ve hiyerarşinizdeki her birincil sitenin site veritabanı için **okuma** ve **yazma** izinleri. Bu izinleri ayarlamak için, Kullanıcı hesabını **db_datawriter** bir üyesi olarak ekleyebilir ve her bir sitenin Configuration Manager veritabanına **db_datareader** [sabit veritabanı rolleri](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles) ekleyebilirsiniz. Araç ikincil sitelerle etkileşime girmiyor.
 -   Hiyerarşinizin en üst düzey sitesinde **yerel yönetici** .
@@ -136,20 +136,20 @@ Siteyi durdurmak için, site sunucusundaki önemli hizmetleri durdurmak için [H
 Siteyi durdurma, site sunucusundaki SMS_Executive hizmeti tarafından izlenen Site Bileşen Yöneticisi hizmeti 'nin (Sitecomp) durdurulmasına eşdeğerdir.
 
 
-## <a name="improved-user-notifications-for-office-365-updates"></a>Office 365 güncelleştirmeleri için geliştirilmiş Kullanıcı bildirimleri
-Bir istemci Office 365 güncelleştirmesi yüklediğinde Office Tıkla-Çalıştır Kullanıcı deneyiminden yararlanmak için geliştirmeler yapılmıştır. Bu, açılır ve uygulama içi bildirimleri ve geri sayım deneyimini içerir. Bu sürümden önce, bir istemciye Office 365 güncelleştirmesi gönderildiğinde, açık olan Office uygulamaları uyarı vermeden otomatik olarak kapatılır. Bu güncelleştirmeden sonra Office uygulamaları artık beklenmedik şekilde kapanmayacaktır.
+## <a name="improved-user-notifications-for-microsoft-365-updates"></a>Microsoft 365 güncelleştirmeleri için geliştirilmiş Kullanıcı bildirimleri
+İstemci bir Microsoft 365 güncelleştirme yüklediğinde, Office Tıkla-Çalıştır Kullanıcı deneyiminden yararlanmak için geliştirmeler yapılmıştır. Bu, açılır ve uygulama içi bildirimleri ve geri sayım deneyimini içerir. Bu sürümden önce, bir istemciye Microsoft 365 güncelleştirme gönderildiğinde, açık olan Office uygulamaları uyarı vermeden otomatik olarak kapatılır. Bu güncelleştirmeden sonra Office uygulamaları artık beklenmedik şekilde kapanmayacaktır.
 
-### <a name="prerequisites"></a>Ön koşullar
-Bu güncelleştirme, Office 365 ProPlus istemcileri için geçerlidir.
+### <a name="prerequisites"></a>Önkoşullar
+Bu güncelleştirme, kurumsal istemciler için Microsoft 365 uygulamalar için geçerlidir.
 
 ### <a name="known-issues"></a>Bilinen sorunlar
-Bir istemci Office 365 güncelleştirme atamasını ilk kez değerlendirirken ve güncelleştirmenin geçmişte zamanlanan, hemen zamanlanan veya 30 dakika içinde zamanlanan bir son tarih olduğunda, Office 365 kullanıcı deneyimi tutarsız olabilir. Örneğin, istemci güncelleştirme için 30 dakikalık bir geri sayım iletişim kutusu alabilir, ancak gerçek uygulama geri sayım sonundan önce başlayabilir. Bu davranışı önlemek için aşağıdakileri göz önünde bulundurun:
-- Office 365 güncelleştirmesini, geçerli zamandan önce 60 dakikadan daha fazla süreyle zamanlanan bir son tarihle dağıtın.
+Bir istemci bir Microsoft 365 güncelleştirme atamasını ilk kez değerlendirirken ve güncelleştirmenin geçmişte zamanlanan, hemen zamanlanan veya 30 dakika içinde zamanlanan bir son tarih olduğunda, Microsoft 365 kullanıcı deneyimi tutarsız olabilir. Örneğin, istemci güncelleştirme için 30 dakikalık bir geri sayım iletişim kutusu alabilir, ancak gerçek uygulama geri sayım sonundan önce başlayabilir. Bu davranışı önlemek için aşağıdakileri göz önünde bulundurun:
+- Microsoft 365 güncelleştirme 'yi geçerli zamandan 60 dakikadan fazla süre boyunca zamanlanan bir son tarihle dağıtın.
 - Koleksiyonda iş dışı saatlerde bir bakım penceresi yapılandırın veya dağıtımda bir zorlama yetkisiz kullanım süresi yapılandırın.
 
 ### <a name="try-it-out"></a>Deneyin!
 Aşağıdaki görevleri tamamlamayı deneyin ve nasıl çalıştığını bize bildirmek için şeridin **giriş** sekmesinden bize **geri bildirim** gönderin:
-- Son tarihi geçerli zamandan önce en az 60 dakika sonra ayarlanmış bir istemciye Office 365 güncelleştirmesi olan bir istemciye dağıtın. İstemcideki yeni davranışı gözlemleyin.
+- Son tarihi geçerli zamandan en az 60 dakika önce ayarlanan bir zamana göre istemciye dağıtın Microsoft 365 güncelleştirme. İstemcideki yeni davranışı gözlemleyin.
 
 
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Windows Defender Application Guard ilkelerini yapılandırma ve dağıtma

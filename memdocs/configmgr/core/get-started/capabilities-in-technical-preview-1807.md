@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ead53c71e336001ac820a437fa67758c6375cbd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bc848cd1f6365b5a94c915a00517ca0a4abb8e4a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694381"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995322"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager Technical Preview sürüm 1807 ' deki yetenekler 
 
@@ -42,14 +42,14 @@ Steps to workaround, if any.
 
 ## <a name="known-issues"></a>Bilinen sorunlar 
 
-### <a name="issues-with-office-365-software-updates"></a><a name="ki_o365"></a> Office 365 yazılım güncelleştirmeleriyle ilgili sorunlar
+### <a name="issues-with-microsoft-365-software-updates"></a><a name="ki_o365"></a> Microsoft 365 yazılım güncelleştirmeleriyle ilgili sorunlar
 <!--521365-->
-Technical Preview şube sürümlerini 1806 ve 1806,2 kullanarak Office 365 güncelleştirmelerini yönetiyorsanız, istemciler üzerinde yüklenemeyebilir. 
+1806 ve 1806,2 Technical Preview şube sürümlerini kullanarak Microsoft 365 güncelleştirmelerini yönetiyorsanız istemciler üzerinde yüklenemeyebilir. 
 
 #### <a name="workaround"></a>Geçici çözüm
-- Office 365 için mevcut dağıtım paketlerini ve yazılım güncelleştirme gruplarını silin.  
+- Microsoft 365 için mevcut dağıtım paketlerini ve yazılım güncelleştirme gruplarını silin.  
 
-- 31 Temmuz 2018 ' den başlayarak Office 365 yazılım güncelleştirmelerini eşitleyin ve yalnızca en son güncelleştirmeleri dağıtın.  
+- 31 Temmuz 2018 ' den başlayarak Microsoft 365 yazılım güncelleştirmelerini eşitleyin ve yalnızca en son güncelleştirmeleri dağıtın.  
 
 
 
@@ -78,7 +78,7 @@ Kullanılabilir bir öğe hakkında daha fazla ayrıntı görmek için hub 'da t
 - **Geri bildirim**: Configuration Manager [UserVoice sitesini](https://configurationmanager.uservoice.com/) görüntüler  
 
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 
 - İstemci IŞLETIM sisteminde Configuration Manager konsolunu kullanın.  
 
@@ -132,7 +132,7 @@ Sitenizi ortak yönetim için zaten ayarladıysanız:
 
 1. Configuration Manager konsolunda, **Yönetim** çalışma alanına gidin, **Cloud Services**' i genişletin ve **ortak yönetim** düğümünü seçin. Şeritteki **Özellikler** ' e tıklayın.  
 
-2. **Raporlama** sekmesine geçin. **oturum aç** ' a tıklayın ve kimlik doğrulaması yapın. Ardından, Intune veri ambarı için okuma izinlerini etkinleştirmek üzere **Güncelleştir** ' e tıklayın.  
+2. **Raporlama** sekmesine geçin. **Oturum aç** ve kimlik doğrula ' ya tıklayın. Ardından, Intune veri ambarı için okuma izinlerini etkinleştirmek üzere **Güncelleştir** ' e tıklayın.  
 
 3. Site Intune ile eşitlendikten sonra **izleme** çalışma alanına gidin ve **istemci durumu** düğümünü seçin. **Genel Istemci durumu** bölümünde, **Intune kullanarak etkin olmayan istemciler**için satıra bakın.  
 
@@ -152,7 +152,7 @@ Görevleri tamamlamayı deneyin. Daha sonra bu özelliği kullanarak düşüncel
 
 1. Configuration Manager konsolunda, bir Windows Installer veya betik yükleyici dağıtım türünün özelliklerini açın.  
 
-2. **Programlar** sekmesine geçin. **programı Onar** komutunu belirtin.  
+2. **Programlar** sekmesine geçin. **Program Onar** komutunu belirtin.  
 
 3. Uygulamayı dağıtın. Dağıtımın **dağıtım ayarları** sekmesinde, **son kullanıcıların bu uygulamayı onarmayı denemesine izin verme**seçeneğini etkinleştirin.  
 
@@ -169,7 +169,7 @@ Yazılım Merkezi 'nde kullanıcıların uygulamayı **onarması** için yeni d�
 Uygulama onay istekleri için e-posta bildirimlerini yapılandırın. Bir Kullanıcı bir uygulama istediğinde, bir e-posta alırsınız. Configuration Manager konsolu gerekmeden isteği onaylamak veya reddetmek için e-postadaki bağlantılar ' a tıklayın.
 
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 
 #### <a name="to-send-email-notifications"></a>E-posta bildirimleri göndermek için
 - [İsteğe bağlı özelliği](../servers/manage/install-in-console-updates.md#bkmk_options) **cihaz başına Kullanıcı için uygulama isteklerini Onayla**' yı etkinleştirin.  

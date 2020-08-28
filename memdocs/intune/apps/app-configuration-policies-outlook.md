@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90bbc3bfbe4f7e6120359f86ad9cb1c55b2ed500
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ac2133455d4440e8048e7b9aba8f9f9b13d98a53
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907795"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996546"
 ---
 # <a name="manage-messaging-collaboration-access-by-using-outlook-for-ios-and-android-with-microsoft-intune"></a>İOS ve Android için Outlook 'U kullanarak mesajlaşma işbirliği erişimini yönetme Microsoft Intune
 
 İOS ve Android için Outlook uygulaması, kuruluşunuzdaki kullanıcıların e-posta, takvim, kişiler ve diğer dosyaları bir araya getirerek mobil cihazlarından daha fazlasını gerçekleştirmelerine olanak tanımak üzere tasarlanmıştır.
 
-Office 365 verileri için zengin ve en geniş koruma özellikleri, koşullu erişim gibi Microsoft Intune ve Azure Active Directory Premium özellikleri de içeren Enterprise Mobility + Security Suite 'e abone olduğunuzda kullanılabilir. En azından, mobil cihazlardan iOS ve Android için Outlook 'a bağlantı sağlayan bir koşullu erişim ilkesi ve işbirliği deneyiminin korunmasını sağlayan bir Intune uygulama koruma ilkesi dağıtmanız gerekir.
+Microsoft 365 verilerine yönelik zengin ve en geniş koruma özellikleri, koşullu erişim gibi Microsoft Intune ve Azure Active Directory Premium özellikleri içeren Enterprise Mobility + Security Suite 'e abone olduğunuzda kullanılabilir. En azından, mobil cihazlardan iOS ve Android için Outlook 'a bağlantı sağlayan bir koşullu erişim ilkesi ve işbirliği deneyiminin korunmasını sağlayan bir Intune uygulama koruma ilkesi dağıtmanız gerekir.
 
 ## <a name="apply-conditional-access"></a>Koşullu erişim Uygula
 Kuruluşlar, kullanıcıların yalnızca iOS ve Android için Outlook 'U kullanarak iş veya okul içeriğine erişebildiğinden emin olmak için Azure AD koşullu erişim ilkelerini kullanabilir. Bunu yapmak için tüm olası kullanıcıları hedefleyen bir koşullu erişim ilkesine ihtiyacınız olacaktır. Bu ilkeyi oluşturma hakkındaki ayrıntılar, [bulut uygulaması Için koşullu erişimle uygulama koruma Ilkesi iste](/azure/active-directory/conditional-access/app-protection-based-conditional-access)' de bulunabilir.
@@ -41,7 +41,7 @@ Kuruluşlar, kullanıcıların yalnızca iOS ve Android için Outlook 'U kullana
 
    Yukarıdaki ilkeler, erişim izni vermeden önce iOS ve Android için Outlook 'Ta ilişkili hesaba bir Intune Uygulama Koruması Ilkesinin uygulanmasını sağlayan [uygulama koruması gerektir Ilkesi gerektirir](/azure/active-directory/active-directory-conditional-access-technical-reference). Kullanıcı bir Intune Uygulama Koruması Ilkesine atanmamışsa, Intune için lisanslı değildir veya uygulama Intune Uygulama Koruması Ilkesine dahil edilmemişse, ilke kullanıcının bir erişim belirteci almasını ve mesajlaşma verilerine erişim sağlamasını önler.
 
-3. Son olarak, iOS ve Android cihazlarda diğer Exchange protokolleri için eski kimlik doğrulamasını engellemek üzere [koşullu erişim Ile Azure AD 'de eski kimlik doğrulamasını engelleme](/azure/active-directory/conditional-access/block-legacy-authentication) konusuna uyun; Bu ilke yalnızca Office 365 Exchange Online Cloud App ve iOS ve Android cihaz platformlarını hedeflemelidir. Bu, Exchange Web Hizmetleri, ıMAP4 veya POP3 protokollerini temel kimlik doğrulaması ile kullanan mobil uygulamaların Exchange Online 'a bağlanamamasını sağlar.
+3. Son olarak, iOS ve Android cihazlarda diğer Exchange protokolleri için eski kimlik doğrulamasını engellemek üzere [koşullu erişim Ile Azure AD 'de eski kimlik doğrulamasını engelleme](/azure/active-directory/conditional-access/block-legacy-authentication) konusuna uyun; Bu ilke yalnızca Microsoft Exchange Online Cloud App ve iOS ve Android cihaz platformlarını hedeflemelidir. Bu, Exchange Web Hizmetleri, ıMAP4 veya POP3 protokollerini temel kimlik doğrulaması ile kullanan mobil uygulamaların Exchange Online 'a bağlanamamasını sağlar.
 
 ## <a name="create-intune-app-protection-policies"></a>Intune uygulama koruma ilkeleri oluşturma
 
@@ -55,7 +55,7 @@ UYGULAMA veri koruma çerçevesi, her düzey bir önceki düzeyin üzerinde olu�
 
 Her yapılandırma düzeyi ve korunması gereken en düşük uygulamalar için belirli önerilere bakmak için, [Uygulama koruma ilkelerini kullanarak Data Protection Framework 'ü](app-protection-framework.md)inceleyin.
 
-Cihazın birleştirilmiş bir uç nokta yönetimi (UEM) çözümüne kaydolmasından bağımsız olarak, [Uygulama koruma ilkeleri oluşturma ve atama](app-protection-policies.md)bölümündeki adımları kullanarak hem iOS hem de Android Uygulamaları Için bir Intune uygulama koruma ilkesi oluşturulması gerekir. En azından bu ilkelerin aşağıdaki koşullara uyması gerekir:
+Cihazın Birleşik bir uç nokta yönetimi (UEM) çözümüne kaydolmasından bağımsız olarak, [Uygulama koruma ilkeleri oluşturma ve atama](app-protection-policies.md)bölümündeki adımları kullanarak hem iOS hem de Android Uygulamaları Için bir Intune uygulama koruma ilkesi oluşturulması gerekir. En azından bu ilkelerin aşağıdaki koşullara uyması gerekir:
 
 1. Bu kişiler, Edge, Outlook, OneDrive, Office veya takımlar gibi tüm mobil uygulamaları Microsoft 365, böylece kullanıcıların herhangi bir Microsoft uygulamasındaki iş veya okul verilerine güvenli bir şekilde erişebilmesini ve bunları işleyebilmesini sağlar.
 

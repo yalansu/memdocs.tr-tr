@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e1f10f291619ecf6ff3d5b997046f035c02bf7e7
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 66fc996fe78f0b8171eec61fba277f9d51b0389f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128670"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994659"
 ---
 # <a name="diagnostic-and-usage-data-for-1806"></a>1806 için tanılama ve kullanım verileri
 
@@ -146,7 +146,7 @@ Configuration Manager sürüm 1806 için, bu düzey aşağıdaki verileri içeri
 
 - Uygulama Kataloğu için farklı marka sayısı
 
-- Pano kullanılarak oluşturulan Office 365 uygulamalarının sayısı
+- Pano kullanılarak oluşturulan Microsoft 365 uygulamalarının sayısı
 
 - Türe göre paket sayısı  
 
@@ -412,7 +412,7 @@ Configuration Manager sürüm 1806 için, bu düzey aşağıdaki verileri içeri
 
 - Etkin Windows 10 bakım planları için kullanılan konfigürasyonlar  
 
-- Dağıtılan Office 365 güncelleştirmeleri sayısı  
+- Dağıtılan Microsoft 365 güncelleştirme sayısı  
 
 - Eşitlenmiş Microsoft Surface sürücü sayısı
 

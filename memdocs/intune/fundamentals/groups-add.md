@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2b344395cec06839ff8c24db21aec62bc210ed0
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: f99ddee5a30b7fb6d604e91711d12ed81b53dd91
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915407"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993945"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Kullanıcıları ve cihazları düzenlemek için grup ekleme
 
@@ -54,7 +54,7 @@ Yeni bir grup oluşturmak için aşağıdaki adımları kullanın.
         >
         > Birincil rolünüz cihaz yönetimi ise, [Microsoft Endpoint Manager yönetim merkezini](https://go.microsoft.com/fwlink/?linkid=2109431)kullanmanızı öneririz.
 
-    - **Office 365**: üyelere paylaşılan bir posta kutusuna, takvime, dosyalara, SharePoint sitesine ve daha fazlasına erişim vererek işbirliği olanakları sağlar. Bu seçenek, kuruluşunuzun dışındaki kişilerin de gruba erişmesini sağlar. Daha fazla bilgi için bkz. [Office 365 grupları hakkında bilgi edinin](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+    - **Microsoft 365**: üyelere paylaşılan bir posta kutusuna, takvime, dosyalara, SharePoint sitesine ve daha fazlasına erişim vererek işbirliği olanakları sağlar. Bu seçenek, kuruluşunuzun dışındaki kişilerin de gruba erişmesini sağlar. Daha fazla bilgi için bkz. [Microsoft 365 grupları hakkında bilgi edinin](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 4. Yeni grup için bir **Grup adı** ve **Grup açıklaması** girin. Özel olun ve kullanıcıların grubun ne olduğunu bilmesi için bilgi ekleyin.
 

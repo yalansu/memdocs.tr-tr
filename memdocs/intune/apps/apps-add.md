@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccbd923ba1110f99c57b499115a41a03ec3317c1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 394ffa75b6f272024d440fad56d68727c27531da
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252818"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996461"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Microsoft Intune’a uygulama ekleme 
 
@@ -56,8 +56,8 @@ Aşağıdaki tablo, belirli uygulama türlerini ve bunları Intune’daki **Uygu
 | iOS/ıpados Mağazası uygulamaları  | Mağaza uygulaması  | **Uygulama türü** olarak **iOS**’u seçin, Intune’da uygulama için arama yapın ve uygulamayı seçin. |
 | Microsoft mağaza uygulamaları  | Mağaza uygulaması  | **Uygulama türü**olarak **Windows** ' u seçin ve uygulamanın Microsoft Mağazası URL 'sini girin. |
 | Yönetilen Google Play uygulamaları | Mağaza uygulaması  | **Uygulama türü** olarak **Yönetilen Google Play**’i seçin, Intune’da uygulama için arama yapın ve uygulamayı seçin. |
-| Windows 10 için Office 365 uygulamaları  | Mağaza uygulaması (Office 365) | **Uygulama türü**olarak **Microsoft 365 uygulamalar** altında **Windows 10** ' u seçin ve ardından yüklemek istediğiniz Office 365 uygulamasını seçin.  |
-| macOS için Office 365 uygulamaları | Mağaza uygulaması (Office 365) | **Uygulama türü**olarak **Microsoft 365 uygulamalar** altında **MacOS** ' u seçin ve ardından Office 365 uygulama paketi ' ni seçin. |
+| Windows 10 için Microsoft 365 uygulamalar  | Mağaza uygulaması (Microsoft 365) | **Uygulama türü**olarak **Microsoft 365 uygulamalar** altında **Windows 10** ' u seçin ve ardından yüklemek istediğiniz Microsoft 365 uygulamayı seçin.  |
+| MacOS için Microsoft 365 uygulamalar | Mağaza uygulaması (Microsoft 365) | **Uygulama türü**olarak **Microsoft 365 uygulamalar** altında **MacOS** ' u seçin ve ardından Microsoft 365 uygulama paketi ' ni seçin. |
 | Windows 10 için Microsoft Edge, sürüm 77 ve üzeri | Mağaza uygulaması | **Uygulama türü**olarak **Microsoft Edge, sürüm 77 ve üzeri** altında **Windows 10** ' u seçin. |
 | MacOS için Microsoft Edge, sürüm 77 ve üzeri | Mağaza uygulaması | **Uygulama türü**olarak **Microsoft Edge, sürüm 77 ve üzeri** altında **MacOS** ' u seçin. |
 | Android iş kolu (LOB) uygulamaları | LOB uygulaması | **Uygulama türü**olarak **iş kolu** uygulaması ' nı seçin, **uygulama paketi dosyasını**seçin ve **. apk**uzantısına sahip bir Android yükleme dosyası girin.  |
@@ -221,8 +221,8 @@ Intune’da tüm platformlar için uygulama eklemeyi öğrenmek için bkz.:
 - [Web uygulamaları (tüm platformlar için)](web-app.md)
 - [Microsoft mağazası uygulamaları](store-apps-windows.md)
 - [Windows LOB uygulaması](lob-apps-windows.md)
-- [Windows 10 için Office 365 uygulamaları](apps-add-office365.md)
-- [macOS için Office 365 uygulamaları](apps-add-office365-macos.md)
+- [Windows 10 için Microsoft 365 uygulamalar](apps-add-office365.md)
+- [MacOS için Microsoft 365 uygulamalar](apps-add-office365-macos.md)
 - [Yönetilen Google Play uygulamaları](apps-add-android-for-work.md)
 - [Windows 10 için Microsoft Edge](apps-windows-edge.md)
 - [macOS için Microsoft Edge](apps-edge-macos.md)

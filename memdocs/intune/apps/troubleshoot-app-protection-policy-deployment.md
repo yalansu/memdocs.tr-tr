@@ -15,12 +15,12 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto:
 - Intune
-ms.openlocfilehash: 15c4ff7a6164517d0193c1830c8e9649f0009d64
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 9aceb4d2b8b0b67af297fa5d15cdf66ae04a83f4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915866"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996631"
 ---
 # <a name="troubleshooting-app-protection-policy-deployment-in-intune"></a>Intune 'da uygulama koruma İlkesi dağıtımı sorunlarını giderme
 
@@ -57,7 +57,7 @@ Intune uygulama koruma ilkelerini herhangi bir MDM çözümüyle bağımsız ola
 - Kullanıcı, uygulama koruma ilkesi tarafından hedeflenen bir güvenlik grubuna ait olmalıdır. Aynı uygulama koruma ilkesi, kullanılan belirli bir uygulamayı hedeflemelidir.
 - Android cihazlarda, uygulama koruma ilkelerini almak için Şirket Portalı uygulaması gereklidir.
 - [Word, Excel veya PowerPoint](https://products.office.com/business/office) uygulamaları kullanıyorsanız, aşağıdaki ek gereksinimlerin karşılanması gerekir:
-    - Kullanıcının, [iş için Microsoft 365](https://products.office.com/business/compare-more-office-365-for-business-plans) bir lisansa ve kullanıcının Azure Active Directory (Azure AD) hesabına bağlı olan kuruluşa sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Office 365 lisansları, [Bu yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
+    - Kullanıcının, [iş için Microsoft 365](https://products.office.com/business/compare-more-office-365-for-business-plans) bir lisansa ve kullanıcının Azure Active Directory (Azure AD) hesabına bağlı olan kuruluşa sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Microsoft 365 lisansları, [Bu yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
     - Kullanıcının ayrıntılı **farklı kaydet** işlevi kullanılarak yapılandırılmış bir yönetilen konumu olmalıdır. Bu komut, kuruluş verilerini uygulama koruma ilkesinin **kopyalarını kaydet** ilkesinin altında bulunur. Örneğin, yönetilen konum [OneDrive](https://onedrive.live.com/about/)Ise, OneDrive uygulaması kullanıcının Word, Excel veya PowerPoint uygulamasında yapılandırılmalıdır.
     - Yönetilen konum OneDrive ise, uygulamanın kullanıcıya dağıtılan uygulama koruma ilkesi tarafından hedeflenmelidir.
 
@@ -74,7 +74,7 @@ Skype Kurumsal karma ve şirket içi yapılandırmalarda HMA 'yı etkinleştirme
 [SfB ve Exchange için karma modern kimlik doğrulaması GA 'ye gidiyor](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756)
 
 - **On-premises (Şirket içi)** <br>
-[AAD ile SfB Onpred için modern kimlik doğrulama](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
+[Azure AD ile SfB Onpred için modern kimlik doğrulama](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
 ### <a name="check-app-protection-policy-status"></a>Uygulama koruma ilkesi durumunu denetleme
 
@@ -83,7 +83,7 @@ Uygulama koruma durumunuzu denetlemek için şu adımları izleyin:
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Apps**  >  **Monitor**  >  **Uygulama koruma durumunu**izlemek için uygulamalar ' ı seçin ve ardından **atanan kullanıcılar** kutucuğunu seçin.
 3. **Uygulama raporlama** sayfasında **Kullanıcı seçin**'i belirterek kullanıcı ve grupların bulunduğu listeyi açın.
-4. Listeden etkilenen kullanıcılardan birini arayıp seçin, sonra **Kullanıcı Seç**' i seçin. Uygulama raporlama bölmesinin üst kısmında, kullanıcının uygulama koruması için lisanslandığını ve O365 için bir lisansa sahip olup olmadığını görebilirsiniz. Ayrıca, tüm kullanıcı cihazları için uygulama durumunu görebilirsiniz.
+4. Listeden etkilenen kullanıcılardan birini arayıp seçin, sonra **Kullanıcı Seç**' i seçin. Uygulama raporlama bölmesinin üst kısmında, kullanıcının uygulama koruması için lisanslı olup olmadığını ve Microsoft 365 için bir lisansa sahip olup olmadığını görebilirsiniz. Ayrıca, tüm kullanıcı cihazları için uygulama durumunu görebilirsiniz.
 5. Hedeflenen uygulamalar, cihaz türleri, ilkeler, cihaz iade durumu ve son eşitleme zamanı gibi önemli bilgilere dikkat edin.
 
 > [!NOTE]

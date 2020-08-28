@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ea7c06df8fec4b5961d9f89be156119fc90ff26
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 348bafecd462aa9e4722443c33b62311b2f97e1a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915628"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993121"
 ---
 # <a name="intune-data-warehouse-collections"></a>Intune Veri Ambarı Koleksiyonları
 
@@ -69,7 +69,7 @@ Aşağıdaki Intune Veri Ambarı koleksiyonları, Veri Ambarı API’si varlıkl
 | 3         | iOS mağazası uygulaması                   | Bir iOS mağazası uygulaması.                                 |
 | 4         | iOS LOB uygulaması                     | Bir iOS iş kolu uygulaması.                      |
 | 5         | Yönetilen iOS mağazası uygulaması (MAM)     | Yönetimi etkin bir iOS mağazası uygulaması.       |
-| 6         | O365 Pro Plus Suite             | Windows 10 için Microsoft 365 uygulamalar.     |
+| 6         | Enterprise için Microsoft 365 uygulamalar        | Windows 10 için Microsoft 365 uygulamalar.     |
 | 7         | Web uygulaması                         | Bir web uygulaması.                                        |
 | 8         | Windows Phone 8.1 mağazası uygulaması     | Bir Windows Phone 8.1 mağazası uygulaması.                    |
 | 9         | Windows mağazası uygulaması               | Bir Windows mağazası uygulaması.                              |
@@ -235,7 +235,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 | DeviceCategoryKey          | Cihazla ilişkili kategorinin anahtarı.                                                                                                                                     |
 | DeviceEnrollmentType       | Bu cihazla ilişkili kayıt türünün anahtarı, kayıt yöntemini gösterir.                                                                                             |
 | ComplianceStateKey         | Cihazla ilişkili Uyumluluk durumu anahtarı.                                                                                                                             |
-| office365Version           | Cihaza yüklü Office 365 sürümü.                                                                                                                             |
+| office365Version           | Cihaza yüklü Microsoft 365 sürümü.                                                                                                                             |
 | OSVersion                  | Cihazın işletim sistemi sürümü.                                                                                                                                                |
 | EasDeviceId                | Cihazın Exchange ActiveSync KIMLIĞI.                                                                                                                                                  |
 | SerialNumber               | SerialNumber                                                                                                                                                                           |
@@ -286,7 +286,7 @@ Aşağıdaki tablo, uyumluluk ilkelerinin cihazlara atanma durumunu ilke başın
 | 11           | Android           | Cihaz Yöneticisi ile yönetilen Android cihaz   |
 | 12           | ISocConsumer      | iSoc Consumer cihaz                                |
 | 13           | Unix              | Unix cihaz                                         |
-| 14           | MacMDM            | Yerleşik MDM aracısıyla yönetilen Mac OS X cihaz |
+| 14           | MacMDM            | Yerleşik MDM aracısıyla yönetilen OS X cihazı |
 | 15           | HoloLens          | HoloLens cihazı                                       |
 | 16           | SurfaceHub        | Surface Hub cihaz                                  |
 | 17           | AndroidForWork    | Android cihaz - Android Profil Sahibi kullanılarak yönetiliyor  |
@@ -365,7 +365,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 | Geçerli değil                  | Kayıt hatası kategorisi geçerli değil.                                                            |
 | Kullanılamaz                   | Kayıt hatası kategorisi kullanılamıyor.                                                             |
 | Bilinmiyor                         | Bilinmeyen hata.                                                                                                |
-| Kimlik doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
+| Kimlik Doğrulaması                  | Kimlik doğrulaması gerçekleştirilemedi.                                                                                        |
 | Yetkilendirme                   | Çağrının kimliği doğrulandı, ancak kaydolma yetkisi yok.                                                         |
 | AccountValidation               | Kayıt için Hesap doğrulanamadı. (Hesap engellendi, kayıt etkin değil)                      |
 | Kullanıcı doğrulaması                  | Kullanıcı doğrulanamadı. (Kullanıcı yok, Lisans eksik)                                           |
@@ -442,7 +442,7 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 |---------|------------|--------|
 | mamApplicationKey |MAM uygulamasının benzersiz tanıtıcısı. | 432 |
 | mamApplicationName |MAM uygulamasının adı. |MAM uygulaması örnek adı |
-| mamApplicationId |MAM uygulamasının uygulama kimliği. | 123 |
+| mamApplicationId |MAM uygulamasının uygulama KIMLIĞI. | 123 |
 | IsDeleted |Bu MAM uygulaması kaydının güncelleştirilip güncelleştirilmediğini gösterir. <br>True- MAM uygulamasının bu tablodaki güncelleştirilmiş alanları içeren yeni bir kaydı var. <br>False- bu MAM uygulaması için en son kayıt. |True/False |
 | StartDateInclusiveUTC |Bu MAM uygulamasının veri ambarında oluşturulduğu tarih ve UTC diliminde saat. |23/11/2016 00:00:00 |
 | DeletedDateUTC |IsDeleted değerinin True olarak değiştirildiği tarih ve UTC diliminde saat. |23/11/2016 00:00:00 |
@@ -459,13 +459,13 @@ KayıtSayısı **varlığı,** bir cihaz kaydının sonucunu gösterir.
 |   ApplicationInstanceKey   |                                                               Veri ambarındaki MAM uygulaması örneğinin benzersiz tanımlayıcısı - vekil anahtar.                                                                |                 123                  |
 |           UserId           |                                                                              Bu MAM uygulamasını yükleyen kullanıcının kullanıcı KIMLIĞI.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              MAM uygulaması örneğinin benzersiz tanımlayıcısı - ApplicationInstanceKey ile benzer ancak tanımlayıcı, bir doğal anahtardır.                                              | b66bc706-ffff-7437-0340-032819502773 |
-| mamApplicationId | Bu mam uygulama örneğinin oluşturulduğu mam uygulamasının uygulama kimliği.   | 23/11/2016 00:00:00   |
+| mamApplicationId | Bu mam uygulama örneğinin oluşturulduğu mam uygulamasının uygulama KIMLIĞI.   | 23/11/2016 00:00:00   |
 |     ApplicationVersion     |                                                                                     Bu MAM uygulamasının uygulama sürümü.                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Bu MAM uygulama örneği kaydının oluşturulduğu tarih. Değer null olabilir.                                                                 |        23/11/2016 00:00:00        |
 |          Platform          |                                                                          MAM uygulamasının yüklü olduğu cihazın platformu.                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Bu MAM uygulamasının yüklü olduğu cihazın platform sürümü.                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            Bu MAM uygulamasını sarmalayan MAM SDK sürümü.                                                                            |                 3.2                  |
-| Mamdeviceıd | MAM uygulama örneğinin ilişkilendirildiği cihazın cihaz kimliği.   | 23/11/2016 00:00:00   |
+| Mamdeviceıd | MAM uygulama örneğinin ilişkilendirildiği cihazın cihaz KIMLIĞI.   | 23/11/2016 00:00:00   |
 | mamDeviceType | MAM uygulama örneğinin ilişkilendirildiği cihazın cihaz türü.   | 23/11/2016 00:00:00   |
 | Mamaygıtadı | MAM uygulama örneğinin ilişkilendirildiği cihazın cihaz adı.   | 23/11/2016 00:00:00   |
 |         IsDeleted          | Bu MAM uygulama örneği kaydının güncelleştirilip güncelleştirilmediğini gösterir. <br>True- bu MAM uygulaması örneğinin, bu tablodaki güncelleştirilmiş alanları içeren yeni bir kaydı var. <br>False- bu MAM uygulaması örneği için en son kayıt. |              True/False              |

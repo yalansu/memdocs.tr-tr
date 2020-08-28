@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b3e1a2feaddb7384d76790249152c89dfa8ee2d3
-ms.sourcegitcommit: 214fb11771b61008271c6f21e17ef4d45353788f
+ms.openlocfilehash: d23880def99fd12bffe83efffe9768f94481d07e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82904808"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993565"
 ---
 # <a name="what39s-new-in-version-1610-of-configuration-manager"></a>Sürüm 1610 ' deki yenilikler&#39;Configuration Manager
 
@@ -183,12 +183,12 @@ Panoda aşağıdakiler için grafikler görüntülenir:
 - Office 365 istemcilerinin sayısı
 - Office 365 istemci sürümleri
 - Office 365 istemci dilleri
-- Office 365 istemci kanalları     
+- Office 365 istemci kanalları
 
-Ayrıntılar için bkz. [Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Ayrıntılar için bkz. [Microsoft 365 Apps güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS’tan UEFI’ye dönüştürmeyi yönetmek için görev sırası adımları
-Artık, **Bilgisayarı yeniden Başlat** adımının UEFI 'ye geçiş için sabit SÜRÜCÜDEKI bir FAT32 bölümünü hazırlayabilmesi Için TSUEFIDrive adlı yeni bir değişkenle bir işletim sistemi dağıtımı görev dizisini özelleştirebilirsiniz. Aşağıdaki yordam, BIOS 'TAN UEFı 'ye dönüştürme için sabit sürücüyü hazırlamak üzere görev dizisi adımlarını nasıl oluşturabileceğiniz hakkında bir örnek sağlar. Ayrıntılar için bkz. [BIOS 'TAN UEFI dönüştürmeyi yönetmeye yönelik görev dizisi adımları](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
+Artık, **Bilgisayarı yeniden Başlat** adımının UEFI 'ye geçiş için sabit SÜRÜCÜDEKI bir FAT32 bölümünü hazırlayabilmesi Için TSUEFIDrive adlı yeni bir değişkenle bir işletim sistemi dağıtımı görev dizisini özelleştirebilirsiniz. Aşağıdaki yordam, BIOS 'TAN UEFı 'ye dönüştürme için sabit sürücüyü hazırlamak üzere görev dizisi adımlarını nasıl oluşturabileceğiniz hakkında bir örnek sağlar. Ayrıntılar için bkz.  [BIOS 'TAN UEFI dönüştürmeyi yönetmeye yönelik görev dizisi adımları](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
 ##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>Görev dizisi adımındaki geliştirmeler: ConfigMgr Istemcisini yakalamaya hazırlama  
 ConfigMgr Istemcisini hazırla adımı yalnızca anahtar bilgilerini kaldırmak yerine Configuration Manager istemcisini tamamen kaldırır. Görev dizisi yakalanan işletim sistemi görüntüsünü dağıttığında, her seferinde yeni bir Configuration Manager istemci yükler. Ayrıntılar için bkz. [görev dizisi adımları](../../../osd/understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).

@@ -2,7 +2,7 @@
 title: Yönetilmeyen cihazlarda veri sızıntılarını önleme
 titleSuffix: Microsoft Intune
 description: Microsoft Intune kullanarak cihazlardaki kurumsal verilere erişim izni verin ve verileri sızıntılara karşı koruyun.
-keywords: veri koruma cihazı sızıntılara karşı korur O365 Office 365
+keywords: veri koruma cihaz M365 sızıntılarını engelliyor Microsoft 365
 ms.author: dougeby
 author: dougeby
 manager: dougeby
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d51b1ded77ac9d7e1a619c56cb87501c70a9447e
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c979d6cf35611a419c4e27605b696c6ad3d85cd9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913095"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996189"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Microsoft Intune kullanarak yönetilmeyen cihazlarda veri sızıntılarını önleme
 
-Office 365 tarafından barındırılan şirket verilerine erişim izni verirseniz kullanıcıların bilerek ya da bilmeyerek veri sızıntısına neden olmadan nasıl veri paylaşacağını ve kaydedeceğini denetleyebilirsiniz. Microsoft Intune, kullanıcılara ait cihazlarda şirket verilerinizin güvenliğini sağlamak için ayarlayabileceğiniz uygulama koruma ilkeleri sağlar. Cihazların Intune hizmetine kaydedilmesi gerekmez. 
+Microsoft 365 tarafından barındırılan şirket verilerine erişime izin verirseniz, kullanıcıların kasıtlı olarak veya yanlışlıkla veri sızıntılarını etkilemeden verileri nasıl paylaştığından ve kaydettiden kontrol edebilirsiniz. Microsoft Intune, kullanıcılara ait cihazlarda şirket verilerinizin güvenliğini sağlamak için ayarlayabileceğiniz uygulama koruma ilkeleri sağlar. Cihazların Intune hizmetine kaydedilmesi gerekmez. 
 
 Intune ile ayarlanan uygulama koruma ilkeleri, Microsoft olmayan bir cihaz yönetim çözümü ile yönetilen cihazlarda da çalışır. BT departmanı cihazlardaki kişisel verilere dokunmaz; yalnızca şirket verilerini yönetir. 
 
@@ -40,7 +40,7 @@ Intune uygulama koruma ilkeleri, cihaz yönetiminden bağımsızdır. Uygulama k
 Aşağıdaki koşulları yerine getirdiğinizde aşağıdaki eylem planı kullanılabilir:
 
 * Şirketiniz buluta güvenli bir şekilde geçiş yapmaya hazırdır.
-* Şirketiniz Office 365 Exchange Online, SharePoint Online, OneDrive İş veya Yammer kullanmaktadır.
+* Şirketiniz Exchange Online, SharePoint Online, OneDrive Iş veya Yammer Microsoft 365 kullanıyor.
 * Şirketinizin Microsoft 365, Enterprise Mobility + Security (EMS) veya Azure Information Protection lisansları vardır.
 * Şirketiniz, kullanıcıların şirkete ait veya kişisel Windows, iOS/ıpados veya Android cihazlarından şirket verilerine erişmesini sağlar.
 * Şirketiniz, kişisel cihazların bir cihaz yönetim hizmetine kaydedilmesini zorunlu kılmak istemiyordur.
@@ -68,4 +68,4 @@ Gerektiğinde, ek bilgi sağlamak için aşağıdaki bağlantıları paylaşın:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bunu veya diğer EMS ya da Office 365 senaryolarını etkinleştirmek için yardıma mı ihtiyacınız var? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.
+Bu veya diğer EMS veya Microsoft 365 senaryolarını etkinleştirmeye yardım mı istiyorsunuz? Microsoft 365, Enterprise Mobility + Security veya Azure Active Directory Premium için en az 150 lisansınız varsa, [FastTrack avantajlarınızdan](/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program) yararlanın.

@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37bf4cf8d6381ab076f7c0cd0eb879ddf43d571c
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 9c4cc5fc662e27badcb0c1c1ae478ab700fce70e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217106"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996478"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Microsoft Intune’a yerleşik uygulama ekleme
 
-*Yerleşik* uygulama türü, Office 365 uygulamaları gibi seçkin yönetilen uygulamaları IOS/ıpados ve Android cihazlara atamanızı kolaylaştırır. Bu uygulama türüne belirli uygulamaları atayabilirsiniz; örneğin Excel, OneDrive, Outlook, Skype ve diğerleri. Bir uygulamayı ekledikten sonra uygulama türü, *Yerleşik iOS uygulaması* veya *Yerleşik Android uygulaması* olarak görüntülenir. Yerleşik uygulama türünü kullanarak bu uygulamalardan hangilerini cihaz kullanıcılarına yayımlayacağınızı seçebilirsiniz.
+*Yerleşik* uygulama türü, Microsoft 365 uygulamaları gibi seçkin yönetilen uygulamaları IOS/ıpados ve Android cihazlara atamanızı kolaylaştırır. Bu uygulama türüne belirli uygulamaları atayabilirsiniz; örneğin Excel, OneDrive, Outlook, Skype ve diğerleri. Bir uygulamayı ekledikten sonra uygulama türü, *Yerleşik iOS uygulaması* veya *Yerleşik Android uygulaması* olarak görüntülenir. Yerleşik uygulama türünü kullanarak bu uygulamalardan hangilerini cihaz kullanıcılarına yayımlayacağınızı seçebilirsiniz.
 
-Intune konsolunun önceki sürümlerinde Intune, Outlook ve OneDrive gibi varsayılan olarak yönetilen birkaç Office 365 uygulaması sağlar. Bu yönetilen uygulamalar için uygulama türü *Yönetilen iOS Mağaza Uygulaması* veya *Yönetilen Android Uygulaması* olarak etiketlenmiştir. Bu uygulama türlerini kullanmak yerine yerleşik uygulama türünü kullanmanızı öneririz. Yerleşik uygulama türünü kullanarak Office 365 uygulamalarını düzenleme ve silme konusunda daha fazla esneklik kazanırsınız.
+Intune konsolunun önceki sürümlerinde Intune, Outlook ve OneDrive gibi birkaç varsayılan yönetilen Microsoft 365 uygulaması sağladı. Bu yönetilen uygulamalar için uygulama türü *Yönetilen iOS Mağaza Uygulaması* veya *Yönetilen Android Uygulaması* olarak etiketlenmiştir. Bu uygulama türlerini kullanmak yerine yerleşik uygulama türünü kullanmanızı öneririz. Yerleşik uygulama türünü kullanarak Microsoft 365 uygulamalarını düzenleme ve silmeye yönelik ek esnekliğe sahip olursunuz.
 
 >[!NOTE]
->*Yönetilen iOS Mağaza* veya *Yönetilen Android Uygulaması* olarak etiketli varsayılan Office 365 uygulamaları, tüm atamalar silindiğinde uygulama listesinden kaldırılır.
+>*Yönetilen IOS Mağazası* ve *yönetilen Android uygulaması* olarak etiketlenen varsayılan Microsoft 365 uygulamalar, tüm atamalar silindiğinde uygulama listesinden kaldırılır.
 
 ## <a name="add-a-built-in-app"></a>Yerleşik uygulama ekleme
 

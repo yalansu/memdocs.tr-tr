@@ -10,12 +10,12 @@ ms.assetid: 264ea96f-f26a-4fb7-a23f-ecf36054e54b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7db3c587d592f7ef972e53a8bbdc2b27da1abbf4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: ed0cb60e07482ec3a9088eaa468bce9e5e9c9408
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88126554"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994540"
 ---
 # <a name="diagnostic-and-usage-data-for-version-2002"></a>Sürüm 2002 için tanılama ve kullanım verileri
 
@@ -176,7 +176,7 @@ Configuration Manager sürüm 2002 için, bu düzey aşağıdaki verileri içeri
 
 - Uygulama Kataloğu için farklı marka sayısı  
 
-- Pano kullanılarak oluşturulan Office 365 uygulamalarının sayısı  
+- Pano kullanılarak oluşturulan Microsoft 365 uygulamalarının sayısı  
 
 - Türe göre paket sayısı  
 
@@ -226,7 +226,7 @@ Configuration Manager sürüm 2002 için, bu düzey aşağıdaki verileri içeri
 
 - Uygulama gruplarının kullanımıyla ilgili toplu istatistikler
 
-- Office Eklentilerindeki toplu istatistikler, Office hazırlık araç seti kullanımı ve Office 365 ProPlus ile istemci sayısı
+- Office Eklentilerindeki toplu istatistikler, Office hazırlık araç seti kullanımı ve kurumsal Microsoft 365 uygulamalar ile istemci sayısı
 
 - Office eklentisi sistem durumu ile ilgili toplu istatistikler
 
@@ -480,7 +480,7 @@ Configuration Manager sürüm 2002 için, bu düzey aşağıdaki verileri içeri
 
 - Etkin Windows 10 bakım planları için kullanılan konfigürasyonlar  
 
-- Dağıtılan Office 365 güncelleştirmeleri sayısı  
+- Dağıtılan Microsoft 365 güncelleştirme sayısı  
 
 - Eşitlenmiş Microsoft Surface sürücü sayısı  
 

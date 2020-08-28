@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e573a2887bd527daac9a05fec2e83ef39fbfc4e1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 575c29e738b399a98dc92fc003fad07b86fab402
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700325"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994948"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager için istemciler ve cihazlar için desteklenen işletim sistemi sürümleri
 
@@ -354,7 +354,7 @@ Configuration Manager, Configuration Manager istemcisini yüklemeden Exchange Se
 
 ### <a name="supported-versions-of-exchange-server"></a>Desteklenen Exchange Server sürümleri
 
-- **Exchange Online (Office 365)**: Bu sürüm, Iş üretkenliği çevrimiçi standart paketini içerir  
+- **Exchange Online (Microsoft 365)**: Bu sürüm Iş üretkenlik çevrimiçi standart paketini içerir  
 
 - **Exchange Server 2016**  
 

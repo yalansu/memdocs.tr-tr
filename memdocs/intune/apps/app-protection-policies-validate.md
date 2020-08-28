@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0630c38a28499c0add8cacf4deb5356345167c99
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 02266ce355d4fc4b74487840a91b503d69bf7b2e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990463"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996512"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Microsoft Intune'da uygulama koruma ilkesi kurulumunuzu doğrulama
 
@@ -39,20 +39,20 @@ Uygulama koruma bir veri koruması aracı olduğundan, kullanıcıların sorular
 Sınama, uygulama koruma ilkelerinizin davranışının beklendiği gibi çalışmadığını gösteriyorsa şu öğeleri kontrol etmenizi öneririz:
 
 - Kullanıcılar uygulama koruma için lisanslı mı?
-- Kullanıcılar O365 için lisanslı mı?
+- Kullanıcılar Microsoft 365 lisanslı mi?
 - Her kullanıcının uygulama koruma uygulamalarındaki durumu beklendiği gibi mi? Uygulamalar için olabilecek durumlar **İade edildi** ve **İade edilmedi** şeklindedir.
 
 ### <a name="user-app-protection-status"></a>Kullanıcı uygulama koruma durumu
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 3. **Apps**  >  **Monitor**  >   **Uygulama koruma durumunu**izlemek için uygulamalar ' ı seçin ve ardından **atanan kullanıcılar** kutucuğunu seçin. 
 4. **Uygulama raporlama** sayfasında **Kullanıcı seçin**'i belirterek kullanıcı ve grupların bulunduğu listeyi açın. 
-5. Arama yapıp listeden bir kullanıcı seçin ve sonra **Kullanıcı seçin**’i belirtin. **Uygulama raporlama** bölmesinin en üstünde kullanıcının uygulama koruması için lisanslı olup olmadığını görebilirsiniz. Ayrıca, kullanıcının O365 lisansının olup olmadığını ve kullanıcının tüm cihazları için uygulama durumunu göreceksiniz.
+5. Arama yapıp listeden bir kullanıcı seçin ve sonra **Kullanıcı seçin**’i belirtin. **Uygulama raporlama** bölmesinin en üstünde kullanıcının uygulama koruması için lisanslı olup olmadığını görebilirsiniz. Ayrıca kullanıcının Microsoft 365 lisansa sahip olup olmadığını ve kullanıcının tüm cihazları için uygulama durumunu görebilirsiniz.
 
 ## <a name="what-to-do"></a>Ne yapılmalı
 Kullanıcı durumuna göre gerçekleştirilecek eylemler şunlardır:
 
 - Kullanıcının uygulama koruma lisansı yoksa bir [Intune lisansı](../fundamentals/licenses.md) atayın.
-- Kullanıcının O365 lisansı yoksa bir [lisans](../fundamentals/licenses.md) edinin.
+- Kullanıcı Microsoft 365 için lisanslı değilse, Kullanıcı için bir [Lisans](../fundamentals/licenses.md) alın.
 - Bir kullanıcının uygulaması **Iade edilmedi**olarak listeleniyorsa, bu uygulama için doğru bir [Uygulama koruma ilkesi](app-protection-policies-validate.md) yapılandırılıp yapılandırılmadığını denetleyin.
 - Bu koşulların, [uygulama koruma ilkelerinin](app-protection-policies-monitor.md) geçerli olmasını istediğiniz tüm kullanıcılara uygulandığından emin olun.
 

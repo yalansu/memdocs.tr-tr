@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31cc746edce40300b5678439550ce3108270750d
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: ae034699d3a07311ca6a51557cbbc673916569bf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83988874"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994285"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Microsoft Intune’a kaydolma veya Intune’da oturum açma
 
 Bu konu, sistem yöneticilerinin Intune hesabına nasıl kaydolacaklarını açıklar.
 
-Intune’a kaydolmadan önce bir Microsoft Online Services hesabı, Kurumsal Anlaşma veya bunlara denk bir toplu lisanslama anlaşmanızın olup olmadığını belirleyin. Microsoft lisanslama anlaşmaları veya Office 365 gibi diğer Microsoft bulut hizmeti abonelikleri genellikle bir iş veya okul hesabı barındırır.
+Intune’a kaydolmadan önce bir Microsoft Online Services hesabı, Kurumsal Anlaşma veya bunlara denk bir toplu lisanslama anlaşmanızın olup olmadığını belirleyin. Microsoft Toplu Lisanslama Sözleşmesi veya Microsoft 365 gibi diğer Microsoft bulut hizmetleri aboneliği, genellikle bir iş veya okul hesabı içerir.
 
 Zaten bir iş veya okul hesabınız varsa bu hesapla **oturum açın** ve aboneliklerinize Intune’u ekleyin. Veya bunun yerine kuruluşunuz için Intune kullanmak üzere yeni bir hesaba **kaydolun**.
 
@@ -62,20 +62,20 @@ Farklı izinlere sahip kullanıcılar için hizmeti yönetmek üzere erişim ver
 
 ### <a name="intune-admin-portal-url"></a>Intune yönetim portalı URL 'SI
 
-Microsoft Uç Nokta Yöneticisi Yönetim Merkezi:https://endpoint.microsoft.com
+Microsoft Uç Nokta Yöneticisi Yönetim Merkezi: https://endpoint.microsoft.com
 
-Intune Azure portal:https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
+Intune Azure portal: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
 
-Eğitim için Intune:https://intuneeducation.portal.azure.com
+Eğitim için Intune: https://intuneeducation.portal.azure.com
 
 Klasik Intune Portalı: https://manage.microsoft.com Klasik Intune portalı yalnızca ıNTUNE bilgisayar yazılım istemcisiyle kaydedilen cihazları yönetmek için kullanılır
 
-### <a name="urls-for-intune-services-provided-by-office-365"></a>Office 365 tarafından sunulan Intune Hizmetleri için URL 'Ler
+### <a name="urls-for-intune-services-provided-by-microsoft-365"></a>Microsoft 365 tarafından sunulan Intune Hizmetleri için URL 'Ler
 
-Microsoft 365 İş:https://portal.microsoft.com/adminportal
+Microsoft 365 İş: https://portal.microsoft.com/adminportal
 
-Office 365 mobil cihaz yönetimi:https://admin.microsoft.com/adminportal/home#/MifoDevices
+Microsoft 365 mobil cihaz yönetimi: https://admin.microsoft.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-[Office 365, Azure veya Intune’da oturum açamıyorsunuz](https://support.microsoft.com/help/2412085)
+[Microsoft 365, Azure veya Intune 'da oturum açamazsınız](https://support.microsoft.com/help/2412085)

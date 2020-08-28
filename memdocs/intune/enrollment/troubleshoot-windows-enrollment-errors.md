@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80d3a0d66821037fba53813b8ae7b1e415e4f29a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5f72acb12f6e17b3634c0b87b8ad298a410fb83f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915458"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994234"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune Windows cihaz kaydı sorunlarını giderme
 
@@ -133,7 +133,7 @@ Kullanıcıya geçerli bir Intune lisansı atayın ve ardından cihazı kaydedin
 ### <a name="looks-like-the-mdm-terms-of-use-endpoint-is-not-correctly-configured"></a>MDM kullanım koşulları uç noktası doğru yapılandırılmamış gibi görünüyor.
 
 **Neden:** Aşağıdaki koşullardan biri doğru: 
- - Kiracı üzerinde Office 365 ve Intune için hem mobil cihaz yönetimi (MDM) hem de cihazı kaydetmeye çalışan kullanıcının geçerli bir Intune lisansı veya bir Office 365 lisansı yoktur.     
+ - Kiracı üzerinde Microsoft 365 ve Intune için hem mobil cihaz yönetimi 'ni (MDM) hem de cihazı kaydetmeye çalışan kullanıcının geçerli bir Intune lisansı veya Office 365 lisansı yoktur.     
 - Azure AD 'deki MDM hüküm ve koşulları boş veya doğru URL 'YI içermiyor.    
 
 #### <a name="resolution"></a>Çözüm
@@ -141,7 +141,7 @@ Kullanıcıya geçerli bir Intune lisansı atayın ve ardından cihazı kaydedin
 Bu sorunu onarmak için aşağıdaki yöntemlerden birini kullanın: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Kullanıcıya geçerli bir lisans ata
-[Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından kullanıcıya bir Intune veya Office 365 lisansı atayın.
+[Microsoft 365 yönetim merkezine](https://admin.microsoft.com)gidin ve ardından kullanıcıya bir ıntune veya Microsoft 365 lisansı atayın.
 
 ##### <a name="correct-the-mdm-terms-of-use-url"></a>MDM kullanım koşulları URL 'sini düzeltin
   1. [Azure Portal](https://portal.azure.com/)oturum açın ve **Azure Active Directory**' ı seçin.    

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 63aba639eea221c3a13f7ebeabaa1b96a8439a72
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700778"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995203"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Modern masaüstü kullanımdan kaldırma hakkında SSS
 
@@ -45,11 +45,11 @@ Olası kategoriler şunlardır:
 
 ### <a name="what-happened-to-the-ready-for-windows-website"></a>Windows için hazırlanma Web sitesine ne oldu?
 
-Birçok müşteri, Windows 10 ve Office 365 ProPlus ile mevcut alma ve güncel kalma konularında zorluk sahibi. Bu işlem genellikle el ile olduğundan, birincil zorluk uygulamaları test ediyor. BT yöneticileri ve uygulama sahiplerinin, mevcut uygulamaları sürekli olarak analiz etmesine ve sonra ortaya çıkan sorunları gidermesine zaman alıcı bir işlemdir.
+Birçok müşteri, Windows 10 ve Enterprise için Microsoft 365 uygulamaları ile alma ve güncel kalma konularında zorluk sahibi olabilir. Bu işlem genellikle el ile olduğundan, birincil zorluk uygulamaları test ediyor. BT yöneticileri ve uygulama sahiplerinin, mevcut uygulamaları sürekli olarak analiz etmesine ve sonra ortaya çıkan sorunları gidermesine zaman alıcı bir işlemdir.
 
-Windows 10 ve Office 365 ProPlus çalıştıran ticari cihazlarda desteklenen ve kullanımda olan *modern Masaüstü dizinine yönelik* listelenen yazılım çözümleri için hazırlanma. Dizin, BT yöneticilerine dağıtımlar için en son Windows 10 ve Office 365 sürümlerini düşünmeye yardımcı olur.
+Windows 10 ve Enterprise için Microsoft 365 uygulamaları çalıştıran ticari cihazlarda desteklenen ve kullanımda olan *modern Masaüstü dizinine yönelik* listelenen yazılım çözümleri. Dizin, BT yöneticilerine Windows 10 ' un en son sürümlerini ve dağıtımlarına yönelik Microsoft 365 göz önünde bulundurmalarına yardımcı olur.
 
-BT yöneticileriyle ilgili geri bildirimler, bu öngörüleri, dağıtım planlarını planlamak için kullandıkları araçlarla tümleştirirler. Windows 10 ve Office 365 ProPlus yükseltme projelerinizi planlamak ve yönetmek için Configuration Manager 'deki [Desktop Analytics](https://aka.ms/dadocs) ve [Office 365 ProPlus hazırlık özelliklerini](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) kullanın. 
+BT yöneticileriyle ilgili geri bildirimler, bu öngörüleri, dağıtım planlarını planlamak için kullandıkları araçlarla tümleştirirler. Windows 10 ve Microsoft 365 uygulamalarınızı kurumsal yükseltme projelerine yönelik olarak planlamak ve yönetmek için Configuration Manager ' de [Masaüstü Analizi](https://aka.ms/dadocs) ve [Microsoft 365 uygulamaları hazır olma özellikleri](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) ' ni kullanın. 
 
 > [!Note]
 > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
@@ -100,11 +100,11 @@ Masaüstü analizi, [cihazların ve yüklü uygulamalarının envanterini ve](ab
 
 ### <a name="can-i-still-list-my-software-solution-in-desktop-analytics"></a>Yazılım çözümmi masaüstü Analizte listeme yine de listeleyebilir miyim?
 
-Ürününüzün 32 bit veya 64 bit Windows 10 veya Office 365 ProPlus ile birlikte çalıştığından bir destek bildirisi yayımlayın. Çözümlerinizi masaüstü Analizi 'nde göstermek için Microsoft kişinizle görüşün.
+Ürününüzün 32-bit veya 64 bit Windows 10 veya Enterprise için Microsoft 365 uygulamalarla birlikte çalıştığına yönelik bir destek bildirisi yayımlayın. Çözümlerinizi masaüstü Analizi 'nde göstermek için Microsoft kişinizle görüşün.
 
 ### <a name="how-can-listing-my-solutions-benefit-me"></a>Çözümlerimi kullanım açısından nasıl Listelerim?
 
-Binlerce BT yöneticileri Configuration Manager ve Masaüstü analiziyle milyonlarca cihazı yönetir. Bu araçları, kuruluşlarını Windows 10 ve Office 365 ProPlus 'ın en son sürümüne güvenle planlamak ve yükseltmek için kullanır. Bunlar, yazılım çözümleri için satın alma kararları almak için de kullanılır.
+Binlerce BT yöneticileri Configuration Manager ve Masaüstü analiziyle milyonlarca cihazı yönetir. Bu araçları, kuruluşlarını Windows 10 ' un en son sürümüne ve kurumsal Microsoft 365 uygulamalarına yönelik olarak planlamak ve yükseltmek için kullanır. Bunlar, yazılım çözümleri için satın alma kararları almak için de kullanılır.
 
 Microsoft, yazılım satıcılarından, ticari cihazlardan aldıkları benimseme bilgilerine sahip destek deyimlerini tümleştirir. Dünyanın dört bir yanındaki kuruluşlar bu verileri masaüstü Analizi ve Office hazırlık araçları 'nda kullanır. 
 
@@ -118,8 +118,8 @@ Geliştirici Merkezi aracılığıyla sistem durumu ve ölçüm raporlarıyla ç
 - [Masaüstü](/windows/desktop/appxpkg/windows-desktop-application-program)
 - [Office Eklentileri](/office/dev/store/update-unpublish-and-view-metrics) 
 
-### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-office-365-proplus"></a>Windows 10 ve Office 365 ProPlus için uyumlu varlıkları nasıl geliştirebilirim?
+### <a name="how-can-i-develop-compatible-assets-for-windows-10-and-microsoft-365-apps-for-enterprise"></a>Windows 10 için uyumlu varlıkları ve kurumsal için Microsoft 365 uygulamaları nasıl geliştirebilirim?
 
 Masaüstü uygulamalarınızın şimdi uyumlu olduğundan emin olun ve gelecekte Windows 10 ile uyumlu kalın. Daha fazla bilgi için bkz. [geliştiriciler Için uygulama uyumluluğu](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Office 365 ProPlus için çözümler geliştirirseniz, bkz. [Office 'TEKI com, VSTO ve VBA eklentileri Için geliştirme için en iyi yöntemler](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Enterprise için Microsoft 365 uygulamalar için çözümler geliştirirseniz, bkz. [Office 'TEKI com, VSTO ve VBA eklentileri Için geliştirme en iyi yöntemleri](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).

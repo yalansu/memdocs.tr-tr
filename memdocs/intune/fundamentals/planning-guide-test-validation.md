@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aeca72af3eadf55174f1ad97c1e294f48f131801
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: ae07904d9fb21773fbc4caad18cb183d9565c401
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79330910"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996308"
 ---
 # <a name="intune-testing-and-validation"></a>Intune’u sınama ve doğrulama
 
@@ -40,7 +40,7 @@ Destek belgelerinin oluşturulması ve BT destek ve yardım masası personelinin
 
 Bir tasarım bileşeni; bir gereksinim veya senaryoya uygun en az bir sınama ölçütünde mevcut değilse tasarım bileşeninin gerekli olup olmadığını göz önünde bulundurun. Ayrıca, aşağıdaki öğelere sahip olduğunuzdan emin olun:
 
-- **Hesaplar:** Tüm kullanım örneği senaryolarının sınanması için EMS ve Office 365 lisansına sahip sınama hesapları.
+- **Hesaplar:** EMS ve Microsoft 365 tüm kullanım örneği senaryolarını test etmek için lisanslanan test hesapları.
 
 - **Cihazlar:** Silinebilen veya fabrika ayarlarına sıfırlanabilen sınama cihazları.
 

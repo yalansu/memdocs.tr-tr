@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5551e537716ed12a0a5b5de19b747ffc7c4dcac
-ms.sourcegitcommit: d498e5eceed299f009337228523d0d4be76a14c2
+ms.openlocfilehash: fd52b34b70b71874a42486cbdc87cd3d7d2f9037
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84347347"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994251"
 ---
 # <a name="china-endpoints-for-microsoft-intune"></a>Microsoft Intune Çin uç noktaları
 
@@ -42,14 +42,14 @@ Windows 10 otomatik kaydı ve Çin müşterileri için cihaz kaydı hakkında da
 
 Aşağıdaki tabloda Intune istemcisinin eriştiği bağlantı noktaları ve hizmetler listelenir:
 
-|**Uç Nokta**|**IP adresi**|
+|**Uç Noktası**|**IP adresi**|
 |---------------------|-----------|
 |*. manage.microsoft.cn | 40.73.38.143<br>139.217.97.81<br>52.130.80.24<br>40.73.41.162<br>40.73.58.153<br>139.217.95.85 |
 
 
 ## <a name="intune-customer-designated-endpoints-in-china"></a>Çin 'de Intune müşteri tarafından belirlenen uç noktalar
 - Azure portal: https: \/ /Portal.Azure.cn/
-- Office 365: https: \/ /Portal.partner.microsoftonline.cn/
+- Microsoft 365: https: \/ /Portal.partner.microsoftonline.cn/
 - Intune Şirket Portalı: https: \/ /Portal.Manage.microsoftonline.cn/
 - Microsoft Uç Nokta Yöneticisi Yönetim Merkezi: https: \/ /Endpoint.microsoftonline.cn/
 

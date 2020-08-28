@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6afd1cf0e25fe4476c8fbe72f1fa56a3557e6ac0
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 431dc3fec49609c4f163c9d7f471b60565611bc3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910018"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992846"
 ---
 # <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Apple School Manager ile iOS/iPadOS cihaz kaydını ayarlama
 
@@ -156,7 +156,7 @@ Belirtecinizi yüklediğinize göre, Apple School cihazları için kayıt profil
 
 1. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **cihazlar**  >  **iOS/ıpados**  >  **iOS/ıpados kayıt**  >  **kayıt programı belirteçleri**' ni seçin.
 2. Bir Apple School Manager belirtecini ve daha sonra **School Data Sync**’i seçin.
-3. **School Data Sync** altında **İzin Ver**’i seçin. Bu ayar, Intune’un Office 365'teki SDS’ye bağlanmasını sağlar.
+3. **School Data Sync** altında **İzin Ver**’i seçin. Bu ayar, Intune 'un Microsoft 365 SDS ile bağlanmasını sağlar.
 4. Apple Okul Yöneticisi ile Azure AD arasında bir bağlantıyı etkinleştirmek için **Microsoft okul veri eşitlemesini ayarla**' yı seçin. [Okul veri eşitlemesini ayarlama](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1)hakkında daha fazla bilgi edinin.
 5. **Kaydet**  >  **Tamam 'a**tıklayın.
 

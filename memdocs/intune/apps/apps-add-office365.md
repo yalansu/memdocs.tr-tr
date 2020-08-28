@@ -1,7 +1,7 @@
 ---
-title: Microsoft Intune kullanarak Windows 10 cihazlarına Office 365 uygulamaları ekleme
+title: Microsoft Intune kullanarak Windows 10 cihazlarına Microsoft 365 uygulamaları ekleme
 titleSuffix: ''
-description: Windows 10 cihazlarına Office 365 uygulamalarını yüklemek için Microsoft Intune nasıl kullanabileceğinizi öğrenin.
+description: Windows 10 cihazlarına Microsoft 365 uygulamaları yüklemek için Microsoft Intune nasıl kullanabileceğinizi öğrenin.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 468e62fe9f9eb1b10469ed664ae6aa380d9114c7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2242f8570a5f0ff625855bb3d31029fb4e13e3a8
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910409"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996529"
 ---
-# <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Microsoft Intune ile Windows 10 cihazlarına Office 365 uygulamaları ekleme
+# <a name="add-microsoft-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Microsoft Intune ile Windows 10 cihazlarına Microsoft 365 uygulamaları ekleme
 
-Uygulamaları atama, izleme, yapılandırma veya korumadan önce bunları Intune’a eklemelisiniz. Kullanılabilir [uygulama türlerinden](apps-add.md#app-types-in-microsoft-intune) biri, Windows 10 cihazları için Office 365 uygulamalarıdır. Intune 'da bu uygulama türünü seçerek, Windows 10 çalıştıran yönettiğiniz cihazlara Office 365 uygulamaları atayabilir ve yükleyebilirsiniz. Ayrıca, lisanslarınız varsa Microsoft Project Online masaüstü istemcisi ve Microsoft Visio Online Plan 2 için de uygulamalar atayabilir ve yükleyebilirsiniz. Kullanılabilir Office 365 uygulamaları, Azure 'daki Intune konsolundaki uygulamalar listesinde tek bir girdi olarak görüntülenir.
+Uygulamaları atama, izleme, yapılandırma veya korumadan önce bunları Intune’a eklemelisiniz. Kullanılabilir [uygulama türlerinden](apps-add.md#app-types-in-microsoft-intune) biri, Windows 10 cihazları için Microsoft 365 uygulamalardır. Intune 'da bu uygulama türünü seçerek, Windows 10 çalıştıran yönettiğiniz cihazlara Microsoft 365 uygulamaları atayabilir ve yükleyebilirsiniz. Ayrıca, lisanslarınız varsa Microsoft Project Online masaüstü istemcisi ve Microsoft Visio Online Plan 2 için de uygulamalar atayabilir ve yükleyebilirsiniz. Kullanılabilir Microsoft 365 uygulamalar, Azure 'da Intune konsolundaki uygulamalar listesinde tek bir girdi olarak görüntülenir.
 
 > [!NOTE]
 > Microsoft Office 365 ProPlus, **enterprise Microsoft 365 Apps**olarak yeniden adlandırıldı. Belgelerimizde, yaygın olarak **Microsoft 365 uygulamalar**olarak başvuracağız.
@@ -37,15 +37,15 @@ Uygulamaları atama, izleme, yapılandırma veya korumadan önce bunları Intune
 ## <a name="before-you-start"></a>Başlamadan önce
 
 > [!IMPORTANT]
-> Son kullanıcının cihazında .msi Office uygulamaları varsa, bu uygulamaları güvenle kaldırmak için **MSI'yi kaldır** özelliğini kullanmalısınız. Aksi takdirde, Intune tarafından teslim edilen Office 365 uygulamaları yüklenemez.
+> Son kullanıcının cihazında .msi Office uygulamaları varsa, bu uygulamaları güvenle kaldırmak için **MSI'yi kaldır** özelliğini kullanmalısınız. Aksi halde, Intune tarafından sunulan Microsoft 365 uygulamalar yüklenemeyecektir.
 
 - Bu uygulamaları dağıtacağınız cihazların Windows 10 Creators Update veya üzerini çalıştırıyor olması gerekir.
 - Intune, yalnızca Microsoft 365 Apps paketinden Office uygulamaları eklemeyi destekler.
 - Intune uygulama paketini yüklerken herhangi bir Office uygulaması açıksa yükleme başarısız olabilir ve kullanıcılar kaydedilmeyen dosyalardaki veriler kaybedebilir.
 - Bu yükleme yöntemi Windows Home, Windows Team, Windows holographic veya Windows holographic for Business cihazlarında desteklenmez.
-- Intune, daha önce Intune ile Office 365 uygulamalarını dağıttığınız bir cihaza Microsoft Mağazası’ndan Office 365 masaüstü uygulamalarının (Office Centennial uygulamaları olarak bilinir) yüklenmesini desteklemez. Bu yapılandırmayı yüklerseniz veri kaybına veya bozulmasına neden olabilir.
+- Intune, Intune ile Microsoft 365 uygulamalarını zaten dağıttığınız bir cihaza Microsoft Store (Office Centennial uygulamaları olarak bilinir) Microsoft 365 masaüstü uygulamalarının yüklenmesini desteklemez. Bu yapılandırmayı yüklerseniz veri kaybına veya bozulmasına neden olabilir.
 - Birden fazla gerekli veya kullanılabilir uygulama ataması aynı anda çalışmaz. Bir uygulama ataması, kendinden önce yüklenmiş diğer uygulama atamalarının üzerine yazar. Örneğin ilk Office uygulamaları kümesi Word’ü barındırıyor ve sonraki barındırmıyorsa, Word kaldırılır. Bu koşul Visio ve Project uygulamaları için geçerli değildir.
-- Birden çok Office 365 dağıtımı şu anda desteklenmiyor. Cihaza yalnızca bir dağıtım gönderilir.
+- Birden çok Microsoft 365 dağıtımı şu anda desteklenmiyor. Cihaza yalnızca bir dağıtım gönderilir.
 - **Office sürümü** -office 'in 32-bit veya 64 bit sürümünü atamak isteyip istemediğinizi seçin. 32 bit sürümünü hem 32 bit hem de 64 bit cihazlara yükleyebilirsiniz ancak 64 bit sürümünü yalnızca 64 bit cihazlara yükleyebilirsiniz.
 - **Son kullanıcı cihazlarından MSI’yi kaldırma** - Son kullanıcı cihazlarında önceden var olan Office .MSI uygulamalarını kaldırmak isteyip istemediğinizi belirtin. Önceden var olan varsa yükleme başarılı olmayacaktır. Son Kullanıcı cihazlarındaki MSI uygulamaları. Kaldırılacak uygulamalar, **Uygulama Paketini Yapılandır** altında yükleme için seçilen uygulamalarla sınırlı değildir çünkü tüm Office (MSI) uygulamalarını son kullanıcı cihazından kaldıracaktır. Daha fazla bilgi için bkz. [microsoft 365 uygulamaları yükseltilirken Office 'in var olan MSI sürümlerini kaldırma](/deployoffice/upgrade-from-msi-version). Intune son kullanıcı makinenize Office’i yeniden yüklediğinde, son kullanıcılar önceki .MSI Office yüklemeleri ile aldıkları aynı dil paketini otomatik olarak alır.
 
@@ -92,7 +92,7 @@ Bu adımda, uygulama paketi hakkında bilgi sağlarsınız. Bu bilgiler, Intune'
    - **Office uygulamaları seçin**: açılan listeden uygulamalar ' ı seçerek cihazlara atamak Istediğiniz standart Office uygulamalarını seçin.
    - **Diğer Office uygulamalarını (lisans gerekir) seçin**: cihazlara atamak istediğiniz ve açılır listedeki uygulamaları seçerek lisanslarınızın olduğu diğer Office uygulamalarını seçin. Bu uygulamalar Microsoft Project Online masaüstü istemcisi ve Microsoft Visio Online Plan 2 gibi lisanslı uygulamaları içerir.
    - **Mimari**: Microsoft 365 uygulamalarının **32-bit** veya **64 bit** sürümünü atamak isteyip istemediğinizi seçin. 32 bit sürümünü hem 32 bit hem de 64 bit cihazlara yükleyebilirsiniz ancak 64 bit sürümünü yalnızca 64 bit cihazlara yükleyebilirsiniz.
-    - **Güncelleştirme Kanalı**: Office’in cihazlarda nasıl güncelleştirileceğini seçin. Çeşitli güncelleştirme kanalları hakkında bilgi için bkz. [Office 365 ProPlus güncelleştirme kanallarına genel bakış](/DeployOffice/overview-of-update-channels-for-office-365-proplus). Aşağıdakilerden birini seçin:
+    - **Güncelleştirme Kanalı**: Office’in cihazlarda nasıl güncelleştirileceğini seçin. Çeşitli güncelleştirme kanalları hakkında bilgi için bkz. [Enterprise for Microsoft 365 Apps için güncelleştirme kanallarına genel bakış](/DeployOffice/overview-of-update-channels-for-office-365-proplus). Aşağıdakilerden birini seçin:
         - **Aylık olarak**
         - **Aylık (Hedeflenen)**
         - **Yarı Yıllık**
@@ -111,7 +111,7 @@ Bu adımda, uygulama paketi hakkında bilgi sağlarsınız. Bu bilgiler, Intune'
     - **Paylaşımlı bilgisayar etkinleştirme kullanın**: Birden çok kullanıcı tek bir bilgisayarı kullanıyorsa bu seçeneği belirtin. Daha fazla bilgi için bkz. [Microsoft 365 uygulamalar için paylaşılan bilgisayar etkinleştirmeye genel bakış](/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Uygulama son kullanıcı lisans sözleşmesini otomatik kabul edin**: Son kullanıcıların lisans sözleşmesini kabul etmesinin gerekli olmasını istemiyorsanız bunu seçin. Ardından Intune, sözleşmeyi otomatik olarak kabul eder.
     - **Diller**: Office, son kullanıcının bilgisayarına Windows ile yüklenmiş olan tüm dillerde otomatik olarak yüklenir. Uygulama paketiyle birlikte ilave diller yüklemek istiyorsanız bunu seçin. <p></p>
-        Intune üzerinden yönetilen Office 365 Pro Plus uygulamaları için ek diller dağıtabilirsiniz. Kullanılabilir diller listesi, dil paketinin **Tür** bilgisini içerir (çekirdek, kısmı ve yazım denetleme). Azure Portal **Microsoft Intune**  >  **uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin. **Uygulama Ekle** bölmesinin **uygulama türü** listesinde, **Microsoft 365 uygulamalar**altında **Windows 10** ' u seçin. **Uygulama paketi ayarları** bölmesinde **Diller** ' i seçin. Daha fazla bilgi için bkz. [Microsoft 365 uygulamalarda dil dağıtmaya genel bakış](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        Intune ile yönetilen Microsoft 365 uygulamalar için ek diller dağıtabilirsiniz. Kullanılabilir diller listesi, dil paketinin **Tür** bilgisini içerir (çekirdek, kısmı ve yazım denetleme). Azure Portal **Microsoft Intune**  >  **uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin. **Uygulama Ekle** bölmesinin **uygulama türü** listesinde, **Microsoft 365 uygulamalar**altında **Windows 10** ' u seçin. **Uygulama paketi ayarları** bölmesinde **Diller** ' i seçin. Daha fazla bilgi için bkz. [Microsoft 365 uygulamalarda dil dağıtmaya genel bakış](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. **İleri** ' ye tıklayarak **kapsam etiketleri** sayfasını görüntüleyin.
 
 ## <a name="step-2---option-2-configure-app-suite-using-xml-data"></a>2. adım-(**2. seçenek**) App SUITE 'i XML verilerini kullanarak yapılandırma 
@@ -161,25 +161,25 @@ Intune 'dan dağıtım ilkesi, [Office yapılandırma hizmeti sağlayıcısı (C
 
 ![Yükleme Başlatıcısı dosyalarını çalıştırmak için tıklayın](./media/apps-add-office365/clicktorun-files.png)
 
-O365 paketinin atanması gerekli olarak yapılandırılmışsa yükleme sessiz modda olur. Yükleme başarılı olduktan sonra indirilen yükleme dosyaları silinir. Atama **kullanılabilir**olarak yapılandırılmışsa, son kullanıcıların yüklemeyi el ile tetikleyebilmesi için Office uygulamaları şirket portalı uygulamasında görüntülenir.
+Microsoft 365 ataması gerekli olarak yapılandırılırsa yükleme sessiz modda olur. Yükleme başarılı olduktan sonra indirilen yükleme dosyaları silinir. Atama **kullanılabilir**olarak yapılandırılmışsa, son kullanıcıların yüklemeyi el ile tetikleyebilmesi için Office uygulamaları şirket portalı uygulamasında görüntülenir.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 Intune, Office [365 CDN](/office365/enterprise/content-delivery-networks)'yi kullanarak Office 365 ProPlus 'ı istemci bilgisayarlarınıza indirip dağıtmak Için [Office dağıtım aracı](/DeployOffice/overview-of-the-office-2016-deployment-tool) 'nı kullanır. Ağ yapılandırmanızın, istemcilerin, gereksiz gecikme süresine ulaşmaktan kaçınmak için merkezi proxy 'ler aracılığıyla CDN trafiğini yönlendirmek yerine doğrudan CDN 'ye erişmesine izin verdiğinden emin olmak için, [Office 365 uç noktalarını yönetme](/office365/enterprise/managing-office-365-endpoints) bölümünde özetlenen en iyi yöntemlere başvurun.
 
-Yükleme veya çalışma zamanı sorunlarıyla karşılaşırsanız, hedeflenen bir cihazda [Office 365 için Microsoft desteği ve Kurtarma Yardımcısı](https://diagnostics.office.com) 'nı çalıştırın.
+Yükleme veya çalışma zamanı sorunlarıyla karşılaşırsanız, hedeflenen bir cihazda [Microsoft 365 için Microsoft desteği ve kurtarma yardımcısını](https://diagnostics.office.com) çalıştırın.
 
 ### <a name="additional-troubleshooting-details"></a>Ek sorun giderme ayrıntıları
 
-O365 uygulamalarını bir cihaza yükleyemezseniz, sorunun Intune ile ilgili olup olmadığını ve işletim sistemi/ofis ile ilgili olduğunu tanımlamalısınız. *Microsoft Office* iki klasörü ve cihazın *Program dosyaları* dizininde görünen *Microsoft Office 15* ' i görürseniz, Intune 'un dağıtımı başarıyla başlattığını doğrulayabilirsiniz. *Program dosyaları*altında görüntülenen iki klasörü göremiyorsanız, aşağıdaki durumları onaylamanız gerekir:
+Microsoft 365 uygulamalarını bir cihaza yükleyemezseniz, sorunun Intune ile ilgili mi yoksa işletim sistemi/ofis ile ilgili mi olduğunu tanımlamalısınız. *Microsoft Office* iki klasörü ve cihazın *Program dosyaları* dizininde görünen *Microsoft Office 15* ' i görürseniz, Intune 'un dağıtımı başarıyla başlattığını doğrulayabilirsiniz. *Program dosyaları*altında görüntülenen iki klasörü göremiyorsanız, aşağıdaki durumları onaylamanız gerekir:
 
 - Cihaz Microsoft Intune 'ye düzgün şekilde kaydedilir. 
 - Cihazda etkin bir ağ bağlantısı var. Cihaz uçak modundaysa, kapalıysa veya hizmeti olmayan bir konumdaysa, ağ bağlantısı kurulana kadar ilke uygulanmaz.
-- Hem Intune hem de Office 365 ağ gereksinimleri karşılanır ve ilgili IP aralıkları aşağıdaki makalelere göre erişilebilir:
+- Hem Intune hem de Microsoft 365 ağ gereksinimleri karşılanır ve ilgili IP aralıkları aşağıdaki makalelere göre erişilebilir:
 
   - [Intune ağ yapılandırması gereksinimleri ve bant genişliği](/intune/network-bandwidth-use)
   - [Office 365 URL’leri ve IP adres aralıkları](/office365/enterprise/urls-and-ip-address-ranges)
 
-- Doğru gruplara O365 uygulama paketi atanmıştır. 
+- Microsoft 365 App Suite 'e doğru gruplar atandı. 
 
 Ayrıca, *C:\Program Files\Microsoft Office\Updates\Download*dizininin boyutunu izleyin. Intune bulutlarından indirilen yükleme paketi bu konumda depolanır. Boyut artmaz veya yalnızca çok yavaş artışlar durumunda ağ bağlantısının ve bant genişliğinin iki kez denetlenmesi önerilir.
 

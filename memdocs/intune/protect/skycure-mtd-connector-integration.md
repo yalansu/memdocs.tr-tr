@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f6b117855430af281db7087d77f53bb0e11c61
-ms.sourcegitcommit: 678104677ad36b789630befdc5e0f1efc572c14b
+ms.openlocfilehash: 3d7ba1f42ebffa8580e368d89ea9720e544e0063
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86137424"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994013"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Symantec Endpoint Protection Mobile'ın Intune ile tümleştirmesini ayarlama
 
@@ -138,7 +138,7 @@ SEP Mobile, Mobile Threat Defense hizmetini çalıştıran cihazları Azure AD g
 
     ![Active Directory iOS/ıpados uygulaması eklemeyi gösteren resim](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
-7. Dizini yöneten Office 365 hesabının Azure Active Directory kimlik bilgilerini kullanarak oturum açın.
+7. Dizini yöneten Microsoft 365 hesabının Azure Active Directory kimlik bilgilerini kullanarak oturum açın.
 
 8. Azure Active Directory için SEP mobil iOS/ıpados uygulamasını eklemek için **kabul et** düğmesini seçin.
 

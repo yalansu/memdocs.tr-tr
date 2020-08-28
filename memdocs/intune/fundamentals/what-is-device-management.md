@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: microsoft-intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2b7deb7d3c09a41a16b1ebf3da26075f0cc70eb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c7d5583addc4e76f5af0ea0b9780f20d8fa78a2c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915356"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996206"
 ---
 # <a name="device-management-overview"></a>Cihaz yönetimine genel bakış
 
@@ -52,7 +52,7 @@ Intune ile, her kişi için birden çok cihazı ve iOS/ıpados, macOS, Android v
 **[Yaygın senaryolar](common-scenarios.md)** Intune'un mobil cihazlarla çalışılırken sık karşılaşılan soruları nasıl yanıtladığını görmek için harika bir kaynaktır. Burada aşağıdakilerle ilgili senaryolar bulabilirsiniz:  
 
 - Şirket içi Exchange ile e-postaların korunması
-- Office 365'e emniyetli ve güvenli bir şekilde erişme
+- Güvenli ve güvenli Microsoft 365 erişme
 - Kişisel cihazları kurumsal kaynaklara erişmek için kullanma
 
 Intune hakkında daha fazla bilgi için bkz. [Intune nedir](what-is-intune.md).
@@ -69,7 +69,7 @@ Bulut-Configuration Manager iliştirme hakkında daha fazla bilgi için bkz. [or
 
 ## <a name="integration-with-secure-and-protect-services"></a>Güvenli tutma ve koruma hizmetleri ile tümleştirme
 
-Cihaz yönetim çözümlerinin başlıca görevlerinden biri güvenlik ve koruma sağlamaktır. Intune bu görevi gerçekleştirmek için başka hizmetlerle mükemmel bir şekilde tümleşir. Örnek:
+Cihaz yönetim çözümlerinin başlıca görevlerinden biri güvenlik ve koruma sağlamaktır. Intune bu görevi gerçekleştirmek için başka hizmetlerle mükemmel bir şekilde tümleşir. Örneğin:
 
 - **Microsoft 365** yaygın BT görevlerini basitleştirmek için temel bir bileşenidir. Microsoft 365 Yönetim merkezinde, kullanıcılar oluşturur ve grupları yönetirsiniz. Intune, Azure AD ve daha fazlası gibi diğer hizmetlere da erişebilirsiniz.
 

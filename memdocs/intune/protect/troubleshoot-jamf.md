@@ -17,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f8d2439b1a3c6255a6b63c35cd09801da4ca5d0
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 492c6dd82e0b2c016da77b8dd6f10d9e3d4b5db6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914727"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993070"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>JAMF Pro ile Microsoft Intune tümleştirme sorunlarını giderme
 
@@ -38,7 +38,7 @@ Sorun gidermeye başlamadan önce, sorunu açıklığa kavuşturmak ve çözüm 
 - Intune ile JAMF Pro tümleştirmesini nasıl yapılandırdığınıza bağlı olarak, aşağıdaki makalelerden önkoşulları gözden geçirin:
   - [JAMF Pro 'Yu Intune ile tümleştirme için JAMF bulut bağlayıcısını kullanın](conditional-access-jamf-cloud-connector.md)
   - [JAMF Pro 'Yu Intune ile tümleştirme](conditional-access-integrate-jamf.md#prerequisites)
-- Tüm kullanıcıların Microsoft Intune ve Microsoft AAD Premium P1 lisanslarına sahip olması gerekir
+- Tüm kullanıcılar Microsoft Intune ve Microsoft Azure AD Premium P1 lisanslarına sahip olmalıdır
 - JAMF Pro konsolunda Microsoft Intune tümleştirme izinlerine sahip bir kullanıcı hesabına sahip olmanız gerekir.
 - Azure 'da genel yönetici izinlerine sahip bir kullanıcı hesabına sahip olmanız gerekir.
 
@@ -85,7 +85,7 @@ Bir cihaz JAMF Pro *yanıt vermiyor* olarak işaretlendikten sonra, cihazın kay
 
 ### <a name="mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app"></a>Mac cihazları bir uygulamayı açtığınızda Anahtarlık oturum açma için istemde bulun  
 
-Intune ve JAMF Pro tümleştirmesini yapılandırdıktan ve koşullu erişim ilkeleri dağıttıktan sonra, JAMF Pro alma ile yönetilen cihazların kullanıcıları takımlar, Outlook ve Azure AD kimlik doğrulaması gerektiren diğer uygulamalar gibi Microsoft Office 365 uygulamalarını açarken parola ister. 
+Intune ve JAMF Pro tümleştirmesini yapılandırdıktan ve koşullu erişim ilkeleri dağıttıktan sonra, JAMF Pro alma ile yönetilen cihazların kullanıcıları takımlar, Outlook ve Azure AD kimlik doğrulaması gerektiren diğer uygulamalar gibi Microsoft 365 uygulamalar açarken parola ister. 
 
 Örneğin, aşağıdaki örneğe benzer bir metin istemi Microsoft ekipleri açılırken görünür:
 

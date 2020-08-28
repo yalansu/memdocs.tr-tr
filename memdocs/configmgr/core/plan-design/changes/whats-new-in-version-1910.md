@@ -10,12 +10,12 @@ ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6406a208de448e40e1d686440f41610266cde042
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3c99716070bf32ae27a7bd8b7a114d8b920814e2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700308"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993480"
 ---
 # <a name="whats-new-in-version-1910-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1910 ' deki yenilikler
 
@@ -134,7 +134,7 @@ Daha fazla bilgi için bkz. [Microsoft bağlı önbelleği Configuration Manager
 
 Artık Uyumluluk ilkesi değerlendirme kuralı olarak özel yapılandırma temellerinin değerlendirmesini ekleyebilirsiniz. Bir yapılandırma temeli oluşturduğunuzda veya düzenlediğinizde, artık **Bu temeli uyumluluk ilkesi değerlendirmesi kapsamında değerlendir** seçeneğini kullanabilirsiniz. Bir uyumluluk ilkesi kuralı eklediğinizde veya düzenlediğinizde, **Uyumluluk ilkesi değerlendirmesi ' nde yapılandırılmış taban çizgileri ekle**adlı bir koşulunuz vardır.
 
-Ortak yönetilen cihazlar için ve Intune 'u, genel uyumluluk durumunun bir parçası olarak Configuration Manager uyumluluk değerlendirmesi sonuçları alacak şekilde yapılandırdığınızda, bu bilgiler Azure Active Directory gönderilir. Daha sonra bunu, Office 365 kaynaklarınıza koşullu erişim için kullanabilirsiniz.
+Ortak yönetilen cihazlar için ve Intune 'u, genel uyumluluk durumunun bir parçası olarak Configuration Manager uyumluluk değerlendirmesi sonuçları alacak şekilde yapılandırdığınızda, bu bilgiler Azure Active Directory gönderilir. Daha sonra, Microsoft 365 kaynaklarınıza koşullu erişim için kullanabilirsiniz.
 
 Daha fazla bilgi için bkz. [Uyumluluk ilkesi değerlendirmesinin bir parçası olarak özel yapılandırma temelleri ekleme](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 

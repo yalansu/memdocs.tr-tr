@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f4dafeacb2aabd4d2d2241a26ce52e55c08ce04
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: fdb3a3defbaab5f952a2a5636a30f9734418f841
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915747"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993327"
 ---
 # <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Intune kullanarak Surface Hub cihazlarda özellikleri izin vermek veya kısıtlamak için Windows 10 Team ayarları
 
@@ -43,7 +43,7 @@ Bu ayarlar [Surçok yönlü hub CSP](/windows/client-management/mdm/surfacehub-c
 - **Hoş geldiniz ekranı arka plan resmi URL 'si**: Windows 10 Team cihazlarının **hoş geldiniz** ekranında özel bir arka plan olarak istediğiniz BIR. png görüntüsünün URL 'sini girin. Görüntünün PNG biçiminde olması ve URL ile başlaması gerekir `https://` .
 - **Otomatik başlatma Connect**: **Block** , bir projeksiyon başlatıldığında Connect uygulamasının otomatik olarak açılmasını önler. Engellenirse, kullanıcılar Connect uygulamasını hub ayarlarından el ile başlatabilir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Oturum açma önerileri**: **blok** , oturum açma iletişim kutusunun zamanlanan toplantılardan davetlerle oto doldurmasını devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
-- **Toplantılarım ve dosyalar**: **Engelle** , Başlat menüsündeki **toplantılarımı ve dosyalar** özelliğini devre dışı bırakır. Bu özellik, Office 365 ' deki oturum açan kullanıcının toplantılarını ve dosyalarını gösterir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Toplantılarım ve dosyalar**: **Engelle** , Başlat menüsündeki **toplantılarımı ve dosyalar** özelliğini devre dışı bırakır. Bu özellik Microsoft 365 oturum açan kullanıcının toplantılarını ve dosyalarını gösterir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
 ## <a name="azure-operational-insights"></a>Azure operasyonel içgörüler
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5ed7b8c0e8a4953dd2b125fbaf3e63ce74873a7
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: 46e2f716808f5f3c91e44932572146d04c259484
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217490"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993911"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Kılavuzlu senaryo-güvenli Microsoft Office mobil uygulamalar
 
@@ -52,7 +52,7 @@ Kullanıcıların korumasız konumlarda iş dosyalarını kaydetmesini engelleme
 - **Kuruluş verilerinin kopyalarını kaydetme**ve **kesme, kopyalama ve yapıştırmayı kısıtlama**gibi veri konumu değiştirme ilkeleri.
 - Erişim için basit PIN gerektirmek ve yönetilen uygulamaların jailbreak uygulanmış veya kök erişim izni verilmiş cihazlarda çalışmasını engellemek için ilke ayarlarına erişin.
 
-Uygulama tabanlı koşullu erişim ve istemci uygulama yönetimi Exchange online ve diğer Office 365 hizmetlerine yalnızca Intune uygulama koruma ilkelerini destekleyen istemci uygulamaların erişmesine izin vererek bir güvenlik katmanı ekler.
+Uygulama tabanlı koşullu erişim ve istemci uygulama yönetimi, yalnızca Intune uygulama koruma ilkelerini destekleyen istemci uygulamalarının Exchange Online ve diğer Microsoft 365 hizmetlerine erişebilmesini sağlamak için bir güvenlik katmanı ekler.
 
 Yalnızca Microsoft Outlook uygulamasının Exchange Online 'a erişmesine izin vermek için iOS/ıpados ve Android 'teki yerleşik posta uygulamalarını engelleyebilirsiniz. Ayrıca, Intune uygulama koruma ilkeleri, SharePoint Online 'a erişimi olmayan uygulamaları engelleyebilirsiniz.
 
@@ -60,7 +60,7 @@ Bu örnekte, yönetici Outlook uygulamasına uygulama koruma ilkeleri uygulamı�
 
 ![Outlook uygulaması koşullu erişim işlem akışı](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-02.png)
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Intune yönetici izinlerini takip etmeniz gerekir:
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53d267ec6b97579d256b11744768e6bdb7344328
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: faa217bd5e56a304b80298f2039ad3c541612e54
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910154"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992812"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Microsoft Intune 'de Grup İlkesi ayarlarını yapılandırmak için Windows 10 şablonlarını kullanın
 
@@ -136,6 +136,6 @@ Bu şablonlarda binlerce ayar mevcuttur. Belirli ayarları bulmayı kolaylaştı
 
 Şablon oluşturuldu, ancak henüz bir şey yapmamış olabilir. Sonra, [şablonu (profil olarak da bilinir) atayın](device-profile-assign.md) ve [durumunu izleyin](device-profile-monitor.md).
 
-[Yönetim şablonlarını kullanarak Office 365](administrative-templates-update-office.md)' i güncelleştirin.
+[Yönetim şablonlarını kullanarak Microsoft 365](administrative-templates-update-office.md)güncelleştirin.
 
 [Öğretici: Windows 10 cihazlarında ADMX şablonları ve Microsoft Intune Grup İlkesi yapılandırmak için bulutu kullanın](tutorial-walkthrough-administrative-templates.md)

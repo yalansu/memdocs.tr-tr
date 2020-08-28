@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic;seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e700af4ef48f231f55fe515dadc2e852734d9ad3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5c0aadb15587822ca2500ec477b6264ce4e96ed2
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915560"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993531"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Microsoft Intune cihaz kaydı sorunlarını giderme
 
@@ -121,7 +121,7 @@ Cihaz sınırlarına ulaşmaktan kaçınmak için, eski cihaz kayıtlarını kal
 **Sorun:** Bu sorun, ADFS'nize ikinci bir doğrulanmış etki alanı eklediğinizde oluşabilir. İkinci etki alanının kullanıcı asıl adı (UPN) sonekini taşıyan kullanıcılar portallarda oturum açamayabilir veya cihaz kaydedemeyebilir.
 
 
-<strong>Çözüm:</strong> Aşağıdaki durumlarda Microsoft Office 365 Müşterilerinin her sonek için ayrı bir AD FS 2.0 Federasyon Hizmeti'nin örneği dağıtmaları gerekir:
+<strong>Çözüm:</strong> Microsoft 365 müşteriler, her sonek için AD FS 2,0 Federasyon Hizmeti ayrı bir örneğini dağıtmaları gerekir:
 - AD FS 2.0 aracılığıyla çoklu oturum açma (SSO) kullanma
 - kuruluşlarında kullanıcı UPN sonekleri için birden çok en üst düzey etki alanına sahip olma (örneğin @contoso.com veya @fabrikam.com).
 
@@ -288,7 +288,7 @@ Kaydedildikten sonra cihazlar, iyi duruma geri döner ve şirket kaynaklarına y
 ### <a name="verify-ws-trust-13-is-enabled"></a>WS-Trust 1.3’ün etkinleştirildiğini doğrulama
 **Sorun** Otomatik cihaz kaydı (ADE) iOS/ıpados cihazları kaydedilemiyor
 
-Kullanıcı benzeşimi ile ADE cihazlarını kaydetme, Kullanıcı belirteçleri istemek için WS-Trust 1,3 Kullanıcı adı/karma uç noktasının etkinleştirilmesini gerektirir. Active Directory bu uç noktayı varsayılan olarak etkinleştirir. Etkinleştirilmiş uç noktaların bir listesini almak için Get-AdfsEndpoint PowerShell cmdlet'ini kullanın ve trust/13/UsernameMixed uç noktasını arayın. Örnek:
+Kullanıcı benzeşimi ile ADE cihazlarını kaydetme, Kullanıcı belirteçleri istemek için WS-Trust 1,3 Kullanıcı adı/karma uç noktasının etkinleştirilmesini gerektirir. Active Directory bu uç noktayı varsayılan olarak etkinleştirir. Etkinleştirilmiş uç noktaların bir listesini almak için Get-AdfsEndpoint PowerShell cmdlet'ini kullanın ve trust/13/UsernameMixed uç noktasını arayın. Örneğin:
 
 ```powershell
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"

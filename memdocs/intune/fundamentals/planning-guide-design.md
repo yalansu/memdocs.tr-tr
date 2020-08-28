@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 587e89078d0fc8eaca327017407cc81f4f4719c8
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6a1f3f4dc6187616d007c0ab9c97072bc3970c0a
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914506"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996376"
 ---
 # <a name="create-a-design"></a>Tasarım oluşturma
 
@@ -134,7 +134,7 @@ Aşağıda, yaygın dış bağımlılıkları daha ayrıntılı bir şekilde ara
 
 ### <a name="identity"></a>Kimlik
 
-Kuruluşunuzda bulunan ve bir cihazı kaydeden kullanıcılar kimlik aracılığıyla tanımlanır. Intune, kullanıcı kimlik sağlayıcısı olarak Azure Active Directory (Azure AD) gerektirir. Bu hizmeti zaten kullanıyorsanız bulutta varolan kimliğinizi kullanabilirsiniz. Ayrıca Azure AD Connect, şirket içi kullanıcı kimliklerinizi Microsoft bulut hizmetleri ile eşitlemek için önerilen araçtır. Kuruluşunuz zaten Office 365 kullanıyorsa, Intune 'un aynı Azure AD ortamını kullanması önemlidir.
+Kuruluşunuzda bulunan ve bir cihazı kaydeden kullanıcılar kimlik aracılığıyla tanımlanır. Intune, kullanıcı kimlik sağlayıcısı olarak Azure Active Directory (Azure AD) gerektirir. Bu hizmeti zaten kullanıyorsanız bulutta varolan kimliğinizi kullanabilirsiniz. Ayrıca Azure AD Connect, şirket içi kullanıcı kimliklerinizi Microsoft bulut hizmetleri ile eşitlemek için önerilen araçtır. Kuruluşunuz zaten Microsoft 365 kullanıyorsa, Intune 'un aynı Azure AD ortamını kullanması önemlidir.
 
 Aşağıdaki Intune kimlik gereksinimleri hakkında daha fazla bilgi edinin:
 
@@ -194,7 +194,7 @@ Ortamda hangi cihazların olacağını bilmeniz ve tasarımınızı oluştururke
 
 ### <a name="devices"></a>Cihazlar
 
-Intune, kurumsal verilerin güvenliğini sağlamak ve son kullanıcılara daha fazla konumda çalışma olanağı sunmak için mobil cihazları yönetir. Intune birçok cihaz platformunu destekler, bu nedenle cihazları ve işletim sistemi platformlarını ve kuruluşunuzun tasarımında desteklenecek sürümleri belgeetmenizi öneririz. Örnek:
+Intune, kurumsal verilerin güvenliğini sağlamak ve son kullanıcılara daha fazla konumda çalışma olanağı sunmak için mobil cihazları yönetir. Intune birçok cihaz platformunu destekler, bu nedenle cihazları ve işletim sistemi platformlarını ve kuruluşunuzun tasarımında desteklenecek sürümleri belgeetmenizi öneririz. Örneğin:
 
 | **Cihaz platformu** | **İşletim Sistemi Sürümleri** |
 |:---:|:---:|

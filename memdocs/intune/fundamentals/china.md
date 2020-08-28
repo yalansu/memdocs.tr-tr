@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d652bea6e60417654ac06ebc1d0baa300f229a05
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 34f1aeb9ec265b7a6e09135bc931574732f5816d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915390"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994217"
 ---
 # <a name="intune-operated-by-21vianet-in-china"></a>Çin'de 21Vianet tarafından çalıştırılan Intune  
 
@@ -55,13 +55,13 @@ Microsoft, hizmetin kendisini işlemez. 21Vianet, hizmetin teslimini sağlar, sa
 
 ## <a name="you-control-customer-data"></a>Müşteri verilerini kontrol edersiniz
 
-Microsoft Azure, Intune, Office 365 ve 21Vianet tarafından çalıştırılan Power BI, verileriniz üzerinde tam denetime sahip olursunuz:
+21Vianet tarafından çalıştırılan Microsoft Azure, Intune, Microsoft 365 ve Power BI verileriniz üzerinde tam denetime sahip olursunuz:
 - Müşteri verilerinin nerede bulunduğunu bilirsiniz.
 - Müşteri verilerinize erişimi kontrol edersiniz.
 - Hizmeti bıraktığınızda müşteri verilerinizi denetlersiniz.
 - Müşteri verilerinizin güvenliğini denetleme seçenekleriniz vardır.
 
-Microsoft Azure, Intune, Office 365 ve 21Vianet tarafından çalıştırılan Power BI, verilerinizin sahibidir:
+Microsoft Azure, Intune, Microsoft 365 ve 21Vianet tarafından çalıştırılan Power BI, verilerinizin sahibidir:
 - 21Vianet, müşteri verilerini reklamcılık için kullanmaz.
 - Müşteri verilerinize kimlerin erişebileceğini denetlersiniz.
 - Her müşterinin verisini ayırmak için mantıksal yalıtım kullanıyoruz.

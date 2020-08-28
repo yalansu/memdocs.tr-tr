@@ -1,7 +1,7 @@
 ---
-title: Microsoft Intune kullanarak macOS cihazlarına Office 365 uygulamalarını yüklemeyin
+title: Microsoft Intune kullanarak macOS cihazlarına Microsoft 365 uygulamaları yüklemek
 titleSuffix: ''
-description: macOS cihazlarında Office 365 uygulamalarını yüklemek için Microsoft Intune’u nasıl kullanabileceğinizi öğrenin.
+description: MacOS cihazlarına Microsoft 365 uygulamaları yüklemek için Microsoft Intune nasıl kullanabileceğinizi öğrenin.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14a4d66cfd5ac0ee3c0938e96794ed12d5b5fde6
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 2eb8ea29739e2478df68e3b9926f111f2ee8d0e4
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83989509"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996495"
 ---
-# <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Microsoft Intune ile macOS cihazlara Office 365 atama
+# <a name="assign-microsoft-365-to-macos-devices-with-microsoft-intune"></a>Microsoft Intune ile macOS cihazlarına Microsoft 365 atama
 
-Bu uygulama türü, macOS cihazlara Office 365 2016 uygulamaları atamanızı kolaylaştırır. Bu uygulama türünü kullanarak Word, Excel, PowerPoint, Outlook, OneNote ve takımlar yükleyebilirsiniz. Uygulamaların daha güvende ve güncel tutulabilmesi amacıyla uygulamalar, Microsoft AutoUpdate (MAU) ile gelir. Intune konsolundaki uygulamalar listesinde tek bir uygulama olarak görüntülenmesini istediğiniz uygulamalar.
+Bu uygulama türü, macOS cihazlarına Microsoft 365 uygulamaları atamanızı kolaylaştırır. Bu uygulama türünü kullanarak Word, Excel, PowerPoint, Outlook, OneNote ve takımlar yükleyebilirsiniz. Uygulamaların daha güvende ve güncel tutulabilmesi amacıyla uygulamalar, Microsoft AutoUpdate (MAU) ile gelir. Intune konsolundaki uygulamalar listesinde tek bir uygulama olarak görüntülenmesini istediğiniz uygulamalar.
 
 > [!NOTE]
 > Microsoft Office 365 ProPlus, **enterprise Microsoft 365 Apps**olarak yeniden adlandırıldı. Belgelerimizde, yaygın olarak **Microsoft 365 uygulamalar**olarak başvuracağız.
 
 ## <a name="before-you-start"></a>Başlamadan önce
 
-MacOS cihazlarına Office 365 uygulamaları eklemeye başlamadan önce aşağıdaki ayrıntıları anlayın:
+MacOS cihazlarına Microsoft 365 uygulamalar eklemeye başlamadan önce aşağıdaki ayrıntıları anlayın:
 
 - Bu uygulamaları dağıtacağınız cihazların macOS 10.10 veya üzerini çalıştırıyor olması gerekir.
 - Intune yalnızca Office Mac 2016 paketindeki Office uygulamalarının eklenmesini destekler.
@@ -45,7 +45,7 @@ MacOS cihazlarına Office 365 uygulamaları eklemeye başlamadan önce aşağıd
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türü seç** bölmesinin **Microsoft 365 uygulamalar** bölümünde **MacOS** ' u seçin.
-4. 4. **Seç**' e tıklayın. **Microsoft 365 ekleme uygulamaları** adımları görüntülenir.
+4. 4. **Seç**’e tıklayın. **Microsoft 365 ekleme uygulamaları** adımları görüntülenir.
 
 ## <a name="step-1---app-suite-information"></a>1. adım-uygulama paketi bilgileri
 
@@ -89,5 +89,5 @@ Intune 'da istemci uygulama bilgilerini kimlerin görebileceğini anlamak için 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Windows 10 cihazlarına Office 365 uygulamaları ekleme hakkında bilgi edinmek için, bkz. [Microsoft Intune Ile Windows 10 cihazlarına Microsoft 365 uygulamaları atama](apps-add-office365.md).
+- Windows 10 cihazlarına Microsoft 365 uygulamaları ekleme hakkında bilgi edinmek için, bkz. [Microsoft Intune Ile Windows 10 cihazlarına Microsoft 365 uygulamalar atama](apps-add-office365.md).
 - Kullanıcı gruplarında uygulama atamalarını dahil etme ve dışlama hakkında bilgi edinmek için, bkz. [Uygulama atamalarını dahil etme ve dışlama](apps-inc-exl-assignments.md).

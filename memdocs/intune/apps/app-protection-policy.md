@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09ab90a67a9a1e722d1417b356ab9a54d464501e
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ce01d71ecc928af48eb72da9235a7074623ff34c
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910630"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996767"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -52,7 +52,7 @@ Aşağıdaki özelliklere sahip cihazlarda çalıştırılan uygulamalar için u
 - **Herhangi bir mobil cihaz yönetimi çözümüne kayıtlı değil:** Bu cihazlar genellikle, Intune veya diğer MDM çözümlerinde yönetilmeyen veya kayıtlı olmayan, çalışana ait cihazlardır.
 
 > [!IMPORTANT]
-> Office 365 hizmetlerine bağlanan Office mobil uygulamaları için mobil uygulama yönetimi ilkeleri oluşturabilirsiniz. İOS için Outlook ve karma modern kimlik doğrulamasıyla etkinleştirilmiş Android için Intune uygulama koruma ilkeleri oluşturarak şirket içi Exchange posta kutularına erişimi de koruyabilirsiniz. Bu özelliği kullanmadan önce [iOS Için Outlook/ıpados ve Android gereksinimlerini](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)karşıladığınızdan emin olun. Uygulama koruma ilkeleri, şirket içi Exchange veya SharePoint hizmetlerine bağlanan diğer uygulamalar için desteklenmez.
+> Microsoft 365 hizmetlerine bağlanan Office mobil uygulamaları için mobil uygulama yönetimi ilkeleri oluşturabilirsiniz. İOS için Outlook ve karma modern kimlik doğrulamasıyla etkinleştirilmiş Android için Intune uygulama koruma ilkeleri oluşturarak şirket içi Exchange posta kutularına erişimi de koruyabilirsiniz. Bu özelliği kullanmadan önce [iOS Için Outlook/ıpados ve Android gereksinimlerini](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)karşıladığınızdan emin olun. Uygulama koruma ilkeleri, şirket içi Exchange veya SharePoint hizmetlerine bağlanan diğer uygulamalar için desteklenmez.
 
 ## <a name="benefits-of-using-app-protection-policies"></a>Uygulama koruma ilkelerini kullanmanın avantajları
 
@@ -171,7 +171,7 @@ Uygulama koruma ilkelerini Microsoft Office uygulamalarla kullanırken farkında
 [Outlook Mobile uygulamasını](https://products.office.com/outlook) kullanmak için ek gereksinimler şunlardır:
 
 - Son kullanıcının cihazında Outlook mobil uygulamasının yüklü olması gerekir.
-- Son kullanıcının, Azure Active Directory hesabına bağlı bir [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) posta kutusuna ve lisansına sahip olması gerekir.
+- Son kullanıcının, Azure Active Directory hesaplarına bağlı bir [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) posta kutusu ve lisansına sahip olması gerekir.
 
   >[!NOTE]
   > Outlook mobil uygulaması şu anda yalnızca Microsoft Exchange Online için Intune Uygulama Koruması’nı ve [Hibrit modern kimlik doğrulaması ile Exchange Server](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019)’ı destekler ve Exchange’deki Office 365 Özel’i desteklemez.
@@ -179,7 +179,7 @@ Uygulama koruma ilkelerini Microsoft Office uygulamalarla kullanırken farkında
 ### <a name="word-excel-and-powerpoint"></a>Word, Excel ve PowerPoint
 [Word, Excel ve PowerPoint](https://products.office.com/business/office) uygulamalarını kullanmak için ek gereksinimler şunlardır:
 
-- Son kullanıcının, Azure Active Directory hesaplarına bağlı [iş için Microsoft 365 uygulamaları veya kurumsal](https://products.office.com/business/compare-more-office-365-for-business-plans) bir lisansa sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Office 365 lisansları, bu [yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
+- Son kullanıcının, Azure Active Directory hesaplarına bağlı [iş için Microsoft 365 uygulamaları veya kurumsal](https://products.office.com/business/compare-more-office-365-for-business-plans) bir lisansa sahip olması gerekir. Aboneliğin mobil cihazlarda Office uygulamalarını içermesi gerekir ve [OneDrive İş](https://onedrive.live.com/about/business/)’te bir bulut depolama hesabını içerebilir. Microsoft 365 lisansları, bu [yönergeleri](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc)izleyerek [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com) atanabilir.
 
 - Son kullanıcının, "kuruluş verilerinin kopyalarını Kaydet" uygulama koruma ilkesi ayarının altında parçalı farklı kaydet işlevi kullanılarak yapılandırılmış bir yönetilen konumu olmalıdır. Örneğin, yönetilen konum OneDrive ise [OneDrive](https://onedrive.live.com/about/) uygulaması son kullanıcının Word, Excel veya PowerPoint uygulamasında yapılandırılmalıdır.
 
@@ -192,7 +192,7 @@ Uygulama koruma ilkelerini Microsoft Office uygulamalarla kullanırken farkında
 Office için yönetilen bir konum (örneğin OneDrive) gereklidir. Intune, uygulamadaki tüm verileri "Şirket" veya "kişisel" olarak işaretler. Veriler bir iş konumundan geliyorsa “kurumsal” olarak kabul edilir. Office uygulamaları söz konusu olduğunda Intune, aşağıdakileri iş konumu olarak kabul eder: e-posta (Exchange) veya bulut depolama (OneDrive İş hesabı içeren OneDrive uygulaması).
 
 ### <a name="skype-for-business"></a>Skype Kurumsal
-Skype Kurumsal 'ı kullanmak için ek gereksinimler vardır. [Skype Kurumsal](https://products.office.com/skype-for-business/it-pros) lisans gereksinimlerine bakın. Skype Kurumsal (SfB) hibrit ve şirket içi yapılandırmaları için bkz. [Skype Kurumsal ve Exchange için Hibrit Modern Kimlik Doğrulaması Genel Kullanıma Sunuldu](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) ve [AAD ile Skype Kurumsal için Modern Kimlik Doğrulaması](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910).
+Skype Kurumsal 'ı kullanmak için ek gereksinimler vardır. [Skype Kurumsal](https://products.office.com/skype-for-business/it-pros) lisans gereksinimlerine bakın. Skype Kurumsal (SfB) hibrit ve şirket içi yapılandırmalarda, bkz. [SFB Için karma modern kimlik doğrulama](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) ve [Azure AD Ile SFB OnPrem Için modern kimlik doğrulama](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910), sırasıyla.
 
 ## <a name="app-protection-global-policy"></a>Uygulama koruma genel ilkesi
 

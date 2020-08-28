@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91f7b3ecad15c9663aa7467fa60843b33123a6e5
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 27d123629baa925756f842d13212f9801da13f55
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909338"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996172"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Şirket içi Intune Exchange bağlayıcısını ayarlama
 
@@ -154,7 +154,7 @@ Intune Exchange bağlayıcısını yüklemek için bu adımları izleyin. Birden
 
    Barındırılan bir Exchange sunucusu için, Exchange sunucusunun adresini belirtin. Barındırılan Exchange sunucusunun URL'sini bulmak için:
 
-   1. Office 365 için Outlook 'U açın.
+   1. Microsoft 365 için Outlook 'U açın.
 
    2. Sol üst taraftaki **?** simgesine tıklayın ve ardından **hakkında**' yı seçin.
 

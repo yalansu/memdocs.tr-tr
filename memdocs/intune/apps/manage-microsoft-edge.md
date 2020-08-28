@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 155d205c819924869da235f64042bcd118728629
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915832"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995152"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Microsoft Intune ile iOS ve Android için Edge kullanarak Web erişimini yönetme
 
@@ -34,7 +34,7 @@ ms.locfileid: "88915832"
 > [!NOTE]
 > İOS ve Android için Edge, bu ayarlara erişemediği için iOS ve Android Edge, kullanıcıların cihazlarında yerel tarayıcı için ayarlandığı ayarları tüketmez.
 
-Office 365 verileri için zengin ve en geniş koruma özellikleri, koşullu erişim gibi Microsoft Intune ve Azure Active Directory Premium özellikleri de içeren Enterprise Mobility + Security Suite 'e abone olduğunuzda kullanılabilir. En azından, mobil cihazlardan iOS ve Android için uçtan bağlantıya izin veren bir koşullu erişim ilkesi ve göz atma deneyiminin korunmasını sağlayan bir Intune uygulama koruma ilkesi dağıtmak isteyeceksiniz.
+Microsoft 365 verilerine yönelik zengin ve en geniş koruma özellikleri, koşullu erişim gibi Microsoft Intune ve Azure Active Directory Premium özellikleri içeren Enterprise Mobility + Security Suite 'e abone olduğunuzda kullanılabilir. En azından, mobil cihazlardan iOS ve Android için uçtan bağlantıya izin veren bir koşullu erişim ilkesi ve göz atma deneyiminin korunmasını sağlayan bir Intune uygulama koruma ilkesi dağıtmak isteyeceksiniz.
 
 > [!NOTE]
 > İOS cihazlarında yeni web klipleri (sabitlenmiş Web uygulamaları), korumalı bir tarayıcıda açılması gerektiğinde Intune Managed Browser yerine iOS ve Android için açılır. Daha eski iOS web klipleri için, Managed Browser yerine iOS ve Android için Edge 'de açıldıklarından emin olmak üzere bu web kliplerini yeniden hedeflemelidir.
@@ -45,7 +45,7 @@ Kuruluşlar, kullanıcıların yalnızca iOS ve Android için Edge kullanarak i�
 1. Senaryo 2: tarayıcı uygulamaları, iOS ve Android için kenara izin veren [Uygulama koruma ilkeleriyle onaylanan uygulamalar gerektirir](/azure/active-directory/conditional-access/app-protection-based-conditional-access#scenario-2-browser-apps-require-approved-apps-with-app-protection-policies), ancak diğer mobil cihaz Web tarayıcılarının Office 365 uç noktalarına bağlanmasını engeller.
 
    >[!NOTE]
-   > Bu ilke, mobil kullanıcıların iOS ve Android için Edge içinden tüm Office 365 uç noktalarına erişmesini sağlar. Bu ilke ayrıca kullanıcıların Office 365 uç noktalarına erişmek için InPrivate kullanmasını engeller.
+   > Bu ilke, mobil kullanıcıların iOS ve Android için Edge içinden tüm Microsoft 365 uç noktalarına erişebilmesini sağlar. Bu ilke ayrıca kullanıcıların Microsoft 365 uç noktalarına erişmek için InPrivate kullanmasını engeller.
 
 Koşullu erişimle, [Azure AD uygulama ara sunucusu](/azure/active-directory/active-directory-application-proxy-get-started)aracılığıyla dış kullanıcılara kullanıma sunulacak şirket içi siteleri de hedefleyebilirsiniz.
 
@@ -189,7 +189,7 @@ Erişim kolaylığı için, kullanıcılarınızın iOS ve Android için Edge ku
 
 |    Anahtar    |    Değer    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Bu yapılandırmanın değeri, yer işaretlerinin bir listesidir. Her yer işareti, yer işareti başlığından ve yer işareti URL 'sinden oluşur. Başlığı ve URL 'YI `|` karakterle ayırın.<br> Örnek: `Microsoft Bing|https://www.bing.com`<p>Birden çok yer işaretini yapılandırmak için, her çifti çift karakterle ayırın `||` .<br>Örnek:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Bu yapılandırmanın değeri, yer işaretlerinin bir listesidir. Her yer işareti, yer işareti başlığından ve yer işareti URL 'sinden oluşur. Başlığı ve URL 'YI `|` karakterle ayırın.<br> Örnek: `Microsoft Bing|https://www.bing.com`<p>Birden çok yer işaretini yapılandırmak için, her çifti çift karakterle ayırın `||` .<br>Örneğin:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 #### <a name="my-apps-bookmark"></a>Uygulamalarım yer işareti
 
@@ -343,7 +343,7 @@ Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağ�
 
 ### <a name="manage-proxy-configuration"></a>Ara sunucu yapılandırmasını yönetme
 
-Kullanıcılara mobil cihazlarındaki intranet sitelerine erişim sağlamak için iOS ve Android için Edge ve [Azure AD uygulama ara sunucusu](/azure/active-directory/active-directory-application-proxy-get-started) birlikte kullanabilirsiniz. Örnek: 
+Kullanıcılara mobil cihazlarındaki intranet sitelerine erişim sağlamak için iOS ve Android için Edge ve [Azure AD uygulama ara sunucusu](/azure/active-directory/active-directory-application-proxy-get-started) birlikte kullanabilirsiniz. Örneğin: 
 
 - Kullanıcı, Intune tarafından korunan Outlook mobil uygulamasını kullanıyor. Ardından, bir e-postada intranet sitesinin bağlantısına tıklamıştır ve iOS ve Android için Edge, bu intranet sitesinin kullanıcı tarafından uygulama proxy 'Si aracılığıyla sunulduğunu algılar. Kullanıcı, intranet sitesine ulaşmadan önce geçerli bir Multi-Factor Authentication ve koşullu erişim ile kimlik doğrulamak için uygulama proxy 'Si üzerinden otomatik olarak yönlendirilir. Kullanıcı artık mobil cihazlarında bile iç sitelere erişebiliyor ve Outlook 'taki bağlantı beklendiği gibi çalışıyor.
 - Kullanıcı iOS veya Android cihazında iOS ve Android için Edge 'i açar. İOS ve Android için Edge Intune ile korunuyorsa ve uygulama proxy 'Si etkinse, Kullanıcı, kullanıldıkları iç URL 'YI kullanarak bir intranet sitesine gidebilir. İOS ve Android için Edge, bu intranet sitesinin kullanıcıya uygulama proxy 'Si aracılığıyla sunulduğunu algılar. Kullanıcı, intranet sitesine ulaşmadan önce kimlik doğrulaması yapmak için uygulama proxy 'Si üzerinden otomatik olarak yönlendirilir. 

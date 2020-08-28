@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 9d58ffee30986efeda1716358ab7aa6c1d36cbf5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 05ed0daf56275b2e0ed46b2f9dd93fd66eb360be
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695690"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995543"
 ---
 # <a name="capabilities-in-technical-preview-1609-for-configuration-manager"></a>Configuration Manager için Technical Preview 1609 ' deki yetenekler
 
@@ -347,36 +347,36 @@ Panoda aşağıdakiler için grafikler görüntülenir:
 - Office 365 istemci sürümleri
 - Office 365 istemci dilleri
 - Office 365 istemci kanalları     
-Daha fazla bilgi için bkz. [Office 365 ProPlus güncelleştirme kanallarına genel bakış](/deployoffice/overview-update-channels).
+Daha fazla bilgi için bkz. [Microsoft 365 uygulamalar için güncelleştirme kanallarına genel bakış](https://docs.microsoft.com/deployoffice/overview-update-channels).
 - Kullanılabilir ürünler kümesinde Office 365 Istemcisinin seçtiği otomatik dağıtım kuralları.
 
 Panoda aşağıdaki eylemleri gerçekleştirebilirsiniz:
 - Panonun üst kısmında, belirli bir koleksiyonun üyelerine Pano verilerini filtrelemek için **koleksiyon** açılan ayarını kullanın.
-- Office 365 Istemci yükleme 365 sihirbazını başlatmak için panonun sağ üst kısmında Office **365 yükleyicisi** ' ne tıklayın. Ayrıntılar için bkz. [Office 365 uygulamalarını Istemcilere dağıtma](#deploy-office-365-apps-to-clients).
-- Yeni bir otomatik dağıtım kuralı (ADR) oluşturmak için panonun sağ orta tarafındaki **ADR oluştur** ' a tıklayın. Office 365 uygulamaları için bir ADR oluşturmak için, ürünü seçerken **office 365 istemcisi** ' ni seçin. Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini otomatik olarak dağıtma](../../sum/deploy-use/automatically-deploy-software-updates.md).
+- Office 365 Istemci yükleme Microsoft 365 sihirbazını başlatmak için panonun sağ üst kısmında **office 365 yükleyicisi** ' ne tıklayın. Ayrıntılar için bkz. [uygulamaları Istemcilere dağıtma Microsoft 365](#deploy-microsoft-365-apps-to-clients).
+- Yeni bir otomatik dağıtım kuralı (ADR) oluşturmak için panonun sağ orta tarafındaki **ADR oluştur** ' a tıklayın. Microsoft 365 uygulamalar için bir ADR oluşturmak için, ürünü seçerken **Office 365 istemcisi** ' ni seçin. Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini otomatik olarak dağıtma](../../sum/deploy-use/automatically-deploy-software-updates.md).
 - Panonun sağ alt tarafında, istemci Aracısı Ayarları ' nı açmak için **Istemci Aracısı ayarları oluştur** ' a tıklayın. Daha fazla bilgi için bkz. [istemci ayarları hakkında](../clients/deploy/about-client-settings.md).
 
 
 
-Office 365 ProPlus güncelleştirmeleri hakkında daha fazla bilgi için bkz. [Configuration Manager Ile office 365 ProPlus güncelleştirmelerini yönetme](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Kurumsal güncelleştirmelere yönelik Microsoft 365 uygulamalar hakkında daha fazla bilgi için, bkz. [Configuration Manager ile Microsoft 365 Apps güncelleştirmelerini yönetme](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
-## <a name="deploy-office-365-apps-to-clients"></a>İstemcilere Office 365 uygulamalarını dağıtma
-Bu sürümde, Office 365 Istemci yönetimi panosundan Office 365 yükleyicisi 'ni başlatabilir, Office 365 yükleme ayarlarını yapılandırmanıza, Office Içerik teslim ağlarından (CDNs) dosya yüklemenize ve dosyaları Configuration Manager bir uygulama olarak dağıtmanıza olanak tanır.
+## <a name="deploy-microsoft-365-apps-to-clients"></a>Microsoft 365 uygulamalarını istemcilere dağıtma
+Bu sürümde, Office 365 Istemci yönetimi panosundan, Microsoft 365 yükleme ayarlarını yapılandırmanıza, Office Içerik teslim ağlarından (CDNs) dosya yüklemenize ve dosyaları Configuration Manager bir uygulama olarak dağıtmanıza olanak sağlayan Office 365 yükleyicisini başlatabilirsiniz.
 
-### <a name="limitations-of-office-365-deployment"></a>Office 365 dağıtımının sınırlamaları
+### <a name="limitations-of-microsoft-365-deployment"></a>Microsoft 365 dağıtımının sınırlamaları
 - Office 365 uygulama yüklemesi Sihirbazı 'nda mevcut istemci ayarlarını (XML) içeri aktarmaya çalıştığınızda sorunlarla karşılaşabilirsiniz. İstemci ayarlarını bir sorun olmadan el ile yapılandırabilirsiniz.
 
-#### <a name="to-deploy-office-365-apps-to-clients"></a>Office 365 uygulamalarını istemcilere dağıtmak için
+#### <a name="to-deploy-microsoft-365-apps-to-clients"></a>İstemcilere Microsoft 365 uygulamaları dağıtmak için
 1. Configuration Manager konsolunda, **yazılım kitaplığı**  >  **genel bakış**  >  **Office 365 istemci yönetimi**' ne gidin.
 2. Sağ üst bölmedeki **Office 365 yükleyicisi** ' ne tıklayın. Office 365 Istemci Yükleme Sihirbazı açılır.
 3. **Uygulama ayarları** sayfasında, uygulama için bir ad ve açıklama sağlayın, dosyalar için karşıdan yükleme konumunu girin ve ardından **İleri**' ye tıklayın. Konumun &#92;&#92;*server*&#92;*paylaşımında*belirtilmesi gerektiğini unutmayın.
-4. **Istemci ayarlarını Içeri aktar** sayfasında, mevcut bir XML yapılandırma dosyasından Office 365 istemci ayarlarını içeri aktarıp aktarmayacağını seçin veya ayarları el Ile belirtip **İleri**' ye tıklayın.
+4. **Istemci ayarlarını Içeri aktar** sayfasında, Microsoft 365 istemci ayarlarını var olan bir XML yapılandırma dosyasından içeri aktarıp aktarmayacağını seçin veya ayarları el Ile belirtip **İleri**' ye tıklayın.
 Varolan bir yapılandırma dosyanız varsa, dosyanın konumunu girin ve 7. adıma atlayın. Konumun &#92;&#92;*server*&#92;*Share*&#92;*filename*biçiminde belirtilmesi gerektiğini unutmayın. 'Sini.
 
     > [!IMPORTANT]
     >Bu Technical Preview 'da mevcut istemci ayarlarını (XML) içeri aktarmaya çalıştığınızda sorunlarla karşılaşabilirsiniz.
 
-5. **Istemci ürünleri** sayfasında, kullandığınız Office 365 paketini seçin, dahil etmek istediğiniz uygulamaları seçin, dahil edilecek diğer Office ürünlerini seçin ve ardından **İleri**' ye tıklayın.
+5. **Istemci ürünleri** sayfasında, kullandığınız Microsoft 365 paketini seçin, dahil etmek istediğiniz uygulamaları seçin, dahil edilecek diğer Office ürünlerini seçin ve ardından **İleri**' ye tıklayın.
 6. **Istemci ayarları** sayfasında, dahil edilecek ayarları seçin ve ardından **İleri**' ye tıklayın.
 7. **Dağıtım** sayfasında, uygulamayı dağıtıp dağıtmeyeceğinizi seçin ve ardından **İleri**' ye tıklayın.
 Paketi sihirbazda dağıtmamalıdır seçeneğini belirlerseniz adım 9 ' a atlayın.
@@ -385,7 +385,7 @@ Paketi sihirbazda dağıtmamalıdır seçeneğini belirlerseniz adım 9 ' a atla
 10. Uygulamayı, **yazılım kitaplığı**  >  **'na genel bakış**  >  **uygulama yönetimi**  >  **uygulamalarından**Configuration Manager içindeki diğer uygulamalarla aynı şekilde dağıtabilir veya düzenleyebilirsiniz.
 
 >[!NOTE]
->Office 365 uygulamalarını dağıttıktan sonra, uygulamaları sürdürmek için otomatik dağıtım kuralları oluşturabilirsiniz. Office 365 uygulamaları için bir ADR oluşturmak üzere **ADR oluştur**' a tıklayın ve ürünü seçerken **Office 365 istemcisi** ' ni seçin. Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini otomatik olarak dağıtma](../../sum/deploy-use/automatically-deploy-software-updates.md).
+>Microsoft 365 uygulamaları dağıttıktan sonra, uygulamaları sürdürmek için otomatik dağıtım kuralları oluşturabilirsiniz. Microsoft 365 uygulamalar için ADR oluşturmak için, **ADR oluştur**' a tıklayın ve ürünü seçerken **Office 365 istemcisi** ' ni seçin. Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini otomatik olarak dağıtma](../../sum/deploy-use/automatically-deploy-software-updates.md).
 
 ## <a name="improvements-for-bios-to-uefi-conversion"></a><a name="BKMK_UEFIConversion"></a>BIOS 'TAN UEFı 'ye dönüştürmeye yönelik iyileştirmeler
 Artık, bilgisayarı yeniden Başlat adımının UEFı 'ye geçiş için sabit sürücüdeki bir FAT32 bölümünü hazırlayabilmesi için TSUEFIDrive adlı yeni bir değişkenle bir işletim sistemi dağıtımı görev dizisini özelleştirebilirsiniz. Aşağıdaki yordam, BIOS 'TAN UEFı 'ye dönüştürme için sabit sürücüyü hazırlamak üzere görev dizisi adımlarını nasıl oluşturabileceğiniz hakkında bir örnek sağlar.

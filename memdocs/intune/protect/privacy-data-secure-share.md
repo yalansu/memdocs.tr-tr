@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90ff1f6380e16fa5c970557ca1409fd5e4a8d035
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 439c217099179414ca9732dd4f57775ab2649a5f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914948"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995764"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Intune’da veri güvenliği ve paylaşımı
 
@@ -46,7 +46,7 @@ Intune, Varsayılan olarak Veri Korumasını sağlamak amacıyla destek olaylar�
 
 ### <a name="data-breach-reporting"></a>Veri ihlalini raporlama
 
-Müşterinin Raporlayabildiği Güvenlik Olayı (CRSI) tanımlandığında müşteriler bilgilendirilir. Bu işlem, Intune kullanan Microsoft O365 müşterilerine ihlal bildirimi yapmak için Microsoft O365 ekibiyle birlikte çalışmayı içerir.
+Müşterinin Raporlayabildiği Güvenlik Olayı (CRSI) tanımlandığında müşteriler bilgilendirilir. Bu işlem, Intune kullanarak tüm Microsoft 365 müşterileri için ihlal bildirimine iletişim kurmak üzere Microsoft 365 ekibiyle çalışmayı içerir.
 
 ## <a name="data-sharing"></a>Veri paylaşımı
 

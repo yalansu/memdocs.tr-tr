@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 402285b871db6c3ff18e8f89ec0553a51dab9c13
-ms.sourcegitcommit: 118587ddb31ce26b27801839db9b3b59f1177f0f
+ms.openlocfilehash: 42d77d8424464973f7a0c114193c11c9440664cf
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84165558"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992968"
 ---
 # <a name="reference-for-application-entities"></a>Uygulama varlıkları için başvuru
 
@@ -69,7 +69,7 @@ ms.locfileid: "84165558"
 
 ### <a name="example"></a>Örnek
 
-| AppTypeID  | Name | Açıklama |
+| AppTypeID  | Ad | Açıklama |
 |---------|------------|--------|
 | 0 |Android mağazası uygulaması | Bir Android mağazası uygulaması. |
 | 1 |Android LOB uygulaması | Bir Android iş kolu uygulaması. |
@@ -77,7 +77,7 @@ ms.locfileid: "84165558"
 | 3 |iOS mağazası uygulaması | Bir iOS mağazası uygulaması. |
 | 4 |iOS LOB uygulaması | Bir iOS iş kolu uygulaması. |
 | 5 |Yönetilen iOS mağazası uygulaması (MAM?) | Yönetimi etkin bir iOS mağazası uygulaması. |
-| 6 |O365 Pro Plus Suite | Windows 10 için Microsoft 365 uygulamalar. |
+| 6 |Enterprise için Microsoft 365 uygulamalar | Windows 10 için Microsoft 365 uygulamalar. |
 | 7 |Web uygulaması | Bir web uygulaması. |
 | 8 |Windows Phone 8.1 mağazası uygulaması | Bir Windows Phone 8.1 mağazası uygulaması. |
 | 9 |Windows mağazası uygulaması | Bir Windows mağazası uygulaması. |
@@ -98,7 +98,7 @@ ms.locfileid: "84165558"
 
 ### <a name="example"></a>Örnek
 
-| VppProgramID  | Name | Açıklama |
+| VppProgramID  | Ad | Açıklama |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Microsoft’un VPP programı. |
 | 00000000-0000-0000-0000-000000000000 | Henüz kullanılamıyor | Varsayılan değer, No VPP. |

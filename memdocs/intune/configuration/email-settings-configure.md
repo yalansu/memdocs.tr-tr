@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de260f56753e292ed95ac22c76b9cc16457c981b
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 99f3dcd944270acef98cc0f1f06138d75dba4453
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146006"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996427"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Intune kullanarak cihazlara e-posta ayarları ekleme
 
-Microsoft Intune, kuruluşunuzdaki cihazlara dağıtabileceğiniz farklı e-posta ayarları içerir. BT Yöneticisi, Office 365 ve Gmail gibi bir posta sunucusuna bağlanmak için belirli ayarlarla e-posta profilleri oluşturur. Son kullanıcılar daha sonra mobil cihazlarındaki kurumsal e-posta hesaplarını bağlayıp, kimlik doğrulaması yapar ve eşitler. Bir e-posta profili oluşturup dağıtarak, ayarların birçok cihazda standart olduğunu doğrulayabilirsiniz. Ayrıca doğru e-posta ayarlarını bilmeyen son kullanıcılardan gelen destek çağrılarını azaltabilirsiniz.
+Microsoft Intune, kuruluşunuzdaki cihazlara dağıtabileceğiniz farklı e-posta ayarları içerir. BT Yöneticisi, Microsoft 365 ve Gmail gibi bir posta sunucusuna bağlanmak için belirli ayarlarla e-posta profilleri oluşturur. Son kullanıcılar daha sonra mobil cihazlarındaki kurumsal e-posta hesaplarını bağlayıp, kimlik doğrulaması yapar ve eşitler. Bir e-posta profili oluşturup dağıtarak, ayarların birçok cihazda standart olduğunu doğrulayabilirsiniz. Ayrıca doğru e-posta ayarlarını bilmeyen son kullanıcılardan gelen destek çağrılarını azaltabilirsiniz.
 
 Aşağıdaki cihazlarda yerleşik e-posta ayarlarını yapılandırmak için e-posta profillerini kullanabilirsiniz:
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74fbf1af85fdaef7cebde5c58f7892015b433ff6
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 63ef6acb54f079f2a47800ae84cbe49cd4fabed3
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82079238"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992650"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Intune dağıtım hedeflerini, amaçlarını ve zorluklarını belirleme
 
@@ -33,9 +33,9 @@ ms.locfileid: "82079238"
 
 Dağıtım hedefleri, kuruluşunuza Intune dağıtarak uzun vadede ulaşmak istediğiniz hedeflerdir. Aşağıda, bu tür hedeflerden bazıları, açıklaması ve iş açısından taşıdığı değer ile birlikte listelenmiştir.
 
-- **Office 365 ile tümleştirme ve Office mobil uygulamaların kullanımını destekleme**
+- **Microsoft 365 tümleştirme ve Office mobil uygulamalarının kullanımını destekleme**
 
-  - **Açıklama:** Office 365 ile sıkı bir tümleştirme ve Office mobil uygulamalarının uygulama koruması ile kullanılmasını sağlar.
+  - **Açıklama:** Microsoft 365 ile sıkı tümleştirme sağlar ve Office mobil uygulamalarının uygulama koruması ile birlikte kullanılması sağlanır.
 
   - **İş değeri:** Kullanıcıların aşina olduğu ve tercih ettiği uygulamaları kullanmasına olanak tanıyarak güvenli ve iyileştirilmiş kullanıcı deneyimi.
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 94166557b07050706401c122b835579762bfa982
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 66be927a75da3027b6ecc5e3873fe8f8e13a9cd6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88128840"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994931"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-configuration-manager"></a>Configuration Manager sürüm 1511 için tanılama kullanım verileri toplama düzeyleri
 
@@ -221,7 +221,7 @@ Configuration Manager sürüm 1511 ' den başlayarak bu düzey aşağıdakileri 
 
     -   Küme düzeltme eki uygulama istatistikleri  
 
-    -   Dağıtılan Office 365 güncelleştirmeleri sayısı  
+    -   Dağıtılan Microsoft 365 güncelleştirme sayısı  
 
 -   **SQL/performans verileri:**  
 

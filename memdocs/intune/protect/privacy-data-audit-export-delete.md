@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 508741d0cdb88e19bc5b2f27942e9e797f501356
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914472"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996002"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Intune’da kişisel verileri denetleme, dışarı aktarma veya silme
 
@@ -73,7 +73,7 @@ Kullanıcılar, yönetici yardımı olmadan kendi [Android, Apple veya Windows](
 
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Microsoft Intune’dan kiracı silme
 
-Bir Intune kiracısı Intune hesabını iptal ederse, Intune hesabının kapatılmasını izleyen 180 gün içerisinde tüm kiracı verileri silinir. AAD kiracısı diğer Microsoft kuruluş abonelikleri (Azure, Office 365) ile ilişkiliyse yalnızca Intune Müşteri Verileri silinir. AAD kiracı kaynağı, diğer abonelikler tarafından kullanılmak üzere saklanır. AAD kiracısıyla ilişkili tek abonelik Intune hesabıysa Intune Müşteri Verilerinin yanında kiracı ve tüm kaynaklar da silinir.
+Bir Intune kiracısı Intune hesabını iptal ederse, Intune hesabının kapatılmasını izleyen 180 gün içerisinde tüm kiracı verileri silinir. Azure AD kiracısı diğer Microsoft Enterprise abonelikleri (Azure, Microsoft 365) ile ilişkiliyse, yalnızca Intune müşteri verileri silinir. Azure AD kiracı kaynağı diğer abonelikler tarafından kullanılmak üzere tutulur. Intune hesabı Azure AD kiracısı ile ilişkilendirilen tek abonelik ise, kiracı silinir ve tüm kaynaklar ve müşteri verileri de silinir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

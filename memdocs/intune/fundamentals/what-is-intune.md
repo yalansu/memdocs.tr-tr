@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26d944911f475fbd719161d9b0f7077e0bc1e64f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 939a9b46c3972bc4d575b3b58d08f5f6fb169239
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913707"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996269"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune, cihazlarınız için MDM ve MAM sağlayıcısıdır
 
@@ -106,7 +106,7 @@ Intune kullanılabilir:
 
 - Tek başına [Azure hizmeti](https://go.microsoft.com/fwlink/?linkid=2090973) olarak
 - [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) ve [Microsoft 365 Kamu](https://www.microsoft.com/microsoft-365/government) ile birlikte
-- Bazı sınırlı Intune özelliklerinden oluşan [Office 365 ' de mobil cihaz yönetimi](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)olarak
+- [Microsoft 365 ' de mobil cihaz yönetimi](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)olarak, bazı sınırlı Intune özelliklerinden oluşur
 
 Intune, [kamu](/enterprise-mobility-security/solutions/ems-govt-service-description), [eğitim](https://www.microsoft.com/en-us/education/intune), [bilgi noktası veya](../configuration/kiosk-settings.md) üretim ve perakende için adanmış cihaz gibi birçok sektörde kullanılır ve daha fazlasını yapın.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d4826936245790c951b40c38fde6e0a90f51e23
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 676e7a4db54558eaea87ad2fa8efbe8af546f035
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915611"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996580"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Mobil cihaz yönetimi yetkilisini ayarlayın
 
@@ -36,9 +36,9 @@ Olası yapılandırmalar şunlardır:
 
 - **Intune ortak yönetim** -Intune bulut çözümünün Windows 10 cihazları için Configuration Manager ile tümleştirilmesi. Configuration Manager konsolunu kullanarak Intune’u siz yapılandırırsınız. [Cihazların otomatik kaydını Intune 'A yapılandırın](/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-- **Office 365 Için temel taşınabilirlik ve güvenlik** -bu yapılandırmayı ETKINLEŞTIRDIYSENIZ, MDM yetkilisi ' ni "Office 365" olarak ayarlanmış olarak görürsünüz. Intune 'u kullanmaya başlamak istiyorsanız, Intune lisansı satın almanız gerekir.
+- **Microsoft 365 Için temel taşınabilirlik ve güvenlik** -bu yapılandırmayı ETKINLEŞTIRDIYSENIZ, MDM yetkilisi ' ni "Office 365" olarak ayarlanmış olacak şekilde görürsünüz. Intune 'u kullanmaya başlamak istiyorsanız, Intune lisansı satın almanız gerekir.
 
-- **Office 365 Için temel mobilite ve [coexistence](#coexistence) güvenlik** -Office 365 için temel mobilite ve güvenlik kullanıyorsanız ve yönetim yetkilisini her bir Kullanıcı Için Intune veya temel taşınabilirlik ve Office 365 IÇIN güvenlik için, MDM 'ye kayıtlı cihazları yönetmek üzere hangi hizmetin kullanılacağını dikte edecek şekilde ayarladıysanız, Intune 'u kiracınıza ekleyebilirsiniz. Her bir kullanıcının yönetim yetkilisi kullanıcıya atanan lisansa göre tanımlanır: kullanıcının yalnızca Microsoft 365 temel veya standart lisansı varsa, cihazları temel taşınabilirlik ve Office 365 için güvenlik tarafından yönetilir. Kullanıcının bir lisans entitling Intune 'u varsa, cihazları Intune tarafından yönetilir. Daha önce temel taşınabilirlik ve Office 365 güvenliği tarafından yönetilen bir kullanıcıya Intune entitling lisans eklerseniz, cihazları Intune yönetimine geçiş yapılır. Kullanıcılara Intune 'a geçmeden önce Office 365 temel Mobility ve Security 'yi değiştirmek üzere kullanıcılara atanmış Intune yapılandırmalarına sahip olduğunuzdan emin olun, aksi halde, cihazları Office 365 yapılandırması için temel taşınabilirlik ve güvenliği kaybeder ve Intune 'dan herhangi bir değişiklik almaz.
+- **Microsoft 365 birlikte [bulunma](#coexistence) için temel taşınabilirlik ve güvenlik** -zaten temel hareketlilik ve güvenlik Microsoft 365 kullanıyorsanız ve yönetim yetkilisini her BIR kullanıcı için, MDM 'ye kayıtlı cihazları yönetmek için hangi hizmetin kullanılacağını dikte etmek üzere Intune veya temel taşınabilirlik ve güvenlik için Microsoft 365 olarak ayarlarsanız, kiracınıza Intune ekleyebilirsiniz. Her bir kullanıcının yönetim yetkilisi, kullanıcıya atanan lisansa göre tanımlanır: kullanıcının yalnızca bir Microsoft 365 temel veya standart lisansı varsa, cihazları Microsoft 365 için temel taşınabilirlik ve güvenlik tarafından yönetilecektir. Kullanıcının bir lisans entitling Intune 'u varsa, cihazları Intune tarafından yönetilir. Microsoft 365 için temel taşınabilirlik ve güvenlik tarafından daha önce yönetilen bir kullanıcıya Intune entitling bir lisans eklerseniz, cihazları Intune yönetimine geçiş yapılır. Kullanıcılara Intune 'a geçmeden önce Microsoft 365 için temel hareketliliği ve güvenliği değiştirmek üzere Intune yapılandırmalarına sahip olduğunuzdan emin olun, aksi halde, cihazları Microsoft 365 yapılandırma için temel taşınabilirlik ve güvenliği kaybeder ve Intune 'dan herhangi bir değişiklik almaz.
 
 ## <a name="set-mdm-authority-to-intune"></a>MDM yetkilisini Intune olarak ayarlama
 
@@ -109,7 +109,7 @@ Mobil cihazlar Intune hizmetiyle iletişim kurduğunda MDM sertifikası otomatik
 
 ## <a name="remove-mdm-authority"></a>MDM yetkilisini kaldırma
 
-MDM yetkilisi tekrar Bilinmeyen olarak değiştirilemez. MDM yetkilisi, hizmet tarafından hangi Portal kayıtlı cihazların (Microsoft Intune veya temel taşınabilirlik ve Office 365 için güvenlik) rapor kullandığını tespit etmek için kullanılır.
+MDM yetkilisi tekrar Bilinmeyen olarak değiştirilemez. MDM yetkilisi, hizmet tarafından hangi Portal kayıtlı cihazların (Microsoft 365 için Microsoft Intune veya temel taşınabilirlik ve güvenlik için) rapor olduğunu tespit etmek üzere kullanılır.
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>MDM yetkilisini değiştirdikten sonra ne olur
 

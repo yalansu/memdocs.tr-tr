@@ -1,6 +1,6 @@
 ---
-title: Microsoft Intune-Azure 'da Yönetim şablonlarını kullanarak Office 365 güncelleştirme | Microsoft Docs
-description: Office 365 uygulamalarını en son sürüme güncelleştirmek için Microsoft Intune Yönetim şablonlarını kullanın ve Office 'in güncelleştirmeleri ne sıklıkta denetleyeceğini seçin. Office Update 'e yönelik bir Intune ilkesi uygulandığında güncelleştirilecek cihaz kayıt defteri anahtarlarına bakın.
+title: Microsoft Intune-Azure 'da Yönetim Şablonları kullanarak Microsoft 365 güncelleştirme | Microsoft Docs
+description: Microsoft 365 uygulamalarını en son sürüme güncelleştirmek için Microsoft Intune Yönetim şablonlarını kullanın ve Office 'in güncelleştirmeleri ne sıklıkta denetleyeceğini seçin. Office Update 'e yönelik bir Intune ilkesi uygulandığında güncelleştirilecek cihaz kayıt defteri anahtarlarına bakın.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,25 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef1fb20ffffb3b24be45846638d1a05150ef7307
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 3fdda53fa4127137d21db64140262204d0afd11f
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910341"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993497"
 ---
-# <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Microsoft Intune Yönetim Şablonları ile Office 365 güncelleştirmek için kanalı güncelleştirme ve hedef sürüm ayarlarını kullanın
+# <a name="use-update-channel-and-target-version-settings-to-update-microsoft-365-with-microsoft-intune-administrative-templates"></a>Microsoft Intune Microsoft 365 güncelleştirmek için kanalı güncelleştirme ve hedef sürüm ayarlarını kullanın Yönetim Şablonları
 
-Intune 'da, [Grup İlkesi ayarlarını yapılandırmak Için Windows 10 şablonlarını](administrative-templates-windows.md)kullanabilirsiniz. Bu makalede, Office 365 ' i Intune 'da yönetim şablonu kullanarak güncelleştirme konusu gösterilmektedir. Ayrıca, ilkelerinizin başarıyla uygulandığını onaylama konusunda rehberlik sağlar. Bu bilgiler, sorun gidermede de yardımcı olur.
+Intune 'da, [Grup İlkesi ayarlarını yapılandırmak Için Windows 10 şablonlarını](administrative-templates-windows.md)kullanabilirsiniz. Bu makalede, Intune 'da yönetim şablonu kullanarak Microsoft 365 güncelleştirme hakkında yönergeler verilmektedir. Ayrıca, ilkelerinizin başarıyla uygulandığını onaylama konusunda rehberlik sağlar. Bu bilgiler, sorun gidermede de yardımcı olur.
 
-Bu senaryoda, cihazlarınızda Office 365 ' u güncelleştiren bir yönetim şablonu oluşturacaksınız.
+Bu senaryoda, Intune 'da cihazlarınızda Microsoft 365 güncelleştiren bir yönetim şablonu oluşturacaksınız.
 
 Yönetim Şablonları hakkında daha fazla bilgi için bkz. [Windows 10 şablonları Grup İlkesi ayarlarını yapılandırmak için](administrative-templates-windows.md).
 
 Aşağıdakiler cihazlar için geçerlidir:
 
 - Windows 10 ve üzeri
-- Office 365
+- Microsoft 365
 
 ## <a name="prerequisites"></a>Önkoşullar
 
@@ -97,7 +97,7 @@ Bu noktada, Intune ilkesi cihaza başarıyla uygulandı.
     Aşağıdaki kayıt defteri anahtarlarını görürsünüz:
 
     - `UpdateChannel`: Yapılandırılan ayarlara bağlı olarak değişen dinamik anahtar.
-    - `CDNBaseUrl`: Office 365 cihaza yüklendiğinde ayarlanır.
+    - `CDNBaseUrl`: Microsoft 365 cihaza yüklediğinde ayarlayın.
 
 3. `UpdateChannel`Değere bakın. Bu değer, Office 'in ne sıklıkla güncelleştirileceğini söyler. Değerleri Configuration Manager listeler ve olarak ayarlandığı [Microsoft 365 uygulamaları yönetin](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) .
 
@@ -134,7 +134,7 @@ Bu kayıt defteri anahtarı, **Görev Zamanlayıcı**  >  **Office otomatik gün
 
     İlkede ayarlanan değerle birlikte güncelleştirilmeleri gerekir. Örneğimizde, değer olarak ayarlanmalıdır `http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114` .
 
-Bu noktada, Office güncelleştirme kanalı cihazda başarıyla değiştirilmiştir. Durumu denetlemek için, bu güncelleştirmeyi alan bir kullanıcı için bir Office 365 uygulaması açabilirsiniz.
+Bu noktada, Office güncelleştirme kanalı cihazda başarıyla değiştirilmiştir. Durumu denetlemek için, bu güncelleştirmeyi alan bir kullanıcı için bir Microsoft 365 uygulaması açabilirsiniz.
 
 ## <a name="force-the-office-synchronization-to-update-account-information"></a>Hesap bilgilerini güncelleştirmek için Office eşitlemesini zorla  
 
@@ -181,7 +181,7 @@ Daha fazlasını yapmak istiyorsanız, Office 'i en son sürüm güncelleştirme
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Office 365 istemcileri için kanal değerlerini güncelleştirme](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Microsoft 365 istemcileri için kanal değerlerini Güncelleştir](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Microsoft 365 uygulamalar için Office bulut ilkesi hizmetine genel bakış](/deployoffice/overview-office-cloud-policy-service)
 

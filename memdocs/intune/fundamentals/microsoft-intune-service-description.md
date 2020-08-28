@@ -1,6 +1,6 @@
 ---
 title: Microsoft Intune Hizmeti Açıklaması
-description: Microsoft Intune, Windows, iOS/ıpados, Mac OS X ve Android cihazlarını yönetmenize yardımcı olan bulut tabanlı bir hizmettir.
+description: Microsoft Intune, Windows, iOS/ıpados, macOS ve Android cihazlarını yönetmenize yardımcı olan bulut tabanlı bir hizmettir.
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -15,12 +15,12 @@ ms.reviewer: cacamp
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f89fc7ffb3059204507a541e19afa2e97424dea5
-ms.sourcegitcommit: 46d4bc4fa73b22ae2a6a17a2d1cc6ec933a50e89
+ms.openlocfilehash: 7352ebaf9b4aba07316c8fd9b1b5fc98d20588b0
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88663234"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992700"
 ---
 # <a name="microsoft-intune-service-description"></a>Microsoft Intune hizmet açıklaması
 
@@ -55,17 +55,17 @@ Mobil cihaz yönetimi ekosistemi, işletim sistemi güncelleştirmeleri ve mobil
 
 - [Microsoft Intune](whats-new.md)yenilikleri. Bu konu, aylık hizmet güncelleştirmesiyle ve örneğin Şirket Portalı uygulaması gibi uygulamalar yayımlandığında haftalık olarak güncelleştirilir.
 
-- Ayrıca, önemli hizmet güncelleştirmeleri [Microsoft 365 Yönetim Merkezi](https://admin.microsoft.com/) ileti merkezinde duyurulmuştur. Yardımcı [Office 365 Yönetici mobil uygulamasını](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) yüklerseniz, mobil cihazınızda bildirimleri alabilirsiniz. [Office 365 İleti Merkezi](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates) ile çalışma hakkında bilgi edinin.
+- Ayrıca, önemli hizmet güncelleştirmeleri [Microsoft 365 Yönetim Merkezi](https://admin.microsoft.com/) ileti merkezinde duyurulmuştur. Yardımcı [Microsoft 365 Yönetici mobil uygulamasını](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a)yüklerseniz, mobil cihazınızda bildirimleri alabilirsiniz. [Microsoft 365 Ileti merkezi](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates)ile çalışma hakkında daha fazla bilgi edinin.
 
   Birkaç faydalı ipucu:
 
-  - Office 365 İleti Merkezi’ndeki iletiler hedeflenir. Bu, şirketinizin EDU için Intune teklifi yoksa, EDU için Intune hakkında sizi mesaj vermeyeceğiz.
+  - Microsoft 365 Ileti merkezindeki iletiler hedeflenmiştir. Bu, şirketinizin EDU için Intune teklifi yoksa, EDU için Intune hakkında sizi mesaj vermeyeceğiz.
 
   - İletilerin süresi dolar. Örneğin, hizmetinizin yeni bir bağlantı ile güncelleştirildiği bildirim, bir sonraki hizmet güncelleştirme bildiriminden önce süresi dolacak. Aksi takdirde, artık ilgili olmayan büyük bir gönderiye sahip olabilirsiniz.
 
-  - Office 365 yönetici mobil uygulaması, tüm iletiler arasında arama yapmanızı ve kuruluşunuzdakilerle paylaşmak istiyorsanız bildirimi iletmenizi sağlar.
+  - Microsoft 365 Yönetici mobil uygulaması, tüm iletilerde arama yapmanıza ve bunu kuruluşunuzdaki eşlerle paylaşmak istediğinizde bildirimi iletmektir.
 
-  - İleti Merkezi tercihlerini Düzenle ' nin altında, bir Intune aboneliğine gönderilen iletilere bakabilmeniz için, **Intune** için bir geçiş geçişi olacaktır. Office 365 için Mobil Cihaz Yönetimi görürseniz, bu Intune değil, farklı bir hizmettir.
+  - İleti Merkezi tercihlerini Düzenle ' nin altında, bir Intune aboneliğine gönderilen iletilere bakabilmeniz için, **Intune** için bir geçiş geçişi olacaktır. Microsoft 365 için mobil cihaz yönetimi görüyorsanız, bu, Intune değil farklı bir hizmettir.
 
 - Ayrıca EMS iletisi ve Intune desteği en başarılı uygulamalarını paylaşmak için de iki blog kullanırız:
 
@@ -74,21 +74,21 @@ Mobil cihaz yönetimi ekosistemi, işletim sistemi güncelleştirmeleri ve mobil
   - [Intune destek blogu](https://blogs.technet.microsoft.com/intunesupport/)
 
 > [!Note]
-> Intune hizmet durumunu [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)izleyebilirsiniz. Sol bölmede **Hizmet Durumu**’nu seçin. Hizmet durumunu görüntülemek için [Office 365 Yönetici mobil uygulaması](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) da kullanabilirsiniz.
+> Intune hizmet durumunu [Microsoft 365 Yönetim merkezinde](https://admin.microsoft.com)izleyebilirsiniz. Sol bölmede **Hizmet Durumu**’nu seçin. Ayrıca, hizmet durumunu görüntülemek için [Microsoft 365 Yönetici mobil uygulamasını](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) da kullanabilirsiniz.
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Microsoft’un Intune hizmeti hakkında sağladığı bildirim türleri
 
 Hizmet değişikliklerini planlamanıza yardımcı olmak için değişikliğin etkisine bağlı olarak, hizmet değişikliğinden en az 7-90 gün önce size haber veririz. Bu değişiklikler aşağıdaki değişiklik türlerinden herhangi birini içerebilir:
 
-- Yardım masası personeliniz veya son kullanıcılarınız ile paylaşmak isteyebileceğiniz son kullanıcı deneyiminde yapılan değişiklikler. Bu değişikliklere göre 7 ila 30 gün önce bildirim sağlıyoruz ve bunları [Intune uygulama kullanıcı arabirimindeki](whats-new-app-ui.md)Yenilikler sayfasında belgeliyoruz. Yazım hatası düzeltmesine benzer bir şey için genellikle belgelerde çağrı yaptık. Ancak, son kullanıcı kayıt deneyimindeki bir değişiklik, her ikisi de Office 365 Ileti merkezindeki müşterilere bir ileti gönderdiğimiz ve Intune uygulama kullanıcı arabirimindeki yeniliklere bağlantı yaptığımız Kullanıcı arabiriminde yeterince önemli bir şeydir. bu sayede, değişiklikler üretime gönderilmeden önce Son Kullanıcı kılavuzunuzu değerlendirmek ve güncelleştirmek için gereken süre hakkında bilgi sahibi olmanız gerekir.
+- Yardım masası personeliniz veya son kullanıcılarınız ile paylaşmak isteyebileceğiniz son kullanıcı deneyiminde yapılan değişiklikler. Bu değişikliklere göre 7 ila 30 gün önce bildirim sağlıyoruz ve bunları [Intune uygulama kullanıcı arabirimindeki](whats-new-app-ui.md)Yenilikler sayfasında belgeliyoruz. Yazım hatası düzeltmesine benzer bir şey için genellikle belgelerde çağrı yaptık. Ancak, son kullanıcı kayıt deneyimindeki bir değişiklik, her ikisi de Microsoft 365 Ileti merkezindeki müşterilere bir ileti gönderdiğimiz ve Intune uygulama kullanıcı arabirimindeki yeniliklere bağlantı yaptığımız Kullanıcı arabiriminde yeterince önemli bir şeydir. böylece, değişiklikler üretime gönderilmeden önce Son Kullanıcı kılavuzunuzu değerlendirmek ve güncelleştirmek için gereken süre hakkında bilgi sahibi olmanız gerekir.
 
-- İşlem yapmanızı gerektiren değişikliklere **Değişiklik Planı** denir ve bunlar genellikle yaklaşık 30 gün önceden bildirilir. Office 365 İleti Merkezi’nde Kategori özellikle Değişiklik Planı diyorsa ve değişikliğin devreye gireceği gün için kesin tarih belliyse ayrıca size görsel bir sıra ve açıklama işareti sağlayan bir **Şu Tarihe Kadar İşlem Yapın** tarihi veririz.
+- İşlem yapmanızı gerektiren değişikliklere **Değişiklik Planı** denir ve bunlar genellikle yaklaşık 30 gün önceden bildirilir. Microsoft 365 Ileti merkezinde, kategori özellikle değişiklik planı ' nı belirtir ve değişikliğin üretimde olduğu zaman tam bir tarih varsa, bir tarihe göre de bir **işlem** ve açıklama işareti elde edersiniz.
 
 - Kullanım dışı bırakılanların çoğunda, kullanım dışı bırakma işleminden 90 gün önce bildirim sağlamayı tercih ederiz. Örneğin, artık belirli bir IE sürümünü destekleyemiz, hedefimiz 90 gün bildirim sunmaktır. Ancak kullanımdan kaldırma, kullanımdan kalkmayı duyuran başka bir şirket olduğunda karmaşık hale gelir. Örneğin, bir tarayıcı şirketi en son sürümünde Silverlight için destek sağlamayacağına ilişkin bir bildirimde bulunduğunda, müşterilerimize bu tarayıcıya olan desteğimizi sonlandıracağımızı açıklarız, ancak bu bildirim 90 gün öncesinden bildirim süremize uymayabilir.
 
 - Intune hizmetinin devre dışı bırakılması durumunda, 12 ay önce bu durum size bildirilecektir.
 
-Son olarak, hizmetinizi normal hale getirmek için herhangi bir olay sonrası eylemi olması gerekir veya müşteri geri bildirimlerine göre kesintiye uğratabilecek büyük bir değişikliğe karşı, hizmet yöneticilerini [Office 365 iletişim tercihlerinizin](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) nasıl ayarlanacağını ve geçerli bir (ve tercihen iş) e-posta adresi içerip içermediğini temel alan bir e-posta göndereceğiz.  
+Son olarak, hizmetinizi normal hale getirmek için herhangi bir olay sonrası eylemi olması gerekir veya müşteri geri bildirimlerine göre karışıklığa neden olabilecek büyük bir değişikliğe sahip olacak şekilde, hizmet yöneticilerine [Microsoft 365 iletişim tercihlerinizin](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) nasıl ayarlanacağını ve geçerli bir (ve tercihen iş) e-posta adresi dahil etmenizi sağlayacak şekilde e-posta göndereceğiz.  
 
 
 <!--- ## Choose the management solution that's right for you

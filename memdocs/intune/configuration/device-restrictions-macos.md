@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4f4ef6bab42f2f1b97c32a422d92247a3e564f7
-ms.sourcegitcommit: a198e4efa52b16f87049853b9d8c9854fd9fa057
+ms.openlocfilehash: c068a092ad0f7087ad28b8424cc2640214972f82
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84680413"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996699"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune'u kullanarak özelliklere izin vermeyi veya bunları kısıtlamayı sağlayan macOS cihaz ayarları
 
@@ -176,7 +176,7 @@ Bu özellik şu platformlarda geçerlidir:
 ### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment"></a>Ayarlar için geçerlidir: Kullanıcı tarafından onaylanan cihaz kaydı, otomatik cihaz kaydı
 
 - **Uygulamalar ve süreçler**: erişimi yapılandırmak için uygulama veya işlem **ekleyin** . Şunları da girin:
-  - **Ad**: uygulamanız veya işleminiz için bir ad girin. Örneğin `Microsoft Remote Desktop` veya `Microsoft Office 365` girin.
+  - **Ad**: uygulamanız veya işleminiz için bir ad girin. Örneğin `Microsoft Remote Desktop` veya `Microsoft 365` girin.
   
   - **Tanımlayıcı türü**: seçenekleriniz:
     - **Paket kimliği**: uygulamalar için bu seçeneği belirleyin.

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 59d343d09f827edec5db0dd5302c75c00a0c8455
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694517"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995492"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager için Technical Preview 1511 ' deki yetenekler
 
@@ -50,24 +50,24 @@ WUfB aracılığıyla bağlanan bilgisayarlar için Configuration Manager uyumlu
 
 5.  WUfB üzerinden yönetilen bilgisayarların uyumluluk durumunda **bilinmiyor** görüntülenir ve genel uyumluluk yüzdesinin bir parçası olarak sayılmaz.  
 
-##  <a name="managing-office-365-proplus-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Configuration Manager aracılığıyla Office 365 ProPlus Istemci güncelleştirmesini yönetme  
- Configuration Manager artık Office 365 Masaüstü istemci güncelleştirmelerini Configuration Manager Yazılım Güncelleştirmesi Yönetimi iş akışını kullanarak yönetme olanağı vardır.    
-Microsoft, Windows Server Updates Services (WSUS) için yeni bir Office 365 Masaüstü istemci güncelleştirmesi yayımladığında, Office 365 güncelleştirmesi Katalog eşitlemesinin bir parçası olacak şekilde yapılandırıldıysa, Configuration Manager güncelleştirmeyi kataloğuna eşitleyebilecektir.  Configuration Manager site sunucusu, Office 365 istemci güncelleştirmelerini indirir ve paketini Configuration Manager dağıtım noktalarına dağıtır.  Configuration Manager istemci, Office 365 Masaüstü istemcilerine güncelleştirmelerin nereden alınacağını ve güncelleştirme yükleme işleminin ne zaman başlatılacağını bildirir.  
+##  <a name="managing-microsoft-365-apps-for-enterprise-client-update-through-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> Configuration Manager aracılığıyla kurumsal Istemci güncelleştirmesi için Microsoft 365 uygulamalarını yönetme  
+Configuration Manager artık Configuration Manager Yazılım Güncelleştirmesi Yönetimi iş akışını kullanarak Microsoft 365 Masaüstü istemci güncelleştirmelerini yönetme özelliğine sahiptir.
+Microsoft, Windows Server Updates Services (WSUS) için yeni bir Microsoft 365 Masaüstü istemci güncelleştirmesi yayımladığında, Microsoft 365 güncelleştirmesi Katalog eşitlemesinin bir parçası olacak şekilde yapılandırıldıysa, Configuration Manager güncelleştirmeyi kataloğuna eşitleyebilecektir.  Configuration Manager site sunucusu Microsoft 365 istemci güncelleştirmelerini indirir ve paketi Configuration Manager dağıtım noktalarına dağıtacaktır.  Configuration Manager istemci Microsoft 365 Masaüstü istemcilerine güncelleştirmelerin nereden alınacağını ve güncelleştirme yükleme işleminin ne zaman başlatılacağını bildirir.  
 
 **Bu senaryonun önkoşulları:**  
 
 ### <a name="try-it-out"></a>Deneyin!  
  Aşağıdaki görevi tamamlamayı deneyin ve nasıl çalıştığını bize bildirmek için bu konunun en üstündeki geri bildirim bilgilerini kullanın:  
 
-1. Office 365 güncelleştirmelerini Configuration Manager site sunucusuna eşitleyebilir ve Configuration Manager konsolundan görüntüleyebilirsiniz.  
+1. Microsoft 365 güncelleştirmelerini Configuration Manager site sunucusuna eşitleyebilir ve Configuration Manager konsolundan görüntüleyebilirsiniz.  
 
-2. Office 365 güncelleştirmelerini onaylayabilir ve başarıyla dağıtabilirsiniz.  
+2. Microsoft 365 güncelleştirmelerini onaylayabilir ve başarıyla dağıtabilirsiniz.  
 
-3. İstemcilere Office 365 güncelleştirmelerini indirebilir ve başarıyla yükleyebilirsiniz.  
+3. İstemcilere güncelleştirmeleri indirebilir ve başarıyla Microsoft 365.  
 
-4. Konsol içi izleme veya raporları kullanarak Office 365 güncelleştirmeleri için uyumluluğu doğrulayabilirsiniz.  
+4. Microsoft 365 güncelleştirmeleri için uyumluluğu, konsol içi izleme veya rapor kullanarak doğrulayabilirsiniz.  
 
-   Ayrıntılı adımlar için bkz. [Configuration Manager Technical Preview Ile Office 365 istemci güncelleştirmelerini yönetme](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Ayrıntılı adımlar için bkz. [Configuration Manager Technical Preview ile Microsoft 365 istemci güncelleştirmelerini yönetme](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Yüksek oranda kullanılabilir veritabanları için SQL Server AlwaysOn desteği  
  Configuration Manager artık site veritabanını barındırmak için SQL Server AlwaysOn kullanılabilirlik grupları kullanmayı desteklemektedir.  Yeni bir site yüklediğinizde, kurulumu normal bir SQL Server örneği yerine kullanılabilirlik grubu kullanacak şekilde yönlendirebilirsiniz.  

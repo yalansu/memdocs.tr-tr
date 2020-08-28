@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ROBOTS: NOINDEX
-ms.openlocfilehash: 18ea44f662591a21750fb630425ddfb975678aa2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9278e6cb148768e993706fe112bbfd70121cc6b9
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695605"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995475"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-configuration-manager"></a>Configuration Manager için Technical Preview 1606 ' deki yetenekler
 
@@ -215,11 +215,11 @@ Hizmet ve roller tamamen yapılandırıldıktan sonra, iç istemciler bulut prox
 
 İstemciler bulut proxy hizmeti için yeni konum bilgilerine sahip olduktan sonra, artık iç özel ağda olmayan ancak Internet erişimi olan istemcilerin durumunu denetlemeyi deneyin. Ayrıca, bulut proxy hizmetindeki trafiği **yönetim > Cloud Services > bulut proxy hizmeti**' ne giderek, liste bölmesinde hizmeti seçerek ve trafik bilgilerini Ayrıntılar bölmesinde görüntüleyerek de izleyebilirsiniz.   
 
-## <a name="manage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Configuration Manager’da Office 365 istemci aracısını yönetme  
+## <a name="manage-the-microsoft-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Configuration Manager Microsoft 365 istemci aracısını yönetme  
 
-Technical Preview 1606 ' den itibaren, Office 365 istemcilerinin Configuration Manager güncelleştirmelerini almasını sağlamak için Grup ilkesi yerine bir Configuration Manager istemci Aracısı ayarı kullanabilirsiniz. Bu ayarı yapılandırdıktan ve Office 365 güncelleştirmelerini dağıttıktan sonra, Configuration Manager istemci Aracısı, Office 365 güncelleştirmelerini bir dağıtım noktasından indirmek ve onları yüklemek için Office 365 istemci aracısında iletişim kurar. Configuration Manager, istemci Aracısı ayarının envanterini de alır.
+Technical Preview 1606 ' den itibaren, Microsoft 365 istemcilerinin Configuration Manager güncelleştirmeleri almasını sağlamak için Grup ilkesi yerine bir Configuration Manager istemci Aracısı ayarı kullanabilirsiniz. Bu ayarı yapılandırıp Microsoft 365 güncelleştirmelerini dağıttıktan sonra, Configuration Manager istemci Aracısı Microsoft 365 istemci aracısıyla iletişim kurarak bir dağıtım noktasından Microsoft 365 güncelleştirmelerini indirir ve yükler. Configuration Manager, istemci Aracısı ayarının envanterini de alır.
 
-Daha fazla bilgi için bkz. [Office 365 ProPlus güncelleştirmelerini yönetme](../../sum/deploy-use/manage-office-365-proplus-updates.md).
+Daha fazla bilgi için bkz. [Kurumsal güncelleştirmeler için Microsoft 365 uygulamalarını yönetme](../../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Office 365 istemci Aracısı 'nı yönetmek için Configuration Manager istemci ayarını ayarlayın
 1.  Configuration Manager konsolunda **Yönetim**  >  **genel bakış**  >  **istemci ayarları**' na tıklayın.
@@ -242,7 +242,7 @@ Technical Preview 1606 ile Configuration Manager konsolundaki güncelleştirmele
 
     Bir sitenin güncelleştirme yükleme durumunu görüntülediğinizde, konsol artık aşağıdaki eylemler için ayrı Ayrıntılar görüntüler:
     - **İndir**  (Bu yalnızca hizmet bağlantı noktası site sistem rolünün yüklü olduğu en üst katman sitesi için geçerlidir)
-    - **Çoğaltma**
+    - **Yinelemesi**
     - **Önkoşul Denetimi**
     - **Yükleme**
 

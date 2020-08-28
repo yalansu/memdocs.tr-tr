@@ -2,7 +2,7 @@
 title: Şirket verilerine yetkisiz erişimi engelleme
 titleSuffix: Microsoft Intune
 description: Microsoft Intune kullanarak şirket ağı dışında paylaşılan şirket verilerine yetkisiz erişimi engelleyin.
-keywords: Office 365 O365 Azure Information Protection verileri şirket verilerini ağ dışında koruma
+keywords: Microsoft 365 M365 Azure Information Protection verileri dış ağ şirket verilerini koruma
 ms.author: dougeby
 author: dougeby
 manager: dougeby
@@ -18,22 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d11f3d38923e50492992586bfb263a530e6da9e3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 24d0ed7b9111e54c4912cf23cd5b52072253c931
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915543"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996155"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Microsoft Intune kullanarak şirket verilerine yetkisiz erişimi engelleme
 
-Office 365 belgelerini ve e-postaları, verilere yalnızca yetkili kullanıcıların erişebilmesi için sınıflandırabilir, etiketleyebilir ve bunları koruyabilirsiniz. Ayarlar, BT yöneticileri veya kullanıcılar kurallar ve koşullar koyduktan sonra otomatik olarak yönetilir. Alternatif olarak BT ekibi, kullanıcıların izlemesi için önerilen ayarlar sağlayabilir. Ayrıca yöneticiler ve kullanıcılar daha önceden başkalarıyla paylaşılan verilere erişimi başka bir yetkilinin yardımı gerekmeden iptal edebilir. Bu işlemlerin sonucu, şirket ağının dışına çıktıklarında bile korumalı verileri kimin açtığını veya güncelleştirdiğini denetlemektir. 
+Microsoft 365 belgelerini ve e-postaları sınıflandırabilir, etiketleyebilir ve koruyabilir ve yalnızca yetkili kullanıcıların verilere erişimi vardır. Ayarlar, BT yöneticileri veya kullanıcılar kurallar ve koşullar koyduktan sonra otomatik olarak yönetilir. Alternatif olarak BT ekibi, kullanıcıların izlemesi için önerilen ayarlar sağlayabilir. Ayrıca yöneticiler ve kullanıcılar daha önceden başkalarıyla paylaşılan verilere erişimi başka bir yetkilinin yardımı gerekmeden iptal edebilir. Bu işlemlerin sonucu, şirket ağının dışına çıktıklarında bile korumalı verileri kimin açtığını veya güncelleştirdiğini denetlemektir. 
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
 Aşağıdaki koşulları yerine getirdiğinizde aşağıdaki eylem planı kullanılabilir:
 * Şirketiniz buluta güvenli bir şekilde geçiş yapmaya hazırdır.
-* Şirketiniz Office 365 Exchange Online, SharePoint Online, OneDrive İş veya Yammer kullanmaktadır.
+* Şirketiniz Exchange Online, SharePoint Online, OneDrive Iş veya Yammer Microsoft 365 kullanıyor.
 * Şirketinizin Microsoft 365, Enterprise Mobility + Security (EMS) veya Azure Information Protection lisansları vardır.
 * Şirketiniz Windows 7 Service Pack 1 veya üzerini çalıştıran cihazlarla çalışıyordur.
 * Şirketiniz, 2016 uygulama veya 2013 uygulama, Office Professional Plus 2016, Office Professional 2013 Plus with Service Pack 1 veya Office Professional Plus 2010 ile Microsoft 365 uygulamalar kullanır.

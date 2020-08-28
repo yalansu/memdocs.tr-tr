@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: e0f2801a9bf3d587d0117a720f4151f431441291
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2e823aad8fcf69861d21a99f0e65dcf8aaa40dcd
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692834"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993395"
 ---
 # <a name="what39s-new-in-version-1706-of-configuration-manager"></a>Sürüm 1706 ' deki yenilikler&#39;Configuration Manager
 
@@ -44,9 +44,9 @@ Version 1706 drops support for the following products:
 
 ## <a name="site-infrastructure"></a>Site altyapısı
 
-### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>Windows 10 ve Office 365 için hızlı yükleme dosyaları için istemci eş önbelleği desteği  
+### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-microsoft-365"></a>Windows 10 ve Microsoft 365 için hızlı yükleme dosyaları için istemci eş önbelleği desteği  
 <!-- 1352486 -->
-Bu sürümden itibaren, eş önbellek Windows 10 için içerik hızlı yükleme dosyalarının ve Office 365 güncelleştirme dosyalarının dağıtımını destekler. Bu değişikliği desteklemek için ek yapılandırma gerekmez.
+Bu sürümden itibaren, eş önbellek Windows 10 için içerik hızlı yükleme dosyalarının dağıtımını ve Microsoft 365 için güncelleştirme dosyalarını destekler. Bu değişikliği desteklemek için ek yapılandırma gerekmez.
 
 ### <a name="updates-for-the-data-warehouse"></a>Veri ambarı güncelleştirmeleri
 <!-- 1277922 -->
@@ -211,7 +211,7 @@ Bu sürümde, Hızlı güncelleştirmeler için indirme süresini önemli ölç�
 Artık, Microsoft Surface sürücü güncelleştirmelerini yönetmek için Configuration Manager kullanabilirsiniz.    
 
 
-#### <a name="prerequisites"></a>Ön koşullar
+#### <a name="prerequisites"></a>Önkoşullar
 - Tüm yazılım güncelleştirme noktalarında Windows Server 2016 çalışmalıdır.    
 - Bu, kullanılabilir olması için açmanız gereken bir ön sürüm özelliğidir. Daha fazla bilgi için bkz. [Güncelleştirmelerden yayın öncesi sürüm özelliklerini kullanma](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
@@ -227,8 +227,8 @@ Artık Windows 10 için Windows 10 özellik güncelleştirmeleri veya kalite gü
 
 Ayrıntılar için bkz. [Windows 10 ' da iş için Windows Update tümleştirme](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md#configure-windows-update-for-business-deferral-policies).
 
-### <a name="improved-user-notifications-for-office-365-updates"></a>Office 365 güncelleştirmeleri için geliştirilmiş Kullanıcı bildirimleri
-Bir istemci Office 365 güncelleştirmesi yüklediğinde Office Tıkla-Çalıştır Kullanıcı deneyiminden yararlanmak için geliştirmeler yapılmıştır. Bu, açılır ve uygulama içi bildirimleri ve geri sayım deneyimini içerir. Daha fazla bilgi için bkz. [yeniden başlatma davranışı ve Office 365 güncelleştirmeleri için istemci bildirimleri](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
+### <a name="improved-user-notifications-for-microsoft-365-updates"></a>Microsoft 365 güncelleştirmeleri için geliştirilmiş Kullanıcı bildirimleri
+İstemci bir Microsoft 365 güncelleştirme yüklediğinde, Office Tıkla-Çalıştır Kullanıcı deneyiminden yararlanmak için geliştirmeler yapılmıştır. Bu, açılır ve uygulama içi bildirimleri ve geri sayım deneyimini içerir. Daha fazla bilgi için bkz. [Microsoft 365 güncelleştirmeleri Için yeniden başlatma davranışı ve istemci bildirimleri](../../../sum/deploy-use/manage-office-365-proplus-updates.md)
 
 ## <a name="reporting"></a>Raporlama
 

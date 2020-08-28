@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f758456ad75c4acde1b050be75d653cc0e1dcfa1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700376"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88995254"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1902 ' deki yenilikler
 
@@ -351,27 +351,27 @@ Windows bilinen klasörlerini OneDrive Iş 'e taşımak için Configuration Mana
 
 OneDrive Iş 'in bu özelliği hakkında daha fazla bilgi için bkz. [yeniden yönlendirme ve Windows bilinen klasörlerini OneDrive 'a taşıma](/onedrive/redirect-known-folders).
 
-İlk olarak, [Office 365 KIRACı kimliğinizi bulun](/onedrive/find-your-office-365-tenant-id). Ardından OneDrive Sync Client sürüm 18.111.0603.0004 veya üstünü dağıtın. Daha fazla bilgi için bkz. [Configuration Manager kullanarak OneDrive uygulamaları dağıtma](/onedrive/deploy-on-windows).  
+İlk olarak, [Microsoft 365 KIRACı kimliğinizi bulun](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Ardından OneDrive Sync Client sürüm 18.111.0603.0004 veya üstünü dağıtın. Daha fazla bilgi için bkz. [Configuration Manager kullanarak OneDrive uygulamaları dağıtma](https://docs.microsoft.com/onedrive/deploy-on-windows).  
 
 Bir OneDrive Iş profili oluşturup dağıtmak için, Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Uyumluluk ayarları**' nı genişletin ve **OneDrive iş profilleri** düğümünü seçin.  
 
 Daha fazla bilgi için [OneDrive Iş profilleri](../../../compliance/deploy-use/onedrive-profile.md) makalesindeki Windows bilinen klasörleri OneDrive 'A yeniden yönlendir bölümüne bakın.
 
-### <a name="integration-for-office-365-proplus-readiness"></a>Office 365 ProPlus hazırlığı için tümleştirme
+### <a name="integration-for-microsoft-365-apps-for-enterprise-readiness"></a>Kurumsal hazırlık için Microsoft 365 uygulamalar için tümleştirme
 
 <!--3735402-->
-Office 365 ProPlus 'a yükseltmeye hazırlanma ve yüksek güvenilirlikli cihazları tanımlamak için Configuration Manager kullanın. Tümleştirme, ortamınızda kullanılan Office eklentileri ve makroları ile ilgili olası uyumluluk sorunları hakkında öngörüler sağlar. Ardından Configuration Manager kullanarak Office 'i kullanıma hazırlamış cihazlara dağıtın.
+Enterprise için Microsoft 365 uygulamalarına yükseltmeye hazırlanma ve yüksek güvenilirlikli cihazları tanımlamak için Configuration Manager kullanın. Tümleştirme, ortamınızda kullanılan Office eklentileri ve makroları ile ilgili olası uyumluluk sorunları hakkında öngörüler sağlar. Ardından Configuration Manager kullanarak Office 'i kullanıma hazırlamış cihazlara dağıtın.
 
-Mevcut Office 365 istemci yönetimi panosu artık yeni bir kutucuk içerir, **office 365 ProPlus yükseltme hazırlığı**.
+Mevcut Microsoft 365 istemci yönetimi panosu artık yeni bir kutucuk içerir, **Office 365 ProPlus yükseltme hazırlığı**.
 
-Daha fazla bilgi için bkz. [Office 365 istemci yönetimi panosu](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)
+Daha fazla bilgi için bkz. [Microsoft 365 istemci yönetimi panosu](../../../sum/deploy-use/office-365-dashboard.md#bkmk_o365_readiness)
 
-### <a name="additional-languages-for-office-365-updates"></a>Office 365 güncelleştirmeleri için ek diller
+### <a name="additional-languages-for-microsoft-365-updates"></a>Microsoft 365 güncelleştirmeleri için ek diller
 
 <!--3555955-->
-Configuration Manager artık Office 365 istemci güncelleştirmeleri için desteklenen tüm dilleri desteklemektedir. Güncelleştirme iş akışı artık **Office 365 Istemci güncelleştirmesi**için çok sayıda dilde **Windows Update** için 38 dillerini ayırır.
+Configuration Manager artık Microsoft 365 istemci güncelleştirmeleri için desteklenen tüm dilleri desteklemektedir. Güncelleştirme iş akışı artık **Office 365 Istemci güncelleştirmesi**için çok sayıda dilde **Windows Update** için 38 dillerini ayırır.
 
-Daha fazla bilgi için bkz. [Office 365 güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang)
+Daha fazla bilgi için bkz. [Microsoft 365 güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_o365_lang)
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>Yaşam döngüsü panosundaki Office ürünleri
 

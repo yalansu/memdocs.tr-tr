@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 257f717243e021e7fd643a6e7ca41644e4369bcd
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 76d1141a1c4dd442f6fb94a06b5d20adc8c7fa77
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82080139"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996342"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Kullanım örneği senaryosu gereksinimlerini belirleme
 
@@ -35,11 +35,11 @@ Ayrıca, kurumsal kullanım örneği senaryosu için farklı gereksinimler küme
 
 Aşağıda, her bir kullanım örneği ve alt kullanım örneği senaryosu, kuruluş grubu ve mobil cihaz platformu için farklı gereksinimler kümesini gösteren bir kuruluşun kullanım örneği gereksinimlerine birkaç örnek verilmiştir. Kuruluşunuzun kullanım örneği gereksinimlerini girmek için aşağıdaki tabloyu da kullanabilirsiniz:
 
-| **Uygulama alanları** | **Alt kullanım örnekleri** | **Gruplar** | **Cihaz platformları** | **Gereksinimler** |
+| **Kullanım örnekleri** | **Alt kullanım örnekleri** | **Gruplar** | **Cihaz platformları** | **Gereksinimler** |
 |:---:|:---:|:---:|:---:|:---:|
 | Kurumsal | Bilgi çalışanı | İK, Finans | iOS/iPadOS | Güvenli e-posta, cihaz ayarları, profiller, uygulamalar |                                                          
 | Kurumsal | Yöneticiler | İK, Finans | iOS/iPadOS | Güvenli e-posta, cihaz ayarları, profiller, uygulamalar |                                                         
-| Kurumsal | Bilgi noktası | Perakende | Android | Cihaz ayarları, profiller, uygulamalar |
+| Kurumsal | Bilgi noktası | Retail | Android | Cihaz ayarları, profiller, uygulamalar |
 | KCG | Bilgi çalışanı | Pazarlama, Satış | iOS/iPadOS | Güvenli e-posta, cihaz ayarları, profiller, uygulamalar |                                                         
 | KCG | Yöneticiler | Pazarlama, Satış | iOS/iPadOS | Güvenli e-posta, cihaz ayarları, profiller, uygulamalar |
 
@@ -64,7 +64,7 @@ Kuruluşunuzun kullanım örneği ve alt kullanım örneği gereksinimlerini gir
   - e-posta (Windows 10 mobile)
 
 - **Uygulamalar**
-  - Uygulama koruma ilkeleriyle Office 365
+  - Uygulama koruma ilkeleriyle Microsoft 365
   - Uygulama koruma ilkeleri ile iş kolu (LOB)
 
 ## <a name="next-steps"></a>Sonraki adımlar

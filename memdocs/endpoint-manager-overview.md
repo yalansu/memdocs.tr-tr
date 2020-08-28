@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2466e18d5cf2567f85c59fe1f85bd1436c2da0a4
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0d638cb382aa7abe8859648192837601c86f22ce
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915849"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88996563"
 ---
 # <a name="microsoft-endpoint-manager-overview"></a>Microsoft Endpoint Manager’a genel bakış
 
@@ -83,7 +83,7 @@ Endpoint Manager aşağıdaki hizmetleri içerir:
 
 Kuruluşunuz için nelerin doğru olduğunu belirlemenin birkaç yolu vardır. Sonraki adımlarınız, kuruluşunuzun yaptığı işe göre değişir. Ne elde etmek istediğinizi göz önünde bulundurun.
 
-Örnek:
+Örneğin:
 
 - Yeni cihazları sürekli temin ediyorsanız Windows Autopilot ile başlayın.
 - Kullanıcılarınız, uygulamalarınız ve cihazlarınız için kurallar ve denetim ayarları ekleyip Intune ile başlayın.
@@ -105,7 +105,7 @@ Microsoft Uç Nokta Yöneticisi, birkaç teknolojiyi birleştiren bir çözüm p
 
 Şu anda Configuration Manager kullanıyorsanız, Windows cihazlarınızı birlikte yönetmek için de Microsoft Intune alırsınız. İOS/ıpados ve Android gibi diğer platformlarda ayrı bir Intune lisansına sahip olmanız gerekir.
 
-Çoğu senaryoda, Endpoint Manager ve Office 365 ' i verdiği için en iyi seçenek Microsoft 365 olabilir. Daha fazla bilgi için bkz. [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
+Çoğu senaryoda, uç nokta Yöneticisi ve Office sağlayan Microsoft 365 en iyi seçenek olabilir. Daha fazla bilgi için bkz. [Microsoft 365](https://www.microsoft.com/licensing/product-licensing/microsoft-365-enterprise).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

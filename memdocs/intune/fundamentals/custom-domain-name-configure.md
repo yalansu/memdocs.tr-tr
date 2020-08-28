@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97bdbdfa43ca8aae1de6a74f3a9f3be82c855bf0
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 267bf556447308ee0c81c5ad9c9bb8153df9532d
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909814"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88994115"
 ---
 # <a name="configure-a-custom-domain-name"></a>Özel bir etki alanı adı yapılandırma
 
@@ -54,6 +54,6 @@ onmicrosoft.com ilk etki alanı adını yeniden adlandıramaz veya kaldıramazs�
 
 Özel bir etki alanı ekleme ve doğrulama adımları ayrıca [Azure Active Directory'de gerçekleştirilebilir](/azure/active-directory/fundamentals/add-custom-domain).
 
-[Office 365'te, ilk onmicrosoft.com etki alanınız hakkında](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A) daha fazla bilgi edinebilirsiniz
+[Microsoft 365 'de ilk onmicrosoft.com etki alanınız hakkında](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A) daha fazla bilgi edinebilirsiniz
 
 Kaydı Intune sunucularına yönlendiren bir DNS CNAME 'i oluşturarak, [Windows kaydını Azure AD Premium olmadan nasıl basitleştireceğinizi](../enrollment/windows-enroll.md#simplify-windows-enrollment-without-azure-ad-premium) öğrenin.

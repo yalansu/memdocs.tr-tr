@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: a947b332addbc3404617abdbbe199ede4e74dc63
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5c125bc92c8949384486c7efc03cea122258092e
+ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88692800"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88993514"
 ---
 # <a name="what39s-new-in-version-1702-of-configuration-manager"></a>Sürüm 1702 ' deki yenilikler&#39;Configuration Manager
 
@@ -220,11 +220,11 @@ Bu sürümden itibaren, Windows ADK sürümünü yükselttiğinizde ve sonra Con
 
 ## <a name="software-updates"></a>Yazılım güncelleştirmeleri
 
-### <a name="deploy-office-365-apps-to-clients"></a>İstemcilere Office 365 uygulamalarını dağıtma
-Sürüm 1702 ' den başlayarak, Office 365 Istemci yönetimi panosundan Office 365 yükleme ayarlarını yapılandırmanıza, Office Içerik teslim ağlarından (CDNs) dosya yüklemenize ve dosyaları Configuration Manager bir uygulama olarak dağıtmanıza olanak sağlayan Office 365 yükleyicisini başlatabilirsiniz. Ayrıntılar için bkz. [Office 365 ProPlus güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
+### <a name="deploy-microsoft-365-apps-to-clients"></a>Microsoft 365 uygulamalarını istemcilere dağıtma
+Sürüm 1702 ' den başlayarak, Office 365 Istemci yönetimi panosundan, yükleme ayarlarını yapılandırmanıza, Office Içerik teslim ağlarından (CDNs) dosya yüklemenize ve dosyaları Configuration Manager bir uygulama olarak dağıtmanıza olanak sağlayan Office 365 yükleyicisini başlatabilirsiniz. Ayrıntılar için bkz. [Microsoft 365 Apps güncelleştirmelerini yönetme](../../../sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_deploy).
 
 > [!IMPORTANT]
-> Configuration Manager ' de Office 365 uygulama Sihirbazı 'Nı kullanarak oluşturduğunuz ve dağıttığınız Office 365 uygulaması, **office 365 Istemci yeniden** yazılım güncelleştirmeleri istemci Aracısı ayarının yönetimini etkinleştirerek Configuration Manager tarafından otomatik olarak yönetilmez. Ayrıntılar için bkz. [istemci ayarları hakkında](../../clients/deploy/about-client-settings.md).
+> Configuration Manager Office 365 uygulama Sihirbazı 'Nı kullanarak oluşturduğunuz ve dağıttığınız Microsoft 365 uygulaması, **office 365 Istemci yeniden** yazılım güncelleştirmeleri istemci Aracısı ayarının yönetimini etkinleştirene kadar Configuration Manager tarafından otomatik olarak yönetilmez. Ayrıntılar için bkz. [istemci ayarları hakkında](../../clients/deploy/about-client-settings.md).
 
 ### <a name="manage-express-installation-files-for-windows-10-updates"></a>Windows 10 güncelleştirmeleri için Hızlı yükleme dosyalarını yönetme
 Sürüm 1702 ' den başlayarak, Configuration Manager Windows 10 güncelleştirmeleri için hızlı yükleme dosyalarını destekler. Windows 10 ' un desteklenen bir sürümünü kullanırken, yalnızca geçerli ayın Windows 10 toplu güncelleştirmesi ve önceki ayın güncelleştirmesi arasındaki değişiklikleri indirmek için Configuration Manager ayarlarını kullanabilirsiniz. Hızlı yükleme dosyaları olmadan, tüm Windows 10 toplu güncelleştirmesini (önceki aydan tüm güncelleştirmeler dahil) her ay indirir Configuration Manager. Hızlı yükleme dosyalarının kullanılması, istemcilerde daha küçük indirmeler ve daha hızlı yükleme süreleri sağlar. Ayrıntılar için bkz. [Windows 10 güncelleştirmeleri için hızlı yükleme dosyalarını yönetme](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
