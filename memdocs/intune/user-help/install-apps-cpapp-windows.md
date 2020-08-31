@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 73201375c9416b3a30181062d310a1d9bd60756d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914625"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057323"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Cihazınızda uygulama yükleme ve paylaşma
 
@@ -53,7 +53,7 @@ Windows için Şirket Portalı uygulamasından cihazınıza uygulama yükleyin.
 > [!IMPORTANT]
 > Gerekli bir uygulama yüklenemezse ve kuruluşunuz bunu el ile yüklemek için kullanılabilir hale getirir, **yeniden dene**' yi seçin. Güncelleştirilmiş durumu görmek yaklaşık on dakika sürebilir. Bu süre boyunca yeniden **dene** ' yi seçer ve bir hata alırsanız, bu sorun devam edersiniz. Güncelleştirilmiş bir durum için on dakika beklemeye devam edin.   
 
-Şirketinizin büyüklüğüne bağlı olarak Şirket Portalı'nda indirilebilecek birden fazla Office sürümü görebilirsiniz. Windows cihazları için Office paketi hakkında daha ayrıntılı bilgi için bkz. [Windows cihazınıza Office 365 yükleme](./install-office-windows.md).
+Şirketinizin büyüklüğüne bağlı olarak Şirket Portalı'nda indirilebilecek birden fazla Office sürümü görebilirsiniz. Windows cihazları için Office Suite hakkında belirli bilgiler için, bkz. [Windows cihazınıza Microsoft 365 yükleme](./install-office-windows.md).
 
 ## <a name="share-apps"></a>Uygulamaları paylaşma  
 Uygulamaları iş veya okuldaki tanıdığınız kişilerle paylaşın veya bu kişilere önerin. Aşağıdaki adımlar bir bağlantıyı doğrudan Şirket Portalı'ndan nasıl paylaşabileceğinizi anlatmaktadır.

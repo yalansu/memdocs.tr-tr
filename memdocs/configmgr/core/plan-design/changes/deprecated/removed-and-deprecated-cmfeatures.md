@@ -2,7 +2,7 @@
 title: Kullanım dışı bırakılan özellikler
 titleSuffix: Configuration Manager
 description: Configuration Manager artık desteklemediği özellikler hakkında bilgi edinin.
-ms.date: 08/11/2020
+ms.date: 08/28/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29b5dd8fdceb803de77aff9adbd0614d1e201b18
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aca9dc5c2ff2d88155ab19656f391cf87a4e977f
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88694278"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068098"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager için kaldırılan ve kullanım dışı bırakılan özellikler
 
@@ -31,6 +31,7 @@ Aşağıdaki özellikler kullanım dışıdır. Artık bunları kullanmaya devam
 
 |Özellik|İlk duyurulan kullanımdan kaldırma|Destek &nbsp; kaldırıldı|
 |-----------|---|--------------|
+|Configuration Manager konsolundaki **izleme** çalışma alanının **site hiyerarşisi** düğümündeki coğrafi görünüm.<!--8116777-->|Ağustos 2020|TBD|
 |Azure 'dan içerik paylaşmaya yönelik uygulama değişti. İçerik etkinleştirilmiş bir bulut yönetimi ağ geçidi kullanın. Gelecekte geleneksel bir bulut dağıtım noktası oluşturamayacak.|Şubat 2019|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 |Bulut yönetimi ağ geçidi ve bulut dağıtım noktası için Azure 'a klasik hizmet dağıtımı. Daha fazla bilgi için [plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager)konusuna bakın.|Kasım 2018|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 

@@ -10,12 +10,12 @@ ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f6d3f6dbbbb407ee63eb8253cbf3ca740a10479c
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: b419f313b9d4d300d286cf32605ebfe7e0e1573c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699798"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068064"
 ---
 # <a name="additional-information-about-privacy-for-configuration-manager"></a>Configuration Manager gizliliği hakkında ek bilgiler
 
@@ -88,6 +88,9 @@ Daha fazla bilgi için bkz. [Endpoint Protection](../../../protect/deploy-use/en
 
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>Site Hiyerarşisi – Bing Haritalar ile Coğrafi Görünüm
+
+> [!IMPORTANT]
+> 2020 Ağustos 'Tan başlayarak bu özellik kullanım dışıdır. **Hiyerarşi diyagramı** seçeneğini kullanın.<!--8116777-->
 
 Configuration Manager konsolunda, **izleme** çalışma alanına gidin, **site hiyerarşisi** düğümünü seçin ve **coğrafi görünüme**geçin. Bu görünüm, Microsoft Bing Haritalar 'ın Configuration Manager fiziksel sunucu topolojinizi görüntülemek için sağladığı haritaları kullanmanıza olanak sağlar. Bu özelliği etkinleştirmek için sağladığınız konum bilgileri, sunucunuzdaki Bing Haritalar Web hizmetine gönderilir.
 

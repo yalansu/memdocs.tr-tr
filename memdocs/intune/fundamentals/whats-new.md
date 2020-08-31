@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77546387a5443e6f46ad0ab45d80d8038d53e64a
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 4d77221208567253445307739fe193a58836e936
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996240"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068227"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -151,6 +151,20 @@ Değişiklikler şunlardır:
   Yapılandırabileceğiniz Dışlamalar, Defender *süreçlerini*, *dosya uzantılarını*ve Microsoft Defender 'ın tarayabilmesi istemediğiniz *Dosya* ve *klasörleri* içerir.
 
 - **İlke birleştirme** – Intune artık ayrı profillerde tanımladığınız dışlamaları listesini her bir cihaza veya kullanıcıya uygulanacak tek bir dışlamaları listesine birleştirir. Örneğin, üç ayrı ilke ile bir kullanıcıyı hedefliyorsanız, bu üç ilkenin dışlama listeleri *Microsoft Defender virüsten koruma dışlamalarının*tek bir üst kümesi ile birleştirilir ve bu da bu kullanıcı için geçerlidir.
+
+#### <a name="import-and-export-lists-of-address-ranges-for-windows-firewall-rules---8125400----"></a>Windows güvenlik duvarı kuralları için adres aralıklarının listesini içeri ve dışarı aktarma<!-- 8125400  -->
+
+. Csv dosyalarını kullanarak bir adres aralıkları listesini, uç nokta güvenliği için güvenlik duvarı ilkesinde Microsoft Defender güvenlik duvarı kuralları profiline **içeri** veya **dışarı aktarma** desteği ekledik. Aşağıdaki Windows güvenlik duvarı kuralı ayarları artık içeri ve dışarı aktarmayı destekliyor:
+
+- **Yerel adres aralıkları**
+- **Uzak adres aralıkları**
+
+Ayrıca, yinelenen veya geçersiz girişlerin engellenmesine yardımcı olmak için hem yerel hem de uzak adres aralığı girişinin doğrulanmasını geliştirdik.
+
+Bu ayarlar hakkında daha fazla bilgi için bkz. [Microsoft Defender güvenlik duvarı kuralları](../protect/endpoint-security-firewall-profile-settings.md#microsoft-defender-firewall-rules)ayarları.
+
+
+
 
 
 <!-- ########################## -->
@@ -386,7 +400,7 @@ Daha fazla bilgi için bkz. [Microsoft Intune veri ambarı API 'si](../developer
 ### <a name="app-management"></a>Uygulama yönetimi
 
 #### <a name="update-to-device-icons-in-company-portal-and-intune-apps-on-android---6057023---"></a>Android 'de Şirket Portalı ve Intune uygulamalarında cihaz simgelerine güncelleştirme<!-- 6057023 -->
-Android cihazlarda Şirket Portalı ve Intune uygulamalarındaki cihaz simgelerini, daha modern bir görünüm oluşturmak ve Microsoft 'un akıcı tasarım sistemiyle uyum sağlamak için güncelleştirdik. İlgili bilgiler için bkz. [iOS/ıpados ve macOS için şirket portalı App 'teki simgelere güncelleştirme](../fundamentals/whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
+Android cihazlarda Şirket Portalı ve Intune uygulamalarındaki cihaz simgelerini, daha modern bir görünüm oluşturmak ve Microsoft 'un akıcı tasarım sistemiyle uyum sağlamak için güncelleştirdik. İlgili bilgiler için bkz. [iOS/ıpados ve macOS için şirket portalı App 'teki simgelere güncelleştirme](whats-new-app-ui.md#update-to-icons-in-company-portal-app-for-iosipados-and-macos-). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-enrollment"></a>Cihaz kaydı
@@ -836,7 +850,7 @@ Bu destek hakkında daha fazla bilgi için Exchange belgelerindeki [iOS ve Andro
 ### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
 
 #### <a name="device-reports-ui-update---6269408---"></a>Cihaz raporları Kullanıcı arabirimi güncelleştirmesi<!-- 6269408 -->
-Raporlara genel bakış bölmesi şimdi bir **Özet** ve **rapor** sekmesi sağlar. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **raporlar**' ı seçin ve ardından **raporlar** sekmesini seçerek kullanılabilir rapor türlerini görüntüleyin. İlgili bilgiler için bkz. [Intune raporları](../fundamentals/reports.md).
+Raporlara genel bakış bölmesi şimdi bir **Özet** ve **rapor** sekmesi sağlar. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **raporlar**' ı seçin ve ardından **raporlar** sekmesini seçerek kullanılabilir rapor türlerini görüntüleyin. İlgili bilgiler için bkz. [Intune raporları](reports.md).
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1212,7 +1226,7 @@ Aşağıdaki özellikler artık [Devicepropertyhistory](../developer/reports-ref
 Daha fazla bilgi için bkz. [Microsoft Intune veri ambarı API 'si](../developer/reports-nav-intune-data-warehouse.md).
 
 #### <a name="help-and-support-workflow-update-to-support-additional-services---5654170-----"></a>Ek hizmetleri desteklemek için yardım ve destek iş akışı güncelleştirmesi<!-- 5654170   -->
-Microsoft Endpoint Manager Yönetim Merkezi 'ndeki yardım ve destek sayfasını, artık [kullandığınız yönetim türünü seçtiğiniz](../fundamentals/get-support.md#options-to-access-help-and-support)şekilde güncelleştirdik. Bu değişiklik ile aşağıdaki yönetim türlerinden seçim yapabilirsiniz:
+Microsoft Endpoint Manager Yönetim Merkezi 'ndeki yardım ve destek sayfasını, artık [kullandığınız yönetim türünü seçtiğiniz](get-support.md#options-to-access-help-and-support)şekilde güncelleştirdik. Bu değişiklik ile aşağıdaki yönetim türlerinden seçim yapabilirsiniz:
 
 - Configuration Manager (Masaüstü analizlerini içerir)
 - Intune

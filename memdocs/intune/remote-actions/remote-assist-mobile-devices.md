@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8d3dcb0be698938c303ab218be12329e314dd75
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: b501ab979d87461067018f789d6d096020d3819e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909083"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057428"
 ---
 # <a name="remotely-assist-mobile-devices-managed-by-microsoft-endpoint-manager"></a>Microsoft Endpoint Manager tarafından yönetilen mobil cihazlara uzaktan yardımcı olun
 
@@ -49,4 +49,4 @@ Microsoft Endpoint Manager tarafından yönetilen cihazları uzaktan yönetmek i
 | Cihazın Configuration Manager ve Intune tarafından ortak yönetilmesi gerekir ||||![Onay işareti](../enrollment/media/enrollment-method-capab/checkmark.png)|
 | Ek lisans gerektirir\* |![Onay işareti](../enrollment/media/enrollment-method-capab/checkmark.png)||![Onay işareti](../enrollment/media/enrollment-method-capab/checkmark.png)|![Onay işareti](../enrollment/media/enrollment-method-capab/checkmark.png)|
 
-\* Takımlar O365 veya M365 lisanslama gerektirir. TeamViewer ve Intune kullanımı, hem TeamViewer hem de Intune 'dan lisanslamayı gerektirir. Uzaktan denetim bir Configuration Manager özelliğidir ve Configuration Manager lisanslamayı gerektirir.
+\* Ekipler Microsoft 365 lisanslama gerektirir. TeamViewer ve Intune kullanımı, hem TeamViewer hem de Intune 'dan lisanslamayı gerektirir. Uzaktan denetim bir Configuration Manager özelliğidir ve Configuration Manager lisanslamayı gerektirir.

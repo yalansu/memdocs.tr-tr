@@ -19,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: c175d9bba142c9126552a71f1d942e5a7b975b11
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: cbf23dc82f5524bcd8c778c41e964c7a9e46c21e
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907595"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057279"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Windows cihazınızı Intune Şirket Portalı ile kullanma
 
@@ -67,7 +67,7 @@ Ayrıntılı adımlar ve ekran görüntüleri için bkz. [Şirket Portalı'nda o
 * [Windows cihazımı güncelleştirme](you-need-to-update-your-windows-device.md)
 * [Şirket Portalı uygulamasından günlükler gönderme](send-logs-to-your-it-admin-cp-windows.md)
 * [Cihaz Ayarları uygulamasından günlükler gönderme](send-logs-to-your-it-admin-settings-windows.md)
-* [Windows 10 cihazıma Office 365 yükleme](install-office-windows.md)
+* [Windows 10 cihazma Office 'i yükler](install-office-windows.md)
 * [Cihazımın şifrelenmesi gerekiyor](you-need-to-enable-windows-encryption.md)
 * [Kötü amaçlı yazılımdan korunma yazılımı edinme](your-device-needs-antimalware-software.md)
 * [Güvenli Önyüklemeyi Etkinleştirme](you-need-to-enable-secure-boot-windows.md)

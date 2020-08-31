@@ -15,11 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1655c7b18262d0515308a00c617f06d917d976de
-ms.sourcegitcommit: 7de54acc80a2092b17fca407903281435792a77e
+ms.openlocfilehash: 92c0911ff9250fb1b2832df4b7e269f192ee8cda
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85972207"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057530"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Intune ile wandera Mobile Threat Defense Bağlayıcısı  
 
@@ -37,7 +38,7 @@ Wandera 'nın mobil uygulaması Microsoft Intune kullanarak sorunsuz bir şekild
 
 Intune 'daki uyumluluk ilkesi, Wandera 'nın risk değerlendirmesini temel alan MTD için bir kural içerir. Bu kural etkinleştirildiğinde Intune, cihazın etkinleştirdiğiniz ilke ile uyumluluğunu değerlendirir.
 
-Uyumsuz cihazlarda Office 365 gibi kaynaklara erişim engellenebilir. Engellenen cihazlardaki kullanıcılar, sorunu çözmek ve erişimi yeniden kazanmak için Wandera uygulamasından rehberlik alır.
+Uyumsuz olan cihazlar için Microsoft 365 gibi kaynaklara erişim engellenebilir. Engellenen cihazlardaki kullanıcılar, sorunu çözmek ve erişimi yeniden kazanmak için Wandera uygulamasından rehberlik alır.
 
 Wandera, her değiştiğinde Intune 'U her bir cihazın en son tehdit düzeyiyle (güvenli, düşük, orta veya yüksek) güncelleştirir. Bu tehdit düzeyi, Wandera güvenlik bulutu tarafından sürekli olarak yeniden hesaplanır ve çeşitli tehdit kategorileri genelinde cihaz durumu, ağ etkinliği ve çok sayıda mobil tehdit bilgileri akışını temel alır.
 
@@ -56,7 +57,7 @@ Aşağıdaki platformlar, Intune 'A kaydolduktan sonra Wandera için desteklenir
 
 Platform ve cihaz hakkında daha fazla bilgi için bkz. [Wandera Web sitesi](https://www.wandera.com/mobile-threat-defense/).
 
-## <a name="prerequisites"></a>Ön koşullar  
+## <a name="prerequisites"></a>Önkoşullar  
 
 - Microsoft Intune aboneliği  
 - Azure Active Directory  

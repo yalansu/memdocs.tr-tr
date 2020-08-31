@@ -1,11 +1,11 @@
 ---
-title: Şirket Portalı uygulamasında oturum açma | Microsoft Docs
-description: Birden çok platformdaki Şirket Portalı uygulamasında oturum açmayı öğrenin.
+title: Şirket Portalı uygulamada oturum açma | Microsoft Docs
+description: Şirket Portalı uygulamasının nereden alınacağını ve oturum açmak için üç farklı yolu öğrenin.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/31/2019
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,81 +19,78 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 59555c8bb9a35d5b70b46836f2298bf3ed342b2d
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 28400d1aff176f83fd98b8ef1a825f468cd8847f
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881827"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057445"
 ---
-# <a name="sign-in-to-company-portal"></a>Şirket Portalı oturum açın  
+# <a name="how-to-sign-in-to-company-portal"></a>Şirket Portalı oturum açma  
 
-Şirket Portalı uygulamasında oturum açmak için üç yol vardır:
+Şirket Portalı, aşağıdaki konumlardan Windows 10, Android, iOS ve macOS cihazlarında kullanılabilir (sırasıyla): 
 
-* İş e-posta adresiniz ve parolanızla oturum açın.  
+* [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417)  
+* [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416)  
+* [Apple App Store](https://go.microsoft.com/fwlink/?linkid=2141414)  
+* [Mac 'imi kaydet](https://go.microsoft.com/fwlink/?linkid=853070): Bu bağlantıyı seçtiğinizde cihazınızdaki Şirket portalı Installer paketi hemen indirilir.  
+
+Şirket Portalı uygulamasında oturum açmak için üç yol vardır.
+
+* Okul veya iş e-posta adresiniz ve parolanızla oturum açın.  
 * Sertifika tabanlı kimlik doğrulamasıyla oturum açın.  
-* Başka bir cihazdan oturum açın.    
+* Başka bir cihazdan oturum açın.   
+
+Bu makalede, bu yöntemlerin her birini kullanarak nasıl oturum yapılacağı açıklanır. En iyi deneyim için, kuruluşunuzun önerdiği veya gerektirdiği yöntemi kullanın. 
 
 
-## <a name="sign-in-with-your-email-address-and-password"></a>E-posta adresiniz ve parolanızla oturum açın
-Aşağıdaki adımlarda iOS için Şirket Portalı ekran görüntüleri gösterilmektedir.  
+## <a name="sign-in-with-school-or-work-account"></a>Okul veya iş hesabı ile oturum açın    
+Okul veya iş hesabınızla Şirket Portalı için oturum açmak üzere aşağıdaki adımları izleyin. 
 
-1. Uygulamayı cihazınızda açın ve **oturum aç**' a dokunun.  
+1. Uygulamayı açın ve **oturum aç**' a dokunun.  
 
-   ![Şirket Portalı oturum açma sayfasının örnek ekran görüntüsü.](./media/intune-ios-cp-signin-1908.png)
-
-
-2. **İş veya okul hesabınızı** girin ve **İleri**’ye dokunun.
-
-   ![Kullanıcı aynı ekranda hem e-posta adresini hem de parolasını girmek yerine yalnızca kendi e-posta adresini girer.](./media/cp_ios_aad_signin_after_1804_002.png)
+2. Okul veya iş hesabınızla ilişkili e-posta adresini girin ve ardından **İleri**' ye dokunun.
 
 3. Parolanızı girin ve **Oturum Aç**’a dokunun.
 
-   ![E-posta adresi kabul edildikten sonra kullanıcıdan parolası istenir.](./media/cp_ios_aad_signin_after_1804_003.png)
 
-4. Uygulama, kimlik bilgilerinizi doğrulayacaktır. İşiniz bittiğinde kuruluşunuzun kaynaklarına erişebilir ve kullanılabilir uygulamaları yükleyebilirsiniz.  
+4. Uygulama, kimlik bilgilerinizi doğrularken bekleyin. İşiniz bittiğinde, uygulamadaki özelliklere ve kuruluşunuzun kaynaklarına erişebilirsiniz.  
 
-   ![Kimlik doğrulama işleminden sonra Şirket Portalı uygulama oturum açar, bir yükleme çubuğu gösterir.](./media/cp_ios_aad_signin_after_1804_004.png)
-
-## <a name="sign-in-with-certificate-based-authentication"></a>Sertifika tabanlı kimlik doğrulamasıyla oturum açın
+## <a name="sign-in-with-certificate"></a>Sertifikayla oturum açın  
 Bu oturum açma seçeneğini yalnızca kuruluşunuz sertifika tabanlı kimlik doğrulamasına izin veriyorsa ve kullanabileceğiniz bir sertifikanız varsa görürsünüz.  
 
 1. Cihazınızda Şirket Portalı uygulamasını açın.  
 
-2. **İş veya okul hesabınızı** girin.  
+2. İş veya okul hesabınızla ilişkili e-posta adresini girin ve ardından **İleri**' ye dokunun.   
 
-3. **Sertifika ile oturum açma** bağlantısına dokunun.  
+3. **Bir sertifikayla oturum aç**' a dokunun.  
 
 4. Sertifikayı kullanmak için **Devam**’a dokunun.  
+5. Uygulama, sertifikanızı doğrularken bekleyin. İşiniz bittiğinde, uygulamadaki özelliklere ve kuruluşunuzun kaynaklarına erişebilirsiniz.  
 
-## <a name="sign-in-from-another-device"></a>Başka bir cihazdan oturum açma
+## <a name="sign-in-via-another-device"></a>Başka bir cihaz aracılığıyla oturum açın    
 
-Şirketiniz, bilgisayarlarınıza erişmek için akıllı kartlar kullanıyorsa, başka bir cihazdan oturum açarak kimlik doğrulamanız gerekebilir.  
+Normalde iş kaynaklarına erişmek için bir akıllı kart kullanıyorsanız, Şirket Portalı oturum açmak için bu bölümdeki adımları izleyin.  
 
-1. Cihazınızda Şirket Portalı uygulamasını açın. İş kaynaklarınıza erişmek için kullanacağınız cihaz olduğundan emin olun.       
+1. İş kaynaklarınıza erişmek için kullanacağınız cihazda Şirket Portalı açın.  
 
-1. **Başka bir cihazdan oturum aç '** ı seçin.  
+2. **Başka bir cihazdan oturum aç '** ı seçin.  
 
-   ![Şirket Portalı oturum açma sayfası kullanıcıdan e-posta adresini ister.  "Ileri" düğmesini ve "başka bir cihazdan oturum aç" bağlantısını gösterir. Ayrıca bir “Hesabınıza erişemiyor musunuz?” bağlantısı da vardır. Aşağıdaki bir bağlantı Microsoft Gizlilik ve Tanımlama bilgilerine yönlendirir.](./media/cp_ios_aad_signin_after_1804_005.png)
-
-2. Şirket Portalı’nda oturum açmak için benzersiz, tek seferlik bir kod alacaksınız. Kodu kopyalayın.
+3. Ekranda görüntülenen tek seferlik, oturum açma kodunu yazın (veya sonraki birkaç adım için bu ekranı yararlı tutun). 
 
    ![İş bilgisayarınızdan benzersiz bir geçiş kodu ile https://microsoft.com/devicelogin sayfasına gidip oturum açmak için bu kodu kullanmaya ilişkin yönergeler sağlanır.](./media/cp_ios_aad_signin_after_1804_006.png)
 
-3. Diğer cihazınızda (kimlik doğrulamak için kullandığınız) tarayıcınızı açın ve adresine gidin [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) . Kodu girin veya yapıştırın.  
+3. Diğer cihazınıza geçiş yapın (kimlik doğrulamak için kullandığınız bir tane) ve adresine gidin [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin) .  
+
+4. İstendiğinde, kodu girin.  
 
    ![Kullanıcının Şirket Portalı uygulamasındaki tarayıcı yerine iş bilgisayarındaki tarayıcısının bir resmi. Görüntülenen "Cihaz oturum açma" sayfası kullanıcıdan Şirket Portalı uygulamasından aldığı kodu girmesini ister.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
-4. Şirket Portalı iş cihazınızda oturum açmasını sağlamak için __devam__ ' ı seçin.   
+4. Şirket Portalı iş cihazınızda oturum açmasını sağlamak için  __devam__ ' ı seçin.   
 
-   ![Kullanıcı kendi benzersiz kodunu alana girmiştir ve "Cihaz oturum açma" sitesi Intune Şirket Portalı’nın oturum açmak üzere yetkilendirilecek doğru uygulama olup olmadığının doğrulanmasını istemiştir.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_005.png) 
+5. Ekranda Şirket Portalı oturum açtığınızdan, tarayıcıyı kapatabilir ve iş cihazınıza geçiş yapabilirsiniz.  
 
-5. Kod doğrulandığında pencereyi kapatabilirsiniz.  
 
-   ![Bir onay sayfası, kullanıcının kendi cihazında Şirket Portalı uygulamasında oturum açtığını ve bu sayfanın artık kapatılabileceğini belirtir.](../fundamentals/media/whats-new-app-ui/cp_ios_aad_signin_from_another_device_after_1704_006.png)
+## <a name="next-steps"></a>Sonraki adımlar  
 
-6. Şirket Portalı uygulama, iş cihazınızda oturumunuzu kapatır.  
-
-   ![Kimlik doğrulama işleminden sonra Şirket Portalı, ilerlemeyi gösteren bir çubuk ile oturum açar.](./media/cp_ios_aad_signin_after_1804_007.png)
-
-Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  
+Veya yardım mı var? BT destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  

@@ -7,14 +7,20 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: c201136acd842fa0ba8ca3f38e40483cea5cea81
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 9c1f201bc8e9ea170125443c305d5543a515ef89
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996239"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068209"
 ---
 Bu bildirimler, gelecekteki Intune değişiklik ve özelliklerine hazırlanmanıza yardımcı olabilecek önemli bilgiler sağlar.
+
+### <a name="updated-end-user-experience-for-android-device-administrator-wi-fi-profiles---7662680----"></a>Android Cihaz Yöneticisi Wi-Fi profilleri için son kullanıcı deneyimi güncelleştirildi<!-- 7662680  -->
+Google tarafından yapılan bir değişiklik nedeniyle yeni Wi-Fi profillerinin son kullanıcı deneyimi, Şirket Portalı uygulamasının Ekim sürümünden itibaren önemli ölçüde farklıdır. Kullanıcıların, dağıtıldıklarında ek izinleri kabul etmesi ve Wi-Fi yapılandırmalarının açıkça kabul etmesi gerekir. Wi-Fi yapılandırması bilinen Wi-Fi ağları listesinde görünmez, ancak aralığa göre otomatik olarak bağlanır. Mevcut Wi-Fi profillerinin davranışında değişiklik yoktur. Ayrıca Endpoint Manager Yönetim merkezinde yönetici deneyiminde değişiklik yoktur.
+
+Aşağıdakiler cihazlar için geçerlidir:
+- Android Cihaz Yöneticisi, Android 10 ve üzeri
 
 ### <a name="microsoft-intune-ends-support-for-windows-phone-81-and-windows-10-mobile---3544938-3544909---"></a>Microsoft Intune Windows Phone 8,1 ve Windows 10 Mobile desteğini sonlandırır<!-- 3544938, 3544909 -->
 Windows Phone 8,1 için Microsoft temel desteği 2017 Temmuz 'da sona erdi ve genişletilmiş destek, Haziran 2019 ' de sona erdi. Windows Phone 8,1 için Şirket Portalı uygulaması, 2017 ' den bu yana bir moda sahip. Ayrıca, Microsoft Intune Windows Phone 8,1 ' de 20 Şubat 2020 ' de desteği sona ermiştir. 
@@ -27,7 +33,7 @@ Windows 10 Mobile için Microsoft temel desteği Aralık 2019 ' de sona erdi. De
 
 Eski PC yönetimi, 15 Ekim 2020 ' de destek altına geçiyor. Cihazları Windows 10 ' a yükseltin ve Intune tarafından yönetilmek üzere bunları mobil cihaz yönetimi (MDM) cihazları olarak yeniden kaydedin.
 
-[Daha fazla bilgi](https://go.microsoft.com/fwlink/?linkid=2107122)
+[Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2107122)
 
 ### <a name="move-to-the-microsoft-endpoint-manager-admin-center-for-all-your-intune-management"></a>Tüm Intune yöneti, Microsoft Endpoint Manager yönetim merkezine gidin
 MC208118 son Mart sürümünde, Microsoft Endpoint Manager için yeni ve basit bir URL sunuyoruz – Intune yönetimi: [https://endpoint.microsoft.com](https://endpoint.microsoft.com) . Microsoft Uç Nokta Yöneticisi, Microsoft Intune ve Configuration Manager içeren Birleşik bir platformdur. **1 ağustos 2020**' den itibaren, ' de Intune yönetimini kaldıracağız [https://portal.azure.com](https://portal.azure.com) ve bunun yerine [https://endpoint.microsoft.com](https://endpoint.microsoft.com) tüm uç nokta yönetiminiz için kullanmanızı öneririz. 

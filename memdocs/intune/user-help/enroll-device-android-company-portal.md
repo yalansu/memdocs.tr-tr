@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/01/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,11 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2ef0cf3909442cec818fd775bef4f848d6be5a83
-ms.sourcegitcommit: b90d51f7ce09750e024b97baf6950a87902a727c
+ms.openlocfilehash: ef1b6c82cae82763dc327f16e35d0e3bc522c3c7
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86022322"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057479"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Cihazınızı Şirket Portalı kaydetme  
 Şirket e-postasına, uygulamalarına ve verilerine güvenli erişim sağlamak için kişisel veya şirkete ait Android cihazınızı kaydedin. Şirket Portalı, Android 4,4 ve üstünü çalıştıran Samsung KNOX dahil Android cihazlarını destekler.  
@@ -31,11 +32,24 @@ ms.locfileid: "86022322"
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung KNOX, belirli Samsung cihazlarının, yerel Android 'in sağladığı her yerde ek koruma için kullandığı bir güvenlik türüdür. Samsung KNOX cihazınız olup olmadığını denetlemek için > cihaz **ayarları**' na gidin  >  **About device**. Burada listelenen **Knox sürümünü** görmüyorsanız, yerel bir Android cihazınız vardır.
+> Samsung KNOX, belirli Samsung cihazlarının, yerel Android 'in sağladığı her yerde ek koruma için kullandığı bir güvenlik türüdür. Samsung KNOX cihazınız olup olmadığını denetlemek için > cihaz **ayarları**' na gidin  >  **About device**. Burada listelenen **Knox sürümünü** görmüyorsanız, yerel bir Android cihazınız vardır.  
+
+## <a name="install-company-portal-app"></a>Şirket Portalı uygulamasını yükler  
+[Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)Intune şirket portalı uygulamayı yükler. , Uygulamayı Çin Halk Cumhuriyeti ' nde sunan mağazaların listesi için bkz. [Çin halk cumhuriyeti Şirket portalı App](install-company-portal-android-china.md) for the Install.
+
+1. **Home**  >  **Play Store**' a dokunun.
+
+2. **Intune şirket portalı**' nı arayın. Ardından uygulamayı açmak için dokunun. 
+
+    ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
+
+4. **Install**'a dokunun.
+
+5. Uygulama izinleri hakkında sorulduğunda **kabul et**' e dokunun.  
+
+    ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
 ## <a name="enroll-device"></a>Cihaz kaydetme  
-Intune Şirket Portalı uygulamayı [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)yüklediğinizden emin olun. , Uygulamayı Çin Halk Cumhuriyeti ' nde sunan mağazaların listesi için bkz. [Çin halk cumhuriyeti Şirket portalı App](install-company-portal-android-china.md) for the Install.
-
 Kayıt sırasında cihazınızı nasıl kullanacağınızı en iyi açıklayan bir kategori seçmeniz istenebilir. Şirketinizin destek, erişiminiz olan uygulamaları denetlemek için yanıtınızı kullanır.  
 
 1. Şirket Portalı’nı açın ve iş veya okul hesabınızla oturum açın.  

@@ -1,5 +1,5 @@
 ---
-title: Şirket Portalı uygulamalar
+title: Şirket Portalı’ndaki uygulamalar
 titleSuffix: Configuration Manager
 description: Şirket Portalı uygulamasını kullanmak için ortak yönetilen cihazlar için tutarlı bir kullanıcı deneyimi sağlayın.
 ms.date: 08/20/2020
@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 535b91b82e024431e4221824b4623b6ffc17b286
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 28d1a820642c7400ad60b1571851f18a3eb9124c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700914"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068115"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma
 
@@ -48,9 +48,11 @@ Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 - [Configuration Manager iş yüklerini Intune 'a değiştirme](how-to-switch-workloads.md)
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Configuration Manager geçerli dal sürümü 2006 veya üzeri
+
+- Şirket Portalı App Version 11.0.8980.0 veya üzeri
 
 - Windows 10, sürüm 1803 veya üzeri:
 

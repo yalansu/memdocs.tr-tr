@@ -10,12 +10,12 @@ ms.assetid: 007dbb73-18a7-48a3-a489-97cf9fc4f140
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 66fc6744ef7d1aaf90a5e7339cc9a5174c0d33f6
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 504943df58c0471a0ef821a269cc22b2d12d76d8
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81713705"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068047"
 ---
 # <a name="monitor-the-hierarchy"></a>Hiyerarşiyi izleme
 
@@ -52,7 +52,7 @@ Siteleri izlerken, harekete geçmenizi gerektiren sorunlar olduğunu gösteren e
 İzleme görevleri herhangi bir sorun işaretini açığa çıkarsa, sorunun kaynağını araştırın. Daha sonra bir site hatasının riskini en aza indirmek için hızlı bir şekilde onarın.  
 
 
-## <a name="monitor-common-management-tasks"></a><a name="BKMK_MonintorMgmtTasks"></a>Ortak yönetim görevlerini izleme
+## <a name="monitor-common-management-tasks"></a><a name="BKMK_MonintorMgmtTasks"></a> Ortak yönetim görevlerini izleme
 
 Configuration Manager, Configuration Manager konsolunun içinden yerleşik izleme sağlar.
 
@@ -99,13 +99,9 @@ Daha fazla bilgi için bkz. [yazılım kullanım ölçümü ile uygulama kullan�
 Daha fazla bilgi için bkz. [yazılım güncelleştirmelerini izleme](../../../sum/deploy-use/monitor-software-updates.md).  
 
 
-## <a name="monitor-the-site-hierarchy"></a><a name="BKMK_SH_Node"></a>Site hiyerarşisini izleme
+## <a name="monitor-the-site-hierarchy"></a><a name="BKMK_SH_Node"></a> Site hiyerarşisini izleme
 
-**İzleme** çalışma alanının **site hiyerarşisi** düğümü, Configuration Manager hiyerarşinize ve siteler arası bağlantılarınızda bir genel bakış sağlar. İki görünümü kullanabilirsiniz:  
-
-- **Hiyerarşi diyagramı**: hiyerarşinizi yalnızca önemli bilgileri gösteren basitleştirilmiş bir topoloji haritası olarak görüntüler. Daha fazla bilgi için bkz. [hiyerarşi diyagramı](#hierarchy-diagram).  
-
-- **Coğrafi görünüm**: siteleriniz, yapılandırdığınız site konumlarını gösteren bir coğrafi harita üzerinde görüntüler. Daha fazla bilgi için bkz. [coğrafi görünüm](#geographical-view).  
+**İzleme** çalışma alanının **site hiyerarşisi** düğümü, Configuration Manager hiyerarşinize ve siteler arası bağlantılarınızda bir genel bakış sağlar. 
 
 Her sitenin sistem durumunu izlemek için **site hiyerarşisi** düğümünü kullanın. Ayrıca, siteler arası çoğaltma bağlantılarını ve bunların coğrafi konum gibi dış faktörlerle ilişkilerini izleyin.  
 
@@ -123,13 +119,16 @@ Aşağıdaki seçenekler hiyerarşi diyagramını değiştirir:
 
 #### <a name="groups"></a>Gruplar
 
-Hiyerarşi diyagramında bir değişikliği tetikleyen birincil sitelerin ve ikincil sitelerin sayısını yapılandırın. Ekranda bu değişiklik, siteleri tek bir nesne halinde birleştirir. Sonra toplam site sayısını ve durum iletilerinin üst düzey bir toplu toplamasını ve site durumunu görürsünüz. Grup yapılandırması coğrafi görünümü etkilemez.  
+Hiyerarşi diyagramında bir değişikliği tetikleyen birincil sitelerin ve ikincil sitelerin sayısını yapılandırın. Ekranda bu değişiklik, siteleri tek bir nesne halinde birleştirir. Sonra toplam site sayısını ve durum iletilerinin üst düzey bir toplu toplamasını ve site durumunu görürsünüz.
 
 #### <a name="favorite-sites"></a>Sık kullanılan siteler
 
 Bağımsız siteleri bir sık kullanılan site olarak belirtin. Hiyerarşi diyagramında sık kullanılan bir site yıldız simgesiyle belirtilir. Grupları kullandığınızda, sık kullanılan siteler diğer sitelerle birleştirilmez. Her zaman tek ayrı görüntülenirler.  
 
 ### <a name="geographical-view"></a>Coğrafi Görünüm
+
+> [!IMPORTANT]
+> 2020 Ağustos 'Tan başlayarak bu özellik kullanım dışıdır. **Hiyerarşi diyagramı** seçeneğini kullanın.<!--8116777-->
 
 Coğrafi görünüm, her sitenin konumunu coğrafi bir haritada gösterir. Yalnızca bir konumla yapılandırdığınız siteleri görüntüler. Bu görünümde bir site seçtiğinizde, üst veya alt sitelere yönelik çoğaltma bağlantıları gösterilir. Hiyerarşi diyagramı görünümünden farklı olarak, bu görünümde site durumu iletisini veya çoğaltma bağlantısı ayrıntılarını görüntüleyemezsiniz.  
 

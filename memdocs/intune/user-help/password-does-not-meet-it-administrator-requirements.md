@@ -1,11 +1,11 @@
 ---
-title: Intune Şirket Portalı cihazlar için parola gereksinimleri | Microsoft Docs
-description: Bu makalede, kuruluşunuzun zorlayacağı ortak parola gereksinimleri açıklanmaktadır.
+title: Intune 'a kayıtlı cihazlar için parola gereksinimleri | Microsoft Docs
+description: Bu makalede, ağınıza erişebilmek için kuruluşunuzun parola gereksinimlerini nasıl karşılamanız açıklanmaktadır.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/07/2020
+ms.date: 08/27/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,26 +15,38 @@ ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope:
 - User help
 ROBOTS: ''
-ms.custom: intune-enduser
+ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 4f53aa731dbe7483f7fbe97c509a82677072c25c
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: b9bdada31e280c7fdc8a5d7a5a0a4a7ab7d36ae3
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047995"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057296"
 ---
-# <a name="device-password-requirements-for-enrolled-devices"></a>Kayıtlı cihazlar için cihaz parolası gereksinimleri
+# <a name="device-password-requirements"></a>Cihaz parolası gereksinimleri  
 
-Kuruluşunuz, iş veya okul kaynaklarına erişmenize izin vermeden önce daha güvenli bir parola oluşturmanızı gerektirebilir. Bu makalede, Windows 10, iOS, macOS ve Android cihazları için ortak parola gereksinimleri açıklanmaktadır. Kuruluşunuz bu gereksinimlerin tümünü zorlayamayabilir.  
+Cihazınızın parolası kuruluşunuzun güvenlik gereksinimlerini karşılamıyorsa Şirket Portalı bir ileti alırsınız. Sizi ve kuruluşunuzun verilerini yetkisiz erişimden korumak için parola gereksinimleri yerinde konur. Daha güvenli bir parola oluşturana kadar, kuruluşunuzun ağına erişiminizi engellemiş olabilirsiniz.  
 
+Şirket Portalı, her parola gereksinimi için bir ileti gönderir, bu nedenle aynı anda birden fazla ileti alabilirsiniz. Daha fazla ayrıntı görmek için herhangi bir iletiye dokunun (sağlanmışsa).  
 
-Bir parola veya geçiş kodu artık bir gereksinimi karşılamıyorsa, Şirket Portalı bir ileti alırsınız. Bu, yapmanız gereken değişiklikleri anlatmaktadır. İletide ayrıntı sağlanmamışsa, bu makaleyi geçerli parolanızla karşılaştırmak için bir başvuru olarak kullanın.  
+Bu makalede, aldığınız parolayla ilgili tüm iletiler listelenmekte ve işletim sistemi platformuna göre her gereksinimle ilgili ek ayrıntılar sağlanmaktadır.     
+
+## <a name="change-password-passcode-pin"></a>Parola değiştirme, geçiş kodu, PIN  
+
+Genellikle, parola ayarlarına erişmek için, Ayarlar uygulamasını cihazınızda açabilir ve *kilit ekranı* veya *güvenlik ayarları*için arama yapabilirsiniz.  
+
+Aşağıdaki makalelerde, işletim sistemi platformunda cihaz parolasının nasıl güncelleştirilmesi anlatılmaktadır. Belirli cihazınıza yönelik en güncel yönergeleri almak için, cihaz üreticisinin yardım belgelerine bakın.  
+
+- [Windows 10 cihaz parolasını ayarla](set-or-change-your-password-windows.md)  
+- [İOS cihaz geçiş kodunu ayarla](set-or-change-your-passcode-ios.md)  
+- [Android cihaz PIN 'ini veya parolasını ayarlama](set-your-pin-or-password-android.md)  
+
 
 > [!IMPORTANT]
 > Parolanızı gereksinimlerini karşılayacak şekilde değiştirdiyseniz ancak hala bildirimler alıyorsanız, cihazınızı yeniden başlatın.  
 
-Ek Yardım veya kuruluşunuzun özel gereksinimlerini öğrenmek için BT destek sorumlunuza başvurun. İletişim bilgileri için [Şirket portalı Web sitesini](https://go.microsoft.com/fwlink/?linkid=2010980) denetleyin.  
+Kuruluşunuzun parola gereksinimleriyle ilgili belirli sorular için BT destek sorumlunuza başvurun.  
 
 ## <a name="windows-10-password-requirements"></a>Windows 10 parola gereksinimleri
 
@@ -55,7 +67,7 @@ Ek Yardım veya kuruluşunuzun özel gereksinimlerini öğrenmek için BT destek
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Geçiş kodu gerekiyor.| Bir geçiş kodu ayarlayın. Kuruluşunuz, cihazınızın kilidini açmak için bir geçiş kodu girmenizi gerektiriyor. |
 | Geçiş kodu çok basit. |  Geçiş kodu, 1234 veya 1111 gibi sıralı veya yinelenen sayılar içermediğinden emin olun. |
-| Geçiş kodu çok kısa. | Bir geçiş kodunu daha fazla karakterle güncelleştirin veya ayarlayın. Kuruluşunuz, geçiş kodunun belirli bir uzunlukta olmasını gerektiriyor. Gerçekte seçtikleri Özellikler farklılık gösterir, ancak ihtiyaç duydukları en düşük uzunluk 4 karakterdir ve üst sınır 14 ' tür. Geçiş kodunuzu değiştirdiğinizde, Apple 'dan 6 veya daha fazla karakter girebileceğini söyleyen bir istem görürsünüz. Bu ileti, bir Apple sistem önerisine sahiptir. Kuruluşunuz yalnızca 4 veya 5 karakterden oluşan bir geçiş kodu gerektiriyorsa, 6 basamaklı bir geçiş kodu girmeniz gerekmez.|  
+| Geçiş kodu çok kısa. | Bir geçiş kodunu daha fazla karakterle güncelleştirin veya ayarlayın. Kuruluşunuz, geçiş kodunun belirli bir uzunlukta olmasını gerektiriyor. Gerçekte seçtikleri Özellikler farklılık gösterir, ancak ihtiyaç duydukları en düşük uzunluk 4 karakterdir ve üst sınır 14 ' tür. Geçiş kodunuzu değiştirdiğinizde, Apple 'dan 6 veya daha fazla karakter girebileceğini söyleyen bir istem görürsünüz. Bu ileti yalnızca bir Apple sistem önerisi olur. Kuruluşunuz yalnızca 4 veya 5 karakterden oluşan bir geçiş kodu gerektiriyorsa, 6 basamaklı bir geçiş kodu girmeniz gerekmez.|  
 | Geçiş kodu yalnızca sayı içermelidir. | Yalnızca sayı içeren bir geçiş kodu ayarlayın.|
 | Geçiş kodu yalnızca alfasayısal karakterlerden oluşmalıdır.| Sayı ve harf karışımı içeren bir geçiş kodu ayarlayın.|
 | Geçiş kodu, alfasayısal olmayan karakterler içermelidir. | ,,, Ve gibi özel karakterler ekleyin `&` `!` `$` `%` `#` . Kuruluşunuz, başkalarının geçiş kodunu tahmin etmelerini zorlaştırmak için harf, sayı ve alfasayısal olmayan karakterlerin bir karışımını gerektirir.|
@@ -89,16 +101,9 @@ Ek Yardım veya kuruluşunuzun özel gereksinimlerini öğrenmek için BT destek
 | Parolanın süresi doldu. | Yeni bir parola ayarlayın. Kuruluşunuz, parolanızın belirli bir süre geçtikten sonra değiştirilmesini gerektirir. |
 | Parolanız çok kısa süre önce kullanıldı. | Daha önce kullanılmayan bir parola seçin. Bir parolayı yeniden kullanmadan önce kuruluşunuz belirli bir süre geçiş yapılmasını gerektirir. |
 
-## <a name="update-password-passcode-pin"></a>Parolayı Güncelleştir, geçiş kodu, PIN
-
-Aşağıdaki makalelerde, cihaz parolanızı, geçiş kodunu veya PIN 'inizi değiştirme adımları gösterilmektedir. En güncel yönergeler için, cihaz üreticisinden yardım belgelerine bakın. 
-
-- [Windows 10 cihaz parolasını ayarla](set-or-change-your-password-windows.md)  
-- [İOS cihaz geçiş kodunu ayarla](set-or-change-your-passcode-ios.md)  
-- [Android cihaz PIN 'ini veya parolasını ayarlama](set-your-pin-or-password-android.md)  
-
 ## <a name="next-steps"></a>Sonraki adımlar
+Parolanızı güncelleştirdikten sonra parolayla ilgili iletiler almaya devam ederseniz cihazınızı yeniden başlatmayı deneyin. 
 
-Bu bilgiler yardımcı olmadı mı? Destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  
+Bu bilgiler yardımcı olmadı mı? BT destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  
 
 

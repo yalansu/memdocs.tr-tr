@@ -53,11 +53,11 @@
               href: windows-store-for-business.md
             - name: Yönetilen Google Play uygulamaları
               href: apps-add-android-for-work.md
-        - name: Office 365 Suite
+        - name: Microsoft 365 Paketi
           items:
-            - name: Windows 10 için Office 365 uygulamaları
+            - name: Windows 10 için Microsoft 365 uygulamaları
               href: apps-add-office365.md
-            - name: macOS için Office 365 uygulamaları
+            - name: macOS için Microsoft 365 uygulamaları
               href: apps-add-office365-macos.md
         - name: Android Kurumsal sistem uygulamaları
           href: apps-ae-system.md

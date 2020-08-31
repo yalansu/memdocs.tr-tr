@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: fd7807d332e02e5511dd3555ccc596d6f1bd7923
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914659"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057411"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Şirket kaynaklarınıza iOS cihaz erişimi ayarlayın  
 
@@ -56,9 +56,9 @@ Kayıttan sonra kuruluşunuz, çok faktörlü kimlik doğrulaması gibi yeni bir
 
 Kayıt hakkında daha fazla bilgi edinmek için bkz. [Şirket Portalı uygulamasını yüklediğimde ve cihazımı kaydettiğimde ne olur?](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="prerequisties"></a>Önkoşulıtlar  
+## <a name="prerequisites"></a>Önkoşullar    
 
-* [Intune şirket portalı uygulamasını](install-and-sign-in-to-the-intune-company-portal-app-ios.md) cihazınıza indirip yüklemek için App Store 'a gidin. 
+* [App Store 'dan](https://go.microsoft.com/fwlink/?linkid=2141414)Şirket portalı uygulaması 'nı yükler.
 * Tüm adımlar tamamlanana kadar bir Wi-Fi bağlantısı saklayın.
 * Cihazınızda Safari Web tarayıcısına erişin.
 

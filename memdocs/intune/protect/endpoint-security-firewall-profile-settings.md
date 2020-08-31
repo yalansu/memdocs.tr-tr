@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 08/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 49be1ae762e50ade9e2881137a97b379ad380f7a
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915033"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068142"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için güvenlik duvarı ilke ayarları
 
@@ -37,7 +37,7 @@ Desteklenen platformlar ve profiller:
 
 ## <a name="macos-firewall-profile"></a>macOS güvenlik duvarı profili
 
-### <a name="firewall"></a>Güvenlik duvarı
+### <a name="firewall"></a>Güvenlik Duvarı
 
 Aşağıdaki ayarlar [macOS güvenlik duvarları Için Endpoint Security ilkesi](../protect/endpoint-security-firewall-policy.md) olarak yapılandırılır
 
@@ -193,8 +193,8 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
 - **Ağ türü**  
   Kuralın ait olduğu ağ türünü belirtin. Aşağıdakilerden birini veya birkaçını seçebilirsiniz. Bir seçenek seçmezseniz, kural tüm ağ türlerine uygulanır.
   - **Etki alanı**
-  - **Özel**
-  - **Genel**
+  - **Özelleştirme**
+  - **Geneldir**
   - **Yapılandırılmadı**
 
 - **Paket ailesi adı**  
@@ -239,7 +239,12 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
 - **Yerel adres aralıkları**  
   CSP: [FirewallRules/FirewallRuleName/LocalAddressRanges](/windows/client-management/mdm/firewall-csp#localaddressranges)  
 
-  Kuralın kapsadığı yerel adreslerin virgülle ayrılmış bir listesi olarak bir veya daha fazla adres ekleyin. Geçerli girişler (belirteçler) aşağıdaki seçenekleri içerir:
+  Bu kural için yerel adres aralıklarını yönetin. Seçenekleriniz şunlardır:
+  - Kuralın kapsadığı yerel adreslerin virgülle ayrılmış bir listesi olarak bir veya daha fazla adres **ekleyin** .
+  - Yerel adres aralıkları olarak kullanılacak adreslerin listesini içeren bir. csv dosyasını **Içeri aktarın** .
+  - Geçerli yerel adres aralıkları listenizi bir. csv dosyası olarak **dışarı aktarın** .
+
+  Geçerli girişler (belirteçler) aşağıdaki seçenekleri içerir:
   - **Bir yıldız işareti** ( \* ) herhangi bir yerel adresi belirtir. Varsa, yıldız işareti dahil edilen tek belirteç olmalıdır.
   - **Alt ağ-alt** ağ maskesini veya ağ öneki gösterimini kullanarak alt ağları belirtin. Bir alt ağ maskesi veya ağ öneki belirtilmemişse, alt ağ maskesi varsayılan olarak 255.255.255.255 olur.
   - **Geçerli bir IPv6 adresi**
@@ -255,7 +260,12 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
 - **Uzak adres aralıkları**  
   CSP: [FirewallRules/FirewallRuleName/RemoteAddressRanges](/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
 
-  Kuralın kapsadığı uzak adreslerin virgülle ayrılmış bir listesi olarak bir veya daha fazla adres ekleyin. Geçerli girişler (belirteçler) aşağıdakileri içerir ve büyük/küçük harfe duyarlı değildir:
+  Bu kural için uzak adres aralıklarını yönetin. Seçenekleriniz şunlardır:
+  - Kuralın kapsadığı uzak adreslerin virgülle ayrılmış bir listesi olarak bir veya daha fazla adres **ekleyin** .
+  - Uzak adres aralıkları olarak kullanılacak adreslerin listesini içeren bir. csv dosyasını **Içeri aktarın** .
+  - Geçerli uzak adres aralıkları listenizi bir. csv dosyası olarak **dışarı aktarın** .
+
+  Geçerli girişler (belirteçler) aşağıdakileri içerir ve büyük/küçük harfe duyarlı değildir:
   - **Bir yıldız işareti** (), \* herhangi bir uzak adresi belirtir. Varsa, yıldız işareti dahil edilen tek belirteç olmalıdır.
   - **Defaultgateway**
   - **DHCP**

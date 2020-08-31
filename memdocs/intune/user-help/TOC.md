@@ -2,11 +2,11 @@
 
 ## [Cihaz kaydı nedir?](use-managed-devices-to-get-work-done.md)
 
-## [Şirketim, Intune ile hangi bilgileri görüntüleyebilir?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+## [Kuruluşum hangi verileri görebilir?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
 ## [Cihaz parolası gereksinimleri](password-does-not-meet-it-administrator-requirements.md)
 
-## [Şirket Portalı’nda oturum açma](sign-in-to-the-company-portal.md)  
+## [Şirket Portalı'na erişme](sign-in-to-the-company-portal.md)  
 
 ## [Mobil tehdit savunması uygulamasını yükleme](set-up-mobile-threat-defense.md)  
 
@@ -20,7 +20,7 @@
 #### Türetilmiş kimlik bilgileriyle kaydetme
 ##### [Entrust Datacard ile kaydetme](enroll-android-device-entrust-datacard.md)
 ##### [Intercede ile kaydetme](enroll-android-device-intercede.md)
-##### [Disa Purebred ile kaydolma](enroll-android-device-disa-purebred.md)
+##### [DISA Purebred ile kaydetme](enroll-android-device-disa-purebred.md)
 ### [Yeni cihaz yönetimi kurulumuna taşıma](move-to-new-device-management-setup.md)
 ### [Cihazınızdaki yönetilen uygulamaları kullanma](use-managed-apps-on-your-device-android.md)
 ### [Cihazınızı şifreleme](encrypt-your-device-android.md)
@@ -64,7 +64,6 @@
 
 ## [iOS cihazınızı kullanma](using-your-iOS-device-with-intune.md)
 ### [iOS cihaz sıfırlamasının etkileri](effects-of-device-reset-company-portal-ios.md)
-### [Şirket Portalı'nı yükleme ve uygulamada oturum açma](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### Cihazınızı kaydedin
 #### [iOS cihazınızı kaydetme](enroll-your-device-in-intune-ios.md)
 #### [Kuruluş tarafından sağlanan iOS cihazını kaydetme](enroll-your-device-dep-ios.md)
@@ -143,7 +142,7 @@
 #### [Şirket Portalı uygulamasından günlükler gönderme](send-logs-to-your-it-admin-cp-windows.md)
 #### [Cihaz Ayarları uygulamasından günlükler gönderme](send-logs-to-your-it-admin-settings-windows.md)
 #### [Windows sürümüm desteklenmiyor](your-windows-version-isnt-yet-supported.md)
-#### [Windows 10 cihazıma Office 365 yükleme](install-office-windows.md)
+#### [Windows 10 cihazıma Office yükleme](install-office-windows.md)
 #### [Cihazımın şifrelenmesi gerekiyor](you-need-to-enable-windows-encryption.md)
 #### [Cihazımda kötü amaçlı yazılımdan koruma yazılımı olması gerekiyor](your-device-needs-antimalware-software.md)
 #### [Güvenli Önyüklemeyi Etkinleştirme](you-need-to-enable-secure-boot-windows.md)

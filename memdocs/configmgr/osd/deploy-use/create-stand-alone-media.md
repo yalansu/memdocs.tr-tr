@@ -10,12 +10,12 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 57b353dd9dd9fcf7f97d10480f4067bd65a1f483
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 1c8710c50dc2feabebd7e8f0f84ac49b3b0dd35c
+ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697985"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89068030"
 ---
 # <a name="create-stand-alone-media"></a>Tek başına medya oluşturma
 
@@ -39,7 +39,7 @@ Tek başına medya, işletim sistemini ve diğer tüm gerekli içeriği yükleme
 Bir merkezi yönetim sitesinde tek başına medya oluşturduğunuzda, istemci, atanan site kodunu Active Directory alır. Alt sitelerde oluşturulan tek başına medya, bu sitenin site kodunu istemciye otomatik olarak atar.  
 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Görev sırası medyası oluşturma Sihirbazı 'Nı kullanarak tek başına medya oluşturmadan önce, tüm bu koşulların karşılandığından emin olun.
 
@@ -78,7 +78,7 @@ Tek başına medya için aşağıdaki eylemler desteklenmez:
 >
 > Alternatif olarak, özel [komut satırı Çalıştır](../understand/task-sequence-steps.md#BKMK_RunCommandLine) adımını kullanın. [Windows 'u ve ConfigMgr 'Yi Kur](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) adımından sonra ve Ilk **paket yükleme** adımından önce ekleyin. **Komut satırını Çalıştır** adımı, Ilk paketi Kur adımından önce yazılım dağıtım aracısını etkinleştirmek IÇIN aşağıdaki WMIC komutunu çalıştırır:  
 >
-> `WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
+> `WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
 
 ### <a name="distribute-all-content-associated-with-the-task-sequence"></a>Görev dizisiyle ilişkili tüm içeriği dağıtma
 
@@ -97,7 +97,7 @@ Tek başına medya FAT32 dosya sistemini kullanır. İçeriği, boyutu 4 GB 'ın
 Bir CD veya DVD seti için medya oluşturmak üzere görev sırası medyası oluşturma Sihirbazı 'Nı çalıştırmadan önce, oluşturduğu çıktı dosyaları için bir klasör oluşturun. CD veya DVD seti için oluşturduğu medya bir olarak yazılmıştır. ISO dosyasını doğrudan klasörde.
 
 
-## <a name="process"></a>İşlem
+## <a name="process"></a>İşleme
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin, **işletim sistemleri**' ni genişletin ve **görev dizileri** düğümünü seçin.  
 

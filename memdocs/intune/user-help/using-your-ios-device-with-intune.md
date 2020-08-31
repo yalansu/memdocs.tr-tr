@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 5b4ebc74c2be3cfdd0c833516da20e89eb72f6ab
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 4a60620724b732648b7c430fcb894191b9f39a7f
+ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880652"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89057340"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>iOS cihazınızı Intune Şirket Portalı ile kullanma
 Bu makale, iOS için Şirket Portalı'na özgü görev ve bilgileri listelemektedir. iOS cihazınızda sorun gidermenize ve cihazı yönetmenize yardımcı olacaktır. Daha fazla ayrıntı, adım ve ekran görüntüsü görmek için herhangi bir bağlantıya tıklayın.
@@ -36,7 +36,7 @@ Bu makale, iOS için Şirket Portalı'na özgü görev ve bilgileri listelemekte
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Intune'a kaydolma ve Şirket Portalı'nı yükleme
 
-- [Intune Şirket Portalı uygulamayı yükleyip oturum açın](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
+- [Intune Şirket Portalı erişme](sign-in-to-the-company-portal.md)
 - [iOS cihazınızı Intune'a kaydetme](enroll-your-device-in-intune-ios.md)
 - [Şirket Portalı uygulamasını yükler ve cihazınızı Intune’a kaydederseniz ne olur?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)  
 
