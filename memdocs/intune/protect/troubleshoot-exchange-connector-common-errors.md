@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9203c3654671680eaeaa8e73597912783c0cdf1f
-ms.sourcegitcommit: e43e6e83e3b38137ceebc6d299eacd94a925db85
+ms.openlocfilehash: cea8981b9fdd16e0d8da9dd36445b8fbdfe3d53f
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88896067"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193955"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Intune Exchange Connector için sık karşılaşılan hataları çözme
 
@@ -45,7 +45,7 @@ Bu sorun, Internet proxy ayarları yanlış yapılandırıldıysanız oluşabili
 **Çözüm**:  
 Proxy ayarlarını yapılandır:
 1. Ara sunucu ayarlarının doğru yapılandırıldığından emin olmak için yerel ağ yöneticisine başvurun. 
-2. Proxy sunucusunu yapılandırmak ve gerekli dışlama listesini eklemek için **netsh WinHTTP** komutunu kullanın. Örnek:  
+2. Proxy sunucusunu yapılandırmak ve gerekli dışlama listesini eklemek için **netsh WinHTTP** komutunu kullanın. Örneğin:  
 
    ```
    Netsh winhttp set proxy proxy-server="http=proxy.corp.domain.com" bypass-list"34*.*;134.132.*.*;10.*.*;localhost;*.corp.domain.com;*.staging.domain.com"
@@ -145,4 +145,4 @@ Aşağıdaki makale, belirli hataların çözümlenmesine yardımcı olabilir:
 
 Destek veya Intune topluluğundan yardım isteyin.
 - Sorunu gidermeye yardımcı olması veya Microsoft ile bir destek talebi açmak için bkz. Intune konsolunu kullanma [desteği alın](../fundamentals/get-support.md) . 
-- Sorununuzu [Microsoft Intune forumlarına](https://docs.microsoft.com/answers/products/mem)gönderin.  
+- Sorununuzu [Microsoft Intune forumlarına](/answers/products/mem)gönderin.

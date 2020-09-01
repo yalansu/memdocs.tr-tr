@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 7f6cc0caf4df54196dbdb1859a69f19b3bbcacaa
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995492"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193647"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager için Technical Preview 1511 ' deki yetenekler
 
@@ -67,7 +67,7 @@ Microsoft, Windows Server Updates Services (WSUS) için yeni bir Microsoft 365 M
 
 4. Microsoft 365 güncelleştirmeleri için uyumluluğu, konsol içi izleme veya rapor kullanarak doğrulayabilirsiniz.  
 
-   Ayrıntılı adımlar için bkz. [Configuration Manager Technical Preview ile Microsoft 365 istemci güncelleştirmelerini yönetme](https://docs.microsoft.com/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
+   Ayrıntılı adımlar için bkz. [Configuration Manager Technical Preview ile Microsoft 365 istemci güncelleştirmelerini yönetme](/deployoffice/manage-microsoft-365-apps-updates-configuration-manager).  
 
 ##  <a name="support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> Yüksek oranda kullanılabilir veritabanları için SQL Server AlwaysOn desteği  
  Configuration Manager artık site veritabanını barındırmak için SQL Server AlwaysOn kullanılabilirlik grupları kullanmayı desteklemektedir.  Yeni bir site yüklediğinizde, kurulumu normal bir SQL Server örneği yerine kullanılabilirlik grubu kullanacak şekilde yönlendirebilirsiniz.  

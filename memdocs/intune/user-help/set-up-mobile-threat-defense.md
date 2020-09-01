@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 9ac83ce840d4a43de98791d6b116bb373a018a7d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 37b7006ef912d87276c11e09cb6db0c0f14059c4
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914200"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193921"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Mobil tehdit savunması uygulamasını yükleme  
 
@@ -124,9 +124,9 @@ Kuruluşunuzun iletişim bilgilerini bulmak için [Şirket portalı Web sitesine
 
 ### <a name="share-app-logs-with-it-support"></a>Uygulama günlüklerini BT desteğiyle paylaşma  
 Uygulama günlüklerinizi, başarısız bir yükleme hakkında daha fazla bağlam sağlamak için BT destek sorumlunuza da gönderebilirsiniz.  
-* Android kullanıcıları: Şirket Portalı [günlüklerinizi karşıya yükleyin ve e-posta ile gönderin](https://docs.microsoft.com/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android) .   
+* Android kullanıcıları: Şirket Portalı [günlüklerinizi karşıya yükleyin ve e-posta ile gönderin](./send-logs-to-your-it-admin-by-email-android.md) .   
 
-* iOS cihaz kullanıcıları: iOS için Microsoft Edge 'ten [günlüklerinizi alın ve gönderin](https://docs.microsoft.com/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) .  
+* iOS cihaz kullanıcıları: iOS için Microsoft Edge 'ten [günlüklerinizi alın ve gönderin](/intune/apps/manage-microsoft-edge#use-microsoft-edge-to-access-managed-app-logs) .  
 
 
 ## <a name="next-steps"></a>Sonraki adımlar  
@@ -137,4 +137,3 @@ Yönetilen uygulamaların nasıl çalıştığı, nasıl alınacağı ve bir tan
 * [iOS cihazınızdaki yönetilen uygulamaları kullanma](use-managed-apps-on-your-device-ios.md)  
 
 Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.
-

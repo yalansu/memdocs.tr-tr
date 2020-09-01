@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b08d5f1395c30b646885470c95fed2c7a96d3f9
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819618"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194115"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Android kurumsal cihaz ayarları
 
@@ -296,7 +296,7 @@ End of comment -->
 - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0` (sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
   > [!NOTE]
-  > Tam olarak yönetilen, adanmış ve şirkete ait iş profili cihazlarının bir parola ayarlaması istenmez. Ayarlar zorunlu kılınır ve parolayı el ile ayarlamanız gerekir. Gereksinimlerinizi karşılayan parolayı ayarlayıp, bunu uygulayan ilke başarısız olarak rapor eder.
+  > Tam olarak yönetilen, adanmış ve şirkete ait iş profili cihazlarının parola ayarlaması istenmez. Ayarlar gereklidir, ancak kullanıcılara bildirimde bulunulmayabilir. Kullanıcıların parolayı el ile ayarlaması gerekir. Kullanıcı gereksinimlerinizi karşılayan bir parola ayarlayıncaya kadar ilke başarısız olarak raporlar.
 
 ### <a name="power-settings"></a>Güç ayarları
 
@@ -394,7 +394,7 @@ Bu ayarlar, Intune 'un yalnızca bir kişisel veya kendi cihazındaki (BYOD) And
 - **Cihaz kilitliyken iş profili bildirimleri**: **Engelle** , Kilitli cihazlarda gösterilmeleri, gelen çağrılar, giden çağrılar, sistem uyarıları ve sistem hataları dahil olmak üzere pencere bildirimlerini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bildirimleri gösterebilir.
 - **Varsayılan uygulama izinleri**: İş profilindeki tüm uygulamalar için varsayılan izin ilkesini ayarlar. Android 6 ' dan itibaren, kullanıcılardan uygulama başlatıldığında uygulamalar için gereken belirli izinleri vermesi istenir. Bu ilke ayarı, kullanıcıdan iş profilindeki tüm uygulamalar için izin istenip istenmeyeceğini belirlemenize olanak tanır. Örneğin, iş profiline konum erişimi gerektiren bir uygulama atarsınız. Normalde bu uygulama, kullanıcılardan uygulamaya konum erişimini onaylaması veya reddetmesini ister. Bu ilkeyi, istem olmadan otomatik olarak izin vermek, bir istem olmadan izinleri otomatik olarak reddetmek veya kullanıcıların karar vermesine izin vermek için kullanın. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
-  - **İstem**
+  - **İsteme**
   - **Otomatik izin ver**
   - **Otomatik Reddet**
 

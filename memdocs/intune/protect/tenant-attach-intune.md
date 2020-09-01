@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: d56b06b49846201d6198c1abc81185bf74765ae3
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 5c3d5bd14efddc74e1898f374bbaac2aa962ebf7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823446"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193674"
 ---
 # <a name="configure-tenant-attach-to-support-endpoint-security-policies-from-intune"></a>Intune 'dan Endpoint Security ilkelerini desteklemek için kiracı eklemeyi yapılandırma
 
@@ -187,4 +187,4 @@ Koleksiyonları Microsoft Endpoint Manager yönetim merkezine eşitlenecek şeki
 
 - *Virüsten koruma* ve *uç nokta algılama ve yanıt*için [uç nokta güvenlik ilkelerini yapılandırın](endpoint-security-policy.md#create-an-endpoint-security-policy) .
 
-- Microsoft Defender ATP belgelerindeki [uç nokta algılama ve yanıt](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) hakkında daha fazla bilgi edinin.
+- Microsoft Defender ATP belgelerindeki [uç nokta algılama ve yanıt](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) hakkında daha fazla bilgi edinin.

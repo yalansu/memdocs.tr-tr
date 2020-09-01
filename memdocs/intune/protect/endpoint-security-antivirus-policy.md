@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: db1ad3250d04f79abd000a23f9f2064862b1dbd7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2460a132711fb19d12f33bbada23756fc2344cca
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915101"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194255"
 ---
 # <a name="antivirus-policy-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için virüsten koruma ilkesi
 
@@ -77,7 +77,7 @@ Intune ile yönettiğiniz cihazlar için aşağıdaki profiller desteklenir:
 
     *Microsoft Defender virüsten koruma* profili, cihaz yapılandırma Ilkesinin *cihaz kısıtlama profilinde* bulunan virüsten koruma ayarlarının ayrı bir örneğidir.
   
-    Bir *cihaz kısıtlama profilindeki*virüsten koruma ayarlarından farklı olarak, bu ayarları ortak yönetilen cihazlarla kullanabilirsiniz. Bu ayarları kullanmak için, Endpoint Protection için [ortak yönetim iş yükü kaydırıcısının](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) Intune olarak ayarlanması gerekir.
+    Bir *cihaz kısıtlama profilindeki*virüsten koruma ayarlarından farklı olarak, bu ayarları ortak yönetilen cihazlarla kullanabilirsiniz. Bu ayarları kullanmak için, Endpoint Protection için [ortak yönetim iş yükü kaydırıcısının](/configmgr/comanage/how-to-switch-workloads) Intune olarak ayarlanması gerekir.
 
   - Profil: **Microsoft Defender virüsten koruma dışlamaları** -yalnızca [Virüsten koruma dışlamaları](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions)için ilke ayarlarını yönetin.
   

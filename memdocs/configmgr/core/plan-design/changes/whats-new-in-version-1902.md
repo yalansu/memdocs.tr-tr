@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 54794a575cda4197bc11160d1c5e374d06c143c6
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995254"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193836"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1902 ' deki yenilikler
 
@@ -351,7 +351,7 @@ Windows bilinen klasörlerini OneDrive Iş 'e taşımak için Configuration Mana
 
 OneDrive Iş 'in bu özelliği hakkında daha fazla bilgi için bkz. [yeniden yönlendirme ve Windows bilinen klasörlerini OneDrive 'a taşıma](/onedrive/redirect-known-folders).
 
-İlk olarak, [Microsoft 365 KIRACı kimliğinizi bulun](https://docs.microsoft.com/onedrive/find-your-office-365-tenant-id). Ardından OneDrive Sync Client sürüm 18.111.0603.0004 veya üstünü dağıtın. Daha fazla bilgi için bkz. [Configuration Manager kullanarak OneDrive uygulamaları dağıtma](https://docs.microsoft.com/onedrive/deploy-on-windows).  
+İlk olarak, [Microsoft 365 KIRACı kimliğinizi bulun](/onedrive/find-your-office-365-tenant-id). Ardından OneDrive Sync Client sürüm 18.111.0603.0004 veya üstünü dağıtın. Daha fazla bilgi için bkz. [Configuration Manager kullanarak OneDrive uygulamaları dağıtma](/onedrive/deploy-on-windows).  
 
 Bir OneDrive Iş profili oluşturup dağıtmak için, Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Uyumluluk ayarları**' nı genişletin ve **OneDrive iş profilleri** düğümünü seçin.  
 

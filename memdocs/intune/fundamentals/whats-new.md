@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 08/31/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d77221208567253445307739fe193a58836e936
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 7becc53b9464cad6f864f219f2d59046c2e61707
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068227"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193792"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -96,7 +96,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 #### <a name="configure-the-macos-microsoft-enterprise-sso-plug-in---5627576--idstaged---"></a>MacOS Microsoft Enterprise SSO eklentisini yapılandırma<!-- 5627576  idstaged -->
 
 > [!IMPORTANT]
-> Microsoft Azure AD SSO uzantısı hala geliştirilmeye devam ediyor. Intune kullanıcı arabiriminde listelenir, ancak beklendiği gibi çalışmaz. SSO uygulama uzantısı türü için **Microsoft Azure AD** kullanmayın.
+> MacOS 'ta Microsoft Azure AD SSO uzantısı hala geliştirilmektedir. Intune kullanıcı arabiriminde listelenir, ancak beklendiği gibi çalışmaz. MacOS 'ta SSO uygulama uzantısı türü için **Microsoft Azure AD** kullanmayın.
 
 Microsoft Azure AD ekibi, macOS 10.15 + kullanıcılarına Microsoft uygulamalarına, kuruluş uygulamalarına ve Apple 'ın SSO özelliğini destekleyen ve Azure AD 'yi kullanarak kimlik doğrulaması yapan, tek bir oturum açma işlemiyle erişim elde etmesine izin vermek için bir yeniden yönlendirme çoklu oturum açma (SSO) uygulama uzantısı oluşturdu. Microsoft Enterprise SSO eklentisi sürümü sayesinde, SSO uzantısını yeni Microsoft Azure AD uygulama uzantısı türüyle**yapılandırabilirsiniz (cihaz**  >  **yapılandırma profilleri**,  >  **Create profile**  >  profil için**MacOS** for platform > **cihaz özellikleri** > **Çoklu oturum açma uygulama** uzantısı > SSO uygulama uzantısı türü > **Microsoft Azure AD**).
 
@@ -116,7 +116,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 - Android kurumsal iş profili
 
 #### <a name="use-sso-app-extensions-on-more-iosipados-apps-with-the-microsoft-enterprise-sso-plug-in---7369991----"></a>Microsoft Enterprise SSO eklentisiyle diğer iOS/ıpados uygulamalarında SSO uygulama uzantılarını kullanın<!-- 7369991  -->
-[Apple cihazları Için Microsoft ENTERPRISE SSO eklentisi](https://docs.microsoft.com/azure/active-directory/develop/apple-sso-plugin) , SSO uygulama uzantılarını destekleyen tüm uygulamalarla birlikte kullanılabilir. Intune 'da bu özellik, eklentinin Apple cihazları için Microsoft kimlik doğrulama kitaplığı 'nı (MSAL) kullanmayan Mobile iOS/ıpados uygulamalarıyla birlikte çalışacağı anlamına gelir. Uygulamaların MSAL kullanması gerekmez, ancak Azure AD uç noktalarında kimlik doğrulaması yapması gerekir.
+[Apple cihazları Için Microsoft ENTERPRISE SSO eklentisi](/azure/active-directory/develop/apple-sso-plugin) , SSO uygulama uzantılarını destekleyen tüm uygulamalarla birlikte kullanılabilir. Intune 'da bu özellik, eklentinin Apple cihazları için Microsoft kimlik doğrulama kitaplığı 'nı (MSAL) kullanmayan Mobile iOS/ıpados uygulamalarıyla birlikte çalışacağı anlamına gelir. Uygulamaların MSAL kullanması gerekmez, ancak Azure AD uç noktalarında kimlik doğrulaması yapması gerekir.
 
 İOS/ıpados uygulamalarınızı eklentiyle birlikte SSO 'yu kullanacak şekilde yapılandırmak için bir iOS/ıpados yapılandırma profiline uygulama paketi tanımlayıcıları**ekleyin (cihaz**  >  **yapılandırma**  >  **Create profile**  >  **iOS/iPadOS** > > profilleri, **Device features** SSO uygulama uzantısı türü > uygulama paketi kimlikleri) için **Çoklu oturum açma uygulama uzantısı**  >  **Microsoft Azure AD** **App bundle IDs**
 
@@ -179,7 +179,7 @@ Microsoft Intune Yöneticisi olarak, Intune 'a, Windows Şirket Portalı uygulam
 ### <a name="app-management"></a>Uygulama yönetimi
 
 #### <a name="the-company-portal-adds-configuration-manager-application-support---4297660---"></a>Şirket Portalı Configuration Manager uygulama desteği ekler<!-- 4297660 -->
-Şirket Portalı artık Configuration Manager uygulamalarını desteklemektedir. Bu özellik, son kullanıcıların ortak yönetilen müşteriler için Şirket Portalı hem Configuration Manager hem de Intune tarafından dağıtılan uygulamaları görmesini sağlar. Bu destek, yöneticilerin farklı Son Kullanıcı Portalı deneyimlerini birleştirmesine yardımcı olur. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](/mem/configmgr/comanage/company-portal). 
+Şirket Portalı artık Configuration Manager uygulamalarını desteklemektedir. Bu özellik, son kullanıcıların ortak yönetilen müşteriler için Şirket Portalı hem Configuration Manager hem de Intune tarafından dağıtılan uygulamaları görmesini sağlar. Bu destek, yöneticilerin farklı Son Kullanıcı Portalı deneyimlerini birleştirmesine yardımcı olur. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](../../configmgr/comanage/company-portal.md). 
 
 ### <a name="device-security"></a>Cihaz güvenliği
 

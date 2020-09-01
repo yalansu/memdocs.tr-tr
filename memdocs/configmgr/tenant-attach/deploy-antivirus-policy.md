@@ -10,12 +10,12 @@ ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: d09b519bfc116afd397d455c6a03a8748f9303cd
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 214a1ebc6b943edac194f27ee4aa539001026aaf
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88827033"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194214"
 ---
 # <a name="tenant-attach-create-and-deploy-endpoint-security-antivirus-policy-from-the-admin-center-preview"></a><a name="bkmk_atp"></a> Kiracı iliştirme: yönetim merkezinden Endpoint Security virüsten koruma ilkesi oluşturma ve dağıtma (Önizleme)
 <!--5691658-->
@@ -27,10 +27,10 @@ ms.locfileid: "88827033"
 Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşik bir çözümdür. Microsoft, Configuration Manager ve Intune 'U **Microsoft Endpoint Manager Yönetim Merkezi**adlı tek bir konsolda bir araya getirir. Microsoft Endpoint Manager konsolunda Microsoft Defender virüsten koruma ilkeleri oluşturun ve bunları Configuration Manager koleksiyonlara dağıtın.
 
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Microsoft Endpoint Manager yönetim merkezine](https://endpoint.microsoft.com/)erişin.
-- [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements)için E5 lisansı.
+- [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements)için E5 lisansı.
 - [Karşıya yüklenen cihazlara kiracı eklenmiş](device-sync-actions.md)bir ortam.
 - En az Configuration Manager sürüm 2006 ve konsolun ilgili sürümü yüklü.
    - Hedef cihazları Configuration Manager istemcisinin en son sürümüne yükseltin.

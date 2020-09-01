@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dcde0881cc35bd4ba0943ff6b24e8999f3c9beaf
-ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
+ms.openlocfilehash: a5460e9c01da8a9a227caf5a03186a37f2c427bb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970524"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194098"
 ---
 # <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Intune 'da iOS, ıpados veya macOS cihaz özelliği ayarları ekleme
 
@@ -156,7 +156,7 @@ Intune 'da, kuruluşunuz tarafından oluşturulan bir SSO uygulama uzantısını
 - Yeniden yönlendirme türü, OpenID Connect, OAuth ve SAML2 gibi modern kimlik doğrulama protokolleri için tasarlanmıştır. Microsoft Azure AD SSO uzantısı ([Microsoft ENTERPRISE SSO eklentisi](/azure/active-directory/develop/apple-sso-plugin)) ve genel yeniden yönlendirme uzantısı arasında seçim yapabilirsiniz.
 
   > [!IMPORTANT]
-  > Microsoft Azure AD SSO uzantısı hala geliştirilmeye devam ediyor. Intune kullanıcı arabiriminde listelenir, ancak beklendiği gibi çalışmaz. SSO uygulama uzantısı türü için **Microsoft Azure AD** kullanmayın.
+  > MacOS 'ta Microsoft Azure AD SSO uzantısı hala geliştirilmektedir. Intune kullanıcı arabiriminde listelenir, ancak beklendiği gibi çalışmaz. MacOS 'ta SSO uygulama uzantısı türü için **Microsoft Azure AD** kullanmayın.
 
 - Kimlik bilgisi türü, sınama ve yanıt kimlik doğrulama akışları için tasarlanmıştır. Apple tarafından sunulan, Kerberos 'a özgü kimlik bilgisi uzantısı ve genel kimlik bilgisi uzantısı arasında seçim yapabilirsiniz.
 

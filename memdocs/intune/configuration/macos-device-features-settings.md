@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d25aec032483c496d2cf01cc253ea1e3024ca83
-ms.sourcegitcommit: 231e2c3913a1d585310dfab7ffcd5c78c6bc5703
+ms.openlocfilehash: e70952b0d90222bd31a4e9df997d70e9d528ef24
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970541"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194207"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Intune 'da macOS cihaz özelliği ayarları
 
@@ -349,7 +349,7 @@ Bu özellik şu platformlarda geçerlidir:
 
   **Evet**olarak ayarlandığında, mevcut tüm Kullanıcı hesapları cihazlardan silinir. Veri kaybını önlemek veya fabrika sıfırlamasını önlemek için bu ayarın cihazlarınızı nasıl değiştirdiğinize emin olun.
 
-  Paylaşılan cihaz modu hakkında daha fazla bilgi için bkz. [paylaşılan cihaz moduna genel bakış](https://docs.microsoft.com/azure/active-directory/develop/msal-shared-devices).
+  Paylaşılan cihaz modu hakkında daha fazla bilgi için bkz. [paylaşılan cihaz moduna genel bakış](/azure/active-directory/develop/msal-shared-devices).
 
 - **Uygulama paketi kimlikleri** (Microsoft Azure AD, Kerberos): cihazlarınızda çoklu oturum açmayı kullanması gereken uygulama paketi tanımlayıcılarını **ekleyin** . Bu uygulamalara Kerberos bilet verme bileti ve kimlik doğrulama bileti erişimi verilir. Uygulamalar, kullanıcıların erişim yetkisi oldukları hizmetler için de kimlik doğrular.
 - **Etki alanı bölge eşlemesi** (yalnızca Kerberos): bölge ile eşleşmesi gereken etkı alanı DNS soneklerini **ekleyin** . Ana bilgisayarların DNS adları bölge adıyla eşleşmezse bu ayarı kullanın. Büyük olasılıkla bu özel etki alanı/bölge eşlemesini oluşturmanız gerekmez.

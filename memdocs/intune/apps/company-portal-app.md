@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a23db0f04895bda6f187e466965a959c891f1ad
-ms.sourcegitcommit: 19ef60175cbfd5c5d1e213a6d64eded34ee42041
+ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725443"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194238"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -94,7 +94,7 @@ Aşağıdaki tabloda, kayda özgü yapılandırma ayrıntıları verilmiştir:
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cihaz kaydı | N/A | Kullanıcıların mobil cihaz yönetimine kaydolmasını ve nasıl sorulup sorulmayacağını belirtin. Daha fazla bilgi için bkz. [cihaz kayıt ayarı seçenekleri](../apps/company-portal-app.md#device-enrollment-setting-options). |
+| Cihaz kaydı | Yok | Kullanıcıların mobil cihaz yönetimine kaydolmasını ve nasıl sorulup sorulmayacağını belirtin. Daha fazla bilgi için bkz. [cihaz kayıt ayarı seçenekleri](../apps/company-portal-app.md#device-enrollment-setting-options). |
 
 #### <a name="device-enrollment-setting-options"></a>Cihaz kayıt ayarı seçenekleri
 
@@ -108,10 +108,10 @@ Aşağıdaki tabloda, kayda özgü yapılandırma ayrıntıları verilmiştir:
 > 
 > Aşağıdaki ayarlar, [Samsung KNOX mobil kaydı](../enrollment/android-samsung-knox-mobile-enroll.md) (KME) Ile yapılandırılmış Android cihazları için geçerlidir. Bir cihaz KME için yapılandırıldıysa ve cihaz kaydı kullanılamıyor olarak ayarlandıysa, cihaz kullanıma hazır akış sırasında kayıt yapamaz.
 
-|    Cihaz kayıt seçenekleri    |    Açıklama    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
+|    Cihaz kayıt seçenekleri    |    Description    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Evet    |    Evet    |    Evet    |    Evet    |
-|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Evet    |    Evet    |
+|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Yes    |    Yes    |    Yes    |    Yes    |
+|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Yes    |    Yes    |
 |    Kullanılamaz    |    Kullanıcıların kaydolmasına yol yoktur.    |    Hayır    |    Hayır    |    Hayır    |    Hayır    |
 
 ### <a name="privacy"></a>Gizlilik
@@ -129,21 +129,21 @@ Aşağıdaki tabloda, bildirime özgü yapılandırma ayrıntıları verilmişti
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cihaz sahiplik türü kişisel 'den şirkete (yalnızca Android ve iOS/ıpados) değiştirildiğinde kullanıcılara anında iletme bildirimi gönderin | N/A | Hem Android hem de iOS Şirket Portalı kullanıcılarınıza cihaz sahiplik türü kişisel ' e değiştirildiğinde, anında iletme bildirimi gönderin. Varsayılan olarak, bu anında iletme bildirimi off olarak ayarlanır. Cihaz sahipliği kurumsal sahiplik olarak ayarlandığında, Intune cihaza daha fazla erişime sahiptir; bu, tam uygulama envanteri, Filekasasyon anahtarı döndürme, telefon numarası alma ve birkaç uzak eylem seçme içerir. Daha fazla bilgi için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
+| Cihaz sahiplik türü kişisel 'den şirkete (yalnızca Android ve iOS/ıpados) değiştirildiğinde kullanıcılara anında iletme bildirimi gönderin | Yok | Hem Android hem de iOS Şirket Portalı kullanıcılarınıza cihaz sahiplik türü kişisel ' e değiştirildiğinde, anında iletme bildirimi gönderin. Varsayılan olarak, bu anında iletme bildirimi off olarak ayarlanır. Cihaz sahipliği kurumsal sahiplik olarak ayarlandığında, Intune cihaza daha fazla erişime sahiptir; bu, tam uygulama envanteri, Filekasasyon anahtarı döndürme, telefon numarası alma ve birkaç uzak eylem seçme içerir. Daha fazla bilgi için bkz. [cihaz sahipliğini değiştirme](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### <a name="app-sources"></a>Uygulama kaynakları
 
 Şirket Portalı, hangi ek uygulama kaynaklarının gösterildiğini seçebilirsiniz.
 
 > [!NOTE]
-> Şirket Portalı, Configuration Manager uygulamalarını destekler. Bu özellik, son kullanıcıların ortak yönetilen müşteriler için Şirket Portalı hem Configuration Manager hem de Intune tarafından dağıtılan uygulamaları görmesini sağlar. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](/mem/configmgr/comanage/company-portal).
+> Şirket Portalı, Configuration Manager uygulamalarını destekler. Bu özellik, son kullanıcıların ortak yönetilen müşteriler için Şirket Portalı hem Configuration Manager hem de Intune tarafından dağıtılan uygulamaları görmesini sağlar. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](../../configmgr/comanage/company-portal.md).
 
 Aşağıdaki tabloda, uygulama kaynağına özgü yapılandırma ayrıntıları verilmiştir:
 
 | Alan adı | Maksimum uzunluk | Daha fazla bilgi |
 |------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Azure AD kurumsal uygulamaları | N/A | Her son kullanıcı için Şirket Portalı **Azure AD kurumsal uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
-| Office Online Uygulamaları | N/A | Her son kullanıcı için Şirket Portalı **Office Online uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
+| Azure AD kurumsal uygulamaları | Yok | Her son kullanıcı için Şirket Portalı **Azure AD kurumsal uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
+| Office Online Uygulamaları | Yok | Her son kullanıcı için Şirket Portalı **Office Online uygulamalarını** görüntülemek üzere **Gizle** veya **göster** ' i seçin. Daha fazla bilgi için bkz. [Uygulama kaynağı ayarı seçenekleri](../apps/company-portal-app.md#app-source-setting-options). |
 
 #### <a name="app-source-setting-options"></a>Uygulama kaynağı ayarı seçenekleri
 
@@ -195,7 +195,7 @@ Son kullanıcılar, Windows Şirket Portalı’nda klavye kısayollarını (hız
 
 Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir.
 
-| Alan | Açıklama | Klavye kısayolu |
+| Alan | Description | Klavye kısayolu |
 |--------------------|----------------|-------------------|
 | Gezinti menüsü | Gezinti | Alt+M |
 |  | Giriş Sayfası | Alt+H |

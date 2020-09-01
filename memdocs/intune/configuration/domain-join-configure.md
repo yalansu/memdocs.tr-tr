@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/13/2020
+ms.date: 08/31/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2472354c4f1c6b704f1e681c3e839f9903d4d079
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 84833be4e0a2fdca553d05114ff01690021ca667
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88912772"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193938"
 ---
 # <a name="configuration-domain-join-settings-for-hybrid-azure-ad-joined-devices-in-microsoft-intune"></a>Microsoft Intune 'de karma Azure AD 'ye katılmış cihazlar için yapılandırma etki alanına katılma ayarları
 
@@ -66,7 +66,9 @@ Bu makalede, karma Autopilot dağıtımı için bir etki alanı ekleme profili o
 
     **İleri**’yi seçin.
 
-10. **Atamalar**' da, profilinizi alacak kullanıcıları veya kullanıcı grubunu seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+10. **Atamalar**' da, profilinizi alacak cihaz gruplarını seçin. Profil atama hakkında daha fazla bilgi için bkz. [Kullanıcı ve cihaz profilleri atama](device-profile-assign.md).
+
+    Cihazları farklı etki alanlarına veya OU 'Lara katılmanız gerekirse farklı cihaz grupları oluşturun.
 
     **İleri**’yi seçin.
 

@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2ebde13c0ab2b190b51d4e776bad79fd0322f2b5
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88911106"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193972"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Intune 'da Windows 10 için BitLocker ilkesini yönetme
 
@@ -97,7 +97,7 @@ Tercih ettiğiniz ilke türünü oluşturmak için aşağıdaki yordamlardan bir
    1. **Platform**: Windows 10 ve üzeri
    2. **Profil türü**: Endpoint Protection
 
-   ![BitLocker profilini seçin](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![Profili seçin](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. **Ayarlar**  >  **Windows şifrelemesi**' ni seçin.
 
@@ -123,7 +123,8 @@ Bir cihazda BitLocker 'ı otomatik olarak ve sessizce etkinleştirmenizi sağlay
 
 Bir cihazın BitLocker 'ı sessizce etkinleştirmek için uygun olması için aşağıdaki koşullara uyması gerekir:
 
-- Cihazın Windows 10 sürüm 1809 veya üstünü çalıştırması gerekir
+- Son kullanıcılar cihazlarda yönetici olarak oturum açıp, cihazın Windows 10 sürüm 1803 veya üstünü çalıştırması gerekir.
+- Son kullanıcılar cihazlarda standart Kullanıcı olarak oturum açarsanız, cihazın Windows 10 sürüm 1809 veya üstünü çalıştırması gerekir.
 - Cihazın Azure AD 'ye katılmış olması gerekir  
 
 **BitLocker ilke yapılandırması**:
@@ -162,7 +163,7 @@ BitLocker için bilgi, [BitLocker yapılandırma hizmeti sağlayıcısı](/windo
 
 Windows 10 sürüm 1909 veya üstünü çalıştıran bir cihazın BitLocker kurtarma anahtarını uzaktan döndürmek için bir Intune cihaz eylemini kullanabilirsiniz.
 
-#### <a name="prerequisites"></a>Önkoşullar
+#### <a name="prerequisites"></a>Ön koşullar
 
 Cihazların BitLocker kurtarma anahtarının döndürmesini desteklemek için aşağıdaki önkoşulları karşılaması gerekir:
 

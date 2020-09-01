@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fdda53fa4127137d21db64140262204d0afd11f
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2af6784db43b2513b57d850d85fa4deaa3052613
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993497"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193853"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-microsoft-365-with-microsoft-intune-administrative-templates"></a>Microsoft Intune Microsoft 365 güncelleştirmek için kanalı güncelleştirme ve hedef sürüm ayarlarını kullanın Yönetim Şablonları
 
@@ -36,7 +36,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 - Windows 10 ve üzeri
 - Microsoft 365
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Office uygulamalarınız için [Microsoft 365 Apps otomatik güncelleştirmelerini](/deployoffice/configure-update-settings-for-office-365-proplus) etkinleştirdiğinizden emin olun. Bunu Grup İlkesi veya Intune Office 2016 ADMX şablonu kullanarak yapabilirsiniz:
 
@@ -181,7 +181,7 @@ Daha fazlasını yapmak istiyorsanız, Office 'i en son sürüm güncelleştirme
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-[Microsoft 365 istemcileri için kanal değerlerini Güncelleştir](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
+[Microsoft 365 istemcileri için kanal değerlerini Güncelleştir](/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Microsoft 365 uygulamalar için Office bulut ilkesi hizmetine genel bakış](/deployoffice/overview-office-cloud-policy-service)
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f493b6c6f9ee100c15a3958ec435261da271f7c
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 8bc0bdaec4d8eb194619176a4130737752d36c06
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262821"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194190"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Microsoft Intune 'de OEMConfig ile Android kurumsal cihazlarını kullanma ve yönetme
 
@@ -62,7 +62,7 @@ OEMConfig kullanırken aşağıdaki bilgileri unutmayın:
 
   Zemilden olmayan cihazlarda OEMConfig modeli yalnızca cihaz başına tek bir ilkeyi destekler. Aynı cihaza birden çok profil atanmışsa, tutarsız bir davranış görebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Cihazlarınızda OEMConfig kullanmak için aşağıdaki gereksinimlere sahip olduğunuzdan emin olun:
 
@@ -151,7 +151,7 @@ Cihaz yapılandırma güncelleştirmelerini bir daha denetlediğinde, yapıland�
 
 ## <a name="supported-oemconfig-apps"></a>Desteklenen OEMConfig uygulamaları
 
-OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tarafından daha karmaşık şemaları ve işlevleri desteklemek için verilen yönetilen yapılandırma ayrıcalıklarını genişletir. OEM 'Lerin OEMConfig uygulamalarını Google ile kaydetmesi gerekir. Kaydolmazsanız, bu özellikler beklendiği gibi çalışmayabilir. Intune Şu anda aşağıdaki OEMConfig uygulamalarını desteklemektedir:
+OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tarafından daha karmaşık şemaları ve işlevleri desteklemek için verilen yönetilen yapılandırma ayrıcalıklarını genişletir. OEM 'Lerin [OEMConfig uygulamalarını Google ile kaydetmesi](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform)gerekir. Kaydolmazsanız, bu özellikler beklendiği gibi çalışmayabilir. Intune Şu anda aşağıdaki OEMConfig uygulamalarını desteklemektedir:
 
 -----------------
 
@@ -183,12 +183,12 @@ OEMConfig Apps, standart uygulamalarla karşılaştırıldığında, Google tara
 
 -----------------
 
-Cihazınız için bir OEMConfig uygulaması varsa, ancak yukarıdaki tabloda değil veya Intune konsolunda, e-posta ile gösterilmemişse `IntuneOEMConfig@microsoft.com` .
+Bir OEM 'yi temsil ediyorsanız ve cihazlarınız için bir OEMConfig uygulaması varsa ancak yukarıdaki tabloda değilse, ekleme yardımı için e-posta gönderin `IntuneOEMConfig@microsoft.com` . OEM 'Lerin Ayrıca [OEMConfig uygulamalarını Google ile kaydetmesi](https://docs.google.com/forms/d/e/1FAIpQLSdkpSO-GKJRvTKhGArWDocWrzjdMYvehkHnObArEkFNXCNCsg/viewform)gerekir.
 
 > [!NOTE]
-> Oemconfig Apps, OEMConfig profilleriyle yapılandırılanmadan önce Intune tarafından eklenmediyse olmalıdır. Bir uygulama desteklendikten sonra kiracınızda ayarlama hakkında Microsoft 'a başvurmanız gerekmez. Bu sayfadaki yönergeleri izlemeniz yeterlidir.
+> Oemconfig Apps, OEMConfig profilleriyle yapılandırılanmadan önce Google ve Intune tarafından eklenmediyse olmalıdır. Bir uygulama desteklendikten sonra kiracınızda ayarlama hakkında Microsoft 'a başvurmanız gerekmez. Bu sayfadaki yönergeleri izlemeniz yeterlidir.
 >
-> Yanlış davranan bir OEMConfig uygulaması yaşarsanız, OEMConfig uygulamasının geliştiricilerine başvurun. Intune, bireysel OEMConfig uygulamalarıyla ilgili teknik sorunlardan sorumlu değildir.
+> Bir OEMConfig uygulaması içindeki ayarlarla yanlış davranan bir deneyim yaşarsanız, OEMConfig uygulamasının geliştiricilerine başvurun. Intune, bireysel OEMConfig uygulamalarıyla ilgili teknik sorunlardan sorumlu değildir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

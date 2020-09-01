@@ -10,12 +10,12 @@ ms.assetid: 50f8e206-a2af-469a-9f1b-0f7a87166f48
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: a17d6fb437f83ae14895e8dd6d081ee4b6bd80fb
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: a2862812145e33a992ceaa346e138606eee5fad0
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88827039"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194221"
 ---
 # <a name="tenant-attach-onboard-configuration-manager-clients-to-microsoft-defender-atp-from-the-admin-center-preview"></a><a name="bkmk_atp"></a> Kiracı iliştirme: Yönetim Merkezi 'nden Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme (Önizleme)
 <!--5691658-->
@@ -26,10 +26,10 @@ ms.locfileid: "88827039"
 
 Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşik bir çözümdür. Microsoft, Configuration Manager ve Intune 'U **Microsoft Endpoint Manager Yönetim Merkezi**adlı tek bir konsolda bir araya getirir. Yönetilen istemcileri Configuration Manager için Microsoft Defender ATP uç noktası algılama ve yanıt (EDR) ekleme ilkeleri dağıtabilirsiniz. Bu istemciler Azure AD veya MDM kaydı gerektirmez ve ilke, Azure AD grupları yerine ConfigMgr koleksiyonlarına hedeflenmiş olur.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - [Microsoft Endpoint Manager yönetim merkezine](https://endpoint.microsoft.com/)erişin.
-- [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements)için E5 lisansı.
+- [Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements)için E5 lisansı.
 - [Karşıya yüklenen cihazlara kiracı eklenmiş](device-sync-actions.md)bir ortam.
 - En az Configuration Manager sürüm 2006 ve konsolun ilgili sürümü yüklü.
    - Hedef cihazları Configuration Manager istemcisinin en son sürümüne yükseltin.

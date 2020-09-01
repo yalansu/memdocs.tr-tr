@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 966c3f21505cbbe1573abd47fb7081c5e97cc3c1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 3bb1d4806271ab40c60f0ad419e4e708d36bbc97
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88823460"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89194132"
 ---
 # <a name="settings-for-microsoft-defender-antivirus-policy-for-tenant-attached-devices-in-microsoft-intune"></a>Microsoft Intune 'de kiracı ekli cihazlar için Microsoft Defender virüsten koruma ilkesi ayarları
 
@@ -30,7 +30,7 @@ Intune 'dan **Microsoft Defender virüsten koruma ilkesi (ConfigMgr)** profiliyl
 ## <a name="cloud-protection"></a>Bulut koruması
 
 - **Buluta teslim edilen korumayı aç**  
-  CSP: [Allowcloudprotection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  CSP: [Allowcloudprotection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   Varsayılan olarak, Windows 10 masaüstü cihazlarındaki Defender, bulduğu sorunlar hakkında Microsoft 'a bilgi gönderir. Microsoft, sizi ve diğer müşterileri etkileyen sorunlar hakkında daha fazla bilgi edinmek için bu bilgileri çözümleyerek geliştirilmiş çözümler sunar.
 
@@ -39,7 +39,7 @@ Intune 'dan **Microsoft Defender virüsten koruma ilkesi (ConfigMgr)** profiliyl
   - **İzin verilen.**  Microsoft Etkin Koruma Hizmeti açar.
 
 - **Buluta teslim edilen koruma düzeyi**  
-  CSP: [Cloudblocklevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+  CSP: [Cloudblocklevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Agresif Defender virüsten koruma 'nın şüpheli dosyaları engelleme ve tarama hakkında daha fazla yapılandırma.
   - **Yapılandırılmadı** (*varsayılan*)-varsayılan Defender engelleme düzeyi.
@@ -48,7 +48,7 @@ Intune 'dan **Microsoft Defender virüsten koruma ilkesi (ConfigMgr)** profiliyl
   - **Sıfır toleransı** -tüm bilinmeyen yürütülebilir dosyaları engelle.
 
 - **Defender bulut uzatılmış zaman aşımı (saniye)**  
-  CSP: [Cloudextendedtimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
+  CSP: [Cloudextendedtimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
   Defender virüsten koruma, güvenli olduklarından emin olmak için kuşkulu dosyaları 10 saniye içinde otomatik olarak engeller. Bu ayarla, bu zaman aşımı için en fazla 50 ek saniye ekleyebilirsiniz.
 
@@ -57,24 +57,24 @@ Intune 'dan **Microsoft Defender virüsten koruma ilkesi (ConfigMgr)** profiliyl
 Bu gruptaki her bir ayar için ayarı genişletebilir, **Ekle**' yi seçebilir ve sonra dışlama için bir değer belirtebilirsiniz.
 
 - **Dışlanacak Defender işlemi**  
-  CSP: [Excludedprocesses](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+  CSP: [Excludedprocesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 
   Bir tarama sırasında yoksayılacak işlem tarafından açılan dosyaların listesini belirtin. İşlemin kendisi taramadan çıkarılmaz.
 
 - **Taramalardan ve gerçek zamanlı korumanın dışında tutulacak dosya uzantıları**  
-  CSP: [ExcludedExtensions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+  CSP: [ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
 
   Tarama sırasında yoksayılacak dosya türü uzantılarının listesini belirtin.
 
 - **Dışlanacak Defender dosyaları ve klasörleri**  
-  CSP: [Excludedpaths](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+  CSP: [Excludedpaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
   Tarama sırasında yoksayılacak dosya ve Dizin yollarının listesini belirtin.
 
 ## <a name="real-time-protection"></a>Gerçek zamanlı koruma
 
 - **Gerçek zamanlı korumayı aç**  
-  CSP: [AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
   Windows 10 Masaüstü cihazlarında Defender 'ın gerçek zamanlı Izleme işlevini kullanmasını gerektir.
   - **Yapılandırılmadı** (*varsayılan*)-ayar sistem varsayılan ayarlarına geri yüklenir

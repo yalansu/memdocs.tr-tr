@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
-ms.openlocfilehash: 484b1d808484984b4beaf434c0c27f2f1bec4e10
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 2d431f744ab09aeb938a7961ebf713f71c0f8015
+ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995203"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89193691"
 ---
 # <a name="ready-for-modern-desktop-retirement-faq"></a>Modern masaüstü kullanımdan kaldırma hakkında SSS
 
@@ -49,7 +49,7 @@ Birçok müşteri, Windows 10 ve Enterprise için Microsoft 365 uygulamaları il
 
 Windows 10 ve Enterprise için Microsoft 365 uygulamaları çalıştıran ticari cihazlarda desteklenen ve kullanımda olan *modern Masaüstü dizinine yönelik* listelenen yazılım çözümleri. Dizin, BT yöneticilerine Windows 10 ' un en son sürümlerini ve dağıtımlarına yönelik Microsoft 365 göz önünde bulundurmalarına yardımcı olur.
 
-BT yöneticileriyle ilgili geri bildirimler, bu öngörüleri, dağıtım planlarını planlamak için kullandıkları araçlarla tümleştirirler. Windows 10 ve Microsoft 365 uygulamalarınızı kurumsal yükseltme projelerine yönelik olarak planlamak ve yönetmek için Configuration Manager ' de [Masaüstü Analizi](https://aka.ms/dadocs) ve [Microsoft 365 uygulamaları hazır olma özellikleri](https://docs.microsoft.com/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) ' ni kullanın. 
+BT yöneticileriyle ilgili geri bildirimler, bu öngörüleri, dağıtım planlarını planlamak için kullandıkları araçlarla tümleştirirler. Windows 10 ve Microsoft 365 uygulamalarınızı kurumsal yükseltme projelerine yönelik olarak planlamak ve yönetmek için Configuration Manager ' de [Masaüstü Analizi](https://aka.ms/dadocs) ve [Microsoft 365 uygulamaları hazır olma özellikleri](/deployoffice/readiness-tools#office-365-proplus-readiness-features-in-configuration-manager-current-branch) ' ni kullanın. 
 
 > [!Note]
 > 21 Nisan 2020 ' den itibaren Office 365 ProPlus, **Enterprise için Microsoft 365 uygulamalar**olarak yeniden adlandırıldı. Daha fazla bilgi için bkz. [Office 365 ProPlus Için ad değiştirme](/deployoffice/name-change). Konsol güncelleştirilirken Configuration Manager konsolunda ve destekleyici belgelerde eski adın başvurularını görmeye devam edebilirsiniz.
@@ -122,4 +122,4 @@ Geliştirici Merkezi aracılığıyla sistem durumu ve ölçüm raporlarıyla ç
 
 Masaüstü uygulamalarınızın şimdi uyumlu olduğundan emin olun ve gelecekte Windows 10 ile uyumlu kalın. Daha fazla bilgi için bkz. [geliştiriciler Için uygulama uyumluluğu](https://developer.microsoft.com/windows/desktop/app-compatibility).
 
-Enterprise için Microsoft 365 uygulamalar için çözümler geliştirirseniz, bkz. [Office 'TEKI com, VSTO ve VBA eklentileri Için geliştirme en iyi yöntemleri](https://docs.microsoft.com/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
+Enterprise için Microsoft 365 uygulamalar için çözümler geliştirirseniz, bkz. [Office 'TEKI com, VSTO ve VBA eklentileri Için geliştirme en iyi yöntemleri](/visualstudio/vsto/development-best-practices-for-com-vsto-and-vba-add-ins-in-office).
