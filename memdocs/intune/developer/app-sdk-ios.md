@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 823e29d1944b4957a24996620bb5467f234544cd
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88908964"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281192"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -33,7 +33,7 @@ ms.locfileid: "88908964"
 
 iOS için Microsoft Intune Uygulama SDK’sı, Intune uygulama koruma ilkelerini (APP veya MAM ilkeleri olarak da bilinir) yerel iOS uygulamanıza eklemenizi sağlar. MAM özellikli uygulamalar Intune Uygulama SDK’sı ile tümleşik çalışır. Intune uygulamayı etkin bir şekilde yönetirken, BT yöneticileri mobil uygulamanıza uygulama koruma ilkeleri dağıtabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - OS X 10.12.6 veya üstünü çalıştıran bir Mac OS bilgisayara ihtiyacınız vardır ve Ayrıca Xcode 9 veya üzeri bir sürümü yüklü olur.
 
@@ -135,7 +135,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
 3. Her bir proje hedefinde **Özellikler**’i seçip **Anahtar Zinciri Paylaşımı** anahtarını etkinleştirerek anahtar zinciri paylaşımını etkinleştirin (önceden etkinleştirilmemişse). Anahtarlık paylaşımı, sonraki adıma devam edebilmeniz için gereklidir.
 
    > [!NOTE]
-   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örnek:
+   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örneğin:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -154,7 +154,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
     
       ![Intune Uygulama SDK’sı iOS: Anahtarlık paylaşımı](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örnek:
+    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örneğin:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -277,7 +277,7 @@ VerboseLoggingEnabled | Boole | Evet olarak ayarlanırsa, Intune ayrıntılı mo
 
 ## <a name="receive-app-protection-policy"></a>Uygulama koruma ilkesini alma
 
-### <a name="overview"></a>Genel Bakış
+### <a name="overview"></a>Genel bakış
 
 Intune uygulama koruma ilkesini almak için, uygulamaların Intune MAM hizmetiyle bir kayıt isteği başlatmaları gerekir. Uygulamalar, Intune konsolunda cihaz kaydıyla veya cihaz kaydı olmadan uygulama koruma ilkesini almak için yapılandırılabilir. Kayıt olmadan uygulama koruma ilkesi (**APP-WE** veya MAM-WE olarak da bilinir), uygulamaların Intune mobil cihaz yönetimine (MDM) kaydedilmeden Intune tarafından yönetilmesine izin verir. Her iki durumda da, ilkeyi almak için Intune MAM hizmetine kaydolmak gereklidir.
 
@@ -553,7 +553,7 @@ Sürüm 8.0.2'den başlayarak, yalnızca Intune tarafından yönetilen paylaşı
 
 Ve aracılığıyla belge paylaşırken `UIActivityViewController` `UIDocumentInteractionController` , iOS, paylaşılan belgeyi açmayı destekleyen her uygulama Için ' Kopyala ' eylemlerini görüntüler. Uygulamalar, Info.plist dosyalarındaki `CFBundleDocumentTypes` ayarı yoluyla destekledikleri belge türlerini bildirir. İlke yönetilmeyen uygulamalara paylaşımı yasaklarsa, bu paylaşım türü artık kullanılabilir olmaz. Bunun yerine kullanıcı, kullanıcı arabirimi olmayan Eylem uzantısını ekleyip bunu Intune Uygulama SDK’sına bağlamak zorunda kalır. Eylem uzantısı, yalnızca bir saplamadır. SDK, dosya paylaşım davranışını uygular. Aşağıdaki adımları izleyin:
 
-1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örnek:
+1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örneğin:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>
@@ -753,14 +753,30 @@ Varsayılan olarak, uygulamalar tek kimlikli olarak değerlendirilir. SDK, kayı
     Bu yöntemin bir arka plan iş parçacığından çağrıldığını unutmayın. Kullanıcıya yönelik tüm veriler kaldırılana kadar uygulama bir değer döndürmemelidir (uygulama FALSE döndürürse dosyalar hariç olmak üzere).
 
 ## <a name="siri-intents"></a>Siri amaçları
+
 Uygulamanız Siri hedefleri ile tümleşiyorsa, `areSiriIntentsAllowed` `IntuneMAMPolicy.h` Bu senaryoyu destekleme yönergeleri için lütfen içindeki açıklamalarını okuduğunuzdan emin olun. 
     
 ## <a name="notifications"></a>Bildirimler
+
 Uygulamanız bildirimler alırsa, `notificationPolicy` `IntuneMAMPolicy.h` Bu senaryoyu destekleme yönergeleri için lütfen içindeki açıklamalarını okuduğunuzdan emin olun.  Uygulamaların `IntuneMAMPolicyDidChangeNotification` ' de `IntuneMAMPolicyManager.h` açıklanabileceği ve bu değeri Anahtarlık aracılığıyla bu değerle iletişim kurması önerilir `UNNotificationServiceExtension` .
-## <a name="displaying-web-content-within-application"></a>Uygulama Içinde Web Içeriğini görüntüleme
-Uygulamanızın Web sitesinde Web sitelerini görüntüleyebilme özelliği varsa ve görüntülenen Web sayfaları rasgele sitelere gidebilme özelliğine sahipse, uygulama, yönetilen verilerin Web görünümü aracılığıyla sızmaması için geçerli kimliği ayarlamaktan sorumludur. Bunun örnekleri, bir arama motoruna doğrudan veya dolaylı bağlantıları olan ' bir özellik önerme ' veya ' geri bildirim ' Web sayfalarıdır.
-Çoklu kimlik uygulamaları, web görünümünü görüntülemeden önce boş dizeyi geçirerek ıntunemampolicymanager Setuipolicyıdentity öğesini çağırmalıdır. Web görünümü kapatıldıktan sonra, uygulama geçerli kimliğe geçirerek Setuipolicyıdentity öğesini çağırmalıdır.
-Tek kimlik uygulamaları, web görünümünü görüntülemeden önce boş dizeyi geçirerek ıntunemampolicymanager Setcurrentthreadıdentity çağrısını çağırmalıdır. Web görünümü kapatıldıktan sonra, uygulamanın Nil olarak Setcurrentthreadıdentity çağrısı gerekir.
+
+## <a name="displaying-web-content-within-an-application"></a>Bir uygulama içinde Web içeriğini görüntüleme
+
+Uygulamanızın bir Web görünümü içindeki Web sitelerini görüntüleme yeteneği varsa, belirli senaryoya bağlı olarak veri sızıntılarını engellemek için mantık eklemeniz gerekebilir.
+
+### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>Yalnızca kurumsal olmayan içeriği/Web sitelerini görüntüleyen Web görünümleri
+
+Uygulamanız Web sitesinde kurumsal veri görüntülemeiyorsa ve kullanıcıların, yönetilen verileri uygulamanın diğer bölümlerinden ortak bir foruma geçirebileceği rastgele sitelere göz atabilme olanağı varsa, uygulama, yönetilen verilerin WebView aracılığıyla sızabilmesi için geçerli kimliği ayarlamaktan sorumludur. Buna örnek olarak, bir arama motoruna doğrudan veya dolaylı bağlantıları olan bir özellik veya geri bildirim Web sayfası önerilir. Çoklu kimlik uygulamaları, WebView 'u görüntülemeden önce boş dizeyi geçirerek ıntunemampolicymanager Setuipolicyıdentity öğesini çağırmalıdır. WebView kapatıldıktan sonra uygulama, geçerli kimliği geçirerek Setuipolicyıdentity öğesini çağırmalıdır. Tek kimlikli uygulamalar, WebView 'u görüntülemeden önce boş dizeyi geçirerek ıntunemampolicymanager Setcurrentthreadıdentity ' i çağırmalıdır. WebView kapatıldıktan sonra, uygulama Setcurrentthreadıdentity ' i çağırıp el almaz. Bu, Intune SDK 'nın WebView 'u yönetilmeyen olarak ele almasını ve ilke bu şekilde yapılandırıldıysa, uygulamanın diğer parçalarından yönetilen verilerin Web görünümüne yapıştırılmasına izin vermez. 
+
+### <a name="webviews-that-display-only-corporate-contentwebsites"></a>Yalnızca Şirket içeriğini/Web sitelerini görüntüleyen Web görünümleri
+
+Uygulamanız yalnızca WebView 'daki şirket verilerini görüntülüyorsa ve kullanıcılar rastgele sitelere gözatamıyorsanız, hiçbir değişiklik yapılması gerekmez.
+
+### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>Hem kurumsal hem de kurumsal olmayan içeriği/Web sitelerini görüntüleyebilen Web görünümleri
+
+Bu senaryo için yalnızca WKWebView desteklenir. Eski UIWebView kullanan uygulamalar WKWebView 'e geçiş yapması gerekir. Uygulamanız, WKWebView içinde kurumsal içerik görüntüleyip, kullanıcılar da veri sızıntılarına yol açabilecek kurumsal olmayan içeriğe/Web sitelerine erişebilmelidir. uygulama, ıntunemampolicydelegate. h içinde tanımlanan ısexternalurl: Delegate metodunu uygulamalıdır. Uygulamalar, temsilci yöntemine geçirilen URL 'nin, yönetilen verilerin veya kurumsal verileri sızan kurumsal olmayan bir Web sitesine yapıştırılabileceği kurumsal bir Web sitesini temsil ettiğini belirlemelidir. 
+
+Isexternalurl içinde Hayır döndürme işlemi, Intune SDK 'sını, yüklenen Web sitesinin, yönetilen verilerin paylaşılabileceği kurumsal bir konum olduğunu söyler. Evet döndürülürse, Intune SDK, geçerli ilke ayarları gerektiriyorsa, bu URL 'YI WKWebView yerine Edge 'de açar. Bu, uygulama içinden yönetilen verilerin dış Web sitesine sızmasını sağlar.
 
 ## <a name="ios-best-practices"></a>iOS en iyi uygulamalar
 

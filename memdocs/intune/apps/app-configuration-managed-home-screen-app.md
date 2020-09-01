@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8aa7d201a4f7e66a4275adae9a92b0808ea95fcd
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 0279a85d0eb3bac7d222c27ce15203f58fd4ede6
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915373"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281175"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Android Enterprise için Microsoft tarafından yönetilen giriş ekranı uygulamasını yapılandırma
 
@@ -382,7 +382,7 @@ Aşağıda, tüm kullanılabilir yapılandırma anahtarlarının dahil olduğu b
 Yönetilen giriş ekranı uygulaması artık Google 'ın Android cihaz Ilkesi uygulamasına erişim sağlar. Yönetilen giriş ekranı uygulaması, Intune 'A kayıtlı cihazlar için çok uygulama bilgi noktası modunu kullanan Android kurumsal (AE) adanmış cihazlar olarak kullanılan özel bir başlatıdır. Android cihaz Ilkesi uygulamasına erişebilir veya destek ve hata ayıklama amacıyla kullanıcılara Android cihaz Ilkesi uygulamasına rehberlik edebilirsiniz. Bu başlatma özelliği, cihazın ne zaman kaydolur ve yönetilen giriş ekranına kilitlediği sırada kullanılabilir. Bu işlevselliği kullanmak için ek yükleme gerekmez.
 
 ## <a name="managed-home-screen-debug-screen"></a>Yönetilen giriş ekranı hata ayıklama ekranı
-Hata ayıklama ekranı görüntülenene kadar **geri** düğmesine tıklayarak yönetilen giriş ekranının hata ayıklama ekranına erişebilirsiniz ( **geri** düğmesine 15 kez veya daha fazla tıklayın). Bu hata ayıklama ekranından, Android cihaz Ilkesi uygulamasını başlatabilir, günlükleri görüntüleyebilir ve yükleyebilir ya da cihazı güncelleştirmek için geçici olarak bilgi noktası modunu duraklatabilirsiniz. Bilgi noktası modunu duraklatma hakkında daha fazla bilgi için, Android kurumsal [adanmış cihaz ayarlarındaki](../configuration/device-restrictions-android-for-work.md#device-experience) **bilgi noktası modu** öğesine bakın. Yönetilen giriş ekranının hata ayıklama ekranına erişmenin daha kolay bir yolunu isterseniz, **kolay erişim hata ayıklama menüsünü etkinleştir** ' i `True` kullanarak uygulama yapılandırma ilkelerini kullanabilirsiniz. 
+Hata ayıklama ekranı görüntülenene kadar **geri** düğmesine tıklayarak yönetilen giriş ekranının hata ayıklama ekranına erişebilirsiniz ( **geri** düğmesine 15 kez veya daha fazla tıklayın). Bu hata ayıklama ekranından, Android cihaz Ilkesi uygulamasını başlatabilir, günlükleri görüntüleyebilir ve yükleyebilir ya da cihazı güncelleştirmek için geçici olarak bilgi noktası modunu duraklatabilirsiniz. Bilgi noktası modunu duraklatma hakkında daha fazla bilgi için, Android kurumsal [adanmış cihaz ayarlarındaki](../configuration/device-restrictions-android-for-work.md#device-experience) **bilgi noktası modu** öğesine bakın. Yönetilen giriş ekranının hata ayıklama ekranına erişmenin daha kolay bir yolunu isterseniz, uygulama yapılandırma ilkelerini kullanmak için **kolay erişim hata ayıklama menüsünü etkinleştir** seçeneğini belirleyebilirsiniz `True` . 
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

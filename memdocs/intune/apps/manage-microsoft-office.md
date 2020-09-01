@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/09/2020
+ms.date: 08/31/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06d53789bb80475528bd413d14015e30d09fca64
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: ba4bef364f734f9078b7c404e06978b018f4c387
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996665"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281090"
 ---
 # <a name="manage-collaboration-experiences-using-office-for-ios-and-android-with-microsoft-intune"></a>İOS ve Android için Office kullanarak işbirliği deneyimlerini Microsoft Intune ile yönetin
 
@@ -74,6 +74,7 @@ Kullanılabilir ayarlar hakkında daha fazla bilgi için bkz. [Android uygulama 
 Uygulama yapılandırması, kayıtlı cihazlarda mobil cihaz yönetimi (MDM) işletim sistemi kanalı aracılığıyla (iOS için[yönetilen uygulama yapılandırma](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) kanalı veya Android için [kuruluş kanalında android](https://developer.android.com/work/managed-configurations) ) veya Intune uygulama koruması ilkesi (uygulama) kanalı aracılığıyla teslim edilebilir. İOS ve Android için Office aşağıdaki yapılandırma senaryolarını destekler:
 
 - Yalnızca iş veya okul hesaplarına izin ver
+- Genel uygulama yapılandırması
 - Veri koruma ayarları
 
 > [!IMPORTANT]
@@ -96,6 +97,26 @@ Bu yapılandırma senaryosu yalnızca kayıtlı cihazlarla birlikte kullanılabi
 
 > [!NOTE]
 > Şu anda yalnızca Android için Office, kuruluş izin verilen hesaplar modunu destekler.
+
+## <a name="general-app-configuration-scenarios"></a>Genel uygulama yapılandırma senaryoları
+
+İOS ve Android için Office, yöneticilere birçok uygulama içi ayar için varsayılan yapılandırmayı özelleştirme imkanı sunar.  Bu özellik, her bir UıEM sağlayıcısı aracılığıyla kayıtlı cihazlar ve iOS ve Android için Office 'in bir Intune Uygulama Koruması Ilkesi uygulandığı zaman kayıtlı olmayan cihazlar için sunulur.
+
+> [!NOTE]
+> Bir uygulama koruma Ilkesi kullanıcıları hedeflediyse, genel uygulama yapılandırma ayarlarını **yönetilen uygulamalar** kayıt modelinde dağıtmaktır. Bu, uygulama yapılandırma Ilkesinin kayıtlı cihazlara ve kayıtlı olmayan cihazlara dağıtılmasını sağlar. 
+
+Office, yapılandırma için aşağıdaki ayarları destekler:
+
+- Yapışkan Notlar oluşturulmasını yönetin
+
+### <a name="manage-the-creation-of-sticky-notes"></a>Yapışkan Notlar oluşturulmasını yönetin
+
+Varsayılan olarak, iOS ve Android için Office, kullanıcıların Yapışkan Notlar oluşturmalarına olanak sağlar. Exchange Online posta kutuları olan kullanıcılar için, notlar kullanıcının posta kutusuyla eşitlenir. Şirket içi posta kutularına sahip kullanıcılar için bu notlar yalnızca yerel cihazda depolanır.
+
+|    Anahtar    |    Değer    |
+|-------------------------------------------------------------------|-------------|
+|    com. Microsoft. Office. Notcreationenabled    |    **true** (varsayılan) iş veya okul hesabı için yapışkan notlar oluşturmaya izin verebilir<br>**false** , iş veya okul hesabı için yapışkan notlar oluşturmayı devre dışı bırakır    |
+
 
 ## <a name="data-protection-app-configuration-scenarios"></a>Veri koruma uygulaması yapılandırma senaryoları
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a755b3ecdf2564139bc4aaf2992921fb5acdf2e
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 04aa66572aa3362f6540624266d89308dd4b20ba
+ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068210"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281158"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune için geliştirme aşamasında
 
@@ -192,7 +192,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 *Android Cihaz Yöneticisi*için *cihaz kısıtlama* ve *Uyumluluk* ilkeleri için parola ayarlarına yönelik birkaç değişiklik sunuyoruz. (**Cihazlar**  >  **Yapılandırma profilleri**  >  **Profil oluştur**  >  **Cihaz kısıtlamaları** ve **cihazların**  >  **uyumluluk ilkeleri**  >  **ilke oluştur**) Bu değişiklikler, Intune 'un Android sürüm 10 ve üzerinde değişikliklere uyum sağlaması için, parolaların ayarlarının beklendiği gibi cihazlara uygulanmaya devam etmesine yardımcı olur.
  
 Değişiklikler şunları içerir:
-- **Parola**için Lop düzeyi seçeneğinin kaldırılması.  
+- **Parola**için üst düzey seçeneğinin kaldırılması.  
 - Ayarlar, hangi cihazlara uygulanacağını temel alan bölümlerle yeniden düzenlenecektir.
 - Parola **türü** , parola uzunluğunun geçerli olduğu bir değere yapılandırılmadığı takdirde, **En düşük parola uzunluğu** kullanım için devre dışı bırakılır.
 - Etiketlere ve örnek metne yönelik ek güncelleştirmeler.
