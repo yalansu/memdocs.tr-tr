@@ -2,7 +2,7 @@
 title: Sürüm 2006’daki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 2006 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
-ms.date: 08/20/2020
+ms.date: 08/31/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: fc12c81a1ec58d17580b91e21a1ba7d2e0cb0cbc
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: c507879a77e57a0a06fe9528417394bcbf643608
+ms.sourcegitcommit: 68631e0f7d5bd09ae0ee9dc301a561ee9df10931
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819686"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89245017"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2006 ' deki yenilikler
 
@@ -133,7 +133,7 @@ Windows Tanılama verilerine yönelik masaüstü Analizi gereksinimleriyle daha 
 |---------|---------|
 | Gerekli | Temel |
 | İsteğe bağlı (sınırlı) | Gelişmiş (sınırlı) |
-| YOK | Gelişmiş |
+| Yok | Gelişmiş |
 | İsteğe Bağlı | Tam |
 
 Daha önce **Gelişmiş** düzeyde herhangi bir cihaz yapılandırdıysanız, sürüm 2006 ' e yükselttiğinizde bu kullanıcılar **isteğe bağlı (sınırlı)** olarak döndürülür. Böylece daha az veri Microsoft 'a gönderilir. Bu değişiklik, masaüstü analizinden gördüklerinizi etkilemez.
@@ -363,9 +363,9 @@ The following additional hotfixes are available to address specific issues:
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Şu anda sürüm 2006, erken güncelleştirme halkası için yayımlanmıştır. Bu güncelleştirmeyi yüklemek için kabul etmeniz gerekir. Daha fazla bilgi için bkz. [erken güncelleştirme halkası](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring).
+<!-- At this time, version 2006 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2006.md#early-update-ring). -->
 
-<!-- As of May 11, 2020, version 2006 is globally available for all customers to install. -->
+31 Ağustos 2020 itibariyle, sürüm 2006 tüm müşterilerin yüklemesi için genel kullanıma sunulmuştur.
 
 Bu sürümü yüklemeye hazırsanız, [güncelleştirme 2006 ' i yüklemek için](../../servers/manage/checklist-for-installing-update-2006.md) [Configuration Manager güncelleştirmeleri](../../servers/manage/updates.md) ve denetim listesini yükleme bölümüne bakın.
 
