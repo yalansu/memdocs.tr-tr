@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/18/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47361bf4812de91d12c779a6eb58fef35e9d0f2
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262056"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286284"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Android için Microsoft Intune uygulama SDK 'Sı geliştiriciler test Kılavuzu
 
@@ -33,7 +33,7 @@ Android için Microsoft Intune uygulama SDK 'Sı test Kılavuzu, Intune ile yön
 1. [Microsoft CDX kiracı oluşturma sitesine](https://cdx.transform.microsoft.com/my-tenants/create-tenant) gidin ve bir Microsoft 365 Kurumsal kiracı oluşturun.
 2. [Intune](../fundamentals/setup-steps.md) 'u mobil cihaz YÖNETIMI (MDM) etkinleştirecek şekilde ayarlayın.
 3. [Kullanıcı oluşturun](../fundamentals/users-add.md).
-4. [Grupları oluşturun](../fundamentals/groups-add.md).
+4. [Grup Oluştur].. /temel Mentals/(gruplar-Add. MD).
 5. Test testiniz için uygun şekilde [lisans atayın](../fundamentals/licenses-assign.md) .
 
 
@@ -97,7 +97,7 @@ Sistem panosunu yönetilen uygulamalarla kısıtlamak için aşağıdaki adımla
     - Uygulamanızdan yönetilmeyen bir uygulamaya (örneğin, Iletiler) metin kopyalama engellenir.
 
 ### <a name="prevent-save"></a>Kaydetmeyi engelle
-Uygulamanız [Tümleşik farklı kaydet denetimleri](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations)gerektiriyorsa, farklı **Kaydet** işlevlerini aşağıdaki şekilde denetleyebilirsiniz:
+Uygulamanız tümleşik farklı kaydet denetimleri gerektiriyorsa, farklı **Kaydet** işlevlerini aşağıdaki şekilde denetleyebilirsiniz:
 
 1. **' Farklı Kaydet '** ayarını **Evet**olarak belirleyin.
 2. Aşağıdaki koşulları onaylayın:

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e08d31ad8c1f3ef592fdca9023804f5b0074a98f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 297707da0afb03650eaab91b26abad9947c6a951
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914642"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286161"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Güncelleştirmeler için Intune uyumluluk raporları
 
@@ -59,7 +59,7 @@ Ticari KIMLIĞI yapılandırmaya yönelik OMA-URI (büyük/küçük harfe duyarl
 
 - **Ayar Adı**: Windows Analytics Ticari Kimliği
 - **Ayar açıklaması**: Windows Analytics çözümleri IÇIN ticari kimliği yapılandırma
-- **OMA-URI** (büyük/küçük harfe duyarlı): *./Vendor/MSFT/DMClient/Provider/MS DM Server/ticari IDID*
+- **OMA-URI** (büyük/küçük harfe duyarlı): *./Vendor/MSFT/DMClient/Provider/ProviderID/ticari cıalıd*
 - **Veri Türü:** Dize
 - **Değer**: \<Use the GUID shown on the Windows Telemetry tab in your OMS workspace>
 

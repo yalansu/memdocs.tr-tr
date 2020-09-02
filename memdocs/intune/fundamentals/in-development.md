@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04aa66572aa3362f6540624266d89308dd4b20ba
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281158"
+ms.locfileid: "89286246"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune için geliştirme aşamasında
 
@@ -205,7 +205,7 @@ Bu değişiklikler, ayarlar için Kullanıcı arabirimine uygulanır ve mevcut p
 ### <a name="ending-support-for-ios-11--7327321---"></a>İOS 11 için destek bitiriliyor<!--7327321 -->
 İOS 14 yayımlandıktan sonra, Intune kaydı ve Şirket Portalı uygulaması iOS sürümlerini 12 ve üstünü destekleyecektir. Eski sürümler desteklenmez, ancak ilkeleri almaya devam edecektir.
 
-### <a name="ending-support-for-macos-1012--7327321---"></a>MacOS 10,12 için destek bitiriliyor<!--7327321 -->
+### <a name="ending-support-for-macos-1012--7327326---"></a>MacOS 10,12 için destek bitiriliyor<!--7327326 -->
 MacOS 11 yayımlandıktan sonra, Intune kaydı ve Şirket Portalı macOS 10,13 ve sonraki sürümlerini destekler. Eski sürümler desteklenmez.
 
 

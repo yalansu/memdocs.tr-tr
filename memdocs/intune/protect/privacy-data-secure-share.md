@@ -2,7 +2,7 @@
 title: Intune’da veri güvenliği ve paylaşımı
 titleSuffix: Microsoft Intune
 description: Intune’da kişisel verilerin nasıl güvenlik altına alınıp paylaşıldığını öğrenin.
-keywords: ''
+keywords: Gizlilik, veriler
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 439c217099179414ca9732dd4f57775ab2649a5f
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: fba72c89676d8974f5e7f9aac25d3365b69f61c7
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995764"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286263"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Intune’da veri güvenliği ve paylaşımı
 
@@ -36,14 +36,6 @@ Microsoft Intune, Microsoft Azure hizmet ekiplerinin veri güvenliği ihlali iş
 
 Daha fazla bilgi için bkz. [Hizmet Güveni Portalı](https://www.microsoft.com/en-us/TrustCenter/stp).
 
-Intune, aşağıdakilere benzer veri azaltma teknikleri kullanır:
-
-- toplama
-- bazı özellikler için isteğe bağlı veri toplama
-- doğruluğu veya hassaslığı azaltılan veriler
-
-Intune, Varsayılan olarak Veri Korumasını sağlamak amacıyla destek olayları için RBAC ve JiT güvenliği gibi teknikler de kullanır. 
-
 ### <a name="data-breach-reporting"></a>Veri ihlalini raporlama
 
 Müşterinin Raporlayabildiği Güvenlik Olayı (CRSI) tanımlandığında müşteriler bilgilendirilir. Bu işlem, Intune kullanarak tüm Microsoft 365 müşterileri için ihlal bildirimine iletişim kurmak üzere Microsoft 365 ekibiyle çalışmayı içerir.
@@ -55,7 +47,7 @@ Kiracı yöneticileri bazı işlevleri (Apple Aygıt Kayıt Programı gibi) açt
 - Microsoft 'un aracıları gibi davranan üçüncü taraflar.
 - Üçüncü taraflar, Microsoft 'un aracıları olarak davranmayan, ancak yalnızca kiracı yöneticilerinin Intune iznini açıkça izin vermesi durumunda.
 
-Microsoft aracısı olarak davranan tüm üçüncü tarafları [Online Services Alt Yüklenici listesinde](https://aka.ms/Online_Serv_Subcontractor_List) bulabilirsiniz.
+Microsoft aracıları olarak davranan tüm üçüncü taraflar, [çevrimiçi hizmetler taşeronları listesine](https://aka.ms/Online_Serv_Subcontractor_List)dahil edilmiştir.
 
 Bu varlıklarla veri paylaşmanın amacı müşteri desteğine ve teknik desteğe, hizmet bakımına ve diğer işlemlere yardımcı olmaktır.
 

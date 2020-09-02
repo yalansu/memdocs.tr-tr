@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/24/2020
+ms.date: 09/01/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4283caf8f21e87736b09a3d6c7b31f8daf1f6075
-ms.sourcegitcommit: e2cf3b80d1a4523d98542ccd7bba2439046c3830
+ms.openlocfilehash: b661068515069b1bc4c20acdc1c9ad00a12fe7dd
+ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87546835"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89286212"
 ---
 # <a name="android-enterprise-work-profile-security-configurations"></a>Android kurumsal iş profili güvenlik yapılandırması
 
@@ -77,12 +77,12 @@ Düzey 1, kullanıcıların iş veya okul verilerine erişebileceği kişisel ci
 | İş profili ayarları | Cihaz kilitliyken iş profili bildirimleri | Yapılandırılmamış | Bu ayarı engellemek, iş profili bildirimlerinde önemli verilerin açığa çıkmamasını sağlar ve bu durum kullanılabilirliği etkileyebilir. |
 | İş profili ayarları | Varsayılan uygulama izinleri | Cihaz Varsayılanı | Yöneticiler, dağıttıkları uygulamalar tarafından verilen izinleri gözden geçirmeniz ve ayarlamamız gerekir. |
 | İş profili ayarları | Hesap ekleme ve kaldırma | Blok ||
-| İş profili ayarları | Bluetooth ile kişi paylaşımı | Etkinleştirme | Varsayılan olarak, iş kişilerine erişim, Bluetooth tümleştirmesi aracılığıyla otomobil gibi diğer cihazlarda kullanılamaz. Bu ayarın etkinleştirilmesi, eller ücretsiz kullanıcı deneyimlerini geliştirir. Ancak Bluetooth cihazı, ilk bağlantı sırasında kişileri önbelleğe alabilir. Kuruluşlar, bu ayarı uygularken veri koruma sorunlarını kabul eden kullanılabilirlik senaryolarına karşı dengelemelidir. |
+| İş profili ayarları | Bluetooth ile kişi paylaşımı | Etkinleştir | Varsayılan olarak, iş kişilerine erişim, Bluetooth tümleştirmesi aracılığıyla otomobil gibi diğer cihazlarda kullanılamaz. Bu ayarın etkinleştirilmesi, eller ücretsiz kullanıcı deneyimlerini geliştirir. Ancak Bluetooth cihazı, ilk bağlantı sırasında kişileri önbelleğe alabilir. Kuruluşlar, bu ayarı uygularken veri koruma sorunlarını kabul eden kullanılabilirlik senaryolarına karşı dengelemelidir. |
 | İş profili ayarları | Ekran yakalama | Blok ||
 | İş profili ayarları | Kişisel profilde iş kişisi arayan kimliğini görüntüleme | Yapılandırılmamış ||
 | İş profili ayarları | Kişisel profilden iş kişilerini ara | Yapılandırılmamış | Kullanıcıların kişisel profilden iş kişilerine erişmesini engellemek, kişisel profilde metin mesajlaşma ve çevirici deneyimleri gibi bazı kullanılabilirlik senaryolarını etkileyebilir. Kuruluşlar, bu ayarı uygularken veri koruma sorunlarını kabul eden kullanılabilirlik senaryolarına karşı dengelemelidir. |
 | İş profili ayarları | Kamera | Yapılandırılmamış ||
-| İş profili ayarları | İş profili uygulamalarından Pencere öğelerinin kullanılmasına izin ver | Etkinleştirme ||
+| İş profili ayarları | İş profili uygulamalarından Pencere öğelerinin kullanılmasına izin ver | Etkinleştir ||
 | İş profili ayarları | Iş profili parolası gerektir | Gerektirme ||
 | İş profili ayarları | Minimum parola uzunluğu | 6 | Kuruluşların bu ayarı parola ilkesiyle eşleşecek şekilde güncelleştirmesi gerekebilir. |
 | İş profili ayarları | İş profili kilitlenmeden önce geçmesi gereken işlem yapılmayan dakika sayısı| 5 | Kuruluşların bu ayarı parola ilkesiyle eşleşecek şekilde güncelleştirmesi gerekebilir. |
@@ -90,7 +90,9 @@ Düzey 1, kullanıcıların iş veya okul verilerine erişebileceği kişisel ci
 | İş profili ayarları | Parola geçerlilik süresi (gün) | Yapılandırılmamış | Kuruluşların bu ayarı parola ilkesiyle eşleşecek şekilde güncelleştirmesi gerekebilir. |
 | İş profili ayarları | Gerekli parola türü | Sayısal karmaşıklık ||
 | İş profili ayarları | Önceki parolaların yeniden kullanılmasını engelleme | Yapılandırılmamış | Kuruluşların bu ayarı parola ilkesiyle eşleşecek şekilde güncelleştirmesi gerekebilir.|
+| İş profili ayarları | Yüz kilidi açma | Yapılandırılmamış ||
 | İş profili ayarları | Parmak izi ile kilit açma | Yapılandırılmamış ||
+| İş profili ayarları | Iris kilidi | Yapılandırılmamış ||
 | İş profili ayarları | Akıllı Kilitleme ve diğer güven aracıları | Yapılandırılmamış |||
 | Cihaz parolası | Minimum parola uzunluğu | 6 | Kuruluşların bu ayarı parola ilkesiyle eşleşecek şekilde güncelleştirmesi gerekebilir. |
 | Cihaz parolası | Ekran kilitlenmeden önce geçmesi gereken, işlem yapılmayan dakika sayısı | 5 | Kuruluşların bu ayarı parola ilkesiyle eşleşecek şekilde güncelleştirmesi gerekebilir. |
