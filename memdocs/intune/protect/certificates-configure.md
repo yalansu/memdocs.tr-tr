@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1db36b0ea3d2ba691811958a01043a606b4681a
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251981"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423824"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune kimlik doğrulaması için sertifikaları kullanma
 
@@ -44,11 +44,13 @@ Oluşturduğunuz her ayrı sertifika profili tek bir platformu destekler. Örne�
 
 Bir Microsoft sertifika yetkilisi (CA) kullandığınızda:
 
-- SCEP sertifika profillerini kullanmak için, Intune ile kullanmak üzere [bir ağ cihazı kayıt hizmeti (NDES) sunucusu ayarlamanız](certificates-scep-configure.md#set-up-ndes) gerekir.
-- Aşağıdaki sertifika profili türlerini kullanmak için [Microsoft Intune sertifika Bağlayıcısı yüklemelisiniz](certificates-scep-configure.md#install-the-intune-certificate-connector):
-  - SCEP sertifika profili
-  - PKCS sertifika profili
+- SCEP sertifika profillerini kullanmak için:
+  - Intune ile kullanmak üzere [bir ağ cihazı kayıt hizmeti (NDES) sunucusu ayarlayın](certificates-scep-configure.md#set-up-ndes) .
+  - [Microsoft sertifika bağlayıcısını yükler](certificates-scep-configure.md#install-the-microsoft-intune-connector):
 
+- PKCS sertifika profillerini kullanmak için:
+  - [Microsoft Intune için PFX Sertifika bağlayıcısını yükler] (sertifikalar-içeri aktarılmış-PFX-Yapılandır.
+  
 - PKCS içeri aktarılan sertifikalarını kullanmak için:
   - [Microsoft Intune IÇIN PFX Sertifika bağlayıcısını yükler](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
   - Sertifikaları sertifika yetkilisinden dışarı aktarın ve ardından Microsoft Intune içeri aktarın. Bkz. [Pfxımport PowerShell projesi](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
@@ -80,9 +82,9 @@ Bir Microsoft sertifika yetkilisi (CA) kullandığınızda:
 | Platform              | Güvenilen sertifika profili | PKCS sertifika profili | SCEP sertifika profili | PKCS içeri aktarılan sertifika profili  |
 |--|--|--|--|---|
 | Android cihaz yöneticisi | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)|  ![Desteklenir](./media/certificates-configure/green-check.png) |
-| Android Kurumsal <br> -Tam olarak yönetilen (cihaz sahibi)   | ![Desteklenir](./media/certificates-configure/green-check.png) |   | ![Desteklenir](./media/certificates-configure/green-check.png) |  ![Desteklenir](./media/certificates-configure/green-check.png)  |
+| Android Kurumsal <br> -Tam olarak yönetilen (cihaz sahibi)   | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png) |  ![Desteklenir](./media/certificates-configure/green-check.png)  |
 | Android Kurumsal <br> -Adanmış (cihaz sahibi)   | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png)|
-| Android Kurumsal <br> -Şirkete ait Iş profili   | ![Desteklenir](./media/certificates-configure/green-check.png)  |  | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png)  |
+| Android Kurumsal <br> -Şirkete ait Iş profili   | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png)  |
 | Android Kurumsal <br> -İş profili    | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) |
 | iOS/iPadOS                   | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Desteklenir](./media/certificates-configure/green-check.png) |  ![Desteklenir](./media/certificates-configure/green-check.png) |![Desteklenir](./media/certificates-configure/green-check.png)|![Desteklenir](./media/certificates-configure/green-check.png)|
@@ -172,3 +174,5 @@ Kullanmak istediğiniz her platform için SCEP, PKCS veya PKCS içeri aktarılm�
 - [Intune ile SCEP sertifikalarını destekleyecek altyapıyı yapılandırma](certificates-scep-configure.md)  
 - [Intune ile PKCS sertifikalarını yapılandırma ve yönetme](certficates-pfx-configure.md)  
 - [PKCS içeri aktarılmış sertifika profili oluşturma](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+
+[Sertifika bağlayıcıları](certificate-connectors.md) hakkında bilgi edinin

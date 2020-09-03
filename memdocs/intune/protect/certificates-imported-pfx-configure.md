@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/29/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 048e1d3efcb96d18453bfd7b3dbf332dc83b7a1f
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 89da26da402648d95a3a1e91482c1cbe7ad415e4
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992581"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423806"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Intune ile içeri aktarılan PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -47,7 +47,7 @@ Intune, aşağıdaki platformlar için PFX sertifikalarının içeri aktarımın
 - Android kurumsal Iş profili
 - Android kurumsal-şirkete ait iş profili
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 10
 
 ## <a name="requirements"></a>Gereksinimler
@@ -89,13 +89,15 @@ Bir kullanıcıya **içeri aktarılan BIR PFX sertifikasını** dağıtmak için
 
 ## <a name="download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune"></a>Microsoft Intune için PFX Sertifika bağlayıcısını indirin, yükleyin ve yapılandırın
 
+Başlamadan önce, [bağlayıcının gereksinimlerini gözden geçirin](certificate-connectors.md) ve ortamınız ile Windows Server 'ın bağlayıcıyı desteklemeye hazırlandığından emin olun.
+
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
-2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**  >  **Ekle**' yi seçin.
+2. **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**  >  **+ Ekle**' yi seçin.
 
-   ![Microsoft Intune indirmek için PFX Sertifika Bağlayıcısı](./media/certificates-imported-pfx-configure/download-imported-pfxconnector.png)
+3. PKCS #12 Bağlayıcısı için *sertifika Bağlayıcısı yazılımını indir* ' e tıklayın ve dosyayı bağlayıcıyı yükleyeceğiniz sunucudan erişebileceğiniz bir konuma kaydedin.
 
-3. *Microsoft Intune Için PFX Sertifika bağlayıcısını* , bağlayıcıyı yükleyeceğiniz sunucudan erişilebilen bir konuma indirmek için yönergeleri izleyin.
+   ![Microsoft Intune Bağlayıcısı indirme](./media/certificates-imported-pfx-configure/download-connector.png)
 
 4. İndirme tamamlandıktan sonra, sunucusunda oturum açın ve yükleyiciyi çalıştırın (PfxCertificateConnectorBootstrapper.exe).  
    - Varsayılan yükleme konumunu kabul ettiğinizde, bağlayıcı ' a yüklenir `Program Files\Microsoft Intune\PFXCertificateConnector` .

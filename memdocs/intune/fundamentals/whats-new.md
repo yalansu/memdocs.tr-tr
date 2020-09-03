@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63aa08565d4c1d5a064300d1a914963509af92a5
-ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
+ms.openlocfilehash: 2aded484ff9116049e35e9df3a09a3bbd207df2a
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89390594"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423909"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -53,6 +53,26 @@ ms.locfileid: "89390594"
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-august-31-2020"></a>31 Ağustos 2020 haftası
+
+### <a name="device-configuration"></a>Cihaz yapılandırması
+
+#### <a name="new-version-of-the-pfx-certificate-connector-and-changes-for-pkcs-certificate-profile-support-----4839686----"></a>PFX Sertifika bağlayıcısının yeni sürümü ve PKCS sertifika profili desteği değişiklikleri <!--  4839686  -->
+
+PFX Sertifika Bağlayıcısı 'nın sürüm **6.2008.60.607**yeni bir sürümünü yayımladık. Bu yeni bağlayıcı sürümü:
+
+- Windows 8.1 dışındaki tüm desteklenen platformlarda PKCS sertifika profillerini destekler
+ 
+  PFX Sertifika Bağlayıcısı 'ndaki tüm PCKS desteğini birleştiriyoruz.  Bu, ortamınızda SCEP kullanmıyorsanız ve diğer amaçlar için NDES kullanmıyorsanız, Microsoft sertifika bağlayıcısını kaldırabilir ve NDES 'yi ortamınızdan kaldırabilirsiniz. 
+ 
+- Microsoft sertifika Bağlayıcısı işlevselliği kaldırmadığı için, onları PKCS sertifika profillerini desteklemek üzere kullanmaya devam edebilirsiniz.
+- Outlook S/MIME için sertifika iptalini destekler
+- .NET Framework 4.7.2 gerektirir
+
+Sertifika bağlayıcıları hakkında daha fazla bilgi için, her iki sertifika Bağlayıcısı için bağlayıcı sürümü listesi de dahil olmak üzere, bkz. [sertifika bağlayıcıları](../protect/certificate-connectors.md)
+
 
 <!-- ########################## -->
 ## <a name="week-of-august-24-2020-2008-service-release"></a>24 Ağustos 2020 (2008 hizmet sürümü) haftası

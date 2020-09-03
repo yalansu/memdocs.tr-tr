@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/05/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee7f02571e31656825f7f85fa128247126ecb890
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 9391be828452cbda25dd6c4f4ed75cffa2ef687c
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995152"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423756"
 ---
 # <a name="manage-web-access-by-using-edge-for-ios-and-android-with-microsoft-intune"></a>Microsoft Intune ile iOS ve Android için Edge kullanarak Web erişimini yönetme
 
@@ -310,7 +310,7 @@ Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağ�
 
 - **Http://** veya **https://** ile tüm URL 'leri listeye girerken ön ek olduğunuzdan emin olun.
 - \*Aşağıdaki izin verilen desenler listesindeki kurallara göre joker karakter simgesini () kullanabilirsiniz.
-- Joker karakter, ana bilgisayar adının tamamını (noktalarla ayırarak) veya yolun tüm parçalarını (eğik çizgi ile ayrılmış olarak) eşleştirebilir. Örneğin, `http://*contoso.com` desteklenmez. **not**
+- Bir joker karakter yalnızca bir bölümden (örn.) veya ana bilgisayar adının (örn.) ya da eğik `news-contoso.com` `host.contoso.com` çizgi () ile ayrıldığınızda yolun tamamının bir bölümüyle eşleşir `www.contoso.com/images` .
 - Adreste bağlantı noktası numaraları belirtebilirsiniz. Bir bağlantı noktası numarası belirtmezseniz, kullanılan değerler şöyle olacaktır:
   - http için bağlantı noktası 80
   - https için bağlantı noktası 443
@@ -321,11 +321,11 @@ Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağ�
     |    `http://www.contoso.com`    |    Tek bir sayfayla eşleşir    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Tek bir sayfayla eşleşir    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*`   |    `www.contoso.com` ile başlayan tüm URL’lerle eşleşir    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Altındaki tüm alt etki alanlarını eşleştirir `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
-    |    `http://*contoso.com/*`    |    Şununla biten tüm alt etki alanlarını eşleştirir `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    Altındaki tüm alt etki alanlarını eşleştirir `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`<br>`news-contoso.com`
+    |    `http://*contoso.com/*`    |    Şununla biten tüm alt etki alanlarını eşleştirir `contoso.com/`    |    `news-contoso.com`<br>`news-contoso.com.com/daily`    |    `news-contoso.host.com`<br>`news.contoso.com`    |
     `http://www.contoso.com/images`    |    Tek bir klasörle eşleşir    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
-    |    `http://www.contoso.com:80`    |    Bir bağlantı noktası numarası kullanarak tek bir sayfayla eşleşir    |    `http://www.contoso.com:80`    |         |
-    |    `https://www.contoso.com`    |    Güvenli tek bir sayfayla eşleşir    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
+    |    `http://www.contoso.com:80`    |    Bir bağlantı noktası numarası kullanarak tek bir sayfayla eşleşir    |    `www.contoso.com:80`    |         |
+    |    `https://www.contoso.com`    |    Güvenli tek bir sayfayla eşleşir    |    `www.contoso.com`    |    `www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    Tek bir klasör ve tüm alt klasörleriyle eşleşir    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
   
 - Aşağıda, belirtemeyeceğiniz bazı girişlerin örnekleri verilmiştir:
@@ -337,7 +337,6 @@ Tanımlı izin verilenler listesi veya engellenenler listesi ayarlarından bağ�
   - IP adresleri
   - `https://*`
   - `http://*`
-  - `https://*contoso.com`
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 

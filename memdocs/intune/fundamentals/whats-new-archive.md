@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16b4ef2eaff377a06bdf9ac95be76665cdc88ab1
-ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
+ms.openlocfilehash: faabd2656e8b72502c682eaab37a0cc5b484ea03
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89390832"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423943"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Microsoft Intune’daki yenilikler - önceki aylar
 
@@ -447,7 +447,7 @@ Intune artık Intune 'da belirli bir görevi veya görev kümesini tamamlamanız
 Daha fazla bilgi için bkz. [Intune Kılavuzlu senaryolara genel bakış](guided-scenarios-overview.md).
 
 #### <a name="additional-app-configuration-variable-available---4969237-----"></a>Ek uygulama yapılandırma değişkeni kullanılabilir<!-- 4969237   -->
-Bir uygulama yapılandırma ilkesi oluştururken yapılandırma `AAD Device ID` değişkenini yapılandırma ayarlarınızın bir parçası olarak dahil edebilirsiniz. Intune 'da, **istemci uygulamaları**  >  **uygulama yapılandırma ilkeleri**  >  **Ekle**' yi seçin. Yapılandırma **ayarları** dikey penceresini görüntülemek için yapılandırma ilkesi ayrıntılarınızı girip **yapılandırma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [yönetilen Android kurumsal cihazlar Için uygulama yapılandırma ilkeleri-yapılandırma tasarımcısını kullanın](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+Bir uygulama yapılandırma ilkesi oluştururken yapılandırma `AAD_Device_ID` değişkenini yapılandırma ayarlarınızın bir parçası olarak dahil edebilirsiniz. Intune 'da, **istemci uygulamaları**  >  **uygulama yapılandırma ilkeleri**  >  **Ekle**' yi seçin. Yapılandırma **ayarları** dikey penceresini görüntülemek için yapılandırma ilkesi ayrıntılarınızı girip **yapılandırma ayarları** ' nı seçin. Daha fazla bilgi için bkz. [yönetilen Android kurumsal cihazlar Için uygulama yapılandırma ilkeleri-yapılandırma tasarımcısını kullanın](../apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 #### <a name="create-groups-of-management-objects-called-policy-sets---3762880----"></a>İlke kümeleri olarak adlandırılan yönetim nesnesi grupları oluşturma<!-- 3762880  -->
 İlke kümeleri, önceden tanımlanmış, hedeflenen ve tek bir kavramsal birim olarak izlenmesi gereken yönetim varlıklarının başvuruları için bir paket oluşturmanıza olanak sağlar. İlke kümeleri varolan kavramları veya nesneleri değiştirmez. Intune 'da tek tek nesneleri atamaya devam edebilir ve bir ilke kümesinin parçası olarak tek tek nesnelere başvurabilirsiniz. Bu nedenle, bağımsız nesnelerde yapılan tüm değişiklikler Ilke kümesine yansıtılır.  Intune 'da, **ilke kümeleri**  >  **Oluştur** ' u seçerek yeni bir ilke kümesi oluşturabilirsiniz.
@@ -1346,7 +1346,7 @@ Yöneticiler, Intune kiracılarını yönetilen Google Play ilk kez bağlandıkl
 ### <a name="device-configuration"></a>Cihaz yapılandırması
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---1533038---"></a>Microsoft Intune için PFX Sertifika Bağlayıcısı güncelleştirildi<!-- 1533038 -->
-Mevcut PFX sertifikalarının yeniden işlenmesine devam edildiği bir sorunu gideren [Microsoft Intune Için PFX Sertifika Bağlayıcısı](../protect/certficates-pfx-configure.md#whats-new-for-connectors) için bir güncelleştirme yayımladık ve bu, bağlayıcının yeni istekleri işlemeyi durdurmasına neden oluyor.
+Mevcut PFX sertifikalarının yeniden işlenmesine devam edildiği bir sorunu gideren [Microsoft Intune Için PFX Sertifika Bağlayıcısı](../protect/certificate-connectors.md#whats-new-for-connectors) için bir güncelleştirme yayımladık ve bu, bağlayıcının yeni istekleri işlemeyi durdurmasına neden oluyor.
 
 #### <a name="intune-security-tasks-for-defender-atp-in-public-preview---3208597---"></a>Defender ATP için Intune güvenlik görevleri (genel önizlemede)<!-- 3208597 -->
 Genel önizlemede, [Microsoft Defender Gelişmiş tehdit koruması (ATP) için güvenlik görevlerini](../protect/atp-manage-vulnerabilities.md)yönetmek üzere Intune 'u kullanabilirsiniz. Bu ATP ile tümleştirme ve uç nokta güvenlik açıklarını ve yapılandırmalarını düzeltmeye, önceliklendirmeye ve düzeltmeye yönelik risk tabanlı bir yaklaşım ekler ve hafifletme için bulma arasındaki süreyi azaltmaktadır.
@@ -1400,7 +1400,7 @@ Kullanılabilir ayarı görmek için [iOS CIHAZLARıNDA VPN ayarlarını yapıla
 Şunun için geçerlidir: iOS
 
 #### <a name="updated-pfx-certificate-connector-for-microsoft-intune---doc-vso-1521237----"></a>Microsoft Intune için PFX Sertifika Bağlayıcısı güncelleştirildi<!-- doc-vso 1521237  -->  
-[Microsoft Intune Için PFX Sertifika Bağlayıcısı](../protect/certficates-pfx-configure.md#whats-new-for-connectors) için bir güncelleştirme yayımladık ve yoklama aralığını 5 dakikadan 30 saniyeye bırakıyor.
+[Microsoft Intune Için PFX Sertifika Bağlayıcısı](../protect/certificate-connectors.md#whats-new-for-connectors) için bir güncelleştirme yayımladık ve yoklama aralığını 5 dakikadan 30 saniyeye bırakıyor.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1487,7 +1487,7 @@ Android Kurumsal iş profili cihazlarına dağıtılan Yönetilen Google Play uy
 ### <a name="device-configuration"></a>Cihaz yapılandırması
 
 #### <a name="updated-certificate-connectors---icm-113304612---"></a>Güncelleştirilmiş sertifika bağlayıcıları<!-- ICM 113304612 -->
-[Microsoft Intune için hem Intune sertifika Bağlayıcısı hem de PFX Sertifika Bağlayıcısı](../protect/certficates-pfx-configure.md#whats-new-for-connectors)için güncelleştirmeler yayımladık. Yeni yayınlar bazı bilinen sorunları düzeltir.
+[Microsoft Intune için hem Intune sertifika Bağlayıcısı hem de PFX Sertifika Bağlayıcısı](../protect/certificate-connectors.md#whats-new-for-connectors)için güncelleştirmeler yayımladık. Yeni yayınlar bazı bilinen sorunları düzeltir.
 
 #### <a name="set-login-settings-and-control-restart-options-on-macos-devices---1210083----"></a>MacOS cihazlarında oturum açma ayarlarını ve denetim yeniden başlatma seçeneklerini ayarlama<!-- 1210083  -->
 MacOS cihazlarında, bir cihaz yapılandırma profili oluşturabilir (**cihaz yapılandırma**  >  **profilleri**  >  **profil oluşturma** >, platform için **MacOS** > **cihaz için cihaz özellikleri** ' ni seçin). Bu güncelleştirme, özel bir başlık gösterme, kullanıcıların oturum açma şeklini seçme, güç ayarlarını gösterme veya gizleme gibi yeni oturum açma penceresi ayarlarını içerir.
@@ -1782,7 +1782,7 @@ Aşağıdakiler cihazlar için geçerlidir:
 - macOS
 
 #### <a name="intune-conditional-access-ui-update---2432313-----"></a>Intune koşullu erişim kullanıcı arabirimi güncelleştirmesi<!-- 2432313   -->
-Intune konsolunda koşullu erişim için Kullanıcı arabiriminde geliştirmeler yaptık. Bu güncelleştirmeler şunlardır:
+Intune konsolunda koşullu erişim için Kullanıcı arabiriminde geliştirmeler yaptık. Bu modüller şunlardır:
 - Intune *koşullu erişim* dikey penceresi Azure Active Directory dikey penceresinde değiştirildi. Bu, Intune konsolunun içinden [koşullu erişime](../protect/conditional-access.md) (Azure AD teknolojisi olarak kalır) yönelik ayarların ve yapılandırmaların tam aralığına erişmenizi sağlar. 
 - *Şirket içi erişim* dikey penceresini *Exchange erişimi*olarak yeniden adlandırdık ve *Exchange hizmeti Bağlayıcısı* kurulumunu bu yeniden adlandırılmış dikey pencereye yeniden konumlandırdık.  Bu değişiklik, [Exchange Online ve şirket içi ile ilgili ayrıntıları yapılandırdığınız ve](../protect/exchange-connector-install.md)izlediğiniz yerleri birleştirir.  
 
@@ -4364,7 +4364,7 @@ Bu sürümde, Windows 10 cihaz kısıtlama profili için aşağıdaki kategorile
 - Hücresel ve bağlantı
 - Kilit ekranı deneyimi
 - Gizlilik
-- Arayın
+- Arama
 - Windows Spot
 - Microsoft Edge tarayıcısı
 

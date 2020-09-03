@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2c3e663b7bc5dfb263d8caad0a7c21d89ed2a93
-ms.sourcegitcommit: d56e1c84e687fe18810f3b81e0a0617925fe6044
+ms.openlocfilehash: 273efc6be6b3f93c04c0ce39c2688859d3c96c56
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86303445"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423892"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -70,8 +70,9 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   Bu ayarı kullanmak için **ekran yakalama** ayarını **Engelle**olarak ayarlayın.
 
   Bu özellik şu platformlarda geçerlidir:  
-  - iOS 9,3 ve üzeri
-  - ıpados 13,0 ve üzeri
+  - iOS 9,3-iOS 12. x: denetimli cihazlar gerektirir
+  - iOS 13,0 ve üzeri: denetimli cihazlar gerektirmez
+  - ıpados 13,0 ve üzeri: cihazların cihaz kaydı veya otomatik cihaz kaydı (ADE) kullanılarak kaydedilmesi gerekir
 
 - **Sınıf uygulamasına göre sorulmadan ekran izleme**: **izin ver** , öğretmenleri bilmeden ders uygulamasını kullanarak öğrencilerinin iOS/ıpados ekranlarını sessizce gözlemlemeye olanak tanır. Sınıf uygulamasını kullanan bir sınıfa kayıtlı öğrenci cihazları otomatik olarak bu kurs öğretme için izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği önleyebilir.
 
@@ -470,7 +471,7 @@ Bu özellik şu platformlarda geçerlidir:
   
   - **Görünür uygulamalar**: kullanıcıların görüntüleyebileceği ve başlatabileceği uygulamaların bir listesini girin. Başka hiçbir uygulama görüntülenemez veya başlatılamaz.
 
-- **Uygulama URL 'si**: göstermek veya gizlemek istediğiniz uygulamanın Mağaza uygulama URL 'sini girin. Örnek:
+- **Uygulama URL 'si**: göstermek veya gizlemek istediğiniz uygulamanın Mağaza uygulama URL 'sini girin. Örneğin:
 
   - Microsoft çalışma klasörleri uygulamasını eklemek için `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` veya girin `https://apps.apple.com/us/app/work-folders/id950878067?mt=8` . 
 

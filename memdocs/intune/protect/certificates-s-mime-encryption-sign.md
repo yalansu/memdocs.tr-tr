@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2020
+ms.date: 09/03/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c27a78d78678234b30ea80cfc192cb4250eca2e1
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5bf1150a32db213c2c8b697625076a601377c1e6
+ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915577"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89423773"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Intune 'da e-posta imzalama ve şifreleme için S/MIME 'ye Genel Bakış
 
@@ -28,7 +28,7 @@ S/MIME sertifikası olarak da bilinen e-posta sertifikaları, şifreleme ve şif
 
 - Android
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 10 ve üzeri
 
 İOS/ıpados cihazlarında, gelen ve giden e-postaları imzalamak ve şifrelemek için S/MIME ve sertifikaları kullanan bir Intune ile yönetilen e-posta profili oluşturabilirsiniz. Diğer platformlarda S/MIME desteklenmiyor olabilir. Destekleniyorsa, S/MIME imzalama ve şifreleme kullanan sertifikaları yükler. Ardından, son kullanıcı e-posta uygulamasında S/MIME 'yi etkinleştirmesine izin vermez.
@@ -45,7 +45,11 @@ Bu makalede, cihazlarınızdaki e-postaları imzalamak ve şifrelemek için S/MI
 
 Intune’da imzalama sertifikaları PKCS sertifikalarını kullanır. [PKCS sertifikaları yapılandırma ve kullanma](certficates-pfx-configure.md) başlığı altında, Intune ortamınızda nasıl PKCS sertifikası dağıtıp kullanacağınız açıklanır. Bu adımlar şunlardır:
 
-- PKCS sertifika isteklerini desteklemek için Microsoft Intune Sertifika Bağlayıcısı'nı indirme ve yükleme. Bağlayıcı, [yönetilen cihazlarla](../fundamentals/intune-endpoints.md#access-for-managed-devices)aynı ağ gereksinimlerine sahiptir.
+- PKCS sertifika isteklerini desteklemek için PFX Sertifika bağlayıcısını indirip yükleyin. Bağlayıcı, [yönetilen cihazlarla](../fundamentals/intune-endpoints.md#access-for-managed-devices)aynı ağ gereksinimlerine sahiptir.
+  > [!IMPORTANT]
+  > PFX Sertifika Bağlayıcısı sürüm 6.2008.60.607 (Ağustos 2020 ' de yayımlanmıştır) ile başlayarak, bu bağlayıcı, sertifika istekleri #12 PCKS sertifika dağıtımını destekler ve belirli bir kullanıcı için S/MIME e-posta şifrelemesi için Intune 'a aktarılan PFX dosyaları için istekleri işler. PKCS sertifika profillerini kullanırken Microsoft Intune bağlayıcısını kullanmanız artık gerekmez.
+  > 
+  > Daha fazla bilgi için bkz. [sertifika bağlayıcıları](certificate-connectors.md)
 - Cihazlarınız için bir güvenilen kök sertifika profili oluşturma. Bu adım, sertifika yetkiliniz için güvenilen kökü ve ara sertifikaları kullanma ve ardından profili cihazlara dağıtma işlemlerini içerir.
 - Oluşturduğunuz sertifika şablonunu kullanarak PKCS sertifika profili oluşturma. Bu profil imzalama sertifikalarını cihazlara verir ve PKCS sertifika profilini cihazlara dağıtır.
 
