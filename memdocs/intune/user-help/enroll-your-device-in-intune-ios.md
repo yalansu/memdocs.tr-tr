@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 0d4ae3b78e9bbb2e6135bec4a0e1ab69e80092ba
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: d955d0250076f29dd0f7742c6748784dbbeca348
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057411"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390900"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Şirket kaynaklarınıza iOS cihaz erişimi ayarlayın  
 
@@ -54,9 +54,9 @@ Cihazınız kaydolduktan sonra Şirket Portalı uygulaması, cihazın koruma alt
 ### <a name="setting-notifications"></a>Bildirimleri ayarlama  
 Kayıttan sonra kuruluşunuz, çok faktörlü kimlik doğrulaması gibi yeni bir güvenlik gereksinimi zorlarsa Şirket Portalı size bildirim gönderir. Cihazınızla çalışmaya devam edebilmek için bazı değişiklikler yapmaya vaktiniz olur.  
 
-Kayıt hakkında daha fazla bilgi edinmek için bkz. [Şirket Portalı uygulamasını yüklediğimde ve cihazımı kaydettiğimde ne olur?](//mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
+Kayıt hakkında daha fazla bilgi edinmek için bkz. [Şirket Portalı uygulamasını yüklediğimde ve cihazımı kaydettiğimde ne olur?](/mem/intune/user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="prerequisites"></a>Önkoşullar    
+## <a name="prerequisites"></a>Ön koşullar    
 
 * [App Store 'dan](https://go.microsoft.com/fwlink/?linkid=2141414)Şirket portalı uygulaması 'nı yükler.
 * Tüm adımlar tamamlanana kadar bir Wi-Fi bağlantısı saklayın.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e359a87cb9e62b6d7542d82d9819b5c132a8bc2
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 4dca7e5b790cd932841211b04cf463602df55a57
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88910273"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390781"
 ---
 # <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Microsoft Intune kullanarak Windows 10 Şirket Portalı uygulamasını ekleme
 
@@ -33,6 +33,9 @@ Kullanıcılarınız, cihaz yönetmek ve uygulama yüklemek için Intune Şirket
 
  > [!IMPORTANT]
  > Şirket Portalı uygulamasını indirdiğinizde, bu makalede açıklanan seçenek, her bir uygulama güncelleştirmesi yayınlandığında el ile güncelleştirmeler atamanızı gerektirir. Windows 10 Autopilot tarafından sağlanan cihazlara yönelik Şirket Portalı uygulamasını dağıtmak için bkz. [Windows 10 Şirket portalı App Autopilot cihazları ekleme](store-apps-company-portal-autopilot.md).
+
+> [!NOTE]
+> Şirket Portalı, Configuration Manager uygulamalarını destekler. Bu özellik, son kullanıcıların ortak yönetilen müşteriler için Şirket Portalı hem Configuration Manager hem de Intune tarafından dağıtılan uygulamaları görmesini sağlar. Şirket Portalı bu yeni sürümü, tüm ortak yönetilen müşteriler için Configuration Manager dağıtılan uygulamaları görüntüler. Bu destek, yöneticilerin farklı Son Kullanıcı Portalı deneyimlerini birleştirmesine yardımcı olur. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](/mem/configmgr/comanage/company-portal).
 
 ## <a name="configure-settings-to-show-offline-apps"></a>Çevrimdışı uygulamaları göstermek için ayarları yapılandırma
 1. [İş için Microsoft Store](https://www.microsoft.com/business-store)’da yönetici hesabınızla oturum açın.

@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec355eb1b388e384b5250e9c17f739cd05941ee7
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 94ef57ddd9186678f4f09c74764f9fc110534db3
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194238"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390820"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
 Android üzerinde Şirket Portalı uygulamalar, Şirket Portalı Web sitesi ve Intune uygulaması, kullanıcıların şirket verilerine erişebileceği ve ortak görevleri yapabilecekleri bir uygulamadır. Ortak görev, cihaz kaydetme, uygulama yükleme ve bilgi bulma (BT departmanınızdan yardım gibi) içerebilir. Ayrıca, kullanıcıların şirket kaynaklarına güvenli bir şekilde erişmesini sağlar. Son Kullanıcı deneyimi, giriş, uygulamalar, uygulama ayrıntıları, cihazlar ve cihaz ayrıntıları gibi çeşitli farklı sayfalar sağlar. Şirket Portalı içindeki uygulamaları hızlıca bulmak için uygulamalar sayfasındaki uygulamaları filtreleyebilirsiniz.
+
+> [!NOTE]
+> Şirket Portalı, Configuration Manager uygulamalarını destekler. Bu özellik, son kullanıcıların ortak yönetilen müşteriler için Şirket Portalı hem Configuration Manager hem de Intune tarafından dağıtılan uygulamaları görmesini sağlar. Şirket Portalı bu yeni sürümü, tüm ortak yönetilen müşteriler için Configuration Manager dağıtılan uygulamaları görüntüler. Bu destek, yöneticilerin farklı Son Kullanıcı Portalı deneyimlerini birleştirmesine yardımcı olur. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](/mem/configmgr/comanage/company-portal).
 
 ## <a name="customizing-the-user-experience"></a>Kullanıcı deneyimini özelleştirme
 
@@ -108,10 +111,10 @@ Aşağıdaki tabloda, kayda özgü yapılandırma ayrıntıları verilmiştir:
 > 
 > Aşağıdaki ayarlar, [Samsung KNOX mobil kaydı](../enrollment/android-samsung-knox-mobile-enroll.md) (KME) Ile yapılandırılmış Android cihazları için geçerlidir. Bir cihaz KME için yapılandırıldıysa ve cihaz kaydı kullanılamıyor olarak ayarlandıysa, cihaz kullanıma hazır akış sırasında kayıt yapamaz.
 
-|    Cihaz kayıt seçenekleri    |    Description    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
+|    Cihaz kayıt seçenekleri    |    Açıklama    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Yes    |    Yes    |    Yes    |    Yes    |
-|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Yes    |    Yes    |
+|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Evet    |    Evet    |    Evet    |    Evet    |
+|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Evet    |    Evet    |
 |    Kullanılamaz    |    Kullanıcıların kaydolmasına yol yoktur.    |    Hayır    |    Hayır    |    Hayır    |    Hayır    |
 
 ### <a name="privacy"></a>Gizlilik
@@ -195,7 +198,7 @@ Son kullanıcılar, Windows Şirket Portalı’nda klavye kısayollarını (hız
 
 Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir.
 
-| Alan | Description | Klavye kısayolu |
+| Alan | Açıklama | Klavye kısayolu |
 |--------------------|----------------|-------------------|
 | Gezinti menüsü | Gezinti | Alt+M |
 |  | Giriş Sayfası | Alt+H |

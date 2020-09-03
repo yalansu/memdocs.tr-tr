@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 3975e2fcf7e43e4b7468664f9ccc27b692c40d85
-ms.sourcegitcommit: 41e6e6b7f5c2a87aaf7f23d90d0f175dd63c0579
+ms.openlocfilehash: 0639f5a92d4377212834f5c7089f534628e787d1
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89057323"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390866"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Cihazınızda uygulama yükleme ve paylaşma
 
@@ -58,7 +58,7 @@ Windows için Şirket Portalı uygulamasından cihazınıza uygulama yükleyin.
 ## <a name="share-apps"></a>Uygulamaları paylaşma  
 Uygulamaları iş veya okuldaki tanıdığınız kişilerle paylaşın veya bu kişilere önerin. Aşağıdaki adımlar bir bağlantıyı doğrudan Şirket Portalı'ndan nasıl paylaşabileceğinizi anlatmaktadır.
 
-1. Şirket Portalı'nda, bir uygulamanın [bağlam menüsünü](//windows/uwp/design/controls-and-patterns/menus) açmak için üzerine sağ tıklayın veya simgeyi basılı tutun.  
+1. Şirket Portalı'nda, bir uygulamanın [bağlam menüsünü](/windows/uwp/design/controls-and-patterns/menus) açmak için üzerine sağ tıklayın veya simgeyi basılı tutun.  
 
     ![Windows 10 için Şirket Portalı uygulaması ön sayfası uygulamaların ve cihazların bir listesini gösterirken. Tıklanabilen "Paylaş" bağlam menüsü, örnek uygulama simgesinin üzerinde görülebilir. ](./media/1808_ShareContext_CP_Windows.png)  
 

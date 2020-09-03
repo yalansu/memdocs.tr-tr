@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2fcb7be9d5a75f17e2b9c347be9cd5d4eedd925d
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ea17b57fc0881e189d0d57b823caece3610b4528
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907659"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390849"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Windows için Şirket Portalı uygulamasında bir cihazı yeniden adlandırma
 Bir cihazı diğerlerinden ayırt etmeyi kolaylaştırmak için yeniden adlandırın. Windows için Şirket Portalı uygulaması aşağıdaki türlerde bağlı cihazları yeniden adlandırmanıza olanak tanır:  
@@ -47,7 +47,7 @@ Bir cihazı diğerlerinden ayırt etmeyi kolaylaştırmak için yeniden adlandı
      ![Windows için Şirket Portalı uygulaması Cihaz ayrıntıları sayfasının, Yeniden adlandır açılan alanı vurgulanmış olarak örnek ekran görüntüsü.](./media/1808_RenameApp_Popup.png)  
 
 ## <a name="rename-device-from-device-context-menu"></a>Cihazı bağlam menüsünden yeniden adlandırma  
-Cihazı [bağlam menüsü](//windows/uwp/design/controls-and-patterns/menus) eylemlerini kullanarak kaldırmak için aşağıdaki adımları tamamlayın.  
+Cihazı [bağlam menüsü](/windows/uwp/design/controls-and-patterns/menus) eylemlerini kullanarak kaldırmak için aşağıdaki adımları tamamlayın.  
 
 1. Şirket Portalı uygulamasının **Giriş** sayfasında **Cihazlarım**’a gidin.
 

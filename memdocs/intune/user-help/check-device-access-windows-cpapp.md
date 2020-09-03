@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: af883fc950a878a70bac2f9121967254583a90d7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 58abb6c011fb2c974ad55bb0feefce19b3aef806
+ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914455"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89390883"
 ---
 # <a name="check-access-from-company-portal-app-for-windows"></a>Windows için Şirket Portalı uygulamasından erişimi denetleme
 
@@ -68,7 +68,7 @@ Windows için Şirket Portalı uygulamasından erişimi denetlemek için bu maka
 
     ![Windows için Şirket Portalı uygulaması Giriş sayfasının, Cihazlarım bölümü vurgulanmış olarak örnek ekran görüntüsü.](./media/1809_CheckAccess_Context_Select_Device.png)  
 
-2. [Bağlam menüsünü](//windows/uwp/design/controls-and-patterns/menus) açmak için cihaza sağ tıklayın veya cihazı basılı tutun.  
+2. [Bağlam menüsünü](/windows/uwp/design/controls-and-patterns/menus) açmak için cihaza sağ tıklayın veya cihazı basılı tutun.  
 
     ![Windows için Şirket Portalı uygulaması Giriş sayfasının örnek ekran görüntüsü. Cihaz bağlam menüsü sayfanın **Cihazlarım** bölümünde görülebilir ve "Yeniden adlandır", "Kaldır" ve "Erişimi denetle" eylemlerini gösterir.](./media/1809_DeviceContextMenu_Windows_CP.png)  
 3. **Erişimi denetle**’yi seçin. Uygulama, cihazınızı kuruluşunuzun geçerli gereksinimleriyle eşitler ve cihazınızın bunları karşılayıp karşılamadığını denetler. Bu denetim birkaç dakika sürebilir.  
