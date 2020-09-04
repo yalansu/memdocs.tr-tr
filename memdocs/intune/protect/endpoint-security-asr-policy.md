@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/3/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 6d94748356b342fe6dc9498d815edbdb92038af3
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 303acae2eba275907b70fcc52660217568913c62
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913503"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432532"
 ---
 # <a name="attack-surface-reduction-policy-for-endpoint-security-in-intune"></a>Intune 'da Endpoint Security için saldırı yüzeyi Azaltma ilkesi
 
@@ -58,6 +58,9 @@ Saldırı yüzeyi azaltma ilkeleri, kuruluşunuzun siber tehditlere ve saldırı
 - **Uygulama denetimi** -uygulama denetimi ayarları, kullanıcıların çalıştıracağı uygulamaları ve sistem çekirdeğinde (çekirdek) çalışan kodu kısıtlayarak güvenlik tehditlerini azaltmaya yardımcı olabilir. İmzasız betikleri ve Mssıs 'yi engelleyebilen ayarları yönetin ve Windows PowerShell 'i kısıtlanmış dil modunda çalışacak şekilde kısıtlayın.
 
   Daha fazla bilgi için bkz. Microsoft Defender ATP belgelerindeki [uygulama denetimi](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) .
+  
+    > [!NOTE]
+    > Bu ayarı kullanırsanız, AppLocker CSP davranışı şu anda son kullanıcıdan bir ilke dağıtıldığında makinenin yeniden başlatılmasını ister.
 
 - **Saldırı yüzeyi azaltma kuralları** – kötü amaçlı yazılımların ve kötü amaçlı uygulamaların tipik olarak bilgisayarlara bulaşma için kullandığı davranışları hedefleyen saldırı yüzeyi azaltma kuralları ayarlarını yapılandırın; örneğin:
   - Dosya indirmeyi veya çalıştırmayı deneyen Office uygulamalarında veya Web postada kullanılan yürütülebilir dosyalar ve betikler

@@ -2,7 +2,7 @@
 title: Şirket Portalı’ndaki uygulamalar
 titleSuffix: Configuration Manager
 description: Şirket Portalı uygulamasını kullanmak için ortak yönetilen cihazlar için tutarlı bir kullanıcı deneyimi sağlayın.
-ms.date: 08/20/2020
+ms.date: 09/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 28d1a820642c7400ad60b1571851f18a3eb9124c
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068115"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432566"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma
 
@@ -50,7 +50,7 @@ Daha fazla bilgi için aşağıdaki makaleleri inceleyin:
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Configuration Manager geçerli dal sürümü 2006 veya üzeri
+- Geçerli dal sürümü 2006 veya üstünü Configuration Manager <sup>([bkz. SSS](#bkmk_ver-prereq))</sup>
 
 - Şirket Portalı App Version 11.0.8980.0 veya üzeri
 
@@ -118,6 +118,10 @@ Kuruluşunuzun Şirket Portalı marka hakkında daha fazla bilgi için, bkz. [In
 Configuration Manager uygulamalarının yüklenmesiyle ilgili sorunları gidermeye yardımcı olmak için Şirket Portalı **yardım & destek** bölümüne gidin. **Yardım al** seçeneğini kullandığınızda, isteğin bir parçası olarak Configuration Manager günlük dosyaları gönderebilirsiniz.
 
 ## <a name="frequently-asked-questions-faq"></a>Sık sorulan sorular (SSS)
+
+### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Configuration Manager sürüm 2002 kullanıyorum, neden yeni Şirket Portalı Configuration Manager uygulamaları gösteriyor?
+
+Şirket Portalı sürüm 11.0.8980.0 veya üzeri, kendisini kullanan tüm ortak yönetilen istemciler için Configuration Manager dağıtılan uygulamaları gösterir. Configuration Manager sürüm 2006, istemci ayarını bildirimleri denetlemek için eklediği için önkoşuldur. Daha önceki bir sürümün ortak yönetilen cihazına Şirket Portalı yüklerseniz veya istemci ayarını yapılandırmazsanız kullanıcılar her iki portaldan gelen bildirimleri görür. Bu deneyim, kullanıcılar için kafa karıştırıcı olabilir.
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Configuration Manager yazılım güncelleştirmeleri olarak dağıtılan uygulamaları Şirket Portalı destekler mi?
 

@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76d1edf8598e1abd71b6fd1db7faffa1750110d4
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129129"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432583"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager için teknik önizleme
 
@@ -30,9 +30,9 @@ Bu bilgiler Configuration Manager Technical Preview dalının tüm sürümleri i
 Configuration Manager *geçerli dalındaki* yenilikler hakkında daha fazla bilgi için bkz. [Configuration Manager artımlı sürümlerindeki](../plan-design/changes/whats-new-incremental-versions.md)yenilikler.
 
 > [!Tip]
-> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın:`https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
+> Bu sayfa güncelleştirildikten sonra bildirim almak için aşağıdaki URL 'YI kopyalayıp RSS Akış okuyucunuzun içine yapıştırın: `https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us`
 
-## <a name="requirements-and-limitations"></a><a name="bkmk_reqs"></a>Gereksinimler ve sınırlamalar
+## <a name="requirements-and-limitations"></a><a name="bkmk_reqs"></a> Gereksinimler ve sınırlamalar
 
 > [!IMPORTANT]
 > Technical Preview yalnızca laboratuvar ortamında kullanılmak üzere lisanslanır. Microsoft Destek Hizmetleri sağlayamayabilir ve bazı özellikler teknik önizlemelerde kullanılamayabilir. Ayrıca, teknik önizleme yazılımı, ticari olarak sağlanmış yazılımlarla ilgili olarak azaltılan veya farklı güvenlik, gizlilik, erişilebilirlik, kullanılabilirlik ve güvenilirlik standartlarına sahip olabilir.
@@ -76,7 +76,7 @@ Configuration Manager Technical Preview dalı aşağıdaki ürünleri ve teknolo
 > [!Note]
 > Bu ürünlerin bu içerik dahil edilmesi, destek yaşam döngüsünün ötesinde bir sürüm için destek uzantısı göstermez. Configuration Manager, destek yaşam döngüsünün ötesinde olan ürünleri desteklemez. Daha fazla bilgi için bkz. [Microsoft yaşam döngüsü ilkesi](https://support.microsoft.com/lifecycle).
 
-## <a name="install-and-update"></a><a name="bkmk_install"></a>Yükleyip Güncelleştir
+## <a name="install-and-update"></a><a name="bkmk_install"></a> Yükleyip Güncelleştir
 
 Laboratuvar kullanımı için Configuration Manager Technical Preview dalı, üretim kullanımı için Configuration Manager geçerli daldan farklıdır.
 
@@ -97,7 +97,7 @@ Sürümünden sonraki bir yıla kadar bir temel sürümü yükler. Yeni bir Tech
 
 [Değerlendirme merkezinden](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)bir temel sürüm indirin.
 
-## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a>Geri bildirim sağlama
+## <a name="providing-feedback"></a><a name="BKMK_TPFeedback"></a> Geri bildirim sağlama
 
 Technical Preview sürümündeki yeni özelliklerle ilgili geri bildirimlerinizi duymak isteriz. Daha fazla bilgi için bkz. [ürün geri bildirimi](../understand/find-help.md#product-feedback).
 
@@ -110,7 +110,7 @@ Görmek istediğiniz yeni özellikler hakkında fikirleriniz varsa bize bize izi
 Enable this section if needed to include any broad change to the tech preview branch
 -->
 
-## <a name="features-in-the-most-recent-version"></a><a name="bkmk_tpCaps"></a>En son sürümdeki özellikler
+## <a name="features-in-the-most-recent-version"></a><a name="bkmk_tpCaps"></a> En son sürümdeki özellikler
 
 <!-- (explanatory comment)
 This is the full list of new features in the latest TP release
@@ -164,13 +164,10 @@ With each CB release, review and remove from this list for anything that's now a
 
 Aşağıdaki özellikler Configuration Manager Technical Preview dalının önceki sürümleriyle yayımlanmıştır. Bu özellikler sonraki sürümlerde kullanılabilir kalır, ancak henüz geçerli dalda kullanılabilir değildir.
 
-| Özellik        | Technical Preview sürümü |
+| Öne çıkan özelliği        | Technical Preview sürümü |
 |----------------|---------------------------|
-| Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma <!--3601237--> | [Teknik Önizleme 2006](2020/technical-preview-2006.md#bkmk_portal) |
 | CMG aracılığıyla kullanılabilir uygulamalarda iyileştirmeler <!--7033501--> | [Teknik Önizleme 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Kiracı Iliştirme: Microsoft Endpoint Manager Yönetim Merkezi 'ndeki Configuration Manager eylemlerine yönelik Iyileştirmeler <!--7518897--> | [Teknik Önizleme 2006](2020/technical-preview-2006.md#bkmk_apps) |
 | Kiracı iliştirme: Yönetim merkezinde cihaz zaman çizelgesi <!--7141381--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Kiracı iliştirme: yönetim merkezinden bir uygulama yükler <!--6024389--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_apps) |
 | Kiracı iliştirme: yönetim merkezinden CMPivot <!--6024392--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Kiracı iliştirme: yönetim merkezinden betikleri çalıştırma <!--6234688--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Bulut yönetimi ağ geçidi cmdlet 'leri geliştirmeleri <!--6978300--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |

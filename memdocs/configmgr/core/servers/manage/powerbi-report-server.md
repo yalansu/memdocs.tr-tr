@@ -10,12 +10,12 @@ ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eaceea5f83bd93fee8261a94147383cde001f90b
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc8aa57bda5f5a29d72af854be9a18e4f32760f8
+ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699594"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432549"
 ---
 # <a name="integrate-with-power-bi-report-server"></a>Power BI Rapor Sunucusu ile tümleştirme
 
@@ -27,7 +27,7 @@ Sürüm 2002 ' den başlayarak, [Power BI Rapor Sunucusu](/power-bi/report-serve
 
 Power BI Desktop rapor dosyalarını Kaydet (. PBIX) ve Power BI Rapor Sunucusu dağıtın. Bu işlem, SQL Server Reporting Services rapor dosyalarıyla benzerdir (. RDL). Raporları tarayıcıda doğrudan Configuration Manager konsolundan da başlatabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Power BI Rapor Sunucusu Lisansı. Daha fazla bilgi için bkz. [lisanslama Power BI rapor sunucusu](/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
@@ -103,9 +103,15 @@ Bu işlemi yalnızca sitede bir Raporlama Hizmetleri noktanız yoksa kullanın. 
 
 1. Rapor kaydedilmeye hazırsa **Dosya** menüsüne gidin, **farklı kaydet**' i seçin ve ardından **Power BI rapor sunucusu**' yi seçin.
 
-1. **Power BI rapor sunucusu seçim** penceresinde, Raporlama Hizmetleri noktasının URL 'sini **Yeni rapor sunucusu adresi**olarak girin. Örneğin, `https://rsp.contoso.com/Reports`.
+1. **Power BI rapor sunucusu seçim** penceresinde, Raporlama Hizmetleri noktasının URL 'sini **Yeni rapor sunucusu adresi**olarak girin. Örneğin, `https://rsp.contoso.com/Reports`. **Tamam**’ı seçin.
 
-Configuration Manager konsolunda, yeni raporu, Power BI raporları listesinde görürsünüz.
+1. **Raporu kaydet** penceresinde, klasöre çift tıklayın `ConfigMgr_<SiteCode>` . Örneğin,, `ConfigMgr_PS1` burada `PS1` ConfigMgr Site kodudur. İsteğe bağlı olarak, içinde depolanacak bir alt klasör seçebilirsiniz veya oluşturabilirsiniz (rapor sunucusundan).
+    > [!TIP]
+    > Power BI raporlarının bulunduğu raporların ve rapor klasörlerinin `ConfigMgr_<SiteCode>` rapor sunucusundaki klasöründe bulunması veya Configuration Manager konsolunda görünmemesi gerekir.
+
+1. **Dosya adı**alanına rapor için bir ad girin.
+
+Configuration Manager konsolunda, yeni raporu, Power BI raporları listesinde görürsünüz. Raporlarınızı görmüyorsanız, raporları klasörüne kaydettiğinizden emin olun `ConfigMgr_<SiteCode>` .
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
