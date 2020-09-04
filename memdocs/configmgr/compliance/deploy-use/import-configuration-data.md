@@ -10,12 +10,12 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: mestew
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: 3c31f97e2a494fa4b0d3e9e825a81b562859e5dd
-ms.sourcegitcommit: 9ec77929df571a6399f4e06f07be852314a3c5a4
+ms.openlocfilehash: 7d9760a49815b9eb33c7886f4d9a8f9637dedd21
+ms.sourcegitcommit: 9f072da27aa64f46a9409470b5dac5bfac3a0fe5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86240363"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468320"
 ---
 # <a name="import-configuration-data-with-configuration-manager"></a>Yapılandırma verilerini Configuration Manager içeri aktarma
 
@@ -28,8 +28,6 @@ Configuration Manager konsolunda yapılandırma temelleri ve yapılandırma öğ
 - System Center 2012 Configuration Manager ve sonrasında aktarılmış yapılandırma verileri.  
 
 - Dışarıdan yazılan ve SML şemasına uyan yapılandırma verileri.  
-
-  System Center 2012 Configuration Manager site sunucusu rolleri uyumluluğunu yönetmenize yardımcı olan bir Yapılandırma Paketi örneği için bkz. [System Center 2012 Configuration Manager Yapılandırma Paketi](https://www.microsoft.com/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all).  
 
 Bir yapılandırma temelini içeri aktardığınızda yapılandırma temelinde başvurulan bazı veya tüm yapılandırma öğeleri de kabin dosyasına dahil edilebilir. İçeri aktarma işlemi sırasında, yapılandırma taban çizgisinde başvurulan tüm yapılandırma öğelerinin dolap dosyasına dahil edildiğini veya Configuration Manager sitesinde zaten var olduğunu doğrular Configuration Manager. Configuration Manager, tarafından konumlandıramediği yapılandırma verilerine başvuran bir yapılandırma temeli içeri aktarmaya çalışırsanız içeri aktarma işlemi başarısız olur.  
 
