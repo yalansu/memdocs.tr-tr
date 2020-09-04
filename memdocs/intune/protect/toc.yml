@@ -214,6 +214,8 @@
       items:
         - name: Kimlik doğrulama için sertifika kullanma
           href: certificates-configure.md
+        - name: Sertifika bağlayıcıları
+          href: certificate-connectors.md
         - name: SCEP
           items:
             - name: SCEP Altyapısı
