@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62edeaaf84bbbefac1a862b5c346f07e8e2731c9
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 9e681129d5cc17e2e828a8f7a03e305f9b938b47
+ms.sourcegitcommit: 0ec6d8dabb14f20b1d84f7b503f1b03aac2a30d4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423874"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479357"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Altyapıyı Intune ile SCEP destekleyecek şekilde yapılandırma
 
@@ -58,13 +58,13 @@ Aşağıdaki şirket içi altyapının, Web uygulaması ara sunucusu dışında 
   - .NET 4,5 Framework Bağlayıcısı için gereklidir ve Windows Server 2012 R2 'ye otomatik olarak dahildir.
   - Internet Explorer Artırılmış Güvenlik Yapılandırması NDES ve Microsoft Microsoft Intune Bağlayıcısı 'nı [barındıran sunucuda devre dışı](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) bırakılmalıdır.
 
-Aşağıdaki şirket içi altyapı isteğe bağlıdır:
+#### <a name="support-for-ndes-on-the-internet"></a>İnternet 'te NDES desteği
 
-İnternet üzerindeki cihazların sertifika almasını sağlamak için, NDES URL 'nizi kurumsal ağınız için harici olarak yayımlamanız gerekir. Azure AD Uygulama Ara Sunucusu, Web uygulaması ara sunucusu ya da başka bir ters proxy kullanabilirsiniz.
+İnternet üzerindeki cihazların sertifika almasını sağlamak için, NDES URL 'nizi şirket ağınıza harici olarak yayımlamanız gerekir. Bunu yapmak için, bir *Azure AD uygulama ara sunucusu* veya bir *Web applicationproxy sunucusu*kullanabilirsiniz. Seçtiğiniz başka bir ters proxy de kullanabilirsiniz.
 
-- **Azure ad uygulama ara sunucusu** (isteğe bağlı) – NDES URL 'nizi Internet 'te yayımlamak için adanmış bir Web uygulaması proxy (WAP) sunucusu yerine Azure AD uygulama ara sunucusu kullanabilirsiniz. Bu, hem intranet hem de internet 'e yönelik cihazların sertifikaları almasına olanak tanır. Daha fazla bilgi için bkz. [Şirket içi uygulamalara güvenli uzaktan erişim sağlama](/azure/active-directory/manage-apps/application-proxy).
+- **Azure ad uygulama ara sunucusu** : NDES URL 'nizi Internet 'te yayımlamak için adanmış bir Web uygulaması proxy (WAP) sunucusu yerine Azure AD uygulama ara sunucusu kullanabilirsiniz. Bu, hem intranet hem de internet 'e yönelik cihazların sertifikaları almasına olanak tanır. Daha fazla bilgi için bkz. [ağ cihazı kayıt hizmeti (NDES) sunucusu üzerinde Azure AD uygulama ara sunucusu Ile tümleştirme](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
 
-- **Web uygulaması ara sunucusu** (isteğe bağlı)-NDES URL 'nizi internet 'e yayımlamak Için Windows Server 2012 R2 veya üstünü çalıştıran bir sunucuyu Web uygulaması ara sunucusu (WAP) sunucusu olarak kullanın.  Bu, hem intranet hem de internet 'e yönelik cihazların sertifikaları almasına olanak tanır.
+- **Web uygulaması ara sunucusu** -NDES URL 'nizi internet 'e yayımlamak Için Windows Server 2012 R2 veya üstünü çalıştıran bir sunucuyu Web uygulaması ara sunucusu (WAP) sunucusu olarak kullanın.  Bu, hem intranet hem de internet 'e yönelik cihazların sertifikaları almasına olanak tanır.
 
   WAP'ı barındıran sunucular, Ağ Cihazı Kayıt Hizmeti tarafından kullanılan uzun URL'ler için destek sağlayan [bir güncelleştirmeyi yüklemelidir](/archive/blogs/ems/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2) . Bu güncelleştirme, [aralık 2014 güncelleştirme toplamasına](https://support.microsoft.com/kb/3013769)dahildir veya [KB3011135](https://support.microsoft.com/kb/3011135)adresinden ayrı ayrı.
 
