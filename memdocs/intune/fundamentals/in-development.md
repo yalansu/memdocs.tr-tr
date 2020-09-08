@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb277f30401f31ddb400f5e3f6cd7709fa31c0b
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: 014ad6a1d1dd6fa0d7401ef033d476192eac395e
+ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286246"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516299"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune için geliştirme aşamasında
 
@@ -275,11 +275,11 @@ Intune 'da Endpoint Security hakkında daha fazla bilgi için bkz. [Microsoft In
 Aşağıdakiler cihazlar için geçerlidir:
 - Windows 10 ve üzeri
 
-#### <a name="new-windows-10-feature-update-report---6473121-----"></a>Yeni Windows 10 Özellik Güncelleştirme raporu<!-- 6473121   -->
-**Özellik güncelleştirme hataları** raporu, bir **Windows 10 özellik güncelleştirmeleri** ilkesiyle hedeflenen ve güncelleştirme girişiminde bulunan cihazların hata ayrıntılarını sağlar. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **Devices**  >  **Monitor**  >  Bu raporu görüntülemek için cihazlar**özellik güncelleştirme başarısızlıklarını** İzle ' yi seçersiniz. "
-
 #### <a name="new-windows-10-feature-update-report---6473128----"></a>Yeni Windows 10 Özellik Güncelleştirme raporu<!-- 6473128  -->
 **Windows özellik güncelleştirmeleri** raporu, bir **Windows 10 özellik güncelleştirmeleri** ilkesiyle hedeflenen cihazların Uyumluluk görünümünü sağlar. [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde, **Reports**  >  Bu raporun özetini görüntülemek için**Windows güncelleştirmeleri (Önizleme)**  >  **özellik güncelleştirme hatalarıyla** ilgili raporlar ' ı seçersiniz. Belirli ilkelerin raporlarını görmek için **raporlar** sekmesini seçin ve **Windows özellik güncelleştirme raporunu**açın. 
+
+#### <a name="new-windows-10-feature-failures-update-report---6473121-----"></a>Yeni Windows 10 özellik arızaları güncelleştirme raporu<!-- 6473121   -->
+**Özellik güncelleştirme hataları** raporu, bir **Windows 10 özellik güncelleştirmeleri** ilkesiyle hedeflenen ve güncelleştirme girişiminde bulunan cihazların hata ayrıntılarını sağlar. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **Devices**  >  **Monitor**  >  Bu raporu görüntülemek için cihazlar**özellik güncelleştirme başarısızlıklarını** İzle ' yi seçersiniz. "
 
 <!-- ***********************************************-->
 <!--
@@ -319,7 +319,7 @@ Microsoft Office O365 ayarlarını yönetmek için yeni bir güvenlik temeli (**
 ### <a name="improved-status-details-in-security-baseline-reports---7221051------"></a>Güvenlik temeli raporlarında geliştirilmiş durum ayrıntıları<!-- 7221051    -->
 Dağıtılan güvenlik temellerinizin sonuçlarını görüntülerken göreceğiniz durum ayrıntılarını geliştiriyoruz. (**Uç nokta güvenliği**  >  **Güvenlik temelleri**  >   **Windows 10 güvenlik temelleri**profilleri *gibi bir güvenlik temeli türü seçin*  >  **Profiles**  >  *durumu görüntülemek için bu profilin bir örneğini seçin*  >  **cihaz durumu***gibi bir profil raporu seçin*
 
-Geliştirmeler, durum için kullandığımız ortak Etiketler ve tanımları, durumun amacına daha iyi uyacak şekilde düzeltecektir. Örneğin:
+Geliştirmeler, durum için kullandığımız ortak Etiketler ve tanımları, durumun amacına daha iyi uyacak şekilde düzeltecektir. Örnek:
 - **Eşleşen taban çizgisi**  , **varsayılan ayarlarla eşleşecek**şekilde güncelleştirilecek ve bu, bir cihaz yapılandırmasının varsayılan (değiştirilmemiş) temel yapılandırmasıyla ne zaman eşleştiğini daha iyi açıklar.
 - **Yanlış yapılandırılmış** ayrıntılar, **hata**, **Çakışma**ve **bekleyen**gibi daha ayrıntılı bilgiler oluşturacak. Yeni durumlar konsolunun diğer bölümlerine tutarlılığı sağlar.
 

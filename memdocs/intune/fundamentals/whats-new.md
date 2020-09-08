@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2aded484ff9116049e35e9df3a09a3bbd207df2a
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: a55a320fc5c3b2a6169be9d46b22b86d0265da33
+ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423909"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516326"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -659,6 +659,9 @@ Uyumsuzluk için e-posta bildirimleri göndermek üzere [bir bildirim iletisi ş
 #### <a name="admins-no-longer-require-an-intune-license-to-access-microsoft-endpoint-manager-admin-console--1335430---"></a>Yöneticiler artık Microsoft Endpoint Manager Yönetici konsoluna erişmek için bir Intune lisansı gerektirmez<!--1335430 -->
 Artık, yöneticilerin MEM Yönetici Konsolu ve sorgu grafiği API 'Lerine erişmesi için Intune lisans gereksinimini kaldıran kiracı genelinde bir geçiş ayarlayabilirsiniz. Lisans gereksinimini kaldırdıktan sonra, bunu hiçbir şekilde yeniden devreye sokmanız gerekir. 
 
+
+> [!Note]
+> TeamViewer Bağlayıcısı akışı dahil bazı eylemler, yine de bir Intune lisansının tamamlanmasını gerektirir.
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
