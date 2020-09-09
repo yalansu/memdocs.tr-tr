@@ -10,12 +10,12 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74b8b0f29172140a19c402c79b7ea9b7339cf3e5
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3ddcf0c9ff4a9af1e74a745d8bda326804365206
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697645"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606314"
 ---
 # <a name="manage-boot-images-with-configuration-manager"></a>Configuration Manager ile önyükleme görüntülerini yönetme
 
@@ -206,7 +206,7 @@ Görüntüye aygıt sürücüleri ekleyin veya kaldırın ya da önyükleme gör
 - **WinPE 'de varsayılan klavye düzeni ayarla**: <!--4910348-->Sürüm 1910 ' den başlayarak, önyükleme görüntüsü için varsayılan klavye yerleşimini yapılandırın. En-US dışında bir dil seçerseniz Configuration Manager, kullanılabilir giriş yerel ayarları 'nda hala en-US ' i içerir. Cihazda, ilk klavye düzeni seçili yerel ayar olur, ancak gerekirse Kullanıcı cihazı en-US ' a değiştirebilir.
 
 > [!Tip]
-> Bu ayarları bir betikten yapılandırmak için [set-Cmbootımage](/powershell/module/configurationmanager/set-cmbootimage?view=sccm-ps) PowerShell cmdlet 'ini kullanın.
+> Bu ayarları bir betikten yapılandırmak için [set-Cmbootımage](/powershell/module/configurationmanager/set-cmbootimage) PowerShell cmdlet 'ini kullanın.
 
 #### <a name="optional-components"></a>İsteğe bağlı bileşenler
 

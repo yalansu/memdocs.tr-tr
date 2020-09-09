@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
-ms.openlocfilehash: 59f3d1a8a7b217a794440e2f75e0bb09e28634a9
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: dc214422f273a854db913538c082897aa63c4388
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700812"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606640"
 ---
 # <a name="what-is-desktop-analytics"></a>Desktop Analytics nedir?
 
@@ -63,7 +63,7 @@ Masaüstü Analizi aşağıdaki avantajları sağlar:
 
 - **Configuration Manager tümleştirme**: hizmet bulutu-mevcut şirket içi altyapınızı mümkün. Windows 'u cihazlarınızda dağıtmak ve yönetmek için bu verileri ve çözümlemeyi kullanın.  
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşulları karşıladığından emin olun.
 
@@ -72,7 +72,7 @@ Masaüstü analizlerini kullanmak için ortamınızın aşağıdaki önkoşullar
 - [Genel yönetici](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator-permissions) izinlerine sahip etkin bir genel Azure aboneliği. [Microsoft hesapları](/windows/security/identity-protection/access-control/microsoft-accounts) desteklenmez.  
 
     > [!IMPORTANT]
-    > Masaüstü analizi, Azure genel 'de barındırılan ve Windows tanılama verilerini kullanan bir Windows hizmetidir. Masaüstü analizi, ABD kamu müşterileri tarafından kullanılabilen bir Azure küresel hizmettir. Bu, [ABD kamu Community uyumluluk (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) özniteliklerini karşılamıyor. Microsoft ürün ve hizmetlerinin uyumluluk tekliflerinin bir listesi için bkz. [Microsoft Güven Merkezi](/microsoft-365/compliance/offering-home?view=o365-worldwide). Masaüstü analizi, GCC High veya ABD Savunma Bakanlığı (DOD) müşterileri için kullanılamaz. Masaüstü Analizi çalışma alanlarını barındırmak için Azure Kamu aboneliklerinin kullanılması desteklenmez.
+    > Masaüstü analizi, Azure genel 'de barındırılan ve Windows tanılama verilerini kullanan bir Windows hizmetidir. Masaüstü analizi, ABD kamu müşterileri tarafından kullanılabilen bir Azure küresel hizmettir. Bu, [ABD kamu Community uyumluluk (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) özniteliklerini karşılamıyor. Microsoft ürün ve hizmetlerinin uyumluluk tekliflerinin bir listesi için bkz. [Microsoft Güven Merkezi](/microsoft-365/compliance/offering-home). Masaüstü analizi, GCC High veya ABD Savunma Bakanlığı (DOD) müşterileri için kullanılamaz. Masaüstü Analizi çalışma alanlarını barındırmak için Azure Kamu aboneliklerinin kullanılması desteklenmez.
 
     - Çalışma alanınızı ve aşağıdaki rolleri **ayarlamak**Için **çalışma alanı sahibi** izinleri:  
 

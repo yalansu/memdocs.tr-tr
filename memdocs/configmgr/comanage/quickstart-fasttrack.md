@@ -10,12 +10,12 @@ ms.assetid: 42e80570-d637-41a4-97b7-ebf1f8975af3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a01b6a3dde9921af2f5486475b0defb0c869cccd
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 2513941ede51ec8af3dfd1776c31ac428d7260c6
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81711514"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606793"
 ---
 # <a name="get-help-from-fasttrack-for-co-management"></a>Ortak yönetim için FastTrack 'ten yardım alın
 
@@ -25,7 +25,7 @@ Aşağıdaki videoda, üst düzey program yöneticisi Patrick McSweeney ve ürü
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/How-to-Request-Assistance-from-FastTrack/player]
 
-FastTrack 'ten yardım isteğinde bulunan bir istek yapmak için ilk olarak [Microsoft 365 FastTrack](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security)'e gidin. **Oturum aç**' ı seçin ve kuruluş kimliğinizi girin. Kimlik doğrulamasından geçtikten sonra panoya gidin ve **Yardım isteği** formunu bulmak için istemleri izleyin.
+FastTrack 'ten yardım isteğinde bulunan bir istek yapmak için ilk olarak [Microsoft 365 FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/security)'e gidin. **Oturum aç**' ı seçin ve kuruluş kimliğinizi girin. Kimlik doğrulamasından geçtikten sonra panoya gidin ve **Yardım isteği** formunu bulmak için istemleri izleyin.
 
 Gönderiminiz gözden geçirilir ve uygun FastTrack ekibine yönlendirilir. Bunlar, uygunluk ve özel gereksinimlerinize göre ele alırlar. 
 
@@ -34,7 +34,7 @@ Microsoft 365 site için FastTrack, uzman tarafından oluşturulan belgeleri, ö
 
 ### <a name="make-a-fasttrack-request"></a>FastTrack isteği oluşturun:
 
-1. Kurumsal KIMLIĞINIZ ve parolanızı kullanarak [Microsoft 365 FastTrack](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) oturumu açın.  
+1. Kurumsal KIMLIĞINIZ ve parolanızı kullanarak [Microsoft 365 FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/security) oturumu açın.  
 
 2. FastTrack 'e hoş geldiniz bölümünün altında **FastTrack yardımı iste**' yi seçin.  
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: 7e6a98c25fabff31d3eae688edf89540c1ab71a7
-ms.sourcegitcommit: 52dd59bdbad07b414db9e4209da0f4c957cf5d6e
+ms.openlocfilehash: cbea7d7e126b120145533b7cf19822b54b3cb701
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84613949"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607973"
 ---
 # <a name="surface-device-dashboard-in-configuration-manager"></a>Configuration Manager Surface cihaz panosu
 
@@ -52,7 +52,7 @@ Surface cihaz panosu, ortamınız için üç grafik gösterir.
 
 - **En çok beş bellenim sürümü**-ortamınızda en çok beş bellenim modeli içeren bir grafik görüntüler. 
   - Bir grafik bölümünün üzerine gelindiğinde, size üretici yazılımı sürümünün seçildiği yüzey cihazlarının sayısını verir. Configuration Manager sürüm 1806 ' den başlayarak bir Graph bölümüne tıkladığınızda ilgili cihazların bir listesi görüntülenir. <!--1358654-->
-     ![Surface model cihaz listesi](media/Surface-Firmware-Hover.PNG)
+     ![Surface bellenim araç ipucu](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>Daha fazla bilgi

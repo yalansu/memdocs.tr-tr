@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2f8b8a45ff83ce903f5737c94144e6ca5ab50826
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 961a7d5a1f4b000d60baf036411bc2fb2f456b78
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697662"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606331"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>Configuration Manager ile işletim sistemi görüntülerini yönetme
 
@@ -89,7 +89,7 @@ Bir işletim sistemi görüntüsü kullanabilmeniz için, Configuration Manager 
 
 5. Sihirbazı tamamlayın.  
 
-Bu konsol Sihirbazı 'nın PowerShell cmdlet 'inin eşdeğeri için, bkz. [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage?view=sccm-ps).
+Bu konsol Sihirbazı 'nın PowerShell cmdlet 'inin eşdeğeri için, bkz. [New-CMOperatingSystemImage](/powershell/module/configurationmanager/new-cmoperatingsystemimage).
 
 Sonra, işletim sistemi görüntüsünü dağıtım noktalarına dağıtın.  
 

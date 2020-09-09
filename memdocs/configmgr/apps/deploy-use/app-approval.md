@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15aba2a32e680ab9499f5295307c82daafbbed71
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 659dd91c4b6bbeba6e2e93d3318683a4006aa5ff
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695369"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606590"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Configuration Manager uygulamaları onaylama
 
@@ -49,7 +49,7 @@ Bir uygulamayı yükleme için onayladıktan sonra, Configuration Manager konsol
 
 Sürüm 1906 ' den başlayarak, konsolundaki bir uygulama isteğini onaylar ve sonra reddetmeniz durumunda yeniden onaylayabilirsiniz. Uygulamayı onayladıktan sonra, uygulama istemciye yeniden yüklenir.  <!-- 4224910 -->
 
-Onay işlemini [onaylama-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest?view=sccm-ps) PowerShell cmdlet 'i ile otomatikleştirin. Sürüm 1902 ' den başlayarak, bu cmdlet **ınstallactionbehavior** parametresini içerir. Uygulamanın hemen mi yoksa iş dışı saatlerde mı yükleneceğini belirtmek için bu parametreyi kullanın.<!-- SCCMDocs-pr issue #3418 -->
+Onay işlemini [onaylama-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest) PowerShell cmdlet 'i ile otomatikleştirin. Sürüm 1902 ' den başlayarak, bu cmdlet **ınstallactionbehavior** parametresini içerir. Uygulamanın hemen mi yoksa iş dışı saatlerde mı yükleneceğini belirtmek için bu parametreyi kullanın.<!-- SCCMDocs-pr issue #3418 -->
 
 1906 ' den başlayarak hangi dağıtımların onay gerektirdiğini görebilirsiniz. **Uygulamalar** düğümünde bir uygulama seçin. Ayrıntılar bölmesinde **dağıtımlar** sekmesine geçin. Varsayılan olarak yeni bir sütun görüntülenir, **onay gerektirir**.
 
@@ -99,7 +99,7 @@ Birden fazla uyarı varsa, hangi uyarının hangi dağıtıma gideceğini belirl
 
 Kullanıcılar, yazılım merkezi 'nden isteğe bir yorum ekleyebilir. Bu açıklama Configuration Manager konsolundaki uygulama isteğini gösterir. Sürüm 1902 ' den başlayarak, bu açıklama e-postada de görüntülenir. Bu yorumu e-postaya eklemek, onaylayanlara isteği onaylama veya reddetme konusunda daha iyi bir karar vermesini sağlar.<!--3594063-->
 
-### <a name="prerequisites"></a>Ön koşullar
+### <a name="prerequisites"></a>Önkoşullar
 
 #### <a name="to-send-email-notifications-and-take-action-on-internal-network"></a>E-posta bildirimleri göndermek ve iç ağ üzerinde işlem gerçekleştirmek için
 
@@ -128,7 +128,7 @@ Bu önkoşullara sahip alıcılar, istek bildirimi içeren bir e-posta alır. Bu
 
 Bu ek isteğe bağlı önkoşullara sahip olan alıcılar, internet erişimi olan her yerden gelen istekleri onaylayabilir veya reddedebilir.
 
-- Bulut yönetimi ağ geçidi aracılığıyla SMS Sağlayıcısı yönetim hizmetini etkinleştirin. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Site yapılandırması**' nı genişletin ve **sunucular ve site sistemi rolleri** düğümünü seçin. SMS sağlayıcı rolüyle sunucuyu seçin. Ayrıntılar bölmesinde, **SMS sağlayıcı** rolünü seçin ve site rolü sekmesindeki şeritte **Özellikler** ' i seçin. **Yönetim hizmeti için bulut yönetimi ağ geçidi trafiğine izin Configuration Manager verme**seçeneğini belirleyin.  
+- Bulut yönetimi ağ geçidi aracılığıyla SMS Sağlayıcısı yönetim hizmetini etkinleştirin. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin, **Site yapılandırması**' nı genişletin ve **sunucular ve site sistemi rolleri** düğümünü seçin. SMS sağlayıcı rolüyle sunucuyu seçin. Ayrıntılar bölmesinde, **SMS sağlayıcı** rolünü seçin ve site rolü sekmesindeki şeritte **Özellikler** ' i seçin. **Yönetim hizmeti için Configuration Manager bulut yönetimi ağ geçidi trafiğine Izin verme**seçeneğini belirleyin.  
 
 - SMS sağlayıcısı, **.NET 4.5.2** veya üstünü gerektirir.  
 
@@ -150,7 +150,7 @@ Bu ek isteğe bağlı önkoşullara sahip olan alıcılar, internet erişimi ola
 
         1. `<CMG FQDN>`Bulut yönetimi ağ geçidi (CMG) hizmetinizin tam etki alanı adı (FQDN) ile değiştirin. Örneğin, GraniteFalls.Contoso.com.  
 
-        1. Sonra **Kaydet**'i seçin.  
+        1. Ardından **Kaydet**’i seçin.  
 
     1. **Yönet** menüsünde, **bildirim**' ı seçin.  
 

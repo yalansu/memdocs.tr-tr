@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 78150c497757c1a3f0b65a870c35516983711d9a
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 950146c694addc5be0b351278a381ff4839e7bca
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193836"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607791"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1902 ' deki yenilikler
 
@@ -479,7 +479,7 @@ Bir site sunucusu yüklediğinizde veya güncelleştirdiğinizde, bu yükleme do
 
 Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişiklikler de içerir. Daha fazla bilgi için bkz. [Configuration Manager geçerli daldaki değişikliklerin özeti, sürüm 1902](https://support.microsoft.com/help/4498910).
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1902 sürüm notları](/powershell/sccm/1902-release-notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1902 sürüm notları](/powershell/sccm/1902-release-notes).
 
 Aşağıdaki güncelleştirme paketi (4500571) konsolunda 17 Haziran 2019 tarihinden itibaren kullanılabilir: [güncelleştirme paketi Configuration Manager geçerli dalı, sürüm 1902](https://support.microsoft.com/help/4500571).
 

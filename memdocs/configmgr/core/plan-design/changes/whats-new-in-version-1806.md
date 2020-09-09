@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 3fc0344d7cf4a15925b314e38fd2d6b2ceee9762
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: eae605c067094665f2f6866e75fa8f9a94a5df52
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995016"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607729"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1806 ' deki yenilikler
 
@@ -584,7 +584,7 @@ Daha fazla bilgi için bkz. sürüm 1806 ve [ürün geri bildirimi](../../unders
 
 Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişiklikler de içerir. Daha fazla bilgi için bkz. [Configuration Manager geçerli daldaki değişikliklerin özeti, sürüm 1806](https://support.microsoft.com/help/4459701).
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell 1806 sürüm notları](/powershell/sccm/1806_release_notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell 1806 sürüm notları](/powershell/sccm/1806_release_notes).
 
 Aşağıdaki güncelleştirme paketi (4462978) konsolunda 24 Ekim 2018 ' de başlayan: [güncel dalı Için güncelleştirme paketi, sürüm 1806 Configuration Manager](https://support.microsoft.com/help/4462978).
 
@@ -595,8 +595,8 @@ Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
 | ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Configuration Manager sürüm 1806 için güncelleştirme, ilk dalga | 31 Ağustos 2018 | Evet |
-| [4465865](https://support.microsoft.com/help/4465865) | Yazılım güncelleştirmeleri, WSUS bağlantısı kesildiğinde Configuration Manager ortamda indirmez<br><br>Bu güncelleştirme ayrıca güncelleştirme paketi 'nde (4462978) | 01 Ekim 2018 | Evet |
+| [4346645](https://support.microsoft.com/help/4346645) | Configuration Manager sürüm 1806 için güncelleştirme, ilk dalga | 31 Ağustos 2018 | Yes |
+| [4465865](https://support.microsoft.com/help/4465865) | Yazılım güncelleştirmeleri, WSUS bağlantısı kesildiğinde Configuration Manager ortamda indirmez<br><br>Bu güncelleştirme ayrıca güncelleştirme paketi 'nde (4462978) | 01 Ekim 2018 | Yes |
 | [4471892](https://support.microsoft.com/help/4471892) | PXE Yanıtlayıcısı Configuration Manager 1806 ' deki alt ağlarda çalışmıyor | 23 Kasım 2018 | Hayır |
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Evet |
 

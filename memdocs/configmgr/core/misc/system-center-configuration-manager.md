@@ -9,12 +9,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 8ccadb3736d2eeea88618f905be20d834a523f27
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+description: Configuration Manager belgeleri için yer tutucu dosya
+ms.openlocfilehash: 610b63659ece4bd270f52006171750cc604bd600
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695486"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607765"
 ---
 # <a name="configuration-manager"></a>Configuration Manager
 
@@ -22,4 +23,4 @@ ms.locfileid: "88695486"
 
 Configuration Manager hoş geldiniz. Güvenli ve ölçeklenebilir yazılım dağıtımına, uyumluluk ayarları yönetimine ve sunucuların, masaüstü bilgisayarların ve mobil cihazların kapsamlı varlık yönetimine olanak sağlayarak daha etkili BT hizmeti sunabilmek için Configuration Manager kullanın.  
 
-Bu Configuration Manager bu sürümü için en güncel içeriği şu konumda bulabilirsiniz: [Configuration Manager çevrimiçi belgeler](/configmgr).
+Bu Configuration Manager bu sürümü için en güncel içeriği şu konumda bulabilirsiniz: [Configuration Manager çevrimiçi belgeler](/mem/configmgr).

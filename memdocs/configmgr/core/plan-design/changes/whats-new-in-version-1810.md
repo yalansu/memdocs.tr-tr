@@ -11,12 +11,12 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 04630815b3d10a232d7fc0eea50296062c823194
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a92d5a627d6cbe4e64ffa221ae00458f4227c844
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699849"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607751"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 1810 ' deki yenilikler
 
@@ -427,7 +427,7 @@ Microsoft Intune aboneliğini yapılandırmak için şirket içi MDM önkoşulu 
 
 Bu sürüm, yeni özelliklerden başlayarak hata düzeltmeleri gibi ek değişiklikler de içerir. Daha fazla bilgi için bkz. [Configuration Manager geçerli daldaki değişikliklerin özeti, sürüm 1810](https://support.microsoft.com/help/4482169).
 
-Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1810 sürüm notları](/powershell/sccm/1810-release-notes?view=sccm-ps).
+Configuration Manager için Windows PowerShell cmdlet 'lerinde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [PowerShell sürüm 1810 sürüm notları](/powershell/sccm/1810-release-notes).
 
 Aşağıdaki güncelleştirme paketi (4488598) konsolunda 25 Mart 2019 tarihinden itibaren Mart 'ta kullanılabilir: [güncelleştirme paketi 2 Configuration Manager geçerli dalı, sürüm 1810](https://support.microsoft.com/help/4488598). Bu, önceki güncelleştirme paketinin yerini alır, KB 4486457.
 
@@ -438,8 +438,8 @@ Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 
 | ID | Başlık | Tarih | Konsol içi |
 |---------|---------|---------|---------|
-| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Evet |
-| [4490434](https://support.microsoft.com/help/4490434) | Configuration Manager içinde yinelenen Kullanıcı keşfi sütunları oluşturuldu | 22 Şubat 2019 | Evet |
+| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune bağlayıcı sertifikası Configuration Manager yenilemez | 18 Ocak 2019 | Yes |
+| [4490434](https://support.microsoft.com/help/4490434) | Configuration Manager içinde yinelenen Kullanıcı keşfi sütunları oluşturuldu | 22 Şubat 2019 | Yes |
 | [4490575](https://support.microsoft.com/help/4490575) | Güncelleştirme yüklemeleri yanıt vermeyi durdurur veya Configuration Manager, sürüm 1810 ' de hiçbir şekilde tamamlanmayı göstermez | 22 Şubat 2019 | Evet |
 
 

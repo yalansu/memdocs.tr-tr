@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 06119bfc096564f70922249121f63c3d2039efe8
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 99a053800971642b1c771329c2ff9b3a29ce7912
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88995458"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607882"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-configuration-manager"></a>Configuration Manager için Technical Preview 1705 ' deki yetenekler
 
@@ -121,12 +121,12 @@ Bu sürümle birlikte, artık Configuration Manager kullandığınız SQL Server
 
 - Bu sürüm, site veritabanınız olarak zaman uyumsuz tamamlama çoğaltmasını kullanmak için yük devretmeyi desteklemez.
   > [!CAUTION]  
-  > Configuration Manager, zaman uyumsuz tamamlama çoğaltmasının durumunu doğrulamak için geçerli olduğundan emin olmak için, bu [tür bir çoğaltma eşitlenmemiş](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2014#AvailabilityModes)olabilir ve site veritabanı, site veritabanının bütünlüğünü ve verilerinizi riske koyabildiğinden zaman uyumsuz bir çoğaltma çoğaltmasının kullanımını eşzamanlı hale getirebilirsiniz.  
+  > Configuration Manager, zaman uyumsuz tamamlama çoğaltmasının durumunu doğrulamak için geçerli olduğundan emin olmak için, bu [tür bir çoğaltma eşitlenmemiş](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes)olabilir ve site veritabanı, site veritabanının bütünlüğünü ve verilerinizi riske koyabildiğinden zaman uyumsuz bir çoğaltma çoğaltmasının kullanımını eşzamanlı hale getirebilirsiniz.  
 
 - Bir kullanılabilirlik grubunda, kullandığınız SQL Server sürümü tarafından desteklenen aynı sayıda ve türde çoğaltmaları kullanabilirsiniz.   (Önceki destek iki eşzamanlı kayıt çoğaltmalarıyla sınırlandırılmıştır.)
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>Zaman uyumsuz bir kayıt çoğaltması yapılandırma
-[Configuration Manager ile kullandığınız bir kullanılabilirlik grubuna](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)zaman uyumsuz bir çoğaltma eklemek için, zaman uyumlu çoğaltma yapılandırmak için gereken yapılandırma betiklerini çalıştırmanız gerekmez. (Bunun nedeni, site veritabanı olarak o zaman uyumsuz çoğaltmanın kullanılması desteklenmez.) Daha fazla bilgi için bkz. [kullanılabilirlik grubuna ikincil çoğaltma ekleme](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server?view=sql-server-2014).
+[Configuration Manager ile kullandığınız bir kullanılabilirlik grubuna](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)zaman uyumsuz bir çoğaltma eklemek için, zaman uyumlu çoğaltma yapılandırmak için gereken yapılandırma betiklerini çalıştırmanız gerekmez. (Bunun nedeni, site veritabanı olarak o zaman uyumsuz çoğaltmanın kullanılması desteklenmez.) Daha fazla bilgi için bkz. [kullanılabilirlik grubuna ikincil çoğaltma ekleme](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server).
 
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>Sitenizi kurtarmak için zaman uyumsuz çoğaltmayı kullanın
 Site veritabanınızı kurtarmak için zaman uyumsuz bir çoğaltma kullanmadan önce, site veritabanına ek yazmaları engellemek için etkin birincil siteyi durdurmanız gerekir. Siteyi durdurduktan sonra, [el ile kurtarılan bir veritabanını](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered)kullanmak yerine zaman uyumsuz bir çoğaltma kullanabilirsiniz.

@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-ms.openlocfilehash: a327d50a2743f81407530355b6fd5101ce6a8b02
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 1b11d0e54305b148a2f73a3a3af9f0497fe8e557
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696914"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608040"
 ---
 # <a name="software-updates-maintenance"></a>Yazılım güncelleştirmeleri bakımı
 
@@ -130,11 +130,11 @@ Kümelenmemiş dizinlerin eklenmesi Configuration Manager, WSUS temizleme perfor
 
 WSUS veritabanı uzak bir SQL Server 'da olduğunda, dizin oluşturmak için SQL 'de izinler eklemeniz gerekebilir. WSUS veritabanına bağlanmak ve dizinleri oluşturmak için kullanılan hesap farklılık gösterebilir. [Yazılım güncelleştirme noktası özelliklerinde bir WSUS sunucusu bağlantı hesabı](../get-started/install-a-software-update-point.md#wsus-server-connection-account)belirtirseniz, bağlantı hesabının SQL izinlerine sahip olduğundan emin olun. WSUS sunucusu bağlantı hesabı belirtmezseniz, site sunucusunun bilgisayar hesabı SQL izinlerine ihtiyaç duyuyor.
 
-- Dizin oluşturmak `ALTER` için tablo veya görünümde izin gerekir. Hesap, `sysadmin` sabit sunucu rolü veya `db_ddladmin` ve `db_owner` sabit veritabanı rollerinin bir üyesi olmalıdır. Oluşturma ve dizin ve izinler hakkında daha fazla bilgi için bkz. [create INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql?view=sql-server-2017#permissions).
-- `CONNECT SQL`Hesaba sunucu izni verilmelidir. Daha fazla bilgi için bkz. [sunucu Izinleri verme (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- Dizin oluşturmak `ALTER` için tablo veya görünümde izin gerekir. Hesap, `sysadmin` sabit sunucu rolü veya `db_ddladmin` ve `db_owner` sabit veritabanı rollerinin bir üyesi olmalıdır. Oluşturma ve dizin ve izinler hakkında daha fazla bilgi için bkz. [create INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql#permissions).
+- `CONNECT SQL`Hesaba sunucu izni verilmelidir. Daha fazla bilgi için bkz. [sunucu Izinleri verme (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 > [!NOTE]  
->  WSUS veritabanı, varsayılan olmayan bir bağlantı noktası kullanan uzak bir SQL Server 'da bulunuyorsa, dizinler eklenmeyebilir. Bu senaryo için [SQL Server Yapılandırma Yöneticisi kullanarak bir sunucu diğer adı](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client?view=sql-server-2017) oluşturabilirsiniz. Diğer ad eklendikten ve Configuration Manager WSUS veritabanıyla bağlantı yapabilirler, dizinler eklenir.
+>  WSUS veritabanı, varsayılan olmayan bir bağlantı noktası kullanan uzak bir SQL Server 'da bulunuyorsa, dizinler eklenmeyebilir. Bu senaryo için [SQL Server Yapılandırma Yöneticisi kullanarak bir sunucu diğer adı](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) oluşturabilirsiniz. Diğer ad eklendikten ve Configuration Manager WSUS veritabanıyla bağlantı yapabilirler, dizinler eklenir.
 
 ### <a name="remove-obsolete-updates-from-the-wsus-database"></a>Eski güncelleştirmeleri WSUS veritabanından kaldır
 
@@ -150,8 +150,8 @@ Eski güncelleştirmeler, WSUS veritabanında kullanılmayan güncelleştirmeler
 
 WSUS veritabanı uzak bir SQL Server 'da olduğunda, site sunucusunun bilgisayar hesabı aşağıdaki SQL izinlerine ihtiyaç duyuyor:
 
-- `db_datareader`Ve `db_datawriter` sabit veritabanı rolleri. Daha fazla bilgi için bkz. [veritabanı düzeyinde roller](/sql/relational-databases/security/authentication-access/database-level-roles?view=sql-server-2017#fixed-database-roles).
-- `CONNECT SQL`Sunucu izni, site sunucusunun bilgisayar hesabına verilmelidir. Daha fazla bilgi için bkz. [sunucu Izinleri verme (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql?view=sql-server-2017).
+- `db_datareader`Ve `db_datawriter` sabit veritabanı rolleri. Daha fazla bilgi için bkz. [veritabanı düzeyinde roller](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
+- `CONNECT SQL`Sunucu izni, site sunucusunun bilgisayar hesabına verilmelidir. Daha fazla bilgi için bkz. [sunucu Izinleri verme (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
 #### <a name="wsus-cleanup-wizard"></a>WSUS Temizleme Sihirbazı
 

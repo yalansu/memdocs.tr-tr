@@ -10,12 +10,12 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 25ccc3936d156a4d9b5442190ea957b2d1eaf1f6
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bfed31b820ac1f09b240122207b5bf27e432b10a
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699713"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607529"
 ---
 # <a name="introduction-to-reporting-in-configuration-manager"></a>Configuration Manager 'de raporlamaya giriş
 
@@ -39,7 +39,7 @@ Configuration Manager, SQL Server Reporting Services birincil raporlama çözüm
 
 - Raporları farklı türlerde popüler biçimlerde dışa aktarır.  
 
-Daha fazla bilgi için bkz. [SQL Server Reporting Services (SSRS) nedir?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15)
+Daha fazla bilgi için bkz. [SQL Server Reporting Services (SSRS) nedir?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)
 
 ## <a name="power-bi-report-server"></a>Power BI Rapor Sunucusu
 
@@ -93,7 +93,7 @@ Bir raporu çalıştırdığınızda, istem gerekli bir parametre için bir değ
 
 Configuration Manager rapor bağlantıları, ek verilere kolay erişim sağlamak için bir kaynak raporda kullanılır. Örneğin, kaynak rapordaki her bir öğe hakkında daha ayrıntılı bilgilere bağlantı verebilir. Hedef rapor, bir veya daha fazla istemin çalıştırılmasını gerektiriyorsa, kaynak raporun her bir istem için uygun değerler bulunan bir sütun içermesi gerekir.
 
-Bağlantının, istem değeri ile sütun numarasını belirtmesi gerekir. Örnek:
+Bağlantının, istem değeri ile sütun numarasını belirtmesi gerekir. Örneğin:
 
 - Sitenin yakın zamanda bulduğu bilgisayarları listeleyen bir rapor vardır.
 - Belirli bir bilgisayar için sitenin aldığı son iletileri listeleyen başka bir rapora bağlarsınız.

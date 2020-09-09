@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: how-to
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 88c8b34437ba52e700ef97885aafed40734a0f32
-ms.sourcegitcommit: 7b2f7918d517005850031f30e705e5a512959c3d
+ms.openlocfilehash: 50f606f008c52470b1742840fcde391f1030455c
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776965"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606823"
 ---
 # <a name="how-to-switch-configuration-manager-workloads-to-intune"></a>Configuration Manager iş yüklerini Intune 'a değiştirme
 
@@ -43,7 +43,7 @@ Sürüm 1906 ' den başlayarak, ortak yönetim iş yüklerinin her biri için fa
 
 4. **Hazırlama** sekmesine gidin ve gerekirse, iş yüklerinden herhangi birinin **pilot koleksiyonunu** değiştirin.
   
-   ![Ortak yönetim özellikleri sayfasında Iş yükleri sekmesinin ekran görüntüsü](media/3555750-co-management-staging-tab.png)
+   ![Ortak yönetim özellikleri sayfasındaki hazırlama sekmesinin ekran görüntüsü](media/3555750-co-management-staging-tab.png)
 
 > [!Important]  
 > - Herhangi bir iş yükünü değiştirmeden önce, Intune 'da ilgili iş yükünü doğru şekilde yapılandırıp dağıttığınızdan emin olun. İş yüklerinin her zaman cihazlarınızın yönetim araçlarından biri tarafından yönetildiğinden emin olun.
@@ -60,7 +60,7 @@ Ortak yönetimi etkinleştirdiğinizde veya daha sonra hazırsanız iş yükleri
 
 3. **Iş yükleri** sekmesine geçin. Varsayılan olarak, tüm iş yükleri **Configuration Manager** ayarına ayarlanır. Bir iş yükünü değiştirmek için, bu iş yükünün kaydırıcı denetimini istenen ayara taşıyın.  
 
-    ![Ortak yönetim özellikleri sayfasında Iş yükleri sekmesinin ekran görüntüsü](media/properties-workloads.png)
+    ![Ortak yönetim özellikleri sayfasındaki Iş yükleri sekmesinin ekran görüntüsü, sürüm 1902](media/properties-workloads.png)
 
     - **Configuration Manager**: Configuration Manager Bu iş yükünü yönetmeye devam eder.  
 

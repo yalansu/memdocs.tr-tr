@@ -10,12 +10,12 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7295e6f74764b378be8315599357424cbf6ead73
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 631a2fc3cb7df01eed1a5a6af80dd87f84455bdc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820417"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606347"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>Aşamalı dağıtım izleme ve yönetme
 
@@ -52,7 +52,7 @@ Ayarı seçtiğinizde, **dağıtımın ikinci aşamasını el ile**başlatırsan
 
     ![Aşamalı dağıtımda eylemleri gösteren menü sağ tıklama](media/Suspend-phased-deployment.PNG)
 
-Sürüm 2002 ' den başlayarak, bu görev için aşağıdaki Windows PowerShell cmdlet 'ini kullanın: [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext?view=sccm-ps).
+Sürüm 2002 ' den başlayarak, bu görev için aşağıdaki Windows PowerShell cmdlet 'ini kullanın: [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext).
 
 ## <a name="suspend-and-resume-phases"></a><a name="bkmk_suspend"></a> Askıya alma ve özgeçmişler
 
@@ -82,8 +82,8 @@ Aşamalı bir dağıtımı el ile askıya alabilir veya sürdürebilirsiniz. Ör
 
 Sürüm 2002 ' den başlayarak, bu görev için aşağıdaki Windows PowerShell cmdlet 'lerini kullanın:
 
-- [Askıya al-CMPhasedDeployment](/powershell/module/configurationmanager/suspend-cmphaseddeployment?view=sccm-ps)
-- [Özgeçmişi-CMPhasedDeployment](/powershell/module/configurationmanager/resume-cmphaseddeployment?view=sccm-ps)
+- [Askıya al-CMPhasedDeployment](/powershell/module/configurationmanager/suspend-cmphaseddeployment)
+- [Özgeçmişi-CMPhasedDeployment](/powershell/module/configurationmanager/resume-cmphaseddeployment)
 
 ## <a name="monitor"></a><a name="bkmk_monitor"></a> İzleyicisi
 <!--1358577-->
@@ -118,7 +118,7 @@ Aşama hedefi, *sonraki* aşama Için aşama ayarlarındaki **dağıtım başar�
 
 1. Yazılımdaki aşamalı dağıtım nesnesine gidin ve aşamalı dağıtım özelliklerini açın.  
 
-2. **Aşamalar** sekmesine geçin. **aşama 2** ' yi seçin ve **görüntüle**' ye tıklayın.  
+2. **Aşamalar** sekmesine geçin. **Aşama 2** ' yi seçin ve **görüntüle**' ye tıklayın.  
 
 3. Aşama Özellikler penceresi, **aşama ayarları** sekmesine geçin.  
 
@@ -134,41 +134,41 @@ Aşamalı dağıtımları yönetmek için aşağıdaki Windows PowerShell cmdlet
 
 ### <a name="automatically-create-phased-deployments"></a>Aşamalı dağıtımları otomatik olarak oluştur
 
-- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment?view=sccm-ps)
-- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment?view=sccm-ps)
-- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment?view=sccm-ps)
+- [New-CMApplicationAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmapplicationautophaseddeployment)
+- [New-CMSoftwareUpdateAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdateautophaseddeployment)
+- [New-CMTaskSequenceAutoPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequenceautophaseddeployment)
 
 ### <a name="manually-create-phased-deployments"></a>Aşamalı dağıtımları el ile oluşturma
 
-- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase?view=sccm-ps)
-- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment?view=sccm-ps)
-- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase?view=sccm-ps)
-- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment?view=sccm-ps)
+- [New-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/new-cmsoftwareupdatephase)
+- [New-CMSoftwareUpdateManualPhasedDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatemanualphaseddeployment)
+- [New-CMTaskSequencePhase](/powershell/module/configurationmanager/new-cmtasksequencephase)
+- [New-CMTaskSequenceManualPhasedDeployment](/powershell/module/configurationmanager/new-cmtasksequencemanualphaseddeployment)
 
 ### <a name="get-existing-phased-deployment-objects"></a>Var olan aşamalı dağıtım nesnelerini al
 
-- [Get-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/get-cmapplicationphaseddeployment?view=sccm-ps)
-- [Get-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/get-cmsoftwareupdatephaseddeployment?view=sccm-ps)
-- [Get-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/get-cmtasksequencephaseddeployment?view=sccm-ps)
-- [Get-Cmphatıcı](/powershell/module/configurationmanager/get-cmphase?view=sccm-ps)
+- [Get-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/get-cmapplicationphaseddeployment)
+- [Get-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/get-cmsoftwareupdatephaseddeployment)
+- [Get-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/get-cmtasksequencephaseddeployment)
+- [Get-Cmphatıcı](/powershell/module/configurationmanager/get-cmphase)
 
 ### <a name="monitor-phased-deployment-status"></a>Aşamalı dağıtım durumunu izleme
 
-- [Get-CMPhasedDeploymentStatus](/powershell/module/configurationmanager/get-cmphaseddeploymentstatus?view=sccm-ps)
+- [Get-CMPhasedDeploymentStatus](/powershell/module/configurationmanager/get-cmphaseddeploymentstatus)
 
 ### <a name="manage-existing-phased-deployments"></a>Mevcut aşamalı dağıtımları yönetme
 
-- [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext?view=sccm-ps)
-- [Özgeçmişi-CMPhasedDeployment](/powershell/module/configurationmanager/resume-cmphaseddeployment?view=sccm-ps)
-- [Askıya al-CMPhasedDeployment](/powershell/module/configurationmanager/suspend-cmphaseddeployment?view=sccm-ps)
+- [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext)
+- [Özgeçmişi-CMPhasedDeployment](/powershell/module/configurationmanager/resume-cmphaseddeployment)
+- [Askıya al-CMPhasedDeployment](/powershell/module/configurationmanager/suspend-cmphaseddeployment)
 
 ### <a name="modify-existing-phased-deployments"></a>Mevcut aşamalı dağıtımları Değiştir
 
-- [Set-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/set-cmapplicationphaseddeployment?view=sccm-ps)
-- [Set-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/set-cmsoftwareupdatephase?view=sccm-ps)
-- [Set-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/set-cmsoftwareupdatephaseddeployment?view=sccm-ps)
-- [Set-CMTaskSequencePhase](/powershell/module/configurationmanager/set-cmtasksequencephase?view=sccm-ps)
-- [Set-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/set-cmtasksequencephaseddeployment?view=sccm-ps)
-- [Remove-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/remove-cmapplicationphaseddeployment?view=sccm-ps)
-- [Remove-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/remove-cmsoftwareupdatephaseddeployment?view=sccm-ps)
-- [Remove-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/remove-cmtasksequencephaseddeployment?view=sccm-ps)
+- [Set-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/set-cmapplicationphaseddeployment)
+- [Set-CMSoftwareUpdatePhase](/powershell/module/configurationmanager/set-cmsoftwareupdatephase)
+- [Set-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/set-cmsoftwareupdatephaseddeployment)
+- [Set-CMTaskSequencePhase](/powershell/module/configurationmanager/set-cmtasksequencephase)
+- [Set-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/set-cmtasksequencephaseddeployment)
+- [Remove-CMApplicationPhasedDeployment](/powershell/module/configurationmanager/remove-cmapplicationphaseddeployment)
+- [Remove-CMSoftwareUpdatePhasedDeployment](/powershell/module/configurationmanager/remove-cmsoftwareupdatephaseddeployment)
+- [Remove-CMTaskSequencePhasedDeployment](/powershell/module/configurationmanager/remove-cmtasksequencephaseddeployment)

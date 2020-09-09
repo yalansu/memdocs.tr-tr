@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a7b61e1a609e0693ffcd30f3f7dc931f4cb38eef
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: fb2fb87a483328d06b3e0757fb6eb5a25e734b1d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193647"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607908"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-configuration-manager"></a>Configuration Manager için Technical Preview 1511 ' deki yetenekler
 
@@ -110,7 +110,7 @@ Aşağıdaki görevleri tamamlamayı deneyin ve daha sonra bu konunun en üstün
  Önce kullanılabilirlik grubunu oluşturup yapılandırmak için aşağıdaki yordamları kullanın ve ardından kullanılabilirlik grubunu kullanan yeni bir Configuration Manager sitesini yüklemeniz gerekir.  
 
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>SQL Server AlwaysOn kullanılabilirlik grubu oluşturmak için  
-[SQL Server kullanılabilirlik grubu oluşturma](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-ver15) işlemi SQL Server belge kitaplığında belgelenmiştir.  Kullanılabilirlik grubunu oluşturduğunuzda, Configuration Manager ile kullanım için aşağıdaki gereksinimlerin karşılandığından emin olun:  
+[SQL Server kullanılabilirlik grubu oluşturma](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server) işlemi SQL Server belge kitaplığında belgelenmiştir.  Kullanılabilirlik grubunu oluşturduğunuzda, Configuration Manager ile kullanım için aşağıdaki gereksinimlerin karşılandığından emin olun:  
 
 -   En fazla üç üye:  
 

@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c8159928e5fe3e8524c3282cfd1eb543dc9537da
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7623663e340d964593854883fa588484e239b4d0
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696506"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607866"
 ---
 # <a name="set-up-a-configuration-manager-lab"></a>Configuration Manager Laboratuvarı ayarlama
 
@@ -45,7 +45,7 @@ Bu konudaki yönergelerin ardından, Configuration Manager benzetimli gerçek za
 
     -   **SQL_Latin1_General_CP1_CI_AS** , **SQL Harmanlama** sınıfı olarak kullanılır.  
 
-    -   **Windows kimlik doğrulaması**, [SQL kimlik doğrulaması](/sql/relational-databases/security/choose-an-authentication-mode?view=sql-server-ver15)yerine tercih edilir.  
+    -   **Windows kimlik doğrulaması**, [SQL kimlik doğrulaması](/sql/relational-databases/security/choose-an-authentication-mode)yerine tercih edilir.  
 
     -   Adanmış bir **SQL Server örneği** gereklidir.  
 
@@ -367,7 +367,7 @@ Her bir Configuration Manager sitesi, kendi siteye özgü bilgilerini Active Dir
 
 3.  **Active Directory Orman Saptama** ’yı seçip **Özellikler**’e tıklayın.  
 
-4.  **Özellikler** iletişim kutusunda **Active Directory Orman Saptama**’yı seçin. Etkin olduğunda **Saptandıklarında Active Directory site sınırlarını otomatik olarak oluştur**seçeneğini belirleyin. **Tam saptamayı mümkün olan en yakın zamanda çalıştırmak ister misiniz?** **Evet**' e tıklayın.  
+4.  **Özellikler** iletişim kutusunda **Active Directory Orman Saptama**’yı seçin. Etkin olduğunda **Saptandıklarında Active Directory site sınırlarını otomatik olarak oluştur**seçeneğini belirleyin. **Tam saptamayı mümkün olan en yakın zamanda çalıştırmak ister misiniz?** **Evet**'e tıklayın.  
 
 5.  Ekranın üstündeki **Saptama Yöntemi** grubunda **Orman Saptamayı Şimdi Çalıştır**’a tıklayıp kenar çubuğunda **Active Directory Ormanları** ’na gelin. Saptanan ormanlar listesinde Active Directory ormanınızın görüntülenmesi gerekir.  
 

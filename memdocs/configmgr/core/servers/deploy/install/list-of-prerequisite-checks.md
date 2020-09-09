@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2dd722ddcf0e5ea6e944a76366204ac83ede05ec
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5bdf2adbf4ba5f02869ba5058da84ee7738e0ce2
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698965"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608074"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager için önkoşul denetimleri listesi
 
@@ -741,7 +741,7 @@ Site veritabanı örneği için SQL Server hizmetini çalıştırmak üzere yap�
 
 Sürüm 1810 ' den başlayarak, site veritabanının SQL değişiklik izleme verileri biriktirme listesine sahip olup olmadığını denetleyin.<!--SCCMDocs-pr issue 3023-->  
 
-Site veritabanında bir tanılama saklı yordamı çalıştırarak bu denetimi el ile doğrulayın. İlk olarak, site veritabanınıza bir [Tanılama bağlantısı](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017) oluşturun. En kolay yöntem SQL Server Management Studio Veritabanı Altyapısı sorgu düzenleyicisini kullanmak ve ' a bağlanmak `admin:<instance name>` .
+Site veritabanında bir tanılama saklı yordamı çalıştırarak bu denetimi el ile doğrulayın. İlk olarak, site veritabanınıza bir [Tanılama bağlantısı](/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators) oluşturun. En kolay yöntem SQL Server Management Studio Veritabanı Altyapısı sorgu düzenleyicisini kullanmak ve ' a bağlanmak `admin:<instance name>` .
 
 Adanmış yönetici bağlantısı sorgu penceresinde aşağıdaki komutları çalıştırın:
 

@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67130932ee20849530c6e865971c7776c3e6b6b1
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88819941"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606933"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker yönetimini dağıtma
 
@@ -118,7 +118,7 @@ Mevcut bir ilkenin ayarlarını değiştirmek için listeden seçin ve **Özelli
 
 Birden fazla ilke oluşturduğunuzda, onun göreli önceliğini yapılandırabilirsiniz. Bir istemciye birden çok ilke dağıtırsanız, ayarlarını belirlemede öncelik değeri kullanır.
 
-Sürüm 2006 ' den başlayarak, bu görev için Windows PowerShell cmdlet 'lerini kullanabilirsiniz. Daha fazla bilgi için bkz. [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting?view=sccm-ps).
+Sürüm 2006 ' den başlayarak, bu görev için Windows PowerShell cmdlet 'lerini kullanabilirsiniz. Daha fazla bilgi için bkz. [New-CMBlmSetting](/powershell/module/configurationmanager/new-cmblmsetting).
 
 ## <a name="deploy-a-policy"></a>İlke dağıtma
 
@@ -137,9 +137,9 @@ Aynı ilkenin birden çok dağıtımını oluşturabilirsiniz. Her dağıtımla 
 > [!IMPORTANT]
 > Bir Uzak Masaüstü Protokolü bağlantısı etkinse, MBAMCLIENT BitLocker Sürücü Şifrelemesi eylem başlatamaz. Tüm uzak konsol bağlantıları kapatılmalıdır ve BitLocker Sürücü Şifrelemesi başlamadan önce bir kullanıcının fiziksel konsol oturumunda oturum açması gerekir.
 
-Sürüm 2006 ' den başlayarak, bu görev için Windows PowerShell cmdlet 'lerini kullanabilirsiniz. Daha fazla bilgi için bkz. [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment?view=sccm-ps).
+Sürüm 2006 ' den başlayarak, bu görev için Windows PowerShell cmdlet 'lerini kullanabilirsiniz. Daha fazla bilgi için bkz. [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
-## <a name="monitor"></a>İzleyici
+## <a name="monitor"></a>İzleme
 
 **BitLocker yönetim** düğümünün Ayrıntılar bölmesinde ilke dağıtımıyla ilgili temel uyumluluk istatistiklerini görüntüleyin:
 

@@ -11,12 +11,12 @@ author: aczechowski
 ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f52d6956cf860de8e45ac4e532500d32bcf077ba
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+ms.openlocfilehash: 3e618a8a0db81ad870c5aeedc89b01ba6089a0f8
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82074512"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607921"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-configuration-manager"></a>Configuration Manager için Technical Preview 1512 ' deki yetenekler
 
@@ -41,20 +41,20 @@ Konsol Ayrıca cihaz sayısıyla birlikte eksik olan durum kanıtlama ayarların
 
 Cihaz sistem durumu kanıtlama görünümünü önizlemek için, Configuration Manager konsolundaki **izleme** çalışma alanına gidin, **güvenlik** düğümü ' ne ve ardından **sistem durumu kanıtlama**' na tıklayın.  
 
-##  <a name="in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a>Hüküm ve koşullar için konsol içi izleme  
+##  <a name="in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a> Hüküm ve koşullar için konsol içi izleme  
 Technical Preview 1512 ' den itibaren, Configuration Manager Microsoft Intune ile tümleştirdiğinizde, hangi kullanıcıların BT departmanınız tarafından yapılandırılan hüküm ve koşulları kabul ettiğini ve hangi kullanıcıların bu koşullara sahip olduğunu görüntülemek için Configuration Manager konsolunu kullanabilirsiniz.  
 
 **Özet bilgileri görüntülemek için:**  
 
--   Configuration Manager konsolunda **izlemeye** > **genel bakış** > **dağıtımlar** ' a gidin ve görüntülemek istediğiniz hüküm ve koşullar dağıtımını seçin.  
+-   Configuration Manager konsolunda **izlemeye**  >  **genel bakış**  >  **dağıtımlar** ' a gidin ve görüntülemek istediğiniz hüküm ve koşullar dağıtımını seçin.  
 
 **Ayrıntılı bilgileri görüntülemek için:**  
 
-1.  Configuration Manager konsolunda **varlıklar ve uyum** > **genel bakış** > **Uyumluluk ayarları** > **hüküm ve koşullar**' a gidin ve ardından görüntülemek istediğiniz hüküm ve koşulları seçin.  
+1.  Configuration Manager konsolunda **varlıklar ve uyum**  >  **genel bakış**  >  **Uyumluluk ayarları**  >  **hüküm ve koşullar**' a gidin ve ardından görüntülemek istediğiniz hüküm ve koşulları seçin.  
 
 2.  Konsolunun en altında **dağıtımlar** sekmesini seçin, dağıtımı seçin ve ardından **durumu görüntüle** ' ye tıklayın.  
 
-##  <a name="improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a>Endpoint Protection ilke ayarlarındaki iyileştirmeler  
+##  <a name="improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a> Endpoint Protection ilke ayarlarındaki iyileştirmeler  
 1512 Technical Preview sürümünde, Endpoint Protection kötü amaçlı yazılımdan koruma ilkesine aşağıdaki yeni ayarları ekledik:  
 
 -   Gerçek zamanlı koruma: istenmeyebilecek **uygulamaları indirme sırasında ve yüklemeden önce engelle**  
@@ -81,7 +81,7 @@ Technical Preview 1512 ' den itibaren, Configuration Manager Microsoft Intune il
 
          Örneğin, aşağıdaki, yönetici tarafından etkin olarak ayarlanan Windows 10 ' da Windows Defender ayarını gösterir ve kullanıcının bunu değiştirmesine izin verilmez:  
 
-         ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
+         ![Windows Defender-otomatik örnek gönderimi](../../core/get-started/media/TechRef_WinDefender.png)  
 
     Ayrıca, Endpoint Protection kötü amaçlı yazılımdan koruma ilkesinin "dışlama ayarları" bölümünde bulunan **dosyaları ve klasörleri dışarıda bırak** ayarı, cihaz dışlamalarına izin verecek şekilde geliştirilmiştir. Örneğin, bundan böyle şunları bir dışlama olarak belirtebilirsiniz: **\device\mvfs** (Çok Sürümlü Dosya Sistemi için). İlke, cihaz yolunu doğrulamaz; Endpoint Protection ilkesi, istemci üzerinde cihaz dizesini yorumlayabilmesi gereken kötü amaçlı yazılımdan koruma altyapısına sağlanır.  
 

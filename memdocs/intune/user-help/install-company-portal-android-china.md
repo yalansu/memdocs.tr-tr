@@ -19,19 +19,18 @@ ms.reviewer: jeyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 2880ef5ba044f616f3b14e54c5e42b89eb58912a
-ms.sourcegitcommit: 56a894edd291034510c144c31770cf09e20b2d6c
+ms.openlocfilehash: ce421c40d3a4b1e8a92df139bb18fce22f6231eb
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88048013"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606085"
 ---
 # <a name="install-company-portal-app-in-peoples-republic-of-china"></a>Şirket Portalı uygulamasını, Çin Halk Cumhuriyeti 'ne yükler
 
 Android cihazınızdan okul veya iş kaynaklarına erişmek için Intune Şirket Portalı uygulamasını yüklemek. Uygulama, Çin Halk Cumhuriyeti 'nde kullanılabilir ve aşağıdaki uygulama mağazalarından yüklenebilir: 
 
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=871947) (her yerde kullanılamaz)
-* [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947) 
 * OPPO
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
@@ -40,8 +39,8 @@ Android cihazınızdan okul veya iş kaynaklarına erişmek için Intune Şirket
 Şirket Portalı, [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565)'da da kullanılabilir. Bulmak için:  
  
    1. [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565)'a gidin.  
-   2. Arama çubuğuna**公司门户**girerek Şirket Portalı uygulamasını arayın.  
-   3. Şirket Portalı listeyi seçin ![Şirket Portalı simgesi](./media/company-portal-logo-small-2006.png) simge.  
+   2. Arama çubuğuna **公司门户** girerek Şirket Portalı uygulamasını arayın.  
+   3. Şirket Portalı listeyi seçin ![Şirket Portalı simgesi](./media/company-portal-logo-small-2006.png) simgesini seçerek gezinti bölmesini daraltın.  
 
 
 ## <a name="next-steps"></a>Sonraki adımlar  

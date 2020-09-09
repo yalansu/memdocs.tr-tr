@@ -10,12 +10,12 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 0b79e0ec67fa7c1d7ede0af1549c8cda4dd3ee3c
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: e3dedef9ffe785ce7127fc371030cfd990d70e38
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81717709"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608378"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Updates Publisher 'da yayınları yönetme
 
@@ -36,7 +36,7 @@ Bir yayını yeniden adlandırmak için **yayınlar çalışma alanının**için
 ## <a name="change-the-publication-type-of-updates-in-a-publication"></a>Yayındaki güncelleştirmelerin yayın türünü değiştirme
 Yayın **çalışma**alanından, bir yayına atanan güncelleştirme ve paket **yayın türünü** değiştirebilirsiniz.
 
-1. Değiştirmek istediğiniz güncelleştirmeleri içeren yayını seçin ve ardından **tüm &lt;yayın adı> üye güncelleştirmeleri** listesinden bir veya daha fazla güncelleştirme ya da paket seçin.
+1. Değiştirmek istediğiniz güncelleştirmeleri içeren yayını seçin ve ardından **tüm &lt; yayın adı> üye güncelleştirmeleri** listesinden bir veya daha fazla güncelleştirme ya da paket seçin.
 
 2. Ardından, **giriş** sekmesinde, aşağıdaki seçeneklerden birini belirleyin. Kullanılabilir seçenekler, seçtiğiniz güncelleştirmelerin yayın türüne bağlıdır.
 
@@ -82,9 +82,6 @@ Bir yayını dışarı aktarmak için **yayınlar çalışma alanına** gidin ve
 Yayın seçili olduğunda, şeridin **giriş** sekmesinden **dışarı aktar** ' ı seçin ve ardından Katalog dışa aktarma için bir yol ve dosya adı belirtin.
 
 Ayrıca, dışa aktarma kapsamında bağımlı yazılım güncelleştirmelerini dışarı aktarma (dahil etme) seçeneğiniz de vardır.
-
-## <a name="rename-a-publication"></a>Yayını yeniden adlandırma
-Bir yayını yeniden adlandırmak için **yayınlar çalışma alanını**Yayımla ' yı seçin ve ardından şeridin **yayın** sekmesinden **Düzenle** ' yi seçin.
 
 ## <a name="delete-a-publication"></a>Yayını silme
 Bir yayını silmek için **yayınlar çalışma alanını**Yayımla ' yı seçin ve ardından şeridin **yayın** sekmesinden **Sil** ' i seçin.

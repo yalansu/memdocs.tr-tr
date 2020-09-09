@@ -9,12 +9,13 @@ ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 14258c3e7e2cfe5423b97064a26fdf5616d6b0a4
-ms.sourcegitcommit: 1442a4717ca362d38101785851cd45b2687b64e5
+description: Güvenlik rollerini, güvenlik kapsamlarını ve atanmış koleksiyonları birleştirerek her yönetici kullanıcının yönetim kapsamını tanımlayın
+ms.openlocfilehash: a475660d2a171829e1592c1c411a3251e74eb79f
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82078626"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607614"
 ---
 # <a name="configure-role-based-administration-for-configuration-manager"></a>Configuration Manager için rol tabanlı yönetimi yapılandırma
 
@@ -30,10 +31,10 @@ Configuration Manager, rol tabanlı yönetim güvenlik rollerini, güvenlik kaps
 - [Güvenlik rollerini yapılandırma](#BKMK_ConfigSecRole)  
 - [Nesnenin güvenlik kapsamlarını yapılandırma](#BKMK_ConfigSecScope)  
 - [Güvenliği yönetmek için koleksiyonları yapılandırma](#BKMK_ConfigColl)  
-- [Yeni yönetici kullanıcı oluşturma](#BKMK_Create_AdminUser)  
+- [Yeni yönetici kullanıcı oluştur](#BKMK_Create_AdminUser)  
 - [Yönetici kullanıcının yönetim kapsamını değiştirme](#BKMK_ModAdminUser)  
 
-## <a name="create-custom-security-roles"></a><a name="BKMK_CreateSecRole"></a>Özel güvenlik rolleri oluşturma
+## <a name="create-custom-security-roles"></a><a name="BKMK_CreateSecRole"></a> Özel güvenlik rolleri oluşturma
 
  Configuration Manager, birkaç yerleşik güvenlik rolü sağlar. Ek güvenlik rollerine ihtiyacınız varsa mevcut güvenlik rolünün kopyasını oluşturduktan sonra kopyayı değiştirerek bir özel güvenlik rolü oluşturabilirsiniz. Yönetici kullanıcılara, gerekli olan ve atanmış olan güvenlik rolüne dahil olmayan ek güvenlik izinlerini vermek için özel bir güvenlik rolü oluşturabilirsiniz. Özel güvenlik rolünü kullanarak onlara yalnızca ihtiyaç duydukları izinleri verebilir ve ihtiyaç duyduklarından fazla izinler veren bir güvenlik rolünün atanmasına engel olabilirsiniz.  
 
@@ -68,7 +69,7 @@ Configuration Manager, rol tabanlı yönetim güvenlik rollerini, güvenlik kaps
             > [!NOTE]  
             > Güvenlik rolünü içeri aktardıktan sonra, güvenlik rolü özelliklerini düzenleyerek o güvenlik rolüyle ilişkilendirilmiş nesne izinlerini değiştirebilirsiniz.  
 
-## <a name="configure-security-roles"></a><a name="BKMK_ConfigSecRole"></a>Güvenlik rollerini yapılandırma
+## <a name="configure-security-roles"></a><a name="BKMK_ConfigSecRole"></a> Güvenlik rollerini yapılandırma
 
  Bir güvenlik rolü için tanımlanmış güvenlik izinleri gruplarına güvenlik işlemi atamaları denir. Güvenlik işlemi atamaları, her nesne türünde kullanılabilen nesne türleri ve eylemlerin bileşimini temsil eder. Herhangi bir özel güvenlik rolü için hangi güvenlik işlemlerinin kullanılabilir olduğunu değiştirebilirsiniz, ancak Configuration Manager sağladığı yerleşik güvenlik rollerini değiştiremezsiniz.  
 
@@ -89,7 +90,7 @@ Configuration Manager, rol tabanlı yönetim güvenlik rollerini, güvenlik kaps
 
 8. Güvenlik işlemi atamalarını yapılandırmayı tamamladığınızda, yeni güvenlik rolünü kaydetmek için **Tamam** ' ı seçin.  
 
-##  <a name="configure-security-scopes-for-an-object"></a><a name="BKMK_ConfigSecScope"></a>Bir nesne için güvenlik kapsamlarını yapılandırma
+##  <a name="configure-security-scopes-for-an-object"></a><a name="BKMK_ConfigSecScope"></a> Bir nesne için güvenlik kapsamlarını yapılandırma
  Nesnesinden bir nesne için güvenlik kapsamının ilişkilendirmesini, güvenlik kapsamından değil nesneden yönetirsiniz. Güvenlik kapsamları, doğrudan yapılandırmalar olarak yalnızca ada ve açıklamaya yapılan değişiklikleri destekler. Güvenlik kapsamı özelliklerini görüntülerken bir güvenlik kapsamının adını ve açıklamasını değiştirmek için güvenliği sağlanabilir **Güvenlik Kapsamları** nesnesi için **Değiştir** izninizin olması gerekir.  
 
  Configuration Manager yeni bir nesne oluşturduğunuzda, bu, nesneyi oluşturmak için kullanılan hesabın güvenlik rolleriyle ilişkili olan her güvenlik kapsamıyla ilişkilendirilir. Bu davranış, bu güvenlik rolleri **oluşturma** Izni veya **güvenlik kapsamını ayarla** iznini sağladığınızda oluşur. Oluşturduktan sonra nesnenin güvenlik kapsamlarını değiştirebilirsiniz.  
@@ -98,7 +99,7 @@ Configuration Manager, rol tabanlı yönetim güvenlik rollerini, güvenlik kaps
 
  Bir nesneye atanmış güvenlik kapsamlarını yapılandırmak için aşağıdaki yordamı kullanın.  
 
-### <a name="to-configure-security-scopes-for-an-object"></a><a name="bkmk_config-sec-scope"></a>Bir nesnenin güvenlik kapsamlarını yapılandırmak için  
+### <a name="to-configure-security-scopes-for-an-object"></a><a name="bkmk_config-sec-scope"></a> Bir nesnenin güvenlik kapsamlarını yapılandırmak için  
 
 1. Configuration Manager konsolunda, bir güvenlik kapsamına atanmasını destekleyen bir nesne seçin.  
 2. **Giriş** sekmesinde, **sınıflandır** grubunda, **güvenlik kapsamlarını ayarla**' yı seçin.
@@ -108,12 +109,12 @@ Configuration Manager, rol tabanlı yönetim güvenlik rollerini, güvenlik kaps
     > [!NOTE]  
     > Yeni nesne oluşturduğunuzda, onu birden çok güvenlik kapsamına atayabilirsiniz. Nesneyle ilişkili güvenlik kapsamlarının sayısını değiştirmek için nesne oluşturulduktan sonra bu atamayı değiştirmeniz gerekir.
 
-### <a name="to-configure-security-scopes-for-a-folder-starting-in-version-1906"></a><a name="bkmk_config-folder"></a>Bir klasöre yönelik güvenlik kapsamlarını yapılandırmak için (sürüm 1906 ' den başlayarak)
+### <a name="to-configure-security-scopes-for-a-folder-starting-in-version-1906"></a><a name="bkmk_config-folder"></a> Bir klasöre yönelik güvenlik kapsamlarını yapılandırmak için (sürüm 1906 ' den başlayarak)
 <!--3600867-->
 
 1. Configuration Manager konsolunda bir klasör seçin.  
 1. Şeritteki **klasör** sekmesinde, **güvenlik kapsamlarını ayarla**' yı seçin.
-   - Ayrıca, klasöre sağ tıklayıp **klasör** > **Ayarla güvenlik kapsamları**' nı seçebilirsiniz.
+   - Ayrıca, klasöre sağ tıklayıp **klasör**  >  **Ayarla güvenlik kapsamları**' nı seçebilirsiniz.
 1. **Güvenlik kapsamlarını ayarla** iletişim kutusunda, klasör için güvenlik kapsamlarını seçin veya temizleyin. Her bir klasör en az bir güvenlik kapsamına atanmalıdır. Tüm klasörlere, siz değiştirene kadar **varsayılan** güvenlik kapsamı atanır.
 1. Atanan güvenlik kapsamlarını kaydetmek için **Tamam ' ı** seçin.  
 
@@ -122,7 +123,7 @@ Configuration Manager, rol tabanlı yönetim güvenlik rollerini, güvenlik kaps
     > 
     > - Bu Kullanıcı, nesneyi oluşturan kişiyle bir güvenlik kapsamı paylaşıyorsa, bir öğe kullanıcının güvenlik kapsamı dışında bir klasörde aranabilir. <!--5602690-->
 
-## <a name="configure-collections-to-manage-security"></a><a name="BKMK_ConfigColl"></a>Güvenliği yönetmek için koleksiyonları Yapılandırma
+## <a name="configure-collections-to-manage-security"></a><a name="BKMK_ConfigColl"></a> Güvenliği yönetmek için koleksiyonları Yapılandırma
 
  Koleksiyonları rol tabanlı yönetim için yapılandırma amaçlı bir yordam yoktur. Koleksiyonların rol tabanlı yönetim yapılandırması yoktur. Bunun yerine, yönetici kullanıcıyı yapılandırdığınızda koleksiyonları bir yönetici kullanıcıya atarsınız. Kullanıcı tarafından atanan güvenlik rollerinde etkinleştirilen koleksiyon güvenliği işlemleri, bir yönetici kullanıcının koleksiyonlar ve koleksiyon kaynakları (koleksiyon üyeleri) için sahip olduğu izinleri belirleyebilir.  
 
@@ -130,7 +131,7 @@ Configuration Manager, rol tabanlı yönetim güvenlik rollerini, güvenlik kaps
 
  Ayrıca, bir yönetici kullanıcı doğrudan kendisine atanmış bir koleksiyonda **Sil** veya **Değiştir** iznini kullanamaz. Ancak, bu izinleri Bu koleksiyonla sınırlı olan koleksiyonlar üzerinde kullanabilirler. Önceki örnekte, Yönetici Kullanıcı tüm Kuzey Amerika masaüstleri koleksiyonunu silebilir veya değiştirebilir, ancak tüm masaüstleri koleksiyonunu silemez veya değiştiremezler.  
 
-## <a name="create-a-new-administrative-user"></a><a name="BKMK_Create_AdminUser"></a>Yeni yönetici kullanıcı oluştur
+## <a name="create-a-new-administrative-user"></a><a name="BKMK_Create_AdminUser"></a> Yeni yönetici kullanıcı oluştur
 
  Configuration Manager yönetmek üzere kişilere veya bir güvenlik grubu üyelerine erişim sağlamak için, Configuration Manager bir yönetici kullanıcı oluşturun ve kullanıcının veya Kullanıcı grubunun Windows hesabını belirtin. Configuration Manager içindeki her yönetici kullanıcıya en az bir güvenlik rolü ve bir güvenlik kapsamı atanması gerekir. Ayrıca yönetici kullanıcının yönetim kapsamını sınırlamak üzere koleksiyonlar da atayabilirsiniz.  
 

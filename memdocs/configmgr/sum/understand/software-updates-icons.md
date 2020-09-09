@@ -10,12 +10,12 @@ ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: ff616c9ee61e85e4e77aeef6254ca9922427270c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 0ca0509893ecadc4c54d06ca98c18531959fb941
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129432"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608417"
 ---
 # <a name="icons-used-for-software-updates-in-configuration-manager"></a>Configuration Manager 'de yazılım güncelleştirmeleri için kullanılan simgeler
 
@@ -27,7 +27,7 @@ Eşitlenen yazılım güncelleştirmeleri Configuration Manager konsolunda gör�
  Eşitlenen yazılım güncelleştirmeleri aşağıdaki simgelerden biriyle gösterilir.  
 
 ### <a name="normal-icon"></a>Normal Simgesi  
- ![simge](../media/Normal.jpg "Normal simge") Yeşil oklu simge normal bir yazılım güncelleştirmesini temsil eder.  
+ ![Normal simge](../media/Normal.jpg) Yeşil oklu simge normal bir yazılım güncelleştirmesini ifade eder.  
 
  **Açıklama:**  
 
@@ -38,7 +38,7 @@ Eşitlenen yazılım güncelleştirmeleri Configuration Manager konsolunda gör�
  İşletimsel bir sorun yoktur.  
 
 ### <a name="expired-icon"></a>Süresi Doldu Simgesi  
- ![simge](../media/Expired.jpg "Süre dolma simgesi") Siyah X içeren simge, zaman aşımına uğradı bir yazılım güncelleştirmesini temsil eder. Ayrıca, Configuration Manager konsolunda görüntülendiğinde yazılım güncelleştirmesi için süre **dolma** sütununu görüntüleyerek zaman aşımına uğradı yazılım güncelleştirmelerini belirleyebilirsiniz.  
+ ![Süre dolma simgesi ](../media/Expired.jpg) Siyah X olan simge, zaman aşımına uğradı bir yazılım güncelleştirmesini temsil eder. Ayrıca, Configuration Manager konsolunda görüntülendiğinde yazılım güncelleştirmesi için süre **dolma** sütununu görüntüleyerek zaman aşımına uğradı yazılım güncelleştirmelerini belirleyebilirsiniz.  
 
  **Açıklama:**  
 
@@ -49,7 +49,7 @@ Eşitlenen yazılım güncelleştirmeleri Configuration Manager konsolunda gör�
  İşletimsel bir sorun yoktur.
 
 ### <a name="superseded-icon"></a>Yenisiyle Değiştirildi Simgesi  
- ![simge](../media/Superseded.jpg "Yenisiyle değiştirildi simgesi") Sarı yıldız içeren simge yenisiyle değiştirilen bir yazılım güncelleştirmesini temsil eder. Ayrıca, yazılım güncelleştirmesinin **yenisiyle değiştirilmiş** sütununu görüntüleyerek Configuration Manager konsolunda görüntülendiğinde yenisiyle değiştirilen yazılım güncelleştirmelerini belirleyebilirsiniz.  
+ ![Yenisiyle değiştirildi simgesi ](../media/Superseded.jpg) sarı yıldız içeren simge yenisiyle değiştirilen bir yazılım güncelleştirmesini temsil eder. Ayrıca, yazılım güncelleştirmesinin **yenisiyle değiştirilmiş** sütununu görüntüleyerek Configuration Manager konsolunda görüntülendiğinde yenisiyle değiştirilen yazılım güncelleştirmelerini belirleyebilirsiniz.  
 
  **Açıklama:**  
 
@@ -68,7 +68,7 @@ Eşitlenen yazılım güncelleştirmeleri Configuration Manager konsolunda gör�
   Mümkün olduğunda, yerine geçen yazılım güncelleştirmesini yenisiyle değiştirilen yazılım güncelleştirmesinin yerine istemci bilgisayara dağıtın. Yazılım güncelleştirmesinin yerine geçen yazılım güncelleştirmeleri listesini, yazılım güncelleştirmesi özelliklerindeki **Yenileriyle Değiştirme Bilgileri** sekmesinde görüntüleyebilirsiniz.  
 
 ### <a name="invalid-icon"></a>Geçersiz Simgesi  
- ![simge](../media/Invalid.jpg "Geçersiz simge") Kırmızı X içeren simge, geçersiz bir yazılım güncelleştirmesini temsil eder.  
+ ![Geçersiz simge](../media/Invalid.jpg) Kırmızı X içeren simge, geçersiz bir yazılım güncelleştirmesini temsil eder.  
 
  **Açıklama:**  
 
@@ -83,7 +83,7 @@ Eşitlenen yazılım güncelleştirmeleri Configuration Manager konsolunda gör�
   Bir yazılım güncelleştirmesi için içerik eksik olduğunda içerik bir dağıtım noktasında kullanılabilir olana kadar istemciler yazılım güncelleştirmesini yükleyemez. **Yeniden dağıtma** eylemini kullanarak içeriği dağıtım noktalarına yeniden dağıtabilirsiniz. Bir üst sitede oluşturulan dağıtımda yazılım güncelleştirmesi için içerik eksik olduğunda, yazılım güncelleştirmesi alt siteye çoğaltılması ya da yeniden dağıtılması gerekir. İçerik yeniden dağıtımı hakkında daha fazla bilgi için bkz. [dağıttığınız Içeriği yönetme](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
 
 ### <a name="metadata-only-icon"></a>Yalnızca Meta Veri Simgesi
- ![simge](../media/MetadataOnly.png "Yalnızca meta veri simgesi") Mavi oklu simge, yalnızca meta veri yazılım güncelleştirmesini temsil eder.
+ ![Yalnızca meta veri simgesi](../media/MetadataOnly.png) Mavi oklu simge, yalnızca meta veri yazılım güncelleştirmesini ifade eder.
 
  **Açıklama:**  
 
@@ -97,28 +97,28 @@ Eşitlenen yazılım güncelleştirmeleri Configuration Manager konsolunda gör�
  Yazılım güncelleştirmeleri aşağıdaki simgelerden biriyle gösterilir.  
 
 ### <a name="normal-icon"></a>Normal Simgesi  
- ![simge](../media/Normal.jpg "Normal simge") Yeşil oklu simge yalnızca normal yazılım güncelleştirmelerini içeren bir yazılım güncelleştirme grubunu temsil eder.  
+ ![Yazılım güncelleştirme grupları-normal simge](../media/Normal.jpg) Yeşil oklu simge yalnızca normal yazılım güncelleştirmelerini içeren bir yazılım güncelleştirme grubunu ifade eder.  
 
  **İşletimsel Sorunlar:**  
 
  İşletimsel bir sorun yoktur.  
 
 ### <a name="expired-icon"></a>Süresi Doldu Simgesi  
- ![simge](../media/Expired.jpg "Süre dolma simgesi") Siyah X içeren simge, bir veya daha fazla zaman aşımına uğradı yazılım güncelleştirmesi içeren bir yazılım güncelleştirme grubunu temsil eder.  
+ ![Yazılım güncelleştirme grupları-süre sonu simgesi](../media/Expired.jpg) Siyah X içeren simge bir veya daha fazla süresi dolmuş yazılım güncelleştirmesi içeren bir yazılım güncelleştirme grubunu ifade eder.  
 
  **İşletimsel Sorunlar:**  
 
  Mümkün olduğunda yazılım güncelleştirme grubunda süresi dolmuş yazılım güncelleştirmelerini kaldırın ya da değiştirin.  
 
 ### <a name="superseded-icon"></a>Yenisiyle Değiştirildi Simgesi  
- ![simge](../media/Superseded.jpg "Yenisiyle değiştirildi simgesi") Sarı yıldız içeren simge bir veya daha fazla yenisiyle değiştirilmiş yazılım güncelleştirmesi içeren bir yazılım güncelleştirme grubunu temsil eder.  
+ ![Yazılım güncelleştirme grupları-yenisiyle değiştirildi simgesi](../media/Superseded.jpg) Sarı yıldız içeren simge bir veya daha fazla yenisiyle değiştirilmiş yazılım güncelleştirmesi içeren bir yazılım güncelleştirme grubunu ifade eder.  
 
  **İşletimsel Sorunlar:**  
 
  Yazılım güncelleştirme paketinde yenisiyle değiştirilmiş yazılım güncelleştirmesini, mümkün olduğunda yerine geçen yazılım güncelleştirmesiyle değiştirin.  
 
 ### <a name="invalid-icon"></a>Geçersiz Simgesi  
- ![simge](../media/Invalid.jpg "Geçersiz simge") Kırmızı X içeren simge, bir veya daha fazla geçersiz yazılım güncelleştirmesi içeren bir yazılım güncelleştirme grubunu temsil eder.  
+ ![Yazılım güncelleştirme grupları-geçersiz simge](../media/Invalid.jpg) Kırmızı X içeren simge bir veya daha fazla geçersiz yazılım güncelleştirmesi içeren bir yazılım güncelleştirme grubunu ifade eder.  
 
  **İşletimsel Sorunlar:**  
 

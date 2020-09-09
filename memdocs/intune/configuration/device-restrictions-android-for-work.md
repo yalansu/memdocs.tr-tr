@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2020
+ms.date: 09/09/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b213769234d55fd2a542ac166afe59c6e8b9e6c2
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194115"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606951"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Android kurumsal cihaz ayarları
 
@@ -35,13 +35,13 @@ Bu makale, Android kurumsal cihazlarda denetleyebilmeniz için farklı ayarları
 
 Bu ayarlar, Intune 'un Android kurumsal tam olarak yönetilen, adanmış ve şirkete ait iş profili aygıtları gibi tüm cihazı denetlediği Android kurumsal kayıt türleri için geçerlidir.
 
-Bazı ayarlar tüm kayıt türleri tarafından desteklenmez. Hangi ayarların hangi kayıt türleri tarafından desteklendiğini görmek için Kullanıcı arabirimine bakın. Her ayar, hangi kayıt türlerinin bu ayarı kullanacağını gösteren bir başlık altındadır.
+Bazı ayarlar tüm kayıt türleri tarafından desteklenmez. Hangi ayarların hangi kayıt türleri tarafından desteklendiğini görmek için Kullanıcı arabirimine bakın. Her ayar, ayarı kullanılabilecek kayıt türlerini gösteren bir başlık altındadır.
 
-![Üst bilgiler ayarlanıyor.](./media/device-restrictions-android-for-work/setting-headers.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Android kurumsal kullanıcıları ve hesapları ayar üst bilgileri ve Microsoft Intune ve uç nokta yöneticisinde uygulanan kayıt türleri bölümüne bakın.":::
 
 Bazı ayarlar yalnızca şirkete ait cihazlar için iş profili düzeyinde iş profili ile uygulanır. Bu ayarlar, tam olarak yönetilen ve adanmış cihazlar için cihaz genelinde hala geçerlidir. Bu ayarlar Kullanıcı arabirimindeki *(iş profili düzeyi)* tanımlayıcısı ile işaretlenir.
 
-![Üst bilgiler ayarlanıyor.](./media/device-restrictions-android-for-work/work-profile-level.png)
+:::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Microsoft Intune ve uç nokta yöneticisinde iş profili düzeyinde uygulanan Android kurumsal uygulamalar ayarlarına bakın.":::
 
 
 ### <a name="general"></a>Genel
@@ -239,7 +239,7 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
 - **Tam olarak yönetilen**: tam olarak yönetilen cihazlarda Microsoft Başlatıcı uygulamasını yapılandırır.
 
   - **Microsoft başlatıcısı 'nı varsayılan Başlatıcı yap**: **Enable** Microsoft başlatıcısı 'nı ana ekranda varsayılan başlatıcı olarak ayarlar. Başlatıcısı varsayılan olarak yaparsanız, kullanıcılar başka bir başlatıcı kullanamaz. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, Microsoft Başlatıcısı varsayılan başlatıcı olarak zorunlu değildir.
-  - **Özel duvar kağıdını yapılandırma**: **Etkinleştir** seçeneği, kendi görüntünüzü ana ekran duvar kağıdı olarak uygulamanıza olanak sağlar ve kullanıcıların görüntüyü değiştirip değiştireseçebilmelidir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak cihaz geçerli duvar kağıdını korur.
+  - **Özel duvar kağıdını yapılandırma**: Microsoft Başlatıcı uygulamasında, **etkinleştirme** , kendi görüntünüzü ana ekran duvar kağıdı olarak uygulamanıza olanak sağlar ve kullanıcıların görüntüyü değiştirip değiştireseçebilmesine izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak cihaz geçerli duvar kağıdını korur.
     - **Duvar kağıdı resminin URL 'Sini girin**: duvar KAĞıDı resminizin URL 'sini girin. Bu görüntüde cihaz giriş ekranında gösterilir. Örneğin, `http://www.contoso.com/image.jpg` girin. 
     - **Kullanıcının duvar kağıdını değiştirmesine Izin ver**: **Etkinleştir** ayarı, kullanıcıların duvar kağıdı görüntüsünü değiştirmesine izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, kullanıcıların duvar kağıdını değiştirmesi engellenir.
   - **Başlatıcı akışını etkinleştir**: **Etkinleştir** , takvimleri, belgeleri ve en son etkinlikleri gösteren Başlatıcı akışını etkinleştirir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Bu akış varsayılan olarak gösterilmez.

@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c9cf8e74793213e47dd503de1fdf1284bdc7d6a9
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699237"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607548"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager ile Always on kullanılabilirlik grupları SQL Server kullanmaya hazırlanma
 
@@ -45,7 +45,7 @@ Configuration Manager ile kullanılabilirlik gruplarının kullanılması için 
 - [Site veritabanını bir kullanılabilirlik grubunun dışına, tek başına SQL Server varsayılan veya adlandırılmış bir örneğine taşıyın](configure-aoag.md#bkmk_stop)  
 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdaki Önkoşullar tüm senaryolar için geçerlidir. Belirli bir senaryoya ek önkoşullar uygulandıklarında, bu senaryoya göre ayrıntılandırılmıştır.
 
@@ -315,7 +315,7 @@ Aşağıdaki sınırlamalar tüm senaryolar için geçerlidir.
 
 ### <a name="unsupported-sql-server-options-and-configurations"></a>Desteklenmeyen SQL Server seçenekleri ve yapılandırmalar
 
-- **Temel kullanılabilirlik grupları**: SQL Server 2016 Standard Edition ile birlikte sunulan temel kullanılabilirlik grupları, ikincil çoğaltmalara okuma erişimini desteklemez. Yapılandırma bu erişimi gerektirir. Daha fazla bilgi için bkz. [temel SQL Server kullanılabilirlik grupları](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017).  
+- **Temel kullanılabilirlik grupları**: SQL Server 2016 Standard Edition ile birlikte sunulan temel kullanılabilirlik grupları, ikincil çoğaltmalara okuma erişimini desteklemez. Yapılandırma bu erişimi gerektirir. Daha fazla bilgi için bkz. [temel SQL Server kullanılabilirlik grupları](/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups).  
 
 - **Yük devretme kümesi örneği**: Configuration Manager ile kullandığınız bir çoğaltma için yük devretme kümesi örnekleri desteklenmez. Daha fazla bilgi için bkz. [SQL Server her zaman yük devretme kümesi örnekleri](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server).  
 

@@ -10,12 +10,12 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 788c48599ac8a94b8690f3a88f9761b9ae8ac742
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 70ef4ba22be8668053929639f951769f1aa2fe7d
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699441"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608329"
 ---
 # <a name="support-center-for-configuration-manager"></a>Configuration Manager için destek merkezi
 
@@ -52,10 +52,10 @@ Sürüm 1906 ' den başlayarak **Onetrace** , Destek Merkezi 'nin bulunduğu yen
 
 ### <a name="powershell-cmdlets"></a>PowerShell cmdlet'leri
 
-Destek Merkezi, [PowerShell cmdlet 'lerini](/powershell/sccm/overview?view=sccm-ps)de içerir. Bu cmdlet 'leri, başka bir Configuration Manager istemcisine uzak bağlantı oluşturmak, veri toplama seçeneklerini yapılandırmak ve veri toplamayı başlatmak için kullanın.
+Destek Merkezi, [PowerShell cmdlet 'lerini](/powershell/sccm/overview)de içerir. Bu cmdlet 'leri, başka bir Configuration Manager istemcisine uzak bağlantı oluşturmak, veri toplama seçeneklerini yapılandırmak ve veri toplamayı başlatmak için kullanın.
 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdaki bileşenleri, Destek Merkezi 'ni yüklediğiniz sunucu veya istemci bilgisayara yükleyebilirsiniz:
 

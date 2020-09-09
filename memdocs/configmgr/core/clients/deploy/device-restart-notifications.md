@@ -10,12 +10,12 @@ ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: feb9f4206df65ee34228577a9e589ddd1be72870
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: 11a7330220ed1aa8f4c3f813418ea86e59e0e1fc
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127265"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89608005"
 ---
 # <a name="device-restart-notifications-in-configuration-manager"></a>Configuration Manager cihaz yeniden başlatma bildirimleri
 
@@ -51,7 +51,7 @@ Yazılım Merkezi, bir erteleme seçeneği ve cihazları yeniden başlamaya zorm
 
 Yazılım Merkezi, kullanıcının kapatımda veya geri erermesine yönelik bu son geri sayım bildirimini gösterir.
 
-:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Software Center son geri sayım bildirimi":::
+:::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Software Center son yeniden başlatma geri sayımı":::
 
 Sürüm 1906 ' den başlayarak, bekleyen yeniden başlatma işlemi 24 saatten daha az olana kadar Kullanıcı yeniden başlatma bildiriminde bir ilerleme çubuğu görmez.
 
@@ -186,7 +186,7 @@ Aşağıdaki örneklerde, istemci ayarlarının belirli davranışları elde etm
 |Bir cihazın yeniden başlatılmasından önceki son tarihten sonra geçen süreyi belirtin (dakika)|180|
 |Bir cihaz yeniden başlatılmadan önce kullanıcıya son geri sayım bildirimi sunulırken geçen süreyi belirtin (dakika)|60|
 |Son tarihten sonra, bir cihaz yeniden başlatılmadan önce kullanıcıya sunulan anımsatıcı bildirimlerinin sıklığını belirtin (dakika)|240|
-|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|No|
+|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|Hayır|
 
 Bu cihaz, dağıtım son tarihinden sonra üç saat (**180** dakika) yeniden başlatılır. Bir saat (**60** dakika) yeniden başlatılmadan önce, Kullanıcı kapamayabileceği veya geri erteledikleri bir geri sayım görür. İlk anımsatıcı bildirimi, yeniden başlatmanın ardından olan son tarihten sonra dört saat (**240** dakika) başlayacak şekilde ayarlanır. Böylece Kullanıcı herhangi bir anımsatıcı görmez.
 
@@ -197,7 +197,7 @@ Bu cihaz, dağıtım son tarihinden sonra üç saat (**180** dakika) yeniden ba�
 |Bir cihazın yeniden başlatılmasından önceki son tarihten sonra geçen süreyi belirtin (dakika)|7200|
 |Bir cihaz yeniden başlatılmadan önce kullanıcıya son geri sayım bildirimi sunulırken geçen süreyi belirtin (dakika)|120|
 |Son tarihten sonra, bir cihaz yeniden başlatılmadan önce kullanıcıya sunulan anımsatıcı bildirimlerinin sıklığını belirtin (dakika)|900|
-|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|Evet|
+|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|Yes|
 
 Bu cihaz, dağıtım son tarihinden sonra beş gün (**7200** dakika) yeniden başlatılır. İki saat (**120** dakika) yeniden başlatılmadan önce, Kullanıcı kapatılamadıklarında veya uyku bir geri sayım görür. Bu yapılandırma, 118 saatin anımsatıcıları () göstermesini sağlar `(7200 - 120) / 60` . 15 saat (**900** dakika) son tarihten sonra, yazılım merkezi ilk anımsatıcıyı görüntüler. 15 saatte bir en fazla 6 ek anımsatıcı görüntüler (**900 dakika**). Kullanıcı, anımsatıcıyı birkaç saniye içinde bir bildirim yerine ekranda bir pencere olarak görür.
 
@@ -208,7 +208,7 @@ Bu cihaz, dağıtım son tarihinden sonra beş gün (**7200** dakika) yeniden ba
 |Bir cihazın yeniden başlatılmasından önceki son tarihten sonra geçen süreyi belirtin (dakika)|2880|
 |Bir cihaz yeniden başlatılmadan önce kullanıcıya son geri sayım bildirimi sunulırken geçen süreyi belirtin (dakika)|60|
 |Son tarihten sonra, bir cihaz yeniden başlatılmadan önce kullanıcıya sunulan anımsatıcı bildirimlerinin sıklığını belirtin (dakika)|30|
-|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|Evet|
+|Bir dağıtım yeniden başlatma gerektirdiğinde, bildirim yerine kullanıcıya bir iletişim kutusu penceresi gösterin|Yes|
 
 Cihaz, dağıtım son tarihinden sonra iki günü (**2880** dakika) yeniden başlatır. Bir saat (**60** dakika) yeniden başlatılmadan önce, Kullanıcı kapamayabileceği veya geri erteledikleri bir geri sayım görür. Bu yapılandırma, 47 saatin anımsatıcıları () göstermesini sağlar `(2880 - 60) / 60` . son tarihten **30** dakika sonra yazılım merkezi ilk anımsatıcıyı görüntüler. Her **30 dakikada**bir en fazla 92 ek anımsatıcı görüntüler. Kullanıcı, anımsatıcıyı birkaç saniye içinde bir bildirim yerine ekranda bir pencere olarak görür.
 
@@ -237,11 +237,11 @@ Yükleme sonrasında Kullanıcı cihazını yeniden başlatmadıysa, anımsatıc
 
 - Bildirim değil, Yazılım Merkezi iletişim kutusu penceresini kullandığınızda geçici bildirim:
 
-    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Yeniden başlatma için bekleyen yazılım merkezi bildirimi bekleniyor düğmesi":::
+    :::image type="content" source="media/3555947-1902-hide-notification.png" alt-text="Sürüm 1902 ' de erteleme düğmesine sahip yazılım merkezi bildirimi bekleniyor":::
 
 Kullanıcı geçici bildirimden sonra yeniden başlamazsa, kapanmadıkları son geri sayım bildirimi verilir. Son bildirimin görüneceği zaman, istemci ayarına göre belirlenir: kullanıcının **kapatılmadığı bir iletişim kutusu görüntüler; bu, Kullanıcı oturumu kapatmadan veya bilgisayar yeniden başlatılmadan önce geri sayım aralığını gösterir (dakika)**. Örneğin, ayar 60 ise, yeniden başlatma zorlanmadan önce bir saat, son bildirim kullanıcıya görünür:
 
-:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="Software Center son geri sayım bildirimi":::
+:::image type="content" source="media/3555947-1902-final-countdown.png" alt-text="1902 sürümündeki yazılım merkezi son geri sayım bildirimi":::
 
 Aşağıdaki ayarlar, bilgisayara uygulanan en kısa [bakım penceresinden](../manage/collections/use-maintenance-windows.md) daha kısa sürede olmalıdır:
 

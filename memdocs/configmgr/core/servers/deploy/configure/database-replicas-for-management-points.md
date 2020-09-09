@@ -10,12 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: e647672b02c0122709b3c80fc012ed1fb82b1519
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: db1e0d78263d264c66eed7258db800397baad735
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696438"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607590"
 ---
 # <a name="database-replicas-for-management-points-for-configuration-manager"></a>Configuration Manager için yönetim noktaları için veritabanı çoğaltmaları
 
@@ -57,7 +57,7 @@ Configuration Manager birincil siteler, istemcilerden gelen istekleri hizmet ede
 
     -   Site veritabanı, veritabanı çoğaltmasını **yayımlamalıdır** ve her uzak veritabanı çoğaltma sunucusu yayımlanan verilere **abone** olmalıdır.  
 
-    -   Hem site veritabanını barındıran hem de bir veritabanı çoğaltması barındıran SQL Server, 2 GB’lik **En Büyük Metin Çoğaltma Boyutu** ’nu destekleyecek şekilde yapılandırılmalıdır. Bunun SQL Server 2012 için nasıl yapılandırılacağına dair bir örnek için, bkz. [En büyük metin çoğaltma boyutu Sunucu Yapılandırma Seçeneğini yapılandırma](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option?view=sql-server-ver15).  
+    -   Hem site veritabanını barındıran hem de bir veritabanı çoğaltması barındıran SQL Server, 2 GB’lik **En Büyük Metin Çoğaltma Boyutu** ’nu destekleyecek şekilde yapılandırılmalıdır. Bunun SQL Server 2012 için nasıl yapılandırılacağına dair bir örnek için, bkz. [En büyük metin çoğaltma boyutu Sunucu Yapılandırma Seçeneğini yapılandırma](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option).  
 
 -   **Otomatik olarak imzalanan sertifika:** Bir veritabanı çoğaltmasını yapılandırmak için, veritabanı çoğaltması sunucusunda otomatik olarak imzalanan bir sertifika oluşturmalı ve bu sertifikayı veritabanı çoğaltması sunucusunu kullanacak yönetim noktalarının her biri için kullanılabilir hale getirebilirsiniz.  
 
@@ -174,7 +174,7 @@ Windows Server 2008 R2 bilgisayarında site veritabanı çoğaltması sunucusunu
         -   SQL Server Aracısı farklı bir hesap kullanılarak çalıştırılıyorsa, **Aşağıdaki Windows hesabı altında çalıştır**’ı seçip, ardından o hesabı yapılandırın. Bir Windows hesabı veya SQL Server hesabı belirleyebilirsiniz.  
 
         > [!IMPORTANT]  
-        >  Dağıtım Aracısını çalıştıran hesaba yayıncıya abonelik çekme izinlerini vermelisiniz. Bu izinleri yapılandırma hakkında daha fazla bilgi için bkz. [Dağıtım Aracısı güvenliği](/sql/relational-databases/replication/distribution-agent-security?view=sql-server-ver15).  
+        >  Dağıtım Aracısını çalıştıran hesaba yayıncıya abonelik çekme izinlerini vermelisiniz. Bu izinleri yapılandırma hakkında daha fazla bilgi için bkz. [Dağıtım Aracısı güvenliği](/sql/relational-databases/replication/distribution-agent-security).  
 
       - **Dağıtıcıya Bağlan**için, **İşlem hesabı kimliğine bürünerek**seçeneğini belirleyin.  
 
@@ -459,7 +459,7 @@ Bir yönetim noktası için veritabanı çoğaltmasıyla istemci bildirimini des
 -   Yapılandırmak üzere bu komut dosyasını kullandığınız sonraki her veritabanı çoğaltması için sertifikanın Kolay adını güncelleştirin.  Bunu yapmak için $enrollment satırı düzenleyin **. CertificateFriendlyName = "ConfigMgr SQL Server kimlik sertifikası"** ve **ConfigMgr SQL Server kimlik sertifikasını**  **ConfigMgr SQL Server tanımlama Certificate1**gibi yeni bir adla değiştirin.  
 
 ##  <a name="manage-database-replica-configurations"></a><a name="BKMK_DBReplicaOps"></a> Veritabanı çoğaltması yapılandırmasını yönetme  
- Bir sitede veritabanı çoğaltması kullandığınızda, bir veritabanı çoğaltmasını kaldırma, veritabanı çoğaltması kullanan bir siteyi kaldırma veya site veritabanını yeni bir SQL Server yüklemesine taşıma sürecine katkı olarak aşağıdaki bölümlerde verilen bilgileri kullanın. Yayınları silmek üzere aşağıdaki bölümlerde verilen bilgileri kullanırken, veritabanı çoğaltması için kullandığınız SQL Server sürümü için işlem çoğaltmasını silme yönergelerini kullanın. Daha fazla bilgi için bkz. [yayını silme](/sql/relational-databases/replication/publish/delete-a-publication?view=sql-server-ver15).  
+ Bir sitede veritabanı çoğaltması kullandığınızda, bir veritabanı çoğaltmasını kaldırma, veritabanı çoğaltması kullanan bir siteyi kaldırma veya site veritabanını yeni bir SQL Server yüklemesine taşıma sürecine katkı olarak aşağıdaki bölümlerde verilen bilgileri kullanın. Yayınları silmek üzere aşağıdaki bölümlerde verilen bilgileri kullanırken, veritabanı çoğaltması için kullandığınız SQL Server sürümü için işlem çoğaltmasını silme yönergelerini kullanın. Daha fazla bilgi için bkz. [yayını silme](/sql/relational-databases/replication/publish/delete-a-publication).  
 
 > [!NOTE]  
 >  Veritabanı çoğaltmaları için yapılandırılmış bir site veritabanını geri yükledikten sonra, veritabanı çoğaltmalarını kullanabilmek için her veritabanı çoğaltmasını yeniden yapılandırarak hem yayımları hem de abonelikleri tekrar oluşturmanız gerekir.  

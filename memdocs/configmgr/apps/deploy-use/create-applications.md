@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42dc0f65e9e3765de35e6db7f5272aeeaab63fa2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 3e16e605bde9224d641647ed8ad5ae58a9bfcf1e
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88695299"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606522"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Configuration Manager uygulamalar oluşturma
 
@@ -651,7 +651,7 @@ Sanal uygulamalar (App-V) için dağıtım türleri için benzersiz olan ek seç
 
 3. Uygulama özellikleri ' nde **dağıtım türleri** sekmesine geçin. App-V dağıtım türünü seçin ve **Düzenle**' yi seçin.  
 
-4. Dağıtım türü özelliklerinde, **içerik** sekmesine geçin. aşağıdaki seçenekleri gerekli şekilde yapılandırın:  
+4. Dağıtım türü özelliklerinde **içerik** sekmesine geçin. Aşağıdaki seçenekleri gerekli şekilde yapılandırın:  
 
     - **İçeriği istemci önbelleğinde Sürdür**: Configuration Manager istemci, bu dağıtım türü için içeriği önbellekten silmez.  
 
@@ -667,7 +667,7 @@ Sanal uygulamalar (App-V) için dağıtım türleri için benzersiz olan ek seç
 
 3. Uygulama özellikleri ' nde **dağıtım türleri** sekmesine geçin. App-V dağıtım türünü seçin ve **Düzenle**' yi seçin.  
 
-4. Dağıtım türü özelliklerinde **Yayımlama** sekmesine geçin. sanal uygulamadaki yayımlamak Istediğiniz öğeleri seçin.  
+4. Dağıtım türü özelliklerinde **Yayımlama** sekmesine geçin. Sanal uygulamadaki yayımlamak istediğiniz öğeleri seçin.  
 
 5. Dağıtım türü özelliklerini kapatmak için **Tamam ' ı** seçin. Ardından, uygulama özelliklerini kapatmak için **Tamam** ' ı seçin.  
 
@@ -688,7 +688,7 @@ Bir uygulamayı Configuration Manager aktarmak için aşağıdaki yordamı kulla
 Yeni uygulama **Uygulamalar** düğümünde görüntülenir.  
 
 > [!TIP]  
-> Windows PowerShell cmdlet **Import-Cmapp,** Bu yordamla aynı işleve sahiptir. Daha fazla bilgi için bkz. [Import-Cmappte](/powershell/module/configurationmanager/import-cmapplication?view=sccm-ps).  
+> Windows PowerShell cmdlet **Import-Cmapp,** Bu yordamla aynı işleve sahiptir. Daha fazla bilgi için bkz. [Import-Cmappte](/powershell/module/configurationmanager/import-cmapplication).  
 
 Bir uygulamayı dışarı aktarma hakkında daha fazla bilgi için bkz. [uygulamalar Için yönetim görevleri](management-tasks-applications.md).
 

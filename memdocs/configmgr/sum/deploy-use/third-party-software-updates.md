@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3192cd8177075542ffc86ab236b817db5befca1d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: bf50039a7c2fe8490c89f3e3b0adca275bb69e20
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696897"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89607990"
 ---
 # <a name="enable-third-party-updates"></a>Üçüncü taraf güncelleştirmelerini etkinleştirme 
 
@@ -27,7 +27,7 @@ Sürüm 1806 ' den başlayarak, Configuration Manager konsolundaki **üçüncü 
 > Configuration Manager Bu özelliği varsayılan olarak etkinleştirmez. Kullanmadan önce, **istemcilerde üçüncü taraf güncelleştirme desteğini etkinleştirmek**için isteğe bağlı özelliği etkinleştirin. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).
 
 
-## <a name="prerequisites"></a>Ön koşullar 
+## <a name="prerequisites"></a>Önkoşullar 
 - Üçüncü taraf yazılım güncelleştirmeleri için kaynak ikili içeriğini depolamak üzere en üst düzey yazılım güncelleştirme noktasının sunucusundaki WSUSContent klasöründe yeterli disk alanı.
     - Gerekli depolama alanı, satıcıya, güncelleştirme türlerine ve dağıtım için yayımladığınız belirli güncelleştirmelere göre farklılık gösterir.
     - Sunucusundaki WSUSContent klasörünü daha fazla boş alana sahip başka bir sürücüye taşımanız gerekiyorsa, [WSUS tarafından güncelleştirmelerin yerel olarak nasıl değiştirileceği](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog gönderisine bakın.
@@ -67,7 +67,7 @@ Bu seçeneği etkinleştirirseniz, Configuration Manager konsolundaki üçüncü
 
 1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin. **Site yapılandırması**' nı genişletin ve **siteler** düğümünü seçin.
 2. Hiyerarşide en üst düzey siteyi seçin. Şeritte, **site bileşenlerini Yapılandır**' a tıklayın ve **yazılım güncelleştirme noktası**' nı seçin.
-3. **Üçüncü taraf güncelleştirmeleri** sekmesine geçin. **üçüncü taraf yazılım güncelleştirmelerini etkinleştir**seçeneğini belirleyin.
+3. **Üçüncü taraf güncelleştirmeleri** sekmesine geçin. **Üçüncü taraf yazılım güncelleştirmelerini etkinleştir**seçeneğini belirleyin.
 
     ![Üçüncü taraf güncelleştirmeleri SUP özellikleri ekran görüntüsü](media/third-party-sup-properties.PNG)
 
@@ -80,7 +80,7 @@ PKI sertifikalarını kullanma gerekliliği yoksa, üçüncü taraf güncelleşt
 
 1. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin. **Site yapılandırması**' nı genişletin ve **siteler** düğümünü seçin.
 2. Hiyerarşide en üst düzey siteyi seçin. Şeritte, **site bileşenlerini Yapılandır**' a tıklayın ve **yazılım güncelleştirme noktası**' nı seçin.
-3. **Üçüncü taraf güncelleştirmeleri** sekmesine geçin. **sertifikayı yönetmek Configuration Manager**seçeneği belirleyin. 
+3. **Üçüncü taraf güncelleştirmeleri** sekmesine geçin. **Sertifikayı yönetmek Configuration Manager**seçeneği belirleyin. 
 4. **Yönetim** çalışma alanındaki **güvenlik** altındaki **SERTIFIKALAR** düğümünde, **üçüncü taraf WSUS imzalama** türünde yeni bir sertifika oluşturulur.  
 
 ### <a name="manually-manage-the-wsus-signing-certificate"></a>WSUS imza sertifikasını el ile yönetme
@@ -89,7 +89,7 @@ Sertifikayı bir PKI sertifikası kullanma gereksinimi gibi el ile yapılandırm
 1. İmzalama sertifikasını [System Center Updates Publisher](../tools/updates-publisher-options.md#update-server)kullanarak yapılandırın.
 2. Configuration Manager konsolunda **Yönetim** çalışma alanına gidin. **Site yapılandırması**' nı genişletin ve **siteler** düğümünü seçin.
 3. Hiyerarşide en üst düzey siteyi seçin. Şeritte, **site bileşenlerini Yapılandır**' a tıklayın ve **yazılım güncelleştirme noktası**' nı seçin.
-4. **Üçüncü taraf güncelleştirmeleri** sekmesine geçin. **sertifikayı el Ile yönetme**seçeneğini belirleyin.
+4. **Üçüncü taraf güncelleştirmeleri** sekmesine geçin. **Sertifikayı el ile yönetme**seçeneğini belirleyin.
 
 
 ## <a name="enable-third-party-updates-on-the-clients"></a>İstemcilerde üçüncü taraf güncelleştirmelerini etkinleştirme
@@ -125,7 +125,7 @@ Configuration Manager konsolundaki bir üçüncü taraf kataloğuna abone olduğ
 
 1. Configuration Manager konsolunda, **yazılım kitaplığı** çalışma alanına gidin. **Yazılım güncelleştirmeleri** ' ni genişletin ve **üçüncü taraf yazılım güncelleştirme katalogları** düğümünü seçin.  
 2. Abone olmak için kataloğu seçin ve Şeritteki **kataloğa abone ol** ' a tıklayın. 
-    ![Üçüncü taraf güncelleştirmeleri özel Katalog ekleme](media/third-party-updates-subscribe.png)
+    ![Üçüncü taraf güncelleştirmeleri kataloğa abone olur](media/third-party-updates-subscribe.png)
 3. Katalog sertifikasını gözden geçirin ve onaylayın.  
    > [!NOTE]
    > 

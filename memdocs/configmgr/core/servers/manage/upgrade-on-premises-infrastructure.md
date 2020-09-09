@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7efc775199a34a66a8cd4a83b85baccd4a3ab5cb
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 0c2894bcdf80901171cceba96e7829793f899383
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699492"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89606777"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Configuration Manager destekleyen şirket içi altyapıyı yükseltme
 
@@ -242,15 +242,15 @@ Site veritabanınız için kullanımdaki SQL Server kardinalite tahmini uyumlulu
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-SQL CE Uyumluluk düzeyleri ve bunların nasıl ayarlanacağı hakkında daha fazla bilgi için bkz. [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017).
+SQL CE Uyumluluk düzeyleri ve bunların nasıl ayarlanacağı hakkında daha fazla bilgi için bkz. [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 SQL Server yükseltme hakkında daha fazla bilgi için aşağıdaki SQL Server makalelerine bakın:  
 
 - [SQL Server 2017 ' ye yükseltin](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)  
 
-- [SQL Server 2016 ' ye yükseltin](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2016)  
+- [SQL Server 2016 ' ye yükseltin](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
-- [SQL Server 2014’e yükseltme](/sql/database-engine/install-windows/supported-version-and-edition-upgrades?view=sql-server-2014)  
+- [SQL Server 2014’e yükseltme](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)  
 
 ### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>Site veritabanı sunucusundaki SQL Server’ı yükseltmek için  
 
