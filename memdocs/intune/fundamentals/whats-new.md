@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a55a320fc5c3b2a6169be9d46b22b86d0265da33
-ms.sourcegitcommit: 15450a1e92d9f67f74ae619ffe192c15948107c5
+ms.openlocfilehash: dc8fa6f2d4fe5171bd8a4ffe977eec7f6eed2093
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89516326"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564117"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -55,6 +55,24 @@ ms.locfileid: "89516326"
 ### Scripts
 
 <!-- ########################## -->
+## <a name="week-of-september-7-2020"></a>7 Eylül 2020 haftası
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Cihaz yönetimi
+
+#### <a name="tenant-attach-device-timeline-in-the-admin-center"></a>Kiracı iliştirme: Yönetim merkezinde cihaz zaman çizelgesi
+<!--7220536, CM7141381-->
+Configuration Manager, kiracı iliştirme aracılığıyla bir cihazı Microsoft Uç Nokta Yöneticisi ile eşitlediğinde, olayların bir zaman çizelgesini görebileceksiniz. Bu zaman çizelgesi, cihazdaki sorunları gidermenize yardımcı olabilecek geçmiş etkinlikleri gösterir. Daha fazla bilgi için bkz. [kiracı iliştirme: yönetim merkezindeki cihaz zaman çizelgesi](../../configmgr/tenant-attach/timeline.md).
+
+#### <a name="tenant-attach-resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Kiracı iliştirme: Yönetim merkezinde kaynak Gezgini
+<!--IN7220536, CM6479284 -->
+Microsoft uç nokta Yönetimi yönetim merkezinden, kaynak Gezgini 'ni kullanarak karşıya yüklenen Configuration Manager cihazları için donanım envanterini görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [Yönetim merkezinde kiracı iliştirme: kaynak Gezgini](../../configmgr/tenant-attach/resource-explorer.md).
+
+#### <a name="tenant-attach-cmpivot-from-the-admin-center"></a>Kiracı iliştirme: yönetim merkezinden CMPivot
+<!--IN7220536, CM6024392-->
+CMPivot 'in gücünü Microsoft Endpoint Manager yönetim merkezine taşıyın. Yardım masası gibi ek kişilerin buluttan, tek bir ConfigMgr tarafından yönetilen cihaza karşı gerçek zamanlı sorgular başlatabilmesini ve sonuçları yönetim merkezine geri döndürmesini sağlar. Bu, CMPivot 'in tüm geleneksel avantajlarından yararlanmanızı sağlar. Bu, BT yöneticilerinin ve diğer belirlenen kişilerin, ortamlarında cihazların durumunu hızlıca değerlendirebilme ve işlem yapması için sahip olduğu bir işlemdir.
+
+Yönetim merkezinden CMPivot hakkında daha fazla bilgi için bkz. [CMPivot önkoşulları](../../configmgr/tenant-attach/cmpivot-start.md), [CMPivot genel bakış](../../configmgr/tenant-attach/cmpivot-overview-attached.md)ve [CMPivot örnek komut dosyaları](../../configmgr/tenant-attach/cmpivot-samples-attached.md).
+
 ## <a name="week-of-august-31-2020"></a>31 Ağustos 2020 haftası
 
 ### <a name="device-configuration"></a>Cihaz yapılandırması

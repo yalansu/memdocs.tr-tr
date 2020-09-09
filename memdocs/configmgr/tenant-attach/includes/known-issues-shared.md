@@ -5,26 +5,14 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.date: 08/14/2020
-ms.openlocfilehash: 13a5b771f712420939f87073854faab3c38270c9
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 8d456185e39df8d76b949baf26de755970a9a89b
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252482"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564000"
 ---
 <!--Don't apply H2 in this include file since they are context driven by article-->
-
-### <a name="when-the-sms-provider-is-remote-from-the-cas-you-may-encounter-an-internal-server-error-from-the-admin-console"></a><a name="bkmk_dblhop"></a> SMS sağlayıcısı CA 'lardan uzak olduğunda, Yönetici konsolundan bir iç sunucu hatasıyla karşılaşabilirsiniz
-
-**Hata iletisi:** Şirket içi hata kodu: 500 iç sunucu hatası
-
-**Senaryo 1:** Configuration Manager sürüm 2002 çalıştırılırken ve CA 'LAR için uzak bir sağlayıcı varsa, Yönetici konsolundan bir iç sunucu hatasıyla karşılaşabilirsiniz.
-
-**Senaryo 2:** Configuration Manager sürüm 2006 ' i çalıştırırken, hizmet bağlantı noktası birincil sitede sağlayıcıya bağlanamazsa ve CA 'lara geri dönmek için bu hatayla karşılaşabilirsiniz. 
-
-**Senaryo 3:** CA 'LAR sürüm 2006 ' e yükseltildiyse ancak birincil sunucu henüz yükseltilmemişse, istekler CAS sağlayıcısı aracılığıyla yönlendirilir. Sağlayıcı uzak ise, yönetim konsolundan bir iç sunucu hatasıyla karşılaşabilirsiniz. 
-
-**Geçici çözüm:** Bu "çift atlama" senaryosuna geçici çözüm için CMPivot makalesinde bulunan [CA 'ların uzak sağlayıcı](../../core/servers/manage/cmpivot-changes.md#cas-has-a-remote-provider) senaryosuna yönelik yönergeleri izleyin.
 
 ### <a name="when-multi-factor-authentication-is-enabled-most-tenant-attach-features-dont-work"></a><a name="bkmk_mfa"></a> Multi-Factor Authentication etkin olduğunda, çoğu kiracı iliştirme özelliği çalışmaz
 <!--7986450, 7988266-->

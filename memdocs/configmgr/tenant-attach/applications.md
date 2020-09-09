@@ -10,12 +10,12 @@ ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 4c535cc41e1351b334e8eb7bb942de04ebbd00a2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2cd158a920d1a088b2bc1380ae8618be461b647b
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700438"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564083"
 ---
 # <a name="tenant-attach-install-an-application-from-the-admin-center-preview"></a><a name="bkmk_apps"></a> Kiracı iliştirme: yönetim merkezinden bir uygulama yükler (Önizleme)
 <!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
@@ -28,7 +28,7 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
    :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Microsoft Endpoint Manager Yönetim Merkezi 'ndeki uygulamalar" lightbox="media/6024389-tenant-attach-application-list.png":::
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [Kiracı iliştirme önkoşulları: ConfigMgr istemci ayrıntıları](client-details.md#prerequisites).
 - [Microsoft uç noktası Configuration Manager sürüm 2002](https://support.microsoft.com/help/4560496/) ve ilgili konsolun yüklü sürümü Için güncelleştirme paketi
@@ -38,7 +38,7 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 
 Ayrıca, [Kullanıcı hedefli uygulamaları](#bkmk_user)yüklemek için aşağıdakiler gerekir:<!--7518897-->
 
-- Configuration Manager sürüm 2006 ve ilgili konsolun yüklü sürümü.
+- En az Configuration Manager sürüm 2006 ve konsolun ilgili sürümü yüklü.
 
 
 ## <a name="permissions"></a>İzinler

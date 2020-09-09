@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8843ab5c8bf3d0e6970398c1ad81a8a2b3b8f9cb
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 4c652907d105b4b0363b2113916e892360feab39
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193972"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564270"
 ---
 # <a name="manage-bitlocker-policy-for-windows-10-in-intune"></a>Intune 'da Windows 10 için BitLocker ilkesini yönetme
 
@@ -97,7 +97,7 @@ Tercih ettiğiniz ilke türünü oluşturmak için aşağıdaki yordamlardan bir
    1. **Platform**: Windows 10 ve üzeri
    2. **Profil türü**: Endpoint Protection
 
-   ![Profili seçin](./media/encrypt-devices/select-windows-bitlocker-dc.png)
+   ![BitLocker profilinizi seçin](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
 4. **Ayarlar**  >  **Windows şifrelemesi**' ni seçin.
 
@@ -149,6 +149,8 @@ Intune, Windows 10 cihazlarınızın BitLocker anahtar kimliklerini ve kurtarma 
 2. **Cihazlar**  >  **tüm cihazlar**' ı seçin.
 
 3. Listeden bir cihaz seçin ve ardından *izleyici*altında **kurtarma anahtarları**' nı seçin.
+
+4. **Kurtarma anahtarını göster**' i ziyaret edin. Bunu seçtiğinizde ' KeyManagement ' etkinliğinin altında bir denetim günlüğü girişi oluşturulur.
   
    Azure AD 'de anahtarlar kullanılabilir olduğunda aşağıdaki bilgiler kullanılabilir:
    - BitLocker anahtar KIMLIĞI
@@ -159,11 +161,13 @@ Intune, Windows 10 cihazlarınızın BitLocker anahtar kimliklerini ve kurtarma 
 
 BitLocker için bilgi, [BitLocker yapılandırma hizmeti sağlayıcısı](/windows/client-management/mdm/bitlocker-csp) (CSP) kullanılarak elde edilir. BitLocker CSP, Windows 10 sürüm 1703 ve üzeri sürümlerde ve Windows 10 Pro sürüm 1809 ve üzeri sürümlerde desteklenir.
 
+Denetim günlüğü girişleri hakkında daha fazla bilgi için bkz. [Azure Portal denetim günlükleri](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#audit-logs).
+
 ### <a name="rotate-bitlocker-recovery-keys"></a>BitLocker kurtarma anahtarlarını döndür
 
 Windows 10 sürüm 1909 veya üstünü çalıştıran bir cihazın BitLocker kurtarma anahtarını uzaktan döndürmek için bir Intune cihaz eylemini kullanabilirsiniz.
 
-#### <a name="prerequisites"></a>Ön koşullar
+#### <a name="prerequisites"></a>Önkoşullar
 
 Cihazların BitLocker kurtarma anahtarının döndürmesini desteklemek için aşağıdaki önkoşulları karşılaması gerekir:
 

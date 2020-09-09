@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19c5c1f8e7a68a31150baa079ce9b766b6df72df
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c36b46cedb69ae0ce9d5559797fba78f5f7ab7f6
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906761"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564287"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Silme, kullanımdan kaldırma veya el ile kaydını kaldırma yoluyla cihaz kaldırma
 
@@ -36,9 +36,9 @@ ms.locfileid: "88906761"
 
 **Silme** eylemi, cihazı fabrika varsayılan ayarlarına geri yükler. **Kayıt durumu ve kullanıcı hesabını koru** onay kutusunu seçerseniz kullanıcı verileri saklanır. Aksi takdirde, tüm veriler, uygulamalar ve ayarlar kaldırılır.
 
-|Silme eylemi|**Kayıt durumu ve kullanıcı hesabını koru**|Intune yönetiminden kaldırıldı|Açıklama|
+|Silme eylemi|**Kayıt durumu ve kullanıcı hesabını koru**|Intune yönetiminden kaldırıldı|Description|
 |:-------------:|:------------:|:------------:|------------|
-|**Silme**| İşaretli değil | Evet | Tüm kullanıcı hesapları, verileri, MDM ilkeleri ve ayarlarını siler. İşletim sistemini varsayılan durum ve ayarlarına sıfırlar.|
+|**Silme**| İşaretli değil | Yes | Tüm kullanıcı hesapları, verileri, MDM ilkeleri ve ayarlarını siler. İşletim sistemini varsayılan durum ve ayarlarına sıfırlar.|
 |**Silme**| İşaretli | Hayır | Tüm MDM ilkelerini temizler. Kullanıcı hesapları ve verilerini saklar. Kullanıcı ayarlarını varsayılana sıfırlar. İşletim sistemini varsayılan durum ve ayarlarına sıfırlar.|
 
 
@@ -119,9 +119,9 @@ Bir Android iş profili cihazdan şirket verilerinin kaldırılması, cihazdaki 
 Yalnızca bilgi noktası cihazlarını silebilirsiniz. Android bilgi noktası cihazlarını kullanımdan kaldıramazsınız.
 
 
-### <a name="macos"></a>Mac OS
+### <a name="macos"></a>macOS
 
-|Veri türü|Mac OS|
+|Veri türü|macOS|
 |-------------|-------|
 |Ayarlar|Intune ilkesi tarafından ayarlanan yapılandırmalar artık zorunlu tutulmaz. Kullanıcılar ayarları değiştirebilir.|
 |Wi-Fi ve VPN profili ayarları|Kaldırıldı.|
@@ -174,7 +174,7 @@ Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak s
 
 İletişim sorunları veya eksik cihazlar nedeniyle, cihazları Azure AD'den silmeniz gerekebilir. Ulaşılamaz olduğunu ve Azure ile yeniden iletişim kurmasının pek olası olmadığını bildiğiniz cihazlarda, cihaz kayıtlarını Azure portalından kaldırmak için **Sil** eylemini kullanabilirsiniz. **Sil** eylemi, cihazı yönetimden kaldırmaz.
 
-1. Yönetici kimlik bilgilerinizi kullanarak [Azure portalında Azure Active Directory](https://aka.ms/accessaad)’de oturum açın. Ayrıca [Microsoft 365 yönetim merkezinde](https://admin.microsoft.com) de oturum açabilirsiniz. Menüden **Yönetim Merkezleri**  >  **Azure AD**' yi seçin.
+1. Yönetici kimlik bilgilerinizi kullanarak [Azure portalında Azure Active Directory](https://azure.microsoft.com/services/active-directory/)’de oturum açın. Ayrıca [Microsoft 365 yönetim merkezinde](https://admin.microsoft.com) de oturum açabilirsiniz. Menüden **Yönetim Merkezleri**  >  **Azure AD**' yi seçin.
 2. Hesabınız yoksa bir Azure aboneliği oluşturun. Ücretli bir hesabınız varsa, bu işlem için kredi kartı veya ödeme gerekmez ( **Ücretsiz Azure Active Directory kaydınız** abonelik bağlantısını seçin).
 3. **Azure Active Directory**’yi ve sonra da kuruluşunuzu seçin.
 4. **Users (Kullanıcılar)** sekmesini seçin.

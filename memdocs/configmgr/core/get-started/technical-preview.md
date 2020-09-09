@@ -2,7 +2,7 @@
 title: Teknik Önizleme sürümleri
 titleSuffix: Configuration Manager
 description: Configuration Manager ' de yeni işlevsellik ve özellikleri test etmek için teknik önizleme dalı hakkında bilgi edinin.
-ms.date: 08/11/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eff1ec6a8346132853285195d8e96aa6b8d3a8fa
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432583"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564219"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager için teknik önizleme
 
@@ -164,11 +164,9 @@ With each CB release, review and remove from this list for anything that's now a
 
 Aşağıdaki özellikler Configuration Manager Technical Preview dalının önceki sürümleriyle yayımlanmıştır. Bu özellikler sonraki sürümlerde kullanılabilir kalır, ancak henüz geçerli dalda kullanılabilir değildir.
 
-| Öne çıkan özelliği        | Technical Preview sürümü |
+| Özellik        | Technical Preview sürümü |
 |----------------|---------------------------|
 | CMG aracılığıyla kullanılabilir uygulamalarda iyileştirmeler <!--7033501--> | [Teknik Önizleme 2006](2020/technical-preview-2006.md#bkmk_availapp) |
-| Kiracı iliştirme: Yönetim merkezinde cihaz zaman çizelgesi <!--7141381--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_timeline) |
-| Kiracı iliştirme: yönetim merkezinden CMPivot <!--6024392--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_cmpivot) |
 | Kiracı iliştirme: yönetim merkezinden betikleri çalıştırma <!--6234688--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_scripts) |
 | Bulut yönetimi ağ geçidi cmdlet 'leri geliştirmeleri <!--6978300--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_pwshcmg) |
 | Microsoft 'a kurulum ve yükseltme başarısızlıklarını bildir <!--5622909--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#report-setup-and-upgrade-failures-to-microsoft) |

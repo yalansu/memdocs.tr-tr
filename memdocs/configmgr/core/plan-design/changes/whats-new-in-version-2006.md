@@ -2,7 +2,7 @@
 title: Sürüm 2006’daki yenilikler
 titleSuffix: Configuration Manager
 description: Geçerli dalın Configuration Manager sürüm 2006 ' de tanıtılan değişiklikler ve yeni yetenekler hakkında ayrıntılı bilgi alın.
-ms.date: 09/01/2020
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 3c061236202e685a6b59eeca3254a80cc1ddabf9
-ms.sourcegitcommit: 9d5c7a5e6ec430dc02d6d345028f6b29f6579b20
+ms.openlocfilehash: f46f3ee92854a6509d168134490e79a2d314b95f
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89385371"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564236"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2006 ' deki yenilikler
 
@@ -32,12 +32,26 @@ Yeni Configuration Manager özelliklerinden tam olarak yararlanmak için, siteyi
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Microsoft Uç Nokta Yöneticisi kiracı iliştirme
 
+### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> Yönetim merkezinde cihaz zaman çizelgesi
+<!--7220536, CM7141381-->
+Configuration Manager, kiracı iliştirme aracılığıyla bir cihazı Microsoft Uç Nokta Yöneticisi ile eşitlediğinde, olayların bir zaman çizelgesini görebileceksiniz. Bu zaman çizelgesi, cihazdaki sorunları gidermenize yardımcı olabilecek geçmiş etkinlikleri gösterir. Daha fazla bilgi için bkz. [yönetim merkezindeki cihaz zaman çizelgesi](../../../tenant-attach/timeline.md).
+
+### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Yönetim merkezinde kaynak Gezgini
+<!--6479284-->
+Microsoft uç nokta Yönetimi yönetim merkezinden, kaynak Gezgini 'ni kullanarak karşıya yüklenen Configuration Manager cihazları için donanım envanterini görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [Yönetim merkezinde kiracı iliştirme: kaynak Gezgini](../../../tenant-attach/resource-explorer.md).
+
+### <a name="cmpivot-from-the-admin-center"></a><a name="bkmk_cmpivot"></a> Yönetim merkezinden CMPivot
+<!--6024392-->
+CMPivot 'in gücünü Microsoft Endpoint Manager yönetim merkezine taşıyın. Yardım masası gibi ek kişilerin buluttan, tek bir ConfigMgr tarafından yönetilen cihaza karşı gerçek zamanlı sorgular başlatabilmesini ve sonuçları yönetim merkezine geri döndürmesini sağlar. Bu, CMPivot 'in tüm geleneksel avantajlarından yararlanmanızı sağlar. Bu, BT yöneticilerinin ve diğer belirlenen kişilerin, ortamlarında cihazların durumunu hızlıca değerlendirebilme ve işlem yapması için sahip olduğu bir işlemdir.
+
+Yönetim merkezinden CMPivot hakkında daha fazla bilgi için bkz. [CMPivot önkoşulları](../../../tenant-attach/cmpivot-start.md), [CMPivot genel bakış](../../../tenant-attach/cmpivot-overview-attached.md)ve [CMPivot örnek komut dosyaları](../../../tenant-attach/cmpivot-samples-attached.md).
+
 ### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Kiracı iliştirme: Microsoft Endpoint Manager Yönetim merkezinde Microsoft Defender virüsten koruma ilkeleri
 <!--4812909-->
 Artık Microsoft Endpoint Manager konsolunda Microsoft Defender virüsten koruma ilkeleri oluşturabilir ve bunları Configuration Manager koleksiyonlara dağıtabilirsiniz. Ayrıntılı yönergeler ve kullanılabilir ayarlar dahil daha fazla bilgi için aşağıdaki makalelere bakın:
 - [Kiracı iliştirme: Yönetim Merkezi 'nden Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme (Önizleme)](../../../tenant-attach/atp-onboard.md)
 - [Kiracı iliştirme: yönetim merkezinden Endpoint Security virüsten koruma ilkesini dağıtma (Önizleme)](../../../tenant-attach/deploy-antivirus-policy.md)
-- [Microsoft Intune 'deki kiracı ekli cihazlar Için Microsoft Defender virüsten koruma Ilkesi ayarları](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json). 
+- [Microsoft Intune 'deki kiracı ekli cihazlar Için Microsoft Defender virüsten koruma Ilkesi ayarları](../../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 
 ### <a name="install-applications-from-the-admin-center"></a>Yönetim merkezinden uygulama yüklemesi
 <!--7518897, 6024389-->

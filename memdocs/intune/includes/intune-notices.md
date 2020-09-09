@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 9c1f201bc8e9ea170125443c305d5543a515ef89
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068209"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564116"
 ---
 Bu bildirimler, gelecekteki Intune değişiklik ve özelliklerine hazırlanmanıza yardımcı olabilecek önemli bilgiler sağlar.
 
@@ -52,7 +52,7 @@ Google tarafından sunulan bu değişiklikler nedeniyle, 2020 Ekim 'de, etkilene
 Azalan Cihaz Yöneticisi desteğinden etkilenecek cihazlar aşağıdaki üç koşulun uygulandığı olanlardır:
 - Cihaz Yöneticisi yönetimine kaydolmuş.
 - Android 10 veya üstünü çalıştırma.
-- Samsung cihazı değil.
+- Samsung hariç tüm Android üreticileri.
 
 Cihazlar aşağıdakilerden biri olursa etkilenmeyecektir:
 - Cihaz yönetici yönetimine kaydolmadı.

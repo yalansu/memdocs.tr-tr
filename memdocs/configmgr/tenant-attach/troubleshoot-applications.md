@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 6fb487b590773afd1b59133f647696d9f858b439
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 7e02c642c95952c8751f03a8e1cb8838feff1155
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700383"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564045"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Yönetim merkezine yüklenen cihazlar için uygulama yüklemesinde sorun giderme (Önizleme)
 <!--6374854, 6521921-->
@@ -88,7 +88,7 @@ Beklenmeyen hatalara genellikle [hizmet bağlantı noktası](../core/servers/dep
 **Hata iletisi:** Site bilgileri henüz Microsoft Endpoint Manager yönetim merkezine Configuration Manager ile eşitlenmemiş. Siteyi Azure kiracınıza iliştirdikten 15 dakikaya kadar bekleyin.
 
 **Olası nedenler:**
-- Bu hata genellikle kiracı iliştirme 'ye yeni ekleme gerçekleştirildiğinde oluşur. Bilgilerin eşitlenmesi 15 dakika bekleyin.
+- Bu hata genellikle kiracı iliştirme 'ye yeni ekleme gerçekleştirildiğinde oluşur. Bilgilerin eşitlenmesi için bir saate kadar bekleyin.
 - Bu hata, merkezi yönetim sitesi yeni bir Configuration Manager sürümüne yükseltildiyse ancak bazı alt birincil siteler henüz yükseltilmemişse de görünebilir.
 
 ### <a name="application-shows-as-installed-after-creating-a-new-deployment"></a><a name="bkmk_installed"></a> Uygulama yeni bir dağıtım oluşturduktan sonra yüklendi olarak gösteriliyor

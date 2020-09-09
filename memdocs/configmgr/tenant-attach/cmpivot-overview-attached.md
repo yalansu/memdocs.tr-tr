@@ -1,8 +1,8 @@
 ---
-title: Kiracı ekli CMPivot genel bakış
+title: Kiracı ekli CMPivot kullanımına genel bakış
 titleSuffix: Configuration Manager
-description: Microsoft Endpoint Manager kiracıya bağlı cihazlar için CMPivot genel bakış.
-ms.date: 08/17/2020
+description: CMPivot kullanım genel bakış Microsoft Endpoint Manager kiracı ekli cihazlar için.
+ms.date: 09/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -10,19 +10,19 @@ ms.assetid: 31bf1359-54e5-4416-9f39-6bb0070db542
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 529cf0c27793262abb2902477ceab11201212b1e
-ms.sourcegitcommit: 62b451396eae660f2d5289ae3666b19ed1cc666d
+ms.openlocfilehash: 8967957883a1c8d397377c30409cb94139014214
+ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614719"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89564076"
 ---
-# <a name="tenant-attach-cmpivot-overview"></a>Kiracı iliştirme: CMPivot genel bakış
+# <a name="tenant-attach-cmpivot-preview-usage-overview"></a>Kiracı iliştirme: CMPivot (Önizleme) kullanımına genel bakış
 
-*Uygulama hedefi: Configuration Manager (Technical Preview dalı)*
+*Uygulama hedefi: Configuration Manager (geçerli dal)*
 
 > [!Important]
-> Bu makale, Configuration Manager yönelik Technical Preview dalı için geçerlidir. Daha fazla bilgi için bkz. [Technical Preview sürüm 2005 Configuration Manager](../core/get-started/2020/technical-preview-2005.md#bkmk_cmpivot).
+> - Bu bilgiler, ticari olarak yayınlanmadan önce önemli ölçüde değiştirilebilen bir önizleme özelliğiyle ilgilidir. Burada verilen bilgilerle ilgili olarak Microsoft açık veya zımni hiçbir garanti vermez.
 
 CMPivot, ortamınızdaki bir cihazın durumunu hızlı bir şekilde değerlendirmenize ve işlem yapmanıza olanak sağlar. Bir sorgu girdiğinizde, CMPivot Şu anda bağlı olan cihazda gerçek zamanlı olarak bir sorgu çalıştırır. Döndürülen veriler, iş sorularını yanıtlamak, ortamınızdaki sorunları gidermek veya güvenlik tehditlerine yanıt vermek için filtrelenebilir, gruplandırılabilir ve iyileştirilmelidir. CMPivot kullanma hakkında daha fazla bilgi için bkz. [Use CMPivot](../core/servers/manage/cmpivot.md).
 
@@ -44,4 +44,4 @@ Microsoft Endpoint Manager Yönetici konsolundan CMPivot kullanırken, sorgular�
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Daha fazla örnek komut dosyası için bkz. [Microsoft Endpoint Manager kiracı iliştirme: CMPivot betik örnekleri](cmpivot-samples-attached.md).
+Daha fazla bilgi için bkz. [Launch CMPivot (Önizleme) for the Admin Center 'dan](cmpivot-start.md) daha fazla örnek betik için bkz. [Microsoft Endpoint Manager kiracı iliştirme: CMPivot betik örnekleri](cmpivot-samples-attached.md).
