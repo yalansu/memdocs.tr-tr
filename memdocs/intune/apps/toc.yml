@@ -1,6 +1,6 @@
 - name: Uygulamaları yönetme
   href: index.yml
-- name: Genel Bakış
+- name: Genel bakış
   expanded: true
   items:
     - name: Uygulama yönetimine genel bakış
@@ -202,6 +202,8 @@
               href: data-transfer-between-apps-manage-ios.md
         - name: Uygulama koruma günlüklerini gözden geçirme
           href: app-protection-policy-settings-log.md
+    - name: Office uygulamaları için ilkeler
+      href: app-office-policies.md
     - name: Sorun giderme
       items:
         - name: Kullanıcıların sorunları gidermesine yardımcı olma
