@@ -10,12 +10,12 @@ ms.assetid: 54a58548-45f3-4f75-93d6-d2fd96227e6a
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 979ec6f081a318886eda9eeac91c16adc635701d
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: fd71c622a7fc8086c88ecf116e67abdbcbc2e875
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564364"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643613"
 ---
 # <a name="troubleshoot-the-timeline-for-devices-uploaded-to-the-admin-center-preview"></a><a name="bkmk_timeline"></a> Yönetim merkezine yüklenen cihazlar için zaman çizelgesinde sorun giderme (Önizleme)
 <!--CM7141381, IN7552762 pubpreview Sept8, 2020 -->
@@ -37,7 +37,7 @@ Microsoft Endpoint Manager yönetim merkezinden zaman çizelgesini görüntüler
 
 **Olası nedenler:**
 
-- [Azure AD Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) ve [Active Directory Kullanıcı bulmanın](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) yapılandırıldığından ve kullanıcının her ikisiyle de bulunduğundan emin olun.
+- [Azure AD Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) ve [Active Directory Kullanıcı bulmanın](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) yapılandırıldığından ve Microsoft Endpoint Manager yönetim merkezinden kiracı iliştirme özelliklerine erişen kullanıcı hesabının her ikisi tarafından keşfedildiğini doğrulayın.
 - Kullanıcı hesabının Azure AD 'de Configuration Manager Mikro hizmet uygulaması için **Yönetici Kullanıcı** rolü eksik olabilir. Azure AD 'deki rolü, **Enterprise applications**  >  **mikro hizmet**  >  **kullanıcıları ve grupları**  >  **Kullanıcı Ekle**' Configuration Manager kurumsal uygulamalardan ekleyin. Azure AD Premium varsa gruplar desteklenir. Bu izne yapılan değişikliklerin etkili olması bir saate kadar sürebilir.
 
 ### <a name="unable-to-get-timeline-information"></a><a name="bkmk_403"></a> Zaman çizelgesi bilgisi alınamıyor

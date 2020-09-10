@@ -2,7 +2,7 @@
 title: Gerçek zamanlı veriler için CMPivot
 titleSuffix: Configuration Manager
 description: Configuration Manager 'de CMPivot kullanarak istemcileri gerçek zamanlı olarak sorgulama hakkında bilgi edinin.
-ms.date: 08/11/2020
+ms.date: 09/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 11b5a58a6d9501b0368fcb0b47bf31df1bd8a6af
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fa96d09302b9b4cd908880e97e1735fff5f43743
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700591"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643579"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager içindeki gerçek zamanlı veriler için CMPivot
 
@@ -32,7 +32,7 @@ Configuration Manager, müşterilerin raporlama amacıyla kullanacağı, cihaz v
  > - Bazı kötü amaçlı yazılımdan koruma yazılımları yanlışlıkla Configuration Manager çalıştırmak betiklerine veya CMPivot özelliklerine karşı olayları tetikleyemeyebilir. Kötü amaçlı yazılımdan koruma yazılımının bu özelliklerin girişim olmadan çalışmasına izin vermesi için%windir%\CCM\ScriptStore hariç tutulması önerilir.
 
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 CMPivot kullanmak için aşağıdaki bileşenler gereklidir:
 
@@ -188,7 +188,8 @@ CMPivot penceresi aşağıdaki öğeleri içerir:
 
    - Sonuçlar bölmesindeki toplam satır sayısı. Örneğin, `1 objects`  
 
-
+> [!TIP]
+> İstemcilerdeki geçerli CMPivot sorgunuzu yeniden **çalıştırmak Için Çalıştır**' a tıklarken **CTRL** tuşunu basılı tutun.
 
 ## <a name="example-scenarios"></a>Örnek senaryolar
 

@@ -10,12 +10,12 @@ ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 7e02c642c95952c8751f03a8e1cb8838feff1155
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: 54d93637410a481cab3672929ab5764652330eee
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564045"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643538"
 ---
 # <a name="troubleshoot-application-installation-for-devices-uploaded-to-the-admin-center-preview"></a>Yönetim merkezine yüklenen cihazlar için uygulama yüklemesinde sorun giderme (Önizleme)
 <!--6374854, 6521921-->
@@ -44,7 +44,7 @@ Microsoft Endpoint Manager Yönetim Merkezi 'nden uygulamaları görüntülerken
 
 1. Yönetici merkezinde oturum açmak için aynı hesabı kullanın. Şirket içi kimliğin ile eşitlenmesi ve bulut kimliğiyle eşleşmesi gerekir.
 1. Hesabın Configuration Manager, cihazın **koleksiyonu** için **okuma** iznine sahip olduğunu doğrulayın.
-1. Configuration Manager, kullanmakta olduğunuz yönetim kullanıcı hesabını keşfettiği emin olun. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Kullanıcılar** düğümünü seçin ve kullanıcı hesabınızı bulun.
+1. Configuration Manager, Microsoft Endpoint Manager Yönetim Merkezi 'ndeki kiracı iliştirme özelliklerine erişmek için kullanmakta olduğunuz yönetim kullanıcı hesabını bulduğundan emin olun. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Kullanıcılar** düğümünü seçin ve kullanıcı hesabınızı bulun.
 
     Hesabınız **Kullanıcılar** düğümünde listelenmiyorsa, sitenin [Active Directory Kullanıcı bulmanın](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)yapılandırmasını denetleyin.
 

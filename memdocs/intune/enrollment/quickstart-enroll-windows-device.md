@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f70c8487d9cb30b2a7cced63e6e019541f73704
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 67de7db6587c1f80d849808c139bf1ae94f4bbd5
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327046"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643642"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Hızlı Başlangıç: Windows 10 cihazınızı kaydetme
 
@@ -48,7 +48,7 @@ Windows 10 Masaüstü cihazınızı kaydetmeden önce yüklü olan Windows sür�
 
    ![Windows Ayarları - Sistem ekran görüntüsü](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-01.png)
 
-2. **Sistem** > **hakkında**' yı seçin. 
+2. **Sistem**  >  **hakkında**' yı seçin. 
 
    ![Sistem ayarlarınızın ekran görüntüsü](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-02.png)
 
@@ -68,7 +68,7 @@ Windows 10 Masaüstü cihazınızı kaydetmeden önce yüklü olan Windows sür�
 
    ![Sistem ayarları - Hesaplar ekranınızın ekran görüntüsü](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-03.png)
 
-2. **Erişim iş veya okul** > **bağlantısı**' nı seçin.
+2. **Erişim iş veya okul**  >  **bağlantısı**' nı seçin.
 
     ![İş veya okul hesabına erişimi seçme](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
@@ -87,12 +87,12 @@ Windows 10 Masaüstü cihazınızı kaydetmeden önce yüklü olan Windows sür�
 
    ![Yeni eklenen hesabın ekran görüntüsü](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    Önceki adımları izlediyseniz, ancak iş veya okul e-posta hesabınıza ve dosyalarınıza erişemiyorsanız, [işe veya okula erişim görüyorsanız Izlenecek sorun giderme adımları](../user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school)bölümündeki adımları izleyin.
+    Önceki adımları izlediyseniz, ancak iş veya okul e-posta hesabınıza ve dosyalarınıza erişemiyorsanız, [Windows 10 cihaz erişiminin sorunlarını giderme](../user-help/troubleshoot-your-windows-10-device-windows.md)bölümündeki adımları izleyin.  
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Intune’da cihaz kaydınızı onaylama
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431) genel yönetici veya Intune Hizmet Yöneticisi olarak oturum açın.
-2. Intune 'da kayıtlı cihazları görüntülemek için **cihazlar** > **tüm cihazlar** ' ı seçin.
+2. **Devices**  >  Intune 'da kayıtlı cihazları görüntülemek için cihazlar**tüm cihazlar** ' ı seçin.
 3. Intune’a kayıtlı bir ek cihazınız olduğunu doğrulayın.
 
    ![Intune’a kayıtlı cihazların ekran görüntüsü](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)

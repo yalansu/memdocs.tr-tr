@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1024681ed42c192983ffde23777de72c40622c65
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 28ca32bc65ee0c4647c22b10b6b5d47a25efa202
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423738"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643614"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune ile PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -140,9 +140,13 @@ Başlamadan önce, [bağlayıcının gereksinimlerini gözden geçirin](certific
    > [!WARNING]
    > Varsayılan olarak, Windows Server **IE artırılmış güvenlik yapılandırması** **Açık** olarak ayarlanır ve bu, Office 365 ' de oturum açma sorunları oluşmasına neden olabilir.
 
-6. Pencereyi kapatın.
+6. **CA hesabı** sekmesini seçin ve ardından sertifika verme ve yönetme iznine sahip olan bir hesabın kimlik bilgilerini veren sertifika yetkiliniz üzerinde girin. Bu kimlik bilgileri, sertifika yetkilisinde sertifika iptali gerçekleştirmek için kullanılacaktır. 
 
-7. Microsoft Endpoint Manager Yönetim merkezinde, **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**' na geri dönün. Birkaç dakika içinde yeşil bir onay işareti görünür ve bağlantı durumu güncellenir. Bağlayıcı sunucusu artık Intune ile iletişim kurabilir.
+    Yaptığınız değişiklikleri **uygulayın**.
+
+7. Pencereyi kapatın.
+
+8. Microsoft Endpoint Manager Yönetim merkezinde, **Kiracı Yönetimi**  >  **bağlayıcıları ve belirteçleri**  >  **sertifika bağlayıcıları**' na geri dönün. Birkaç dakika içinde yeşil bir onay işareti görünür ve bağlantı durumu güncellenir. Bağlayıcı sunucusu artık Intune ile iletişim kurabilir.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Güvenilen bir sertifika profili oluşturma
 

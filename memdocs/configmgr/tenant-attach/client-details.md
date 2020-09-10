@@ -2,7 +2,7 @@
 title: Kiracı iliştirme-Yönetim merkezinde ConfigMgr istemci ayrıntıları (Önizleme)
 titleSuffix: Configuration Manager
 description: Yönetim merkezinden Configuration Manager cihazların istemci ayrıntılarını görüntüleyin.
-ms.date: 07/08/2020
+ms.date: 09/09/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,12 +10,12 @@ ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 066a7517700d85315a04bec55b6f8254d3e49255
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fbe75e34465335450f3a09680b68a78520451bd1
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700397"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643389"
 ---
 # <a name="tenant-attach-configmgr-client-details-in-the-admin-center-preview"></a><a name="bkmk_mem"></a> Kiracı iliştirme: Yönetim merkezinde ConfigMgr istemci ayrıntıları (Önizleme)
 <!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
@@ -27,18 +27,18 @@ Microsoft Uç Nokta Yöneticisi, tüm cihazlarınızı yönetmek için tümleşi
 > - Bu bilgiler, ticari olarak yayınlanmadan önce önemli ölçüde değiştirilebilen bir önizleme özelliğiyle ilgilidir. Burada verilen bilgilerle ilgili olarak Microsoft açık veya zımni hiçbir garanti vermez.
 > - Sınır grupları sekmesi yalnızca tek başına siteler için çalışır. Sekme, tek başına birincil site dışında herhangi bir şey için yönetim merkezinde boş olur.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [Karşıya yüklenen cihazlara kiracı eklenmiş](device-sync-actions.md)bir ortam.
 - Aşağıdaki tarayıcılardan biri:
   - Microsoft Edge, sürüm 77 ve üzeri
   - Google Chrome
-- Kullanıcı hesabı hem [Azure Active Directory (Azure AD) Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) hem de [Active Directory Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)ile keşfedilmiştir.
+- **Microsoft Endpoint Manager Yönetim Merkezi** 'ndeki kiracı iliştirme özelliklerine erişen kullanıcı hesabının hem [Azure ACTIVE DIRECTORY (Azure AD) Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) hem de [Active Directory Kullanıcı keşfi](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)ile bulunması gerekir.
   - Kullanıcı hesabının Azure 'da eşitlenmiş bir kullanıcı nesnesi olması gerektiği anlamına gelir.
 
 ## <a name="permissions"></a>İzinler
 
-Kullanıcı hesabının aşağıdaki izinleri olması gerekir:
+Microsoft Endpoint Manager Yönetim Merkezi 'ndeki kiracı iliştirme özelliklerine erişen kullanıcı hesabı aşağıdaki izinlere sahip olmalıdır:
 
 - Configuration Manager içinde cihazın **koleksiyonu** için **okuma** izni.
 - Azure AD 'de Configuration Manager Mikro hizmet uygulaması için **Yönetici Kullanıcı** rolü.

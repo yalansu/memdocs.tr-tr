@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/12/2020
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 812e82df-76df-402b-bfe9-29302838f40e
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: jieyang
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: cb9812505bb1a4560c7b5668aee5b83d5cc0aec7
-ms.sourcegitcommit: d1bfd5b8481439babc7eae43493f28edaebe647a
+ms.openlocfilehash: 46f8d7d46e376d2fb8f1cab1b3d0b3bc583bdeed
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179596"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643482"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Windows 10 cihazlarını Intune Şirket Portalı kaydetme
 
@@ -46,7 +46,7 @@ Bu adımlar, Windows 10, sürüm 1607 ve üzeri sürümlerde çalışan bir ciha
 
     ![İş veya okul hesabına erişimi seçme](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-4. Kuruluşunuzun Intune oturum açma sayfasına ulaşmak için iş veya okul e-posta adresinizi girin. Sonra **İleri**’yi seçin.  
+4. Kuruluşunuzun Intune oturum açma sayfasına ulaşmak için iş veya okul e-posta adresinizi girin. Ardından **İleri**’yi seçin.  
 
 
    ![İş veya okul hesabınızı girme](./media/w10-enroll-rs1-set-up-work-or-school-account.png)  
@@ -64,10 +64,6 @@ Bu adımlar, Windows 10, sürüm 1607 ve üzeri sürümlerde çalışan bir ciha
 
 8. Bağlantınızı iki kez denetlemek için **Ayarlar**  >  **hesaplar**  >  **iş veya okula erişim**bölümüne dönün.  Hesabınız artık listelenmelidir.  
 
-
-    ![Bağlantının düzgün biçimde ayarlandığını doğrulama](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
-
-İş veya okul e-postalarınıza, dosyalarınıza veya diğer verilerinize hâlâ erişemiyor musunuz? [Hesap sorunlarını nasıl giderebileceğinizi](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school)öğrenin.  
 
 ## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Windows 10 sürüm 1511 ve önceki bir cihaz kaydetme  
 Bu adımlar, Windows 10, sürüm 1511 ve önceki sürümlerde çalışan bir cihazın nasıl kaydedileceğini açıklamaktadır.  
@@ -89,9 +85,12 @@ Bu adımlar, Windows 10, sürüm 1511 ve önceki sürümlerde çalışan bir cih
 6. İş veya okul kimlik bilgilerinizle oturum açın.  
 
 
-    ![Oturum açma](./media/W10-enroll-4-sign-in.png)  
+    ![Oturum aç](./media/W10-enroll-4-sign-in.png)  
 
-İş veya okul e-postalarınıza, dosyalarınıza veya diğer verilerinize hâlâ erişemiyor musunuz? Kayıt sırasında [hesap ile ilgili sorunların nasıl giderileceği](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) hakkında bilgi edinin.  
+
+## <a name="troubleshooting"></a>Sorun giderme 
+Hata iletilerinin ve diğer bağlantı düzeltmelerinin ayrıntılı bir listesi için bkz. [Windows 10 cihaz erişimi sorunlarını giderme](troubleshoot-your-windows-10-device-windows.md).  
+
 
 ## <a name="it-administrator-support"></a>BT yöneticisi desteği   
 

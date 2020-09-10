@@ -8,9 +8,15 @@
       href: client-details.md
     - name: Uygulamaları yükleme (önizleme)
       href: applications.md
+    - name: Cihaz zaman çizelgesi (önizleme)
+      href: timeline.md
+    - name: Kaynak gezgini (önizleme)
+      href: resource-explorer.md
 - name: Kiracı ekli cihazlar için CMPivot (önizleme)
   items:
-    - name: CMPivot’a genel bakış
+    - name: CMPivot’u başlatma (önizleme)
+      href: cmpivot-start.md
+    - name: CMPivot kullanıma genel bakış
       href: cmpivot-overview-attached.md
     - name: CMPivot örnek betikleri
       href: cmpivot-samples-attached.md
@@ -30,3 +36,9 @@
       href: troubleshoot-client-details.md
     - name: Uygulama yüklemesi (önizleme)
       href: troubleshoot-applications.md
+    - name: Zaman çizelgesi (önizleme)
+      href: troubleshoot-timeline.md
+    - name: Kaynak gezgini (önizleme)
+      href: troubleshoot-resource-explorer.md
+    - name: CMPivot (önizleme)
+      href: troubleshoot-cmpivot.md

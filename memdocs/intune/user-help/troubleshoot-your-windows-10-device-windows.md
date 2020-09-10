@@ -1,11 +1,11 @@
 ---
-title: Windows 10 cihaz kaydı sorunlarınızı giderme | Microsoft Docs
-description: ''
+title: Okul veya iş için Windows 10 cihaz erişiminin sorunlarını giderme | Microsoft Intune
+description: Kayıtlı bir Windows 10 cihazının erişimini veya hesap bağlantı sorunlarını çözün.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 09/09/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,52 +15,61 @@ ms.assetid: 4ab630b6-47ff-443b-a2a5-be23388bcea7
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: priyar
+ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 75f163d3f6f5761f1804edd23839bc2e20cca0f0
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 7c96bef7c1be004714f0b06dd47c9c28850118da
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83881749"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643428"
 ---
-# <a name="troubleshoot-your-windows-10-device-enrollment"></a>Windows 10 cihaz kaydı sorunlarınızı giderme
-Cihazınızı kaydettiyseniz, ancak iş veya okul e-postanıza ve dosyalarınıza erişemiyorsanız, bu sorun giderme adımlarını deneyin.  
+# <a name="troubleshoot-windows-10-device-access"></a>Windows 10 cihaz erişimi sorunlarını giderme
+Bu makalede, kayıtlı bir Windows 10 cihazına yönelik erişim sorunlarının nasıl çözümleneceği açıklanır. 
 
-1. Sonraki iki ekrana bakarak kendi cihazınızda gördüğünüze benzeyeni bulun. Cihazınızda gördüğünüz ekrana uyan ekranın yanında yer alan adımları uygulayın.
+## <a name="check-wi-fi-connection"></a>Wi-Fi bağlantısını denetle  
 
-    Bu ekranı görürseniz, [İşe veya okula erişim seçeneğini görüyorsanız uygulanacak sorun giderme adımları](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school) kısmındaki adımları uygulayın.
+İş veya okul kaynaklarına erişmek için Wi-Fi bağlantısı gerekir. Wi-Fi ' a bağlı olduğunuzdan emin olun ve ardından kaynaklara erişmeyi yeniden deneyin.  
 
-    ![settings-accounts-access-work-or-school](./media/w10-enroll-rs1-connect-to-work-or-school.png)
+## <a name="add-work-or-school-account-in-settings-app"></a>Ayarlar uygulamasında iş veya okul hesabı ekle  
+Bu adımlar, cihazınızı kaydetmek için kullandığınız aynı. Ancak, hesabınız **Ayarlar** uygulamasında görüntülenmiyorsa, bu adımları bir kez daha çalıştırmanız gerekir.  
 
-    Bu ekranı görürseniz, [Hesabınızı görüyorsanız uygulanacak sorun giderme adımları](#troubleshooting-steps-to-follow-if-you-see-your-account) kısmındaki adımları uygulayın.
+1. **Ayarlar** uygulamasını başlatın. 
+2. **Hesaplar**’ı seçin.
+3. Bu sonraki adım, kullanmakta olduğunuz Windows 10 sürümüne bağlı olarak farklılık gösterir. 
+    * Sürüm 1607 ve sonrası: **işe veya okula erişim**' i seçin.
+    * Sürüm 1511 ve önceki sürümler: **iş erişimi**' ni seçin.  
+4. Hesabınızı kontrol edin. Listede yoksa, eklemek için **Bağlan** artı imzala düğmesini seçin. 
+5. İş veya okul kimlik bilgilerinizle oturum açın. 
+6. Bağlantıyı tamamlaması için ekrandaki istemleri izleyin.  
+7. İşlem tamamlandığında, hesabınız bağlantı olarak eklenir. Kuruluşunuzun kullanılabilir hale getiren kaynaklara erişebilirsiniz.   
 
-    ![settings-accounts-your-account](./media/W10-enroll-2-accounts-your-account.png)
+## <a name="contact-it-support-for-access-requirements"></a>Erişim gereksinimleri için BT desteğiyle iletişime geçin  
+Ayarlar uygulamasında iş veya okul hesabınızı görürseniz, cihazınız ve hesabınız zaten bağlı demektir. Erişim sorunlarıyla ilgili daha fazla yardım için BT destek sorumlunuza başvurun. Belirli kaynaklara erişmenizi engelleyen kısıtlamalar veya gereksinimler olabilir.  
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-access-work-or-school"></a>“İşe veya okula erişim”i görüyorsanız izlenecek sorun giderme adımları
+## <a name="error-messages"></a>Hata iletileri  
 
-1. Yukarıdaki adımları izlediyseniz, ancak iş veya okul e-postanıza ve dosyalarınıza erişemiyorsanız, **işe veya okula erişin**bölümüne geri dönün.
+### <a name="we-couldnt-auto-discover-a-management-endpoint-matching-the-username-entered-please-check-your-username-and-try-again-if-you-know-the-url-to-your-management-endpoint-please-enter-it"></a>Girilen kullanıcı adıyla eşleşen bir yönetim uç noktası otomatik olarak bulunamadı. lütfen kullanıcı adınızı kontrol edin ve oturum açmayı yeniden deneyin. Yönetim uç noktanızın URL 'sini biliyorsanız lütfen girin.
 
-2. Aşağıdakilerden birini yapın:
+**Neden**: hesabınız, girilen URL 'nin yanı sıra (Yönetim uç noktası olarak da anılır) doğrulanamadı.  
 
-   - Aşağıdaki görüntüye benzer bir bağlantı görürseniz üzerine dokunun, Yönet, Bilgi ve Bağlantıyı Kes seçeneklerini görüp görmediğinizi denetleyin. Bu seçenekleri görürseniz, artık kaydolmuş ve bağlanırsınız.
+#### <a name="resolution"></a>Çözüm
+1. Kullanıcı adınızı ve parolanızı yeniden girin. 
+2. Hala çalışmazsa, doğru URL 'YI almak için BT destek sorumlunuza başvurun (örnek: www.yourcompany.onmicrosoft.com). 
+3. İstendiğinde, belirtilen URL 'YI girin. 
 
-     ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
+### <a name="it-looks-like-youre-not-connected-make-sure-youre-connected-to-the-network"></a>Bağlı değilsiniz gibi görünüyor. Ağa bağlı olduğunuzdan emin olun.
 
-   - Yukarıda gösterilen bağlantı bilgilerini görmüyorsanız veya onu görüyorsanız, ancak bu seçeneklerin bir kısmı eksikse, **Bağlan**' a dokunun. Daha sonra bağlanmak için iş veya okul kimlik bilgilerinizle oturum açın.  
+**Neden**: Cihazınız Wi-Fi ' y e bağlı değildir ve bir iş veya okul hesabı eklemek için bir bağlantı gerekir.     
 
-## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>“Hesabınız”ı görüyorsanız izlenecek sorun giderme adımları
+#### <a name="resolution"></a>Çözüm
+1. Cihaz araç çubuğınızdan veya ayarlarınızda **ağ durumu** küre simgesini seçin.
+2. **Connect**> bir Wi-Fi ağı seçin.  
+3. Hesabınızı yeniden bağlamayı deneyin.  
 
-Yukarıdaki adımları izlediyseniz, ancak iş veya okul e-postanıza, dosyalarınıza ve diğer verilerinize erişemiyorsanız, **hesaplara**geri dönün ve **iş erişimi**' ne dokunun.
 
-- İş veya okul hesabınızı listede görürseniz, bağlanırsınız.  
+## <a name="next-steps"></a>Sonraki adımlar  
 
-- İş veya okul hesabınızı görmüyorsanız **Bağlan**' a dokunun ve ardından iş veya okul kimlik bilgilerinizle oturum açın.
-
-## <a name="troubleshooting-steps-to-follow-if-you-see-set-up-a-work-or-school-account"></a>“İş veya okul hesabı ayarlama”yı görüyorsanız izlenecek sorun giderme adımları
-
-<strong>Girilen kullanıcı adıyla eşleşen bir yönetim uç noktasını otomatik olarak bulamadığımıza bildiren bir ileti görürseniz. Lütfen Kullanıcı adınızı denetleyip yeniden deneyin. Yönetim uç noktanızın URL 'sini biliyorsanız lütfen girin.</strong>ardından Kullanıcı adınızı ve parolanızı yeniden girmeyi deneyin. Sorun yaşamaya devam ederseniz <strong>Yönetim uç noktası</strong> metin kutusunda sağlamanız gereken web sitesi için şirketinizin destek birimiyle görüşün. Bu web sitesi büyük olasılıkla şu şekilde olacaktır: <strong>www.şirketiniz.onmicrosoft.com</strong>.
-
-Bu bilgiler yardımcı olmadı mı? Şirketinizin destek bölümüne başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.
+Bu bilgiler yardımcı olmadı mı? BT destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.

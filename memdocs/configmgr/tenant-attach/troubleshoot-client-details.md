@@ -10,12 +10,12 @@ ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 9ca99afa60ed5f8b9a1491381767ec4f6359826f
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 2555d933d3ed19c83de02dca1c672031343836fa
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252505"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643511"
 ---
 # <a name="troubleshoot-configmgr-client-details-in-the-admin-center-preview"></a>Yönetim merkezinde ConfigMgr istemci ayrıntıları sorunlarını giderme (Önizleme)
 <!--6374854, 6521921-->
@@ -44,7 +44,7 @@ ConfigMgr istemci ayrıntılarını görüntülerken, bu hatalardan biri üzerin
 
 1. Yönetici merkezinde oturum açmak için aynı hesabı kullanın. Şirket içi kimliğin ile eşitlenmesi ve bulut kimliğiyle eşleşmesi gerekir.
 1. Hesabın Configuration Manager, cihazın **koleksiyonu** için **okuma** iznine sahip olduğunu doğrulayın.
-1. Configuration Manager, kullanmakta olduğunuz yönetim kullanıcı hesabını keşfettiği emin olun. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Kullanıcılar** düğümünü seçin ve kullanıcı hesabınızı bulun.
+1. Configuration Manager, Microsoft Endpoint Manager Yönetim Merkezi 'ndeki kiracı iliştirme özelliklerine erişmek için kullanmakta olduğunuz yönetim kullanıcı hesabını bulduğundan emin olun. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Kullanıcılar** düğümünü seçin ve kullanıcı hesabınızı bulun.
 
     Hesabınız **Kullanıcılar** düğümünde listelenmiyorsa, sitenin [Active Directory Kullanıcı bulmanın](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)yapılandırmasını denetleyin.
 

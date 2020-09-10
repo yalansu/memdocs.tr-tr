@@ -5,12 +5,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
 ms.date: 08/11/2020
-ms.openlocfilehash: a61bf84a872458f37826c3de07ede05b1b658f0c
-ms.sourcegitcommit: d225ccaa67ebee444002571dc8f289624db80d10
+ms.openlocfilehash: b0c25174873e00cf23dacd2c77208775f1fb1ced
+ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88127331"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89644140"
 ---
 <!--3555750 FKA 1357954 --Don't apply H2/H3 in this include file since they are context driven by article-->
 
@@ -61,6 +61,6 @@ Ortak yönetimi etkinleştirirken Azure genel bulutu, Azure ABD kamu bulutu 'nı
 
 1. **Hazırlama** sayfasında, **pilot Intune**olarak ayarlanan her iş yükü için pilot koleksiyonu belirtin.
 
-   ![Intune otomatik kayıt toplamayı belirtin ](../media/3555750-co-management-onboarding-staging.png)
+   ![Ortak yönetim Yapılandırma Sihirbazı, hazırlama sayfası, pilot koleksiyonları belirtme](../media/3555750-co-management-onboarding-staging.png)
 
 1. Ortak yönetimi etkinleştirmek için Sihirbazı doldurun.

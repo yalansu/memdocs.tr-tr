@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/03/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b4a3334649b411390088a665f9a8fe9db8b47e1
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 7061fbba1171615b265abd895c9c1d30c64d8bfe
+ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252314"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643594"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune uygulama yönetimi nedir?
 
@@ -51,20 +51,20 @@ Intune, ihtiyacınız olan uygulamaları çalıştırmak istediğiniz cihazlara 
 
 | Uygulama yönetimi özelliği | Android/Android Kurumsal | iOS/iPadOS | macOS | Windows 10 |
 |-------------------------- | -------------------------- | ---------- | ----- | ---------- |
-| Cihazlara ve kullanıcılara uygulamaları ekleme ve atama | Evet | Evet | Evet | Evet |
-| Intune’a kayıtlı olmayan cihazlara uygulamaları atama | Evet | Evet | Hayır | Hayır |  |
-| Uygulamaların başlangıç davranışını denetlemek için uygulama yapılandırma ilkelerini kullanma | Evet | Evet | Hayır | Hayır |
-| Süresi dolan uygulamaları yenilemek için mobil uygulama sağlama ilkelerini kullanma | Hayır | Evet | Hayır | Hayır |
-| Uygulama koruma ilkeleriyle uygulamalardaki şirket verilerini koruma | Evet | Evet | Hayır | Hayır <sup>1</sup> |
-| Yüklü uygulamadan yalnızca şirket verilerini kaldırma (uygulama seçmeli silme) | Evet | Evet | Hayır | Evet |
-| Uygulama atamalarını izleme | Evet | Evet | Evet | Evet |
-| Uygulama mağazasından toplu satın alınan uygulamaları atama ve izleme | Hayır | Hayır | Hayır | Evet |
-| Cihazlara uygulamaları zorunlu yükleme (gerekli) <sup>2</sup> | Evet | Evet | Evet | Evet |
-| Şirket Portalı’ndan cihazlara isteğe bağlı yükleme (kullanılabilir yükleme) | Evet <sup>3</sup> | Evet | Evet | Evet |
-| Web’deki bir uygulamanın kısayolunu yükleme (web bağlantısı) | Evet <sup>4</sup> | Evet | Evet | Evet |
-| Şirket içi (iş kolu) uygulamaları | Evet | Evet | Evet | Evet |
-| Mağazadan uygulamalar | Evet | Evet | Hayır | Evet |
-| Uygulamaları güncelleştirme | Evet | Evet | Hayır | Evet |
+| Cihazlara ve kullanıcılara uygulamaları ekleme ve atama | Yes | Yes | Yes | Yes |
+| Intune’a kayıtlı olmayan cihazlara uygulamaları atama | Yes | Yes | Hayır | Hayır |  |
+| Uygulamaların başlangıç davranışını denetlemek için uygulama yapılandırma ilkelerini kullanma | Yes | Yes | Hayır | Hayır |
+| Süresi dolan uygulamaları yenilemek için mobil uygulama sağlama ilkelerini kullanma | Hayır | Yes | Hayır | Hayır |
+| Uygulama koruma ilkeleriyle uygulamalardaki şirket verilerini koruma | Yes | Yes | Hayır | Hayır <sup>1</sup> |
+| Yüklü uygulamadan yalnızca şirket verilerini kaldırma (uygulama seçmeli silme) | Yes | Yes | Hayır | Yes |
+| Uygulama atamalarını izleme | Yes | Yes | Yes | Yes |
+| Uygulama mağazasından toplu satın alınan uygulamaları atama ve izleme | Hayır | Hayır | Hayır | Yes |
+| Cihazlara uygulamaları zorunlu yükleme (gerekli) <sup>2</sup> | Yes | Yes | Yes | Yes |
+| Şirket Portalı’ndan cihazlara isteğe bağlı yükleme (kullanılabilir yükleme) | Evet <sup>3</sup> | Yes | Yes | Yes |
+| Web’deki bir uygulamanın kısayolunu yükleme (web bağlantısı) | Evet <sup>4</sup> | Yes | Yes | Yes |
+| Şirket içi (iş kolu) uygulamaları | Yes | Yes | Yes | Yes |
+| Mağazadan uygulamalar | Yes | Yes | Hayır | Yes |
+| Uygulamaları güncelleştirme | Yes | Yes | Hayır | Yes |
 
 <sup>1</sup> Windows 10 çalıştıran cihazlarda uygulamaları korumak için [Windows Bilgi Koruması](../protect/windows-information-protection-configure.md)’nu kullanmayı göz önüne alabilirsiniz.<br>
 <sup>2</sup> Yalnızca Intune tarafından yönetilen cihazlar için geçerlidir.<br>
@@ -72,7 +72,7 @@ Intune, ihtiyacınız olan uygulamaları çalıştırmak istediğiniz cihazlara 
 <sup>4</sup> Intune, standart Android Kurumsal cihazlarda web bağlantısı biçiminde uygulama kısayolu yüklenmesi seçeneğini sunmaz. Ancak web bağlantısı desteği [çoklu uygulama için ayrılmış Android Kurumsal cihazlarında](../configuration/device-restrictions-android-for-work.md#device-experience) desteklenir. 
 
 
-## <a name="get-started"></a>başlarken
+## <a name="get-started"></a>Kullanmaya başlayın
 
 Uygulamalarla ilgili birçok bilgiyi **uygulamalar** iş yükünde bulabilirsiniz ve aşağıdakileri yaparak erişebilirsiniz:
 
@@ -101,6 +101,7 @@ Uygulama iş yükü gezinti menüsünün en üst kısmında, yaygın olarak kull
     - **Uygulama yapılandırma ilkeleri**: Kullanıcı bir uygulama çalıştırdığında gerekebilecek ayarları sağlamak için bu ayarı kullanın. Daha fazla bilgi için bkz. [uygulama yapılandırma ilkeleri](app-configuration-policies-use-ios.md), [iOS uygulama yapılandırma ilkeleri](app-configuration-policies-use-ios.md)ve [Android uygulama yapılandırma ilkeleri](app-configuration-policies-overview.md).
     - **iOS uygulama sağlama profilleri**: iOS uygulamaları, bir sağlama profili ve bir sertifika tarafından imzalanmış kod içerir. Sertifikanın süresi dolduğunda, uygulama artık çalıştırılamaz. Intune size süresi dolmak üzere olan uygulamaların bulunduğu cihazlara yeni sağlama profili ilkesini önceden atamak için araçlar verir. Daha fazla bilgi için bkz. [iOS uygulama sağlama profilleri](app-provisioning-profile-ios.md).
     - **S modu ek ilkeleri**: yönetilen S modundaki cihazlarınızda çalışacak ek uygulamalar yetkilendirmek için bu seçeneği belirleyin. Daha fazla bilgi için bkz. [S modu ek ilkeleri](apps-win32-s-mode.md).
+    - **Office uygulamalarına yönelik ilkeler**: Microsoft 365 hizmetlerine bağlanan Office mobil uygulamaları için mobil uygulama yönetimi ilkeleri oluşturmak üzere bu seçeneği belirleyin. İOS için Outlook ve karma modern kimlik doğrulamasıyla etkinleştirilmiş Android için Intune uygulama koruma ilkeleri oluşturarak şirket içi Exchange posta kutularına erişimi de koruyabilirsiniz. Office uygulamalarına yönelik ilkeleri kullanmak için gereksinimleri karşılamanız gerekir. Gereksinimler hakkında daha fazla bilgi için bkz. [Office bulut ilkesi hizmetini kullanma gereksinimleri](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service#requirements-for-using-the-office-cloud-policy-service). Uygulama koruma ilkeleri, şirket içi Exchange veya SharePoint hizmetlerine bağlanan diğer uygulamalar için desteklenmez. İlgili bilgiler için bkz. [Enterprise için Microsoft 365 uygulamaları Için Office bulut İlkesi Hizmeti 'Ne genel bakış](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service).
     - **İlke kümeleri**: Bu seçeneği, oluşturduğunuz uygulama, ilke ve diğer yönetim nesnelerinin atanabilir bir koleksiyonunu oluşturmak için seçin. Daha fazla bilgi için bkz. [ilke kümeleri](../fundamentals/policy-sets.md).
 - **Diğer**:   
     - **Uygulama seçmeli silme**: Seçili bir kullanıcının cihazından yalnızca şirket verilerini kaldırmak için bu seçeneği kullanın. Daha fazla bilgi için bkz. [uygulama seçmeli silme](apps-selective-wipe.md).
