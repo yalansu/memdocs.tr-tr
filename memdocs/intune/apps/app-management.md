@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7061fbba1171615b265abd895c9c1d30c64d8bfe
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 68336d252cb3d3d3d49cc0c7a32e49e94ba5cdd7
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643594"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012672"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Microsoft Intune uygulama yönetimi nedir?
 
@@ -72,7 +72,7 @@ Intune, ihtiyacınız olan uygulamaları çalıştırmak istediğiniz cihazlara 
 <sup>4</sup> Intune, standart Android Kurumsal cihazlarda web bağlantısı biçiminde uygulama kısayolu yüklenmesi seçeneğini sunmaz. Ancak web bağlantısı desteği [çoklu uygulama için ayrılmış Android Kurumsal cihazlarında](../configuration/device-restrictions-android-for-work.md#device-experience) desteklenir. 
 
 
-## <a name="get-started"></a>Kullanmaya başlayın
+## <a name="get-started"></a>başlarken
 
 Uygulamalarla ilgili birçok bilgiyi **uygulamalar** iş yükünde bulabilirsiniz ve aşağıdakileri yaparak erişebilirsiniz:
 
@@ -110,10 +110,10 @@ Uygulama iş yükü gezinti menüsünün en üst kısmında, yaygın olarak kull
 - **Yardım ve destek**: Sorun giderin, destek isteyin veya Intune durumunu görüntüleyin. Daha fazla bilgi için bkz. sorun [giderme](../fundamentals/help-desk-operators.md).
 
 ### <a name="try-the-interactive-guide"></a>Etkileşimli Kılavuzu deneyin
-[Microsoft Uç Nokta Yöneticisi ile mobil ve masaüstü uygulamalarını yönetme ve koruma](https://mslearn.cloudguides.com/en-us/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) Etkileşimli Kılavuzu, Intune 'a kayıtlı cihazların nasıl yönetileceğini, ilkelerle uyumluluğu zorunlu kılmak ve kuruluşunuzun verilerini korumak Için Microsoft Uç Nokta Yöneticisi Yönetim Merkezi 'nde size adım adım yol gösterir.</br></br>
+[Microsoft Uç Nokta Yöneticisi ile mobil ve masaüstü uygulamalarını yönetme ve koruma](https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager) Etkileşimli Kılavuzu, Intune 'a kayıtlı cihazların nasıl yönetileceğini, ilkelerle uyumluluğu zorunlu kılmak ve kuruluşunuzun verilerini korumak Için Microsoft Uç Nokta Yöneticisi Yönetim Merkezi 'nde size adım adım yol gösterir.</br></br>
 
 <div align=”center”>
-<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no"/></iframe>
+<iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20and%20protect%20mobile%20and%20desktop%20applications%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 
 ## <a name="additional-information"></a>Ek bilgiler

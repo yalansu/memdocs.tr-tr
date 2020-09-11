@@ -2,11 +2,11 @@
 title: Kişisel verileri denetleme, dışarı aktarma veya silme
 titleSuffix: Microsoft Intune
 description: Kişisel verileri denetleme, dışarı aktarma veya silme hakkında bilgi edinin.
-keywords: ''
+keywords: GDPR, kişisel veriler, gizlilik
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 9/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bdf057893ff24cd4bc5b671d53fbb5c75f597f5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 5d792df5a4a8690751d7d140aa7fa89191aedb1b
+ms.sourcegitcommit: d6cbd1a1c2926064e074e3431471534eb142c905
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996002"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90012638"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Intune’da kişisel verileri denetleme, dışarı aktarma veya silme
 
@@ -60,10 +60,10 @@ Kişisel verileri Intune yönetiminden kaldırmanın üç yolu vardır:
 
 ### <a name="delete-a-user-from-intune"></a>Intune’dan kullanıcı silmek
 
-Son kullanıcının Intune 'daki kişisel verilerini silmek için bir yöneticinin [kullanıcıyı Azure Active Directory (AAD) ' dan silmesi](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)gerekir. Kullanıcı AAD 'den (kalıcı olarak silindi) silindiğinde, Intune, AAD 'den silme sinyali alır ve bu kullanıcının tüm kişisel verilerini Intune hizmetinden temizlemeyi otomatik olarak başlatır. Kullanıcının bilgileri, kaldırma eyleminin 30 gün içinde Intune hizmetinden silinir.
+Son kullanıcının Intune 'daki kişisel verilerini silmek için, bir yöneticinin [kullanıcıyı Azure Active Directory (Azure AD) ' dan silmesi](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user)gerekir. Kullanıcı Azure AD 'den (kalıcı olarak silindi) silindiğinde, Intune, Azure AD 'den silme sinyali alır ve bu kullanıcının tüm kişisel verilerini Intune hizmetinden temizlemeyi otomatik olarak başlatır. Kullanıcının bilgileri, kaldırma eyleminin 30 gün içinde Intune hizmetinden silinir.
 
 ### <a name="reset-device-to-factory-settings"></a>Cihazı fabrika ayarlarına sıfırlama
-Fabrika ayarlarına sıfırlama, tüm şirkete ait ve kişisel veri ve ayarlar yerine orijinal fabrika ayarlarını geri yükler. Bu, cihazı yeni bir çalışana vermek için kullanışlıdır. Kullanıcı dosyaları, kullanıcının yüklediği uygulamalar ve varsayılan olmayan ayarlar kaldırılır ve bu veriler kaldırma eylemini izleyen 30 gün içerisinde Intune hizmetinden silinir.
+Fabrika ayarlarına sıfırlama, tüm şirkete ait ve kişisel veri ve ayarlar yerine orijinal fabrika ayarlarını geri yükler. Bu, cihazı yeni bir çalışana vermek için kullanışlıdır. Kullanıcı dosyaları, Kullanıcı tarafından yüklenen uygulamalar ve varsayılan olmayan ayarlar kaldırılır ve bu veriler, kaldırma eyleminin 30 gün içinde Intune hizmetinden silinir.
 
 ### <a name="user-self-removal-from-intune-management"></a>Kullanıcının kendisini Intune yönetiminden kaldırması
 Kullanıcılar, yönetici yardımı olmadan kendi [Android, Apple veya Windows](../user-help/unenroll-your-device-from-intune-android.md) cihazlarını Intune’dan kaldırabilir.   
@@ -77,4 +77,4 @@ Bir Intune kiracısı Intune hesabını iptal ederse, Intune hesabının kapatı
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Intune’da kişisel verileri [denetleme, dışarı aktarma ve silme](privacy-data-audit-export-delete.md) hakkında bilgi edinin.
+Intune 'da [kişisel veri kişisel verilerini görüntüleme ve düzeltme](privacy-data-view-correct.md) hakkında bilgi edinin.
