@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c36b46cedb69ae0ce9d5559797fba78f5f7ab7f6
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: 7d16fc974e268b03b89ecd984bfbf56637ae47c0
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564287"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039389"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Silme, kullanımdan kaldırma veya el ile kaydını kaldırma yoluyla cihaz kaldırma
 
@@ -39,7 +39,7 @@ ms.locfileid: "89564287"
 |Silme eylemi|**Kayıt durumu ve kullanıcı hesabını koru**|Intune yönetiminden kaldırıldı|Description|
 |:-------------:|:------------:|:------------:|------------|
 |**Silme**| İşaretli değil | Yes | Tüm kullanıcı hesapları, verileri, MDM ilkeleri ve ayarlarını siler. İşletim sistemini varsayılan durum ve ayarlarına sıfırlar.|
-|**Silme**| İşaretli | Hayır | Tüm MDM ilkelerini temizler. Kullanıcı hesapları ve verilerini saklar. Kullanıcı ayarlarını varsayılana sıfırlar. İşletim sistemini varsayılan durum ve ayarlarına sıfırlar.|
+|**Silme**| İşaretli | No | Tüm MDM ilkelerini temizler. Kullanıcı hesapları ve verilerini saklar. Kullanıcı ayarlarını varsayılana sıfırlar. İşletim sistemini varsayılan durum ve ayarlarına sıfırlar.|
 
 
 > [!NOTE]
@@ -168,7 +168,7 @@ Intune’u etkin olmayan, eski veya yanıt vermeyen cihazları otomatik olarak s
 4. **Kaydet**'i seçin.
 
 > [!NOTE]
-> Cihaz temizleme kuralları, [tam olarak yönetilen](../enrollment/android-fully-managed-enroll.md), [adanmış](../enrollment/android-kiosk-enroll.md)ve [şirkete ait iş profili](../enrollment/android-corporate-owned-work-profile-enroll.md)gibi Android kurumsal senaryolarında kullanılamaz. 
+> Cihaz temizleme kuralları, JAMF tarafından yönetilen cihazlar ve [tamamen yönetilen](../enrollment/android-fully-managed-enroll.md), [adanmış](../enrollment/android-kiosk-enroll.md)ve [şirkete ait iş profili](../enrollment/android-corporate-owned-work-profile-enroll.md)gibi Android kurumsal senaryolarında kullanılamaz.
 
 ## <a name="delete-devices-from-the-azure-active-directory-portal"></a>Azure Active Directory portalından cihazları silme
 

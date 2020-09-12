@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75f6585144f62636033c94f701a57cb70e018c26
-ms.sourcegitcommit: 47ed9af2652495adb539638afe4e0bb0be267b9e
+ms.openlocfilehash: 92af53db4645b13d82552f6baff0ccebe8f14138
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051601"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039372"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Kayıt durumu sayfasını ayarlama
  
@@ -153,53 +153,6 @@ Hesap kurulumu için, kayıt durumu sayfası şu anda oturum açmış olan kulla
 - Sertifikalar
   - Tüm Kullanıcılar veya cihazı kaydeden kullanıcının üyesi olduğu bir kullanıcı grubuna atanan sertifika profilleri.
 
-### <a name="troubleshooting"></a>Sorun giderme
-
-Aşağıda, kayıt durumu sayfasıyla ilgili sorunları gidermeye yönelik genel sorular verilmiştir.
-
-- Uygulamalarım neden yüklenmedi ve kayıt durumu sayfası kullanılarak izlenmiyor?
-  - Uygulamaların, kayıt durumu sayfası kullanılarak yüklenip izlendiğinden emin olmak için şunları yapın:
-      - Uygulamalar, "gerekli" atama kullanılarak cihazı (cihaz hedefli uygulamalar için) veya kullanıcıyı (kullanıcı hedefli uygulamalar için) içeren bir Azure AD grubuna atanır.  (Cihaz hedefli uygulamalar, ESP 'nin cihaz aşamasında izlenir ve kullanıcı hedefli uygulamalar, ESP Kullanıcı aşamasında izlenir.)
-      - **Tüm uygulamalar ve profiller yüklenene kadar cihaz kullanımını engelle ' i** veya **gerekli uygulamalar yüklenene kadar uygulamayı blok cihaza** Ekle ' ye dahil et ' i belirtin.
-      - Uygulamalar cihaz bağlamına yüklenir ve hiçbir Kullanıcı bağlamı uygulanabilirlik kuralına sahip değildir.
-
-- Autopilot olmayan dağıtımlar için kayıt durumu sayfası neden gösteriliyor. Örneğin, bir Kullanıcı Configuration Manager ortak yönetim tarafından kaydedilen bir cihazda ilk kez oturum açtığında?  
-  - Kayıt durumu sayfası, aşağıdakiler dahil olmak üzere tüm kayıt yöntemleri için yükleme durumunu listeler.
-      - Otomatik Pilot
-      - Ortak yönetim Configuration Manager
-      - ilk kez kayıt durumu sayfası ilkesi uygulanmış olan cihazda Yeni Kullanıcı oturum açtığında
-      - **kullanıma hazır deneyim (OOBE) ayarı tarafından sağlanan cihazlara tek göster sayfası** açık ve ilke ayarlandıysa, yalnızca cihazda oturum açan Ilk Kullanıcı kayıt durumu sayfasını alır
-
-- Cihazda yapılandırılmışsa, kayıt durumu sayfasını nasıl devre dışı bırakabilirim?
-  - Kayıt durumu sayfası ilkesi, kayıt sırasında bir cihazda ayarlanır. Kayıt durumu sayfasını devre dışı bırakmak için Kullanıcı ve cihaz kayıt durumu sayfası bölümlerini devre dışı bırakmanız gerekir. Aşağıdaki yapılandırmalara sahip özel OMA-URI ayarları oluşturarak bölümleri devre dışı bırakabilirsiniz.
-
-      Kullanıcı kayıt durumu sayfasını devre dışı bırak:
-
-      ```
-      Name:  Disable User ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-      Cihaz kayıt durumu sayfasını devre dışı bırak:
-
-      ```
-      Name:  Disable Device ESP (choose a name you desire)
-      Description:  (enter a description)
-      OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipDeviceStatusPage
-      Data type:  Boolean
-      Value:  True 
-      ```
-- Günlük dosyalarını nasıl toplayabilirim?
-  - Kayıt durumu sayfası günlük dosyalarının toplanabilmesi için iki yol vardır:
-      - Kullanıcıların, ESP ilkesinde günlükleri toplama yeteneğini etkinleştirin. Kayıt durumu sayfasında bir zaman aşımı oluştuğunda, Son Kullanıcı **günlükleri toplama**seçeneğini belirleyebilir. Bir USB sürücü ekleyerek, günlük dosyaları sürücüye kopyalanabilir
-      - SHIFT-F10 tuş sırasını girerek bir komut istemi açın ve günlük dosyalarını oluşturmak için aşağıdaki komut satırını girin: 
-
-      ```
-      mdmdiagnosticstool.exe -area Autopilot -cab <pathToOutputCabFile>.cab 
-      ```
-
 ### <a name="known-issues"></a>Bilinen sorunlar
 
 Kayıt durumu sayfasıyla ilgili bilinen sorunlar aşağıda verilmiştir.
@@ -219,4 +172,6 @@ Kayıt durumu sayfasıyla ilgili bilinen sorunlar aşağıda verilmiştir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Windows kayıt sayfalarını ayarladıktan sonra, Windows cihazlarını nasıl yöneteceğinizi öğrenin. Daha fazla bilgi için bkz. [Microsoft Intune cihaz yönetimi nedir?](../remote-actions/device-management.md)
+Windows kayıt sayfalarını ayarladıktan sonra [Windows cihazlarını yönetmeyi](../remote-actions/device-management.md)öğrenin.
+
+[Windows kayıt durumu sayfasında sorun giderme](https://docs.microsoft.com/troubleshoot/mem/intune/understand-troubleshoot-esp#troubleshooting)

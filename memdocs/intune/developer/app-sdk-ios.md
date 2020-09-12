@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99cde56dbe1f9f63cb8e0af69721191455f16d2a
-ms.sourcegitcommit: ded11a8b999450f4939dcfc3d1c1adbc35c42168
+ms.openlocfilehash: 08f0f02075baf7447815beb56c0f9c0a726c4d43
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281192"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039406"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -70,6 +70,7 @@ Aşağıdaki üst bilgi dosyaları, Intune Uygulama SDK’sı tarafından geliş
 
 -  IntuneMAMAppConfig.h
 -  IntuneMAMAppConfigManager.h
+-  Intunemamzorluancemanager. h
 -  IntuneMAMDataProtectionInfo.h
 -  IntuneMAMDataProtectionManager.h
 -  IntuneMAMDefs.h
@@ -77,12 +78,15 @@ Aşağıdaki üst bilgi dosyaları, Intune Uygulama SDK’sı tarafından geliş
 -  IntuneMAMEnrollmentDelegate.h
 -  IntuneMAMEnrollmentManager.h
 -  IntuneMAMEnrollmentStatus.h
+-  Intunemamfile. h
 -  IntuneMAMFileProtectionInfo.h
 -  IntuneMAMFileProtectionManager.h
 -  IntuneMAMLogger.h
 -  IntuneMAMPolicy.h
 -  IntuneMAMPolicyDelegate.h
 -  IntuneMAMPolicyManager.h
+-  Intunemamsettings. h
+-  Intunemamuihelper. h
 -  IntuneMAMVersionInfo.h
 
 Geliştiriciler yalnızca ıntunemam. h içeri aktararak tüm önceki üst bilgilerin içeriğini kullanılabilir hale getirir
@@ -214,19 +218,19 @@ Uygulamanız zaten MSAL kullanıyorsa, aşağıdaki konfigürasyonlar gereklidir
 
 3. Ayrıca, anahtar adlı **ıntunemamsettings** sözlüğü altında `ADALRedirectUri` , msal çağrılarında kullanılacak yeniden yönlendirme URI 'sini belirtin. Alternatif olarak, uygulamanın yeniden yönlendirme URI'si `scheme://bundle_id` biçimindeyse bunun yerine `ADALRedirectScheme` belirtebilirsiniz.
 
-Ayrıca, uygulamalar çalışma zamanında bu Azure AD ayarlarını geçersiz kılabilir. Bunu yapmak için `IntuneMAMPolicyManager` örneğinde `aadAuthorityUriOverride`, `aadClientIdOverride` ve `aadRedirectUriOverride` özelliklerini ayarlamanız yeterlidir.
+Ayrıca, uygulamalar çalışma zamanında bu Azure AD ayarlarını geçersiz kılabilir. Bunu yapmak için, `aadAuthorityUriOverride` `aadClientIdOverride` sınıfında, ve özelliklerini ayarlamanız yeterlidir `aadRedirectUriOverride` `IntuneMAMSettings` .
 
 4. İOS uygulama izinlerinizi uygulama koruma ilkesi (APP) hizmetine verme adımlarının izlendiğinden emin olun. "[Uygulamanızın Intune uygulama koruma hizmeti 'ne erişmesine Izin verin (isteğe bağlı)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" altındaki [Intune SDK 'sını](app-sdk-get-started.md#next-steps-after-integration) kullanmaya başlama yönergelerini kullanın.  
 
 > [!NOTE]
-> Statik olan ve çalışma zamanında saptanması gerekmeyen tüm ayarlar için Info.plist yaklaşımı önerilir. `IntuneMAMPolicyManager` özelliklerine atanan değerler, Info.plist dosyasında belirtilen ve bunlara karşılık gelen tüm değerlerden önceliklidir ve uygulama yeniden başlatıldıktan sonra bile kalıcı olmayı sürdürür. Kullanıcının kaydı silinene ya da değerler temizlenene veya değiştirilene kadar SDK ilke iadelerinde bunları kullanmaya devam edecektir.
+> Statik olan ve çalışma zamanında saptanması gerekmeyen tüm ayarlar için Info.plist yaklaşımı önerilir. `IntuneMAMSettings`Çalışma zamanında Sınıf özelliklerine atanan değerler, Info. plist dosyasında belirtilen karşılık gelen değerlere göre önceliklidir ve uygulama yeniden başlatıldıktan sonra bile kalır. Kullanıcının kaydı silinene ya da değerler temizlenene veya değiştirilene kadar SDK ilke iadelerinde bunları kullanmaya devam edecektir.
 
 ### <a name="if-your-app-does-not-use-msal"></a>Uygulamanız MSAL kullanmıyorsa
 
 Daha önce belirtildiği gibi, Intune uygulama SDK 'sı, kimlik doğrulama ve koşullu başlatma senaryolarında [Microsoft kimlik doğrulama kitaplığını](https://github.com/AzureAD/microsoft-authentication-library-for-objc) kullanır. Ayrıca, Kullanıcı kimliğini cihaz kayıt senaryoları olmadan yönetim için MAM hizmetine kaydetmek için MSAL kullanır. **Uygulamanız kendi kimlik doğrulama mekanizması IÇIN msal kullanmıyorsa**, özel AAD ayarlarını yapılandırmanız gerekebilir:
 
 * Geliştiricilerin, [burada](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration)belirtilen biçimde özel bir yeniden yönlendirme URI 'SI ile AAD 'de bir uygulama kaydı oluşturması gerekir. 
-* Geliştiriciler `ADALClientID` `ADALRedirectUri` daha önce bahsedilen ve ayarlarını ya da `aadClientIdOverride` örnekteki eşdeğerini ve özellikleri ayarlamalıdır `aadRedirectUriOverride` `IntuneMAMPolicyManager` . 
+* Geliştiriciler, `ADALClientID` `ADALRedirectUri` daha önce bahsedilen ve ayarlarını ya da `aadClientIdOverride` sınıftaki eşdeğerini ve `aadRedirectUriOverride` özellikleri ayarlamalıdır `IntuneMAMSettings` . 
 * Geliştiriciler, Intune uygulama koruma hizmeti 'ne uygulama kaydı erişimi sağlamak için önceki bölümde 4. adımı izlediklerinden emin olmalıdır.
 
 ### <a name="special-considerations-when-using-msal"></a>MSAL kullanılırken özel konular 
@@ -277,7 +281,7 @@ VerboseLoggingEnabled | Boole | Evet olarak ayarlanırsa, Intune ayrıntılı mo
 
 ## <a name="receive-app-protection-policy"></a>Uygulama koruma ilkesini alma
 
-### <a name="overview"></a>Genel bakış
+### <a name="overview"></a>Genel Bakış
 
 Intune uygulama koruma ilkesini almak için, uygulamaların Intune MAM hizmetiyle bir kayıt isteği başlatmaları gerekir. Uygulamalar, Intune konsolunda cihaz kaydıyla veya cihaz kaydı olmadan uygulama koruma ilkesini almak için yapılandırılabilir. Kayıt olmadan uygulama koruma ilkesi (**APP-WE** veya MAM-WE olarak da bilinir), uygulamaların Intune mobil cihaz yönetimine (MDM) kaydedilmeden Intune tarafından yönetilmesine izin verir. Her iki durumda da, ilkeyi almak için Intune MAM hizmetine kaydolmak gereklidir.
 
@@ -766,7 +770,7 @@ Uygulamanızın bir Web görünümü içindeki Web sitelerini görüntüleme yet
 
 ### <a name="webviews-that-display-only-non-corporate-contentwebsites"></a>Yalnızca kurumsal olmayan içeriği/Web sitelerini görüntüleyen Web görünümleri
 
-Uygulamanız Web sitesinde kurumsal veri görüntülemeiyorsa ve kullanıcıların, yönetilen verileri uygulamanın diğer bölümlerinden ortak bir foruma geçirebileceği rastgele sitelere göz atabilme olanağı varsa, uygulama, yönetilen verilerin WebView aracılığıyla sızabilmesi için geçerli kimliği ayarlamaktan sorumludur. Buna örnek olarak, bir arama motoruna doğrudan veya dolaylı bağlantıları olan bir özellik veya geri bildirim Web sayfası önerilir. Çoklu kimlik uygulamaları, WebView 'u görüntülemeden önce boş dizeyi geçirerek ıntunemampolicymanager Setuipolicyıdentity öğesini çağırmalıdır. WebView kapatıldıktan sonra uygulama, geçerli kimliği geçirerek Setuipolicyıdentity öğesini çağırmalıdır. Tek kimlikli uygulamalar, WebView 'u görüntülemeden önce boş dizeyi geçirerek ıntunemampolicymanager Setcurrentthreadıdentity ' i çağırmalıdır. WebView kapatıldıktan sonra, uygulama Setcurrentthreadıdentity ' i çağırıp el almaz. Bu, Intune SDK 'nın WebView 'u yönetilmeyen olarak ele almasını ve ilke bu şekilde yapılandırıldıysa, uygulamanın diğer parçalarından yönetilen verilerin Web görünümüne yapıştırılmasına izin vermez. 
+Uygulamanız Web sitesinde kurumsal veri görüntülemeiyorsa ve kullanıcıların, yönetilen verileri uygulamanın diğer bölümlerinden ortak bir foruma geçirebileceği rastgele sitelere göz atabilme olanağı varsa, uygulama, yönetilen verilerin WebView aracılığıyla sızabilmesi için geçerli kimliği ayarlamaktan sorumludur. Buna örnek olarak, bir arama motoruna doğrudan veya dolaylı bağlantıları olan bir özellik veya geri bildirim Web sayfası önerilir. Çoklu kimlik uygulamaları `setUIPolicyIdentity` `IntuneMAMPolicyManager` , web görünümünü görüntülemeden önce boş dizeyi geçirerek örneği üzerinde çağırmalıdır. WebView kapatıldıktan sonra, uygulamanın `setUIPolicyIdentity` geçerli kimliği geçirerek çağrısı gerekir. Tek kimlikli uygulamalar, `setCurrentThreadIdentity` `IntuneMAMPolicyManager` Web görünümünü görüntülemeden önce boş dizeyi geçirerek örneği üzerinde çağırmalıdır. WebView kapatıldıktan sonra uygulamanın, el ile geçerek çağrısı gerekir `setCurrentThreadIdentity` . Bu, Intune SDK 'nın WebView 'u yönetilmeyen olarak ele almasını ve ilke bu şekilde yapılandırıldıysa, uygulamanın diğer parçalarından yönetilen verilerin Web görünümüne yapıştırılmasına izin vermez. 
 
 ### <a name="webviews-that-display-only-corporate-contentwebsites"></a>Yalnızca Şirket içeriğini/Web sitelerini görüntüleyen Web görünümleri
 
@@ -774,9 +778,9 @@ Uygulamanız yalnızca WebView 'daki şirket verilerini görüntülüyorsa ve ku
 
 ### <a name="webviews-that-might-display-both-corporate-and-non-corporate-contentwebsites"></a>Hem kurumsal hem de kurumsal olmayan içeriği/Web sitelerini görüntüleyebilen Web görünümleri
 
-Bu senaryo için yalnızca WKWebView desteklenir. Eski UIWebView kullanan uygulamalar WKWebView 'e geçiş yapması gerekir. Uygulamanız, WKWebView içinde kurumsal içerik görüntüleyip, kullanıcılar da veri sızıntılarına yol açabilecek kurumsal olmayan içeriğe/Web sitelerine erişebilmelidir. uygulama, ıntunemampolicydelegate. h içinde tanımlanan ısexternalurl: Delegate metodunu uygulamalıdır. Uygulamalar, temsilci yöntemine geçirilen URL 'nin, yönetilen verilerin veya kurumsal verileri sızan kurumsal olmayan bir Web sitesine yapıştırılabileceği kurumsal bir Web sitesini temsil ettiğini belirlemelidir. 
+Bu senaryo için yalnızca WKWebView desteklenir. Eski UIWebView kullanan uygulamalar WKWebView 'e geçiş yapması gerekir. Uygulamanız WKWebView içinde kurumsal içerik ' i kullanıyorsa ve kullanıcılar, veri sızıntılarına yol açabilecek kurumsal olmayan içeriğe/Web sitelerine de erişebilmelidir, uygulamanın `isExternalURL:` ' de tanımlanan temsilci yöntemini uygulaması gerekir `IntuneMAMPolicyDelegate.h` . Uygulamalar, temsilci yöntemine geçirilen URL 'nin, yönetilen verilerin veya kurumsal verileri sızan kurumsal olmayan bir Web sitesine yapıştırılabileceği kurumsal bir Web sitesini temsil ettiğini belirlemelidir. 
 
-Isexternalurl içinde Hayır döndürme işlemi, Intune SDK 'sını, yüklenen Web sitesinin, yönetilen verilerin paylaşılabileceği kurumsal bir konum olduğunu söyler. Evet döndürülürse, Intune SDK, geçerli ilke ayarları gerektiriyorsa, bu URL 'YI WKWebView yerine Edge 'de açar. Bu, uygulama içinden yönetilen verilerin dış Web sitesine sızmasını sağlar.
+Hayır döndürmek `isExternalURL` , Intune SDK 'sını, yüklenen Web sitesinin, yönetilen verilerin paylaşılabileceği kurumsal bir konum olduğunu söyler. Evet döndürülürse, Intune SDK, geçerli ilke ayarları gerektiriyorsa, bu URL 'YI WKWebView yerine Edge 'de açar. Bu, uygulama içinden yönetilen verilerin dış Web sitesine sızmasını sağlar.
 
 ## <a name="ios-best-practices"></a>iOS en iyi uygulamalar
 
@@ -827,7 +831,7 @@ Evet, BT yöneticisi uygulamaya bir seçmeli silme komutu gönderebilir. Bu, kul
 
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>SDK'nın nasıl tümleştirileceğini gösteren örnek bir uygulama var mı?
 
-Evet! Açık kaynak örnek uygulamamız [Wagr for iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App)'yi kısa süre önce yeniledik. Wagr artık Intune Uygulama SDK'sının kullanıldığı uygulama koruma ilkesi için etkinleştirildi.
+Evet! Lütfen [Chatr örnek uygulamasına](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App)bakın.
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>Uygulamamda nasıl sorun giderebilirim?
 

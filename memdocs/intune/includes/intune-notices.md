@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 08/10/2020
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b26cec11b2bdf64e6ef99d45395de00b43fa1bfa
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: e63bb965b8fed4c0266e359493bbfa67100862cb
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564116"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90045088"
 ---
 Bu bildirimler, gelecekteki Intune değişiklik ve özelliklerine hazırlanmanıza yardımcı olabilecek önemli bilgiler sağlar.
 
@@ -108,7 +108,7 @@ Bu noktada, Kullanıcı bu eylemleri tamamladıktan sonra, Samsung tarafından �
 - Cihazları bir ıMEı veya seri numarası ile şirkete ait olarak tanımlamak cihazları şirkete ait olarak otomatik olarak işaretlemez 
 - IMEı ve seri numarası artık Intune 'da BT yöneticileri için görünür olmayacaktır 
 
-**Android 11**: Cihaz Yöneticisi tarafından yönetilen cihazlardaki etkiyi değerlendirmek için en son Android 11 beta sürümünü sınamaya devam ediyoruz. İşte şunları bulduk: 
+**Android 11**: Android 11 ' e güncelleştirdiklerinde Cihaz Yöneticisi tarafından yönetilen cihazı etkileyecek değişiklikler: 
 - Android 11 ve sonraki sürümleri çalıştıran Cihaz Yöneticisi cihazlarda (Samsung hariç), Google, Şirket Portalı uygulamasına yönelik Ekim güncelleştirmesinden önce bile, kamerayı engellemeyi zorlamak için Şirket Portalı gibi yönetim aracılarına yönelik özelliği kaldırılmıştır. Cihazlara Android 11 ' e güncelleştirmeden önce uygulanan kamerayı engelleyen ilkeler uygulanmaya devam edecektir.  
 - Android 11 ile, güvenilen kök sertifikalar artık cihaz yöneticisiyle kaydedilmiş cihazlara dağıtılamaz (Samsung cihazlar hariç). Kullanıcıların, güvenilen kök sertifikayı cihaza el ile yüklemesi gerekir. Güvenilir kök sertifika bir cihaza el ile yüklendiğinde, cihaza sertifika sağlamak için SCEP kullanabilirsiniz. Bu senaryoda, hala cihaza güvenilir bir sertifika ilkesi oluşturup dağıtmanız ve bu ilkeyi SCEP sertifika profiline bağlamanız gerekir. 
     - Güvenilir kök sertifika cihazdayken, SCEP sertifika profili başarıyla yüklenir.  

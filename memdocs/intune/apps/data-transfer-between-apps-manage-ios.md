@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdb8ca0ca24d196bb21f9d7e484374555d6fefd2
-ms.sourcegitcommit: 86c2c438fd2d87f775f23a7302794565f6800cdb
+ms.openlocfilehash: 5a2a82d63b4b13f16ced558ae515c3100a8a21ad
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410853"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039423"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Microsoft Intune’da iOS uygulamaları arasında veri aktarımını yönetme
 
@@ -61,7 +61,9 @@ Kullanıcı UPN ayarını yapılandırmak, Intune tarafından yönetilen cihazla
 
      > [!NOTE]
      > Intunemamupn uygulama yapılandırma ayarlarını, alıcı uygulamayı değil, veri gönderen hedef yönetilen uygulamaya dağıtın. 
-
+     
+     > [!NOTE]
+     > Şu anda, aynı cihazda bir MDM kayıtlı hesabı varsa, uygulama üzerinde farklı bir kullanıcıyla kaydolma desteği yoktur. 
 
 4. Intune veya üçüncü taraf MDM sağlayıcınızı kullanarak kayıtlı cihazlara, **Birlikte açma yönetimi** ilkesini dağıtın.
 

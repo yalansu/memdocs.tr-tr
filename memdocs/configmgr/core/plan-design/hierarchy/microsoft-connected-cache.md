@@ -2,7 +2,7 @@
 title: Microsoft Bağlı Önbellek
 titleSuffix: Configuration Manager
 description: Teslim Iyileştirme için Configuration Manager dağıtım noktanızı yerel bir önbellek sunucusu olarak kullanma
-ms.date: 05/05/2020
+ms.date: 09/10/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c5cb5753-5728-4f81-b830-a6fd1a3e105c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd44270d8662d9e7b1b26db92e2f66035edc24f1
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: a42e0937748ecd31b16698904f724260b9b60512
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699339"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039304"
 ---
 # <a name="microsoft-connected-cache-in-configuration-manager"></a>Configuration Manager 'de Microsoft bağlı önbelleği
 
@@ -23,7 +23,7 @@ ms.locfileid: "88699339"
 
 <!--3555764-->
 
-Sürüm 1906 ' den başlayarak dağıtım noktalarınıza Microsoft bağlı önbellek sunucusu yükleyebilirsiniz. Bu içeriği şirket içinde önbelleğe alarak istemcileriniz teslim Iyileştirme özelliğinden yararlanabilir, ancak WAN bağlantılarını korumaya yardımcı olabilirsiniz.
+Sürüm 1906 ' den başlayarak dağıtım noktalarınıza Microsoft bağlı önbellek sunucusu yükleyebilirsiniz. Bu içeriği şirket içinde önbelleğe alarak istemcileriniz, WAN bağlantılarını korumaya yardımcı olabilecek teslim Iyileştirme özelliğinden faydalanabilirsiniz.
 
 > [!NOTE]
 > Sürüm 1910 ' den başlayarak, bu özellik artık **Microsoft bağlı önbelleği**olarak adlandırılmaktadır. Daha önce teslim Iyileştirmesi-ağ önbelleği olarak bilinirdi.

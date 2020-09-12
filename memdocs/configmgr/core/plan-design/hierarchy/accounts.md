@@ -10,12 +10,12 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17c22027ffc28f2e04e95b8223de27b8f26489fd
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: fff07351725e6606a49804bba79f226a9042c349
+ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88698495"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039355"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager kullanılan hesaplar
 
@@ -200,7 +200,7 @@ Varsayılan olarak, bu grubun site sunucusundaki şu klasörde **okuma**, **okum
 Bu grubun Ayrıca, aşağıdaki site sunucusundaki alt klasörlerde **okuma** izni vardır `C:\Program Files\Microsoft Configuration Manager\OSD\Bin` . 
 
 Ayrıca aşağıdaki alt klasörler için aşağıdaki izinlere sahiptir `C:\Program Files\Microsoft Configuration Manager\OSD\boot` :
-- **Okuma**  
+- **Okuyamaz**  
 - **& yürütmeyi oku**  
 - **Klasör içeriğini Listele**  
 - **Yazarken**  
@@ -336,7 +336,7 @@ Birden fazla istemci anında yükleme hesabı belirtebilirsiniz. Configuration M
 > 4. Ardından Configuration Manager eski hesabı kaldırın ve Active Directory Domain Services  
 
 > [!IMPORTANT]  
-> Bu hesaba yerel olarak oturum açma hakkı vermeyin.  
+> **Yerel olarak oturum açmaya izin**vermek üzere Windows kullanıcı hakkını atamak için etki alanı veya yerel Grup İlkesi kullanın. Yöneticiler grubunun bir üyesi olarak, bu hesap yerel olarak oturum açma hakkına sahip olur ve bu gerekli değildir. Daha iyi güvenlik için, bu hesabın hakkını açık olarak reddedin. Reddetme hakkı, izin verme hakkı 'nın yerini alır.<!--MEMDocs#744-->
 
 Daha fazla bilgi için bkz. [Client Push yüklemesi](../../clients/deploy/plan/client-installation-methods.md#client-push-installation).
 
@@ -411,7 +411,7 @@ Hesabı, kaynaklara gerekli erişimi sağlayan herhangi bir etki alanında oluş
 
 2.  Şeridin **Ayarlar** grubunda **site bileşenlerini Yapılandır**' ı seçin ve **yazılım dağıtımı**' nı seçin.  
 
-3.  **Ağ erişimi hesabı** sekmesini seçin. bir veya daha fazla hesap ayarlayın ve **Tamam**' ı seçin.  
+3.  **Ağ erişim hesabı** sekmesini seçin. Bir veya daha fazla hesap ayarlayın ve **Tamam**' ı seçin.  
 
 
 ### <a name="package-access-account"></a>Paket erişim hesabı  
