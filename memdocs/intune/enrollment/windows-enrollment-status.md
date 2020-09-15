@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92af53db4645b13d82552f6baff0ccebe8f14138
-ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
+ms.openlocfilehash: 2fc05ced647e8784333c2a20bc13c27aa2bf3447
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039372"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076133"
 ---
 # <a name="set-up-the-enrollment-status-page"></a>Kayıt durumu sayfasını ayarlama
  
@@ -122,8 +122,8 @@ Cihaz hazırlığı için, kayıt durumu sayfası şunları izler:
 Kayıt durumu sayfası aşağıdaki cihaz kurulum öğelerini izler:
 
 - Güvenlik ilkeleri
-  - Tüm kayıtlar için tek bir yapılandırma hizmeti sağlayıcısı (CSP).
-  - Intune tarafından yapılandırılan gerçek CSP’ler burada izlenmez.
+  - Microsoft Edge, atanan erişim ve bilgi noktası tarayıcı ilkeleri Şu anda izleniyor.
+  - Diğer ilkeler izlenmez.
 - Uygulamalar
   - Makine başına iş kolu (LoB) MSI uygulamaları.
   - Yükleme bağlamı ile LoB mağaza uygulamaları = Cihaz.
@@ -138,8 +138,8 @@ Kayıt durumu sayfası aşağıdaki cihaz kurulum öğelerini izler:
 Hesap kurulumu için, kayıt durumu sayfası şu anda oturum açmış olan kullanıcıya atanırsa aşağıdaki öğeleri izler:
 
 - Güvenlik ilkeleri
-  - Tüm kayıtlar için tek CSP.
-  - Intune tarafından yapılandırılan gerçek CSP’ler burada izlenmez.
+  - Microsoft Edge, atanan erişim ve bilgi noktası tarayıcı ilkeleri Şu anda izleniyor.
+  - Diğer ilkeler izlenmez.
 - Uygulamalar
   - Tüm Cihazlar, Tüm Kullanıcılar veya cihazı kaydeden kullanıcının üyesi olduğu bir kullanıcı grubuna atanan kullanıcı başına LoB MSI uygulamaları.
   - Tüm Kullanıcılar veya cihazı kaydeden kullanıcının üyesi olduğu bir kullanıcı grubuna atanan makine başına LoB MSI uygulamaları.

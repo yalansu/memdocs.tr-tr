@@ -10,12 +10,12 @@ ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7c5c9868949fa9bbf08bbf00083eda8e60750470
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 4035a6684fc346205f7c7af109bf4c0389576e77
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607694"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083973"
 ---
 # <a name="whats-new-in-version-2002-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2002 ' deki yenilikler
 
@@ -443,7 +443,7 @@ Aşağıdaki ek düzeltmeler belirli sorunları ele almak için kullanılabilir:
 | [4575339](https://support.microsoft.com/help/4575339) | Cihazlar Microsoft uç noktası Configuration Manager Yönetim Merkezi 'nde iki kez görünüyor | 23 Temmuz 2020 | Hayır |
 | [4575774](https://support.microsoft.com/help/4575774) | New-CMTSStepPrestartCheck cmdlet 'i Configuration Manager, sürüm 2002 ' de başarısız oluyor | 24 Temmuz 2020 | Hayır |
 | [4576782](https://support.microsoft.com/help/4576782) | Microsoft Endpoint Manager Yönetim Merkezi 'nde uygulama dikey penceresi zaman aşımına uğruyor | 11 Ağustos 2020 | Hayır |
-
+| [4578123](https://support.microsoft.com/help/4578123) | CMPivot sorguları Configuration Manager, sürüm 2002 ' de beklenmeyen sonuçlar döndürüyor | 24 Ağustos 2020 | Hayır |
 <!--
 > [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).

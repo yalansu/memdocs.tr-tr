@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 51e64f8f815c4ba90522acf6529cff4d971dd553
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 62f5059ef02d7b2594a506135abf332a8b6c0def
+ms.sourcegitcommit: 4b8c317c71535c2d464f336c03b5bebdd2c6d4c9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699815"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90083905"
 ---
 # <a name="integrate-with-windows-update-for-business"></a>Iş için Windows Update tümleştirin
 
@@ -90,9 +90,9 @@ Windows Insider programı hakkında daha fazla bilgi için bkz. [iş Için Windo
     - **Dal hazırlık düzeyi**: cihazın Windows güncelleştirmelerini alacağı dalı ayarlayın. Yarı yıllık kanal (hedefli), yarı yıllık kanal veya Windows Insider derlemesi seçin.
 
         > [!NOTE]
-        > **Yarı yıllık kanal (hedefli)** için Windows 10, *Sürüm 1903 veya sonraki bir sürüme*ilke dağıtın. **Yarı yıllık kanal** için Windows 10, *Sürüm 1809 veya önceki bir sürümü*için ilkeler dağıtın.
+        > **Yarı yıllık kanal** için Windows 10, *Sürüm 1903 veya sonraki bir sürüme*ilke dağıtın. **Yarı yıllık kanal (hedefli)** için Windows 10, *Sürüm 1809 veya önceki bir sürümü*için ilkeler dağıtın.
         >
-        > **Yarı yıllık kanal** için Windows 10, sürüm 1903 veya üzeri bir ilke dağıtırsanız, dağıtım **0x8004100C**hatası ile başarısız olur.<!-- 5593139 -->
+        > Windows 10, sürüm 1903 veya üzeri bir **yarı yıllık kanal (hedefli)** ilkesi için bir ilke dağıtırsanız, dağıtım **0x8004100C**hatası ile başarısız olur.<!-- 5593139 -->
 
     - **Erteleme süresi (gün)**: Özellik güncelleştirmelerinin ertelenmesi gereken gün sayısını belirtin. Bu özellik güncelleştirmelerini almayı, yayınlarından 365 güne kadar erteleyebilirsiniz.
     - **Özellik güncelleştirmelerini duraklatma başlatılıyor**: cihazların güncelleştirmeleri duraklatmadan 35 güne kadar olan özellik güncelleştirmelerini almasını isteyip istemediğinizi seçin. En fazla gün sayısı kadar bir süre geçtikten sonra duraklatma işlevi otomatik olarak sona erer ve cihaz, kullanılabilecek güncelleştirmeleri bulmak için Windows Güncelleştirmelerini tarar. Bu taramanın ardından güncelleştirmeleri yeniden duraklatabilirsiniz. Onay kutusunu temizleyerek Özellik güncelleştirmelerinin duraklamasını geri alabilirsiniz.
