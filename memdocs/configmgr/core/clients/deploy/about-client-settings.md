@@ -2,7 +2,7 @@
 title: İstemci ayarları
 titleSuffix: Configuration Manager
 description: İstemci davranışlarını denetlemek için varsayılan ve özel ayarlar hakkında bilgi edinin
-ms.date: 08/20/2020
+ms.date: 09/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8045df681560972a353e08ee43c10b6ae86dc50f
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 9e44c67e2dd7c78787d849e84784a39c40125dc0
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88693429"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076099"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager istemci ayarları hakkında
 
@@ -644,11 +644,9 @@ Bilgisayarlarda Uzak Masaüstü oturumlarını yönetmek Configuration Manager s
 ### <a name="select-the-user-portal"></a>Kullanıcı portalını seçin
 
 <!--CMADO-3601237,INADO-4297660-->
-Sürüm 2006 ' den başlayarak, Şirket Portalı ortak yönetilen cihazlara dağıtırsanız, bu ayarı **Şirket portalı**olarak yapılandırın. Bu ayar, kullanıcıların yalnızca Şirket Portalı bildirimler aldığından emin olur.
+Sürüm 2006 ' den başlayarak, Şirket Portalı ortak yönetilen cihazlara dağıtırsanız, bu ayarı **Şirket portalı**olarak yapılandırın. Bu ayar Configuration Manager ve Intune bildirimlerinin her ikisi de Şirket Portalı başlatacaktır emin olur. Configuration Manager bildirimi Şirket Portalı desteklemediği bir senaryoya yönelik ise bildirim, yazılım merkezini başlatır.
 
-Şirket Portalı ortak yönetilen bir cihaza yükler, ancak bu ayarı **Yazılım Merkezi**olarak yapılandırırsanız, kullanıcılar her iki portaldan bildirimler görür. Bu deneyim, kullanıcılar için kafa karıştırıcı olabilir.
-
-Şirket Portalı istemci ayarını değiştirirseniz, bir Kullanıcı Configuration Manager bildirimi seçtiğinde Şirket Portalı başlatır. Bildirim, Şirket Portalı desteklemediği bir senaryo için ise bildirim, yazılım merkezini başlatır.
+Şirket Portalı ortak yönetilen bir cihaza yüklerseniz, ancak bu ayarı **Yazılım Merkezi**olarak yapılandırırsanız Configuration Manager yazılım merkezi ' nden bildirimler. Intune bildirimleri Şirket Portalı başlatın. Bu davranış, kullanıcıların farklı portallarla etkileşimde bulunmak için kafa karıştırıcı olabilir.
 
 Şirket Portalı davranışı ortak yönetim iş yükü yapılandırmanıza bağlıdır. Daha fazla bilgi için bkz. [ortak yönetilen cihazlarda şirket portalı uygulamasını kullanma](../../../comanage/company-portal.md).
 

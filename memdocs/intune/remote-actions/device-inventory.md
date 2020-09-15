@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6aa3c887a22c468d8d482ce2d4ba0da8202fceb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1cc9cf0bdba9a6dea77955a6b88d3221053ea50f
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88906829"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076150"
 ---
 # <a name="see-device-details-in-intune"></a>Intune'da cihaz ayrıntılarına bakın
 
@@ -70,7 +70,7 @@ Cihazlar tarafından kullanılan taşıyıcıya bağlı olarak, tüm ayrıntıla
 
 |Ayrıntı|Açıklama|Platform| 
 |--------------|----------------------|----|  
-|Ad|Cihazın adı.|Windows, iOS|
+|Name|Cihazın adı.|Windows, iOS|
 |Yönetim adı|Yalnızca konsolda kullanılan cihaz adı. Bu adın değiştirilmesi, cihazdaki adı değiştirmez.|Windows, iOS|
 |UDID|Cihazın Benzersiz Cihaz tanımlayıcısı.|Windows, iOS|
 |Intune Cihaz Kimliği|Cihazı benzersiz şekilde tanımlayan GUID.|Windows, iOS|
@@ -105,7 +105,7 @@ Cihazlar tarafından kullanılan taşıyıcıya bağlı olarak, tüm ayrıntıla
 |Şifreli|**Evet** ise cihazda depolanan veriler şifrelenir.|Windows, iOS/ıpados, Android|
 
 > [!Note]  
-> Telefon numarası, Android kurumsal adanmış veya tam olarak yönetilen cihazlarda envantere kaydedilmiş değildir.
+> Telefon numarası, Android kurumsal adanmış, tam olarak yönetilen veya şirkete ait Iş profili cihazlarında envantere kaydedilmiş değildir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 Intune ile [cihazlarınızı yönetmek](device-management.md) için başka neler yapabileceğinizi görün.

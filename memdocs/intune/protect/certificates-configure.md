@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22bfe44b95eedcdf87a41cfaaf959c72cfbe93e2
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: f91de698a518a8f8530ae42d5a8842d7876074a1
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423824"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076228"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune kimlik doğrulaması için sertifikaları kullanma
 
@@ -46,10 +46,10 @@ Bir Microsoft sertifika yetkilisi (CA) kullandığınızda:
 
 - SCEP sertifika profillerini kullanmak için:
   - Intune ile kullanmak üzere [bir ağ cihazı kayıt hizmeti (NDES) sunucusu ayarlayın](certificates-scep-configure.md#set-up-ndes) .
-  - [Microsoft sertifika bağlayıcısını yükler](certificates-scep-configure.md#install-the-microsoft-intune-connector):
+  - [Microsoft sertifika Bağlayıcısı 'Nı yükler](certificates-scep-configure.md#install-the-microsoft-intune-connector).
 
 - PKCS sertifika profillerini kullanmak için:
-  - [Microsoft Intune için PFX Sertifika bağlayıcısını yükler] (sertifikalar-içeri aktarılmış-PFX-Yapılandır.
+  - [Microsoft Intune IÇIN PFX Sertifika bağlayıcısını yükler](certficates-pfx-configure.md).
   
 - PKCS içeri aktarılan sertifikalarını kullanmak için:
   - [Microsoft Intune IÇIN PFX Sertifika bağlayıcısını yükler](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).

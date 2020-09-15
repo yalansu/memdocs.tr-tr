@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 08/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b35011577b6c5882a2f136d9b6d321b182c2be6a
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 166681c4cdb2ac3652234c12e50bcb185c43dcbe
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83991085"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076184"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Microsoft Intune 'daki SCEP sertifika profilleri için cihazdan NDES sunucu iletişimi sorunlarını giderme
 
@@ -34,7 +34,7 @@ Bu makale, [SCEP iletişim akışına genel bakış](troubleshoot-scep-certifica
 IIS günlükleri tüm platformlar için aynı tür girdileri içerir.
 
 
-1. NDES sunucusunda, şu klasörde bulunan en son IIS günlük dosyasını açın: *%systemdrive%\ınetpub\logs\logfiles\w3svc1*
+1. NDES sunucusunda, şu klasörde bulunan en son IIS günlük dosyasını açın:   *%systemdrive%\ınetpub\logs\logfiles\w3svc1*
 
 2. Günlükte aşağıdaki örneklere benzer girdileri arayın. Her iki örnek de, sonunda görünen durum **200**' i içerir:
 
@@ -44,7 +44,7 @@ IIS günlükleri tüm platformlar için aynı tür girdileri içerir.
 
    `fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll/pkiclient.exe operation=GetCACert&message=default 80 - fe80::f53d:89b8:c3e8:5fec%13 Mozilla/4.0+(compatible;+Win32;+NDES+client) - 200 0 0 3567 0`
 
-3. Cihaz IIS ile iletişim kurduğunda, mscep. dll için bir HTTP GET isteği günlüğe kaydedilir.
+3. Cihaz IIS ile iletişim kurduğunda, mscep.dll için bir HTTP GET isteği günlüğe kaydedilir.
 
    Bu isteğin sonundaki durum kodunu gözden geçirin:
    - **Durum kodu 200**: Bu durum NDES sunucusuyla kurulan bağlantının başarılı olduğunu gösterir.
@@ -76,8 +76,8 @@ IIS günlükleri tüm platformlar için aynı tür girdileri içerir.
 Anahtar girişleri aşağıdaki örnek metin dizelerini içerir:
 
 - 1 istek var
-- Https://Server > için GetCACaps (CA) gönderilirken ' 200 Tamam ' alındı \< . msappproxy. net/certsrv/mscep/mscep. dll? Operation = getcacaps & Message = CA
-- [DN = CN = \< username>; seri = 1] öğesine ait anahtar kullanılarak pkiMessage imzalanıyor
+- Https://. msappproxy.net/certsrv/mscep/mscep.dll için GetCACaps (CA) gönderilirken ' 200 OK ' alındı \<server> ? işlem = getcacaps&Message = CA
+- [DN = CN = \<username> ; seri = 1] öğesine ait anahtar kullanılarak pkiMessage imzalanıyor
 
 
 Bağlantı, NDES sunucusunun%systemdrive%\ınetpub\logs\logfiles\w3svc1\ klasöründe IIS tarafından da günlüğe kaydedilir. Aşağıda bir örnek verilmiştir:
@@ -153,7 +153,7 @@ Aşağıdaki örneğe benzeyen bağlantılar, 500 durum koduyla, *bir Istemcinin
 
 4. **Kullanıcı veya Grup Ekle..**. ' ye tıklayın, **Seçilecek nesne adlarını girin kutusuna** **IIS_IURS** girin ve ardından **Tamam**' a tıklayın.
 
-5. **Tamam**'a tıklayın.
+5. **Tamam** düğmesine tıklayın.
 
 6. Bilgisayarı yeniden başlatın ve ardından cihazdan bağlantıyı yeniden deneyin.
 
@@ -181,7 +181,7 @@ SCEP sunucu URL 'sine gözattığınızda aşağıdaki ağ aygıtı kayıt hizme
 
 - **Neden**: Bu sorun genellikle Microsoft Intune Bağlayıcısı yüklemesiyle ilgili bir sorundur.
 
-  Mscep. dll, gelen isteği izleyen ve doğru şekilde yüklenmişse HTTP 403 hatasını görüntüleyen bir ISAPI uzantısıdır.
+  Mscep.dll, gelen isteği izleyen ve doğru şekilde yüklenmişse HTTP 403 hatasını görüntüleyen bir ISAPI uzantısıdır.
   
   **Çözüm**: Microsoft Intune bağlayıcısının başarıyla yüklenip yüklenmediğini öğrenmek Için *setupmsi. log* dosyasını inceleyin. Aşağıdaki örnekte, *yükleme başarıyla tamamlandı* ve *yükleme başarısı veya hata durumu: 0* başarılı bir yükleme olduğunu gösteriyor:
 
@@ -191,6 +191,7 @@ SCEP sunucu URL 'sine gözattığınızda aşağıdaki ağ aygıtı kayıt hizme
   ```
 
   Yükleme başarısız olursa, Microsoft Intune bağlayıcısını kaldırın ve yeniden yükleyin.
+  Yükleme başarılı olduysa ve Genreal NDES iletisini almaya devam ederseniz, IIS 'i yeniden başlatmak için **iisreset** komutunu çalıştırın.
 
 #### <a name="http-error-503"></a>HTTP hatası 503
 
@@ -224,7 +225,7 @@ SCEP uygulama havuzu başlatılmazsa, sunucusundaki uygulama olay günlüğünü
 
   **Çözüm**: ara sertifikaları Güvenilen kök sertifika yetkilileri sertifika deposundan kaldırın ve ardından NDES sunucusunu yeniden başlatın.
   
-  Güvenilen kök sertifika yetkilileri sertifika deposundaki tüm ara sertifikaları belirlemek için aşağıdaki PowerShell cmdlet 'ini çalıştırın:`Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
+  Güvenilen kök sertifika yetkilileri sertifika deposundaki tüm ara sertifikaları belirlemek için aşağıdaki PowerShell cmdlet 'ini çalıştırın: `Get-Childitem -Path cert:\LocalMachine\root -Recurse | Where-Object {$_.Issuer -ne $_.Subject}`
 
   Değerleri tarafından **verilen ve** **çıkarılan** bir sertifika, kök bir sertifikadır. Aksi takdirde, bu bir ara sertifikadır.
 
@@ -268,7 +269,7 @@ SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:
 
 #### <a name="http-414-request-uri-too-long"></a>HTTP 414 Isteği-URI çok uzun
 
-SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:`HTTP 414 Request-URI Too Long`
+SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız: `HTTP 414 Request-URI Too Long`
 
 - **Neden**: IIS istek FILTRELEME, NDES hizmetinin aldığı uzun URL 'leri (sorgular) destekleyecek şekilde yapılandırılmamış. Bu destek, [NDES HIZMETINI](certificates-scep-configure.md#configure-the-ndes-service) SCEP için altyapınızla birlikte kullanmak üzere yapılandırdığınızda yapılandırılır.
 

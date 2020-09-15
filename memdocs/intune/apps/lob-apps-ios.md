@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/07/2020
+ms.date: 09/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4aee16fc0dacce46e75735a161ae2c56d3bdb15
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: 4e1850249acab42c3284b3e77c96a764bfad9898
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83990666"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081799"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Microsoft Intune’a bir iOS iş kolu uygulaması ekleme
 
@@ -35,6 +35,8 @@ Bir iOS iş kolu uygulamasını Microsoft Intune’a eklemek için bu makaledeki
 > iOS kullanıcıları, Stocks ve Harita gibi bazı yerleşik iOS uygulamalarını kaldırabilir. Ancak siz bu uygulamaları yeniden dağıtmak için Intune’u kullanamazsınız. Kullanıcılar bu uygulamaları silerse uygulama mağazasına gidip el ile yeniden indirmeleri gerekir.
 >
 > iOS LOB uygulamaları, uygulama başına en fazla 2 GB boyut sınırına sahiptir.
+>
+> Apple paylaşılan Ipilanları LOB uygulamalarını desteklemez.
 
 > [!NOTE]
 > Paket tanımlayıcıları (örneğin, *com. contoso. app*), bir uygulamanın benzersiz tanımlayıcıları olacak şekilde tasarlanmıştır. Örneğin, test amacıyla üretim sürümünün yanına bir LOB uygulamasının beta sürümünü yüklemek için beta sürümü farklı bir benzersiz tanımlayıcıya sahip olmalıdır (örneğin, *com. contoso. app-Beta*). Aksi halde beta sürümü üretimle örtüşüyor ve yükseltme olarak değerlendirilir. . İpa dosyasının yeniden adlandırılması bu davranışı etkilemez.
@@ -44,7 +46,7 @@ Bir iOS iş kolu uygulamasını Microsoft Intune’a eklemek için bu makaledeki
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Uygulamalar**  >  **tüm uygulamalar**  >  **Ekle**' yi seçin.
 3. **Uygulama türünü seçin** bölmesinde, **diğer** uygulama türleri altında **iş kolu uygulaması**' nı seçin.
-4. **Seç**' e tıklayın. **Uygulama ekleme** adımları görüntülenir.
+4. **Seç**’e tıklayın. **Uygulama ekleme** adımları görüntülenir.
 
 ## <a name="step-1---app-information"></a>1. adım-uygulama bilgileri
 

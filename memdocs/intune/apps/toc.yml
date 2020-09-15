@@ -1,6 +1,6 @@
 - name: Uygulamaları yönetme
   href: index.yml
-- name: Genel bakış
+- name: Genel Bakış
   expanded: true
   items:
     - name: Uygulama yönetimine genel bakış
@@ -81,9 +81,17 @@
             - name: macOS LOB uygulamaları
               href: lob-apps-macos.md
             - name: Win32 uygulama yönetimi
-              href: apps-win32-app-management.md
-            - name: Win32 uygulaması S modu cihazları
-              href: apps-win32-s-mode.md
+              items:
+                - name: Win32 uygulama yönetimine genel bakış
+                  href: apps-win32-app-management.md
+                - name: Win32 uygulaması hazırlama
+                  href: apps-win32-prepare.md
+                - name: Win32 uygulaması ekleme
+                  href: apps-win32-add.md
+                - name: Win32 uygulamasında sorun giderme
+                  href: apps-win32-troubleshoot.md
+                - name: Win32 uygulaması S modu cihazları
+                  href: apps-win32-s-mode.md
         - name: Belirli uygulamalar ekleme
           items:
             - name: Şirket Portalı uygulaması - Otomatik Pilot

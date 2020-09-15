@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 1/15/2018
+ms.date: 9/11/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fafc6a48e933fbcce692c560532736808cbf7c4
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: eec0f59504351f6b40e221a15d89a62e9a28be05
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915254"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076211"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-fully-managed-or-corporate-owned-with-work-profile-devices"></a>Android kurumsal adanmış, tam olarak yönetilen veya şirkete ait iş profili cihazlarına kaydetme
 
-Android kurumsal [adanmış cihazlarınızı](android-kiosk-enroll.md), [tam olarak yönetilen cihazlarınızı](android-fully-managed-enroll.md)veya [şirkete ait iş profili cihazlarınızı](android-corporate-owned-work-profile-enroll.md) Intune 'da ayarladıktan sonra, cihazları kaydedebilirsiniz. Hem adanmış hem de tam olarak yönetilen cihazların Intune kaydı, fabrika sıfırlaması ile başlar. Android kurumsal cihazlarınızı kaydetme, işletim sistemine bağlıdır.
+Android kurumsal [adanmış cihazlarınızı](android-kiosk-enroll.md), [tam olarak yönetilen cihazlarınızı](android-fully-managed-enroll.md)veya [şirkete ait iş profili cihazlarınızı](android-corporate-owned-work-profile-enroll.md) Intune 'da ayarladıktan sonra, cihazları kaydedebilirsiniz. Adanmış cihazlar, tam olarak yönetilen cihazlar ve iş profiliyle şirkete ait Intune kaydı, fabrika sıfırlaması ile başlar. Android kurumsal cihazlarınızı kaydetme, işletim sistemine bağlıdır.
 
 | Kayıt yöntemi | Adanmış ve tam olarak yönetilen cihazlar için en düşük Android işletim sistemi sürümü |
 | ----- | ----- |

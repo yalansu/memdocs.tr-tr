@@ -10,12 +10,12 @@ ms.assetid: 26456bb7-f46b-4d8d-bb0b-e3fd9a52fe14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd49546e49d6964cfe37b0b13e1abe9175f4aa0e
-ms.sourcegitcommit: 7b656712cc9340d18211c7754cb99bcaae91b0ca
+ms.openlocfilehash: d44116ee022f2f01fb8b84244fb903fa6d440345
+ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89432566"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076167"
 ---
 # <a name="use-the-company-portal-app-on-co-managed-devices"></a>Ortak yönetilen cihazlarda Şirket Portalı uygulamasını kullanma
 
@@ -121,7 +121,12 @@ Configuration Manager uygulamalarının yüklenmesiyle ilgili sorunları giderme
 
 ### <a name="im-using-configuration-manager-version-2002-why-is-the-new-company-portal-showing-configuration-manager-apps"></a><a name="bkmk_ver-prereq"></a> Configuration Manager sürüm 2002 kullanıyorum, neden yeni Şirket Portalı Configuration Manager uygulamaları gösteriyor?
 
-Şirket Portalı sürüm 11.0.8980.0 veya üzeri, kendisini kullanan tüm ortak yönetilen istemciler için Configuration Manager dağıtılan uygulamaları gösterir. Configuration Manager sürüm 2006, istemci ayarını bildirimleri denetlemek için eklediği için önkoşuldur. Daha önceki bir sürümün ortak yönetilen cihazına Şirket Portalı yüklerseniz veya istemci ayarını yapılandırmazsanız kullanıcılar her iki portaldan gelen bildirimleri görür. Bu deneyim, kullanıcılar için kafa karıştırıcı olabilir.
+Şirket Portalı sürüm 11.0.8980.0 veya üzeri, kendisini kullanan tüm ortak yönetilen istemciler için Configuration Manager dağıtılan uygulamaları gösterir. Configuration Manager sürüm 2006, istemci ayarını bildirimleri denetlemek için eklediği için önkoşuldur. Daha önceki bir sürümün ortak yönetilen cihazına Şirket Portalı yüklerseniz veya istemci ayarını yapılandırmazsanız, kullanıcılar için kafa karıştırıcı olabilecek davranışa neden olur. Configuration Manager Software Center 'ı başlatın, Intune 'dan gelen bildirimler Şirket Portalı başlatır.
+
+Microsoft şunları öneriyor:
+
+- Configuration Manager sürüm 2006 veya üstünü çalıştıran ortak yönetilen istemcilerde Şirket Portalı Version 11.0.8980.0 veya üstünü kullanın.
+- İstemci ayarını yapılandırın **Şirket portalı** için **Kullanıcı portalını seçin**
 
 ### <a name="does-company-portal-support-applications-deployed-as-software-updates-from-configuration-manager"></a>Configuration Manager yazılım güncelleştirmeleri olarak dağıtılan uygulamaları Şirket Portalı destekler mi?
 

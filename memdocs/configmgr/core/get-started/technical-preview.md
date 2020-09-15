@@ -2,7 +2,7 @@
 title: Teknik Önizleme sürümleri
 titleSuffix: Configuration Manager
 description: Configuration Manager ' de yeni işlevsellik ve özellikleri test etmek için teknik önizleme dalı hakkında bilgi edinin.
-ms.date: 09/08/2020
+ms.date: 09/14/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a5740d2ef1c0745d5df4995ba6ecb70015b7b13
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: a27cd1e7a28b52ccc224f965b678d7d578be75eb
+ms.sourcegitcommit: dc2cca9eb70aef15037e8f7d18d671c513bfde85
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564219"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90081748"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager için teknik önizleme
 
@@ -116,19 +116,21 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2020/technical-preview-2007.md) <!--ID-->
+<!-- - [title](2020/technical-preview-2009.md) <!--ID-->
 
 Aşağıdaki özellikler en son Configuration Manager Technical Preview sürümü ile sunulmaktadır:
 
-### <a name="technical-preview-version-2008"></a>Technical Preview sürüm 2008
+### <a name="technical-preview-version-2009"></a>Technical Preview sürüm 2009
 
-- [Koleksiyon sorgu önizlemesi](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
-- [Özellik güncelleştirmeleri için SetupDiag hatalarını çözümle](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
-- [Senaryo durumunu izleme](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
-- [Koleksiyon değerlendirme görünümü](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
-- [Bkz. konsolundaki görev sırası boyutu](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
-- [Eski toplanan tanılama dosyalarını Sil görevi](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
-- [Nesneleri geçerli klasöre aktar](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
+- [Sanal makine ölçek kümesi ile bulut yönetimi ağ geçidi](2020/technical-preview-2009.md#bkmk_cmgvmss) <!--3601040-->
+- [Uzaktan denetim geliştirmeleri](2020/technical-preview-2009.md#bkmk_remctrl) <!--4575930-->
+- [Önyükleme medyası kullanarak CMG üzerinden bir işletim sistemi dağıtma](2020/technical-preview-2009.md#bkmk_osdcmg) <!--3555923-->
+- [Koleksiyon ilişkilerini görüntüle](2020/technical-preview-2009.md#bkmk_coll) <!--3608121-->
+- [Eş uyandırma 'yı kullanarak makineyi dağıtım son tarihinde uyandırma](2020/technical-preview-2009.md#bkmk_wol) <!--3734819-->
+- [Konsol içi bildirimlerde iyileştirmeler](2020/technical-preview-2009.md#bkmk_notifications) <!--7410221-->
+- [Artık güncelleştirmeleri alan cihazların bildirimleri](2020/technical-preview-2009.md#bkmk_patch) <!--7520646-->
+- [Yönetici olmayan hesaplar için geliştirilmiş Windows Server yeniden başlatma deneyimi](2020/technical-preview-2009.md#bkmk_server) <!--7821529-->
+- [İşletim sistemi dağıtımına yönelik iyileştirmeler](2020/technical-preview-2009.md#bkmk_osd) <!--7799892,7068388-->
 
 > [!NOTE]
 > Technical Preview 'un önceki bir sürümünde kullanılabilen özellikler sonraki sürümlerde de kullanılabilir durumda kalır. Benzer şekilde, geçerli dala eklenen Configuration Manager özellikler, Technical Preview dalında kullanılabilir kalır.
@@ -145,6 +147,16 @@ When there's a new CB, add any features not in that CB to the table in H2 "Featu
 
 > [!TIP]
 > Yeni bir geçerli dal sürümü kullanılabilir olduğunda, bu sürümde kullanılabilen özellikler en son *Yenilikler* makalesinde listelenmiştir. Daha fazla bilgi için bkz. [artımlı sürümlerindeki](../plan-design/changes/whats-new-incremental-versions.md#supported-versions)yenilikler.
+
+### <a name="technical-preview-version-2008"></a>Technical Preview sürüm 2008
+
+- [Koleksiyon sorgu önizlemesi](2020/technical-preview-2008.md#collection-query-preview) <!--7380401-->
+- [Özellik güncelleştirmeleri için SetupDiag hatalarını çözümle](2020/technical-preview-2008.md#bkmk_setupdiag) <!--4385028-->
+- [Senaryo durumunu izleme](2020/technical-preview-2008.md#bkmk_health) <!--7699463-->
+- [Koleksiyon değerlendirme görünümü](2020/technical-preview-2008.md#bkmk_colleval) <!--6251274-->
+- [Bkz. konsolundaki görev sırası boyutu](2020/technical-preview-2008.md#bkmk_tssize) <!--7645732-->
+- [Eski toplanan tanılama dosyalarını Sil görevi](2020/technical-preview-2008.md#bkmk_logs) <!--6503308-->
+- [Nesneleri geçerli klasöre aktar](2020/technical-preview-2008.md#bkmk_folder) <!--6601203-->
 
 ### <a name="technical-preview-version-2007"></a>Technical Preview sürüm 2007
 
@@ -164,7 +176,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 Aşağıdaki özellikler Configuration Manager Technical Preview dalının önceki sürümleriyle yayımlanmıştır. Bu özellikler sonraki sürümlerde kullanılabilir kalır, ancak henüz geçerli dalda kullanılabilir değildir.
 
-| Özellik        | Technical Preview sürümü |
+| Öne çıkan özelliği        | Technical Preview sürümü |
 |----------------|---------------------------|
 | CMG aracılığıyla kullanılabilir uygulamalarda iyileştirmeler <!--7033501--> | [Teknik Önizleme 2006](2020/technical-preview-2006.md#bkmk_availapp) |
 | Kiracı iliştirme: yönetim merkezinden betikleri çalıştırma <!--6234688--> | [Teknik Önizleme 2005](2020/technical-preview-2005.md#bkmk_scripts) |
