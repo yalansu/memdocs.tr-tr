@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a28d2810c3a93cd60013ae347c054783515196d7
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: d5ec26d03336e73f7dadf0912992b018058dc493
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907305"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574890"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -226,14 +226,13 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 
 14. Önceki adımda **Sertifikaya göre Apple Configurator’a izin ver**’i seçtiyseniz içeri aktaracak bir Apple Configurator Sertifikası seçin.
 
-15. Her bir arka arkaya iade edildiğinde otomatik olarak uygulanan cihazlar için bir adlandırma biçimi belirtebilirsiniz. Adlandırma şablonu oluşturmak için **Cihaz adı şablonu uygula** bölümünde **Evet**'i seçin. Ardından **Cihaz Adı Şablonu**'na bu profili kullanan cihazlar için kullanılacak şablonu girin. Cihaz türünü ve seri numarasını içeren bir şablon biçimi belirtebilirsiniz. 
-
+15. Her bir arka arkaya iade edildiğinde otomatik olarak uygulanan cihazlar için bir adlandırma biçimi belirtebilirsiniz. Adlandırma şablonu oluşturmak için **Cihaz adı şablonu uygula** bölümünde **Evet**'i seçin. Ardından **Cihaz Adı Şablonu**'na bu profili kullanan cihazlar için kullanılacak şablonu girin. Cihaz türünü ve seri numarasını içeren bir şablon biçimi belirtebilirsiniz. Cihaz adı şablonu iPhone, iPad ve iPod Touch desteği içerir. 
 16. **İleri ' yi seçin: Kurulum Yardımcısı özelleştirmesi**.
 
 17. **Kurulum Yardımcısı özelleştirmesi** sayfasında, aşağıdaki profil ayarlarını yapılandırın: ![ Kurulum Yardımcısı özelleştirmesi.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Departman ayarları | Açıklama |
+    | Departman ayarları | Description |
     |---|---|
     | <strong>Bölüm Adı</strong> | Kullanıcı, etkinleştirme sırasında <strong>Yapılandırma Hakkında</strong> öğesine dokunduğunda görüntülenir. |
     |    <strong>Departman Telefonu</strong>     | Kullanıcı, etkinleştirme sırasında <strong>Yardım Gerekli</strong> düğmesine dokunduğunda görüntülenir. |

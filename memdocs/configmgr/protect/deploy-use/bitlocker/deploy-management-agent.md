@@ -10,12 +10,12 @@ ms.assetid: 39aa0558-742c-4171-81bc-9b1e6707f4ea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8ef60b82e6ab594689576520443bc74eac7bd17d
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 018b8f09b0f5595c854eee761f495974665a45ce
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606933"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574687"
 ---
 # <a name="deploy-bitlocker-management"></a>BitLocker yönetimini dağıtma
 
@@ -139,7 +139,7 @@ Aynı ilkenin birden çok dağıtımını oluşturabilirsiniz. Her dağıtımla 
 
 Sürüm 2006 ' den başlayarak, bu görev için Windows PowerShell cmdlet 'lerini kullanabilirsiniz. Daha fazla bilgi için bkz. [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
-## <a name="monitor"></a>İzleme
+## <a name="monitor"></a>İzleyici
 
 **BitLocker yönetim** düğümünün Ayrıntılar bölmesinde ilke dağıtımıyla ilgili temel uyumluluk istatistiklerini görüntüleyin:
 
@@ -214,7 +214,8 @@ Bu davranışı geçici olarak çözmek için, önce cihazda BitLocker 'ı devre
 
 BitLocker için Configuration Manager istemci işleyicisi ortak yönetilebiliyor. Cihaz ortak yönetilmiyorsa ve [Endpoint Protection iş yükünü](../../../comanage/workloads.md#endpoint-protection) Intune 'a geçerseniz, Configuration Manager istemci BitLocker ilkesini yoksayar. Cihaz, Intune 'dan Windows şifreleme ilkesini alır.
 
-Şifreleme yönetimi yetkililerini değiştirdiğinizde ve istenen şifreleme algoritması da değişirse, [yeniden şifrelemeyi](#re-encryption) planlamanız gerekir.
+> [!NOTE]
+> İstenen şifreleme algoritmasının sürdürülmesi sırasında şifreleme yönetimi yetkililerini değiştirmek, istemcide ek eylem gerektirmez. Ancak, şifreleme yönetimi yetkililerini değiştirirseniz ve istenen şifreleme algoritması da değişirse, [yeniden şifrelemeyi](#re-encryption)planlamanız gerekir.
 
 BitLocker 'ı Intune ile yönetme hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 

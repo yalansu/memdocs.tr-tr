@@ -2,7 +2,7 @@
 title: BitLocker portallarını ayarlama
 titleSuffix: Configuration Manager
 description: Self Servis portalı ve yönetim ve izleme Web sitesi için BitLocker yönetim bileşenlerini yükler
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
@@ -10,12 +10,12 @@ ms.assetid: 1cd8ac9f-b7ba-4cf4-8cd2-d548b0d6b1df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1b07d30c7a593ec0bd70e6c330c57364186f2c8
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: f6834090cd2a58113fb26e298c0c451f846f5ce9
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697271"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574601"
 ---
 # <a name="set-up-bitlocker-portals"></a>BitLocker portallarını ayarlama
 
@@ -106,6 +106,8 @@ Bu işlem, Web sunucusuna bu bileşenleri yüklemek için MBAMWebSiteInstaller.p
 - `-IISWebSite`: Betiğin MBAMWEB uygulamalarını yüklediği Web sitesi. Varsayılan olarak, IIS varsayılan Web sitesini kullanır. Bu parametreyi kullanmadan önce özel Web sitesini oluşturun.
 
 - `-InstallDirectory`: Betiğin Web uygulaması dosyalarını yüklediği yol. Varsayılan olarak, bu yol olur `C:\inetpub` . Bu parametreyi kullanmadan önce özel dizini oluşturun.
+
+- `-DomainName`*sürüm 2002 ve üzeri için geçerlidir*: sunucunun, yardım masası veya self servis web portalı rolüyle NetBIOS etki alanı adını belirtin. Yalnızca NetBIOS etki alanı adının DNS etki alanı adıyla eşleşmemesi durumunda gereklidir. Bu yapılandırma ayrık etki alanı ad alanı olarak da bilinir. Örneğin, `-DomainName fabrikham` DNS etki alanı adı `contoso.com` .<!-- MEMDocs #759 -->
 
 - `-Uninstall`: BitLocker yönetim yardım masası/Self Servis Web portalı sitelerini daha önce yüklenmiş oldukları bir Web sunucusunda kaldırır.
 

@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 37abb7cba84c8e2479e59070e47c3f09b3b2b8d9
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 49792ea588f01cc57a1dbce9cc137b94a0e4d291
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606965"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574805"
 ---
 # <a name="task-sequence-steps"></a>Görev dizisi adımları
 
@@ -623,7 +623,7 @@ Bu adımın **Özellikler** sekmesinde, bu bölümde açıklanan ayarları yapı
 
 Yakalanan işletim sistemi görüntüsünü depolarken Configuration Manager kullandığı konumun dosya sistemi yolu.  
 
-#### <a name="description"></a>Açıklama  
+#### <a name="description"></a>Description  
 
 Yansıma dosyasında depolanan yakalanan işletim sistemi görüntüsünün isteğe bağlı kullanıcı tanımlı bir açıklaması.  
 
@@ -1096,8 +1096,9 @@ Sabit sürücü zaten şifrelendiyse ancak BitLocker devre dışı bırakıldıy
 
 Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:  
 
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)  
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)  
+- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
 
 ### <a name="cmdlets-for-enable-bitlocker"></a>BitLocker 'ı etkinleştirme için cmdlet 'ler
 
@@ -1592,12 +1593,20 @@ Başvuru bilgisayarında Configuration Manager istemcisini kaldırmak veya yapı
 
 Bu adım yalnızca anahtar bilgilerini kaldırmak yerine Configuration Manager istemcisini tamamen kaldırır. Görev dizisi yakalanan işletim sistemi görüntüsünü dağıttığında, her seferinde yeni bir Configuration Manager istemci yüklenir.  
 
-> [!Note]  
-> Görev sırası altyapısı, derleme sırasında yalnızca istemciyi kaldırır **ve bir başvuru işletim sistemi görüntüsü Yakala** görev dizisi. Görev sırası altyapısı, yakalama medyası veya özel bir görev dizisi gibi diğer yakalama yöntemleri sırasında istemciyi kaldırmaz.  
+> [!TIP]
+> Varsayılan olarak, görev dizisi altyapısı yalnızca derleme sırasında istemciyi kaldırır **ve bir başvuru işletim sistemi görüntüsünü yakala** görev sırasını yakalar. Görev sırası altyapısı, yakalama medyası veya özel bir görev dizisi gibi diğer yakalama yöntemleri sırasında istemciyi kaldırmaz. Bu davranışı bir işletim sistemi dağıtımı görev dizisi için overide yapabilirsiniz. {1 & gt; görev dizisi değişkenini **yakala adımı Için hazırlama** **adımını yapmadan önce** , **Smstsunınstallccmclient** . Bu değişken ve davranış yalnızca işletim sistemi dağıtımı görev dizileri için geçerlidir. Cihazın bir sonraki yeniden başlatıldıktan sonra istemciyi kaldırır.
 
 Bu görev dizisi adımı yalnızca tam işletim sisteminde çalışır. Windows PE 'de çalışmaz.  
 
 Bu adımı görev sırası düzenleyicisine eklemek için **Ekle**, **görüntüler**Seç ' i seçin ve **ConfigMgr istemcisini yakalama için hazırla**' yı seçin.
+
+
+### <a name="variables-for-prepare-configmgr-client-for-capture"></a>ConfigMgr Istemcisini yakalamaya hazırlama değişkenleri
+
+Aşağıdaki görev dizisi değişkenlerini bu adımla kullanın:  
+
+- Smstsunınstallccmclient
+
 
 ### <a name="cmdlets-for-prepare-configmgr-client-for-capture"></a>ConfigMgr Istemcisini yakalamaya hazırlamaya yönelik cmdlet 'ler
 

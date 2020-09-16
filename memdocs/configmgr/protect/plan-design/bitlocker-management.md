@@ -2,7 +2,7 @@
 title: BitLocker yönetimi için planlama
 titleSuffix: Configuration Manager
 description: Configuration Manager BitLocker Sürücü Şifrelemesi yönetmeyi planlayın
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a4d8cda2-bc9b-4fb4-aa0d-23c31b4fc60b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 22e78fdba1c004554d671ba2db96c61395f95ca2
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 193189e0e949aefdff15630476a306c1dc4ef2c7
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88699968"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574540"
 ---
 # <a name="plan-for-bitlocker-management"></a>BitLocker yönetimi için planlama
 
@@ -23,12 +23,12 @@ ms.locfileid: "88699968"
 
 <!-- 3601034 -->
 
-Sürüm 1910 ' den başlayarak, Active Directory katılmış şirket içi Windows istemcileri için BitLocker Sürücü Şifrelemesi (BDE) yönetmek üzere Configuration Manager kullanın. Azure Active Directory birleştirilmiş veya çalışma grubu istemcileri desteklenmez. Microsoft BitLocker yönetim ve Izleme (MBAD) kullanımını değiştirecek tam BitLocker yaşam döngüsü yönetimi sağlar.
+Sürüm 1910 ' den başlayarak, Active Directory katılmış şirket içi Windows istemcileri için BitLocker Sürücü Şifrelemesi (BDE) yönetmek üzere Configuration Manager kullanın. Microsoft BitLocker yönetim ve Izleme (MBAD) kullanımını değiştirecek tam BitLocker yaşam döngüsü yönetimi sağlar.
 
 > [!NOTE]
 > Configuration Manager varsayılan olarak bu isteğe bağlı özelliği etkinleştirmez. Bu özelliği kullanmadan önce etkinleştirmeniz gerekir. Daha fazla bilgi için, bkz. [Enable optional features from updates](../../core/servers/manage/install-in-console-updates.md#bkmk_options).  
 
-Daha fazla bilgi için bkz. [BitLocker genel bakış](/windows/security/information-protection/bitlocker/bitlocker-overview).
+BitLocker hakkında daha fazla genel bilgi için bkz. [BitLocker 'a genel bakış](/windows/security/information-protection/bitlocker/bitlocker-overview).
 
 > [!TIP]
 > Microsoft Endpoint Manager bulut hizmetini kullanarak, ortak yönetilen Windows 10 cihazlarında şifrelemeyi yönetmek için [ **Endpoint Protection** iş yükünü](../../comanage/workloads.md#endpoint-protection) Intune 'a geçirin. Intune kullanma hakkında daha fazla bilgi için bkz. [Windows şifrelemesi](/intune/protect/endpoint-protection-windows-10#windows-encryption).
@@ -70,7 +70,9 @@ Anahtar dönüşü ve BitLocker ile ilgili diğer destek de dahil olmak üzere, 
 
 Kullanıcıların, BitLocker şifreli bir cihazın kilidini açmak için tek kullanılan bir anahtarla yardım almasına izin verin. Bu anahtar kullanıldığında, cihaz için yeni bir anahtar oluşturur.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
+
+- Güvenilir olmayan etki alanlarındaki Azure Active Directory katılmış, çalışma grubu istemcileri veya istemcileri desteklenmez. İstemcinin şu anda şirket içi Active Directory katılması gerekir. Bu yapılandırma, anahtarları emanetmek için kurtarma hizmeti ile kimlik doğrulaması yapmak için kullanılır.
 
 - Bir BitLocker yönetim ilkesi oluşturmak için, Configuration Manager ' de **tam yönetici** rolüne sahip olmanız gerekir.
 

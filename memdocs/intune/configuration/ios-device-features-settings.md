@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad78240aa9f2a1ef515be2635cfad0ce68e8ecc8
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6989dc3559a1de950f5d2ec8280894f1f1983b61
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909016"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574873"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -343,7 +343,7 @@ Bu özellik şu platformlarda geçerlidir:
   - URL 'Ler veya ile başlamalıdır `http://` `https://` .
 
 - **Ek yapılandırma** (Microsoft Azure AD, yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantısına geçirilecek uzantıya özgü ek veriler girin:
-  - **Anahtar**: eklemek istediğiniz öğenin adını girin, örneğin `user name` .
+  - **Anahtar**: eklemek istediğiniz öğenin adını girin, örneğin `user name` . `AppAllowList` büyük/küçük harfe duyarlıdır. ' AppAllowList ' tam olarak girdiğinizden emin olun. 
   - **Tür**: veri türünü girin. Seçenekleriniz şunlardır:
 
     - Dize

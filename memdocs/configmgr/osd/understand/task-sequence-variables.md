@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86a19970b58747d83ae8823eb8e2a85c40c03c4d
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ab4d42d635955774f504ccd831e9ced755b0b36a
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88697356"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574737"
 ---
 # <a name="task-sequence-variables"></a>Görev dizisi değişkenleri
 
@@ -579,6 +579,12 @@ Sürücü kataloğunda donanım cihazıyla uyumlu birden çok cihaz sürücüsü
 (giriş)
 
 Sürücü kataloğu kategorisi benzersiz kimliklerinin virgülle ayrılmış listesi. **Sürücüyü otomatik olarak Uygula** adımı yalnızca belirtilen kategorilerden en az birinde bulunan sürücüleri dikkate alır. Bu değer isteğe bağlıdır ve varsayılan olarak ayarlı değildir. Sitedeki **SMS_CategoryInstance** nesnelerinin listesini numaralandırarak kullanılabilir kategori kimliklerini elde edin.
+
+### <a name="osdbitlockerpin"></a><a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+<!-- MEMDOcs #764 -->
+*[BitLocker 'ı etkinleştir](task-sequence-steps.md#BKMK_EnableBitLocker) adımını uygular.*
+
+BitLocker şifrelemesi için PIN 'ı belirtin. Bu değişken yalnızca BitLocker modu **TPM ve PIN**ise geçerlidir.
 
 ### <a name="osdbitlockerrebootcount"></a><a name="OSDBitLockerRebootCount"></a> OSDBitLockerRebootCount
 

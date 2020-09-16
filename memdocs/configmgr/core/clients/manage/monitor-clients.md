@@ -2,7 +2,7 @@
 title: İstemcileri izleme
 titleSuffix: Configuration Manager
 description: Configuration Manager 'da istemcilerin nasıl izleneceği hakkında ayrıntılı yönergeler alın
-ms.date: 07/12/2019
+ms.date: 09/15/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a10e169db36c62b083c56114159b54185a1040
-ms.sourcegitcommit: 7e34b561d43aa086fc07ab4edf2230d09c04f05b
+ms.openlocfilehash: 8094db944a1430311f0c3bb8c94bc7043b12c5ae
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87525922"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574634"
 ---
 # <a name="how-to-monitor-clients-in-configuration-manager"></a>Configuration Manager istemcileri izleme
 
@@ -47,13 +47,13 @@ Configuration Manager, istemci durumu olarak aşağıdaki bilgi türlerini sağl
 - **Kullanımdan kalktı**: site aynı donanım kimliğine sahip yeni bir cihaz kaydı buldu, bu nedenle eski kaydı eski olarak işaretliyor. Raporlar aynı cihazın eski kayıtlarını birden çok kez sayamıyor. Hala eski cihazlara ilke hedefleyebilirsiniz. Site, 90 gün sonra etkin olmayan bir kayıt için sinyal almadığında, artık kullanılmayan cihaz, **eski Istemci bulma verilerini sil**site bakım görevini çalıştırdığında kaldırılır.
 
 
-## <a name="monitor-individual-clients"></a><a name="bkmk_indStatus"></a>Tek tek istemcileri izleme
+## <a name="monitor-individual-clients"></a><a name="bkmk_indStatus"></a> Tek tek istemcileri izleme
 
 1. Configuration Manager konsolunda **varlıklar ve uyum** çalışma alanına gidin. **Cihazlar** düğümünü seçin ya da **Cihaz Koleksiyonları**altında bir koleksiyon seçin.  
 
     Her satırın başındaki simgeler cihazın çevrimiçi durumunu gösterir:  
 
-    | Simge | Açıklama |
+    | Simge | Description |
     | ---- | ----------- |  
     |![istemciler için çevrimiçi durum simgesi](../../../core/clients/manage/media/online-status-icon.png)|Cihaz çevrimiçi|  
     |![istemciler için çevrimdışı durum simgesi](../../../core/clients/manage/media/offline-status-icon.png)|Cihaz çevrimdışı|  
@@ -71,16 +71,16 @@ Configuration Manager, istemci durumu olarak aşağıdaki bilgi türlerini sağl
 3. Ayrıntı bölmesinde daha fazla durum görmek için liste bölmesinde tek bir istemciyi seçin. Bu bilgiler istemci etkinliği ve istemci denetimi durumunu içerir.  
 
 
-## <a name="client-health-dashboard"></a><a name="bkmk_health"></a>İstemci sistem durumu panosu
+## <a name="client-health-dashboard"></a><a name="bkmk_health"></a> İstemci sistem durumu panosu
 
 <!--3599209-->
 Ortamınızın güvenliğini sağlamaya yardımcı olmak için yazılım güncelleştirmelerini ve diğer uygulamaları dağıtırsınız, ancak bu dağıtımlar yalnızca sağlıklı istemcilere ulaşın. Sağlıksız Configuration Manager istemcileri genel uyumluluğu olumsuz etkiler. İstemci durumunun belirlenmesi, paydaya bağlı olarak, kaç tane toplam cihazın yönetim kapsamınızda olması gerektiği konusunda zor olabilir mi? Örneğin, Active Directory tüm sistemleri keşfetseniz, bu kayıtlardan bazıları kullanımdan kaldırılan makineler için olsa bile, bu işlem paydayı arttırır.
 
-Sürüm 1902 ' den başlayarak, ortamınızdaki Configuration Manager istemcilerinin sistem durumu hakkında bilgi içeren bir panoyu görüntüleyin. İstemci sistem durumunu, senaryo sistem durumunu ve sık karşılaşılan hataları görüntüleyin. İşletim sistemi ve istemci sürümlerine göre olası sorunları görmek için görünümü birkaç özniteliğe göre filtreleyin.
+Configuration Manager, ortamınızdaki istemcilerin sistem durumu hakkında bilgi içeren bir pano sağlar. İstemci sistem durumunu, senaryo sistem durumunu ve sık karşılaşılan hataları görüntüleyin. İşletim sistemi ve istemci sürümlerine göre olası sorunları görmek için görünümü birkaç özniteliğe göre filtreleyin.
 
 Configuration Manager konsolunda **izleme** çalışma alanına gidin. **İstemci durumu**' nu genişletin ve **istemci sistem durumu panosu** düğümünü seçin.
 
-![İstemci sistem durumu panosu ekran görüntüsü](media/3599209-client-health-dashboard.png)
+:::image type="content" source="media/3599209-client-health-dashboard.png" alt-text="İstemci sistem durumu panosu ekran görüntüsü" lightbox="media/3599209-client-health-dashboard.png":::
 
 > [!Tip]  
 > Ccmeval üzerinde hiçbir değişiklik yoktur.  
@@ -91,18 +91,18 @@ Varsayılan olarak, istemci sistem durumu panosu, son üç gün içinde etkin is
 
 Panonun üst kısmında, panoda görüntülenecek verileri ayarlamaya yönelik bir filtre kümesi vardır.
 
-- **Koleksiyon**: varsayılan olarak, Pano **Tüm sistemler** koleksiyonundaki cihazları görüntüler. Görünümü, belirli bir koleksiyondaki cihazların bir alt kümesiyle kapsamını belirlemek için listeden bir cihaz koleksiyonu seçin.  
+- **Aşağıdaki koleksiyonlardaki istemciler Için istemci sistem durumu**: varsayılan olarak, Pano **Tüm sistemler** koleksiyonundaki cihazları görüntüler. Görünümün kapsamını belirli bir koleksiyondaki cihazların bir alt kümesine bağlamak için bir cihaz koleksiyonu seçin.  
 
-- **Çevrimiçi/çevrimdışı**: pano yalnızca çevrimiçi istemcileri görüntüler. Bu durum, istemcinin durumunu beş dakikada bir güncelleştiren istemci bildirim kanalından gelir. Daha fazla bilgi için bkz. [istemci durumu hakkında](monitor-clients.md#bkmk_about).  
+- **Son gün içinde etkin istemci sayısı**: varsayılan olarak, pano son üç günde etkin olan istemcileri görüntüler.  
 
-- **Etkin \# günler**: varsayılan olarak, pano son üç günde etkin olan istemcileri görüntüler.  
+- **Çevrimdışı istemciler için istemci sistem durumunu dahil et**: varsayılan olarak, pano yalnızca çevrimiçi istemcileri görüntüler. Bu durum, istemcinin durumunu beş dakikada bir güncelleştiren istemci bildirim kanalından gelir. Daha fazla bilgi için bkz. [istemci durumu hakkında](monitor-clients.md#bkmk_about).  
 
-- **Yalnızca hata**: görünümü yalnızca bir istemci sistem durumu hatası bildiren cihazlara kapsam.  
+- **Yalnızca durum bilgisi olmayan istemci ayrıntılarını göster**: görünümü yalnızca bir istemci sistem durumu hatası bildiren cihazlara kapsam.  
 
     > [!Tip]  
     > Bu filtreyi, istemci sürümü ve işletim sistemi sürümü kutucukları ile birlikte kullanın. Daha fazla bilgi için bkz. [Sürüm kutucukları](#version-tiles).
 
-### <a name="client-health-percentage"></a>İstemci sistem durumu yüzdesi
+### <a name="overall-client-health"></a>Genel istemci sistem durumu
 
 Bu kutucuk, hiyerarşinizdeki genel istemci sistem durumunu gösterir.
 
@@ -174,7 +174,7 @@ Solution for failure 1 -->
     İstemci denetimi sonuçları veya istemci etkinliği belirtilen yüzdenin altına düştüğünde size bildirimde bulunan uyarıları yapılandırın. Site, belirli bir istemci yüzdesinde düzeltme başarısız olduğunda da sizi uyarır. Daha fazla bilgi için bkz. [istemci durumunu yapılandırma](../deploy/configure-client-status.md).  
 
 
-## <a name="client-health-checks"></a><a name="BKMK_ClientHealth"></a>İstemci sistem durumu denetimleri
+## <a name="client-health-checks"></a><a name="BKMK_ClientHealth"></a> İstemci sistem durumu denetimleri
 
 İstemci denetimi aşağıdaki denetimleri ve düzeltmeleri çalıştırır:  
 

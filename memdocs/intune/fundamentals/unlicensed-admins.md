@@ -17,14 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6dcd41377234bbb1b40e513f16c3393d763b17f
-ms.sourcegitcommit: e713f8f4ba2ff453031c9dfc5bfd105ab5d00cd9
+ms.openlocfilehash: a5f479dcad0c293c547edec24f0f835a4fc987e1
+ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86088199"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90574839"
 ---
 # <a name="unlicensed-admins"></a>Lisansı kaldırılan yöneticiler
+
+> [!Important]
+> Bu seçenek yalnızca yöneticilerin Microsoft Uç Nokta Yöneticisi 'ne erişmesi için lisans gereksinimini ortadan kaldırır. Azure Active Directory Premium gibi diğer özelliklerin veya hizmetlerin kullanımı yine de yönetici için lisans gerektirebilir.
 
 Intune/Microsoft Endpoint Manager Yönetim Merkezi 'ne Intune lisansı olmadan Yöneticiler için erişim izni verebilirsiniz.
 
