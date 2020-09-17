@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/15/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,17 +17,17 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 37b7006ef912d87276c11e09cb6db0c0f14059c4
-ms.sourcegitcommit: 94e86320b9340507becc9e6ce4b6eb744f09fcd8
+ms.openlocfilehash: 2660530e85730b192def24f91b77b151d5ed799c
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89193921"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689489"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Mobil tehdit savunması uygulamasını yükleme  
 
 > [!TIP]
-> Pazardaki çeşitli MTD uygulamaları vardır. Kuruluşunuzun hangisini kullanacağınızı söylemiş olması gerekir. Bir MTD uygulaması yüklemek isteyip istemediğiniz sorulursa uygulamayı ayarlamaya veya yüklemeye hemen yönlendirilmezseniz yardım için BT destek sorumlunuza başvurun.  
+> Pazardaki çeşitli MTD uygulamaları vardır. Kuruluşunuzun hangisini kullanacağınızı söylemiş olması gerekir. Bir MTD uygulaması yüklemek isteyip istemediğiniz sorulursa uygulamayı ayarlamaya veya yüklemeye hemen yönlendirilmezseniz yardım için BT destek sorumlunuza başvurun. Bu makalede ayrıca mağaza listelerinin bağlantıları da sağlanmaktadır.   
 
 Kuruluşunuzun güvenlik gereksinimlerinin bir parçası olarak, bir Mobile Threat Defense (MTD) satıcı uygulaması yüklemenize gerek duyabilirsiniz. Bu tür bir uygulama, cihazınızdaki şüpheli uygulamalar, ağlar veya işletim sistemi güvenlik açıkları gibi tehditleri algılar ve sizi uyarır.  
 
@@ -36,18 +36,26 @@ Gerekli MTD uygulamanız yoksa, iş veya okul hesabınızla korumalı, yönetile
 ## <a name="mtd-apps-for-ios"></a>İOS için MTD uygulamaları
 Aşağıdaki MTD uygulamaları genellikle iOS cihazlarında kullanılır. Uygulama mağazasındaki listesini açmak için bir uygulama seçin.   
 
+* [ActiveShield](https://go.microsoft.com/fwlink/?linkid=2143345)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
-* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139141)
-* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [Pradeo güvenliği](https://go.microsoft.com/fwlink/?linkid=2143272)
+* [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [SEP Mobile (Symantec Endpoint Protection)](https://go.microsoft.com/fwlink/?linkid=2139141)
+* [Mobil için Sophos KESMENOKTASI X](https://go.microsoft.com/fwlink/?linkid=2143414)
+* [Wandera](https://go.microsoft.com/fwlink/?linkid=2143505)
 * [Zimperium zIPS](https://go.microsoft.com/fwlink/?linkid=2139232)
 
 
 ## <a name="mtd-apps-for-android"></a>Android için MTD uygulamaları 
 Aşağıdaki MTD uygulamaları genellikle Android cihazlarda kullanılır. Google Play listesini açmak için bir uygulama seçin.  
 
+* [Etkin kalkan kurumsal](https://go.microsoft.com/fwlink/?linkid=2143507) 
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
-* [Symantec Endpoint Protection (SEP) Mobile](https://go.microsoft.com/fwlink/?linkid=2139454)
-* [Sandblast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [Pradeo güvenliği](https://go.microsoft.com/fwlink/?linkid=2143413)
+* [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [SEP Mobile (Symantec Endpoint Protection) (https://go.microsoft.com/fwlink/?linkid=2139454)
+* [Mobil için Sophos KESMENOKTASI X](https://go.microsoft.com/fwlink/?linkid=2143273)
+* [Wandera](https://go.microsoft.com/fwlink/?linkid=2143506)
 * [Zyium mobil IP 'leri (ZIP 'ler)](https://go.microsoft.com/fwlink/?linkid=2139142)  
 
 
@@ -112,7 +120,7 @@ Bir tehdidi çözümlemek ve korunan uygulamalara erişimi yeniden kazanmak içi
 2. Tehdit ayrıntılarını uygulamada okuyun. Bu, tehdidi çözülmedi ve çözümlenmezse tehdidin cihazınızı nasıl etkileyebileceğini açıklar. 
 3. Cihazınızda gerekli değişiklikleri yaptıktan sonra, MTD uygulamasına dönün ve yeni bir tarama başlatın. Tüm tehditler çözümlenene kadar bu adımları tekrarlayın. Değişikliklerinizin kuruluşunuzla eşitlenmesi birkaç dakika sürebilir. Bu değişiklikler eşitlendikten sonra korunan uygulamaya yeniden erişim elde edersiniz. 
 
-## <a name="get-support"></a>Destek alma
+## <a name="get-support"></a>Destek alın
 Kuruluşunuzun iletişim bilgilerini bulmak için [Şirket portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) gidin. Hakkında yardım almak için onlara başvurun:
 
 * Hangi MTD uygulamasının kullanılacağını belirleme  

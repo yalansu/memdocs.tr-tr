@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e9c911929dd5a99c6b63beed9c6b221e69e9b25
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: eef375cad028a6903a0fa28d1cc3f7562bcebf6f
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607548"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689421"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager ile Always on kullanılabilirlik grupları SQL Server kullanmaya hazırlanma
 
@@ -390,6 +390,9 @@ Site veritabanının kurtarma modelini **tam**olarak ayarlayın. Bu yapılandır
 Kullanılabilirlik grubunun en az bir düğümü hala çalışır durumda ise, veritabanı kurtarmayı atlamak için Site Recovery seçeneğini kullanın **(site veritabanı etkilenmediyse bu seçeneği kullanın)**.
 
 Sürüm 1906 ' den başlayarak, Site Recovery veritabanını bir SQL Always on grubunda yeniden oluşturabilir. Bu işlem hem el ile hem de otomatik dengeli çalışma ile birlikte çalışabilir.<!-- SCCMDocs-pr#3846 -->
+
+> [!TIP]
+> Kurulum/Kurtarma Sihirbazı 'nı çalıştırdığınızda, **Yeni kullanılabilirlik grubu veritabanı** sayfası yalnızca el ile dengeli dağıtım yapılandırmalarına uygulanır. Otomatik dengeli dağıtım sayesinde, sihirbazın sayfası gösterilmediğinden, paylaşılan veritabanı yedeklemesi yoktur.<!-- SCCMDocs #2242 -->
 
 Sürüm 1902 veya önceki sürümlerde, bir kullanılabilirlik grubunun tüm düğümlerini kaybederseniz, siteyi kurtarabilmeniz için önce kullanılabilirlik grubunu yeniden oluşturun. Configuration Manager kullanılabilirlik düğümünü yeniden oluşturamıyor veya geri yükleyemiyor. Grubu yeniden oluşturun, yedeklemeyi geri yükleyin ve SQL 'i yeniden yapılandırın. Ardından, veritabanı kurtarmayı atlamak için Site Recovery seçeneğini kullanın **(site veritabanı etkilenmediyse bu seçeneği kullanın)**.
 

@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab4d42d635955774f504ccd831e9ced755b0b36a
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: 852ab8b709dcec90d7819a63a6cb6dbb2c781534
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574737"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689472"
 ---
 # <a name="task-sequence-variables"></a>Görev dizisi değişkenleri
 
@@ -423,7 +423,7 @@ Yapılandırma adımı için *ilk* ağ bağdaştırıcısının özelliklerini t
 
 #### <a name="osdadapter0enabledhcp"></a>OSDAdapter0EnableDHCP
 
-Bu ayar zorunludur. Olası değerler: `True` veya `False`. Örnek:
+Bu ayar zorunludur. Olası değerler: `True` veya `False`. Örneğin:
 
 `true`: bağdaştırıcı için dinamik ana bilgisayar Yapılandırma Protokolü 'Nü (DHCP) etkinleştirin
 
@@ -1651,7 +1651,9 @@ Görev dizisi önbelleğindeki içeriği geçici olarak devam ettirmek için bu 
 
 ### <a name="smstspostaction"></a><a name="SMSTSPostAction"></a> SMSTSPostAction
 
-Görev dizisi tamamlandıktan sonra çalıştırılan bir komutu belirtir. Örneğin, `shutdown.exe /r /t 30 /f` görev dizisi tamamlandıktan sonra bilgisayarı 30 saniye yeniden başlatmak istediğinizi belirtin.
+Görev dizisi tamamlandıktan sonra çalıştırılan bir komutu belirtir. TSManager işlemi, görev sırasından çıkmadan hemen önce belirtilen Post eylemini işler. Herhangi bir durumu beklemez veya kaydetmez, bu komutu çağırdıktan sonra da çıkış yapmanız yeterlidir.<!-- MEMDocs #719 -->
+
+Örneğin, `shutdown.exe /r /t 30 /f` görev dizisi tamamlandıktan sonra bilgisayarı 30 saniye yeniden başlatmak istediğinizi belirtin.
 
 ### <a name="smstspreferredadvertid"></a><a name="SMSTSPreferredAdvertID"></a> SMSTSPreferredAdvertID
 

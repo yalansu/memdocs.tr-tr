@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa533ea8a34fae0c3460d207bb88e6b64b0957eb
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 1394d16dc8493efd258cb8a6779a5d5ff7b7dec1
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909661"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689506"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune 'da uyumsuz cihazlar için eylemleri yapılandırma
 
 Uyumluluk ilkelerinizi veya kurallarınızı karşılamayan cihazlarda **uyumsuzluk Için eylemler**ekleyebilirsiniz. Bu özellik, son kullanıcıya e-posta gönderme ve daha fazlası gibi zaman sıralı bir eylem dizisi yapılandırır.
 
-## <a name="overview"></a>Genel Bakış
+## <a name="overview"></a>Genel bakış
 
 Varsayılan olarak, her uyumluluk ilkesi, sıfır gün (**0**) zamanlamasıyla **uyumsuz olarak işaretle cihaz** uyumsuzluğu için eylemi içerir. Bu varsayılan değer, Intune 'un bir cihazın uyumlu olmadığını algıladığında, Intune 'un cihazı uyumsuz olarak işaretlediği bir sonucudur. Bir cihaz uyumsuzluk olarak işaretlendikten sonra, Azure Active Directory (AD) [koşullu erişim](/azure/active-directory/active-directory-conditional-access-azure-portal) cihazı engelleyebilir.
 
@@ -39,11 +39,13 @@ Tüm platformlar için tüm eylemler kullanılamaz.
 
 ## <a name="available-actions-for-noncompliance"></a>Uyumsuzluk için kullanılabilir eylemler
 
-Uyumsuzluk için kullanılabilir eylemler aşağıda verilmiştir. Aksi belirtilmedikçe, her bir eylem Intune tarafından desteklenen tüm platformlar için kullanılabilir:
+Uyumsuzluk için kullanılabilir eylemler şunlardır:
 
 - **Cihazı uyumsuz olarak işaretle**: varsayılan olarak, bu eylem her uyumluluk ilkesi için ayarlanır ve cihazları hemen uyumsuz olarak işaretleyerek sıfır (**0**) gün zamanlamalarına sahiptir.
 
   Varsayılan zamanlamayı değiştirdiğinizde, kullanıcının sorunları düzeltebileceği veya uyumsuz olarak işaretlenmeden uyumlu hale gelebileceği bir yetkisiz kullanım süresi sağlarsınız.
+
+  Bu eylem, Intune tarafından desteklenen tüm platformlarda desteklenir.
 
 - **Son kullanıcıya e-posta gönder**: Bu eylem kullanıcıya bir e-posta bildirimi gönderir.
 Bu eylemi etkinleştirdiğinizde:
@@ -51,7 +53,9 @@ Bu eylemi etkinleştirdiğinizde:
   - Bu eylemin gönderdiği bir *bildirim iletisi şablonu* seçin. Bu eyleme bir tane atayabilmeniz için önce [bir bildirim iletisi şablonu oluşturursunuz](#create-a-notification-message-template) . Özel bildirimi oluşturduğunuzda, konuyu, ileti gövdesini özelleştirip şirket logosu, şirket adı ve ek iletişim bilgilerini de ekleyebilirsiniz.
   - Azure AD gruplarınızı bir veya daha fazla seçerek iletiyi ek alıcılara göndermek için seçin.
 
-E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki ayrıntıları içerir.
+  E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki ayrıntıları içerir.
+
+  Bu eylem, Intune tarafından desteklenen tüm platformlarda desteklenir.
 
 - **Uyumsuz cihazı uzaktan kilitleme**: Bu eylemi, bir cihazın uzak kilidini vermek için kullanın. Bunun ardından cihazın kilidini açmak için kullanıcıdan PIN veya parola istenir. [Uzaktan Kilitleme](../remote-actions/device-remote-lock.md) özelliğinde daha fazla bilgi bulabilirsiniz.
 
@@ -62,7 +66,7 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
     - Android kurumsal Iş profili
     - Android kurumsal bilgi noktası cihazları
   - iOS/iPadOS
-  - Mac OS
+  - macOS
 
 - **Uyumsuz cihazı devre dışı bırak**: Bu eylem tüm şirket verilerini cihazdan kaldırır ve cihazı Intune yönetiminden kaldırır. Bir cihazın yanlışlıkla silinmesini engellemek için, bu eylem en az **30** günlük zamanlamayı destekler.
 
@@ -72,7 +76,7 @@ E-posta gönderildiğinde, Intune e-posta bildiriminde uyumsuz cihaz hakkındaki
     - Android kurumsal cihaz sahibi
     - Android kurumsal Iş profili
   - iOS/iPadOS
-  - Mac OS
+  - macOS
 
   [Cihazları devre dışı bırakma](../remote-actions/devices-wipe.md#retire)hakkında daha fazla bilgi edinin.
 

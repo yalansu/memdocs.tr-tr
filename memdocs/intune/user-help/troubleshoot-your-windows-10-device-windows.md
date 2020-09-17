@@ -19,12 +19,12 @@ ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 7c96bef7c1be004714f0b06dd47c9c28850118da
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 268ef3b9931c86a73ccf4e681240e4d2333c8026
+ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643428"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90689404"
 ---
 # <a name="troubleshoot-windows-10-device-access"></a>Windows 10 cihaz erişimi sorunlarını giderme
 Bu makalede, kayıtlı bir Windows 10 cihazına yönelik erişim sorunlarının nasıl çözümleneceği açıklanır. 
@@ -57,7 +57,7 @@ Ayarlar uygulamasında iş veya okul hesabınızı görürseniz, cihazınız ve 
 
 #### <a name="resolution"></a>Çözüm
 1. Kullanıcı adınızı ve parolanızı yeniden girin. 
-2. Hala çalışmazsa, doğru URL 'YI almak için BT destek sorumlunuza başvurun (örnek: www.yourcompany.onmicrosoft.com). 
+2. Hala çalışmazsa, doğru URL 'YI almak için BT destek sorumlunuza başvurun (örnek: <code>www.yourcompany.onmicrosoft.com</code> ). 
 3. İstendiğinde, belirtilen URL 'YI girin. 
 
 ### <a name="it-looks-like-youre-not-connected-make-sure-youre-connected-to-the-network"></a>Bağlı değilsiniz gibi görünüyor. Ağa bağlı olduğunuzdan emin olun.
