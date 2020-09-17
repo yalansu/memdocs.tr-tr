@@ -5,17 +5,17 @@ description: Yazılım güncelleştirme noktası altyapısı için bir plan, Con
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: 991f367dbd842037aecf4f808f27c4fb2961cc38
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: c38f3b509ba6104647dd60c8284fde52b5b4995e
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696727"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718833"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>Configuration Manager yazılım güncelleştirmelerini planlayın
 
@@ -260,10 +260,10 @@ Bir WSUS sunucusu bir yazılım güncelleştirme noktası olarak yapılandırıl
 Yazılım güncelleştirme noktası rolünü bir birincil site sunucusuna eklediğinizde, çoğaltma olarak yapılandırılmış bir WSUS sunucusu kullanamazsınız. WSUS sunucusu bir çoğaltma olarak yapılandırıldığında, Configuration Manager WSUS sunucusunu yapılandıramaz ve WSUS eşitlemesi başarısız olur. Bir birincil siteye yüklediğiniz birinci yazılım güncelleştirme noktası varsayılan yazılım güncelleştirme noktasıdır. Sitedeki diğer yazılım güncelleştirme noktaları varsayılan yazılım güncelleştirme noktasının yinelemeleri olarak yapılandırılır.  
 
 ####  <a name="decide-whether-to-configure-wsus-to-use-ssl"></a><a name="BKMK_WSUSandSSL"></a> WSUS'i SSL kullanacak şekilde yapılandırmaya karar verme  
-Yazılım güncelleştirme noktasının güvenliğini sağlamaya yardımcı olması için SSL protokolünü kullanın. WSUS istemci bilgisayarların ve akış aşağı WSUS sunucularının kimliğini WSUS sunucusunda doğrulamak için SSL kullanır. WSUS ayrıca yazılım güncelleştirme meta verilerini şifrelemek için SSL kullanır. WSUS güvenliğini SSL ile sağlamayı seçtiğinizde, yazılım güncelleştirme noktasını yüklemeden önce WSUS sunucusunu hazırlayın. Daha fazla bilgi için WSUS belgelerindeki [WSUS sunucusunda SSL 'Yi yapılandırma](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol) makalesine bakın. 
 
-Yazılım güncelleştirme noktasını yüklediğinizde ve yapılandırdığınızda, **WSUS sunucusu IÇIN SSL Iletişimini etkinleştirme**seçeneğini belirleyin. Aksi takdirde, Configuration Manager WSUS 'yi SSL kullanamayacak şekilde yapılandırır. Bir yazılım güncelleştirme noktasında SSL 'yi etkinleştirdiğinizde, alt sitelerdeki tüm yazılım güncelleştirme noktalarını da SSL kullanacak şekilde yapılandırın.  
+Yazılım güncelleştirme noktasının güvenliğinin sağlanmasına yardımcı olmak için SSL protokolünün kullanılması kesinlikle önerilir. WSUS istemci bilgisayarların ve akış aşağı WSUS sunucularının kimliğini WSUS sunucusunda doğrulamak için SSL kullanır. WSUS ayrıca yazılım güncelleştirme meta verilerini şifrelemek için SSL kullanır. WSUS güvenliğini SSL ile sağlamayı seçtiğinizde, yazılım güncelleştirme noktasını yüklemeden önce WSUS sunucusunu hazırlayın.
 
+Yazılım güncelleştirme noktasını yüklediğinizde ve yapılandırdığınızda, **WSUS sunucusu IÇIN SSL Iletişimini etkinleştirme**seçeneğini belirleyin. Aksi takdirde, Configuration Manager WSUS 'yi SSL kullanamayacak şekilde yapılandırır. Bir yazılım güncelleştirme noktasında SSL 'yi etkinleştirdiğinizde, alt sitelerdeki tüm yazılım güncelleştirme noktalarını da SSL kullanacak şekilde yapılandırın. Daha fazla bilgi için bkz. [yazılım güncelleştirme noktasını BIR PKI sertifikası öğreticisiyle TLS/SSL kullanmak Için yapılandırma](../get-started/software-update-point-ssl.md).
 
 ###  <a name="configure-firewalls"></a><a name="BKMK_ConfigureFirewalls"></a> Güvenlik duvarlarını yapılandırma  
 
@@ -290,7 +290,7 @@ Bu bölüm aşağıdaki alt konuları içerir:
 - [Eşitleme kaynağı](#BKMK_SyncSource)
 - [Eşitleme zamanlaması](#BKMK_SyncSchedule)
 - [Güncelleştirme sınıflandırmaları](#BKMK_UpdateClassifications)
-- [Ürün](#BKMK_UpdateProducts)
+- [Ürünler](#BKMK_UpdateProducts)
 - [Yerine geçme kuralları](#BKMK_SupersedenceRules)
 - [Diller](#BKMK_UpdateLanguages)  
 - [En fazla çalışma süresi](#bkmk_maxruntime)

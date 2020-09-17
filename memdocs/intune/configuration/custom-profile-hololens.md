@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4a1929749c5921714078ec54ac687f4cefe1474
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 5bf538bc7dae5ae52c0f550d4193916f5dd5897b
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915883"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718748"
 ---
 # <a name="use-wdac-and-windows-powershell-to-allow-or-blocks-apps-on-hololens-2-devices-with-microsoft-intune"></a>Microsoft Intune ile HoloLens 2 cihazlarındaki uygulamalara izin vermek veya bunları engelleme için WDAC ve Windows PowerShell kullanma
 
@@ -65,7 +65,7 @@ Belirli uygulamaların HoloLens 2 cihazlarında açılmasını sağlamak veya re
 Bu örnek Windows PowerShell 'i kullanarak bir Windows Defender uygulama denetimi (WDAC) ilkesi oluşturur. İlke, belirli uygulamaların açılmasını engeller. Ardından, ilkeyi HoloLens 2 cihazlara dağıtmak için Intune 'u kullanın.
 
 1. Masaüstü bilgisayarınızda **Windows PowerShell** uygulamasını açın.
-2. Masaüstü bilgisayarınızda yüklü uygulama paketi hakkında bilgi alın:
+2. Masaüstü bilgisayarınızda ve HoloLens 'te yüklü uygulama paketi hakkında bilgi alın:
 
     ```powershell
     $package1 = Get-AppxPackage -name *<applicationname>*
@@ -74,7 +74,7 @@ Bu örnek Windows PowerShell 'i kullanarak bir Windows Defender uygulama denetim
     Örneğin şunu girin: 
 
     ```powershell
-    $package1 = Get-AppxPackage -name *cortana*
+    $package1 = Get-AppxPackage -name Microsoft.MicrosoftEdge
     ```
 
     Sonra, paketin uygulama özniteliklerine sahip olduğunu doğrulayın:
@@ -86,16 +86,16 @@ Bu örnek Windows PowerShell 'i kullanarak bir Windows Defender uygulama denetim
     Aşağıdaki uygulama ayrıntılarına benzer öznitelikleri görürsünüz:
 
     ```powershell
-    Name              : Microsoft.Windows.Cortana
-    Publisher         : CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
+    Name              : Microsoft.MicrosoftEdge
+    Publisher         : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
     Architecture      : Neutral
-    ResourceId        : neutral
-    Version           : 1.13.0.18362
-    PackageFullName   : Microsoft.Windows.Cortana_1.13.0.18362_neutral_neutral_cw5n1h2txyewy
-    InstallLocation   : C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy
+    ResourceId        :
+    Version           : 44.20190.1000.0
+    PackageFullName   : Microsoft.MicrosoftEdge_44.20190.1000.0_neutral__8wekyb3d8bbwe
+    InstallLocation   : C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe
     IsFramework       : False
-    PackageFamilyName : Microsoft.Windows.Cortana_cw5n1h2txyewy
-    PublisherId       : cw5n1h2txyewy
+    PackageFamilyName : Microsoft.MicrosoftEdge_8wekyb3d8bbwe
+    PublisherId       : 8wekyb3d8bbwe
     IsResourcePackage : False
     IsBundle          : False
     IsDevelopmentMode : False

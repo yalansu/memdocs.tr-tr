@@ -3,19 +3,19 @@ title: Yazılım güncelleştirmeleri için güvenlik ve gizlilik
 titleSuffix: Configuration Manager
 description: Yazılım güncelleştirmelerine yönelik güvenlik için en iyi uygulamaları izleyin ve Configuration Manager gizlilik bilgilerini nasıl işleyeceğinizi öğrenin.
 manager: dougeby
-ms.date: 10/06/2016
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 author: mestew
 ms.author: mstewart
-ms.openlocfilehash: 5c7a1ac5e88aa669ae1d5e6bb9333e1f54fb5980
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 0838f43abf7ff972ac3f6ca2cdf44dcafda323ca
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81724009"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718731"
 ---
 # <a name="security-and-privacy-for-software-updates-in-configuration-manager"></a>Configuration Manager 'de yazılım güncelleştirmeleri için güvenlik ve Gizlilik
 
@@ -42,7 +42,9 @@ Bu konu, Configuration Manager yazılım güncelleştirmeleri için güvenlik ve
 
 -   Windows Server Update Services (WSUS) üzerinde SSL'i etkinleştirin ve WSUS'yi güvenli hale getirmek için en iyi yöntemleri takip edin.  
 
-     Configuration Manager ile kullandığınız WSUS sürümü için en iyi güvenlik uygulamalarını tanımlayıp izleyin.  
+     Configuration Manager ile kullandığınız WSUS sürümü için en iyi güvenlik uygulamalarını tanımlayıp izleyin. 
+
+     SSL 'yi etkinleştirme hakkında daha fazla bilgi için bkz. [bir yazılım güncelleştirme noktasını BIR PKI sertifikası öğreticisiyle TLS/SSL kullanmak Için yapılandırma](../get-started/software-update-point-ssl.md). 
 
     > [!IMPORTANT]  
     >  WSUS sunucusuna SSL iletişimini etkinleştirmek için yazılım güncelleştirme noktasını yapılandırırsanız, WSUS sunucusunda SSL için sanal kökler yapılandırmanız gerekir.  
@@ -59,7 +61,7 @@ Bu konu, Configuration Manager yazılım güncelleştirmeleri için güvenlik ve
 
      Daha fazla bilgi için, bkz. [Configure WSUS to use a custom web site](plan-for-software-updates.md#BKMK_CustomWebSite).  
 
-##  <a name="privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a>Yazılım güncelleştirmeleri için gizlilik bilgileri  
+##  <a name="privacy-information-for-software-updates"></a><a name="BKMK_Privacy_HardwareInventory"></a> Yazılım güncelleştirmeleri için gizlilik bilgileri  
  Yazılım güncelleştirmeleri, hangi yazılım güncelleştirmesine ihtiyacınız olduğunu belirlemek için istemci bilgisayarlarınızı tarar ve daha sonra bu bilgileri site veritabanına geri gönderir. Yazılım güncelleştirme işlemi sırasında, Configuration Manager bilgisayar ve oturum açma hesaplarını belirleyen istemciler ve sunucular arasında bilgi aktarabilir.  
 
  Configuration Manager, yazılım dağıtım işlemiyle ilgili durum bilgilerini tutar. Durum bilgisi, iletim veya depolama sırasında şifrelenmez. Durum bilgileri Configuration Manager veritabanında depolanır ve veritabanı bakım görevleri tarafından silinir. Durum bilgilerinin hiçbiri Microsoft'a gönderilmez.  

@@ -5,17 +5,17 @@ description: Configuration Manager yazılım güncelleştirmeleri için bu en iy
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.openlocfilehash: 3a48ce044f3d1aecbebf2ba93e936dd34b904140
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: 2809a6852cc3739cfe48418580ba464c3abe956a
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696647"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718697"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Configuration Manager 'de yazılım güncelleştirmeleri için en iyi uygulamalar
 
@@ -53,7 +53,8 @@ Configuration Manager ve WSUS veritabanları aynı SQL Server örneğini paylaş
 
 WSUS 'u yüklerken, **güncelleştirmeleri yerel olarak depolamak**için ayarı seçin. Bu ayar, WSUS 'nin yazılım güncelleştirmeleriyle ilişkili lisans koşullarını indirmesine neden olur. Eşitleme işlemi sırasında koşulları indirir ve WSUS sunucusunun yerel sabit sürücüsünde depolar. Bu ayarı seçmezseniz, istemci bilgisayarlar lisans koşulları olan yazılım güncelleştirmeleri için uyumluluk taramalarının başarısız olmasına neden olabilir. Yazılım güncelleştirme noktasının **WSUS Eşitleme Yöneticisi** bileşeni, bu ayarın her 60 dakikada bir varsayılan olarak etkinleştirildiğini doğrular.  
 
-
+### <a name="configure-your-software-update-points-to-use-tlsssl"></a><a name="bkmk_ssl"></a> Yazılım güncelleştirme noktalarınızı TLS/SSL kullanacak şekilde yapılandırma
+Windows Server Update Services (WSUS) sunucularını ve bunlara karşılık gelen yazılım güncelleştirme noktalarını TLS/SSL kullanacak şekilde yapılandırmak, olası bir saldırganın bir istemciyi uzaktan aşmasına ve ayrıcalıkları yükseltmesine olanak tanıyabilir. En iyi güvenlik protokollerinin yapıldığından emin olmak için, yazılım güncelleştirme altyapınızı güvenli hale getirmeye yardımcı olması için TLS/SSL protokolünü kullanmanızı kesinlikle öneririz. Daha fazla bilgi için bkz. [yazılım güncelleştirme noktasını BIR PKI sertifikası öğreticisiyle TLS/SSL kullanmak Için yapılandırma](../get-started/software-update-point-ssl.md).
 
 ## <a name="operational-best-practices"></a><a name="bkmk_operation"></a> İşletimsel En Iyi uygulamalar  
 

@@ -5,17 +5,17 @@ description: Birincil siteler, yazılım güncelleştirmeleri uyumluluk değerle
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 0cddb8df51624a562597da17ea310db0a26081f3
-ms.sourcegitcommit: bbf820c35414bf2cba356f30fe047c1a34c5384d
+ms.openlocfilehash: 1f3ab3c108a7f8481aee84b6df5cd41b4b186246
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81715476"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718850"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>Yazılım güncelleştirme noktası yükleyip yapılandırma  
 
@@ -69,7 +69,7 @@ ms.locfileid: "81715476"
 ### <a name="configure-ssl-communications-to-wsus"></a>WSUS'a SSL iletişimini yapılandırma  
  SSL iletişimini sihirbazın **Genel** sayfasında veya yazılım güncelleştirme noktasının özelliklerindeki **Genel** sekmesinde yapılandırabilirsiniz.  
 
- SSL kullanma hakkında daha fazla bilgi için bkz. [WSUS’i SSL kullanacak şekilde yapılandırmaya karar verme](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL).  
+ SSL kullanma hakkında daha fazla bilgi için bkz. [WSUS 'ı SSL kullanacak şekilde yapılandırmaya karar verme](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL) ve [bir yazılım GÜNCELLEŞTIRME noktasını BIR PKI SERTIFIKASıYLA TLS/SSL kullanmak için yapılandırma](../get-started/software-update-point-ssl.md).  
 
 ### <a name="wsus-server-connection-account"></a>WSUS Sunucusu Bağlantı Hesabı  
  Site sunucusunun, yazılım güncelleştirme noktasında çalışan WSUS'a bağlanırken kullanacağı hesabı yapılandırabilirsiniz. Bu hesabı yapılandırmadığınızda Configuration Manager, site sunucusunun WSUS 'a bağlanması için bilgisayar hesabını kullanır. WSUS Sunucusu Bağlantı Hesabını sihirbazın **Proxy ve Hesap Ayarları** sayfasında veya Yazılım Güncelleştirme Noktası Özellikleri’nin **Proxy ve Hesap Ayarları** sekmesinde yapılandırın.  Kullandığınız Configuration Manager sürümüne bağlı olarak, hesabı sihirbazın farklı yerlerinde yapılandırabilirsiniz.  
@@ -93,7 +93,7 @@ ms.locfileid: "81715476"
     > [!NOTE]  
     >  Yazılım güncelleştirme noktası ile İnternet arasında bir güvenlik duvarı olduğunda güvenlik duvarının WSUS Web sitesi için kullanılan HTTP ve HTTPS bağlantı noktalarını kabul etmek üzere yapılandırılması gerekebilir. Güvenlik duvarındaki erişimi, sınırlı etki alanlarına da kısıtlayabilirsiniz. Yazılım güncelleştirmelerini destekleyen bir güvenlik duvarı için nasıl planlama yapılacağı hakkında daha fazla bilgi için bkz. [Güvenlik duvarlarını yapılandırma](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls).  
 
--   **Bir yukarı akış veri kaynağı konumundan eşitleme: yukarı akış eşitleme kaynağından yazılım güncelleştirmeleri meta verilerini eşitlemek için bu ayarı kullanın. <a name="BKMK_wsussync"> </a>** Alt birincil siteler ve ikincil siteler, bu ayar için ana site URL'sini kullanmak üzere otomatik olarak yapılandırılır. Var olan bir WSUS sunucusundan yazılım güncelleştirmelerini eşitleme seçeneğiniz bulunmaktadır. Örneğin `https://WSUSServer:8531`, WSUS sunucusuna bağlanmak için kullanılan bağlantı noktası olan 8531 gıbı bir URL belirtin.  
+-   ** <a name="BKMK_wsussync"></a> Bir yukarı akış veri kaynağı konumundan eşitleme**: yukarı akış eşitleme kaynağından yazılım güncelleştirmeleri meta verilerini eşitlemek için bu ayarı kullanın. Alt birincil siteler ve ikincil siteler, bu ayar için ana site URL'sini kullanmak üzere otomatik olarak yapılandırılır. Var olan bir WSUS sunucusundan yazılım güncelleştirmelerini eşitleme seçeneğiniz bulunmaktadır. Örneğin `https://WSUSServer:8531` , WSUS sunucusuna bağlanmak için kullanılan bağlantı noktası olan 8531 gibi BIR URL belirtin.  
 
 -   **Microsoft Update veya yukarı akış veri kaynağından eşitlemeyin**: Üst düzeydeki yazılım güncelleştirme noktasının İnternet bağlantısı kesildiğinde yazılım güncelleştirmelerini el ile eşitlemek için bu ayarı kullanın. Daha fazla bilgi için bkz. [Yazılım güncelleştirmelerini bağlantısı kesilen yazılım güncelleştirme noktasında eşitleme](synchronize-software-updates-disconnected.md).  
 

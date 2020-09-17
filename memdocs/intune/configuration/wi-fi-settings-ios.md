@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27a37642891693f59c8dc38aa9bb047b251084ca
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: e3206bf7092218eaa1cf05f77cf310be54ac5336
+ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80327362"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90718765"
 ---
 # <a name="add-wi-fi-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazları için Wi-Fi ayarları ekleme
 
@@ -44,7 +44,7 @@ Bu makalede bu ayarlar açıklanır.
 - **Ağ adı**: Bu Wi-Fi bağlantısı için bir ad girin. Bu değer, kullanıcıların cihazlarında kullanılabilir bağlantılar listesine göz attıklarında görecekleri addır.
 - **SSID**: **Hizmet kümesi tanımlayıcısının** kısaltması. Bu özellik, cihazların bağlandığı kablosuz ağın gerçek adıdır. Bununla birlikte, bağlantıyı seçen kullanıcılar yalnızca yapılandırdığınız ağ adını görür.
 - **Otomatik olarak bağlan**: Cihaz alana girdiğinde bu ağa otomatik olarak bağlanmak için **Etkinleştir**’i seçin. Cihazların otomatik olarak bağlanmasını önlemek için **Devre dışı bırak**’ı seçin.
-- **Gizli ağ**: ağ SSID 'si yayınlanmadıysa **Etkinleştir** ' i seçin. Ağın SSID 'si yayınlandıysanız ve görülemiyorsa **devre dışı bırak** ' ı seçin.
+- **Gizli ağ**: **Etkinleştir** ayarı, yönlendirici Wi-Fi yapılandırmasındaki ayarla bu cihaz ayarıyla eşleşir. Bu nedenle, ağ gizli olarak ayarlandıysa Wi-Fi profilinde da gizlenir. Ağ SSID 'si yayınlandıysanız ve görünür durumdaysa **devre dışı bırak** ' ı seçin.
 - **Güvenlik türü**: Wi-Fi ağında kimlik doğrulamak için kullanılacak güvenlik protokolünü seçin. Seçenekleriniz şunlardır:
 
   - **Açık (kimlik doğrulamasız)**: Bu seçeneği yalnızca ağ güvenlik altına alınmamış olduğunda kullanın.
@@ -61,7 +61,7 @@ Bu makalede bu ayarlar açıklanır.
 - **Wi-Fi türü**: **Kurumsal**’ı seçin.
 - **SSID**: **Hizmet kümesi tanımlayıcısının** kısaltması. Bu özellik, cihazların bağlandığı kablosuz ağın gerçek adıdır. Bununla birlikte, bağlantıyı seçen kullanıcılar yalnızca yapılandırdığınız ağ adını görür.
 - **Otomatik olarak bağlan**: Cihaz alana girdiğinde bu ağa otomatik olarak bağlanmak için **Etkinleştir**’i seçin. Cihazların otomatik olarak bağlanmasını önlemek için **Devre dışı bırak**’ı seçin.
-- **Gizli ağ**: Cihazdaki kullanılabilir ağlar listesinde bu ağı gizlemek için **Etkinleştir**’i seçin. SSID yayınlanmaz. Cihazdaki kullanılabilir ağlar listesinde bu ağı göstermek için **Devre dışı bırak**’ı seçin.
+- **Gizli ağ**: **Etkinleştir** ayarı, yönlendirici Wi-Fi yapılandırmasındaki ayarla bu cihaz ayarıyla eşleşir. Bu nedenle, ağ gizli olarak ayarlandıysa Wi-Fi profilinde da gizlenir. Ağ SSID 'si yayınlandıysanız ve görünür durumdaysa **devre dışı bırak** ' ı seçin.
 - **Güvenlik türü**: Wi-Fi ağında kimlik doğrulamak için kullanılacak güvenlik protokolünü seçin. Seçenekleriniz şunlardır:
   - **WPA-Kuruluş**
   - **WPA/WPA2-Kuruluş**
@@ -78,7 +78,7 @@ Bu makalede bu ayarlar açıklanır.
 
   - **EAP-TLS**: Ayrıca şunları girin:
 
-    - **Sunucu güven** - **sertifikası sunucu adları**: güvenilir sertifika yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, veya `mywirelessserver`ekleyin `mywirelessserver.contoso.com` . Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
+    - **Sunucu güveni**  -  **Sertifika sunucusu adları**: güvenilir sertifika yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, veya ekleyin `mywirelessserver.contoso.com` `mywirelessserver` . Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
     - **Sunucu doğrulaması için kök sertifika**: Mevcut bir güvenilen kök sertifika profilini seçin. Bu sertifika, istemcinin kablosuz ağ erişim sunucusunun sertifikasına güvenmesini sağlar.
 
     - **Istemci kimlik doğrulaması** Bir **kimlik doğrulama yöntemi**seçin. Seçenekleriniz şunlardır:
@@ -91,7 +91,7 @@ Bu makalede bu ayarlar açıklanır.
 
   - **EAP-TTLS**: Ayrıca şunları girin:
 
-    - **Sunucu güven** - **sertifikası sunucu adları**: güvenilir sertifika yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, veya `mywirelessserver`ekleyin `mywirelessserver.contoso.com` . Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
+    - **Sunucu güveni**  -  **Sertifika sunucusu adları**: güvenilir sertifika yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, veya ekleyin `mywirelessserver.contoso.com` `mywirelessserver` . Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
     - **Sunucu doğrulaması için kök sertifika**: Mevcut bir güvenilen kök sertifika profilini seçin. Bu sertifika, istemcinin kablosuz ağ erişim sunucusunun sertifikasına güvenmesini sağlar.
 
     - **İstemci Kimlik Doğrulaması** - Bir **Kimlik doğrulama yöntemi** seçin. Seçenekleriniz şunlardır:
@@ -111,7 +111,7 @@ Bu makalede bu ayarlar açıklanır.
 
   - **PEAP**: Ayrıca şunları girin:
 
-    - **Sunucu güven** - **sertifikası sunucu adları**: güvenilir sertifika yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, veya `mywirelessserver`ekleyin `mywirelessserver.contoso.com` . Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
+    - **Sunucu güveni**  -  **Sertifika sunucusu adları**: güvenilir sertifika yetkiliniz (CA) tarafından kablosuz ağ erişim sunucularınıza verilen sertifikalarda kullanılan bir veya daha fazla ortak ad **ekleyin** . Örneğin, veya ekleyin `mywirelessserver.contoso.com` `mywirelessserver` . Bu bilgiyi girdikten sonra bu Wi-Fi ağına bağlanırken kullanıcının cihazında görüntülenen dinamik güven penceresini atlayabilirsiniz.
     - **Sunucu doğrulaması için kök sertifika**: Mevcut bir güvenilen kök sertifika profilini seçin. Bu sertifika, istemcinin kablosuz ağ erişim sunucusunun sertifikasına güvenmesini sağlar.
 
     - **İstemci Kimlik Doğrulaması** - Bir **Kimlik doğrulama yöntemi** seçin. Seçenekleriniz şunlardır:
