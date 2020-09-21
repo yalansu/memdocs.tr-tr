@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/15/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abbd81320a354c90814e424574dbc0c5aa055f79
-ms.sourcegitcommit: eaa077aa028a76a4873e4aa7437888f901a7e77f
+ms.openlocfilehash: 8a7148d9458b32f194cc62c7b4d53e1b8fcad40a
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90767103"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815451"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -33,7 +33,7 @@ Bu makale, bu ayarları listeler ve her ayarın ne yaptığını açıklar. Bu �
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[İOS/ıpados cihaz özellikleri profili oluşturun](device-features-configure.md).
+[İOS/ıpados cihaz özellikleri yapılandırma profili](device-features-configure.md)oluşturun.
 
 > [!NOTE]
 > Bu ayarlar, bazı ayarların tüm kayıt seçeneklerine uygulanmasıyla farklı kayıt türleri için geçerlidir. Farklı kayıt türleri hakkında daha fazla bilgi için bkz. [iOS/ıpados kaydı](../enrollment/ios-enroll.md).

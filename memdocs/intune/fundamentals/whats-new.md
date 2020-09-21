@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0561a7f7615b4f8aee8fd60b2b2b2481923c07ff
-ms.sourcegitcommit: eaa077aa028a76a4873e4aa7437888f901a7e77f
+ms.openlocfilehash: 1b83ae8b5da0f0cc8a53f26b6a4bcc0797cd4a19
+ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/18/2020
-ms.locfileid: "90767154"
+ms.locfileid: "90802930"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -57,6 +57,13 @@ ms.locfileid: "90767154"
 <!-- ########################## -->
 ## <a name="week-of-september-14-2020"></a>14 Eylül 2020 haftası
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+
+### <a name="device-management"></a>Cihaz yönetimi
+
+### <a name="tenant-attach-run-scripts-from-the-admin-center"></a>Kiracı iliştirme: yönetim merkezinden betikleri çalıştırma
+<!--7220536, CM6234688-->
+Şirket içi Configuration Manager [Çalıştır](../../configmgr/apps/deploy-use/create-deploy-scripts.md) özelliğinin gücünü Microsoft Endpoint Manager yönetim merkezine taşıyın. Yardım masası gibi ek personbuna, tek başına Configuration Manager yönetilen bir cihaza gerçek zamanlı olarak, PowerShell betikleri çalıştırmanızı sağlar. Bu, bu yeni ortama Configuration Manager yöneticisi tarafından önceden tanımlanmış ve onaylanmış olan PowerShell betiklerinin tüm geleneksel avantajlarını sağlar. Daha fazla bilgi için bkz. [kiracı iliştirme: yönetim merkezinden betikleri çalıştırma](../../configmgr/tenant-attach/scripts.md).
+
 ### <a name="app-management"></a>Uygulama yönetimi
 
 #### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal---1817861-wnready---"></a>Windows Şirket Portalı Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş teslimi<!-- 1817861 wnready -->
