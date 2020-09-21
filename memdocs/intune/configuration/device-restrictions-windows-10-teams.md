@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdb3a3defbaab5f952a2a5636a30f9734418f841
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 11a0b2967f98600bf5468e30579f2c42069b298d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88993327"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813685"
 ---
 # <a name="windows-10-team-settings-to-allow-or-restrict-features-on-surface-hub-devices-using-intune"></a>Intune kullanarak Surface Hub cihazlarda özellikleri izin vermek veya kısıtlamak için Windows 10 Team ayarları
 
@@ -29,7 +29,7 @@ Bu makalede, Surface Hub cihazları dahil olmak üzere Windows 10 Team çalışt
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Cihaz profili oluşturun](device-restrictions-configure.md#create-the-profile).
+[Windows 10 ekipleri cihaz kısıtlamaları yapılandırma profili](device-restrictions-configure.md#create-the-profile)oluşturun.
 
 ## <a name="apps-and-experience"></a>Uygulamalar ve deneyim
 

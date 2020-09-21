@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/09/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e79017726e8b8924ac5502c7522b124f11e6c60
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 498983a8512891b0c2d41e006ce81245b4356664
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89606951"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814687"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için Android kurumsal cihaz ayarları
 
@@ -29,7 +29,10 @@ Bu makale, Android kurumsal cihazlarda denetleyebilmeniz için farklı ayarları
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Bir cihaz yapılandırma profili oluşturun](device-restrictions-configure.md).
+[Android kurumsal cihaz kısıtlamaları profili](device-restrictions-configure.md)oluşturun:
+
+- Tam olarak yönetilen, adanmış ve şirkete ait iş profili
+- İş profili
 
 ## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Tam olarak yönetilen, adanmış ve şirkete ait Iş profili
 
@@ -39,7 +42,7 @@ Bazı ayarlar tüm kayıt türleri tarafından desteklenmez. Hangi ayarların ha
 
 :::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Android kurumsal kullanıcıları ve hesapları ayar üst bilgileri ve Microsoft Intune ve uç nokta yöneticisinde uygulanan kayıt türleri bölümüne bakın.":::
 
-Bazı ayarlar yalnızca şirkete ait cihazlar için iş profili düzeyinde iş profili ile uygulanır. Bu ayarlar, tam olarak yönetilen ve adanmış cihazlar için cihaz genelinde hala geçerlidir. Bu ayarlar Kullanıcı arabirimindeki *(iş profili düzeyi)* tanımlayıcısı ile işaretlenir.
+Bazı ayarlar yalnızca şirkete ait cihazlar için iş profili düzeyinde iş profili ile uygulanır. Tam olarak yönetilen ve adanmış cihazlarda, bu ayarlar cihaz genelinde geçerlidir. Bu ayarlar Kullanıcı arabiriminde *(iş profili düzeyi)* metinle işaretlenir.
 
 :::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Microsoft Intune ve uç nokta yöneticisinde iş profili düzeyinde uygulanan Android kurumsal uygulamalar ayarlarına bakın.":::
 
@@ -57,7 +60,7 @@ Bazı ayarlar yalnızca şirkete ait cihazlar için iş profili düzeyinde iş p
   - **Otomatik olarak izin ver**: İzinler otomatik olarak verilir.
   - **Otomatik olarak reddet**: İzinler otomatik reddedilir.
 - **Tarih ve saat değişiklikleri**: **Engelle** , kullanıcıların tarih ve saati el ile değiştirmesini engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların cihazdaki tarih ve saat ayarlama yapmasına izin verebilir.
-- **Birim değişiklikleri**: **Engelle** , kullanıcıların cihazın birimini değiştirmesini önler ve ana birimi de kapatır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazdaki birim ayarlarının kullanılmasına izin verebilir.
+- **Birim değişiklikleri**: **blok** kullanıcıların cihazın birimini değiştirmesini ve ayrıca ana birimi de çıkarmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazdaki birim ayarlarının kullanılmasına izin verebilir.
 - **Fabrika Sıfırlaması**: **Block** , kullanıcıların cihaz ayarlarındaki fabrika sıfırlaması seçeneğini kullanmalarını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazda bu ayarı kullanmasına izin verebilir.
 - **Güvenli önyükleme**: **Block** , kullanıcıların cihazı güvenli moda başlatmasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazı güvenli modda yeniden önyüklemelerine izin verebilir.
 - **Durum çubuğu**: **blok** , bildirimler ve hızlı ayarlar dahil olmak üzere durum çubuğuna erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların durum çubuğuna erişmesine izin verebilir.
@@ -100,7 +103,7 @@ Bazı ayarlar yalnızca şirkete ait cihazlar için iş profili düzeyinde iş p
 
 Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya tam olarak yönetilen cihazlarınızda giriş ekranı deneyimlerini özelleştirmek için bu ayarları kullanın. Cihazları tek bir uygulamayı çalıştıracak veya birçok uygulama çalıştıracak şekilde yapılandırabilirsiniz. Cihaz bilgi noktası moduyla ayarlandığında, yalnızca eklediğiniz uygulamalar kullanılabilir.
 
-**Kayıt profili türü**: cihazlarınızda Microsoft başlatıcısı 'Nı veya Microsoft tarafından yönetilen giriş ekranını yapılandırmaya başlamak için bir kayıt profili türü seçin. Seçenekleriniz şunlardır:
+**Kayıt profili türü**: Microsoft başlatıcısı 'nı veya cihazlarınızda Microsoft tarafından yönetilen giriş ekranını yapılandırmaya başlamak için bir kayıt profili türü seçin. Seçenekleriniz şunlardır:
 
 - **Yapılandırılmadı**: Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, kullanıcılar cihazın varsayılan giriş ekranı deneyimini görebilirler.
 - **Adanmış cihaz**: adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırın. Bu ayarları yapılandırmadan önce, cihazlarda istediğiniz uygulamaları [eklediğinizden](../apps/apps-add-android-for-work.md) ve [atamadığınızdan](../apps/apps-deploy.md) emin olun.
@@ -163,11 +166,11 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
 
       - **Bilgi noktası modundan çıkma**: **Etkinleştir** ayarı, yöneticilerin cihazı güncelleştirmek için bilgi noktası modunu geçici olarak duraklatmasını sağlar. Bu özelliği kullanmak için yönetici:
   
-        1. **Çıkış bilgi noktası** düğmesi gösterilene kadar geri düğmesini seçmeye devam eder. 
+        1. , **Çıkış bilgi noktası** düğmesine gelene kadar geri düğmesini seçmeye devam eder.
         2. **Bilgi noktası çıkış** düğmesini seçer ve **bilgi noktası modu kod** PIN 'ini girer.
         3. İşiniz bittiğinde, **yönetilen giriş ekranı** uygulamasını seçin. Bu adım, cihazı çok uygulama bilgi noktası moduna yeniden kilitler.
 
-        **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi yöneticilerin bilgi noktası modunu duraklatmasını önleyebilir. Yönetici geri düğmesini seçip, **bilgi noktası çıkışı** düğmesini seçerse bir ileti geçiş kodunun gerekli olduğunu belirtir.
+        **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi yöneticilerin bilgi noktası modunu duraklatmasını önleyebilir. Yönetici geri düğmesini seçmeye devam ederse ve **bilgi noktası çıkış** düğmesini seçerse bir ileti geçiş kodunun gerekli olduğunu belirtir.
 
       - **Bilgi noktası modu kodunu bırak**: 4-6 basamaklı sayısal bir PIN girin. Yönetici bilgi noktası modunu geçici olarak duraklatmak için bu PIN 'ı kullanır.
 
@@ -258,11 +261,11 @@ Adanmış cihazlarınızda bilgi noktası stili bir deneyim yapılandırmak veya
     - **Alt**: arama çubuğu cihazların en altında gösterilir.
     - **Gizle**: arama çubuğu gizli.
 
-<!-- MandiA (7.16.2020) The following settings may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
+<!-- MandiA (7.16.2020) The following setting may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
 End of comment -->
 
-### <a name="password"></a>Parola
+### <a name="device-password"></a>Cihaz parolası
 
 - **Kilit ekranını devre dışı bırak**: kullanıcıların cihazda keyguard kilit ekranı özelliğini kullanmalarını engellemek Için **devre dışı bırak** ' ı seçin. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların Keyguard özelliklerini kullanmasına izin verebilir.
 - **Devre dışı kilit ekranı özellikleri**: cihazda keyguard etkinleştirildiğinde, hangi özelliklerin devre dışı bırakılacağını seçin. Örneğin, **güvenli kamera** işaretlendiğinde kamera özelliği cihazda devre dışı bırakılır. Denetlenmeyen tüm özellikler cihazda etkinleştirilir.
@@ -376,6 +379,43 @@ End of comment -->
     PAC dosyaları hakkında daha fazla bilgi için bkz. [proxy otomatik yapılandırma (PAC) dosyası](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (Microsoft dışı bir site açar).
 
   Bu özellik hakkında daha fazla bilgi için bkz. [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (bir Android sitesi açar).
+
+### <a name="work-profile-password"></a>İş profili parolası
+
+- **Gerekli parola türü**: gerekli parola karmaşıklığı düzeyini ve biyometrik cihazların kullanılıp kullanılamayacağını girin. Seçenekleriniz şunlardır:
+  - **Cihaz varsayılanı**
+  - **Parola gerekli, kısıtlama yok**
+  - **Zayıf biyometrik**: [güçlü ve zayıf Biyometri](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (Android 'in Web sitesini açar)
+  - **Sayısal**: parola yalnızca sayı olmalıdır, örneğin `123456789` . Şunları da girin:
+    - **Minimum parola uzunluğu**: parolanın, 4 ile 16 karakter arasında olması gereken minimum uzunluğu girin.
+  - **Sayısal karmaşık**: "1111" veya "1234" gibi yinelenen veya ardışık numaralara izin verilmez. Şunları da girin:
+    - **Minimum parola uzunluğu**: parolanın, 4 ile 16 karakter arasında olması gereken minimum uzunluğu girin.
+  - **Alfabetik**: alfabedeki harfler gereklidir. Rakamlar ve simgeler zorunlu tutulmaz. Şunları da girin:
+    - **Minimum parola uzunluğu**: parolanın, 4 ile 16 karakter arasında olması gereken minimum uzunluğu girin.
+  - **Alfasayısal**: büyük harfler, küçük harfler ve sayısal karakterler içerir. Şunları da girin:
+    - **Minimum parola uzunluğu**: parolanın, 4 ile 16 karakter arasında olması gereken minimum uzunluğu girin.
+  - **Simgelerle alfasayısal**: büyük harfler, küçük harfler, sayısal karakterler, noktalama işaretleri ve semboller içerir. Şunları da girin:
+
+    - **Minimum parola uzunluğu**: parolanın, 4 ile 16 karakter arasında olması gereken minimum uzunluğu girin.
+    - **Gerekli karakter sayısı**: parolanın, 0 ile 16 karakter arasında olması gereken karakter sayısını girin.
+    - **Gereken küçük harfli karakter sayısı**: parolanın, 0 ile 16 karakter arasında olması gereken küçük harfli karakter sayısını girin.
+    - **Gerekli olan büyük harfli karakter sayısı**: parolanın, 0 ile 16 karakter arasında olması gereken büyük harfli karakter sayısını girin.
+    - **Gerekli harf olmayan karakter sayısı**: parolanın, 0 ile 16 karakter arasında olması gereken harf olmayan karakter sayısını (alfabedeki harfler dışında bir şey) girin.
+    - **Gerekli sayısal karakter sayısı**: `1` `2` `3` parolanın 0 ile 16 karakter arasında olması gereken sayısal karakter (,, vb.) sayısını girin.
+    - **Gerekli simge karakter sayısı**: `&` `#` `%` parolanın 0 ile 16 karakter arasında olması gereken simge karakterlerinin (,, vb.) sayısını girin.
+
+- **Parolanın süresi dolana kadar geçen gün sayısı**: 1-365 adresinden cihaz parolasının değiştirilmesi gereken gün sayısını girin. Örneğin, `90` 90 gün sonra parolanın süresini dolacak şekilde girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Kullanıcının bir parolayı yeniden kullanabilmesi için gereken parola sayısı**: Bu ayarı, kullanıcıların önceden kullanılan parolaları oluşturmasını kısıtlamak için kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, `5` kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihaz temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0` (sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  > [!NOTE]
+  > Tam olarak yönetilen, adanmış ve şirkete ait iş profili cihazlarının parola ayarlaması istenmez. Ayarlar gereklidir, ancak kullanıcılara bildirimde bulunulmayabilir. Kullanıcıların parolayı el ile ayarlaması gerekir. Kullanıcı gereksinimlerinizi karşılayan bir parola ayarlayıncaya kadar ilke başarısız olarak raporlar.
+
+### <a name="personal-profile"></a>Kişisel profil
+
+- **Kamera**: **engelleme** kişisel kullanım sırasında kameraya erişimi engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kişisel profilde kameranın kullanılmasına izin verebilir.
+- **Ekran yakalama**: **engelleme** , kişisel kullanım sırasında ekran yakalamalarını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların kişisel profilde Ekran yakalamalarını veya ekran görüntülerini almasını sağlayabilir.
+- **Kullanıcıların kişisel profilde bilinmeyen kaynaklardan uygulama yüklemesini etkinleştirmesine Izin ver**: kullanıcıların kişisel profilde bilinmeyen kaynaklardan uygulama yükleyebilmeleri Için **izin ver** ' i seçin. Kullanıcıların Google Play Store dışındaki kaynaklardan uygulama yüklemesine olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak işletim sistemi, kullanıcıların kişisel profilde bilinmeyen kaynaklardan uygulama yüklemesini engelleyebilir.
 
 ## <a name="work-profile-only"></a>Yalnızca iş profili
 
@@ -525,7 +565,7 @@ Bu parola ayarları, bir iş profili kullanan cihazlardaki kişisel profiller i�
   > [!IMPORTANT]
   > - Seçtiğiniz VPN istemcisinin cihaza yüklenmesi ve cihazın uygulama başına VPN iş profillerini desteklemesi gerekir. Aksi takdirde bir hata oluşur.
   > - VPN istemci uygulamasını yine de **Yönetilen Google Play Mağazası**'nda onaylamanız, uygulamayı Intune ile eşitlemeniz ve cihaza dağıtmanız gerekir. Bu yapıldıktan sonra uygulama kullanıcının iş profiline yüklenir.
-  > - Android 3.0.4 için F5 Access ile uygulama başına VPN kullanılırken bilinen sorunlar olabilir. Daha fazla bilgi için bkz. [Android Için F5 erişimi Için F5's sürüm notları 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) .
+  > - Android 3.0.4 için F5 Access ile uygulama başına VPN kullanılırken bilinen sorunlar olabilir. Daha fazla bilgi için bkz. [F5's sürüm notları Android 3.0.4 Için F5 Access](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Kilitleme modu**: **Etkinleştir** ayarı, tüm ağ trafiğini VPN tünelini kullanacak şekilde zorlar. VPN'e bir bağlantı oluşturulmazsa, cihazın ağ erişimi olmaz.
 

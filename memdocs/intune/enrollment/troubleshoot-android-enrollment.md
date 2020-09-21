@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b51ed6653dff5b7d0aeef40892e16e2826f30204
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f659197c8c1f9dac3f29c89f5c7676d1ae3a3f09
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461258"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779570"
 ---
 # <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Microsoft Intune 'de Android kurumsal cihaz sorunlarını giderme
 
@@ -85,6 +85,24 @@ Silme işlemi, [Android kurumsal şirkete ait iş profili cihazlarında](android
 - Son Kullanıcı onu sıfırlamanıza izin verildi.
 
 Adanmış cihazlar (COSU) ve tam olarak yönetilen cihaz geçiş kodu sıfırlaması desteklenir.
+
+## <a name="duo-devices"></a>Duo cihazlar
+
+### <a name="company-portal-not-prompting-users-to-enroll"></a>Şirket Portalı kullanıcıların kaydolmasını isteme
+Bazı durumlarda, kullanıcılar Şirket Portalı uygulamasını başlattığında kayıt denetim listesi beklendiği gibi görüntülenmeyebilir.
+
+Kullanıcılar kayıt denetim listesini görmemişse, Şirket Portalı uygulamasının sağ üst köşesindeki bildirim zili ' na dokunarak ve kayıt denetim listesini getirecek olan Bildirime dokunarak, her zaman bu sayfaya gidebilirler.
+
+### <a name="users-unable-to-find-the-microsoft-launcher-app"></a>Kullanıcılar Microsoft Başlatıcı uygulamasını bulamıyor
+Kullanıcılar Microsoft başlatıcı uygulaması iş profilini bulamıyor veya başlatamıyor. 
+
+Microsoft başlatıcısı uygulaması, Duo cihazlarda varsayılan Başlatıcı uygulamasıdır, bu nedenle uygulama simgesi uygulamalar listesinden ve kişisel ve iş yürütme mağazalarında gizlenir. Bu, gelecek bir güncelleştirmede düzeltilecektir.
+
+### <a name="edge-sign-in-prompt-during-enrollment"></a>Kayıt sırasında Edge oturum açma istemi
+Kayıtlı olmayan bir Kullanıcı, koşullu erişim (CA) tarafından korunan bir uygulamadaki kurumsal verilere erişmeyi denediğinde, Kullanıcı cihazını kaydetmeye kılavuzluk eder. Bu kayıt akışı sırasında, Edge uygulaması Şirket Portalı Web sitesini açmak için başlatılır. Bazı durumlarda, uç uygulama kullanıcıdan oturum açmasını isteyebilir ve kullanıcıyı kayıt akışından ayırır.
+
+Bunu tamamen önlemek için, kullanıcıların kuruluş verilerine erişmeyi denemeden önce Şirket Portalı kaydolmalarını söyleyin. Bir Kullanıcı kaydedilmeden önce kuruluşunuzun verilerine erişmeyi denerseniz, uç kullanıcıdan oturum açmasını isterse, kayıt akışına devam etmek için Edge oturum açma adımını atlarlar. Kullanıcılar, her zaman önceden yüklenmiş Şirket Portalı uygulamasında kayıt başlatabilir.
+
 
 
 ## <a name="next-steps"></a>Sonraki adımlar

@@ -5,7 +5,7 @@ description: Windows MDM güvenlik temelinin Microsoft Intune ile yönetebilece�
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,30 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01df8f50da5b0665c1c29949c1ee2c954e47cc9f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 63bf4e680dea22a5ca69227fe3701f9ba6f2e0de
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914897"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815213"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune için Windows MDM güvenlik taban çizgisi ayarları
 
 Windows 10 veya üzerini çalıştıran cihazlar için Microsoft Intune desteklediği MDM güvenlik taban çizgisi ayarlarını görüntüleyin. Bu temeldeki ayarların varsayılan değerleri, uygulanabilir cihazlar için önerilen yapılandırmayı temsil eder. Bir taban çizgisi için varsayılanlar, diğer güvenlik temellerinden veya bu taban çizgisinin diğer sürümlerindeki varsayılanlardan eşleşmeyebilir.
 
 - Intune ile güvenlik temellerini kullanma ve güvenlik taban çizgisi profillerinizden temel sürümü yükseltme hakkında bilgi edinmek için bkz. [güvenlik temellerini kullanma](security-baselines.md).
-- 2019 Mayıs 'un en son temel sürümü **MDM güvenlik temeliyle**
+- En son temel sürüm, **2020 Eylül Için MDM güvenlik temeliyle**
 
 Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
 
 Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin olun.
-<!-- Cookies might be required to enable some browsers to display the zone options -->
 
+::: zone pivot="mdm-sept-2020"
+
+**Eylül 2020 için MDM güvenlik temeli**  
+Güvenlik temelinin bu sürümü, *2019 Mayıs Için MDM güvenlik temeli*olan önceki taban çizgisinin yerini almıştır. Bu taban çizgisinin kullanılabilirliğine başlamadan önce oluşturulan profiller, yeni ayarları veya değerleri yansıtacak şekilde günceldeğildir.  Önceki temel sürüme göre yeni profiller oluşturamıyoruz, ancak önceki bir sürümü temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
+
+Taban çizgisinin bu sürümünde önceki sürümden nelerin değiştirildiğini öğrenmek için, bkz. [Yeni şablonda nelerin değiştiğini](#whats-changed-in-the-new-template).
+
+::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 **2019 Mayıs Için MDM güvenlik temeli**:  
 > [!NOTE]
-> Haziran 2019 ' de, *mayıs 2019 şablonunun MDM güvenlik temeli* genel kullanıma sunuldu (önizlemede değil) olarak yayımlanmıştır. Güvenlik temelinin bu sürümü, *2018 Ekim Için MDM güvenlik temelini*, önceki taban çizgisinin yerini almıştır.  Mayıs 2019 temelinin kullanılabilirliği öncesinde oluşturulan profiller, Mayıs 2019 sürümündeki ayarları ve değerleri yansıtacak şekilde güncellemeyebilir.  Önizleme şablonunu temel alan yeni profiller oluşturmasanız da, önizleme şablonunu temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
+> Haziran 2019 ' de, *mayıs 2019 şablonunun MDM güvenlik temeli* genel kullanıma sunuldu (önizlemede değil) olarak yayımlanmıştır. Güvenlik temelinin bu sürümü, *2018 Ekim Için MDM güvenlik temelini*, önceki taban çizgisinin yerini almıştır.  Mayıs 2019 temelinin kullanılabilirliği öncesinde oluşturulan profiller, Mayıs 2019 sürümündeki ayarları ve değerleri yansıtacak şekilde güncellemeyebilir.  Önizleme şablonunu temel alan yeni profiller oluşturamıyoruz, ancak önizleme şablonunu temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
 
 Taban çizgisinin bu sürümünde önceki sürümden nelerin değiştirildiğini öğrenmek için, bkz. [Yeni şablonda nelerin değiştiğini](#whats-changed-in-the-new-template).
 
@@ -50,10 +57,10 @@ Taban çizgisinin bu sürümünde önceki sürümden nelerin değiştirildiğini
 
 **Preview-2018 Ekim IÇIN MDM güvenlik temeli**:  
 > [!NOTE]
-> Bu, Ekim 2018 ' de yayınlanan MDM güvenlik temelinin önizleme sürümüdür. Bu önizleme temeli, 2019 Haziran 'da, genel kullanıma açık olan (Önizleme aşamasında değil) *mayıs 2019 şablonu Için MDM güvenlik temeli* sürümü ile değiştirilmiştir. *Mayıs 2019 temeli Için MDM güvenlik temelinin* kullanılabilirliği öncesinde oluşturulan profiller, Mayıs 2019 sürümü Için MDM güvenlik temelindeki ayarları ve değerleri yansıtacak şekilde güncellemeyebilir. Önizleme şablonunu temel alan yeni profiller oluşturmasanız da, önizleme şablonunu temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
+> Bu, Ekim 2018 ' de yayınlanan MDM güvenlik temelinin önizleme sürümüdür. Bu önizleme temeli, 2019 Haziran 'da, genel kullanıma açık olan (Önizleme aşamasında değil) *mayıs 2019 şablonu Için MDM güvenlik temeli* sürümü ile değiştirilmiştir. *Mayıs 2019 temeli Için MDM güvenlik temelinin* kullanılabilirliği öncesinde oluşturulan profiller, Mayıs 2019 sürümü Için MDM güvenlik temelindeki ayarları ve değerleri yansıtacak şekilde güncellemeyebilir. Önizleme şablonunu temel alan yeni profiller oluşturamıyoruz, ancak önizleme şablonunu temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
+::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
 
 ## <a name="above-lock"></a>Kilidin üstünde
 
@@ -66,13 +73,13 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-AboveLock](/windows/cl
   **Varsayılan**: Evet
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Korumalı ekrandan uygulamaları etkinleştirin**:  
   **Varsayılan**: devre dışı
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="app-runtime"></a>Uygulama çalışma zamanı
 
@@ -89,6 +96,24 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-AppRuntime](/windows/cli
 Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) bölümüne bakın.
 
 ::: zone-end
+::: zone pivot="mdm-sept-2020"
+
+- **Yükseltilmiş ayrıcalıklarla uygulama yüklemelerini engelleyin**: Bu ilke ayarı, sisteme herhangi bir program yüklerken Windows Installer yükseltilmiş izinleri kullanmak üzere yönlendirir. Bu ilke ayarını etkinleştirirseniz, ayrıcalıklar tüm programlara genişletilir. Bu, kullanıcıların, son derece kısıtlanmış bilgisayarlardaki dizinler de dahil olmak üzere, Kullanıcı tarafından görüntüleme veya değiştirme iznine sahip olmadığı dizinlere erişim gerektiren programları yüklemesini sağlar.  
+  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067134)
+
+  **Varsayılan**: Evet.
+
+- **Yüklemeler üzerinde kullanıcı denetimini engelle**:  
+  Bu ilke ayarı, kullanıcıların genellikle sistem yöneticileri tarafından kullanılabilen yükleme seçeneklerini değiştirmesine izin verir. Bu ilke ayarını etkinleştirirseniz, Windows Installer güvenlik özelliklerinden bazıları atlanır. Bu, yüklemelerin tamamlanmasına izin verir, aksi takdirde bir güvenlik ihlali nedeniyle durdurulur. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, Windows Installer güvenlik özellikleri, kullanıcıların sistem yöneticileri için tipik olarak ayrılmış yükleme seçeneklerini değiştirmelerini engeller (örneğin, dosyaların yüklendiği dizini belirtme). Windows Installer bir yükleme paketinin kullanıcının korumalı bir seçeneği değiştirmesine izin verdiğini algılarsa, yüklemeyi sonlandırır ve bir ileti görüntüler. Bu güvenlik özellikleri yalnızca, yükleme programı Kullanıcı tarafından reddedilen dizinlere erişimi olan ayrıcalıklı bir güvenlik bağlamında çalışırken çalışır. Bu ilke ayarı, daha az kısıtlayıcı ortamlar için tasarlanmıştır. Bu, yazılımın yüklenmesini önleyen bir yükleme programındaki hataları aşmak için kullanılabilir.  
+  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067060)
+
+- **Oyun DVR 'ı engelle (yalnızca masaüstü)**:  
+  Oyunları kaydetmeye ve yayına izin verilip verilmeyeceğini yapılandırır.  
+  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067056)
+
+  **Varsayılan**: Evet
+
+::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 - **Yüklemeler üzerinde kullanıcı denetimini engelle**:  
@@ -102,7 +127,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-ApplicationManagement](/
 
   - *Bu ilke ayarını etkinleştirirseniz*, ayrıcalıklar tüm programlara genişletilir. Genellikle, bu ayrıcalıklar kullanıcıya atanan (masaüstünde sunulan), bilgisayara atanan (otomatik olarak yüklenir) veya Denetim Masası 'ndaki Program Ekle/Kaldır bölümünde kullanılabilir olan programlar için ayrılmıştır. Bu profil ayarı, kullanıcıların, son derece kısıtlanmış bilgisayarlardaki dizinler dahil olmak üzere, Kullanıcı tarafından görüntüleme veya değiştirme iznine sahip olmadığı dizinlere erişim gerektiren programları yüklemesine olanak sağlar.
 
-  - *Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız*sistem yöneticisinin dağıtamayacağı veya sunamayacağı programları yüklediğinde, sistem geçerli kullanıcının izinlerini uygular. Note: Bu ilke ayarı, bilgisayar yapılandırması ve Kullanıcı Yapılandırması klasörlerinde görüntülenir. Bu ilke ayarının etkili olması için, her iki klasörde da etkinleştirmeniz gerekir. Dikkat: nitelikli kullanıcılar, bu ilke ayarının ayrıcalıklarını değiştirme ve kısıtlanmış dosya ve klasörlere kalıcı erişim elde etmesine izin verdiği izinlerden yararlanabilir. Bu ilke ayarının Kullanıcı Yapılandırması sürümünün güvenli olması garanti edilmez.  
+  - *Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız*, sistem yöneticisinin dağıtamayacağı veya sunamayacağı programları yüklediğinde, sistem geçerli kullanıcının izinlerini uygular. Note: Bu ilke ayarı, bilgisayar yapılandırması ve Kullanıcı Yapılandırması klasörlerinde görüntülenir. Bu ilke ayarının etkili olması için, her iki klasörde da etkinleştirmeniz gerekir. Dikkat: nitelikli kullanıcılar, bu ilke ayarının ayrıcalıklarını değiştirme ve kısıtlanmış dosya ve klasörlere kalıcı erişim elde etmesine izin verdiği izinlerden yararlanabilir. Bu ilke ayarının Kullanıcı Yapılandırması sürümünün güvenli olduğu garanti edilmez.  
   [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067134)
 
   **Varsayılan**: Evet
@@ -115,6 +140,133 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-ApplicationManagement](/
   [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067056)
 
   **Varsayılan**: Evet
+
+::: zone-end
+::: zone pivot="mdm-sept-2020"
+
+## <a name="audit"></a>Denetim
+
+- **Hesap oturum açma denetimi kimlik bilgisi doğrulaması (cihaz)**:  
+  Bu ilke ayarı, Kullanıcı hesabı oturum açma kimlik bilgileri üzerinde doğrulama testleri tarafından oluşturulan olayları denetlemenize olanak tanır. Bu alt kategorideki olaylar yalnızca bu kimlik bilgileri için yetkili olan bilgisayarda oluşur. Etki alanı hesapları için etki alanı denetleyicisi yetkilidir. Yerel hesaplar için yerel bilgisayar yetkilidir.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Hesap oturum açma denetimi Kerberos kimlik doğrulama hizmeti (cihaz)**:  
+  Bu ilke ayarı, Kerberos kimlik doğrulama bilet verme bileti (TGT) istekleri tarafından oluşturulan olayları denetlemenize olanak tanır. Bu ilke ayarını yapılandırırsanız, Kerberos kimlik doğrulaması TGT isteğinden sonra bir denetim olayı oluşturulur. Başarı denetimleri başarılı istekleri kaydeder ve hata denetimleri başarısız istekleri kaydeder. Bu ilke ayarını yapılandırmazsanız, Kerberos kimlik doğrulaması TGT isteğinden sonra bir denetim olayı oluşturulmaz.
+
+  **Varsayılan**: yok
+
+- **Hesap oturum açma oturumu kapatma denetim hesabı kilitleme (cihaz)**:  
+
+  **Varsayılan**: hata
+
+- **Hesap oturum açma oturumu kapatma denetim grubu üyeliği (cihaz)**:  
+  Bu ilke, kullanıcının oturum açma belirtecindeki grup üyeliği bilgilerini denetlemenize olanak tanır. Bu alt kategorideki olaylar, bir oturum açma oturumunun oluşturulduğu bilgisayarda oluşturulur. Etkileşimli bir oturum açma işlemi için, kullanıcının oturum açtığı bilgisayarda güvenlik denetim olayı oluşturulur. Ağdaki paylaşılan bir klasöre erişim gibi bir ağ oturum açma işlemi için, kaynağı barındıran bilgisayarda güvenlik denetimi olayı oluşturulur. Bu ayar yapılandırıldığında, her başarılı oturum açma işlemi için bir veya daha fazla güvenlik denetim olayı oluşturulur. Ayrıca Gelişmiş denetim Ilkesi Yapılandırması \ sistem denetim Ilkeleri \ oturum açma/kapatma altında bulunan oturum açma ayarını da etkinleştirmeniz gerekir. Grup üyeliği bilgileri tek bir güvenlik denetim olayına sığamayacak olursa birden çok olay üretilir.
+
+  **Varsayılan**: başarılı
+
+- **Hesap oturum açma oturumu kapatma denetim oturumu (cihaz)**:  
+  Bu ilke ayarı, bilgisayardaki kullanıcı hesabı oturum açma girişimleri tarafından oluşturulan olayları denetlemenize olanak tanır. Bu alt kategorideki olaylar, oturum açma oturumlarının oluşturulmasıyla ilgilidir ve erişilen bilgisayarda gerçekleşir. Etkileşimli bir oturum açma işlemi için, güvenlik denetimi olayı Kullanıcı hesabının oturum açtığı bilgisayarda oluşturulur. Ağdaki paylaşılan bir klasöre erişim gibi bir ağ oturum açma işlemi için, kaynağı barındıran bilgisayarda güvenlik denetimi olayı oluşturulur. Aşağıdaki olaylar dahildir: başarılı oturum açma girişimleri. Başarısız oturum açma girişimleri. Açık kimlik bilgilerini kullanarak oturum açma girişimleri. Bu olay, bir işlem hesapta oturum açmaya çalıştığında, bu hesapların kimlik bilgilerini açıkça belirtilerek oluşturulur. Bu en yaygın olarak, zamanlanmış görevler veya RUNAS komutu kullanılırken, toplu oturum açma yapılandırmalarında oluşur. Güvenlik tanımlayıcıları (SID 'Ler) filtrelenmiştir ve oturum açmasına izin verilmiyor.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Diğer oturum açma oturumu kapatma olaylarını denetleme (cihaz)**:  
+  Bu ilke ayarı *, oturum açma* /kapatma ile ilgili diğer olayları denetlemenize olanak tanır; örneğin, Terminal Hizmetleri oturum bağlantısı yok. Yeni Terminal Hizmetleri oturumları. Bir iş istasyonunu kilitleme ve kilidini açma. Ekran koruyucusu çağırma. Bir ekran koruyucunun ayırt edilmesi. Kerberos isteğinin aynı bilgilerle iki kez alındığı, Kerberos yeniden yürütme saldırısı algılaması. Bu durum, ağ yanlış yapılandırılmasından kaynaklanabilir. Bir kullanıcı veya bilgisayar hesabına verilen bir kablosuz ağa erişim. Bir kullanıcı veya bilgisayar hesabına verilen bir kablolu 802.1 x ağına erişim.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Özel oturum açma denetimi (cihaz)**:  
+  Bu ilke ayarı, aşağıdakiler gibi özel oturum açmalar tarafından oluşturulan olayları denetlemenize olanak tanır: yönetici ile eşdeğer ayrıcalıklara sahip bir oturum açma ve bir işlemi daha yüksek bir düzeye yükseltmek için kullanılabilen özel bir oturum açma kullanımı. Özel bir grubun üyesi tarafından oturum açma. Özel gruplar, belirli bir grubun bir üyesi ağınızda oturum açtığında oluşturulan olayları denetleme olanağı sağlar. Kayıt defterinde grup güvenlik tanımlayıcıları (SID 'Ler) listesini yapılandırabilirsiniz. Bu SID 'lerin herhangi biri oturum açma sırasında bir belirtece eklenirse ve alt kategori etkinleştirildiğinde bir olay günlüğe kaydedilir. Bu özellik hakkında daha fazla bilgi için bkz. Microsoft Bilgi Bankası 'nda makale 947223 ( https://go.microsoft.com/fwlink/?LinkId=121697) .
+
+  **Varsayılan**: başarılı
+
+- **Güvenlik grubu yönetimini denetleme (cihaz)**:  
+  Bu ilke ayarı, güvenlik grupları tarafından oluşturulan olayları aşağıdakiler gibi denetlemenize olanak sağlar: güvenlik grubu oluşturulur, değiştirilir veya silinir. Üye bir güvenlik grubundan eklenir veya kaldırılır. Grup türü değiştirildi. Bu ilke ayarını yapılandırırsanız, bir güvenlik grubunu değiştirme girişimi yapıldığında bir denetim olayı oluşturulur. Başarı denetimleri başarılı denemeleri kaydeder ve hata denetimleri başarısız denemeleri kaydeder. Bu ilke ayarını yapılandırmazsanız, bir güvenlik grubu değiştiğinde hiçbir denetim olayı oluşturulmaz.
+
+  **Varsayılan**: başarılı
+
+- **Kullanıcı hesabı yönetimini denetleme (cihaz)**:  
+  Bu ilke ayarı, Kullanıcı hesaplarında yapılan değişiklikleri denetlemenize olanak tanır. Olaylar şunları içerir: bir kullanıcı hesabı oluşturulur, değiştirilir, silinir; yeniden adlandırıldı, devre dışı, etkin, kilitli veya kilidi açılmış. Bir kullanıcı hesabı??? s parolası ayarlandı veya değiştirildi. Bir kullanıcı hesabının SID geçmişine bir güvenlik tanımlayıcısı (SID) eklenir. Dizin Hizmetleri geri yükleme modu parolası yapılandırıldı. Yönetici Kullanıcı hesaplarında izinler değiştirilmiştir. Kimlik bilgileri Yöneticisi kimlik bilgileri yedeklenir veya geri yüklendi. Bu ilke ayarını yapılandırırsanız, bir kullanıcı hesabını değiştirme girişimi yapıldığında bir denetim olayı oluşturulur. Başarı denetimleri başarılı denemeleri kaydeder ve hata denetimleri başarısız denemeleri kaydeder. Bu ilke ayarını yapılandırmazsanız, bir kullanıcı hesabı değiştiğinde hiçbir denetim olayı oluşturulmaz.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Ayrıntılı Izleme DENETIM PNP etkinliği (cihaz)**:  
+  Bu ilke ayarı, Tak ve kullan dış bir cihaz algıladığında denetlemenize olanak tanır. Bu ilke ayarını yapılandırırsanız, Tak ve Kullan bir dış cihaz algıladığında bir denetim olayı oluşturulur. Bu kategori için yalnızca başarı denetimleri kaydedilir. Bu ilke ayarını yapılandırmazsanız, Tak ve Çalıştır tarafından bir dış cihaz algılandığında bir denetim olayı oluşturulmaz.
+
+  **Varsayılan**: başarılı
+
+- **Ayrıntılı Izleme denetim Işlemi oluşturma (cihaz)**:  
+  Bu ilke ayarı, bir işlem oluşturulduğunda veya başlatıldığında oluşturulan olayları denetlemenize olanak tanır. İşlemi oluşturan uygulamanın veya kullanıcının adı da denetlenir. Bu ilke ayarını yapılandırırsanız bir işlem oluşturulduğunda bir denetim olayı oluşturulur. Başarı denetimleri başarılı denemeleri kaydeder ve hata denetimleri başarısız denemeleri kaydeder. Bu ilke ayarını yapılandırmazsanız, bir işlem oluşturulduğunda bir denetim olayı oluşturulmaz.
+
+  **Varsayılan**: başarılı
+
+- **Nesne erişimi denetim ayrıntılı dosya paylaşma (cihaz)**:  
+  Bu ilke ayarı, paylaşılan bir klasördeki dosyalara ve klasörlere erişim girişimlerini denetlemenize olanak tanır. Ayrıntılı dosya paylaşma ayarı bir dosyayı veya klasörü her erişildiğinde günlüğe kaydeder, ancak dosya paylaşma ayarı bir istemci ile dosya paylaşma arasında kurulan herhangi bir bağlantı için yalnızca bir olay kaydeder. Ayrıntılı dosya paylaşma denetim olayları, erişim vermek veya reddetmek için kullanılan izinlerle ilgili ayrıntılı bilgiler içerir. Bu ilke ayarını yapılandırırsanız, paylaşımdaki bir dosya veya klasöre erişim girişiminde bulunulduğunda bir denetim olayı oluşturulur. Yönetici yalnızca başarıları, yalnızca hataların veya hem başarıları hem de başarısızlıklar için denetim yapılıp yapılmayacağını belirtebilir. Note: paylaşılan klasörler için sistem erişim denetim listeleri (SACL) yoktur. Bu ilke ayarı etkinleştirilirse, sistemdeki tüm paylaşılan dosyalara ve klasörlere erişim denetlenir.
+
+  **Varsayılan**: hata
+
+- **Dosya paylaşma erişimini denetleme (cihaz)**:  
+  Bu ilke ayarı, paylaşılan bir klasöre erişim girişimlerini denetlemenize olanak tanır. Bu ilke ayarını yapılandırırsanız, paylaşılan bir klasöre erişim girişimi yapıldığında bir denetim olayı oluşturulur. Bu ilke ayarı tanımlanmışsa, yönetici yalnızca başarıları, yalnızca hataların veya hem başarıları hem de başarısızlıklar için denetim yapılıp yapılmayacağını belirtebilir. Note: paylaşılan klasörler için sistem erişim denetim listeleri (SACL) yoktur. Bu ilke ayarı etkinleştirilirse, sistemdeki tüm paylaşılan klasörlere erişim denetlenir.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Nesne erişimi diğer nesne erişim olaylarını denetleme (cihaz)**:  
+  Bu ilke ayarı, görev zamanlayıcı işlerinin veya COM+ nesnelerinin yönetimi tarafından oluşturulan olayları denetlemenize olanak tanır. Zamanlayıcı işleri için aşağıdakiler denetlenir: Iş oluşturuldu. İş silindi. İş etkin. İş devre dışı. İş güncelleştirildi. COM+ nesneleri için aşağıdakiler denetlenir: Katalog nesnesi eklendi. Katalog nesnesi güncelleştirildi. Katalog nesnesi silindi.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Nesne erişimi denetim çıkarılabilir depolama (cihaz)**:  
+  Bu ilke ayarı, bir çıkarılabilir depolama cihazında dosya sistemi nesnelerine erişmeye yönelik Kullanıcı girişimlerini denetlemenize olanak tanır. Bir güvenlik denetim olayı, istenen tüm erişim türleri için yalnızca tüm nesneler için oluşturulur. Bu ilke ayarını yapılandırırsanız, bir hesap bir kaldırılabilir depolama biriminde dosya sistemi nesnesine eriştiğinde bir denetim olayı oluşturulur. Başarı denetimleri başarılı denemeleri kaydeder ve hata denetimleri başarısız denemeleri kaydeder. Bu ilke ayarını yapılandırmazsanız, bir hesap çıkarılabilir bir depolama biriminde bir dosya sistemi nesnesine eriştiğinde hiçbir denetim olayı oluşturulmaz.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Kimlik doğrulama Ilkesi değişikliğini denetle (cihaz)**:  
+  Bu ilke ayarı, kimlik doğrulama ilkesinde yapılan değişikliklerle oluşturulan olayları aşağıdakiler gibi denetlemenize olanak sağlar: orman ve etki alanı güvenleri oluşturma. Orman ve etki alanı güvenleri değişikliği. Orman ve etki alanı güvenlerini kaldırma. Bilgisayar Yapılandırması \ Windows ayarları \ ilke ilkelerkerberos Ilkesi altındaki Kerberos ilkesinde yapılan değişiklikler. Bir kullanıcıya veya gruba aşağıdaki Kullanıcı haklarından herhangi birini verme: Bu bilgisayara ağ üzerinden erişin. Yerel olarak oturum açmaya izin verin. Terminal Hizmetleri aracılığıyla oturum açmaya izin verin. Toplu Iş olarak oturum açın. Bir hizmette oturum açın. Ad alanı çakışması. Örneğin, yeni bir güven var olan bir ad alanı adı ile aynı ada sahip olduğunda. Bu ilke ayarını yapılandırırsanız, kimlik doğrulama ilkesini değiştirme girişimi yapıldığında bir denetim olayı oluşturulur. Başarı denetimleri başarılı denemeleri kaydeder ve hata denetimleri başarısız denemeleri kaydeder. Bu ilke ayarını yapılandırmazsanız, kimlik doğrulama ilkesi değiştirildiğinde bir denetim olayı oluşturulmaz. Note: güvenlik denetim olayı, Grup İlkesi uygulandığında günlüğe kaydedilir. Ayarların değiştirildiği sırada oluşmaz.
+
+  **Varsayılan**: başarılı
+
+- **Ilke değişikliği DENETIM MPSSVC kural düzeyi Ilke değişikliği (cihaz)**:  
+  Bu ilke ayarı, Microsoft koruma hizmeti (MPSSVC) tarafından kullanılan ilke kurallarında değişiklikler tarafından oluşturulan olayları denetlemenize olanak tanır. Bu hizmet Windows güvenlik duvarı tarafından kullanılır. Olaylar şunları içerir: Windows Güvenlik Duvarı hizmeti başladığında etkin ilkelerin raporlaması. Windows güvenlik duvarı kurallarında yapılan değişiklikler. Windows Güvenlik Duvarı özel durum listesindeki değişiklikler. Windows Güvenlik Duvarı ayarlarında yapılan değişiklikler. Kurallar Windows Güvenlik Duvarı hizmeti tarafından yoksayıldı veya uygulanmadı. Windows Güvenlik Duvarı grup ilkesi ayarlarındaki değişiklikler. Bu ilke ayarını yapılandırırsanız, MPSSVC tarafından kullanılan ilke kurallarını değiştirme girişimleri tarafından bir denetim olayı oluşturulur. Başarı denetimleri başarılı denemeleri kaydeder ve hata denetimleri başarısız denemeleri kaydeder. Bu ilke ayarını yapılandırmazsanız, MPSSVC tarafından kullanılan ilke kurallarındaki değişikliklerle bir denetim olayı oluşturulmaz.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Ilke değişikliği diğer Ilke değişikliği olaylarını denetleme (cihaz)**:  
+  Bu ilke ayarı, ilke değişikliği kategorisinde denetlenmeyen ve aşağıdakiler gibi Güvenilir Platform Modülü (TPM) yapılandırma değişiklikleri gibi diğer güvenlik ilkesi değişiklikleri tarafından oluşturulan olayları denetlemenize olanak tanır. Çekirdek modu şifreleme kendi kendini sınamaları. Şifreleme sağlayıcısı işlemleri. Şifreleme bağlam işlemleri veya değişiklikleri. Uygulanan merkezi erişim Ilkeleri (CAPs) değişiklikleri. Önyükleme Yapılandırma Verileri (BCD) değişiklikleri.
+
+  **Varsayılan**: hata
+
+- **Denetim ilkesinde (cihaz) yapılan değişiklikleri denetle**:  
+  Bu ilke ayarı, güvenlik denetim ilkesi ayarlarındaki değişiklikleri denetim Ilkesi nesnesinde denetim izinleri ve denetim ayarları ile denetlemenizi sağlar. Sistem Denetim ilkesinde yapılan değişiklikler. Güvenlik olay kaynaklarının kaydı. Güvenlik olay kaynaklarının kaydını kaldırın. Kullanıcı başına denetim ayarlarında yapılan değişiklikler. CrashOnAuditFail değerindeki değişiklikler. Bir dosya sistemi veya kayıt defteri nesnesi üzerindeki sistem erişim denetimi listesinde yapılan değişiklikler. Özel gruplar listesindeki değişiklikler. Note: bir nesne için SACL değiştiğinde ve ilke değişikliği kategorisi etkinken sistem erişim denetim listesi (SACL) değişiklik denetimi yapılır. İsteğe bağlı erişim denetim listesi (DACL) ve sahiplik değişiklikleri, nesne erişim denetimi etkinleştirildiğinde ve nesnenin SACL 'si DACL/sahip değişikliğini denetlemek için yapılandırıldığında denetlenir.
+
+  **Varsayılan**: başarılı
+
+- **Ayrıcalık kullanımını denetleme hassas kullanım kullanımı (cihaz)**:  
+  Bu ilke ayarı, aşağıdakiler gibi hassas ayrıcalıklar (Kullanıcı hakları) kullanıldığında oluşturulan olayları denetlemenize olanak sağlar: ayrıcalıklı bir hizmet çağırılır. Aşağıdaki ayrıcalıklardan biri çağrılır: işletim sisteminin bir parçası olarak çalışır. Dosya ve dizinleri yedekleyin. Belirteç nesnesi oluşturun. Programlarda hata ayıklayın. Bilgisayar ve Kullanıcı hesaplarının, yetkilendirme için güvenilir olmasını sağlar. Güvenlik denetimleri oluşturun. Kimlik doğrulamasından sonra istemcinin kimliğine bürün. Cihaz sürücülerini yükleyin ve kaldırın. Denetim ve güvenlik günlüğünü yönetin. Üretici yazılımı ortam değerlerini değiştirin. İşlem düzeyi belirtecini değiştirin. Dosyaları ve dizinleri geri yükleyin. Dosyaların veya diğer nesnelerin sahipliğini alın. Bu ilke ayarını yapılandırırsanız, hassas ayrıcalık istekleri yapıldığında bir denetim olayı oluşturulur. Başarı denetimleri başarılı istekleri kaydeder ve hata denetimleri başarısız istekleri kaydeder. Bu ilke ayarını yapılandırmazsanız, hassas ayrıcalık istekleri yapıldığında bir denetim olayı oluşturulmaz.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Diğer sistem olaylarını (cihaz) sistem denetimi**:  
+  Bu ilke ayarı, aşağıdaki olaylardan herhangi birini denetlemenize olanak tanır: Windows Güvenlik Duvarı hizmetini ve sürücüsünü başlatma ve yeniden başlatma. Windows Güvenlik Duvarı hizmeti tarafından işlenen güvenlik ilkesi. Şifreleme anahtarı dosyası ve geçiş işlemleri.
+
+  **Varsayılan**: başarılı ve başarısız
+
+- **Sistem denetimi güvenlik durumu değişikliği (cihaz)**:  
+  Bu ilke ayarı, aşağıdaki olaylardan herhangi birini denetlemenize olanak tanır: Windows Güvenlik Duvarı hizmetini ve sürücüsünü başlatma ve yeniden başlatma. Windows Güvenlik Duvarı hizmeti tarafından işlenen güvenlik ilkesi. Şifreleme anahtarı dosyası ve geçiş işlemleri.
+
+  **Varsayılan**: başarılı
+
+- **Güvenlik sistemi uzantısını denetle (cihaz)**:  
+  Bu ilke ayarı, güvenlik sistemi uzantıları ve aşağıdakiler gibi hizmetlerle ilgili olayları denetlemenize olanak sağlar: kimlik doğrulaması, bildirim veya güvenlik paketi gibi bir güvenlik sistemi uzantısı yüklenir ve yerel güvenlik yetkilisine (LSA) kaydedilir. Oturum açma girişimlerinin kimliğini doğrulamak, oturum açma istekleri göndermek ve hesap veya parola değişiklikleri yapmak için kullanılır. Güvenlik sistemi uzantılarına örnek olarak Kerberos ve NTLM verilebilir. Hizmet, hizmet denetimi Yöneticisi 'ne yüklenir ve kaydedilir. Denetim günlüğü, hizmet adı, ikili, tür, başlangıç türü ve hizmet hesabı hakkındaki bilgileri içerir. Bu ilke ayarını yapılandırırsanız, bir güvenlik sistemi uzantısı yüklemek için girişimde bulunulduğunda bir denetim olayı oluşturulur. Başarı denetimleri başarılı denemeleri kaydeder ve hata denetimleri başarısız denemeleri kaydeder. Bu ilke ayarını yapılandırmazsanız, güvenlik sistemi uzantısı yüklemeye yönelik bir girişim yapıldığında bir denetim olayı oluşturulmaz.
+
+  **Varsayılan**: başarılı
+
+- **Sistem denetimi sistem bütünlüğü (cihaz)**:  
+  Bu ilke ayarı, aşağıdaki gibi güvenlik alt sisteminin bütünlüğünü ihlal eden olayları denetlemenize olanak tanır: denetim sistemiyle ilgili bir sorun nedeniyle olay günlüğüne yazılamayacağını belirten olaylar. İstemci adres alanından yanıtlama, okuma veya yazma yoluyla bir istemciyi taklit etmeye yönelik bir denemede geçerli olmayan bir yerel yordam çağrısı (LPC) bağlantı noktası kullanan bir işlem. Sistem bütünlüğünü tehlikeye atacak bir uzak yordam çağrısı (RPC) algılaması. Kod bütünlüğü tarafından belirlendiği şekilde geçerli olmayan yürütülebilir bir dosyanın karma değerini algılama. Sistem bütünlüğünden ödün veren şifreleme işlemleri.
+
+  **Varsayılan**: başarılı ve başarısız
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="auto-play"></a>Otomatik Yürüt
 
@@ -146,10 +298,12 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-BitLocker](/windows/clie
   Bu ilke ayarı, şifreleme yöntemini ve şifre gücünü denetlemek için kullanılır. Bu ilkenin değerleri BitLocker 'ın şifreleme için kullandığı şifre gücünü belirlemektir. Kuruluşlar, artırılmış güvenlik için şifreleme düzeyini denetlemek isteyebilir (AES-256, AES-128 ' den daha güçlüdür). Bu ayarı etkinleştirirseniz, sabit veri sürücüleri, işletim sistemi sürücüleri ve çıkarılabilir veri sürücüleri için şifreleme algoritması ve anahtar şifreleme gücü ayrı ayrı yapılandırabilirsiniz. Sabit ve işletim sistemi sürücüleri için, XTS-AES algoritmasını kullanmanızı öneririz. Sürücü, Windows 10, sürüm 1511 veya üzerini çalıştırmayan diğer cihazlarda kullanılıyorsa, çıkarılabilir sürücüler için AES-CBC 128-bit veya AES-CBC 256-bit ' i kullanmanız gerekir. Sürücü zaten şifrelendiyse veya şifreleme devam ediyorsa şifreleme yönteminin değiştirilmesi etkisizdir. Bu durumlarda, bu ilke ayarı yok sayılır.  
   [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067140)
 
+  **Varsayılan**: Yapılandır
+
   BitLocker çıkarılabilir sürücü ilkesi için aşağıdaki ayarı yapılandırın:
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
   - **BitLocker tarafından korunmayan çıkarılabilir veri sürücülerine yönelik yazma erişimini engelleyin**:  
     **Varsayılan**: Evet
@@ -189,7 +343,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-BitLocker](/windows/clie
     **Varsayılan**: AES 256BIT XTS
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="browser"></a>Tarayıcı
 
@@ -236,7 +390,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-bağlantı](/windows/cli
   **Varsayılan**: etkin
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **UNC yollarına güvenli erişimi yapılandırın**:  
   Bu ilke ayarı, UNC yollarına güvenli erişimi yapılandırır. Bu ilkeyi etkinleştirirseniz, Windows yalnızca ek güvenlik gereksinimlerini karşıladıktan sonra belirtilen UNC yollarına erişime izin verir.  
@@ -250,7 +404,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-bağlantı](/windows/cli
     Ek güvenlik bayraklarını ve sunucu yollarını belirtmek için **Ekle** ' yi seçin.
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Http üzerinden yazdırma sürücülerinin Indirilmesini engelle**:  
   Bu ilke ayarı, bu istemcinin HTTP üzerinden yazıcı sürücüsü paketleri indirmesine izin verilip verilmeyeceğini belirtir. HTTP yazdırmayı ayarlamak için, gelen kutusu olmayan sürücülerin HTTP üzerinden indirilmesi gerekir. Note: Bu ilke ayarı, istemcinin Intranet üzerindeki yazıcılara veya HTTP üzerinden Internet üzerinden yazdırmasını engellemez. Yalnızca yerel olarak yüklü olmayan sürücülerin indirilmesini yasaklar. Bu ilke ayarını etkinleştirirseniz, yazıcı sürücüleri HTTP üzerinden indirilemez. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız kullanıcılar, yazıcı sürücülerini HTTP üzerinden indirebilir.  
@@ -299,13 +453,15 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DeviceGuard](/windows/cl
   **Varsayılan**: UEFI kilidi ile etkinleştir
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Sanallaştırma tabanlı güvenlik**:  
+  Bir sonraki yeniden başlatmada sanallaştırma tabanlı güvenliği (VBS) açar. Sanallaştırma tabanlı güvenlik, güvenlik hizmetleri için destek sağlamak üzere Windows Hiper Yöneticisi 'ni kullanır.
+
   **Varsayılan**: VBS 'yi güvenli önyükleme ile etkinleştirin
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Sanallaştırma tabanlı güvenliği etkinleştir**:  
   Bir sonraki yeniden başlatmada sanallaştırma tabanlı güvenliği (VBS) açar. Sanallaştırma tabanlı güvenlik, güvenlik hizmetlerine destek sağlamak için Windows Hiper Yöneticisi'ni kullanır.  
@@ -314,6 +470,8 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-DeviceGuard](/windows/cl
   **Varsayılan**: Evet
 
 - **System Guard 'ı Başlat**:  
+  Donanım tarafından destekleniyorsa güvenli başlatma imkanı sunar.
+
   **Varsayılan**: etkin
 
 ## <a name="device-installation"></a>Cihaz yüklemesi
@@ -360,12 +518,6 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Deviceınstallation](/wi
 
 Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-DeviceLock](/windows/client-management/mdm/policy-csp-devicelock) bölümüne bakın.
 
-- **Kameranın kullanımını engelle**:  
-  BILGISAYAR ayarlarındaki kilit ekranı Kamerası geçiş anahtarını devre dışı bırakır ve bir kameranın kilit ekranında çağrılmasını engeller. Varsayılan olarak, kullanıcılar, kilit ekranında kullanılabilir bir kameranın çağrılmasını sağlayabilir. Bu ayarı etkinleştirirseniz, kullanıcılar bılgısayar ayarları ' nda kilit ekranı kamera erişimini etkinleştiremez veya devre dışı bırakamez ve kamera kilit ekranında çağrılamaz.  
-  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067052)
-
-  **Varsayılan**: etkin
-
 - **Parola gerektir**:  
   Cihaz kilidinin etkinleştirilip etkinleştirilmeyeceğini belirtir.  
   [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067049)  
@@ -374,17 +526,11 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-DeviceLock](/windows/c
   
   *Parola ıste* *Evet*olarak ayarlandığında aşağıdaki ayarlar kullanılabilir.
 
-  - **Parola en az karakter kümesi sayısı**:  
-    Güçlü bir PIN veya parola için gereken karmaşık öğe türleri sayısı (büyük ve küçük harfler, rakamlar ve noktalama işaretleri). PIN masaüstü ve mobil cihazlar için aşağıdaki davranışı zorlar: 1-yalnızca basamak 2 rakamları ve küçük harflerin 3 basamaklı, küçük harflerin ve büyük harflerin olması gerekir. Masaüstü Microsoft hesaplarında ve etki alanı hesaplarında desteklenmez. 4 basamaklı, küçük harfler, büyük harfler ve özel karakterler gereklidir. Masaüstünde desteklenmez.  
-    [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067055)
+  - **Gerekli parola**:  
+    Gerekli PIN veya parola türünü belirler.  
+    [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067027)
 
-    **Varsayılan**: 3
-
-  - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**:  
-    Cihaz temizlenmeden önce izin verilen kimlik doğrulama hatalarının sayısı. 0 değeri cihaz temizleme işlevini devre dışı bırakır.  
-    [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067030)
-
-    **Varsayılan**: 10  
+    **Varsayılan**: alfasayısal
 
   - **Parola kullanım süresi (gün)**:  
     En fazla parola yaşı ilke ayarı, sistem kullanıcının onu değiştirmesini gerektirerek, bir parolanın ne kadar süreyle kullanılabileceğini (gün cinsinden) belirler. Parolaların süresini 1 ile 999 arasında bir gün sonra dolacak şekilde ayarlayabilir veya gün sayısını 0 olarak ayarlayarak parolaların süre dolmamasını belirtebilirsiniz. Maksimum parola yaşı 1 ila 999 gün arasındaysa, en düşük parola yaşı en fazla parola geçerlilik süresinden az olmalıdır. Maksimum parola yaşı 0 olarak ayarlandıysa, minimum parola yaşı 0 ile 998 gün arasında herhangi bir değer olabilir.  
@@ -392,17 +538,30 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-DeviceLock](/windows/c
 
     **Varsayılan**: 60
 
-  - **Gerekli parola**:  
-    Gerekli PIN veya parola türünü belirler.  
-    [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067027)
+  - **Parola en az karakter kümesi sayısı**:  
+    Güçlü bir PIN veya parola için gereken karmaşık öğe türleri sayısı (büyük ve küçük harfler, rakamlar ve noktalama işaretleri). PIN masaüstü ve mobil cihazlar için aşağıdaki davranışı zorlar: 1-yalnızca basamak 2 rakamları ve küçük harflerin 3 basamaklı, küçük harflerin ve büyük harflerin olması gerekir. Masaüstü Microsoft hesaplarında ve etki alanı hesaplarında desteklenmez. 4 basamaklı, küçük harfler, büyük harfler ve özel karakterler gereklidir. Masaüstünde desteklenmez.  
+    [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067055)
 
-    **Varsayılan**: alfasayısal
+    **Varsayılan**: 3
+
+  - **Önceki parolaların yeniden kullanılmasını engelle**:  
+    Geçmişte, kullanılamayan parolaların kaç tane parola depolandığını belirtir. Değer, kullanıcının geçerli parolasını içerir. Örneğin, *1* ayarı ile Kullanıcı yeni bir parola seçerken geçerli parolasını yeniden kullantıramıyorum. *5* ayarı, kullanıcının yeni parolasını geçerli parolasına veya önceki dört parolalarından birine ayarlayamayacağı anlamına gelir.  
+    [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2066795)
+
+    **Varsayılan**: 24
 
   - **Minimum parola uzunluğu**:  
     Minimum parola uzunluğu ilke ayarı, bir kullanıcı hesabı için parola oluşturmak üzere en az karakter sayısını belirler. 1 ila 14 karakter arasında bir değer ayarlayabilir veya karakter sayısını 0 olarak ayarlayarak parola gerekmesiz bir değer belirleyebilirsiniz.  
     [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067024)
 
     **Varsayılan**: 8
+
+
+  - **Cihaz silinmeden önceki oturum açma hatalarının sayısı**:  
+    Cihaz temizlenmeden önce izin verilen kimlik doğrulama hatalarının sayısı. 0 değeri cihaz temizleme işlevini devre dışı bırakır.  
+    [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067030)
+
+    **Varsayılan**: 10
 
   - **Basit parolaları engelle**:  
     "1111" veya "1234" gibi PIN veya parolalara izin verilip verilmeyeceğini belirtir. Masaüstü için, resim parolalarının kullanımını da denetler.  
@@ -411,28 +570,26 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-DeviceLock](/windows/c
     **Varsayılan**: Evet  
     *Evet ayarı basit parolaların kullanımını engeller.*
 
-  - **Önceki parolaların yeniden kullanılmasını engelle**:  
-    Geçmişte, kullanılamayan parolaların kaç tane parola depolandığını belirtir. Değer, kullanıcının geçerli parolasını içerir. Örneğin, *1* ayarı ile Kullanıcı yeni bir parola seçerken geçerli parolasını yeniden kullantıramıyorum. *5* ayarı, kullanıcının yeni parolasını geçerli parolasına veya önceki dört parolalarından birine ayarlayamayacağı anlamına gelir.  
-    [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2066795)
-
-    **Varsayılan**: 24
-
-- **Slayt gösterisini engelle**:  
-  BILGISAYAR ayarlarındaki kilit ekranı slayt gösterisi ayarlarını devre dışı bırakır ve kilit ekranında bir slayt gösterisinin yürütülmesini önler. Varsayılan olarak, kullanıcılar makineyi kilitledikten sonra çalışacak bir slayt gösterisine izin verebilir. Bu ayarı etkinleştirirseniz, kullanıcılar bılgısayar ayarlarındaki slayt gösterisi ayarlarını değiştiremezler ve hiçbir slayt gösterisi başlayamaz.  
-  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067105)
-
-  **Varsayılan**: etkin  
-
-  *Etkin bir ayar, slayt gösterisinin çalışmasını önler.*
-
 - **Parola en az kullanım süresi (gün**):  
   Minimum parola yaşı ilke ayarı, kullanıcının değiştirebilmesi için bir parolanın ne kadar süreyle kullanılması gerektiğini (gün cinsinden) belirler. 1 ila 998 gün arasında bir değer ayarlayabilir veya gün sayısını 0 olarak ayarlayarak parola değişikliklerine hemen izin verebilirsiniz. Maksimum parola yaşı 0 olarak ayarlanmadığı ve parolaların süresinin dolmayacağını belirten en az parola yaşı en fazla parola geçerlilik süresinden daha az olmalıdır. Maksimum parola yaşı 0 olarak ayarlandıysa, minimum parola yaşı 0 ile 998 arasında bir değere ayarlanabilir.  
   [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067022)
 
   **Varsayılan**: 1
 
+- **Kameranın kullanımını engelle**:  
+  BILGISAYAR ayarlarındaki kilit ekranı Kamerası geçiş anahtarını devre dışı bırakır ve bir kameranın kilit ekranında çağrılmasını engeller. Varsayılan olarak, kullanıcılar, kilit ekranında kullanılabilir bir kameranın çağrılmasını sağlayabilir. Bu ayarı etkinleştirirseniz, kullanıcılar bılgısayar ayarları ' nda kilit ekranı kamera erişimini etkinleştiremez veya devre dışı bırakamez ve kamera kilit ekranında çağrılamaz.  
+  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067052)
+
+  **Varsayılan**: etkin
+
+- **Slayt gösterisini engelle**:  
+  BILGISAYAR ayarlarındaki kilit ekranı slayt gösterisi ayarlarını devre dışı bırakır ve kilit ekranında bir slayt gösterisinin yürütülmesini önler. Varsayılan olarak, kullanıcılar makineyi kilitledikten sonra çalışacak bir slayt gösterisine izin verebilir. Bu ayarı etkinleştirirseniz, kullanıcılar bılgısayar ayarlarındaki slayt gösterisi ayarlarını değiştiremezler ve hiçbir slayt gösterisi başlayamaz.  
+  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067105)
+
+  **Varsayılan**: etkin *bir ayar, slayt gösterisinin çalışmasını önler.*
+
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 ## <a name="dma-guard"></a>DMA koruyucusu
 
@@ -445,11 +602,17 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-DmaGuard](/windows/cli
   **Varsayılan**: tümünü engelle
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="event-log-service"></a>Olay günlüğü hizmeti
 
 Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-EventLogService](/windows/client-management/mdm/policy-csp-eventlogservice) bölümüne bakın.
+
+- **KB cinsinden uygulama günlüğü en büyük dosya boyutu**:  
+  Bu ilke ayarı, günlük dosyasının en büyük boyutunu kilobayt cinsinden belirtir. Bu ilke ayarını etkinleştirirseniz, en büyük günlük dosyası boyutunu uzunluğu 1 megabayt (1024 kilobayt) ve 2 terabayta (2147483647 kilobayt) kadar kilobayt artışlarla yapılandırabilirsiniz. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, günlük dosyasının en büyük boyutu yerel olarak yapılandırılmış değere ayarlanır. Bu değer, günlük özellikleri iletişim kutusu kullanılarak yerel yönetici tarafından değiştirilebilir ve varsayılan olarak 20 megabaylardır.  
+  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067125)
+
+  **Varsayılan**: 32768
 
 - **KB cinsinden güvenlik günlüğü en büyük dosya boyutu**:  
   Bu ilke ayarı, günlük dosyasının en büyük boyutunu kilobayt cinsinden belirtir. Bu ilke ayarını etkinleştirirseniz, en büyük günlük dosyası boyutunu uzunluğu 1 megabayt (1024 kilobayt) ve 2 terabayta (2147483647 kilobayt) kadar kilobayt artışlarla yapılandırabilirsiniz. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, günlük dosyasının en büyük boyutu yerel olarak yapılandırılmış değere ayarlanır. Bu değer, günlük özellikleri iletişim kutusu kullanılarak yerel yönetici tarafından değiştirilebilir ve varsayılan olarak 20 megabaylardır.  
@@ -460,12 +623,6 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-EventLogService](/window
 - **KB cinsinden sistem günlüğü en büyük dosya boyutu**:  
   Bu ilke ayarı, günlük dosyasının en büyük boyutunu kilobayt cinsinden belirtir. Bu ilke ayarını etkinleştirirseniz, en büyük günlük dosyası boyutunu uzunluğu 1 megabayt (1024 kilobayt) ve 2 terabayta (2147483647 kilobayt) kadar kilobayt artışlarla yapılandırabilirsiniz. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, günlük dosyasının en büyük boyutu yerel olarak yapılandırılmış değere ayarlanır. Bu değer, günlük özellikleri iletişim kutusu kullanılarak yerel yönetici tarafından değiştirilebilir ve varsayılan olarak 20 megabaylardır.  
   [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2066798)
-
-  **Varsayılan**: 32768
-
-- **KB cinsinden uygulama günlüğü en büyük dosya boyutu**:  
-  Bu ilke ayarı, günlük dosyasının en büyük boyutunu kilobayt cinsinden belirtir. Bu ilke ayarını etkinleştirirseniz, en büyük günlük dosyası boyutunu uzunluğu 1 megabayt (1024 kilobayt) ve 2 terabayta (2147483647 kilobayt) kadar kilobayt artışlarla yapılandırabilirsiniz. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, günlük dosyasının en büyük boyutu yerel olarak yapılandırılmış değere ayarlanır. Bu değer, günlük özellikleri iletişim kutusu kullanılarak yerel yönetici tarafından değiştirilebilir ve varsayılan olarak 20 megabaylardır.  
-  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067125)
 
   **Varsayılan**: 32768
 
@@ -519,7 +676,7 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-FileExplorer](/windows
 
   **Varsayılan**: devre dışı
 
-## <a name="firewall"></a>Güvenlik duvarı
+## <a name="firewall"></a>Güvenlik Duvarı
 
 Daha fazla bilgi için Windows protokolleri belgelerindeki [2.2.2 FW_PROFILE_TYPE]( /openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) bölümüne bakın.
 
@@ -592,7 +749,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](/windo
   **Varsayılan**: devre dışı
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer Internet bölgesi dosyaları sürükle ve bırak veya Kopyala ve Yapıştır**:  
   Bu ilke ayarı, kullanıcıların bölge içindeki bir kaynaktan dosya sürükleyip sürükleyemeyeceğini veya dosya kopyalayıp yapıştıramayacağını yönetmenizi sağlar. Bu ilke ayarını etkinleştirirseniz, kullanıcılar dosyaları sürükleyebilir veya bu bölgeden otomatik olarak dosya kopyalayabilir ve yapıştırabilir. Açılır kutuda sor ' u seçerseniz, kullanıcıların bu bölgeden dosya sürükleyip sürükleyeceğinizi veya kopyalanıp kopyalanmayacağını seçmeleri istenir. Bu ilke ayarını devre dışı bırakırsanız, kullanıcıların bu bölgeden dosya sürüklenmesi veya dosyaları kopyalaması ve yapıştırması engellenir. Bu ilke ayarını yapılandırmazsanız, kullanıcılar dosyaları sürükleyebilir veya bu bölgeden otomatik olarak dosya kopyalayabilir ve yapıştırabilir.  
@@ -613,7 +770,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](/windo
   **Varsayılan**: devre dışı
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Veri kaynaklarına Internet Explorer Internet bölgesi erişimi**:  
   Bu ilke ayarı, Internet Explorer 'ın Microsoft XML ayrıştırıcısı (MSXML) veya ActiveX Data Objects (ADO) kullanarak başka bir güvenlik bölgesinden veriye erişip erişemeyeceğini yönetmenizi sağlar. Bu ilke ayarını etkinleştirirseniz, kullanıcılar bölgedeki başka bir siteden veriye erişmek için MSXML veya ADO kullanan bölgeye bir sayfa yükleyebilir. Açılır kutuda sor ' u seçerseniz, kullanıcılar bölgedeki başka bir siteden veriye erişmek için MSXML veya ADO kullanan bölgede bir sayfanın yüklenmesine izin verip vermeyeceğinizi belirlemek üzere sorgulanır. Bu ilke ayarını devre dışı bırakırsanız, kullanıcılar bölgedeki başka bir siteden veriye erişmek için MSXML veya ADO kullanan bölgeye bir sayfa yükleyemez. Bu ilke ayarını yapılandırmazsanız kullanıcılar bölgedeki başka bir siteden veriye erişmek için MSXML veya ADO kullanan bölgeye bir sayfa yükleyemez.  
@@ -688,7 +845,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](/windo
   **Varsayılan**: devre dışı
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Dosya indirmeleri Için Internet Explorer Internet bölgesi otomatik istem**:  
   Bu ilke ayarı, kullanıcılardan Kullanıcı tarafından başlatılmayan dosya indirmeleri isteyip istemeyeceğini belirler. Bu ayardan bağımsız olarak kullanıcılar, Kullanıcı tarafından başlatılan indirmeler için dosya indirme iletişim kutularını alırlar. Bu ayarı etkinleştirirseniz, kullanıcılar otomatik indirme girişimleri için bir dosya indirme iletişim kutusu alır. Bu ayarı devre dışı bırakır veya yapılandırmazsanız, Kullanıcı tarafından başlatılmayan dosya indirmeleri engellenir ve kullanıcılar dosya indirme iletişim kutusu yerine bildirim çubuğunu görür. Kullanıcılar daha sonra, dosya indirme istemine izin vermek için bildirim çubuğuna tıklayabilir.  
@@ -706,7 +863,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](/windo
   **Varsayılan**: etkin
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Güvensiz olabilecek dosyalar Için Internet Explorer kısıtlı bölge güvenliği uyarısı**:  
   Bu ilke ayarı, Kullanıcı yürütülebilir dosyaları veya diğer olası güvenli olmayan dosyaları (örneğin, dosya Gezgini 'ni kullanarak bir intranet dosya paylaşımından) açmaya çalıştığında "dosya güvenlik uyarısı aç" iletisinin görünüp görüntülenmeyeceğini denetler. Bu ilke ayarını etkinleştirir ve açılır kutuyu etkinleştir olarak ayarlarsanız, bu dosyalar güvenlik uyarısı olmadan açılır. Açılır kutuyu sor olarak ayarlarsanız, dosyalar açılmadan önce bir güvenlik uyarısı görüntülenir. Bu ilke ayarını devre dışı bırakırsanız, bu dosyalar açılmaz. Bu ilke ayarını yapılandırmazsanız kullanıcı bilgisayarın bu dosyaları nasıl işleyeceğini yapılandırabilir. Varsayılan olarak, bu dosyalar, Intranet ve yerel bilgisayar bölgelerinde etkin olan kısıtlanmış bölgede engellenir ve Internet ve güvenilen bölgelerde sorulacak şekilde ayarlanır.  
@@ -727,7 +884,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](/windo
   **Varsayılan**: site yok
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer şifreleme desteği**:  
   Bu ilke ayarı, tarayıcıda Aktarım Katmanı Güvenliği (TLS) 1,0, TLS 1,1, TLS 1,2, Güvenli Yuva Katmanı (SSL) 2,0 veya SSL 3,0 desteğini kapatmanıza olanak sağlar. TLS ve SSL, tarayıcı ile hedef sunucu arasındaki iletişimi korumaya yardımcı olan protokollerdir. Tarayıcı hedef sunucuyla korunan bir iletişim kurmayı denediğinde, tarayıcı ve sunucu hangi protokol ve sürümü kullanacağınızı anlaşacaktır. Tarayıcı ve sunucu birbirlerinin desteklenen protokollerin ve sürümlerin listesini eşleştirmeye çalışır ve en tercih edilen eşleşmeyi seçer. Bu ilke ayarını etkinleştirirseniz tarayıcı, açılan listeden seçtiğiniz şifreleme yöntemlerini kullanarak bir şifreleme tüneli üzerinde anlaşır veya anlaşmaz. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, Kullanıcı tarayıcının desteklediği şifreleme yöntemini seçebilir.  
@@ -737,7 +894,7 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-ınternebir](/windo
   *Bu ayar için seçebileceğiniz seçenekleri göstermek için aşağı oku seçin.*
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Internet Explorer kilitli Internet alanı akıllı ekranı**:  
   Bu ilke ayarı, SmartScreen Filtresi 'nin bu bölgedeki sayfaları kötü amaçlı içerik için taramayacağını denetler. Bu ilke ayarını etkinleştirirseniz SmartScreen Filtresi bu bölgedeki sayfaları kötü amaçlı içeriğe karşı tarar. Bu ilke ayarını devre dışı bırakırsanız, SmartScreen Filtresi bu bölgedeki sayfaları kötü amaçlı içerik için taramaz. Bu ilke ayarını yapılandırmazsanız kullanıcı SmartScreen Filtresi 'nin bu bölgedeki sayfaları kötü amaçlı içerik için tarayıp taramayacağını seçebilir. Note: Internet Explorer 7 ' de bu ilke ayarı, kimlik avı filtresinin bu bölgedeki sayfaları kötü amaçlı içerik için taramayacağını denetler.  
@@ -1551,7 +1708,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-LocalPoliciesSecurityOpt
 Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Defender](/windows/client-management/mdm/policy-csp-defender) bölümüne bakın.
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Adobe Reader 'ın alt işlem oluşturmasını engelleyin**:  
 Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırıları engeller. Kötü amaçlı yazılım, sosyal mühendisler veya güvenlik açıkları aracılığıyla ek yükleri indirebilir ve başlatabilir ve Adobe Reader 'dan daha fazla kesebilir. Alt işlemlerin Adobe Reader tarafından oluşturulmasını engelleyerek, bunu bir vektör olarak kullanmaya çalışan kötü amaçlı yazılımların yayılması engellenir.
@@ -1559,7 +1716,7 @@ Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırılar
 
   **Varsayılan**: etkinleştir
 
-- **Office iletişim uygulamaları bir alt işlemde başlatılır**:  
+- **Bir alt Işlemde Office iletişim uygulamalarının başlatılmasını engelleyin**:  
   [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=874499)
 
   **Varsayılan**: etkinleştir
@@ -1572,38 +1729,64 @@ Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırılar
   **Varsayılan**: 4
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-sept-2020"
+
+- **Tarama türü**  
+  CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
+
+  Bir zamanlama taraması için kullanılacak tarama türünü belirtin
+
+  **Varsayılan** Hızlı tarama
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Defender Tarama günü zamanlaması**:  
   Defender tarama gününü zamanlayamıyor.
 
   **Varsayılan**: günlük
 
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
+
 - **Buluta teslim edilen korumayı açın**:  
   CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
   
-  Evet olarak ayarlandığında, Defender bulduğu sorunlar hakkında bilgileri Microsoft 'a gönderir. Yapılandırılmadı olarak ayarlanırsa istemci, özelliği sağlayan, ancak kullanıcının devre dışı bırakmasına izin veren varsayılan ' a döner.
+  Evet olarak ayarlandığında, Defender bulduğu sorunlar hakkında bilgileri Microsoft 'a gönderir. Yapılandırılmadı olarak ayarlanırsa, istemci varsayılan olarak döner, bu da özelliği sağlar, ancak kullanıcının devre dışı bırakmasına izin verir.
 
   **Varsayılan**: Evet  
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Buluta teslim edilen koruma**:  
+  CSP: [Defender/AllowCloudProtection](https://go.microsoft.com/fwlink/?linkid=2113937)
+  
+  İstenmeyebilecek uygulamalar (PUAs) için koruma düzeyini belirtin. *Yapılandırılmadı* SEÇENEĞI, Pua korumasını kapatan istemciyi varsayılan olarak yapılandırır. Devre dışı bırak, PUA korumasını kapatır ve istenmeyen uygulamalara karşı koruma sağlamaz. Etkinleştir ' i seçtiğinizde PUA koruması etkinleştirilir ve algılanan öğeler engellenmeyecektir. Denetim modu, PUA istenmeyebilecek uygulamaları algılamaya izin verir, ancak hiçbir işlem gerçekleşmez. [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2113937).
+
+  **Varsayılan**: yapılandırılmadı
+  
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 - **Gerçek zamanlı korumayı aç**  
   CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050)
 
-  Bu ayar Evet olarak ayarlandığında gerçek zamanlı izleme zorunlu kılınır ve Kullanıcı bunu devre dışı bırakamayabilir. Yapılandırılmadı olarak ayarlandığında, ayarı üzerinde olan istemci varsayılan öğesine döndürülür, ancak kullanıcı bunu değiştirebilir. Gerçek zamanlı izlemeyi devre dışı bırakmak için özel bir URI kullanın.
+  Bu ayar Evet olarak ayarlandığında gerçek zamanlı izleme zorunlu kılınır ve Kullanıcı bunu devre dışı bırakamayabilir. Yapılandırılmadı olarak ayarlandığında, bu ayar, üzerinde olan istemci varsayılan öğesine döndürülür, ancak kullanıcı bunu değiştirebilir. Gerçek zamanlı izlemeyi devre dışı bırakmak için özel bir URI kullanın.
 
   **Varsayılan**: Evet  
 
 - **Arşiv dosyalarını Tara**:  
   CSP: [Defender/AllowArchiveScanning](https://go.microsoft.com/fwlink/?linkid=2114047)
   
-  Evet olarak ayarlandığında, ZIP veya CAB dosyası taraması gibi arşiv dosyaları zorlanır. Yapılandırılmadı olarak ayarlandığında, bu ayar, arşivlenmiş dosyaları taramak için istemci varsayılana geri döndürülür, ancak kullanıcı bunu devre dışı bırakabilir.
+  Evet olarak ayarlandığında, ZIP veya CAB dosyası taraması gibi arşiv dosyaları zorlanır. Yapılandırılmadı olarak ayarlandığında, bu ayar, arşivlenen dosyaları taramak için varsayılan istemci varsayılana geri döndürülür, ancak kullanıcı bunu devre dışı bırakabilir.
 
   **Varsayılan**: Evet
 
 - **Davranış Izlemeyi aç**:  
   CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048)
 
-  Bu ayar Evet olarak ayarlandığında, davranış izleme zorunlu kılınır ve Kullanıcı bunu devre dışı bırakamayabilir. Yapılandırılmadı olarak ayarlandığında, ayarı üzerinde olan istemci varsayılan öğesine döndürülür, ancak kullanıcı bunu değiştirebilir. Gerçek zamanlı izlemeyi devre dışı bırakmak için özel bir URI kullanın.
+  Bu ayar Evet olarak ayarlandığında, davranış izleme zorunlu kılınır ve Kullanıcı bunu devre dışı bırakamayabilir. Yapılandırılmadı olarak ayarlandığında, bu ayar, üzerinde olan istemci varsayılan öğesine döndürülür, ancak kullanıcı bunu değiştirebilir. Gerçek zamanlı izlemeyi devre dışı bırakmak için özel bir URI kullanın.
 
   **Varsayılan**: Evet
 
@@ -1617,13 +1800,13 @@ Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırılar
 - **Tam tarama sırasında çıkarılabilir sürücüleri Tara**:  
   CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
 
-  Evet olarak ayarlandığında, tam tarama çıkarılabilir sürücüler (ör. USB flash sürücüler) taranır. Yapılandırılmadı olarak ayarlandığında, bu ayar, çıkarılabilir sürücülerin tarandığı istemci varsayılan öğesine döner, ancak kullanıcı bunu devre dışı bırakabilir.
+  Evet olarak ayarlandığında, tam tarama sırasında çıkarılabilir sürücüler (örneğin, USB flash sürücüler) taranır. Yapılandırılmadı olarak ayarlandığında, bu ayar, çıkarılabilir sürücüleri tarayan istemci varsayılan öğesine döner, ancak kullanıcı bunu devre dışı bırakabilir.
   **Varsayılan**: Evet  
 
 - **Office uygulamalarının ekleme koddan diğer Işlemlere engel**:  
   [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=872974)
 
-  Evet olarak ayarlandığında, Office uygulamalarının diğer işlemlere ekleme kodu engellenir. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
+  Evet olarak ayarlandığında, Office uygulamalarının diğer işlemlere ekleme kodu engellenir. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu saldırı yüzeyi azaltma (ASR) kuralı şu GUID aracılığıyla denetlenir: 75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84
 
   **Varsayılan**: engelle
 
@@ -1655,12 +1838,28 @@ Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırılar
   
   **Varsayılan**: engelle
 
-- **E-posta içeriği yürütme türü**:    
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **E-posta içeriği yürütme türü**:  
   [E-posta ve Web postasından istemcilerinden yürütülebilir içerik indirmeyi engelle](https://go.microsoft.com/fwlink/?linkid=872980)
 
   Evet olarak ayarlandığında, e-posta ve Web postasından istemcilerinden indirilen yürütülebilir içerik engellenir. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır.
 
   **Varsayılan**: engelle
+
+::: zone-end
+::: zone pivot="mdm-sept-2020"
+
+- **E-posta ve web postası istemcilerinden yürütülebilir içerik Indirmeyi engelleyin**:   
+  [E-posta ve Web postasından istemcilerinden yürütülebilir içerik indirmeyi engelle](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  Evet olarak ayarlandığında, e-posta ve Web postasından istemcilerinden indirilen yürütülebilir içerik engellenir. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır.
+
+  **Varsayılan**: engelle
+
+::: zone-end
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Kimlik bilgisi hırsızlığı türünü engelle**:  
   [Cihazları kötüye bilgisayarlardan koruyun](https://go.microsoft.com/fwlink/?linkid=874499)
@@ -1683,7 +1882,7 @@ Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırılar
 
   **Varsayılan**: engelle
 
-- **Ağ koruması**:  
+- **Ağ korumasını etkinleştir**:  
   [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)
 
   Evet olarak ayarlandığında, sistemdeki tüm kullanıcılar için ağ koruması etkinleştirilir. Ağ koruması, çalışanların kimlik avı dolandırıcılığı ve Internet 'teki kötü amaçlı içeriklere erişmesini önler. Buna üçüncü taraf tarayıcıları dahildir. Bunu yalnızca denetim olarak ayarlamak, kullanıcılar tehlikeli etki alanlarından engellenmeyecektir, ancak bunun yerine Windows olayları tetiklenir. Bunu Yapılandırılmadı olarak ayarlamak, ayarı devre dışı olan Windows varsayılan öğesine döndürür.
@@ -1711,7 +1910,7 @@ Bu kural, Adobe Reader 'ın ek işlem oluşturmasını engelleyerek saldırılar
   Evet olarak ayarlandığında, Defender, Internet 'ten indirilen JavaScript veya VBScript dosyalarını yürütülmeden engeller. Yalnızca denetim olarak ayarlandığında, Windows olayları engelleme yerine oluşturulur. Yapılandırılmadı olarak ayarlandığında ayarı Windows varsayılan olarak devre dışı bırakılır. Bu ASR kuralı şu GUID aracılığıyla denetlenir: D3E037E1-3EB8-44C8-A917-57927947596D
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview"
+::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
 
 ## <a name="ms-security-guide"></a>MS Güvenlik Kılavuzu
 
@@ -1795,7 +1994,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-güç](/windows/client-m
   **Varsayılan**: etkin
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 ## <a name="remote-assistance"></a>Uzaktan Yardım
 
@@ -1815,24 +2014,8 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-RemoteAssistance](/windo
 
   **Varsayılan**: Uzaktan Yardım 'ı devre dışı bırak
 
-<!-- These settings are not available: 
-  When set to *Enable Remote Assistance*, configure the following additional settings:
-
-  - **Remote Assistance solicited permission**:  
-    **Default**: View
-
-  - **Maximum ticket time value**:  
-    **Default**: *Not configured*
-
-  - **Maximum ticket time period**:  
-    **Default**: Minutes
-
-  - **E-Mail invitation method**:  
-    **Default**: Simple MAPI
--->
-
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="remote-desktop-services"></a>Uzak Masaüstü Hizmetleri
 
@@ -1933,7 +2116,7 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-RemoteProcedureCall](/
 
   **Varsayılan**: kimliği doğrulandı
 
-## <a name="search"></a>Arayın
+## <a name="search"></a>Ara
 
 Daha fazla bilgi için bkz. [Ilke CSP-](/windows/client-management/mdm/policy-csp-search) Windows belgelerinde arama.
 
@@ -1968,12 +2151,12 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-SmartScreen](/windows/cl
   **Varsayılan**: Evet
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 - **Windows SmartScreen 'i açma**  
   CSP: [SmartScreen/Enablesmartscreenınshell](https://go.microsoft.com/fwlink/?linkid=872784)
 
-  Bunu evet olarak ayarlamak, SmartScreen 'in tüm kullanıcılar için kullanımını zorunlu tutar. Bunu Yapılandırılmadı olarak ayarlamak, SmartScreen 'i etkinleştirmek için Windows varsayılan ayarını döndürür, ancak kullanıcılar bu ayarı değiştirebilir. SmartScreen 'i devre dışı bırakmak için özel bir URI kullanın.
+  Bunu evet olarak ayarlamak, SmartScreen 'in tüm kullanıcılar için kullanımını zorunlu tutar. Bunu Yapılandırılmadı olarak ayarlamak, SmartScreen 'i etkinleştirmek için gereken ayarı Windows varsayılan olarak döndürür, ancak kullanıcılar bu ayarı değiştirebilir. SmartScreen 'i devre dışı bırakmak için özel bir URI kullanın.
 
   **Varsayılan**: Evet
 
@@ -1987,7 +2170,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-SmartScreen](/windows/cl
   **Varsayılan**: Evet
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="system"></a>Sistem
 
@@ -2013,15 +2196,15 @@ Daha fazla bilgi için bkz. Windows belgelerindeki [Ilke CSP-sistem](/windows/cl
 
 Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WiFi](/windows/client-management/mdm/policy-csp-wifi) bölümüne bakın.
 
-- **Internet paylaşımını engelle**:  
-  Cihazda İnternet paylaşımının mümkün olup olmadığını belirtir.  
-  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067327)
-
-  **Varsayılan**: Evet
-
 - **Wi-Fi etkin noktalarına otomatik olarak bağlanmayı engelle**:  
   Cihazın Wi-Fi etkin noktalarına otomatik olarak bağlanmasına izin verin veya izin vermeyin.  
   [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067320)
+
+  **Varsayılan**: Evet
+
+- **Internet paylaşımını engelle**:  
+  Cihazda İnternet paylaşımının mümkün olup olmadığını belirtir.  
+  [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067327)
 
   **Varsayılan**: Evet
 
@@ -2042,12 +2225,12 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
   **Varsayılan**: etkin
 
 ::: zone-end
-::: zone pivot="mdm-may-2019"
+::: zone pivot="mdm-may-2019,mdm-sept-2020"
 
 ## <a name="windows-hello-for-business"></a>İş İçin Windows Hello
 
 - **Iş için Windows Hello 'Yu engelle**  
-  Iş için Windows Hello, parolaları, akıllı kartları ve sanal akıllı kartları değiştirerek Windows 'da oturum açmak için alternatif bir yöntemdir. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, cihaz Iş için Windows Hello 'Yu sağlar. Bu ilke ayarını etkinleştirirseniz, cihaz herhangi bir kullanıcı için Iş için Windows Hello sağlamaz.
+  Iş için Windows Hello, parolaları, akıllı kartları ve sanal akıllı kartları değiştirerek Windows 'da oturum açmak için alternatif bir yöntemdir. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, cihaz Iş için Windows Hello 'Yu sağlar. Bu ilke ayarını etkinleştirirseniz, cihaz herhangi bir kullanıcı için Iş için Windows Hello 'Yu sağlayamaz.
 
   **Varsayılan**: etkin
   
@@ -2056,7 +2239,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
   - **Minimum PIN uzunluğu**  
     Minimum PIN uzunluğu 4 ile 127 arasında olmalıdır.
 
-    **Varsayılan**: *Yapılandırılmadı*
+    **Varsayılan**: yapılandırılmadı
 
   - **Kullanılabilir olduğunda, Gelişmiş kimlik sahtekarlığı korumasını kullanmak için etkinleştirin**  
     [Sahtekarlığı önleme koruması](https://go.microsoft.com/fwlink/?linkid=2067192)
@@ -2064,6 +2247,9 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
     Etkinleştirilirse, cihazlar, kullanılabilir olduğunda gelişmiş yanıltma koruması kullanacaktır. Yapılandırılmazsa, kimlik sahtekarlığına karşı koruma için istemci yapılandırması kabul edilir.
 
     **Varsayılan**: yapılandırılmadı
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
 
   - **PIN 'de küçük harfler**:  
     Gerekirse, Kullanıcı PIN 'ı en az bir küçük harf içermelidir.
@@ -2074,7 +2260,6 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
     Gerekirse, Kullanıcı PIN 'ı en az bir özel karakter içermelidir.
 
     **Varsayılan**: izin verilmiyor
- 
 
   - **PIN kodunda büyük harfler**:  
     Gerekirse, Kullanıcı PIN 'ı en az bir büyük harf içermelidir.
@@ -2082,7 +2267,25 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
     **Varsayılan**: izin verilmiyor
 
 ::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
+::: zone pivot="mdm-sept-2020"
+
+  - **PIN 'de küçük harfler**:  
+    Gerekirse, Kullanıcı PIN 'ı en az bir küçük harf içermelidir.
+
+    **Varsayılan**: yapılandırılmadı
+
+  - **PIN 'de özel karakterler**:  
+    Gerekirse, Kullanıcı PIN 'ı en az bir özel karakter içermelidir.
+
+    **Varsayılan**: yapılandırılmadı
+
+  - **PIN kodunda büyük harfler**:  
+    Gerekirse, Kullanıcı PIN 'ı en az bir büyük harf içermelidir.
+
+    **Varsayılan**: yapılandırılmadı
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
 
 ## <a name="windows-ink-workspace"></a>Windows Ink Çalışma Alanı
 
@@ -2115,6 +2318,8 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsPowerShell](/wind
 ::: zone pivot="mdm-may-2019"
 
 ## <a name="whats-changed-in-the-new-template"></a>Yeni şablonda değiştirilen özellikler
+
+<!-- This section is deprecated from future baseline updates. Use the Compare feature to identify changes -->
 
 *2019 Mayıs şablonuna yönelik MDM güvenlik temeli* , *Önizleme* şablonundan aşağıdaki değişikliklere sahiptir.
 
@@ -2206,6 +2411,8 @@ Aşağıdaki ayarlar şunlardır:
 - **PIN 'de özel karakterler iste**
 - **Minimum PIN uzunluğu**
 - **PIN kodunda büyük harfler iste**
+
+<!-- END OF DEPRECATED SECTION -->
 
 ::: zone-end
 

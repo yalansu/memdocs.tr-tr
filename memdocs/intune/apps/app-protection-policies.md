@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/13/2020
+ms.date: 09/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cb05cb518d4edfb443bf4f70ff1c51154e17f4c
-ms.sourcegitcommit: 1aeb4a11e89f68e8081d76ab013aef6b291c73c1
+ms.openlocfilehash: c1886501852ab7a5723638ff098e9ed0afb19c0e
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217652"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815298"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Uygulama koruma ilkelerini oluşturma ve atama
 
@@ -75,12 +75,12 @@ Kuruluşunuzun iş kolu (LOB) uygulamalarını uygulama koruma ilkelerine hazır
 
     | Değer/seçenek | Açıklama |
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | Tüm cihaz türlerindeki uygulamalar için hedef | İlkenizi herhangi bir yönetim durumundaki cihazlarda uygulamalara hedeflemek için bu seçeneği kullanın. Belirli cihaz türlerindeki uygulamaları hedeflemek için **Hayır**  ' ı seçin. Bilgi için bkz. [cihaz yönetim durumuna bağlı olarak hedef uygulama koruma ilkeleri](#target-app-protection-policies-based-on-device-management-state) |
+    | Tüm cihaz türlerindeki uygulamalar için hedef | İlkenizi herhangi bir yönetim durumundaki cihazlarda uygulamalara hedeflemek için bu seçeneği kullanın. Belirli cihaz türlerindeki uygulamaları hedeflemek için **Hayır**  ' ı seçin. Daha fazla bilgi için bkz. [cihaz yönetim durumuna bağlı olarak hedef uygulama koruma ilkeleri](#target-app-protection-policies-based-on-device-management-state). |
     |     Cihaz türleri | Bu ilkenin MDM yönetilen cihazlara veya yönetilmeyen cihazlara uygulanıp uygulanmayacağını belirtmek için bu seçeneği kullanın. İOS/ıpados uygulama ilkeleri için **yönetilmeyen** ve **yönetilen** cihazlar arasından seçim yapın. Android uygulama ilkeleri için **yönetilmeyen**, **Android Cihaz Yöneticisi**ve **Android kurumsal**' i seçin.  |
-    | Ortak uygulamalar | Hedeflenecek uygulamaları seçmek için **ortak uygulamaları seç** ' e tıklayın. |
+    | Ortak uygulamalar | <ul><li>**Hedef-** açılan kutusunda, uygulama koruma ilkenizi **tüm genel uygulamalara**, **Microsoft uygulamalarına**veya **temel Microsoft uygulamalarına**hedeflemesini seçin. Bundan sonra, bu ilkeden etkilenecek uygulamaların listesini görüntülemek için **hedeflenecek uygulamaların listesini görüntüle** ' yi seçebilirsiniz.</li><li>Gerekirse, **ortak uygulamaları seç**' e tıklayarak tek tek uygulamaları hedefleyebilirsiniz ' i seçebilirsiniz.   |
     | Özel uygulamalar | Bir paket KIMLIĞINE göre hedeflemek üzere özel uygulamalar seçmek için **özel uygulamalar Seç** ' e tıklayın. |
 
-    Seçtiğiniz uygulamalar ortak ve özel uygulamalar listesinde görünür.
+    Ayrı uygulamalar seçtiyseniz, uygulamalar ortak ve özel uygulamalar listesinde görünür.
 6. **İleri** ' ye tıklayarak **veri koruma** sayfasını görüntüleyin.<br>
     Bu sayfa, kesme, kopyalama, yapıştırma ve farklı kaydet kısıtlamaları dahil olmak üzere veri kaybı önleme (DLP) denetimleri için ayarlar sağlar. Bu ayarlar, kullanıcıların bu uygulama koruma ilkesinin uygulandığı uygulamalardaki verilerle nasıl etkileşime gireceğini tespit ediyor.
 
@@ -138,7 +138,7 @@ Değişikliklerin etkisini hemen görmek için, son kullanıcının uygulama otu
     |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Tüm cihaz türlerindeki uygulamalar için hedef | İlkenizi herhangi bir yönetim durumundaki cihazlarda uygulamalara hedeflemek için bu seçeneği kullanın. Belirli cihaz türlerindeki uygulamaları hedeflemek için **Hayır**  ' ı seçin. Bu ayar için ek uygulama yapılandırması gerekli olabilir. Daha fazla bilgi için bkz. [Cihaz yönetim durumuna bağlı olarak uygulama koruma ilkeleri hedefleme](#target-app-protection-policies-based-on-device-management-state). |
     |     Cihaz türleri | Bu ilkenin MDM yönetilen cihazlara veya yönetilmeyen cihazlara uygulanıp uygulanmayacağını belirtmek için bu seçeneği kullanın. İOS/ıpados uygulama ilkeleri için **yönetilmeyen** ve **yönetilen** cihazlar arasından seçim yapın. Android uygulama ilkeleri için **yönetilmeyen**, **Android Cihaz Yöneticisi**ve **Android kurumsal**' i seçin.  |
-    | Ortak uygulamalar | Hedeflenecek uygulamaları seçmek için **ortak uygulamaları seç** ' e tıklayın. |
+    | Ortak uygulamalar | <ul><li>**Hedef-** açılan kutusunda, uygulama koruma ilkenizi **tüm genel uygulamalara**, **Microsoft uygulamalarına**veya **temel Microsoft uygulamalarına**hedeflemesini seçin. Bundan sonra, bu ilkeden etkilenecek uygulamaların listesini görüntülemek için **hedeflenecek uygulamaların listesini görüntüle** ' yi seçebilirsiniz.</li><li>Gerekirse, **ortak uygulamaları seç**' e tıklayarak tek tek uygulamaları hedefleyebilirsiniz ' i seçebilirsiniz.   |
     | Özel uygulamalar | Bir paket KIMLIĞINE göre hedeflemek üzere özel uygulamalar seçmek için **özel uygulamalar Seç** ' e tıklayın. |
 
     Seçtiğiniz uygulamalar ortak ve özel uygulamalar listesinde görünür.

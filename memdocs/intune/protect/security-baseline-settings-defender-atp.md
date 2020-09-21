@@ -5,7 +5,7 @@ description: Microsoft Defender Gelişmiş tehdit koruması 'nı yönetmek için
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,28 +18,47 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: 322e3be8e7421b0c622a8e656a3312791ed7feac
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c6985dfd419932bf93dcb10cae1cb1d530b8c563
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913452"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814962"
 ---
 <!-- Pivots in use: 
-::: zone pivot="atp-april-2020"
+
+September 2020 v5
+::: zone pivot="atp-sept-2020"
 ::: zone-end
 
-::: zone pivot="atp-march-2020"
+::: zone pivot="atp-april-2020,atp-sept-2020"
+::: zone-end
+
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+::: zone-end
+
+April 2020 v4
+::: zone pivot="atp-april-2020"
 ::: zone-end
 
 ::: zone pivot="atp-march-2020,atp-april-2020"
 ::: zone-end
+
+March 2020 v3
+::: zone pivot="atp-march-2020"
+::: zone-end
+
 -->
 
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Intune için Microsoft Defender Gelişmiş tehdit koruması temel ayarları
 
 Microsoft Intune tarafından desteklenen Microsoft Defender Gelişmiş tehdit koruması taban çizgisi ayarlarını görüntüleyin. Gelişmiş tehdit koruması (ATP) taban çizgisi Varsayılanları, ATP için önerilen yapılandırmayı temsil eder ve diğer güvenlik temelleri için temel varsayılanlarla eşleşmeyebilir.
 
+::: zone pivot="atp-sept-2020"
+
+Bu makaledeki ayrıntılar, 21 Eylül 2020 ' de kullanıma sunulan Microsoft Defender ATP taban çizgisinin 54 sürümü için geçerlidir. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
+
+::: zone-end
 ::: zone pivot="atp-april-2020"
 
 Bu makaledeki ayrıntılar, 21 Nisan 2020 ' de kullanıma sunulan Microsoft Defender ATP taban çizgisinin 4. sürümü için geçerlidir. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
@@ -50,13 +69,107 @@ Bu makaledeki ayrıntılar, 21 Nisan 2020 ' de kullanıma sunulan Microsoft Defe
 Bu makaledeki ayrıntılar, 1 Mart 2020 ' de kullanıma sunulan Microsoft Defender ATP taban çizgisinin 3. sürümü için geçerlidir. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
 
 ::: zone-end
-::: zone pivot="atp-march-2020,atp-april-2020"
-
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 Microsoft Defender Gelişmiş tehdit koruması temeli, ortamınız [Microsoft Defender Gelişmiş tehdit koruması](advanced-threat-protection.md#prerequisites)kullanımı için önkoşulları karşılıyorsa kullanılabilir.
 
-Bu taban çizgisi fiziksel cihazlar için iyileştirilmiştir ve şu anda sanal makinelerde (VM) veya VDı uç noktalarında kullanılması önerilmez. Belirli taban çizgisi ayarları, sanallaştırılmış ortamlarda uzak etkileşimli oturumları etkileyebilir. Daha fazla bilgi için bkz. Windows belgelerindeki [Microsoft Defender ATP güvenlik temeliyle uyumluluğu artırma](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
+Bu taban çizgisi fiziksel cihazlar için iyileştirilmiştir ve sanal makinelerde (VM) veya VDı uç noktalarında kullanılması önerilmez. Belirli taban çizgisi ayarları, sanallaştırılmış ortamlarda uzak etkileşimli oturumları etkileyebilir. Daha fazla bilgi için bkz. Windows belgelerindeki [Microsoft Defender ATP güvenlik temeliyle uyumluluğu artırma](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
 
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+## <a name="attack-surface-reduction-rules"></a>Saldırı yüzeyi azaltma kuralları
+
+- **Office iletişim uygulamalarının alt işlem oluşturmasını engelleyin**  
+  ASR kuralı: [26190899-1602-49e8-8b27-eb1d0a1ce869](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  - **Etkinleştir** *(varsayılan)* -Office iletişim uygulamalarının alt işlem oluşturması engellenir.
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Kullanıcı tanımlı**
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **Adobe Reader 'ın alt işlem oluşturmasını engelleyin**  
+  ASR kuralı: [7674ba52-37eb-4a4f-A9A1-f0f9a1619a2c](https://go.microsoft.com/fwlink/?linkid=853979)
+
+  - **Etkinleştir** *(varsayılan)* -Adobe okuyucunun alt işlem oluşturması engellenir.
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Kullanıcı tanımlı**
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **Office uygulamalarının ekleme koddan diğer işlemlere engel**  
+  ASR kuralı: [75668C1f-73b5-4CF0-bb93-3ecf5cb7cc84](https://go.microsoft.com/fwlink/?linkid=872974)
+
+  - **Engelle** *(varsayılan)* -Office uygulamalarının ekleme kodu diğer işlemlere engellenir.
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **Office uygulamalarının yürütülebilir içerik oluşturmasını engelleyin**  
+  ASR kuralı: [3B576869-A4EC-4529-8536-B80A7769E899](https://go.microsoft.com/fwlink/?linkid=872975)
+
+  - **Engelle** *(varsayılan)* -Office uygulamalarının yürütülebilir içerik oluşturmasına izin verilmez.
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **JavaScript veya VBScript 'in indirilen yürütülebilir içeriği başlatmasını engelle**  
+  ASR kuralı: [D3E037E1-3EB8-44C8-A917-57927947596D](https://go.microsoft.com/fwlink/?linkid=872979)
+
+  - **Engelle** *(varsayılan)*
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **Ağ korumasını etkinleştir**  
+  CSP: [Defender/EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=3D872618)
+
+  - **Etkinleştir** *(varsayılan)*
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Kullanıcı tanımlı**
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **USB 'den çalıştırılan güvenilmeyen ve imzasız işlemlerin engelle**  
+  ASR kuralı: [b2b3f03d-6A65-4F7B-a9c7-1c7ef74a9ba4](https://go.microsoft.com/fwlink/?linkid=)
+
+  - **Engelle** *(varsayılan)* -USB sürücüsünden yürütülen güvenilmeyen/imzasız süreçler engellenir.
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **Windows yerel güvenlik yetkilisi alt sisteminden kimlik bilgisi çalınmasını engelle (lsass.exe)**  
+  ASR kuralı: [9e6c4e1f-7d60-472F-ba1a-a39ef669e4b2](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  - **Etkinleştir** *(varsayılan)* -lsass.exe aracılığıyla kimlik bilgilerini çalmaya çalışır.
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Kullanıcı tanımlı**
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **E-posta ve Web postasından istemcilerinden yürütülebilir içerik indirmeyi engelle**  
+  ASR kuralı: [BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550](https://go.microsoft.com/fwlink/?linkid=872980)
+
+  - **Engelle** *(varsayılan)* -e-posta ve web postası istemcilerinden indirilen yürütülebilir içerik engellenir. 
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **Tüm Office uygulamalarının alt işlem oluşturmasını engelle**  
+  ASR kuralı: [D4F940AB-401B-4EFC-AADC-AD5F3C50688A](https://go.microsoft.com/fwlink/?linkid=872976)
+
+  - **Engelle** *(varsayılan)* -Office uygulamalarının alt işlem oluşturması engellenir. Engellenen uygulamalar Word, Excel, PowerPoint, OneNote ve Access ' i içerir.
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **Büyük olasılıkla karıştırılmış betiklerin yürütülmesini engelle (js/vbs/PS)**  
+  ASR kuralı: [5Beb7efe-fd9a-4556-801d-275e5ffc04cc](https://go.microsoft.com/fwlink/?linkid=872978)
+
+  - **Engelle** *(varsayılan)* -Defender, karıştırılmış betiklerin yürütülmesini engeller.
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+- **Office makrolarından Win32 API çağrıları engelle**  
+  ASR kuralı: [92E97fa1-2EDF-4476-BDD6-9DD0B4DDDC7B](https://go.microsoft.com/fwlink/?linkid=872977)
+
+  - **Engelle** *(varsayılan)* -Office makrosunda Win32 API çağrıları kullanılması engellenir.
+  - **Yapılandırılmadı** -ayarı devre dışı olan Windows varsayılan öğesine döndürün.
+  - **Denetim modu** -Windows olayları engelleme yerine oluşturulur.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 ## <a name="application-guard"></a>Application Guard
 
@@ -100,9 +213,15 @@ Microsoft Edge kullanırken, Microsoft Defender Application Guard, ortamınızı
   - **Ağ etki alanları**  
     **Ekle** ' yi seçin ve etki ALANLARıNı, IP adresi aralıklarını ve ağ sınırlarını belirtin. Varsayılan olarak, *SecurityCenter.Windows.com* yapılandırılır.
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 ## <a name="bitlocker"></a>BitLocker
 
 Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) .
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Depolama kartlarının şifrelenmesini gerektir (yalnızca mobil)**  
   CSP: [Requirestooygecardencryption](https://go.microsoft.com/fwlink/?linkid=872524)
@@ -113,6 +232,27 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
 
   > [!NOTE]
   > [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) ve [Windows Phone 8,1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) desteği 2020 tarihinde sona erdi.
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+- **Pille çalışırken bekleme durumları** CSP: [Power/Standbytimeoutonpili](https://go.microsoft.com/fwlink/?linkid=2067195)
+
+  Bu ilke ayarı, Windows 'un bilgisayarı uyku durumuna geçirirken bekleme durumlarını kullanıp kullanamayacağını yönetir.
+  - **Devre dışı** *(varsayılan)* -bekleme durumlarına (S1-S3) izin verilmez.
+  - **Etkin** -Windows, bilgisayarı uyku durumuna geçirmek için bekleme durumlarını kullanır.
+  - **Yapılandırılmadı** - *etkin*olarak aynı davranış.
+
+- **Prize takılıyken uyurken bekleme durumları**  
+  CSP: [Power/Standbytimeoutpluggedın](https://go.microsoft.com/fwlink/?linkid=2067196)
+
+  Bu ilke ayarı, Windows 'un bilgisayarı uyku durumuna geçirirken bekleme durumlarını kullanıp kullanmeyeceğini yönetir.
+  - **Devre dışı** *(varsayılan)* -bekleme durumlarına (S1-S3) izin verilmez.
+  - **Etkin** -Windows, bilgisayarı uyku durumuna geçirmek için bekleme durumlarını kullanır.
+  - **Yapılandırılmadı** - *etkin*olarak aynı davranış.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **İşletim sistemi ve sabit veri sürücüleri için tam disk şifrelemesini etkinleştir**  
   CSP: [Requiredeviceencryption](https://go.microsoft.com/fwlink/?linkid=872523)
@@ -130,7 +270,41 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
   - **Yapılandır** (*varsayılan*)
   - **Yapılandırılmadı**
 
-  *Yapılandırma*olarak ayarlandığında, *işletim sistemi sürücüleri için şifreleme yöntemini*yapılandırabilirsiniz.
+  *Yapılandırma*olarak ayarlandığında, aşağıdaki ayarları yapılandırabilirsiniz:
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+- **Başlangıç kimlik doğrulaması gerekiyor**  
+  CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)
+
+  - **Evet** *(varsayılan)* -Güvenilir Platform Modülü (TPM) veya başlangıç PIN gereksinimlerinin kullanımı dahil olmak üzere sistem başlangıcında ek kimlik doğrulama gereksinimlerini yapılandırabilirsiniz:
+  - **Yapılandırılmadı**
+
+    - **Uyumlu TPM başlangıç PIN 'ı**  
+      CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527) , bu ayar, *gerekli başlatma kimlik doğrulaması* *Evet*olarak ayarlandığında kullanılabilir.
+
+      - **Engellendi** -PIN kullanımını engeller. 
+      - **Gerekli** -BitLocker 'ın başarılı DÖNDÜRÜLMESI için PIN ve TPM 'nin mevcut olması gerekir. Sessiz etkinleştirme senaryolarında (Autopilot dahil), Kullanıcı etkileşimi gerekli olduğundan bu ayar başarılı olamaz. BitLocker 'ın sessiz etkinleştirilmesi gerektiği için PIN 'in devre dışı bırakılması önerilir.
+      - **Izin verilen** *(varsayılan)* -varsa TPM 'yi kullanarak BitLocker 'ı etkinleştirin ve bir başlangıç PIN 'inin Kullanıcı tarafından yapılandırılmasına izin verin.
+      - **Yapılandırılmadı**
+
+    - **Uyumlu TPM başlangıç anahtarı**  
+      CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527) , bu ayar, *gerekli başlatma kimlik doğrulaması* *Evet*olarak ayarlandığında kullanılabilir.
+
+      - **Engellendi** -başlangıç anahtarlarının kullanımını engelleyin.
+      - **Gerekli** *(varsayılan)* -BitLocker 'ı etkinleştirmek için BitLocker 'ın BIR başlangıç anahtarına ve TPM 'ye sahip olması gerekir. Sessiz etkinleştirme senaryolarında (Autopilot dahil), Kullanıcı etkileşimi gerekli olduğundan bu ayar başarılı olamaz. BitLocker 'ın sessiz etkinleştirilmesi gerektiğinde, başlangıç anahtarlarının devre dışı bırakılması önerilir.
+      - **Izin verildi** -varsa TPM 'Yi kullanarak BitLocker 'ı etkinleştirin ve sürücülerin kilidini açmak için bir başlangıç anahtarı (USB sürücü gibi) var olmasına izin verin.
+      - **Yapılandırılmadı** *(varsayılan)*
+
+    - **TPM 'nin uyumsuz olduğu cihazlarda BitLocker 'ı devre dışı bırakma**  
+      CSP: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527) , bu ayar, *gerekli başlatma kimlik doğrulaması* *Evet*olarak ayarlandığında kullanılabilir.
+
+      - **Evet** *(varsayılan)* -BITLOCKER 'ın uyumlu bir TPM yongası olmadan yapılandırılmasını devre dışı bırakın. Bu ayar test için yararlı olabilir, ancak TPM olmadan BitLocker 'ı etkinleştirmek önerilmez. TPM yoksa, BitLocker başlatma için bir parola veya USB sürücü gerektirir. Bu ayar yalnızca BitLocker etkinleştirilmesinde geçerlidir. Bu ayarı uygulamadan önce BitLocker zaten etkinse, hiçbir etkisi olmayacaktır.
+      - **Yapılandırılmadı**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
   - **Işletim sistemi sürücüleri için şifreleme yöntemini yapılandırma**  
     CSP: [Encryptionmethodbydrivetype](https://go.microsoft.com/fwlink/?linkid=872526)  
@@ -156,8 +330,8 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
     CSP: [FixedDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872534)  
     Bu ayar *BitLocker sabit sürücü Ilkesi* *Yapılandır*olarak ayarlandığında kullanılabilir.
 
-    - **Yapılandırılmadı** (*varsayılan*)-veriler, şifrelenmemiş sabit sürücülere yazılabilir.
-    - **Evet** -Windows, BitLocker korumalı olmayan sabit sürücülere hiçbir verinin yazılmasına izin vermez. Sabit bir sürücü şifrelenmemişse, yazma erişimi verilmeden önce kullanıcının BitLocker kurulum Sihirbazı 'nı tamamlaması gerekir.
+    - **Yapılandırılmamış** -veriler, şifrelenmemiş sabit sürücülere yazılabilir.
+    - **Evet** (*varsayılan*)-Windows, BitLocker korumalı olmayan sabit sürücülere hiçbir verinin yazılmasına izin vermez. Sabit bir sürücü şifrelenmemişse, yazma erişimi verilmeden önce kullanıcının BitLocker kurulum Sihirbazı 'nı tamamlaması gerekir.
 
   - **Sabit veri sürücüleri için şifreleme yöntemini yapılandırma**  
     CSP: [Encryptionmethodbydrivetype](https://go.microsoft.com/fwlink/?linkid=872526)  
@@ -165,10 +339,10 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
 
     Sabit veri sürücüleri diskleri için şifreleme yöntemini ve şifre gücünü yapılandırın. *XTS-AES 128-bit* , Windows varsayılan şifreleme yöntemidir ve önerilen değerdir.
 
-    - **Yapılandırılmadı** (*varsayılan*)
+    - **Yapılandırılmadı**
     - **AES 128bit CBC**
     - **AES 256bit CBC**
-    - **AES 128bit XTS**
+    - **AES 128bit XTS** (*varsayılan*)
     - **AES 256bit XTS**
 
 - **BitLocker çıkarılabilir sürücü ilkesi**  
@@ -186,8 +360,8 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
     Çıkarılabilir veri sürücüleri diskleri için şifreleme yöntemini ve şifre gücünü yapılandırın. *XTS-AES 128-bit* , Windows varsayılan şifreleme yöntemidir ve önerilen değerdir.
 
     - **Yapılandırılmadı**
-    - **AES 128bit CBC**
-    - **AES 256bit CBC** (*varsayılan*)
+    - **AES 128bit CBC** (*varsayılan*)
+    - **AES 256bit CBC**
     - **AES 128bit XTS**
     - **AES 256bit XTS**
 
@@ -197,6 +371,9 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
 
     - **Yapılandırılmadı** (*varsayılan*)-veriler, şifrelenmemiş çıkarılabilir sürücülere yazılabilir.  
     - **Evet** -Windows, BitLocker korumalı olmayan çıkarılabilir sürücülere hiçbir verinin yazılmasına izin vermez. Çıkarılabilir bir sürücü şifrelenmemişse, yazma erişimi verilmeden önce kullanıcının BitLocker kurulum Sihirbazı 'nı tamamlaması gerekir.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 ## <a name="browser"></a>Tarayıcı
 
@@ -228,6 +405,9 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
   - **Evet** (*varsayılan*)-Kullanıcı Windows 'a oturum açana kadar tüm etkin takılabilir PCI akış bağlantı noktaları için doğrudan bellek erişimini (DMA) engelleyin. Kullanıcı oturum açtıktan sonra, Windows, ana bilgisayar eklentisi PCI bağlantı noktalarına bağlı PCI cihazlarını numaralandırır. Kullanıcı makineyi her kilitlediğinde, Kullanıcı yeniden oturum açana kadar alt cihazları olmayan hot plug PCI bağlantı noktalarında DMA engellenir. Makine kilidi açıldığında zaten numaralandırılan cihazlar, söküle kadar çalışmaya devam eder.
   - **Yapılandırılmadı**
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 ## <a name="device-guard"></a>Device Guard  
 
 - **Credential Guard 'ı aç**  
@@ -235,15 +415,19 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
 
   Credential Guard, donanım gereksinimlerinin karşılanmasını gerektiren güvenli önyükleme ve DMA korumaları gerektiren korumalar sağlamak için Windows Hiper Yöneticisi 'ni kullanır.
 
-  - **Yapılandırılmadı** -Windows varsayılan olan Credential Guard 'ın kullanımını devre dışı bırakın.
+  - **Yapılandırılmadı**
   - **UEFI kilidi Ile etkinleştir** (*varsayılan*)-Credential Guard 'ı etkinleştirin ve UEFI kalıcı yapılandırmanın el ile temizlenmesi gerektiği için uzaktan devre dışı bırakılamaz.
   - **UEFI kilidi olmadan etkinleştirin** -Credential Guard 'ı etkinleştirin ve makinenin makineye fiziksel erişimi olmadan kapatılmış olmasını sağlayın.
+  - **Disable** -Windows varsayılan olan Credential Guard kullanımını devre dışı bırakın.
 
 ## <a name="device-installation"></a>Cihaz yüklemesi
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
 - **Cihaz tanımlayıcılarına göre donanım cihazı yüklemesi**  
-  [Deviceınstallation/Preventınstalnmatchingdevicıdıd](https://go.microsoft.com/fwlink/?linkid=2066794)  
-  
+  [Deviceınstallation/Preventınstalnmatchingdevicıdıd](https://go.microsoft.com/fwlink/?linkid=2066794)
+
   Bu ilke ayarı, Windows 'un yüklemesi engellenen cihazlar için Tak ve Kullan donanım kimliklerinin ve uyumlu kimliklerin bir listesini belirtmenizi sağlar. Bu ilke ayarı, Windows 'un bir cihaz yüklemesine izin veren diğer tüm ilke ayarlarından önceliklidir.  Uzak Masaüstü sunucusunda bu ilke ayarını etkinleştirirseniz, ilke ayarı, belirtilen cihazların uzak masaüstü istemcisinden uzak masaüstü sunucusuna yönlendirilmesini etkiler.
 
   - **Yapılandırılmadı**
@@ -255,14 +439,17 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
   - **Eşleşen donanım cihazlarını kaldırma**
 
     Bu ayar yalnızca *cihaz tanımlayıcılarına göre donanım cihaz yüklemesi* , *donanım cihazı yüklemeyi engelleyecek*şekilde ayarlandığında kullanılabilir.
-    - **Evet**
+    - **Evet** *(varsayılan)*
     - **Yapılandırılmadı**
 
   - **Engellenen donanım cihaz tanımlayıcıları**  
-    
+
     Bu ayar yalnızca *cihaz tanımlayıcılarına göre donanım cihaz yüklemesi* , *donanım cihazı yüklemeyi engelleyecek*şekilde ayarlandığında kullanılabilir.
 
     **Ekle**' yi seçin ve ardından engellemek istediğiniz donanım cihaz tanımlayıcısını belirtin.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **Kurulum sınıflarına göre donanım cihaz yüklemesi**  
   CSP: [Deviceınstallation/Allowwinstallationofmatchingdevicesetupclasses](https://go.microsoft.com/fwlink/?linkid=2067048)  
@@ -279,7 +466,7 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
 
     Bu ayar yalnızca *cihaz tanımlayıcılarına göre donanım cihaz yüklemesi* , *donanım cihazı yüklemeyi engelleyecek*şekilde ayarlandığında kullanılabilir.
     - **Evet**
-    - **Yapılandırılmadı**
+    - **Yapılandırılmadı** *(varsayılan)*
 
   - **Engellenen donanım cihaz tanımlayıcıları**
 
@@ -293,8 +480,18 @@ Daha fazla bilgi için, Windows belgelerindeki [BitLocker Grup İlkesi ayarları
   CSP: [Dmaguard/DeviceEnumerationPolicy](/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   Bu ilke, dış DMA özellikli cihazlara karşı ek güvenlik sağlayabilir. DMA yeniden eşleme/cihaz belleği yalıtımı ve korumalı alana alma ile uyumsuz olan dış DMA özellikli cihazların numaralandırılması üzerinde daha fazla denetim sağlar.
-  
+
   Bu ilke, yalnızca çekirdek DMA koruması desteklenirken ve Sistem bellenimi tarafından etkinleştirildiğinde devreye girer. Çekirdek DMA koruması, üretim sırasında sistem tarafından desteklenmesi gereken bir platform özelliğidir. Sistemin çekirdek DMA korumasını destekleyip desteklemediğini denetlemek için MSINFO32.exe Özet sayfasındaki çekirdek DMA koruması alanını denetleyin.
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+  - **Yapılandırılmadı**  
+  - **Tümünü Engelle** *(erulat)*
+  - **Tümüne izin ver**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
   - **Yapılandırılmadı** -(*varsayılan*)
   - **Tümünü engelle**
@@ -307,7 +504,7 @@ Aşağıdaki ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Wi
 - **Tüm dosyalar için örnek paylaşımı**  
   CSP: [yapılandırma/SampleSharing](/windows/client-management/mdm/windowsadvancedthreatprotection-csp)
 
-  Microsoft Defender Gelişmiş tehdit koruması örnek paylaşımı yapılandırma parametresini döndürür veya ayarlar.  
+  Microsoft Defender Gelişmiş tehdit koruması örnek paylaşımı yapılandırma parametresini döndürür veya ayarlar.
   
   - **Evet** (*varsayılan*)
   - **Yapılandırılmadı**
@@ -320,18 +517,22 @@ Aşağıdaki ayarlar hakkında daha fazla bilgi için Windows belgelerindeki [Wi
   - **Evet** (*varsayılan*)
   - **Yapılandırılmadı**
 
-## <a name="firewall"></a>Güvenlik duvarı
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
+## <a name="firewall"></a>Güvenlik Duvarı
 
 Daha fazla bilgi için Windows belgelerindeki [güvenlik DUVARı CSP](/windows/client-management/mdm/firewall-csp) bölümüne bakın.
 
-- **Durum bilgisi Dosya Aktarım Protokolü devre dışı bırak (FTP)**  
+- **Durum bilgisi olan Dosya Aktarım Protokolü (FTP)**  
   CSP: [Mdmstore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
 
-  - **Evet** (*varsayılan*)
-  - **Yapılandırılmadı** -güvenlik duvarı, ikincil ağ bağlantılarını incelemek ve FILTRELEMEK için FTP kullanır ve bu da güvenlik duvarı kurallarınızın yoksayılmasına neden olabilir.
+  - **Devre dışı** (*varsayılan*)-durum bilgisi olan FTP devre dışı bırakıldı.
+  - **Izin ver** -güvenlik duvarı, ikincil bağlantılara izin vermek için durum bilgisi olan Dosya Aktarım Protokolü (FTP) filtrelemesi gerçekleştirir. Devre dışı
+  - **Yapılandırılmadı**
 
 - **Bir güvenlik ilişkisinin silinmeden önce boşta kalabileceği saniye sayısı**  
-CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539)
+  CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539)
 
   Ağ trafiği artık görülmedikçe güvenlik ilişkilerinin ne kadar süreyle tutulacağını belirtin. Yapılandırılmadığında, sistem, *300* saniye boyunca boşta kaldıktan sonra bir güvenlik ilişkilendirmesini siler (varsayılan).
   
@@ -387,12 +588,6 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
     - **Evet** (*varsayılan*)
     - **Yapılandırılmadı**
 
-  - **Gizli mod gerekli**  
-    CSP: [/Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
-
-    - **Evet** (*varsayılan*)
-    - **Yapılandırılmadı**
-
   - **Gerekli giden bağlantılar**  
     CSP: [/Defaultoutbounnection](https://aka.ms/intune-firewall-outboundaction)
 
@@ -407,12 +602,6 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 
   - **Grup İlkesi ile birleştirilen genel bağlantı noktası kuralları**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
-
-    - **Evet** (*varsayılan*)
-    - **Yapılandırılmadı**
-
-  - **Gizli mod engellendi**  
-    CSP: [/Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Evet** (*varsayılan*)
     - **Yapılandırılmadı**
@@ -447,6 +636,18 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 
     - **Evet** (*varsayılan*)
     - **Yapılandırılmadı**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
+  - **Gizli mod engellendi**  
+    CSP: [/Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Evet** (*varsayılan*)
+    - **Yapılandırılmadı**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **Güvenlik duvarı profili genel**  
   [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2067143)
@@ -468,12 +669,6 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
     - **Evet** (*varsayılan*)
     - **Yapılandırılmadı**
 
-  - **Gizli mod gerekli**  
-    CSP: [/Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
-
-    - **Evet** (*varsayılan*)
-    - **Yapılandırılmadı**
-
   - **Gerekli giden bağlantılar**  
     CSP: [/Defaultoutbounnection](https://aka.ms/intune-firewall-outboundaction)
 
@@ -494,12 +689,6 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 
   - **Grup İlkesi ile birleştirilen genel bağlantı noktası kuralları**  
     CSP: [/GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
-
-    - **Evet** (*varsayılan*)
-    - **Yapılandırılmadı**
-
-  - **Gizli mod engellendi**  
-    CSP: [/Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
 
     - **Evet** (*varsayılan*)
     - **Yapılandırılmadı**
@@ -528,6 +717,18 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 
     - **Evet** (*varsayılan*)
     - **Yapılandırılmadı**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
+  - **Gizli mod engellendi**  
+    CSP: [/Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Evet** (*varsayılan*)
+    - **Yapılandırılmadı**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
 
 - **Güvenlik duvarı profili etki alanı**  
   CSP: [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796)
@@ -553,12 +754,6 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
     - **Evet** (*varsayılan*)
     - **Yapılandırılmadı**
 
-  - **Gizli mod engellendi**  
-    CSP: [/Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
-
-    - **Evet** (*varsayılan*)
-    - **Yapılandırılmadı**
-
   - **Güvenlik Duvarı etkin**  
     CSP: [/EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
@@ -578,7 +773,91 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
     - **Evet** (*varsayılan*)
     - **Yapılandırılmadı**
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
+
+  - **Gizli mod engellendi**  
+    CSP: [/Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    - **Evet** (*varsayılan*)
+    - **Yapılandırılmadı**
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 ## <a name="microsoft-defender"></a>Microsoft Defender
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+- **Gerçek zamanlı korumayı aç**  
+  CSP: [Defender/AllowRealtimeMonitoring](https://go.microsoft.com/fwlink/?linkid=2114050&clcid=0x409)
+
+  - **Evet** (*varsayılan*)-gerçek zamanlı izleme zorlanır ve Kullanıcı bunu devre dışı bırakamayabilir.
+  - **Yapılandırılmadı** -ayar, üzerinde olan istemci varsayılanı olarak döndürülür, ancak kullanıcı bunu değiştirebilir. Gerçek zamanlı izlemeyi devre dışı bırakmak için özel bir URI kullanın.
+
+- **Bulut koruması zaman aşımını uzatmak için ek süre (0-50 saniye)**  
+  CSP: [Defender/CloudExtendedTimeout](https://go.microsoft.com/fwlink/?linkid=2113940&clcid=0x409)
+
+  Defender virüsten koruma, güvenli olduklarından emin olmak için kuşkulu dosyaları 10 saniye içinde otomatik olarak engeller. Bu ayarla, bu zaman aşımı için en fazla 50 ek saniye ekleyebilirsiniz.  Varsayılan olarak, zaman aşımı sıfır (**0**) olarak ayarlanır.
+
+- **İndirilen tüm dosyaları ve ekleri Tara**  
+  CSP: [Defender/Allowwioavprotection](https://go.microsoft.com/fwlink/?linkid=2113934&clcid=0x409)
+
+  - **Evet** (*varsayılan*)-indirilen tüm dosyalar ve ekler taranır. Ayar, üzerinde olan istemci varsayılan öğesine döndürülür, ancak kullanıcı bunu değiştirebilir. Bu ayarı devre dışı bırakmak için özel bir URI kullanın.
+  - **Yapılandırılmadı** -ayar, üzerinde olan istemci varsayılanı olarak döndürülür, ancak kullanıcı bunu değiştirebilir. Bu ayarı devre dışı bırakmak için özel bir URI kullanın.
+
+- **Tarama türü**  
+  CSP: [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045&clcid=0x409)
+
+  - **Kullanıcı tanımlı**
+  - **Devre dışı**
+  - **Hızlı tarama** (*varsayılan*)
+  - **Tam tarama**
+
+- **Defender örnek gönderim onayı**  
+  CSP: [Defender/Submitsamplesonayı](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  Veri göndermek için Microsoft Defender 'daki Kullanıcı izin düzeyini denetler. Gerekli onay zaten verildiyse, Microsoft Defender bunları gönderir. Değilse (ve Kullanıcı hiçbir zaman sorma olarak belirtilmişse), veri göndermeden önce Kullanıcı izni ( *buluta teslim edilen koruma* *Evet*olarak ayarlandığında) ister.
+
+  - **Güvenli örnekleri otomatik olarak gönder** (*varsayılan*)
+  - **Her zaman sor**
+  - **Hiçbir şekilde gönderme**
+  - **Tüm örnekleri otomatik olarak gönder**
+
+- **Buluta teslim edilen koruma düzeyi**  
+  CSP: [Cloudblocklevel](https://go.microsoft.com/fwlink/?linkid=2113942)
+
+  Agresif Defender virüsten koruma 'nın şüpheli dosyaları engelleme ve tarama hakkında daha fazla yapılandırma.
+  - **Yapılandırılmadı** -varsayılan Defender engelleme düzeyi.
+  - **Yüksek** *(varsayılan)* -istemci performansını iyileştirirken, yanlış pozitif sonuçlar içeren daha büyük bir şanstan daha fazla şans içeren bir performans vermez.
+  - **Yüksek artı-güvenip** , istemci performansını etkileyebilecek ek koruma önlemleri uygular.
+  - **Sıfır toleransı** -tüm bilinmeyen yürütülebilir dosyaları engelle.
+
+- **Tam tarama sırasında çıkarılabilir sürücüleri Tara**  
+  CSP: [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946&clcid=0x409)
+
+  - **Evet** (*varsayılan*)-tam tarama sırasında, çıkarılabilir sürücüler (USB flash sürücüler gibi) taranır.
+  - **Yapılandırılmadı** -Bu ayar, istemci Varsayılanı ' nı döndürür ve bu, kaldırılabilir sürücüleri tarar ancak kullanıcı bu taramayı devre dışı bırakabilir.
+
+- **Defender istenmeyebilecek uygulama eylemi**  
+  CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  İstenmeyebilecek uygulamalar için algılama düzeyini belirtin (PUAs). Defender, istenmeyebilecek yazılımların indirileceği veya bir cihaza yüklenmeye çalıştığı durumlarda kullanıcıları uyarır.
+  - **Cihaz varsayılanı**
+  - **Engelle** (*varsayılan*)-algılanan öğeler engellenir ve diğer tehditlerle birlikte geçmiş olarak gösterilir.
+  - **Denetim** -Defender, istenmeyebilecek uygulamaları algılar, ancak hiçbir işlem gerçekleşmez. Olay Görüntüleyicisi Defender tarafından oluşturulan olayları arayarak, uygulama Defender ile ilgili bilgileri gözden geçirebilirsiniz.
+
+- **Buluta teslim edilen korumayı aç**  
+  CSP: [Allowcloudprotection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
+  Varsayılan olarak, Windows 10 masaüstü cihazlarındaki Defender, bulduğu sorunlar hakkında Microsoft 'a bilgi gönderir. Microsoft, sizi ve diğer müşterileri etkileyen sorunlar hakkında daha fazla bilgi edinmek için bu bilgileri çözümleyerek geliştirilmiş çözümler sunar.
+
+  - **Evet** (*varsayılan*)-buluta teslim edilen koruma açıktır.  Cihaz kullanıcıları bu ayarı değiştiremezler.
+  - **Yapılandırılmadı**  -ayar, sistem varsayılan ayarlarına geri yüklenir.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Günlük hızlı taramayı şurada Çalıştır:**  
   CSP: [Defender/ScheduleQuickScanTime](https://go.microsoft.com/fwlink/?linkid=2114053&clcid=0x409)
@@ -587,7 +866,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 
 - **Zamanlanmış tarama başlangıç zamanı**  
   
-  Varsayılan olarak, bu **2**olarak ayarlanır.
+  Varsayılan olarak, başlangıç saati **2 ÖÖ**olarak ayarlanır.
 
 - **Zamanlanan Taramalar için düşük CPU önceliğini yapılandırma**  
   CSP: [Defender/Enablelowcpupriınıd](/windows/client-management/mdm/policy-csp-defender#defender-enablelowcpupriority)  
@@ -713,7 +992,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 - **Defender örnek gönderim onayı**  
   CSP: [Defender/Submitsamplesonayı](https://go.microsoft.com/fwlink/?linkid=2067131)
 
-  Veri göndermek için Microsoft Defender 'daki Kullanıcı izin düzeyini denetler. Gerekli onay zaten verildiyse, Microsoft Defender bunları gönderir. Değilse (ve Kullanıcı hiçbir zaman sorma olarak belirtilmişse), veri göndermeden önce Kullanıcı onayını ( *buluta teslim edilen koruma* *Evet*olarak ayarlandığında) istemek için Kullanıcı arabirimi başlatılır.
+  Veri göndermek için Microsoft Defender 'daki Kullanıcı izin düzeyini denetler. Gerekli onay zaten verildiyse, Microsoft Defender bunları gönderir. Değilse (ve Kullanıcı hiçbir zaman sorma olarak belirtilmişse), veri göndermeden önce Kullanıcı izni ( *buluta teslim edilen koruma* *Evet*olarak ayarlandığında) ister.
 
   - **Güvenli örnekleri otomatik olarak gönder** (*varsayılan*)
   - **Her zaman sor**
@@ -738,7 +1017,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 - **Davranış izlemeyi aç**  
   CSP: [Defender/AllowBehaviorMonitoring](https://go.microsoft.com/fwlink/?linkid=2114048&clcid=0x409)
 
-  - **Evet** (*varsayılan*)-davranış izleme zorlanır ve Kullanıcı bunu devre dışı bırakılamaz.
+  - **Evet** (*varsayılan*)-davranış izleme zorlanır ve Kullanıcı bunu devre dışı bırakamayabilir.
   - **Yapılandırılmadı** -ayar, üzerinde olan istemci varsayılanı olarak döndürülür, ancak kullanıcı bunu değiştirebilir. Gerçek zamanlı izlemeyi devre dışı bırakmak için özel bir URI kullanın.
   
 - **Tam tarama sırasında çıkarılabilir sürücüleri Tara**  
@@ -752,7 +1031,7 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
 
   - **Evet** (*varsayılan*)-Microsoft Defender ağ dosyalarını tarar.
   - **Yapılandırılmadı** -istemci, ağ dosyalarının taranmasını devre dışı bırakan varsayılan değerini döndürür.
-  
+
 - **Defender istenmeyebilecek uygulama eylemi**  
   CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
@@ -857,7 +1136,79 @@ CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539
   - **Evet** (*varsayılan*)-kullanıcıların Microsoft Defender Güvenlik Merkezi 'ndeki yararlanma koruması ayarları alanında değişiklik yapmasını engelleyin.
   - **Yapılandırılmadı** -yerel kullanıcılar, açıktan yararlanma koruması ayarları alanında değişiklik yapabilirler.
 
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"
+
 ## <a name="smart-screen"></a>Akıllı ekran
+
+::: zone-end
+::: zone pivot="atp-sept-2020"
+
+- **Kullanıcıların SmartScreen uyarılarını yoksaymalarını engelleyin**  
+  CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+   Bu ayar ' Windows SmartScreen 'i aç ' ayarının Evet olarak ayarlanmasını gerektirir.
+  - **Evet** (*varsayılan*)-SmartScreen etkin ve kullanıcılar dosyalar veya kötü amaçlı uygulamalar için uyarıları atlayamaz.
+  - **Yapılandırılmadı** -kullanıcılar, dosyalar ve kötü amaçlı uygulamalar için SmartScreen uyarılarını yok sayabilir.
+
+- **Windows SmartScreen 'i açma**  
+  CSP: [SmartScreen/Enablesmartscreenınshell](https://go.microsoft.com/fwlink/?linkid=872784)
+
+  - **Evet** (*varsayılan*)-tüm kullanıcılar için SmartScreen kullanımını zorunlu tutun.
+  - **Yapılandırılmadı** -bu ayarı, SmartScreen 'i etkinleştirmek için Windows varsayılan ' e döndürün, ancak kullanıcılar bu ayarı değiştirebilir. SmartScreen 'i devre dışı bırakmak için özel bir URI kullanın.
+
+- **Microsoft Edge için SmartScreen gerektir**  
+  CSP: [tarayıcı/AllowSmartScreen](https://go.microsoft.com/fwlink/?linkid=2067029)
+
+  - **Evet** (*varsayılan*)-site ve dosya Indirmelerine erişmek Için Microsoft Edge SmartScreen 'i etkinleştirin.
+  - **Yapılandırılmadı**
+
+- **Kötü amaçlı Site erişimini engelleyin**  
+  CSP: [Browser/PreventSmartScreenPromptOverride](https://go.microsoft.com/fwlink/?linkid=2067040)  
+
+  - **Evet** (*varsayılan*)-kullanıcıların Microsoft Defender SmartScreen Filtresi uyarılarını yoksaymasını ve siteye gitmesini engelleyin.
+  - **Yapılandırılmadı**
+
+- **Doğrulanmamış dosya indirmeyi engelle**  
+  CSP: [Browser/PreventSmartScreenPromptOverrideForFiles](https://go.microsoft.com/fwlink/?linkid=2067023)  
+
+  - **Evet** (*varsayılan*)-kullanıcıların Microsoft Defender SmartScreen Filtresi uyarılarını yok saymasını engelleyin ve doğrulanmamış dosyaları indirmelerini engelleyin.
+  - **Yapılandırılmadı**
+
+- **Microsoft Defender SmartScreen 'i yapılandırma**  
+  Bu ilke yalnızca Microsoft etkin bir etki alanına katılmış Windows örneklerinde kullanılabilir; ya da cihaz yönetimi için kaydedilen Windows 10 Pro veya Enterprise örneklerinde.
+
+  Microsoft Defender SmartScreen, kullanıcılarınızın olası kimlik avı dolandırıcılarından ve kötü amaçlı yazılımlardan korunmasına yardımcı olmak için uyarı iletileri sağlar. Varsayılan olarak, Microsoft Defender SmartScreen açıktır.
+
+  - **Etkin** *(varsayılan)* -Microsoft Defender SmartScreen açık ve kullanıcılar bu özelliği kapatamaz.
+  - **Devre dışı** -Microsoft Defender SmartScreen kapalı ve kullanıcılar açamaz.
+  - **Yapılandırılmadı** -kullanıcılar Microsoft Defender SmartScreen 'i kullanıp kullanmayacağınızı seçebilirler.
+
+- **Siteler için Microsoft Defender SmartScreen istemlerinin atlanmasını engelle**  
+  Bu ilke ayarı, kullanıcıların olası kötü amaçlı Web siteleri hakkında Microsoft Defender SmartScreen uyarılarını geçersiz kılıp kılamayacağını belirlemenize olanak sağlar.
+
+  - **Etkin** *(varsayılan)* -bu ayarı etkinleştirirseniz, kullanıcılar Microsoft Defender SmartScreen uyarılarını yok sayamazlar ve siteye devam etmek engellenir.
+  - **Devre dışı** -kullanıcılar Microsoft Defender SmartScreen uyarılarını yoksayabilir ve siteye devam edebilir.
+  - **Yapılandırılmadı** - *devre dışı*olarak aynı davranış.
+
+- **İndirmeler hakkında Microsoft Defender SmartScreen uyarılarını atlamayı engelle**  
+  Bu ilke, kullanıcıların doğrulanmamış indirmeler hakkında Microsoft Defender SmartScreen uyarılarını geçersiz kılıp kılamayacağını belirlemenizi sağlar.
+
+  - **Etkin** *(varsayılan)* -kuruluşunuzdaki kullanıcılar Microsoft Defender SmartScreen uyarılarını yok sayamazlar ve doğrulanmamış İndirmeleri tamamlamada engellenirler.
+  - **Devre dışı** -kullanıcılar Microsoft Defender SmartScreen uyarılarını yoksayabilir ve doğrulanmamış İndirmeleri tamamlayabilir.
+  - **Yapılandırılmadı** - *devre dışı*olarak aynı davranış.
+
+- **Microsoft Defender SmartScreen 'i istenmeyebilecek uygulamaları engelleyecek şekilde yapılandırma**  
+  Bu ilke yalnızca bir Microsoft Active Directory etki alanına katılmış Windows örneklerinde kullanılabilir; ya da cihaz yönetimi için kaydedilen Windows 10 Pro veya Enterprise örneklerinde.
+
+  Bu ilke ayarı, Microsoft Defender SmartScreen 'te istenmeyebilecek uygulamalar için engellemeyi açıp kullanmayacağınızı yapılandırmanıza olanak tanır. Microsoft Defender SmartScreen 'te istenmeyebilecek uygulama engelleme, kullanıcıların reklam yazılımı, para Miners, Paketleyici, ve Web siteleri tarafından barındırılan diğer düşük ve olmayan uygulamalardan korunmasına yardımcı olmak için uyarı iletileri sağlar. Microsoft Defender SmartScreen 'te istenmeyebilecek uygulama engelleme özelliği varsayılan olarak kapalıdır.
+
+  - **Etkin** *(varsayılan)* -Microsoft Defender SmartScreen 'te istenmeyebilecek uygulama engelleme açıktır.
+  - **Devre dışı** -Microsoft Defender SmartScreen 'te istenmeyebilecek uygulama engelleme kapalı.
+  - **Yapılandırılmadı** -bu ayarı yapılandırmazsanız, kullanıcılar Microsoft Defender SmartScreen 'te istenmeyebilecek uygulama engellemesinin kullanılıp kullanılmayacağını seçebilirler.
+
+::: zone-end
+::: zone pivot="atp-march-2020,atp-april-2020"
 
 - **Kullanıcıların SmartScreen uyarılarını yoksaymalarını engelleyin**  
   CSP: [SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
@@ -887,7 +1238,7 @@ Daha fazla bilgi için Windows belgelerindeki [Passportforwork CSP](/windows/cli
 
   - **Yapılandırılmadı** -cihazlar cihaz, Windows için varsayılan olan Iş Için Windows Hello 'Yu temin etmez.
   - **Devre dışı** (*varsayılan*)-cihazlar Iş için Windows Hello 'yu temin edin.
-  - **Etkin** -cihazlar herhangi bir kullanıcı için Iş Için Windows Hello sağlamalardır.
+  - **Etkin** -cihazlar herhangi bir kullanıcı için Iş Için Windows Hello 'yu sağlamalardır.
 
   *Devre dışı*olarak ayarlandığında, aşağıdaki ayarları yapılandırabilirsiniz:
 

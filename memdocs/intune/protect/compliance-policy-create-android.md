@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f8cb75907befaa747ebae1718815d9722ff7085
-ms.sourcegitcommit: 56bb5419c41c2e150ffed0564350123135ea4592
+ms.openlocfilehash: b205a367f70d9bfda7540b30501c7c94a01a7773
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729224"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814979"
 ---
 # <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune'u kullanarak cihazları uyumlu veya uyumlu değil şeklinde işaretlemek için kullanabileceğiniz Android ayarları
 
@@ -47,7 +47,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
   - **Temizle**
   - **Düşük**
   - **Medium**
-  - **Geniş**
+  - **Yüksek**
 
 ## <a name="device-health"></a>Cihaz Sistem Durumu
 
@@ -119,49 +119,6 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 
 ## <a name="system-security"></a>Sistem Güvenliği
 
-### <a name="password"></a>Parola
-
-- **Mobil cihazların kilidini açmak için bir parola gerektir**  
-  *Android 4,0 ve üzeri sürümlerde veya KNOX 4,0 ve üzeri sürümlerde desteklenir.*
-
-  Bu ayar, kullanıcılara mobil cihazlarındaki bilgilere erişim verilmeden önce bu kullanıcılardan parola istenip istenmeyeceğini belirtir. Önerilen değer: gerektir  
-
-  - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
-  - **Gerektir** -kullanıcıların cihazına erişebilmeleri için önce bir parola girmesi gerekir.
-
-- **Gerekli parola türü**  
-  *Android 4,0 ve üzeri sürümlerde veya KNOX 4,0 ve üzeri sürümlerde desteklenir.*
-
-  Parolanın yalnızca sayısal karakterlerden mi yoksa sayı ve diğer karakterlerin karışımından mı oluşacağını seçin.
-
-  - **Cihaz varsayılanı** -parola uyumluluğunu değerlendirmek Için, **cihaz varsayılanı**dışında bir parola gücü seçtiğinizden emin olun.
-  - **Düşük güvenlik biyometriği**
-  - **En az sayısal**
-  - Ya da gibi sayısal karmaşık yinelenen veya ardışık sayıların kullanımına izin verilmez. **Numeric complex** `1111` `1234`
-  - **En az alfabetik**
-  - **En az alfasayısal**
-  - **Simgelerle en az alfasayısal**
-
-  Bu ayarın yapılandırmasına bağlı olarak, aşağıdaki seçeneklerden biri veya birkaçı kullanılabilir:
-
-  - **Minimum parola uzunluğu**  
-    *Android 4,0 ve üzeri sürümlerde veya KNOX 4,0 ve üzeri sürümlerde desteklenir.*
-
-    Kullanıcı parolasının sahip olması gereken minimum rakam veya karakter sayısını girin.
-
-  - **Parola istenmeden önce geçen işlem yapılmayan dakika sayısı**  
-    *Android 4,0 ve üzeri sürümlerde veya KNOX 4,0 ve üzeri sürümlerde desteklenir.*
-
-    Kullanıcı parolasını yeniden girmeden önce boşta geçen süreyi girin. **Yapılandırılmadı** (varsayılan) seçeneğini belirtirseniz bu ayar uyumluluk veya uyumsuzluk açısından değerlendirilmez.
-
-  - **Parolanın süresi dolana kadar geçen gün sayısı**  
-  *Android 4,0 ve üzeri sürümlerde veya KNOX 4,0 ve üzeri sürümlerde desteklenir.*
-
-  Kullanıcı parolasının süresi dolup yeni bir parola oluşturulması gerekmeden önce geçmesi gereken gün sayısını seçin.
-
-  - **Yeniden kullanılmasını önleyen önceki parola sayısı**  
-    Yeniden kullanılamayacak parolalar için bir sayı girin. Son kullanıcının daha önce kullanılmış parolalar oluşturmasını önlemek için bu ayarı kullanın. (Android 4,0 ve üzeri ya da KNOX 4,0 ve üzeri için desteklenir.)
-
 ### <a name="encryption"></a>Şifreleme
 
 - **Cihazda veri depolamanın şifrelenmesi**  
@@ -207,6 +164,79 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
 
 - **Kısıtlanmış uygulamalar**  
   Kısıtlanması gereken uygulamalar için **uygulama adı** ve **uygulama paketi kimliği** ' ni girin ve ardından **Ekle**' yi seçin. Kısıtlı uygulamalardan en az birinin yüklü olduğu cihaz uyumsuz olarak işaretlenir.
+
+### <a name="password"></a>Parola
+
+Parolaların kullanılabilir ayarları, cihazdaki Android sürümüne göre farklılık gösterir.
+
+#### <a name="all-android-devices"></a>Tüm Android cihazlar
+
+*Aşağıdaki ayarlar Android 4,0 veya üzeri sürümlerde ve Knox 4,0 ve üzeri sürümlerde desteklenir.*
+
+- **Parola istenmeden önce geçen işlem yapılmayan dakika sayısı**  
+  Bu ayar, mobil cihaz ekranının kilitlenmesinden sonra Kullanıcı girişi olmadan geçen süreyi belirtir. Seçenekler *1 dakikadan* *8 saate*kadar değişir. Önerilen değer *15 dakikadır*.
+
+  - **Yapılandırılmadı** *(varsayılan)*
+
+#### <a name="android-10-and-later"></a>Android 10 ve üzeri
+
+*Aşağıdaki ayarlar, Android 10 veya sonrasında desteklenir, ancak Knox üzerinde desteklenmez.*
+
+- **Parola karmaşıklığı**  
+ *Bu ayar, Android 10 veya sonrasında desteklenir, ancak Samsung KNOX üzerinde desteklenmez. Android 9 ve önceki sürümleri ya da Samsung KNOX çalıştıran cihazlarda parola uzunluğu ve tür ayarları karmaşıklık için bu ayarı geçersiz kılar*.
+  
+  Gerekli parola karmaşıklığını belirtin.
+
+  - **Hiçbiri** *(varsayılan)* -parola gerekli değildir.
+  - **Düşük** -parola aşağıdaki koşullardan birini karşılar:
+    - Desen
+    - PIN 'in yinelenen (4444) veya sıralı (1234, 4321, 2468) sırası vardır.
+  - **Orta** -parola aşağıdaki koşullardan birini karşılar:
+    - PIN 'in yinelenen (4444) veya sıralı (1234, 4321, 2468) sırası yoktur ve en az 4 uzunluğu vardır.
+    - Alfabetik, en az 4 uzunluğunda.
+    - Alfasayısal, en az 4 uzunluğunda.
+  - **Yüksek** -parola aşağıdaki koşullardan birini karşılar:
+    - PIN 'in yinelenen (4444) veya sıralı (1234, 4321, 2468) sırası yoktur ve en az 8 uzunluğu vardır.
+    - Alfabetik, en az 6 uzunluğunda bir.
+    - Alfasayısal, en az 6 uzunluğunda.
+
+#### <a name="android-9-and-earlier-or-samsung-knox"></a>Android 9 ve önceki sürümleri ya da Samsung KNOX
+
+*Aşağıdaki ayarlar Android 9,0 ve önceki sürümlerde ve Samsung KNOX 'ın herhangi bir sürümünde desteklenir.*
+
+- **Mobil cihazların kilidini açmak için bir parola gerektir**  
+  Bu ayar, kullanıcılara mobil cihazlarındaki bilgilere erişim verilmeden önce bu kullanıcılardan parola istenip istenmeyeceğini belirtir. Önerilen değer: gerektir  
+
+  - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
+  - **Gerektir** -kullanıcıların cihazına erişebilmeleri için önce bir parola girmesi gerekir.
+  
+  *Gerektir*olarak ayarlandığında, aşağıdaki ayar yapılandırılabilir:
+
+  **Gerekli parola türü**  
+  Parolanın yalnızca sayısal karakterlerden mi yoksa sayı ve diğer karakterlerin karışımından mı oluşacağını seçin.
+
+  - **Cihaz varsayılanı** -parola uyumluluğunu değerlendirmek Için, **cihaz varsayılanı**dışında bir parola gücü seçtiğinizden emin olun.
+  - **Düşük güvenlik biyometriği**
+  - **En az sayısal**
+  - Ya da gibi **sayısal karmaşık** yinelenen veya ardışık sayıların `1111` `1234` kullanımına izin verilmez.
+  - **En az alfabetik**
+  - **En az alfasayısal**
+  - **Simgelerle en az alfasayısal**
+
+  Bu ayarın yapılandırmasına bağlı olarak, aşağıdaki seçeneklerden biri veya birkaçı kullanılabilir:
+
+  - **Minimum parola uzunluğu**  
+    Kullanıcı parolasının sahip olması gereken minimum rakam veya karakter sayısını girin.
+
+  - **Parola istenmeden önce geçen işlem yapılmayan dakika sayısı**  
+    Kullanıcı parolasını yeniden girmeden önce boşta geçen süreyi girin. **Yapılandırılmadı** (varsayılan) seçeneğini belirtirseniz bu ayar uyumluluk veya uyumsuzluk açısından değerlendirilmez.
+
+  - **Parolanın süresi dolana kadar geçen gün sayısı**  
+    Kullanıcı parolasının süresi dolup yeni bir parola oluşturulması gerekmeden önce geçmesi gereken gün sayısını seçin.
+
+  - **Yeniden kullanılmasını önleyen önceki parola sayısı**  
+    Yeniden kullanılamayacak parolalar için bir sayı girin. Son kullanıcının daha önce kullanılmış parolalar oluşturmasını önlemek için bu ayarı kullanın.
+
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

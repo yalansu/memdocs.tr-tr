@@ -6,7 +6,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc6201ca73a7599ab05b8a4874a431eed6b81c46
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 8d6c159f775ffbc169f2f91b9cf447f24eaf0df4
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88912483"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813780"
 ---
 # <a name="intune-reports"></a>Intune raporları
 Microsoft Intune raporları, kuruluşunuzdaki uç noktaların sistem durumunu ve etkinliğini daha etkili ve verimli bir şekilde izlemenize olanak tanır ve ayrıca Intune genelinde diğer raporlama verileri sağlar. Örneğin, cihaz uyumluluğu, cihaz sistem durumu ve cihaz eğilimleri hakkındaki raporları görebileceksiniz. Ayrıca, daha belirli verileri almak için özel raporlar da oluşturabilirsiniz. 
@@ -49,7 +49,7 @@ Aşağıdaki izinlere sahip kullanıcılar günlükleri gözden geçirebilir:
 - **Okuma** Izinleriyle bir Intune rolüne atanan yöneticiler
 
 ## <a name="non-compliant-devices-report-operational"></a>Uyumlu olmayan cihazlar raporu (Işletimsel)
-Uyumlu olmayan cihazlar, sorunları belirlemek ve sorunları düzeltmeye yardımcı olmak üzere yardım masası veya yönetici rolleri tarafından genellikle kullanılan yüzey verilerini rapor eder. Bu raporlarda bulunan veriler zamanında, beklenmeyen davranışı çağırır ve eyleme geçmek üzere tasarlanmıştır. Rapor, iş yüküyle birlikte kullanılabilir ve uyumlu olmayan cihazların etkin iş akışlarından göz atarak erişilebilir hale getirilmesi sağlanır. Bu rapor filtreleme, arama, sayfalama ve sıralama özellikleri sağlar. Ayrıca, sorun gidermeye yardımcı olmak için ayrıntıya gidebilirsiniz.
+Uyumlu olmayan cihazlar raporu, sorunları belirlemek ve sorunları düzeltmek için yardım masası veya yönetici rolleri tarafından genellikle kullanılan verileri sağlar. Bu raporda bulunan veriler zamanında, beklenmeyen davranışı çağırır ve eyleme geçmek üzere tasarlanmıştır. Rapor, iş yüküyle birlikte kullanılabilir ve uyumlu olmayan cihazların etkin iş akışlarından göz atarak erişilebilir hale getirilmesi sağlanır. Bu rapor filtreleme, arama, sayfalama ve sıralama özellikleri sağlar. Ayrıca, sorun gidermeye yardımcı olmak için ayrıntıya gidebilirsiniz.
 
 **Uyumsuz cihazlar** raporunu aşağıdaki adımları kullanarak görebilirsiniz:
 
@@ -60,6 +60,38 @@ Uyumlu olmayan cihazlar, sorunları belirlemek ve sorunları düzeltmeye yardım
 
     > [!TIP]
     > Intune 'u Azure Portal daha önce kullandıysanız, [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) 'da oturum açarak ve **cihaz uyumluluğu**  >  **uyumlu olmayan cihazlar**' ı seçerek yukarıdaki ayrıntıları Azure Portal bulabilirsiniz.
+
+## <a name="windows-10-unhealthy-endpoints-report-operational"></a>Windows 10 sağlıksız uç noktalar raporu (Işletimsel)
+**Windows 10 sağlıksız uç noktalar** , sorunları belirlemek ve sorunları düzeltmeye yardımcı olmak üzere yardım masası veya yönetici rolleri tarafından genellikle kullanılan yüzey verilerini rapor eder. Bu raporda bulunan veriler zamanında, sağlıksız cihaz, birincil kullanıcı asıl adı (UPN) ve bir dizi ayarların durumunu çağırır. Rapor, birincil **Virüsten koruma** iş yükü içinde bir sekme olarak kullanılabilir. Bu rapor filtreleme, arama, sayfalama ve sıralama sağlar. 
+
+**Windows 10 sağlıksız uç noktaları** raporunu aşağıdaki adımları kullanarak görüntüleyebilirsiniz:
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Endpoint Security**  >  **Virüsten koruma**  >  **Windows 10 sağlıksız uç noktaları**' nı seçin.
+
+## <a name="windows-10-detected-malware-report-operational"></a>Windows 10 algılanan kötü amaçlı yazılım raporu (Işletimsel)
+**Windows 10 algılanan kötü amaçlı yazılım** raporu, cihazları kötü amaçlı yazılım sorunlarıyla tanıtmak ve sorunları düzeltmeye yardımcı olmak için veri sağlar. Bu raporda bulunan veriler zamanında, sağlıksız cihaz, Kullanıcı adı ve önem derecesi ' ni çağırır. Rapor, birincil **Virüsten koruma** iş yükü içinde bir sekme olarak kullanılabilir. Bu rapor filtreleme, arama, sayfalama ve sıralama sağlar. 
+
+Aşağıdaki adımları kullanarak, **Windows 10 algılanan kötü amaçlı yazılım** raporunu görüntüleyebilirsiniz:
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Endpoint Security**  >  **Virüsten koruma**  >  **Windows 10 algılanan kötü amaçlı yazılımları**seçin.
+
+### <a name="bulk-actions-for-devices"></a>Cihazlar için toplu eylemler
+**Windows 10 algılanan kötü amaçlı yazılım** raporu, rapor içinde seçilen cihazlar için geçerli olan toplu eylemler sağlar. Toplu bir eylem kullanmak için, her bir cihaza karşılık gelen bir satır seçer (aynı anda en fazla 100 cihaz) ve eylemi seçersiniz. Kullanılabilir eylemler şunlardır:
+- **Yeniden Başlat** -bu eylem seçilen cihazların yeniden başlatılmasını gerçekleştirir.
+- **Hızlı tarama** -bu eylem, seçilen cihazlarda bir Windows Defender hızlı taraması gerçekleştirir. 
+- **Tam tarama** -bu eylem, seçilen cihazların Windows Defender tam taramasını gerçekleştirir. 
+
+*Hızlı tarama* ve *tam tarama*arasındaki fark hakkında daha fazla bilgi için bkz. [Zamanlanmış hızlı veya tam Microsoft Defender virüsten koruma taramaları yapılandırma](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
+
+## <a name="feature-update-failures-report-operational"></a>Özellik Güncelleştirme hatalarının raporu (Işletimsel)
+**Özellik güncelleştirme hataları** işlem raporu, bir **Windows 10 özellik güncelleştirmeleri** ilkesiyle hedeflenen ve bir güncelleştirmeyi denemeyen cihazlara yönelik hata ayrıntıları sağlar. Bu raporda bulunan veriler zamanında ve hatalı cihaz sayısını çağırır. Sorun gidermeye yardımcı olmak için ayrıntıya gidebilirsiniz. Bu rapor filtreleme, arama, sayfalama ve sıralama sağlar. 
+
+Aşağıdaki adımları kullanarak **özellik güncelleştirme arızaları** raporunu görüntüleyebilirsiniz:
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Cihaz**seçme  >  **Monitor**  >  **özelliği güncelleştirme başarısızlıklarını**seçin.
 
 ## <a name="device-compliance-report-organizational"></a>Cihaz uyumluluk raporu (kuruluş)
 
@@ -89,6 +121,31 @@ Cihaz uyumluluk raporu, **raporlar** iş yükünde Özet rapor olarak kullanıla
 
     ![Intune raporları Özeti](./media/intune-reports/intune-reports-01.png)
 
+## <a name="antivirus-agent-status-report-organizational"></a>Virüsten koruma Aracısı durum raporu (kuruluş)
+**Virüsten koruma Aracısı durum** raporu, kuruluşunuzun cihazlarının aracı durumunu sağlar. Bu rapor, hangi cihazların gerçek zamanlı veya ağ korumasına sahip olduğunu ve bunların durumunu gösterir. Bu raporda bulunan veriler zamanında, sağlıksız cihaz, Kullanıcı adı ve önem derecesi ' ni çağırır. Bu rapor, birincil **Microsoft Defender virüsten koruma** iş yükünde kullanılabilir. Bu rapor filtreleme, arama, sayfalama ve sıralama sağlar. 
+
+Aşağıdaki adımları kullanarak **Virüsten koruma Aracısı durum** raporunu görüntüleyebilirsiniz:
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Raporları**  >  **Microsoft Defender virüsten**koruma  >  **Aracısı durumu**' nu seçin.
+
+## <a name="detected-malware-report-organizational"></a>Algılanan kötü amaçlı yazılım raporu (Kurumsal)
+**Algılanan kötü amaçlı yazılım** raporu, kuruluşunuzun cihazlarının kötü amaçlı yazılım durumunu sağlar. Bu rapor, kötü amaçlı yazılım ve kötü amaçlı yazılım ayrıntılarının algılanan cihaz sayısını gösterir. Bu raporda bulunan veriler zamanında, cihaz adını ve önem derecesini ve diğer kötü amaçlı yazılımla ilgili ayrıntıları çağırır. Bu rapor, birincil **Microsoft Defender virüsten koruma** iş yükünde kullanılabilir. Bu rapor ayrıca filtreleme, arama, sayfalama ve sıralama sağlar. 
+
+**Algılanan kötü amaçlı yazılım** raporunu aşağıdaki adımları kullanarak görebilirsiniz:
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Raporları**seçin  >  **Microsoft Defender virüsten koruma**  >  **kötü amaçlı yazılım algıladı**.
+
+## <a name="windows-10-feature-updates-organizational"></a>Windows 10 özellik güncelleştirmeleri (Kurumsal)
+**Windows 10 özellik güncelleştirmeleri** raporu, bir **Windows 10 özellik güncelleştirmeleri** ilkesiyle hedeflenen cihazlar için uyumluluk genel görünümünü sağlar. Bu rapor, güncelleştirme durumuna göre güncelleştirme durumunu sağlar. Ayrıca, belirli cihaz güncelleştirme ayrıntılarını da görebilirsiniz. Bu raporlarda bulunan veriler zamanında, cihaz adı ve durumunun yanı sıra diğer güncelleştirmeyle ilgili ayrıntıları da çağırır. **Windows güncelleştirmeleri** iş yükünde özet raporu kullanılabilir. Bu rapor ayrıca filtreleme, arama, sayfalama ve sıralama sağlar. 
+
+Aşağıdaki adımları kullanarak **Windows 10 özellik güncelleştirmeleri** raporunu görüntüleyebilirsiniz:
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
+2. **Reports**  >  Özet raporunu görüntülemek için rapor**Windows güncelleştirmeleri** ' ni seçin.
+3. **Windows 10 özellik güncelleştirmeleri** raporunu görmek için **raporlar** sekmesini seçin ve **Windows Feature Update raporuna** tıklayın.
+
 ## <a name="device-compliance-trend-report-historical"></a>Cihaz uyumluluk eğilimi raporu (geçmiş)
 
 Cihaz uyumluluğu eğilimi raporlarının, cihaz uyumluluğuyla ilgili uzun süreli eğilimleri belirlemek için Yöneticiler ve mimarlar tarafından kullanılma olasılığı yüksektir. Toplanan veriler bir süre içinde görüntülenir ve gelecekteki yatırım kararları vermek, işlem geliştirmelerini gerçekleştirmek veya herhangi bir anormalde araştırma istemek için yararlıdır. Ayrıca, belirli eğilimleri görmek için filtreler uygulanabilir. Bu rapor tarafından belirtilen veriler, geçerli kiracı durumunun anlık görüntüsüdür (gerçek zamanlı). 
@@ -115,13 +172,13 @@ Aşağıdaki adımları kullanarak özel raporlar oluşturabilir ve görüntüle
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 2. **Rapor**  >  **Tanılama ayarları** [Tanılama ayarı](reports.md#diagnostic-settings)Ekle ' yi seçin.
 
-    ![Intune raporları Özeti](./media/intune-reports/intune-reports-04.png)
+    ![Intune raporları-tanılama ayarı ekleme](./media/intune-reports/intune-reports-04.png)
 
 3. Tanılama **ayarları** bölmesini göstermek için **Tanılama ayarı Ekle** ' ye tıklayın. 
 4. Tanılama ayarları için bir **ad** ekleyin. 
 5. **Log Analytics gönder** ve **Devicekarmaşıkanceorg** ayarlarını seçin.
 
-    ![Intune raporları Özeti](./media/intune-reports/intune-reports-04a.png)
+    ![Intune raporları-Tanılama ayarları](./media/intune-reports/intune-reports-04a.png)
 
 6. **Kaydet**’e tıklayın.
 7. Sonra, [Log Analytics](reports.md#log-analytics)kullanarak yeni bir günlük sorgusu oluşturmak ve çalıştırmak için **Log Analytics** ' i seçin.
@@ -146,7 +203,7 @@ Tanılama ayarları hakkında daha fazla bilgi için bkz. [Azure 'da platform g�
 ### <a name="log-analytics"></a>Log Analytics
 Log Analytics, günlük sorgularını yazmak ve sorguların sonuçlarını etkileşimli olarak çözümlemek için Azure portal birincil araçtır. Günlük sorgusu Azure Izleyici 'de başka bir yerde kullanılsa bile, genellikle Log Analytics kullanarak sorguyu yazın ve test edersiniz. Log Analytics kullanma ve günlük sorguları oluşturma hakkında ayrıntılar için bkz. [Azure izleyici 'de günlük sorgularına genel bakış](/azure/azure-monitor/log-query/log-query-overview). 
 
-### <a name="workbooks"></a>Çalışma kitapları
+### <a name="workbooks"></a>Çalışma Kitapları
 Çalışma kitapları metin, analiz sorguları, Azure ölçümleri ve parametreleri zengin etkileşimli raporlarla birleştirir. Çalışma kitapları aynı Azure kaynaklarına erişimi olan diğer takım üyeleri tarafından düzenlenebilir. Çalışma kitapları hakkında daha fazla bilgi için bkz. [Azure izleyici çalışma kitapları](/azure/azure-monitor/app/usage-workbooks). Ayrıca, ile çalışarak çalışma kitabı şablonlarına katkıda bulunabilirsiniz. Daha fazla bilgi için bkz. [Azure Izleyici çalışma kitabı şablonları](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## <a name="next-steps"></a>Sonraki adımlar 

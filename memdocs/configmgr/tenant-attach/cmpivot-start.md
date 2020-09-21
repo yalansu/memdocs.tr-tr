@@ -10,14 +10,14 @@ ms.assetid: ae6c0c83-2299-4463-958d-5555e3fcbdbe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 88fe50bd75fff73604c78125b0cd7599aa1afa4f
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: eb30d1ec371060223e6f776497037dc34b81184b
+ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564383"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90802896"
 ---
-# <a name="launch-cmpivot-from-the-admin-center-preview"></a><a name="bkmk_cmpivot"></a> Yönetim merkezinden CMPivot 'ı başlatın (Önizleme)
+# <a name="tenant-attach-launch-cmpivot-from-the-admin-center-preview"></a><a name="bkmk_cmpivot"></a> Kiracı iliştirme: yönetim merkezinden CMPivot 'ı başlatın (Önizleme)
 
 *Uygulama hedefi: Configuration Manager (geçerli dal)* 
 

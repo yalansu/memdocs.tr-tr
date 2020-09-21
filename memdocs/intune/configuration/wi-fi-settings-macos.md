@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/10/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1cd60b8a9a8612034972e8357d2e346d194ca3a
-ms.sourcegitcommit: 387706b2304451e548d6d9c68f18e4764a466a2b
+ms.openlocfilehash: 34bd57d1ca7d5c8a892903380347afa9f402de99
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85092881"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815315"
 ---
 # <a name="add-wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Microsoft Intune’da macOS cihazlar için Wi-Fi ayarları ekleme
 
@@ -33,7 +33,7 @@ Bu makalede bu ayarlar açıklanır.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Cihaz profili oluşturma](wi-fi-settings-configure.md).
+[MacOS Wi-Fi cihaz yapılandırma profili](wi-fi-settings-configure.md)oluşturun.
 
 > [!NOTE]
 > Bu ayarlar tüm kayıt türleri için kullanılabilir. Kayıt türleri hakkında daha fazla bilgi için bkz. [MacOS kaydı](../enrollment/macos-enroll.md).

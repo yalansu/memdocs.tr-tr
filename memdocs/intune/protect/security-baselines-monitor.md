@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,16 @@ ms.reviewer: laarrizz
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ccf9801c7a5977485c6c1864a69be2e46a4af55
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6623afcce55c6598ed69fdb78d35235e0fd39dc5
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914880"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815383"
 ---
 # <a name="monitor-security-baselines-and-profiles-in-microsoft-intune"></a>Microsoft Intune 'de güvenlik temellerini ve profillerini izleme
 
-Intune, güvenlik temellerinizi izlemek için çeşitli seçenekler sunar. Seçenekleriniz şunlardır:
+Intune, güvenlik temellerini izlemek için çeşitli seçenekler sağlar. Seçenekleriniz şunlardır:
 
 - Bir güvenlik taban çizgisini ve önerilen değerler ile eşleşen (veya eşleşmeyen) cihazları izleyin.
 - Kullanıcılarınız ve cihazlarınız için geçerli olan güvenlik temelleri profilini izleyin.
@@ -33,95 +33,103 @@ Intune, güvenlik temellerinizi izlemek için çeşitli seçenekler sunar. Seçe
 
 Ayrıca, güvenlik temellerini içeren tek tek cihazlar için uygulanan *uç nokta güvenlik yapılandırmalarının* da görüntüleyebilirsiniz.
 
-Bu makalede, bu izleme seçeneklerinde izlenecek yol gösterilmektedir.
-
-[Intune 'Daki güvenlik temelleri](security-baselines.md) Microsoft Intune içindeki güvenlik temelleri özelliği hakkında daha fazla bilgi sağlar.
+Özelliği hakkında daha fazla bilgi için bkz. [Intune 'Da güvenlik temelleri](security-baselines.md).
 
 ## <a name="monitor-the-baseline-and-your-devices"></a>Taban çizgisini ve cihazlarınızı izleyin
 
-Bir taban çizgisini izlerken, Microsoft 'un önerilerine bağlı olarak cihazlarınızın güvenlik durumu hakkında öngörüler elde edersiniz. Bu öngörüleri görüntülemek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **uç nokta güvenlik**  >  **güvenliği temelleri** ' ne gidin ve *MDM güvenlik temeli*gibi bir güvenlik temeli türü seçin. Ardından, *profil* bölmesinde, ayrıntılarını görüntülemek istediğiniz profil örneğini seçin. Bu, daha sonra *izleyici* bölümünde profil raporlarının hiçbirini seçebileceğiniz profiller *Özellikler* Bölmesi ' ni açar. 
+Bir taban çizgisini izlerken, Microsoft 'un önerilerine bağlı olarak cihazlarınızın güvenlik durumu hakkında öngörüler elde edersiniz. Bu öngörüleri görüntülemek için [Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde oturum açın, **uç nokta güvenlik**  >  **güvenliği temelleri** ' ne gidin ve *MDM güvenlik temeli*gibi bir güvenlik temeli türü seçin. Ardından, *sürümler* bölmesinden, ayrıntılarını görüntülemek istediğiniz profil örneğini seçin ve *genel bakış* bölmesini açın. 
 
-İlk olarak bir taban çizgisi atadıktan sonra verilerin görünmesi 24 saate kadar sürer. Sonraki değişikliklerin görünmesi altı saate kadar sürer.
+*Genel bakış* bölmesinde seçili taban çizgisi için iki durum görünümü görüntülenir:
 
-Raporların ve cihazların detayına göre, çeşitli ayrıntılar mevcuttur.
+- **Güvenlik temeli duruşunu** grafiği-bu grafik, taban çizgisi sürümü için cihaz durumuyla ilgili üst düzey ayrıntıları görüntüler. Kullanılabilir Ayrıntılar:
+  - **Varsayılan taban çizgisiyle eşleşir** – bu durum, bir cihaz yapılandırmasının varsayılan (değiştirilmemiş) taban çizgisi yapılandırmasıyla ne zaman eşleştiğini tanımlar.
+  - **Özel ayarlarla eşleşir** – bu durum, bir cihaz yapılandırmasının dağıttığınız taban çizgisinin özelleştirilmiş sürümüyle eşleşip eşleşmediğini tanımlar. 
+  - **Yanlış yapılandırılmış** – bu durum, bir cihazdan üç durum koşullarını temsil eden bir toplu hatadır: *hata*, *bekleyen*veya *Çakışma*. Bu ayrı durumlar, bu grafiğin altında görüntülenen bir liste görünümü olan *kategoriye göre güvenlik temeli*geri görüntüsü gibi diğer görünümlerde kullanılabilir.
+  - **Uygulanamaz** -bu durum, ilkeyi alamayacak bir cihazı temsil eder. Örneğin, ilke Windows 'un en son sürümüne özgü bir ayarı güncelleştirir, ancak cihaz bu ayarı desteklemeyen daha eski (eski) bir sürümünü çalıştırır. 
 
-<!-- UI is changing, unclear how yet: 
+- **Kategoriye göre güvenlik temeli** gözden hakkı-cihaz durumunu kategoriye göre görüntüleyen bir liste görünümüdür. Bu liste görünümünde, *güvenlik temeli duruşunu* grafiğiyle aynı Ayrıntılar mevcuttur. Bununla birlikte, yanlış yapılandırılan durum durumları için, *yanlış yapılandırılmış* bir yerine üç sütun görürsünüz:
 
+  - **Hata**: ilke uygulanamadı. Bu ileti, genellikle bir açıklamaya bağlantı veren bir hata kodu görüntüler.
+  - **Çakışma**: aynı cihaza iki ayar uygulanır ve Intune çakışmayı sıralayamazsınız. Yöneticinin gözden geçirmesi gerekir.
+  - **Bekliyor**: cihaz, ilkeyi henüz alacak şekilde Intune ile iade edilmedi.
+ 
+Önceki iki görünümde ayrıntıya indığınızda, ayar durumu ve cihaz durum listesi görünümleri için aşağıdaki ayrıntıları görüntüleyebilirsiniz:
 
-- **Device view** – A summary of how many devices are in each status category for the baseline.
-- **Per-category** - A view that displays each category in the baseline and includes the percentage of devices for each status group for each baseline category.
+- **Başarılı**: ilke uygulandı.
+- **Hata**: ilke uygulanamadı. Bu ileti, genellikle bir açıklamaya bağlantı veren bir hata kodu görüntüler.
+- **Çakışma**: aynı cihaza iki ayar uygulanır ve Intune çakışmayı sıralayamazsınız. Yöneticinin gözden geçirmesi gerekir.
+- **Bekliyor**: cihaz, ilkeyi henüz alacak şekilde Intune ile iade edilmedi.
+- **Uygulanamaz**: cihaz ilkeyi alamıyor. Örneğin, ilke Windows 'un en son sürümüne özgü bir ayarı güncelleştirir, ancak cihaz bu ayarı desteklemeyen daha eski (eski) bir sürümünü çalıştırır.
 
-Each device is represented by one of the following statuses (used in the *device* view and also the *per-category* views):
+*Sürüm* görünümünden **cihaz durumu**' nu seçebilirsiniz. Cihaz durumu görünümü bu temeli alan cihazların listesini görüntüler ve aşağıdaki ayrıntıları içerir:
+- *Kullanıcı asıl adı* -bu, cihazdaki taban çizgisiyle ilişkili kullanıcı profilini görüntüler. 
+- *GÜVENLIK temelı POSTURE* -bu sütunda cihazların durumu görüntülenir:
+  - **Başarılı**: ilke uygulandı.
+  - **Hata**: ilke uygulanamadı. Bu ileti, genellikle bir açıklamaya bağlantı veren bir hata kodu görüntüler.
+  - **Çakışma**: aynı cihaza iki ayar uygulanır ve Intune çakışmayı sıralayamazsınız. Yöneticinin gözden geçirmesi gerekir.
+  - **Bekliyor**: cihaz, ilkeyi henüz alacak şekilde Intune ile iade edilmedi.
+  - **Uygulanamaz**: cihaz ilkeyi alamıyor. Örneğin, ilke Windows 'un en son sürümüne özgü bir ayarı güncelleştirir, ancak cihaz bu ayarı desteklemeyen daha eski (önceki) bir sürümünü çalıştırır
+- *Son Iade etme* durumu cihazdan en son alındığı zaman.
 
-- **Matches baseline** - All the settings in the baseline match the recommended settings.
-- **Does not match baseline** - One or more settings in the baseline were modified from their default values in the original baseline. The default values in each security baseline are the recommended values for that baseline.
-
-  > [!NOTE]
-  > When you create or edit a baseline profile, any change that is made to a default value or configuration setting causes a *Does not match baseline* status to occur. For help to determine the settings that were changed, contact Microsoft Support. 
-
-- **Misconfigured** - At least one setting isn't correctly configured. This status means that the setting is in a conflict, error, or pending state.
-- **Not applicable** - At least one setting isn't applicable and isn't applied.
-
-### Device view
-
-The Overview pane displays a chart-based summary of how many devices have a specific status for the baseline; **Security baseline posture for assigned Windows 10 devices**.
-
-![Check the status of the devices](./media/security-baselines-monitor/overview.png)
-
-When a device has different status from different categories in the baseline, the device is represented by a single status. The status that represents the device is taken from the following order of precedence: **Misconfigured**, **Does not match baseline**, **Not applicable**, **Matches baseline**.
-
-For example, if a device has a setting that's classified as *misconfigured* and one or more settings that are classified as *Does not match baseline*, the device is classified as *Misconfigured*.
-
-You can click on the chart to drill through and view a list of devices with various statuses. You can then select individual devices from that list to view details about individual devices. For example:
-
-- Select **Device configuration** > Select the profile with an Error state:
-
-  ![View the status of a profile](./media/security-baselines-monitor/device-configuration-profile-list.png)
-
-- Select the Error profile. A list of all settings in the profile, and their state is shown. Now, you can scroll to find the setting causing the error:
-
-  ![See the setting causing the error](./media/security-baselines-monitor/profile-with-error-status.png)
-
-Use this reporting to see any settings in a profile that are causing an issue. Also get more details of policies and profiles deployed to devices.
-
-> [!NOTE]
-> When a property is set to **Not configured** in the baseline, the setting is ignored, and no restrictions are enforced. The property isn't shown in any reporting.
-
-### Per category view
-
-The Overview pane displays a per-category chart for the baseline named **Security baseline posture by category**.  This view displays each category from the baseline, and identifies the percentage of devices that fall into a status classification for each of those categories.
-
-![Per-Category view of status](./media/security-baselines-monitor/monitor-baseline-per-category.png)
-
-Status for **Matches baseline** doesn't display until 100% of devices report that status for the category.
-
-You can sort the by-category view by each column, by selecting up-down arrow icon at the top of the column.
--->
+> [!TIP]  
+> İlk olarak bir taban çizgisi atadıktan sonra verilerin görünmesi 24 saate kadar sürer. Sonraki değişikliklerin görünmesi altı saate kadar sürer.
 
 ## <a name="monitor-the-profile"></a>Profili izleme
 
 Profili izlemek, cihazlarınızın dağıtım durumuna ilişkin öngörüler sağlar, ancak temel önerilere göre güvenlik durumunu etkilemez.
 
-1. Intune 'da **güvenlik temelleri** ' ni seçin > *profiller* bölmesini açmak için bir taban çizgisi seçin.
+1. Intune 'da, **uç nokta güvenlik**  >  **güvenliği temelleri**' ni seçin, *MDM güvenlik temeli gibi bir güvenlik taban çizgisi türü seçin*,  >  *Bu taban çizgisi özelliklerinin bir örneğini seçin*  >  **Properties**.
 
-<!-- More churn  
-2. Select a profile. In **Overview**, the image shows how many devices and users have this profile assigned:
+2. Taban çizgisinin *özelliklerinde* , detaya git ' i **genişletin ve** temel çizgi için bu örnek için yapılandırma dahil olmak üzere tüm ayarlar kategorilerini ve tek tek ayarları görüntüleyin.
 
-   ![See how many devices and users are assigned the security baselines profile](./media/security-baselines-monitor/existing-profile-overview.png)
---> 
-3. Özellikleri **Yönet**altında  >  **Properties**, taban çizgisinde tüm ayarların bir listesi gösterilir. Ayrıca, bu ayarlardan herhangi birini değiştirebilirsiniz:
+   ![Ayarlar görünümünü gösteren ekran görüntüsü](./media/security-baselines-monitor/manage-settings.png)
 
-   ![Güvenlik temelleri profilindeki ayarları görme ve güncelleştirme](./media/security-baselines-monitor/manage-settings.png)
-
-4. **İzleyici**' de, her bir cihazda profilin dağıtım durumunu, her bir kullanıcının durumunu ve her bir ayarın durumunu Baseline olarak görebilirsiniz:
+3. Her bir cihazda profilin dağıtım durumunu, her bir kullanıcının durumunu ve taban çizgisinin örneğinden ayarların durumunu görüntülemek için **izleyici** seçeneklerini kullanın:
 
    ![Güvenlik temelleri profili için farklı izleyici seçeneklerine bakın](./media/security-baselines-monitor/monitor-status-options.png)
+
+## <a name="resolve-conflicts-for-security-baselines"></a>Güvenlik temelleri için çakışmaları çözme
+
+Güvenlik taban çizgisi profillerinizin veya uç nokta Güvenlik ilkelerinizin ayarları için bir çakışmayı veya sorunu çözmeye yardımcı olması için, bir cihazın **uç nokta güvenlik yapılandırmasını** görüntüleyin.  Bu cihaz tabanlı görünüm, profillerinizin ve ilkelerinizin, çakışma veya hata durumunu belirten ayarları içerdiğini belirlemenize yardımcı olur. 
+
+Microsoft Endpoint Manager Yönetim Merkezi 'nin içinden iki yol aracılığıyla çakışma veya hata içindeki ayarlar hakkında bilgi alabilirsiniz:
+
+- **Uç nokta güvenliği**  >  **Güvenlik temelleri**  >  *bir taban çizgisi türü seçin*  >  **Profiller**  >  *bir taban çizgisi örneği seçin*  >  **Cihaz durumu**  >  **Uç nokta güvenlik yapılandırması**  >  *bir çakışmayı veya hataları gösteren ayarlar*.
+- **Cihazlar**  >  *bir cihaz seçin*  >  **Uç nokta güvenlik yapılandırması**  >  *bir profil veya taban çizgisi seçin*  >  *bir çakışma veya hata gösteren ayarlar listesinden bir ayar seçin*.
+
+Bir cihazın **uç nokta güvenlik yapılandırması** görünümünde, Intune her bir temel profilini ve bu cihaza atanan uç nokta güvenliği ilkesini görüntüler. Bu görünüm Ayrıca, her giriş için ilişkili kullanıcı asıl adını ve temel profil ya da ilkenin durumunu tanımlar. Bir profil veya ilke, onunla ilişkilendirilen her farklı Kullanıcı asıl adı için bir cihazda birden çok kez görünebilir. 
+
+<!-- pending
+The **Baseline status** represents the worst available status from any applicable setting in that profile or policy. For example, if on the device a single setting from a profile is found to be in conflict while the rest of the baselines’ settings are successful, the *Baseline status* is set to *Conflict*. 
+
+The available status from best to worst:
+
+- **Success** - The setting on the device matches the value as configured in the profile, and there are no conflicting configurations. This is either a default and recommended value, or a custom value specified by an administrator when the profile was configured.
+- **Error** - The profile and settings failed to apply.
+- **Conflict** - The setting conflicts with another instance of the setting from another policy, has an error, or is pending an update. This setting isn’t sent to the device until the conflict is resolved.
+--> 
+
+### <a name="drill-in-to-identify-and-resolve-conflicts"></a>Çakışmaları belirlemek ve çözmek için detaya git
+
+1. Bir cihazın uç nokta güvenlik yapılandırmasını görüntülerken, çakışma veya hata durumuyla sonuçlanan sorun hakkında daha fazla bilgi edinmek için detaya gitmeyi istediğiniz bir profil seçin.
+
+   Detaya gitme sırasında, Intune, *yapılandırılmamış*olarak ayarlanmamış her ayarı ve bu ayarın durumunu içeren bu profil için ayarların bir listesini görüntüler. Görüntü kategoriye, ayar adına veya duruma göre düzenlenebilir. Durum üzerinde filtrelemeniz durumunda yalnızca hata veya çakışma olan ayarlara hızlıca odaklanırsınız.  
+
+2. Belirli bir ayar hakkındaki ayrıntıları görüntülemek için, **ayarları seçerek ayarlar Ayrıntılar** bölmesini açın. Bu bölmede şunları göreceksiniz:
+   - Ayar: ayarın adı.
+   - Durum: cihazdaki ayarın durumu. 
+   - Kaynak profili: Bu, aynı ayarı ve farklı bir değerle yapılandıran her bir uç nokta Güvenlik profilinin veya güvenlik temelinin bir listesidir.
+
+   > [!TIP]  
+   > Cihaz yapılandırma profillerinin aksine, uç nokta güvenlik profilleri hata kodları veya ilgili ayrıntıları sağlamaz.
+
+3. Çakışan profilleri yeniden yapılandırmak için, profil yapılandırmasının bir görünümünü açmak üzere **kaynak profili** listesinden bir kayıt seçin. Profilin yapılandırma görünümünden, çakışmayı kaldırmak için bu profildeki ayarları gözden geçirebilir ve düzenleyebilirsiniz.
 
 ## <a name="view-settings-from-profiles-that-apply-to-a-device"></a>Bir cihaza uygulanan profillerdeki ayarları görüntüleyin
 
 Bir güvenlik temeli için bir profil seçebilir ve bu profildeki ayarların bir listesini, tek bir cihaza uygulanan şekilde görüntülemek için detaya gidebilirsiniz.  Bu listeyi görüntülemek için **uç nokta güvenlik**  >  **güvenliği temellerine**detaya git  >  *güvenlik temeli türünü seçin*  >  *select the Profile you want to view*  >  **cihaz durumunu**görüntülemek istediğiniz profili seçin. Ayrıca, **uç nokta güvenliği**  >  **tüm cihazlar**  >  *cihaz Seç*  >  **uç noktası güvenlik yapılandırması**' na giderek listeyi görüntüleyebilirsiniz  >  *bir temel sürüm seçin*.
 
-Bir cihaz seçildikten sonra, Microsoft Endpoint Manager Yönetim Merkezi, ayarın kimden olduğu kategori ve cihazdaki yapılandırma durumu dahil olmak üzere bu profildeki ayarların bir listesini görüntüler. Yapılandırma durumları aşağıdaki değerleri içerir:
+Bir cihaz seçildikten sonra, Microsoft Endpoint Manager Yönetim Merkezi, bu profildeki ayarların bulunduğu kategoriyi ve cihazdaki yapılandırma durumunu içeren ayarların bir listesini görüntüler. Yapılandırma durumları aşağıdaki değerleri içerir:
 
 - **Başarılı** – cihazdaki ayar, profilde yapılandırılan değerle eşleşir. Bu, varsayılan temel değer ve önerilen değer ya da profil yapılandırıldığında yönetici tarafından belirtilen özel bir değerdir.
 - **Çakışma** – Bu ayar başka bir ilkeyle çakışıyor, bir hata içeriyor veya güncelleştirme bekliyor.
@@ -182,3 +190,5 @@ Windows 10 cihazlarında, yerleşik bir MDM tanılama bilgileri raporu vardır. 
 - [Cihaz profillerini izleme](../configuration/device-profile-monitor.md) 
 - [Yaygın sorunlar ve çözümleri](../configuration/device-profile-troubleshoot.md).
 - [Intune'da ilke ve profil sorunları giderme](../configuration/troubleshoot-policies-in-microsoft-intune.md)
+
+

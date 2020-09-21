@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/28/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: 10d9320932e7835b8c2ecac46e35ea5a57375904
-ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+ms.openlocfilehash: 9b6af399d0f3fbd721932b47e8f1bc388711ca58
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89068142"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814721"
 ---
 # <a name="firewall-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da uç nokta güvenliği için güvenlik duvarı ilke ayarları
 
@@ -72,12 +72,13 @@ Aşağıdaki ayarlar [macOS güvenlik duvarları Için Endpoint Security ilkesi]
 
 Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security ilkesi](../protect/endpoint-security-firewall-policy.md)olarak yapılandırılır.
 
-- **Durum bilgisi Dosya Aktarım Protokolü devre dışı bırak (FTP)**  
+- **Durum bilgisi olan Dosya Aktarım Protokolü (FTP)**  
   CSP: [Mdmstore/Global/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)
 
-  - **Yapılandırılmadı** (*varsayılan*)-güvenlik duvarı, ikincil ağ bağlantılarını INCELEMEK ve filtrelemek için FTP kullanır ve bu da güvenlik duvarı kurallarınızın yoksayılmasına neden olabilir.
-  - **Evet**
-  
+  - **Yapılandırılmadı** (*varsayılan*)
+  - **Izin ver** -güvenlik duvarı, ikincil bağlantılara izin vermek için durum bilgisi olan Dosya Aktarım Protokolü (FTP) filtrelemesi gerçekleştirir. 
+  - **Devre dışı** -durum BILGISI olan FTP devre dışı.
+
 - **Bir güvenlik ilişkisinin silinmeden önce boşta kalabileceği saniye sayısı**  
   CSP: [Mdmstore/Global/Saıdsaati](https://go.microsoft.com/fwlink/?linkid=872539)
 
@@ -94,35 +95,39 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
   - **Hiçbiri**
   - **UTF8**
 
-- **Güvenlik Duvarı IP sn muafiyetleri komşu bulmaya izin ver**  
-  CSP: [Mdmstore/Global/ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872547)
+- **Güvenlik Duvarı IP 'si için muafiyet yok**  
+  - **Yapılandırılmadı** (*varsayılan*)-yapılandırılmadığında, tek tek yapılandırabileceğiniz aşağıdaki IP sn muafiyet ayarlarına erişebilirsiniz.
+  - **Evet** -tüm GÜVENLIK duvarı IP sn muafiyetlerini devre dışı bırakın. Aşağıdaki ayarlar yapılandırmak için kullanılamaz.
 
-  - **Yapılandırılmadı** (*varsayılan*)
-  - **Evet** -güvenlik duvarı IPSec muafiyetleri komşu bulmayı sağlar.
+  - **Güvenlik Duvarı IP sn muafiyetleri komşu bulmaya izin ver**  
+    CSP: [Mdmstore/Global/ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872547)
 
-- **Güvenlik Duvarı IP sn muafiyetleri ıCMP 'ye izin ver**  
-  CSP: [Mdmstore/Global/ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872547)
+    - **Yapılandırılmadı** (*varsayılan*)
+    - **Evet** -güvenlik duvarı IPSec muafiyetleri komşu bulmayı sağlar.
 
-  - **Yapılandırılmadı** (*varsayılan*)
-  - **Evet** -güvenlik duvarı IPSec MUAFIYETLERI ICMP 'ye izin verir.
+  - **Güvenlik Duvarı IP sn muafiyetleri ıCMP 'ye izin ver**  
+    CSP: [Mdmstore/Global/ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872547)
 
-- **Güvenlik Duvarı IP sn muafiyetleri yönlendirici bulmaya izin ver**  
-  CSP: [Mdmstore/Global/ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872547)
+    - **Yapılandırılmadı** (*varsayılan*)
+    - **Evet** -güvenlik duvarı IPSec MUAFIYETLERI ICMP 'ye izin verir.
 
-  - **Yapılandırılmadı** (*varsayılan*)
-  - **Evet** -güvenlik duvarı IPSec muafiyetleri yönlendirici bulmaya izin verir.
+  - **Güvenlik Duvarı IP sn muafiyetleri yönlendirici bulmaya izin ver**  
+    CSP: [Mdmstore/Global/ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872547)
 
-- **Güvenlik Duvarı IP sn muafiyetleri DHCP 'ye izin ver**  
-  CSP: [Mdmstore/Global/ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872547)
+    - **Yapılandırılmadı** (*varsayılan*)
+    - **Evet** -güvenlik duvarı IPSec muafiyetleri yönlendirici bulmaya izin verir.
 
-  - **Yapılandırılmadı** (*varsayılan*)
-  - **Evet** -GÜVENLIK duvarı IP sn MUAFIYETLERI DHCP 'ye izin ver
+  - **Güvenlik Duvarı IP sn muafiyetleri DHCP 'ye izin ver**  
+    CSP: [Mdmstore/Global/ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872547)
+
+    - **Yapılandırılmadı** (*varsayılan*)
+    - **Evet** -GÜVENLIK duvarı IP sn MUAFIYETLERI DHCP 'ye izin ver
 
 - **Sertifika iptal listesi (CRL) doğrulaması**  
   CSP: [Mdmstore/Global/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)
 
    Sertifika iptal listesi (CRL) doğrulamanın nasıl uygulanacağını belirtin.
-  - **Yapılandırılmadı** (*varsayılan*)-istemci varsayılanı CRL doğrulamasını devre dışı bırakır.
+  - **Yapılandırılmadı** (*varsayılan*)-CRL doğrulamasını devre dışı bırakmak için varsayılan istemci varsayılanını kullanın.
   - **Hiçbiri**
   - **Girişimde**
   - **Gerektirme**
@@ -131,13 +136,14 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
   CSP: [Mdmstore/Global/OpportunisticallyMatchAuthSetPerKM](https://go.microsoft.com/fwlink/?linkid=872550)
 
   - **Yapılandırılmadı** (*varsayılan*)
-  - **Evet** -anahtarlama modülleri desteklenmeyen kimlik doğrulama paketlerini yoksayar.
+  - **Devre dışı**
+  - **Etkin** anahtar modülleri desteklenmeyen kimlik doğrulama paketlerini yoksayar.
 
 - **Paket Kuyruklama**  
   CSP: [Mdmstore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)
 
   IPSec tüneli ağ geçidi senaryosunda şifrelenmiş alma ve şifresiz metin iletme için alma tarafında yazılım ölçeklendirmesinin nasıl etkinleştirileceğini belirtin. Bu, paket sırasının korunmasını sağlar.
-  - **Yapılandırılmadı** (*varsayılan*)-paket Kuyruklama devre dışı olan istemci varsayılan öğesine geri döndürülecek.
+  - **Yapılandırılmadı** (*varsayılan*)-paket Kuyruklama, varsayılan olarak devre dışı olan istemci varsayılana döndürülür.
   - **Devre dışı**
   - **Gelen kuyruk**
   - **Giden kuyruk**
@@ -146,25 +152,248 @@ Aşağıdaki ayarlar, [Windows 10 güvenlik duvarları Için Endpoint Security i
 - **Etki alanı ağları için Microsoft Defender güvenlik duvarını açma**  
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-  - **Yapılandırılmadı** (*varsayılan*)-istemci varsayılan olarak döner ve bu da güvenlik duvarını etkinleştirir.
-  - **Evet** - **etki alanının** ağ türü Için Microsoft Defender güvenlik duvarı açılıp zorlanır.
+  - **Yapılandırılmadı** (*varsayılan*)-istemci, güvenlik duvarını etkinleştirecek olan varsayılan değerini döndürür.
+  - **Evet** - **etki alanının** ağ türü Için Microsoft Defender güvenlik duvarı açılıp zorlanır. Ayrıca, bu ağ için ek ayarlara erişim elde edersiniz.
   - **Hayır** -güvenlik duvarını devre dışı bırakın.
+
+  Bu ağ için ek ayarlar, *Evet*olarak ayarlandığında:
+
+  - **Gizli modu engelle**  
+    CSP: [Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    Varsayılan olarak, cihazlar üzerinde gizli mod etkinleştirilmiştir. Kötü amaçlı kullanıcıların ağ cihazları ve çalıştırdığı hizmetlerle ilgili bilgileri bulmasını önlemeye yardımcı olur. Gizli modu devre dışı bırakmak, cihazların saldırıya açık olmasını sağlayabilir.
+    - **Yapılandırılmadı** *(varsayılan)*
+    - **Evet**
+    - **Hayır**
+
+  - **Korumalı modu etkinleştir**  
+    CSP: [korumalı](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Yapılandırılmadı** *(varsayılan)* -korumalı modu devre dışı bırakmak için varsayılan istemci varsayılanını kullanın.
+    - **Evet** -makine, ağ üzerinden yalıtan, *korumalı moda*konur. Tüm trafik engellenir.
+    - **Hayır**
+
+  - **Çok noktaya yayın yayınlarına tek noktaya yayın yanıtlarını engelleyin**  
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, tek noktaya yayın yanıtlarına izin veren istemci varsayılan değerini döndürür.
+    - **Evet** -çok noktaya yayın yayınlarına tek noktaya yayın yanıtları engellenir.
+    - , **Tek noktaya** yayın yanıtlarına izin vermek olan istemci varsayılanını zorunlu kılmaz.
+
+  - **Gelen bildirimleri devre dışı bırak**  
+    CSP [Disableınboundnotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, kullanıcı bildirimine izin veren istemci varsayılan değerini döndürür.
+    - **Evet** -bir uygulama bir gelen kural tarafından engellendiğinde Kullanıcı bildirimi bastırılır.
+    - **No** Kullanıcı bildirimlerine izin verilmez.
+
+  - **Giden bağlantıları engelle**  
+
+    *Bu ayar Windows sürüm 1809 ve üzeri için geçerlidir*.
+    CSP: [Defaultoutboundavction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+
+    Bu kural, kural listesinin en sonunda değerlendirilir.
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, bağlantılara izin vermek olan istemci varsayılan değerini döndürür.
+    - **Evet** -giden bir kuralla eşleşmeyen tüm giden bağlantılar engellenir.
+    - **Hayır** -giden bir kuralla eşleşmeyen tüm bağlantılara izin verilir.
+
+  - **Gelen bağlantıları engelle**  
+    CSP: [Defaulınboundadction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    Bu kural, kural listesinin en sonunda değerlendirilir.
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, bağlantıları engelleyecek olan istemci varsayılan değerini döndürür.
+    - **Evet** -bir gelen kuralla eşleşmeyen tüm gelen bağlantılar engellenir.
+    - **Hayır** -bir gelen kuralla eşleşmeyen tüm bağlantılara izin verilir.
+
+  - **Yetkili uygulama güvenlik duvarı kurallarını yoksay**  
+    CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki yetkili uygulama güvenlik duvarı kuralları yok sayılır.
+    - **No** Yetkili uygulama güvenlik duvarı kuralları kabul edilemez.
+
+  - **Genel bağlantı noktası güvenlik duvarı kurallarını yoksay**  
+    CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki genel bağlantı noktası güvenlik duvarı kuralları yok sayılır.
+    - **Hayır** -genel bağlantı noktası güvenlik duvarı kuralları kabul edilir.
+
+  - **Tüm yerel güvenlik duvarı kurallarını yoksay**  
+    CSP: [ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki tüm güvenlik duvarı kuralları yok sayılır.
+    - **Hayır** -yerel depodaki güvenlik duvarı kuralları kabul edilir.
+
+  - **Bağlantı güvenlik kurallarını yoksay** CSP: [Allowlocalıpsecpolicymerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki IPSec güvenlik duvarı kuralları yok sayılır.
+    - **No** Yerel depoda IPSec güvenlik duvarı kuralları kabul edilemez.
 
 - **Özel ağlar için Microsoft Defender güvenlik duvarını Aç**  
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-  - **Yapılandırılmadı** (*varsayılan*)-istemci varsayılan olarak döner ve bu da güvenlik duvarını etkinleştirir.
-  - **Evet** - **özel** ağ türü Için Microsoft Defender güvenlik duvarı açıktır ve zorlanır.
+  - **Yapılandırılmadı** (*varsayılan*)-istemci, güvenlik duvarını etkinleştirecek olan varsayılan değerini döndürür.
+  - **Evet** - **özel** ağ türü Için Microsoft Defender güvenlik duvarı açıktır ve zorlanır. Ayrıca, bu ağ için ek ayarlara erişim elde edersiniz.
   - **Hayır** -güvenlik duvarını devre dışı bırakın.
+
+  Bu ağ için ek ayarlar, *Evet*olarak ayarlandığında:
+
+  - **Gizli modu engelle**  
+    CSP: [Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    Varsayılan olarak, cihazlar üzerinde gizli mod etkinleştirilmiştir. Kötü amaçlı kullanıcıların ağ cihazları ve çalıştırdığı hizmetlerle ilgili bilgileri bulmasını önlemeye yardımcı olur. Gizli modu devre dışı bırakmak, cihazların saldırıya açık olmasını sağlayabilir.
+    - **Yapılandırılmadı** *(varsayılan)*
+    - **Evet**
+    - **Hayır**
+
+  - **Korumalı modu etkinleştir**  
+    CSP: [korumalı](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Yapılandırılmadı** *(varsayılan)* -korumalı modu devre dışı bırakmak için varsayılan istemci varsayılanını kullanın.
+    - **Evet** -makine, ağ üzerinden yalıtan, *korumalı moda*konur. Tüm trafik engellenir.
+    - **Hayır**
+
+  - **Çok noktaya yayın yayınlarına tek noktaya yayın yanıtlarını engelleyin**  
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, tek noktaya yayın yanıtlarına izin veren istemci varsayılan değerini döndürür.
+    - **Evet** -çok noktaya yayın yayınlarına tek noktaya yayın yanıtları engellenir.
+    - , **Tek noktaya** yayın yanıtlarına izin vermek olan istemci varsayılanını zorunlu kılmaz.
+
+  - **Gelen bildirimleri devre dışı bırak**  
+    CSP [Disableınboundnotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, kullanıcı bildirimine izin veren istemci varsayılan değerini döndürür.
+    - **Evet** -bir uygulama bir gelen kural tarafından engellendiğinde Kullanıcı bildirimi bastırılır.
+    - **No** Kullanıcı bildirimlerine izin verilmez.
+
+  - **Giden bağlantıları engelle**  
+
+    *Bu ayar Windows sürüm 1809 ve üzeri için geçerlidir*.
+    CSP: [Defaultoutboundavction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+
+    Bu kural, kural listesinin en sonunda değerlendirilir.
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, bağlantılara izin vermek olan istemci varsayılan değerini döndürür.
+    - **Evet** -giden bir kuralla eşleşmeyen tüm giden bağlantılar engellenir.
+    - **Hayır** -giden bir kuralla eşleşmeyen tüm bağlantılara izin verilir.
+
+  - **Gelen bağlantıları engelle**  
+    CSP: [Defaulınboundadction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    Bu kural, kural listesinin en sonunda değerlendirilir.
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, bağlantıları engelleyecek olan istemci varsayılan değerini döndürür.
+    - **Evet** -bir gelen kuralla eşleşmeyen tüm gelen bağlantılar engellenir.
+    - **Hayır** -bir gelen kuralla eşleşmeyen tüm bağlantılara izin verilir.
+
+  - **Yetkili uygulama güvenlik duvarı kurallarını yoksay**  
+    CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki yetkili uygulama güvenlik duvarı kuralları yok sayılır.
+    - **No** Yetkili uygulama güvenlik duvarı kuralları kabul edilemez.
+
+  - **Genel bağlantı noktası güvenlik duvarı kurallarını yoksay**  
+    CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki genel bağlantı noktası güvenlik duvarı kuralları yok sayılır.
+    - **Hayır** -genel bağlantı noktası güvenlik duvarı kuralları kabul edilir.
+
+  - **Tüm yerel güvenlik duvarı kurallarını yoksay**  
+    CSP: [ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki tüm güvenlik duvarı kuralları yok sayılır.
+    - **Hayır** -yerel depodaki güvenlik duvarı kuralları kabul edilir.
+
+  - **Bağlantı güvenlik kurallarını yoksay** CSP: [Allowlocalıpsecpolicymerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki IPSec güvenlik duvarı kuralları yok sayılır.
+    - **No** Yerel depoda IPSec güvenlik duvarı kuralları kabul edilemez.
 
 - **Ortak ağlar için Microsoft Defender güvenlik duvarını açma**  
   CSP: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)
 
-  - **Yapılandırılmadı** (*varsayılan*)-istemci varsayılan olarak döner ve bu da güvenlik duvarını etkinleştirir.
-  - **Evet** - **genel** ağ türü Için Microsoft Defender güvenlik duvarı açıktır ve zorlanır.
+  - **Yapılandırılmadı** (*varsayılan*)-istemci, güvenlik duvarını etkinleştirecek olan varsayılan değerini döndürür.
+  - **Evet** - **genel** ağ türü Için Microsoft Defender güvenlik duvarı açıktır ve zorlanır. Ayrıca, bu ağ için ek ayarlara erişim elde edersiniz.
   - **Hayır** -güvenlik duvarını devre dışı bırakın.
 
-<!-- Microsoft Defender Firewall rules added in 2005  -->
+  Bu ağ için ek ayarlar, *Evet*olarak ayarlandığında:
+
+  - **Gizli modu engelle**  
+    CSP: [Disablestealthmode](https://go.microsoft.com/fwlink/?linkid=872559)
+
+    Varsayılan olarak, cihazlar üzerinde gizli mod etkinleştirilmiştir. Kötü amaçlı kullanıcıların ağ cihazları ve çalıştırdığı hizmetlerle ilgili bilgileri bulmasını önlemeye yardımcı olur. Gizli modu devre dışı bırakmak, cihazların saldırıya açık olmasını sağlayabilir.
+    - **Yapılandırılmadı** *(varsayılan)*
+    - **Evet**
+    - **Hayır**
+
+  - **Korumalı modu etkinleştir**  
+    CSP: [korumalı](https://go.microsoft.com/fwlink/?linkid=872561)
+
+    - **Yapılandırılmadı** *(varsayılan)* -korumalı modu devre dışı bırakmak için varsayılan istemci varsayılanını kullanın.
+    - **Evet** -makine, ağ üzerinden yalıtan, *korumalı moda*konur. Tüm trafik engellenir.
+    - **Hayır**
+
+  - **Çok noktaya yayın yayınlarına tek noktaya yayın yanıtlarını engelleyin**  
+      CSP: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, tek noktaya yayın yanıtlarına izin veren istemci varsayılan değerini döndürür.
+    - **Evet** -çok noktaya yayın yayınlarına tek noktaya yayın yanıtları engellenir.
+    - , **Tek noktaya** yayın yanıtlarına izin vermek olan istemci varsayılanını zorunlu kılmaz.
+
+  - **Gelen bildirimleri devre dışı bırak**  
+    CSP [Disableınboundnotifications](https://go.microsoft.com/fwlink/?linkid=872563)
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, kullanıcı bildirimine izin veren istemci varsayılan değerini döndürür.
+    - **Evet** -bir uygulama bir gelen kural tarafından engellendiğinde Kullanıcı bildirimi bastırılır.
+    - **No** Kullanıcı bildirimlerine izin verilmez.
+
+  - **Giden bağlantıları engelle**  
+
+    *Bu ayar Windows sürüm 1809 ve üzeri için geçerlidir*.
+    CSP: [Defaultoutboundavction](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+
+    Bu kural, kural listesinin en sonunda değerlendirilir.
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, bağlantılara izin vermek olan istemci varsayılan değerini döndürür.
+    - **Evet** -giden bir kuralla eşleşmeyen tüm giden bağlantılar engellenir.
+    - **Hayır** -giden bir kuralla eşleşmeyen tüm bağlantılara izin verilir.
+
+  - **Gelen bağlantıları engelle**  
+    CSP: [Defaulınboundadction](https://go.microsoft.com/fwlink/?linkid=872564)
+
+    Bu kural, kural listesinin en sonunda değerlendirilir.
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, bağlantıları engelleyecek olan istemci varsayılan değerini döndürür.
+    - **Evet** -bir gelen kuralla eşleşmeyen tüm gelen bağlantılar engellenir.
+    - **Hayır** -bir gelen kuralla eşleşmeyen tüm bağlantılara izin verilir.
+
+  - **Yetkili uygulama güvenlik duvarı kurallarını yoksay**  
+    CSP: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki yetkili uygulama güvenlik duvarı kuralları yok sayılır.
+    - **No** Yetkili uygulama güvenlik duvarı kuralları kabul edilemez.
+
+  - **Genel bağlantı noktası güvenlik duvarı kurallarını yoksay**  
+    CSP: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki genel bağlantı noktası güvenlik duvarı kuralları yok sayılır.
+    - **Hayır** -genel bağlantı noktası güvenlik duvarı kuralları kabul edilir.
+
+  - **Tüm yerel güvenlik duvarı kurallarını yoksay**  
+    CSP: [ıpsecmuaf muafiyet](https://go.microsoft.com/fwlink/?linkid=872567)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki tüm güvenlik duvarı kuralları yok sayılır.
+    - **Hayır** -yerel depodaki güvenlik duvarı kuralları kabul edilir.
+
+  - **Bağlantı güvenlik kurallarını yoksay** CSP: [Allowlocalıpsecpolicymerge](https://go.microsoft.com/fwlink/?linkid=872568)
+
+    - **Yapılandırılmadı** *(varsayılan)* -ayar, yerel kuralları kabul etmek için olan istemci varsayılan değerini döndürür.
+    - **Evet** -yerel depodaki IPSec güvenlik duvarı kuralları yok sayılır.
+    - **No** Yerel depoda IPSec güvenlik duvarı kuralları kabul edilemez.
 
 ### <a name="microsoft-defender-firewall-rules"></a>Microsoft Defender güvenlik duvarı kuralları
 

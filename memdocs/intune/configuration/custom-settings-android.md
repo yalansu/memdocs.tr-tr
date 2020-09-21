@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8012b11557971ff8a7e3a05360243010d891fa2e
-ms.sourcegitcommit: a882035696a8cc95c3ef4efdb9f7d0cc7e183a1a
+ms.openlocfilehash: b5f08f4ce77bf068ac67e6a83e4e15e9a11f6e2d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87262787"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814867"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Microsoft Intune’da Android cihazlar için özel ayarlar kullanma
 
@@ -50,7 +50,7 @@ Bu makale, Android cihazlar için özel profil oluşturma işlemini gösterir.
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı **Android özel profilidir**.
     - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
-    - **Platform**: **Android**' i seçin.
+    - **Platform**: **Android Cihaz Yöneticisi**' ni seçin.
     - **Profil türü**: **özel**' i seçin.
 
 4. **Özel OMA-URI Ayarları**’nda **Ekle**’yi seçin. Aşağıdaki ayarları girin:

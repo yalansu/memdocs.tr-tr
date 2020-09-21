@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20d3f3967fa77ab90229915afc8b05043004b125
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: a234b445edad80a985074ee1be875b1f50378fcc
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909355"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779588"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Cihazları Intune ile uyumlu veya uyumsuz olarak işaretlemek için Windows 10 ve üzeri ayarları
 
@@ -51,6 +51,7 @@ Intune yöneticisi olarak bu uyumluluk ayarlarını kullanarak kuruluşunuzun ka
   
   [Cihaz Healthkanıtlama CSP 'si-BitLockerStatus](/windows/client-management/mdm/healthattestation-csp)
 
+  
 - **Cihazda güvenli önyüklemenin etkinleştirilmesini gerektir**:  
   - **Yapılandırılmadı** (*varsayılan*)-Bu ayar uyumluluk veya uyumsuzluk için değerlendirilmez.
   - **Gerektir** -sistem, fabrikada güvenilen bir duruma önyükleme yapılmasını zorlanmıştır. Makineyi önyüklemek için kullanılan çekirdek bileşenleri, cihazı üreten kuruluşun güvendiği doğru şifreleme imzalarına sahip olmalıdır. UEFI üretici yazılımı, makinenin başlatılmasına izin vermeden önce imzayı doğrular. Herhangi bir dosya üzerinde değişiklik yapılmışsa ve imzasını kesen sistem önyükleme yapmaz.
@@ -172,7 +173,7 @@ Yalnızca Windows 10 ve üzeri çalıştıran ortak yönetilen cihazlar için ge
    [DeviceStatus CSP-DeviceStatus/uyumluluk/Encryptionuyumluluğu](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > **Bir cihazdaki veri depolama şifrelemesi** ayarı cihazdaki genel şifreleme varlığını denetler. Daha güçlü bir şifreleme ayarı için **BitLocker’ı gerektir** ayarını kullanmayı göz önünde bulundurabilirsiniz. Bu ayar, TPM düzeyinde BitLocker durumunu doğrulamak için Windows Cihaz Sistem Durumu Kanıtlama özelliğinden yararlanır.
+  > **Bir cihaz ayarında veri depolamanın şifrelenmesi** , cihaz üzerinde şifreleme varlığını, özellikle de işletim sistemi sürücü düzeyinde denetler. Daha güçlü bir şifreleme ayarı için **BitLocker’ı gerektir** ayarını kullanmayı göz önünde bulundurabilirsiniz. Bu ayar, TPM düzeyinde BitLocker durumunu doğrulamak için Windows Cihaz Sistem Durumu Kanıtlama özelliğinden yararlanır.
 
 ### <a name="device-security"></a>Cihaz Güvenliği  
 

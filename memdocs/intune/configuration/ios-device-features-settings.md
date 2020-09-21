@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6989dc3559a1de950f5d2ec8280894f1f1983b61
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: abbd81320a354c90814e424574dbc0c5aa055f79
+ms.sourcegitcommit: eaa077aa028a76a4873e4aa7437888f901a7e77f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574873"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90767103"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>Intune 'da ortak iOS/ıpados özelliklerini kullanmak için iOS ve ıpados cihaz ayarları
 
@@ -343,7 +343,7 @@ Bu özellik şu platformlarda geçerlidir:
   - URL 'Ler veya ile başlamalıdır `http://` `https://` .
 
 - **Ek yapılandırma** (Microsoft Azure AD, yeniden yönlendirme ve kimlik bilgisi): SSO uygulama uzantısına geçirilecek uzantıya özgü ek veriler girin:
-  - **Anahtar**: eklemek istediğiniz öğenin adını girin, örneğin `user name` . `AppAllowList` büyük/küçük harfe duyarlıdır. ' AppAllowList ' tam olarak girdiğinizden emin olun. 
+  - **Anahtar**: eklemek istediğiniz öğenin adını girin, örneğin `user name` veya ' appallowlist '.  
   - **Tür**: veri türünü girin. Seçenekleriniz şunlardır:
 
     - Dize

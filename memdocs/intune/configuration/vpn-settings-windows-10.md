@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25bb413aefa7d91ea825bbe96e057994b1375413
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 6348b4d630fec09cf4bb408aee1581b172da947f
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915509"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814704"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Intune kullanarak VPN bağlantıları eklemek için Windows 10 ve Windows holographic cihaz ayarları
 
@@ -38,7 +38,7 @@ Seçtiğiniz ayarlara bağlı olarak, değerlerden bazıları yapılandırılama
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[BIR VPN cihaz yapılandırma profili oluşturun](vpn-settings-configure.md).
+[Windows 10 VPN cihaz yapılandırma profili](vpn-settings-configure.md)oluşturun.
 
 ## <a name="base-vpn-settings"></a>Temel VPN ayarları
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,19 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5126f2e5cc145e864fb4f56e472dba7a5179540f
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: b6e6f02f5c2b25d397a3e3e23d644e9d17122ba0
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915594"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813583"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Intune 'da SCEP sertifika profilleri oluşturma ve atama
 
 Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destekleyecek şekilde [yapılandırdıktan](certificates-scep-configure.md) sonra, Intune 'da kullanıcılara ve cihazlara SCEP sertifika profilleri oluşturup atayabilirsiniz.
 
-> [!IMPORTANT]
-> Cihazların bir SCEP sertifika profili kullanması için, güvenilen kök sertifika yetkilinizin (CA) güvenmesi gerekir. Kök CA 'nın güveni, [güvenilir bir sertifika profilinin](../protect/certificates-configure.md#create-trusted-certificate-profiles) , SCEP sertifika profilini alan aynı gruba dağıtılmasıyla en iyi şekilde belirlenir. Güvenilen sertifika profilleri, güvenilen kök CA sertifikasını temin edin.
+Cihazların bir SCEP sertifika profili kullanması için, güvenilen kök sertifika yetkilinizin (CA) güvenmesi gerekir. Kök CA 'nın güveni, [güvenilir bir sertifika profilinin](../protect/certificates-configure.md#create-trusted-certificate-profiles) , SCEP sertifika profilini alan aynı gruba dağıtılmasıyla en iyi şekilde belirlenir. Güvenilen sertifika profilleri, güvenilen kök CA sertifikasını temin edin.
+
+> [!NOTE]
+> Android 11 ' den başlayarak, güvenilen sertifika profilleri artık *Android Cihaz Yöneticisi*olarak kaydedilen cihazlara güvenilen kök sertifikayı yükleyemez. Bu sınırlama Samsung Knox için geçerlidir.
+>
+> Bu sınırlama hakkında daha fazla bilgi için bkz. [Android Cihaz Yöneticisi Için güvenilen sertifika profilleri](../protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
 
 ## <a name="create-a-scep-certificate-profile"></a>Bir SCEP sertifika profili oluşturma
 
@@ -115,7 +119,7 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
          Bu örnekte, CN ve E değişkenlerini kullanan bir konu adı biçimi ve kuruluş birimi, kuruluş, konum, durum ve ülke değerleri için dizeler bulunur. [CertStrToName işlevi](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea), bu işlevi ve desteklenen dizelerini açıklar.
          
-         \* Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri için **CN = {{userPrincipalName}}** ayarı çalışmaz. Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri kullanıcı olmayan cihazlarda kullanılabilir, bu nedenle kullanıcının Kullanıcı asıl adını alabilmesi mümkün olmayacaktır. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}} \@ contoso.com** , Kullanıcı adı ve el ile eklediğiniz etki alanı gibi janedoe@contoso.com
+         Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri için **CN = {{userPrincipalName}}** ayarı çalışmaz. Android tam olarak yönetilen, adanmış ve şirkete ait Iş profili profilleri kullanıcı olmayan cihazlarda kullanılabilir, bu nedenle kullanıcının Kullanıcı asıl adını alabilmesi mümkün olmayacaktır. Kullanıcılar için bu seçeneğe gerçekten ihtiyaç duyuyorsanız, şu şekilde bir geçici çözüm kullanabilirsiniz: **CN = {{username}} \@ contoso.com** , Kullanıcı adı ve el ile eklediğiniz etki alanı gibi janedoe@contoso.com
 
       - **Cihaz sertifika türü**
 
@@ -139,7 +143,10 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
         > - **IMEI**, **SerialNumber**ve **fullyıqualifieddomainname**gibi bir cihaz sertifikasının *Konu* veya *San* 'ı üzerinde kullanılan cihaz özellikleri, cihaza erişimi olan bir kişi tarafından sızılmış özelliklerdir.
         > - Bir cihazın, bu cihaza yüklemek için bir sertifika profilinde belirtilen tüm değişkenleri desteklemesi gerekir.  Örneğin, bir SCEP profilinin konu adında **{{IMEI}}** kullanılıyorsa ve IMEI numarası olmayan bir cihaza atanırsa, profil yüklenemez.
 
-   - **Konu diğer adı**: Intune 'un sertifika isteğinde konu alternatif adı 'Nı (San) otomatik olarak nasıl oluşturduğunu seçin. SAN seçenekleri seçtiğiniz sertifika türüne bağlıdır; **Kullanıcı** ya da **cihaz**.
+   - **Konu diğer adı**:  
+     Intune 'un sertifika isteğinde konu alternatif adı 'nı (SAN) otomatik olarak nasıl oluşturduğunu seçin. SAN seçenekleri seçtiğiniz sertifika türüne bağlıdır; **Kullanıcı** ya da **cihaz**.
+
+     Her iki sertifika türünün SAN 'ı için değişkenleri veya statik metni kullanabilirsiniz. Değişken kullanımı gerekli değildir.
 
       - **Kullanıcı sertifika türü**
 
@@ -207,7 +214,11 @@ Altyapınızı Basit Sertifika Kayıt Protokolü (SCEP) sertifikalarını destek
 
    - **Anahtar boyutu (bit)**:
 
-     Anahtarda bulunan bitlerin sayısını seçin.
+     Anahtarda bulunan bitlerin sayısını seçin:
+     - Yapılandırılmamış
+     - 1024
+     - 2048
+     - 4096 *(iOS/ıpados 14 ve üzeri ile desteklenir ve MacOS 11 ile üzeri)*
 
    - **Karma algoritması**:
 

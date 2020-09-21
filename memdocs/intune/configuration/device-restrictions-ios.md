@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune-Azure 'da iOS/ıpados cihaz ayarları | Microsoft Docs
 titleSuffix: ''
-description: İOS/ıpados cihazlarında ayarlar ekleme, yapılandırma veya oluşturma; parola gereksinimlerini ayarlama, kilitli ekranı denetleme, yerleşik uygulamalar kullanma, kısıtlı veya onaylanan uygulamalar ekleme, Bluetooth cihazlarını işleme, yedekleme ve depolama için buluta bağlanma, bilgi noktası modunu etkinleştirme, etki alanı ekleme ve kullanıcıların Microsoft Intune ' de Safari web tarayıcısıyla nasıl etkileşime gireceğini denetleme.
+description: Microsoft Intune özellikleri kısıtlamak için iOS/ıpados cihazlarına ayarlar ekleyin, yapılandırın veya oluşturun. Parola gereksinimleri oluşturun, kilitli ekranı denetleyin, yerleşik uygulamaları kullanın, kısıtlı veya onaylanan uygulamalar ekleyin, Bluetooth cihazlarını işleyin, yedekleme ve depolama için buluta bağlanın, bilgi noktası modunu etkinleştirin, etki alanlarını ekleyin ve kullanıcıların Safari Web tarayıcısı ile nasıl etkileşime gireceğini denetleyin.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca9fb5b350cd9c89b8d4eb37144340b93e9ebbab
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: b82e69c06868416f60a137a71fc72db8e39375b9
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574823"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813865"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune kullanarak özelliklere izin vermek veya erişimi kısıtlamak için iOS ve ıpados cihaz ayarları
 
@@ -35,7 +35,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Cihaz kısıtlamaları yapılandırma profili oluşturma](device-restrictions-configure.md).
+[İOS/ıpados cihaz kısıtlamaları yapılandırma profili](device-restrictions-configure.md)oluşturun.
 
 > [!NOTE]
 > Bu ayarlar, bazı ayarların tüm kayıt seçeneklerine uygulanmasıyla farklı kayıt türleri için geçerlidir. Farklı kayıt türleri hakkında daha fazla bilgi için bkz. [iOS/ıpados kaydı](../enrollment/ios-enroll.md).
@@ -54,6 +54,16 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 - **Kablosuz PKI güncelleştirmelerini engelleyin**: **blok** , cihazların bir bilgisayara bağlı olmadığı durumlar dışında yazılım güncelleştirmelerini almasını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bir bilgisayara bağlı kalmadan bir cihazın yazılım güncelleştirmelerini almasına izin verebilir.
 - **Ad Izlemeyi sınırla**: **sınır** , cihaz reklam tanımlayıcısını devre dışı bırakır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi etkin durumda kalabilir.
 - **Kurumsal Uygulama güveni**: **blok** , ayarlar > genel > profillerinin cihaz yönetimi & cihazlarda **Kurumsal Geliştirici güven** düğmesini kaldırır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi, kullanıcıların uygulama mağazasından indirilmemiş uygulamalara güvenmeyi seçebilmesine izin verebilir.
+- **Uygulama kliplerini engelle**: **Evet** seçeneği, yönetilen cihazlarda uygulama kliplerini engeller. Özellikle, **Evet**olarak ayarlanıyor:
+
+  - Kullanıcıların cihazlara uygulama klipleri eklemesini engeller.
+  - Cihazlarda mevcut uygulama kliplerini kaldırır.
+
+  **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda uygulama klip ekleme ve kaldırma için izin verebilir.
+
+  Bu özellik şu platformlarda geçerlidir:  
+  - iOS 14,0 ve üzeri
+  - ıpados 14,0 ve üzeri
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı (denetimli)
 
@@ -135,7 +145,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
 
     Örneğin, iOS 12. a, **1 Ocak**'ta kullanılabilir ve **gecikme görünürlüğü** **5 güne**ayarlanmışsa, iOS 12. Kullanıcı cihazlarında kullanılabilir bir güncelleştirme olarak gösterilmez. Sürümden sonraki **altıncı gün** üzerinde, bu güncelleştirme kullanılabilir ve kullanıcılar uygulamayı yükleyebilir.
 
-    Bu ayarın geçerli olduğu sürümler:  
+    Bu özellik şu platformlarda geçerlidir:  
     - iOS 11,3 ve üzeri
     - ıpados 13,0 ve üzeri
 
@@ -179,7 +189,7 @@ Bu ayarlar, Intune 'da bir cihaz yapılandırma profiline eklenir ve sonra iOS/�
   
 - **Parola istenmeden önce ekran kilitlenmesinden sonra geçen en fazla dakika**<sup>1</sup>: kullanıcıların parolasını yeniden girmesi gerekmeden önce cihazın ne kadar süreyle boşta kalacağını girin. Girdiğiniz süre cihazda şu anda ayarlanmış olan süreden uzunsa, cihaz girdiğiniz süreyi yoksayar.
 
-  Bu ayarın geçerli olduğu sürümler:  
+  Bu özellik şu platformlarda geçerlidir:  
   - iOS 8.0 +
   - Idos 13.0 +
 
@@ -622,13 +632,13 @@ Uygulamaları eklemek için şunları yapabilirsiniz:
 
 ## <a name="autonomous-single-app-mode-asam"></a>Otonom tek uygulama modu (ASAM)
 
-İOS/ıpados cihazlarını, otonom tek uygulama modunda (ASAM) belirli uygulamaları çalıştıracak şekilde yapılandırmak için bu ayarları kullanın. Bu mod yapılandırıldığında ve kullanıcılar yapılandırılmış uygulamalardan birini başlatdıklarında, cihaz bu uygulamaya kilitlenir. Uygulama/görev değiştirme, kullanıcılar izin verilen uygulamadan çıkana kadar devre dışı bırakıldı.
+İOS/ıpados cihazlarını, otonom tek uygulama modunda (ASAM) belirli uygulamaları çalıştıracak şekilde yapılandırmak için bu ayarları kullanın. ASAP yapılandırıldığında ve kullanıcılar yapılandırılmış uygulamalardan birini başlatdıklarında, cihaz bu uygulamaya kilitlenir. Uygulama/görev değiştirme, kullanıcılar izin verilen uygulamadan çıkana kadar devre dışı bırakıldı.
 
 ASAM yapılandırmasının uygulanabilmesi için, kullanıcıların belirli uygulamayı el ile açması gerekir. Bu görev Şirket Portalı uygulaması için de geçerlidir.
 
 - Örneğin, okul veya üniversite ortamında, kullanıcıların cihazda bir test geçirmesine imkan tanıyan bir uygulama ekleyin. Ya da, Kullanıcı kimlik doğrulamasından çıkana kadar cihazı Şirket Portalı uygulamasına kilitleyin. Uygulamalar eylemleri kullanıcılar tarafından tamamlandığında veya bu ilkeyi kaldırdığınızda cihaz normal durumuna geri döner.
 
-- Tüm uygulamalar otonom tek uygulama modunu desteklemez. Bir uygulamayı otonom tek uygulama modunda yerleştirmek için, bir paket KIMLIĞI veya bir uygulama yapılandırma ilkesi tarafından teslim edilen anahtar değer çifti genellikle gereklidir. Daha fazla bilgi için Apple MDM belgelerindeki [ `autonomousSingleAppModePermittedAppIDs` kısıtlamaya](https://developer.apple.com/documentation/devicemanagement/restrictions) bakın. Yapılandırmakta olduğunuz uygulama için gereken belirli ayarlar hakkında daha fazla bilgi için satıcı belgelerine bakın.
+- Tüm uygulamalar otonom tek uygulama modunu desteklemez. Bir uygulamayı ASAM 'ya yerleştirmek için, bir paket KIMLIĞI veya bir uygulama yapılandırma ilkesi tarafından teslim edilen anahtar değer çifti genellikle gereklidir. Daha fazla bilgi için Apple MDM belgelerindeki [ `autonomousSingleAppModePermittedAppIDs` kısıtlamaya](https://developer.apple.com/documentation/devicemanagement/restrictions) bakın. Yapılandırmakta olduğunuz uygulama için gereken belirli ayarlar hakkında daha fazla bilgi için satıcı belgelerine bakın.
 
   Örneğin, ölçek odalarını otonom tek uygulama modunda yapılandırmak için, yakınlaştırma paket KIMLIĞINI kullanmak üzere diyor `us.zoom.zpcontroller` . Bu örnekte, yakınlaştırma web portalında da bir değişiklik yaparsınız. Daha fazla bilgi için bkz. [zoom yardım merkezi](https://support.zoom.us/hc/articles/360021322632-Autonomous-Single-App-Mode-for-Zoom-Rooms-with-a-Third-Party-MDM).
 
@@ -663,7 +673,7 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
 - **Mono ses**: cihazlarda mono ses erişilebilirlik ayarının olması **gerekir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği bilgi noktası modunda çalıştırmayabilir veya etkinleştiremeyebilir.
 - **Voice Control**: **gerektir** , cihazlarda ses denetimi yapmanızı sağlar ve kullanıcıların Siri komutlarını kullanarak işletim sistemini tam olarak denetlemesine olanak tanır. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi ses denetimini devre dışı bırakabilir.
 
-  Bu ayarın geçerli olduğu sürümler:  
+  Bu özellik şu platformlarda geçerlidir:  
   - iOS 13,0 ve üzeri
   - ıpados 13,0 ve üzeri
   
@@ -683,7 +693,7 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
 - **Seçili metinde konuş**: konuş seçimi erişilebilirlik ayarlarının cihazlarda **bulunmasına izin ver** . Bu özellik, kullanıcıların seçolduğu sesli metni okur. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi bu özelliği devre dışı bırakabilir.
 - **Ses denetimi değişikliği**: kullanıcıların cihazlarındaki ses denetimi durumunu değiştirmesine **izin verin** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların cihazlarındaki ses denetimi durumunu değiştirmelerini engelleyebilir.
 
-  Bu ayarın geçerli olduğu sürümler:  
+  Bu özellik şu platformlarda geçerlidir:  
   - iOS 13,0 ve üzeri
   - ıpados 13,0 ve üzeri
 
@@ -706,7 +716,7 @@ Ayrıca, uygulama adlarının ve paket kimliklerinin listesini içeren bir CSV d
 
 - **Safari parola otomatik doldurma etki alanları**  >  **Etki alanı URL 'si**: listeye bir veya daha fazla URL ekleyin. Kullanıcılar yalnızca bu listedeki URL’lerdeki parolaları kaydedebilir. Bu ayar yalnızca Safari tarayıcısı ve denetimli moddaki cihazlar için geçerlidir. Herhangi bir URL girmezseniz, parolalar tüm Web sitelerinden kaydedilebilir.
 
-  Bu ayarın geçerli olduğu sürümler:  
+  Bu özellik şu platformlarda geçerlidir:  
   - iOS 9,3 ve üzeri
   - ıpados 13,0 ve üzeri
 

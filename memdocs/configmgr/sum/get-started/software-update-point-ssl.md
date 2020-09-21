@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: bd9989b8-ccaf-4d51-8262-b4a99b600d12
-ms.openlocfilehash: e8359077ac363d2d732b2ffa6712c9b938a2c709
-ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
+ms.openlocfilehash: 4f21af0a5431b5d06f6d96504fa99b52aa43e324
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90718992"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814473"
 ---
 # <a name="tutorial-configure-a-software-update-point-to-use-tlsssl-with-a-pki-certificate"></a>Öğretici: bir yazılım güncelleştirme noktasını bir PKI sertifikasıyla TLS/SSL kullanacak şekilde yapılandırma
 
@@ -70,9 +70,12 @@ WSUS sunucusunun **Kişisel** sertifika deposunda zaten uygun bir sertifikanız 
 1. **Tüm görevler** ' i seçin ve **Yeni sertifika isteyin**.
 1. Sertifika kaydını başlatmak için **İleri ' yi** seçin.
 1. Kaydedilecek sertifika türünü seçin. Sertifika amacı, **sunucu kimlik doğrulamasıdır** ve kullanılacak Microsoft sertifika **şablonu,** **Gelişmiş anahtar kullanımı**olarak belirtilen **sunucu kimlik doğrulamasına** sahip özel bir şablondur. Sertifikayı kaydetmek için ek bilgiler istenebilir. Genellikle, en az aşağıdaki bilgileri belirtin:
+
    - **Ortak ad:** **Konu** sekmesinde bulunan değeri WSUS sunucusunun FQDN 'si olarak ayarlayın.
    - **Kolay ad:** **Genel** sekmesinde, sertifikayı daha sonra tanımanıza yardımcı olması için değeri açıklayıcı bir ad olarak ayarlayın.
-:::image type="content" source="media/certificate-properties.png" alt-text="Kayıt hakkında daha fazla bilgi belirtmek için sertifika özellikleri penceresi":::
+   
+   :::image type="content" source="media/certificate-properties.png" alt-text="Kayıt hakkında daha fazla bilgi belirtmek için sertifika özellikleri penceresi":::
+
 1. Kaydı tamamlamaya sonra **Kaydet** ' i ve ardından **son** ' u seçin.
 1. Sertifikanın parmak izi gibi ayrıntılarını görmek istiyorsanız sertifikayı açın.
 
@@ -87,9 +90,13 @@ WSUS sunucusunun kişisel sertifika deposundaki sertifikaya sahip olduktan sonra
 1. **Sitelere**  >  **WSUS Yönetimi**' ne gidin.
 1. Eylem menüsünden ya da siteye sağ tıklayarak **bağlamalar** ' ı seçin.
 1. **Site bağlamaları** penceresinde, **https**için satırı seçin ve ardından **Düzenle...** seçeneğini belirleyin.
+
    - HTTP site bağlamasını kaldırmayın. WSUS, güncelleştirme içerik dosyaları için HTTP kullanır.
-1. **SSL sertifikası** SEÇENEĞINDE, WSUS yönetim sitesine bağlanacak sertifikayı seçin. Sertifikanın kolay adı, açılan menüde gösterilir. Kolay bir ad belirtilmemişse, sertifikanın `IssuedTo` alanı gösterilir. Hangi sertifikanın kullanılacağını bilmiyorsanız, **görüntüle** ' yi seçin ve parmak izinin elde ettiğiniz ile eşleştiğini doğrulayın.  
+   
+1. **SSL sertifikası** SEÇENEĞINDE, WSUS yönetim sitesine bağlanacak sertifikayı seçin. Sertifikanın kolay adı, açılan menüde gösterilir. Kolay bir ad belirtilmemişse, sertifikanın `IssuedTo` alanı gösterilir. Hangi sertifikanın kullanılacağını bilmiyorsanız, **görüntüle** ' yi seçin ve parmak izinin elde ettiğiniz ile eşleştiğini doğrulayın.
+
    :::image type="content" source="media/edit-site-binding.png" alt-text="Site bağlama penceresini SSL sertifikası seçimiyle Düzenle":::
+
 1. İşiniz bittiğinde **Tamam** ' ı ve ardından site bağlamalarından çıkmak için **Kapat** ' ı seçin. Sonraki adımlarda Internet Information Services (IIS) Yöneticisi 'Ni açık tutun.
 
 
@@ -106,11 +113,11 @@ WSUS sunucusunun kişisel sertifika deposundaki sertifikaya sahip olduktan sonra
    - SimpleAuthWebService
 
    Aşağıdaki değişiklikleri yapın:
-
-      1. **SSL ayarları**' nı seçin.
-      1. **SSL gerektir** seçeneğini etkinleştirin.
-      1. **İstemci sertifikaları** seçeneğinin **Yoksay**olarak ayarlandığını doğrulayın.
-      1. **Uygula**’yı seçin.
+   
+   1. **SSL ayarları**' nı seçin.
+   1. **SSL gerektir** seçeneğini etkinleştirin.
+   1. **İstemci sertifikaları** seçeneğinin **Yoksay**olarak ayarlandığını doğrulayın.
+   1. **Uygula**’yı seçin.
 
 İçerik gibi bazı işlevlerin HTTP kullanması gerektiğinden, üst düzey WSUS yönetim sitesinde SSL ayarlarını yapmayın.
 
@@ -119,13 +126,16 @@ WSUS sunucusunun kişisel sertifika deposundaki sertifikaya sahip olduktan sonra
 Web Hizmetleri SSL isteyecek şekilde ayarlandığında, WSUS uygulamasına değişikliği desteklemek için bazı ek yapılandırmalar yapabilmesi için bildirilmesi gerekir.
 
 1. WSUS sunucusunda bir yönetici komut istemi açın. Bu komutu çalıştıran kullanıcı hesabı, WSUS yöneticileri grubunun veya yerel Yöneticiler grubunun üyesi olmalıdır.
-1. Klasörü WSUS için Araçlar klasörüne değiştirin:  
+1. Klasörü WSUS için Araçlar klasörüne değiştirin:
+
    `cd "c:\Program Files\Update Services\Tools"`
+   
 1. Aşağıdaki komutla WSUS 'i SSL kullanacak şekilde yapılandırın:
 
     `WsusUtil.exe configuressl server.contoso.com`
    
    Burada *Server.contoso.com* , WSUS sunucusunun FQDN 'sidir.
+   
 1. WsusUtil, WSUS sunucusunun URL 'sini sonunda belirtilen bağlantı noktası numarasıyla birlikte döndürür. Bağlantı noktası 8531 (varsayılan) ya da 443 olacaktır. Döndürülen URL 'nin beklendiğini doğrulayın. Bir hata yanlış olursa, komutu yeniden çalıştırabilirsiniz.
 
    :::image type="content" source="media/wsusutil.png" alt-text="WSUS için HTTPS URL 'sini döndüren WSUSutil configuressl komutu":::
@@ -147,8 +157,11 @@ WSUS sunucusunun Apıremoting30 Web hizmetine bir SSL bağlantısı kullanacağ�
 1. WSUS konsolunu açın ve **Action**  >  **sunucuya Bağlan**' ı seçin.
 1. **Sunucu adı** SEÇENEĞI için WSUS sunucusunun FQDN 'sini girin.
 1. WSUSutil adresinden URL 'de döndürülen **bağlantı noktası numarasını** seçin.
+
 1. **Bu sunucuya bağlanmak için güvenli yuva katmanı kullan (SSL)** seçeneği, 8531 (varsayılan) veya 443 seçildiğinde otomatik olarak etkinleştirilir.
-       :::image type="content" source="media/connect-wsus-console.png" alt-text="WSUS konsoluna HTTPS bağlantı noktası üzerinden bağlanma":::
+
+       :::image type="content" source="media/connect-wsus-console.png" alt-text="Connect to the WSUS console over the HTTPS port":::
+       
 1. Configuration Manager site sunucunuz, yazılım güncelleştirme noktasından uzak ise, site sunucusundan WSUS konsolunu başlatın ve WSUS konsolunun SSL üzerinden bağlanabildiğini doğrulayın.
    - Uzak WSUS konsolu bağlanamıyorsa, büyük olasılıkla sertifika, ad çözümlemesi veya engellenen bağlantı noktası ile ilgili bir sorun olduğunu gösterir.
 
@@ -168,6 +181,7 @@ Yazılım güncelleştirme noktasını WSUS sunucusuna SSL iletişimi gerektirec
 1. **WSUS sunucusu Ile SSL Iletişimini gerektir** seçeneğini etkinleştirin.
 
    :::image type="content" source="media/sup-properties.png" alt-text="WSUS sunucusu için SSL iletişimi ıste seçeneğini gösteren SUP özellikleri":::
+   
 1. Site için [**WCM. log**](../../core/plan-design/hierarchy/log-files.md#BKMK_SUPLog) dosyasında, değişikliği uyguladığınızda aşağıdaki girişleri görürsünüz:
 
    ```
@@ -191,7 +205,9 @@ Bu senaryoya yönelik gereksiz bilgileri kaldırmak için günlük dosyası örn
 1. **Yazılım kitaplığı**'na  >  **genel bakış**  >  **yazılım**güncelleştirme  >  **tüm yazılım güncelleştirmeleri**' ne gidin.
 1. Şeritte, **yazılım güncelleştirmelerini eşitler**' ı seçin.
 1. Yazılım güncelleştirmeleri için site genelinde bir eşitleme başlatmak isteyip istemediğinizi soran bildirime **Evet** ' i seçin.
+
    - WSUS yapılandırması değiştiğinden, bir Delta eşitlemesi yerine tam yazılım güncelleştirmeleri eşitlemesi gerçekleşmeyecektir.
+   
 1. Site için **wsyncmgr. log** ' i açın. Bir alt siteyi izliyorsanız, önce üst sitenin eşitlemeyi bitirmesini beklemeniz gerekir. Aşağıdakine benzer girişlerin günlüğünü inceleyerek sunucunun başarıyla eşitlendikten emin olun:
 
    ```
@@ -246,6 +262,7 @@ Yazılım güncelleştirme noktasını SSL isteyecek şekilde değiştirdiğiniz
 
 1. İstemcinin doğru WSUS URL 'sini görbildiğini doğrulamak için **LocationServices. log** ' i gözden geçirin.
 **LocationServices.log**
+
    ```
    WSUSLocationReply : <WSUSLocationReply SchemaVersion="1
    ...

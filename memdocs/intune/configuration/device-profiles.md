@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/20/2020
+ms.date: 09/14/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7e2964281e26e695dcd58629601a34043ab0e55
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ba8445f2e1892ade0aa6ef04488abd37bf00e87a
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913792"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815115"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Microsoft Intune'daki cihaz profillerini kullanarak cihazlarınıza özellik ve ayar uygulama
 
@@ -39,9 +39,11 @@ Mobil cihaz yönetimi (MDM) çözümünüzün bir parçası olarak bu yapıland�
 
 Bu makalede oluşturabileceğiniz profil türlerine genel bir bakış sağlanmaktadır. Cihazlardaki bazı özelliklere izin vermek veya bunları engellemek için bu profilleri kullanabilirsiniz.
 
-## <a name="administrative-templates"></a>Yönetim şablonları
+## <a name="administrative-templates-and-group-policy"></a>Yönetim Şablonları ve Grup İlkesi
 
 [Yönetim Şablonları](administrative-templates-windows.md) , Internet Explorer, Microsoft Edge, OneDrive, Uzak Masaüstü, Word, Excel ve diğer Office programları için yapılandırabileceğiniz yüzlerce ayarı içerir. Yöneticiler, bu şablonlar sayesinde grup ilkelerine benzeyen ancak tamamen bulut tabanlı olan basitleştirilmiş bir görünüme sahip olur.
+
+[Grup İlkesi Analytics](group-policy-analytics.md) , şirket içi GPO 'larınızı analiz eder ve hangi ilke ayarlarının desteklendiğini, kullanım dışı olduğunu ve daha fazlasını gösterir.
 
 Bu özellik şunları destekler:
 
@@ -56,7 +58,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 8.1
 - Windows 10 ve üzeri
 
@@ -69,7 +71,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 ## <a name="delivery-optimization"></a>Teslim iyileştirme
 
@@ -97,7 +99,7 @@ Bu özellik şunları destekler:
 Bu özellik şunları destekler:
 
 - iOS/iPadOS
-- Mac OS
+- macOS
 
 ## <a name="device-firmware-configuration-interface"></a>Cihaz üretici yazılımı yapılandırma arabirimi
 
@@ -116,7 +118,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 10 ve üzeri
 - Windows 10 Team
 
@@ -161,7 +163,7 @@ Microsoft Intune ile Microsoft Defender Gelişmiş tehdit koruması (WDADTP) ekl
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 - Windows 10 ve üzeri
 
 ## <a name="esim-cellular---public-preview"></a>eSIM hücresel - Genel önizleme
@@ -178,7 +180,7 @@ Bu özellik şunları destekler:
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 
 ## <a name="identity-protection"></a>Kimlik koruması
 
@@ -238,7 +240,7 @@ MacOS cihazlarındaki [tercih dosyaları](preference-file-settings-macos.md) , u
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 
 ## <a name="shared-multi-user-device"></a>Paylaşılan çok kullanıcılı cihaz
 
@@ -272,7 +274,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 8.1
 - Windows 10 ve üzeri
 
@@ -285,7 +287,7 @@ Bu özellik şunları destekler:
 - Android cihaz yöneticisi
 - Android Kurumsal
 - iOS/iPadOS
-- Mac OS
+- macOS
 - Windows 8.1 (yalnızca içeri aktarma)
 - Windows 10 ve üzeri
 
@@ -297,7 +299,7 @@ Profili atadığınızda macOS masaüstü kullanıcıları, kendisini yapıland�
 
 Bu özellik şunları destekler:
 
-- Mac OS
+- macOS
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Uzantıları (MX)
 

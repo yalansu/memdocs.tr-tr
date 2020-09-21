@@ -12,6 +12,8 @@
       href: timeline.md
     - name: Kaynak gezgini (önizleme)
       href: resource-explorer.md
+    - name: Betikleri çalıştırma (önizleme)
+      href: scripts.md
 - name: Kiracı ekli cihazlar için CMPivot (önizleme)
   items:
     - name: CMPivot’u başlatma (önizleme)
@@ -28,6 +30,10 @@
       href: deploy-antivirus-policy.md
     - name: Microsoft Defender Virüsten Koruma ilkesi için ayarlar
       href: ../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+- name: Başvuru
+  items:
+    - name: Veri koleksiyonuna kiracı ekleme
+      href: data-collection.md
 - name: Sorun giderme
   items:
     - name: Kiracıya ekleme ve cihaz eylemleri
@@ -40,5 +46,7 @@
       href: troubleshoot-timeline.md
     - name: Kaynak gezgini (önizleme)
       href: troubleshoot-resource-explorer.md
+    - name: Betikleri çalıştırma (önizleme)
+      href: troubleshoot-scripts.md
     - name: CMPivot (önizleme)
       href: troubleshoot-cmpivot.md

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/21/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a37b94ee0e474e9e3da6aae359ba1b315212910
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 7a4595be1e29910f71d48e82db456e3676bd69c3
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88911939"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815434"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Intune 'da bilgi noktası olarak çalıştırılacak Windows 10 ve üzeri cihaz ayarları
 
@@ -34,7 +34,7 @@ Intune 'da Windows bilgi noktası özelliği hakkında daha fazla bilgi edinmek 
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-- [Profili oluşturun](kiosk-settings.md#create-the-profile).
+- [Windows 10 bilgi noktası cihaz yapılandırma profili](kiosk-settings.md#create-the-profile)oluşturun.
 
 - Bu bilgi noktası profili, [Microsoft Edge bilgi noktası ayarları](device-restrictions-windows-10.md#microsoft-edge-browser)kullanılarak oluşturduğunuz cihaz kısıtlamaları profiliyle doğrudan ilgilidir. Özetlemek gerekirse:
 

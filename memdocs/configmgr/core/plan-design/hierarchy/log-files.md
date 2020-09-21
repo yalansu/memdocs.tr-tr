@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e24a7fe6a81408de48a73889db923cc8c5094ea
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: aa473d15b5abfbab7049a1e822a890d76aee239b
+ms.sourcegitcommit: 81f6b4cac6c991d34bc864f950c82e5b57e906c3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88700557"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90779571"
 ---
 # <a name="log-file-reference"></a>Günlük dosyası başvurusu
 
@@ -75,7 +75,7 @@ Aşağıdaki bölümler, size sunulan farklı günlük dosyaları hakkında ayr�
 
   - [Desktop Analytics](#desktop-analytics)
 
-  - [Bulma](#BKMK_DiscoveryLog)  
+  - [Keşfini](#BKMK_DiscoveryLog)  
 
   - [Uç nokta analizi](#bkmk_analytics)
   
@@ -584,7 +584,7 @@ Aşağıdaki tabloda, bulut yönetimi ağ geçidiyle ilgili bilgiler içeren gü
 
 #### <a name="note-1-logs-synchronized-from-azure"></a><a name="bkmk_note1"></a> Note 1: Azure 'dan eşitlenen Günlükler
 
-Bunlar, bulut Service Manager 'ın her beş dakikada bir Azure depolama 'dan eşitlendiği yerel Configuration Manager günlük dosyalarıdır. Bulut yönetimi ağ geçidi, günlükleri her beş dakikada bir Azure depolama 'ya gönderir. Bu nedenle en fazla gecikme 10 dakikadır. Ayrıntılı anahtarlar hem yerel hem de uzak günlükleri etkiler. Gerçek dosya adları, hizmet adını ve rol örneği tanımlayıcısını içerir. Örneğin, CMG-*ServiceName* - *roleınstanceıd*-cmgsetup. log
+Bunlar, bulut Service Manager 'ın her beş dakikada bir Azure depolama 'dan eşitlendiği yerel Configuration Manager günlük dosyalarıdır. Bulut yönetimi ağ geçidi, günlükleri her beş dakikada bir Azure depolama 'ya gönderir. Bu nedenle en fazla gecikme 10 dakikadır. Ayrıntılı anahtarlar hem yerel hem de uzak günlükleri etkiler. Gerçek dosya adları, hizmet adını ve rol örneği tanımlayıcısını içerir. Örneğin, CMG-*ServiceName* - *roleınstanceıd*-cmgsetup. log. Bu günlük dosyaları eşitlenir, bu nedenle bulut yönetim ağ geçidi için RDP 'ye gerek kalmaz ve bu seçenek desteklenmez.
 
 ### <a name="compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a> Uyumluluk ayarları ve şirket kaynağı erişimi
 
@@ -630,7 +630,7 @@ Configuration Manager ile tümleştirilmiş masaüstü analiziyle ilgili sorunla
 Hizmet bağlantı noktasındaki günlük dosyaları şu dizinde: `%ProgramFiles%\Configuration Manager\Logs\M365A` .
 Configuration Manager istemcisindeki günlük dosyaları şu dizinde: `%WinDir%\CCM\logs` .
 
-| Log | Açıklama |Günlük dosyası içeren bilgisayar|
+| Günlük | Açıklama |Günlük dosyası içeren bilgisayar|
 |---------|---------|---------|
 | M365ADeploymentPlanWorker. log | Masaüstü Analizi bulut hizmetinden şirket içi Configuration Manager dağıtım planı eşitlemesi hakkında bilgi |Hizmet bağlantı noktası|
 | M365ADeviceHealthWorker. log | Configuration Manager 'den Microsoft buluta cihaz durumu yüklemesi hakkında bilgi |Hizmet bağlantı noktası|

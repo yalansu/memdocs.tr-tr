@@ -1,6 +1,6 @@
 - name: Microsoft Intune temelleri
   href: index.yml
-- name: Genel bakış
+- name: Genel Bakış
   expanded: true
   items:
     - name: Microsoft Intune genel bakış
@@ -217,6 +217,8 @@
       items:
         - name: Intune raporları
           href: reports.md
+        - name: Raporları Graph kullanarak dışarı aktarma
+          href: reports-export-graph-apis.md
         - name: Intune etkinlikleri için denetleme günlükleri
           href: monitor-audit-logs.md
         - name: Azure İzleyici ile günlükleri gözden geçirme

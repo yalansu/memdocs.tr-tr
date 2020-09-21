@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bf1150a32db213c2c8b697625076a601377c1e6
-ms.sourcegitcommit: b95eac00a0cd979dc88be953623c51dbdc9327c5
+ms.openlocfilehash: 863fdd219e9d75ca61322c4eb976c2cdedfd4101
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89423773"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813984"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Intune 'da e-posta imzalama ve şifreleme için S/MIME 'ye Genel Bakış
 
@@ -31,7 +31,7 @@ S/MIME sertifikası olarak da bilinen e-posta sertifikaları, şifreleme ve şif
 - macOS
 - Windows 10 ve üzeri
 
-İOS/ıpados cihazlarında, gelen ve giden e-postaları imzalamak ve şifrelemek için S/MIME ve sertifikaları kullanan bir Intune ile yönetilen e-posta profili oluşturabilirsiniz. Diğer platformlarda S/MIME desteklenmiyor olabilir. Destekleniyorsa, S/MIME imzalama ve şifreleme kullanan sertifikaları yükler. Ardından, son kullanıcı e-posta uygulamasında S/MIME 'yi etkinleştirmesine izin vermez.
+Intune, tüm platformlara otomatik olarak S/MIME şifreleme sertifikaları sunabilir. S/MIME sertifikaları, iOS üzerinde yerel posta istemcisini ve iOS ve Android cihazlarda Outlook 'U kullanan posta profilleriyle otomatik olarak ilişkilendirilir. Windows ve macOS platformları için ve iOS ve Android 'deki diğer posta istemcileri için, Intune sertifikaları teslim eder, ancak kullanıcıların posta uygulamasında S/MIME 'yi el ile etkinleştirmeleri ve S/MIME sertifikalarını seçmesi gerekir.
 
 S/MIME e-posta imzalama ve Exchange ile şifreleme hakkında daha fazla bilgi için bkz. [s/MIME, ileti imzalama ve şifreleme için](/Exchange/policy-and-compliance/smime).
 

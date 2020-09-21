@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bf538bc7dae5ae52c0f550d4193916f5dd5897b
-ms.sourcegitcommit: 6176a7825d6c663faa318a6818b7764bc70f08fc
+ms.openlocfilehash: dd0d83912a5362225cd49773eda334113d11482e
+ms.sourcegitcommit: 84b134594a62ec6df4188cf39f3ea29b0b5f765b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/17/2020
-ms.locfileid: "90718748"
+ms.locfileid: "90747204"
 ---
 # <a name="use-wdac-and-windows-powershell-to-allow-or-blocks-apps-on-hololens-2-devices-with-microsoft-intune"></a>Microsoft Intune ile HoloLens 2 cihazlarındaki uygulamalara izin vermek veya bunları engelleme için WDAC ve Windows PowerShell kullanma
 
@@ -45,7 +45,7 @@ Intune 'da, Windows Defender uygulama denetimi (WDAC) CSP 'yi kullanmak için ö
 
 Belirli uygulamaların HoloLens 2 cihazlarında açılmasını sağlamak veya reddetmek için bu makaledeki adımları Şablon olarak kullanın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Windows PowerShell hakkında bilgi sahibi olun.
 - Intune 'da bir üyesi olarak oturum açın:
@@ -175,11 +175,13 @@ Bu örnek Windows PowerShell 'i kullanarak bir Windows Defender uygulama denetim
 
     2. Profili oluştururken, aşağıdaki ayarları girin:
 
-      - **OMA-URI**: `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>` girin. `<PolicyGUID>`Adım 6 ' da oluşturduğunuz **mergedPolicy.xml** dosyasındaki policytypeıd düğümü ile değiştirin.
+      - **OMA-URI**: `./Vendor/MSFT/ApplicationControl/Policies/<PolicyGUID>/Policy` girin. `<PolicyGUID>`Adım 6 ' da oluşturduğunuz **mergedPolicy.xml** dosyasındaki policytypeıd düğümü ile değiştirin.
 
-        Örneğimizi kullanarak girin `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076` .
+        Örneğimizi kullanarak girin `./Vendor/MSFT/ApplicationControl/Policies/A244370E-44C9-4C06-B551-F6016E563076/Policy` .
 
         İlke GUID 'sinin **mergedPolicy.xml** dosyadaki policytypeıd düğümüyle **eşleşmesi gerekir** (adım 6 ' da oluşturulur).
+
+        OMA-URI, [Applicationcontrol CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp)kullanır. Bu CSP 'deki düğümler hakkında daha fazla bilgi için, [Applicationcontrol CSP](https://docs.microsoft.com/windows/client-management/mdm/applicationcontrol-csp)sayfasına gidin.
 
       - **Veri türü**: **base64 dosyası**olarak ayarlanır. Dosyayı otomatik olarak bin 'den Base64 'e dönüştürür.
       - **Sertifika dosyası**: **compiledpolicy. bin** ikili dosyasını yükleyin (adım 9 ' da oluşturulur).

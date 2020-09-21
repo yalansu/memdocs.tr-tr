@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cc9cf0bdba9a6dea77955a6b88d3221053ea50f
-ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
+ms.openlocfilehash: f0d01bc78d619ebd6a9110e65525027d15961aa4
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076150"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813532"
 ---
 # <a name="see-device-details-in-intune"></a>Intune'da cihaz ayrıntılarına bakın
 
@@ -84,6 +84,10 @@ Cihazlar tarafından kullanılan taşıyıcıya bağlı olarak, tüm ayrıntıla
 |Güvenlik Düzeltme eki düzeyi|Cihaz için güvenlik düzeltme eki düzeyi.|Android|
 |Toplam depolama alanı|Cihazdaki toplam depolama alanı (gigabayt olarak).|Windows, iOS|
 |Boş depolama alanı|Cihazdaki kullanılmayan depolama alanı (gigabayt olarak).|Windows, iOS|
+| PowerPrecision + pil durumu | Zepoya tarafından belirlendiği şekilde sistem durumu derecelendirmesi (yalnızca PowerPrecision + piller). | Android |
+| Tüketilen pil ücreti döngüsü | Zeköşeli (yalnızca PowerPrecision ve PowerPrecision + piller) tarafından belirlendiği şekilde tüketilen tam ücret döngüsü sayısı. | Android |
+| Son pil Iade etme | En son pil için en son iade tarihi (yalnızca PowerPrecision ve PowerPrecision + pille) tarafından belirlendiği şekilde cihazda bulunur. | Android |
+| Pil seri numarası | Cihazda en son bulunan pil paketinin seri numarası (yalnızca PowerPrecision ve PowerPrecision + pille) tarafından belirlenir. | Android |
 |IMEI|Cihazın Uluslararası Mobil Ekipman Tanımlayıcısı.|Windows, iOS/ıpados, Android|
 |MEID|Cihazın mobil ekipman tanımlayıcısı.|Windows, iOS/ıpados, Android|
 |Üretici|Cihazın üreticisi.|Windows, iOS/ıpados, Android|

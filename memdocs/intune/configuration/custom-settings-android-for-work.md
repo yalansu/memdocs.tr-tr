@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/18/2019
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 827b5eb8b65aa59212b9ef990def3c5f191baf7c
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 94e5149f131aed50fcf4794f398d58aa88c9bb81
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "79323894"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813882"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Microsoft Intune’da Android Kurumsal cihazlar için özel ayarlar kullanma
 
@@ -43,13 +43,13 @@ Bu makale, Android Kurumsal cihazlar için özel profil oluşturma işlemini gö
 ## <a name="create-the-profile"></a>Profili oluşturma
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki ayarları girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, iyi bir profil adı, **Android kurumsal özel profilidir**.
     - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: **Android kurumsal**' i seçin.
-    - **Profil türü**: **özel**' i seçin.
+    - **Profil türü**: **iş profili**  >  **özel**' i seçin.
 
 4. **Özel OMA-URI Ayarları**’nda **Ekle**’yi seçin. Aşağıdaki ayarları girin:
 
@@ -71,20 +71,20 @@ Bu makale, Android Kurumsal cihazlar için özel profil oluşturma işlemini gö
     Bazı ayarları ekledikten sonra **Dışarı Aktar**’ı seçebilirsiniz. **Dışarı Aktar**, virgülle ayrılmış değerler (.csv) dosyasına eklediğiniz tüm değerlerin listesini oluşturur.
 
 5. Değişikliklerinizi kaydetmek için **Tamam**’ı seçin. Gerekirse diğer ayarları eklemeye devam edin.
-6. İşiniz bittiğinde, Intune profilini oluşturmak için **Tamam** > **Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
+6. İşiniz bittiğinde, **OK**  >  Intune profilini oluşturmak için Tamam**Oluştur** ' u seçin. Bu tamamlandığında, profiliniz **cihazlar-yapılandırma profilleri** listesinde gösterilir.
 
 ## <a name="example"></a>Örnek
 
 Bu örnekte, Android Kurumsal cihazlarda iş uygulamaları ve kişisel uygulamalar arasında kopyalama ve yapıştırma eylemlerini kısıtlayan bir özel profil oluşturacaksınız.
 
 1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
-2. **Cihaz** > **yapılandırma profilleri** > **Profil oluştur**' u seçin.
+2. **Cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**' u seçin.
 3. Aşağıdaki ayarları girin:
 
     - **Ad**: profil için açıklayıcı bir ad girin. Profillerinizi daha sonra kolayca tanıyacak şekilde adlandırın. Örneğin, **Android ENT blok kopyalama özel profil Yapıştır**' ı girin.
     - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
     - **Platform**: **Android kurumsal**' i seçin.
-    - **Profil türü**: **özel**' i seçin.
+    - **Profil türü**: **iş profili**  >  **özel**' i seçin.
 
 4. **Özel OMA-URI Ayarları**’nda **Ekle**’yi seçin. Aşağıdaki ayarları girin:
 

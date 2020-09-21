@@ -28,6 +28,8 @@
       href: get-started/configure-classifications-and-products.md
     - name: Yazılım güncelleştirmesi ayarlarını yönetme
       href: get-started/manage-settings-for-software-updates.md
+    - name: Yazılım güncelleştirme noktasını SSL kullanacak şekilde yapılandırma
+      href: get-started/software-update-point-ssl.md
     - name: Bağlantısı olmayan ortamlarda yazılım güncelleştirmelerini eşitleme
       items:
         - name: Bağlantısı kesilmiş bir yazılım güncelleştirme noktasından yazılım güncelleştirmelerini eşitleme

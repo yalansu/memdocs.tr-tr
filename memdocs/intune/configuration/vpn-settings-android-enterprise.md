@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87e6484939324abc5566386ffbe48f04ddbbe100
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 34aa3b8dd200bcbe9bbb99e61c99f1377336636b
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146465"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814911"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Intune 'da VPN yapılandırmak için Android kurumsal cihaz ayarları
 
@@ -35,7 +35,10 @@ Intune 'da VPN profilleri hakkında daha fazla bilgi edinmek için bkz. [VPN pro
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Bir cihaz yapılandırma profili oluşturun](vpn-settings-configure.md)ve **Android kurumsal**' i seçin.
+[Android kurumsal VPN cihaz yapılandırma profili](vpn-settings-configure.md)oluşturma:
+
+- Tam olarak yönetilen, adanmış ve şirkete ait iş profili
+- İş profili
 
 ## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Tam olarak yönetilen, adanmış ve şirkete ait Iş profili
 

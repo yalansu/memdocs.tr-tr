@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ca465bf8356a16f9716d45456f9675384ffb518
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: d892142b22c76bae25ff1754dde7cd56a22960d0
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80086413"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815030"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Microsoft Intune’da Android çalıştıran cihazlar için Wi-Fi ayarları ekleme
 
@@ -34,7 +34,7 @@ Bu makalede bu ayarlar açıklanır.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Cihaz profili oluşturma](wi-fi-settings-configure.md).
+[Android Cihaz Yöneticisi Wi-Fi cihaz yapılandırma profili](wi-fi-settings-configure.md)oluşturun.
 
 ## <a name="basic"></a>Temel
 
@@ -42,7 +42,7 @@ Bu makalede bu ayarlar açıklanır.
 - **SSID**: cihazların bağlandığı kablosuz ağın gerçek adı olan **hizmet kümesi tanımlayıcısını**girin. Ancak, kullanıcılar bağlantıyı seçerken yapılandırdığınız **ağ adını** görür.
 - **Gizli ağ**: Cihazdaki kullanılabilir ağlar listesinde bu ağı gizlemek için **Etkinleştir**’i seçin. SSID yayınlanmaz. Cihazdaki kullanılabilir ağlar listesinde bu ağı göstermek için **Devre dışı bırak**’ı seçin.
 
-## <a name="enterprise"></a>Enterprise
+## <a name="enterprise"></a>Kurumsal
 
 - **Wi-Fi türü**: **Kurumsal**’ı seçin.
 - **SSID**: cihazların bağlandığı kablosuz ağın gerçek adı olan **hizmet kümesi tanımlayıcısını**girin. Ancak, kullanıcılar bağlantıyı seçerken yapılandırdığınız **ağ adını** görür.
@@ -51,15 +51,15 @@ Bu makalede bu ayarlar açıklanır.
 
   - **EAP-TLS**: Ayrıca şunları girin:
 
-    - **Server Trust** - Sunucu**doğrulaması için sunucu güveni kök sertifikası**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlanırken bu sertifika sunucuya sunulur. Bağlantının kimliğini doğrular.
+    - **Sunucu güveni**  -  **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlanırken bu sertifika sunucuya sunulur. Bağlantının kimliğini doğrular.
 
-    - **Client Authentication** - İstemci**kimlik doğrulaması (kimlik sertifikası) için**istemci kimlik doğrulaması istemci sertifikası: Ayrıca cihaza dağıtılan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
+    - **Istemci kimlik doğrulaması**  -  **İstemci kimlik doğrulaması Için istemci sertifikası (kimlik sertifikası)**: CIHAZA dağıtılan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.
 
     - **Kimlik gizliliği (dış kimlik)**: EAP kimlik isteğine yanıt olarak gönderilen metni girin. Bu metin herhangi bir değer olabilir, örneğin `anonymous`. Kimlik doğrulaması sırasında başlangıçta bu anonim kimlik gönderilir ve ardından güvenli bir tünelde gerçek kimlik gönderilir.
 
   - **EAP-TTLS**: Ayrıca şunları girin:
 
-    - **Server Trust** - Sunucu**doğrulaması için sunucu güveni kök sertifikası**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlanırken bu sertifika sunucuya sunulur. Bağlantının kimliğini doğrular.
+    - **Sunucu güveni**  -  **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlanırken bu sertifika sunucuya sunulur. Bağlantının kimliğini doğrular.
 
     - **Istemci kimlik doğrulaması**: bir **kimlik doğrulama yöntemi**seçin. Seçenekleriniz şunlardır:
 
@@ -77,14 +77,14 @@ Bu makalede bu ayarlar açıklanır.
 
   - **PEAP**: Ayrıca şunları girin:
 
-    - **Server Trust** - Sunucu**doğrulaması için sunucu güveni kök sertifikası**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlanırken bu sertifika sunucuya sunulur. Bağlantının kimliğini doğrular.
+    - **Sunucu güveni**  -  **Sunucu doğrulaması Için kök sertifika**: var olan bir güvenilen kök sertifika profilini seçin. İstemci ağa bağlanırken bu sertifika sunucuya sunulur. Bağlantının kimliğini doğrular.
 
     - **Istemci kimlik doğrulaması**: bir **kimlik doğrulama yöntemi**seçin. Seçenekleriniz şunlardır:
 
       - **Kullanıcı adı ve Parola**: Bağlantının kimliğini doğrulamak için kullanıcıdan bir kullanıcı adı ve parola girmesini isteyin. Şunları da girin:
         - **Kimlik doğrulaması için EAP dışı yöntem (iç kimlik)**: Bağlantının kimliğini nasıl doğrulayacağınızı seçin. Wi-Fi ağınızda yapılandırılmış olan protokolü seçtiğinizden emin olun. Seçenekleriniz şunlardır:
 
-          - **Yok**
+          - **Hiçbiri**
           - **Microsoft CHAP Sürüm 2 (MS-CHAP v2)**
 
       - **Sertifikalar**: Cihaza da dağıtılmış olan SCEP veya PKCS istemci sertifikası profilini seçin. Bu sertifika, bağlantının kimliğini doğrulamak için cihaz tarafından sunucuya sunulan kimliktir.

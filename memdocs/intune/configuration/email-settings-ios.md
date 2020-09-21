@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72c4405d68d2a1c9a5294a7d05acffb106837f60
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 853804f4c65d1c984e9b301212848c14329cc11e
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996410"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815264"
 ---
 # <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazları için e-posta ayarları ekleme
 
@@ -30,16 +30,18 @@ Bu makalede iOS/ıpados çalıştıran cihazlarda kullanılabilen tüm e-posta a
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Bir cihaz yapılandırma profili oluşturun](email-settings-configure.md).
+[İOS/ıpados e-posta cihaz yapılandırma profili](email-settings-configure.md)oluşturun.
 
 > [!NOTE]
 > Bu ayarlar tüm kayıt türleri için kullanılabilir. Kayıt türleri hakkında daha fazla bilgi için bkz. [iOS/ıpados kaydı](../enrollment/ios-enroll.md).
+>
+> Bu ayarlar [Apple ExchangeActiveSync yükünü](https://developer.apple.com/documentation/devicemanagement/exchangeactivesync) kullanır (Apple 'ın Web sitesini açar).
 
 ## <a name="exchange-activesync-account-settings"></a>Exchange ActiveSync hesap ayarları
 
 - **E-posta sunucusu**: Exchange sunucunuzun konak adını girin.
 - **Hesap adı**: E-posta hesabı için görünen adı girin. Bu ad, cihazlarda kullanıcılara gösterilir.
-- **AAD’den kullanıcı adı özniteliği**: Bu ad, Intune’un Azure Active Directory’den (AAD) aldığı özniteliktir. Intune, bu profil tarafından kullanılan kullanıcı adını dinamik olarak oluşturur. Seçenekleriniz şunlardır:
+- **AAD 'Den Kullanıcı adı özniteliği**: Bu ad, ıntune 'un Azure Active Directory aldığı özniteliktir. Intune, bu profil tarafından kullanılan kullanıcı adını dinamik olarak oluşturur. Seçenekleriniz şunlardır:
   - **Kullanıcı Asıl Adı**: Adı alır; örneğin `user1` veya `user1@contoso.com`
   - **Birincil SMTP adresi**: Adı e-posta adresi biçiminde alır; örneğin `user1@contoso.com`
   - **sAM Hesap Adı**: Etki alanı gerektirir; örneğin `domain\user1`. Şunları da girin:  
@@ -75,7 +77,8 @@ Bu makalede iOS/ıpados çalıştıran cihazlarda kullanılabilen tüm e-posta a
     Varsayılan eylem, [Uygulama Erişim Paneli](/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Uygulama Ekle** özelliğini **iş onayı olmadan** kullanarak uygulama eklemektir. Daha fazla bilgi için bkz. [uygulamalara kullanıcı atama](/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
-  > OAuth’u etkinleştirdiğinizde şunlar olur:  
+  > OAuth’u etkinleştirdiğinizde şunlar olur:
+  >
   > 1. Hedeflenmiş cihazlara yeni bir profil verilir.
   > 2. Son kullanıcılardan kimlik bilgilerini yeniden girmeleri istenir.
 
@@ -157,6 +160,13 @@ Bu makalede iOS/ıpados çalıştıran cihazlarda kullanılabilen tüm e-posta a
 - **İletilerin diğer e-posta hesaplarına taşınmasına Izin ver**: **Etkinleştir** (varsayılan), kullanıcıların cihazlarında yapılandırılan farklı hesaplar arasında e-posta iletilerini taşımasına izin verir.
 - **Üçüncü taraf uygulamalardan e-posta gönderilmesine Izin ver**: **Etkinleştir** (varsayılan), kullanıcıların bu profili e-posta göndermek için varsayılan hesap olarak seçmesine izin verir. Üçüncü taraf uygulamaların, örneğin e-postaya dosya eklemek için yerel e-posta uygulamasında e-posta açmasına izin verilir.
 - **Son kullanılan e-posta adreslerini Eşitle**: **Etkinleştir** (varsayılan), kullanıcıların cihazda son kullanılan e-posta adresi listesini sunucuyla eşitlemesini sağlar.
+- **Hesap başına VPN profili**: IOS/ıpados 14 ' den başlayarak, yerel posta uygulaması için e-posta trafiği, kullanıcının kullandığı hesaba göre bir VPN aracılığıyla yönlendirilebilir. **Hiçbiri**olarak ayarlandığında, Intune bu e-posta profili için hesap başına VPN 'yi etkinleştirmez.
+
+  Oluşturduğunuz uygulama başına VPN bağlantıları bu listede gösterilir. Listeden bir VPN profili seçerseniz, posta uygulamasındaki bu hesaptan gelen ve bu hesaptan gönderilen herhangi bir e-posta, VPN tüneli kullanır. Kullanıcılar, e-posta uygulamasında Kuruluş hesabını kullandıklarında, uygulama başına VPN bağlantısı otomatik olarak açılır.
+
+  Bu özellik şu platformlarda geçerlidir:  
+  - iOS 14 ve üzeri
+  - ıpados 14 ve üzeri
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

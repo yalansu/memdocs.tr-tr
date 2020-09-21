@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8506661c49fa4f9c8481a3caa96883c91e6d8bb
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: b2a948b99abed1f2f7cb988016d047e5d1a86c11
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461768"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814996"
 ---
 # <a name="enroll-android-devices"></a>Android cihazlarını kaydetme
 
@@ -35,13 +35,13 @@ Bir Intune Yöneticisi olarak, Android cihazlarını aşağıdaki yollarla kayde
     - [**Android kurumsal adanmış**](android-kiosk-enroll.md): dijital imza, Bilet yazdırma veya stok yönetimi gibi şirkete ait, tek kullanım cihazları için. Yöneticiler bir cihazın kullanımını sınırlı sayıda uygulama ve web bağlantısına indirger. Ayrıca kullanıcılar başka uygulama ekleyemez veya farklı eylemler gerçekleştiremez.
     - [**Android kurumsal tam olarak yönetilen**](android-fully-managed-enroll.md): şirkete ait, tek kullanıcı cihazları için özel olarak çalışır ve kişisel kullanım için kullanılır. Yöneticiler cihazın tamamını yönetebilir ve ilke denetimlerini iş profilleri için kullanılamaz hale getirebilirsiniz.
     - [**Android kurumsal şirkete ait iş profili**](android-corporate-owned-work-profile-enroll.md): Kurumsal ve kişisel kullanım için tasarlanan şirkete ait, tek kullanıcı cihazları için.
-- Samsung KNOX Standard cihazlar ve [Zeköşeli cihazlar](../configuration/android-zebra-mx-overview.md)dahil olmak üzere [**Android Cihaz Yöneticisi**](android-enroll-device-administrator.md). 
+- Samsung KNOX Standard cihazlar ve [Zeköşeli cihazlar](../configuration/android-zebra-mx-overview.md)dahil olmak üzere [**Android Cihaz Yöneticisi**](android-enroll-device-administrator.md). Android Enterprise 'ın kullanılabildiği alanlarda, Google, yeni Android sürümlerindeki yönetim desteğini azaltarak Cihaz Yöneticisi (DA) yönetimi kapalı teşvik. Ancak, Android Enterprise veya GMS 'nin kullanılamadığı durumlarda, Cihaz Yöneticisi 'ni kullanmak ve bu değişiklikleri öğrenmek isteyeceksiniz. Daha fazla bilgi için bkz. [ülkenizde Android kurumsal mi var](https://support.google.com/work/android/answer/6270910)?
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Mobil cihazların yönetimine hazırlık olarak, **Microsoft Intune**’a mobil cihaz yönetimi (MDM) yetkilisi ayarlamanız gerekir. Yönergeler için bkz. [MDM yetkilisini ayarlama](../fundamentals/mdm-authority-set.md). Bu öğeyi yalnızca mobil cihaz yönetimi için Intune’u ilk defa kurduğunuzda ayarlayabilirsiniz.
 
-Android Enterprise için, Android Enterprise 'ın ülkenizde veya bölgenizde kullanılabilir olduğundan emin olmak için Google 'daki aşağıdaki destek makalesine bakın:https://support.google.com/work/android/answer/6270910
+Android Enterprise için, Android Enterprise 'ın ülkenizde veya bölgenizde kullanılabilir olduğundan emin olmak için Google 'daki aşağıdaki destek makalesine bakın: https://support.google.com/work/android/answer/6270910
 
 Zeköşeli teknolojiler tarafından üretilen cihazlarda, belirli bir cihazın özelliklerine bağlı olarak Şirket Portalı ek izinler vermeniz gerekebilir. [Zeköşeli cihazlarda Mobility uzantılarında](../configuration/android-zebra-mx-overview.md) daha fazla ayrıntı vardır.
 

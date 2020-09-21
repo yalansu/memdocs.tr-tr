@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c342fcb4c7930861e4b851cba5c7d203f159dee
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2f4683f3c7a243c6342d5fed99b534767bb943fd
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915220"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815013"
 ---
 # <a name="android-device-administrator-enrollment"></a>Android cihaz yöneticisi kaydı
 
@@ -32,6 +32,9 @@ Android Cihaz Yöneticisi (bazen "eski" Android yönetimi ve Android 2,2 ile kul
 Bu nedenle, bu tür azaltılmış işlevselliği önlemek için aşağıda açıklanan Cihaz Yöneticisi işlemini kullanarak yeni cihazların kaydedilmesini öneririz.
 
 Aynı nedenlerden dolayı, cihazların Android 10 ' a güncelleyecekse Cihaz Yöneticisi yönetiminden da cihazları geçirmeniz önerilir. 
+
+> [!IMPORTANT]
+> Android Enterprise 'ın kullanılabildiği alanlarda, Google, yeni Android sürümlerindeki yönetim desteğini azaltarak Cihaz Yöneticisi (DA) yönetimi kapalı teşvik. Ancak, Android Enterprise veya GMS 'nin kullanılamadığı durumlarda, Cihaz Yöneticisi 'ni kullanmak ve bu değişiklikleri öğrenmek isteyeceksiniz. Daha fazla bilgi için bkz. [ülkenizde Android kurumsal mi var](https://support.google.com/work/android/answer/6270910)?
 
 Kullanıcıların, Android cihazlarını Cihaz Yöneticisi yönetimine kaydetmesine hala karar verirseniz, sonraki bölüme geçin.  
 

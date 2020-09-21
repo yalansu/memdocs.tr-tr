@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: a2b404e1741c93a6dbf5023f394f3b9528020617
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 764e8f64380d917fa5bf8ebcbed3981e5ad7652e
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913469"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814816"
 ---
 # <a name="attack-surface-reduction-policy-settings-for-endpoint-security-in-intune"></a>Intune 'da Endpoint Security için saldırı yüzeyi Azaltma ilkesi ayarları
 
@@ -445,6 +445,18 @@ Desteklenen platformlar ve profiller:
 
   - **Ek** olarak Izin verilen Bluetooth hizmetleri ve profillerini, gibi onaltılı dizeler olarak belirtin `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}` .
   - **Içeri aktarma** -Bluetooth hizmetleri ve profillerinin bir listesini içeren bir. csv dosyasını, örneğin `{782AFCFC-7CAA-436C-8BF0-78CD0FFBD4AF}`
+
+- **Çıkarılabilir depolama birimi**  
+  CSP: [Storage/RemovableDiskDenyWriteAccess](/windows/client-management/mdm/policy-csp-storage#storage-removablediskdenywriteaccess) 
+
+  - **Engelle** (*varsayılan*)-KULLANıCıLARıN, cihaz ile SD kartları gibi dış depolama cihazlarını kullanmalarını engelleyin.
+  - **Yapılandırılmadı**
+
+- **USB bağlantıları (yalnızca HoloLens)**  
+  CSP: [bağlantı/AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
+
+  - **Block** -dosyaları eşitlemek veya uygulamaları dağıtmak veya hata ayıklamak üzere geliştirici araçlarını kullanmak için cihaz ile BILGISAYAR arasında USB bağlantısı kullanılmasını engelleyin. USB ücretlendirme etkilenmez.
+  - **Yapılandırılmadı** (*varsayılan*)
 
 ## <a name="exploit-protection-profile"></a>Exploit Protection profili
 

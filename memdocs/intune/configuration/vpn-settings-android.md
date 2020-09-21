@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13d1f65ab9164c20923fa7293b19bc707718d6a7
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: 41b1bbe90d9cda68b9e9f37206eadbd9dbffce09
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146397"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814799"
 ---
 # <a name="android-device-settings-to-configure-vpn-in-intune"></a>Intune 'da VPN yapılandırmak için Android cihaz ayarları
 
@@ -32,7 +32,7 @@ Intune 'da VPN profilleri hakkında daha fazla bilgi edinmek için bkz. [VPN pro
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Bir cihaz yapılandırma profili oluşturun](vpn-settings-configure.md)ve **Android Cihaz Yöneticisi**' ni seçin.
+[Android cihaz YÖNETICISI VPN cihaz yapılandırma profili](vpn-settings-configure.md)oluşturun.
 
 ## <a name="base-vpn"></a>Taban VPN
 

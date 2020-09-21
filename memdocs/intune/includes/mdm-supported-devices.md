@@ -15,9 +15,8 @@
 
   Windows 10 2019 LTSC çalıştıran cihazları yönetme hakkında daha fazla bilgi için bkz. [Windows 10 Enterprise 2019 ltsc 'deki](/windows/whats-new/ltsc/whats-new-windows-10-2019) yenilikler
   
-- Windows 10 Mobile
+
 - Windows 10 IoT Enterprise (x86, x64)
-- Windows 10 IoT Mobile Enterprise
 - Windows 10 Holographic for Business
 
   Windows Holographic for Business çalıştıran cihazları yönetme hakkında daha fazla bilgi için bkz. [Window Holographic for Business desteği](../fundamentals/windows-holographic-for-business.md).

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28ca32bc65ee0c4647c22b10b6b5d47a25efa202
-ms.sourcegitcommit: d4ed7b4369389fd8ab07d28a7fa507797b6c6e57
+ms.openlocfilehash: 02212ddeb4c2522738389c152c038e59fe1db92b
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643614"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814894"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Intune ile PKCS sertifikalarını yapılandırma ve kullanma
 
@@ -214,7 +214,11 @@ Başlamadan önce, [bağlayıcının gereksinimlerini gözden geçirin](certific
    - **Açıklama**: profil için bir açıklama girin. Bu ayar isteğe bağlıdır ancak önerilir.
 
 6. **İleri**’yi seçin.
-7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:-Android Cihaz Yöneticisi-Android Enterprise-iOS/ıpados-Windows 10
+7. **Yapılandırma ayarları**' nda, seçtiğiniz platforma bağlı olarak, yapılandırabileceğiniz ayarlar farklıdır. Ayrıntılı ayarlar için platformunuzu seçin:
+   - Android cihaz yöneticisi
+   - Android Kurumsal
+   - iOS/iPadOS
+   - Windows 10
    
    |Ayar     | Platform     | Ayrıntılar   |
    |------------|------------|------------|
@@ -224,9 +228,9 @@ Başlamadan önce, [bağlayıcının gereksinimlerini gözden geçirin](certific
    |**Sertifika yetkilisi**      |<ul><li>Tümü         |Kuruluş sertifika yetkilinizin iç tam etki alanı adını (FQDN) görüntüler.  |
    |**Sertifika yetkilisi adı** |<ul><li>Tümü         |Kuruluş SERTIFIKA yetkilinizin adını (örneğin, "contoso sertifika yetkilisi") listeler. |
    |**Sertifika şablonu adı**    |<ul><li>Tümü         |Sertifika şablonunuzun adını listeler. |
-   |**Sertifika türü**             |<ul><li>Android Enterprise (*Iş profili*)</li><li>iOS</li><li>macOS</li><li>Windows 10 ve üzeri|Bir tür seçin: <ul><li> **Kullanıcı** sertifikaları hem Kullanıcı hem de cihaz özniteliklerini, sertifikanın konu ve San 'ı içerebilir. </il><li>**Cihaz** sertifikaları, sertifikanın konu ve San 'ı yalnızca cihaz özniteliklerini içerebilir. Cihazı, bilgi noktaları veya diğer paylaşılan cihazlar gibi Kullanıcı-daha az cihazlar gibi senaryolar için kullanın.  <br><br> Bu seçim konu adı biçimini etkiler. |
+   |**Sertifika türü**             |<ul><li>Android Enterprise (*Iş profili*)</li><li>iOS</li><li>macOS</li><li>Windows 10 ve üzeri|Bir tür seçin: <ul><li> **Kullanıcı** sertifikaları, sertifikanın konu ve konu alternatif adı (San) içinde hem Kullanıcı hem de cihaz özniteliklerini içerebilir. </il><li>**Cihaz** sertifikaları, sertifikanın konu ve San 'ı yalnızca cihaz özniteliklerini içerebilir. Cihazı, bilgi noktaları veya diğer paylaşılan cihazlar gibi Kullanıcı-daha az cihazlar gibi senaryolar için kullanın.  <br><br> Bu seçim konu adı biçimini etkiler. |
    |**Konu adı biçimi**          |<ul><li>Tümü         |Konu adı biçiminin nasıl yapılandırılacağı hakkında ayrıntılı bilgi için bu makalenin ilerleyen kısımlarında yer alan [Konu adı biçimi](#subject-name-format) bölümüne bakın.  <br><br> Çoğu platformda, aksi belirtilmedikçe **ortak ad** seçeneğini kullanın. <br><br>Aşağıdaki platformlar için konu adı biçimi sertifika türü tarafından belirlenir: <ul><li>Android Enterprise (*Iş profili*)</li><li>iOS</li><li>macOS</li><li>Windows 10 ve üzeri</li></ul>  <p>  |
-   |**Konu diğer adı**     |<ul><li>Tümü         |*Öznitelik*için, aksi belirtilmedikçe **Kullanıcı asıl adı (UPN)** seçeneğini belirleyin, karşılık gelen bir *değeri*yapılandırın ve ardından **Ekle**' ye tıklayın. <br><br>Daha fazla bilgi için bu makalenin ilerleyen kısımlarında [Konu adı biçimi](#subject-name-format) bölümüne bakın.|
+   |**Konu diğer adı**     |<ul><li>Tümü         |*Öznitelik*için, aksi belirtilmedikçe **Kullanıcı asıl adı (UPN)** seçeneğini belirleyin, karşılık gelen bir *değeri*yapılandırın ve ardından **Ekle**' ye tıklayın. <br><br> Her iki sertifika türünün SAN 'ı için değişkenleri veya statik metni kullanabilirsiniz. Değişken kullanımı gerekli değildir.<br><br>Daha fazla bilgi için bu makalenin ilerleyen kısımlarında [Konu adı biçimi](#subject-name-format) bölümüne bakın.|
    |**Genişletilmiş anahtar kullanımı**           |<ul><li> Android cihaz yöneticisi </li><li>Android Enterprise (*cihaz sahibi*, *iş profili*) </li><li>Windows 10 |Sertifikalar genellikle kullanıcı veya cihazın bir sunucuda kimliğini doğrulayabilmesi için *Istemci kimlik doğrulaması* gerektirir. |
    |**Tüm uygulamaların özel anahtara erişimine izin ver** |<ul><li>macOS  |İlişkili Mac cihaz için yapılandırılmış uygulamaların PKCS Certificates özel anahtarına erişimi **sağlamak için '** i ayarlayın. <br><br> Bu ayar hakkında daha fazla bilgi için Apple geliştirici belgelerindeki [yapılandırma profili başvurusunun](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) sertifika yükü *bölümüne bakın.* |
    |**Kök sertifika**             |<ul><li>Android cihaz yöneticisi </li><li>Android Enterprise (*cihaz sahibi*, *iş profili*) |Daha önce atanmış olan bir kök CA sertifika profili seçin. |

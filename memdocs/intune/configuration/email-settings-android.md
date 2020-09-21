@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 195e7d42a7244976e7a631c0e8397875b8541273
-ms.sourcegitcommit: 8999e197f10fb72d1b82f30a599d1e588db237b7
+ms.openlocfilehash: fdf729b45f49e09bfb633afdc36df2ef13c4137e
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88146057"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815281"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Intune 'da e-posta, kimlik doğrulama ve eşitlemeyi yapılandırmak için Android cihaz ayarları
 
@@ -32,7 +32,7 @@ Intune 'da e-posta profilleri hakkında daha fazla bilgi için bkz. [e-posta aya
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Bir cihaz yapılandırma profili oluşturun](email-settings-configure.md).
+[Android Cihaz Yöneticisi e-posta cihaz yapılandırma profili](email-settings-configure.md)oluşturun.
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f91de698a518a8f8530ae42d5a8842d7876074a1
-ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
+ms.openlocfilehash: 577cec0a37d106b7ac772c2853bb7239caf55028
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076228"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814833"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Microsoft Intune kimlik doğrulaması için sertifikaları kullanma
 
@@ -30,7 +30,7 @@ VPN, Wi-Fi veya e-posta profilleri aracılığıyla kullanıcılarınızın uygu
 
 ## <a name="intune-supported-certificates-and-usage"></a>Intune tarafından desteklenen sertifikalar ve kullanım
 
-| Tür              | Kimlik Doğrulaması | S/MIME Imzalama | S/MIME şifrelemesi  |
+| Tür              | Kimlik doğrulama | S/MIME Imzalama | S/MIME şifrelemesi  |
 |--|--|--|--|
 | Ortak anahtar şifreleme standartları (PKCS) içeri aktarılan sertifika |  | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)|
 | PKCS#12 (veya PFX)    | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) |  |
@@ -81,7 +81,7 @@ Bir Microsoft sertifika yetkilisi (CA) kullandığınızda:
 
 | Platform              | Güvenilen sertifika profili | PKCS sertifika profili | SCEP sertifika profili | PKCS içeri aktarılan sertifika profili  |
 |--|--|--|--|---|
-| Android cihaz yöneticisi | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)|  ![Desteklenir](./media/certificates-configure/green-check.png) |
+| Android cihaz yöneticisi | ![Destekleniyor](./media/certificates-configure/green-check.png) <br>*(bkz. **Note 1**)*| ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)|  ![Desteklenir](./media/certificates-configure/green-check.png) |
 | Android Kurumsal <br> -Tam olarak yönetilen (cihaz sahibi)   | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png) |  ![Desteklenir](./media/certificates-configure/green-check.png)  |
 | Android Kurumsal <br> -Adanmış (cihaz sahibi)   | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png)|
 | Android Kurumsal <br> -Şirkete ait Iş profili   | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png)  | ![Desteklenir](./media/certificates-configure/green-check.png)  |
@@ -90,6 +90,8 @@ Bir Microsoft sertifika yetkilisi (CA) kullandığınızda:
 | macOS                 | ![Desteklenir](./media/certificates-configure/green-check.png) |  ![Desteklenir](./media/certificates-configure/green-check.png) |![Desteklenir](./media/certificates-configure/green-check.png)|![Desteklenir](./media/certificates-configure/green-check.png)|
 | Windows 8.1 ve üzeri |![Desteklenir](./media/certificates-configure/green-check.png)  |  |![Desteklenir](./media/certificates-configure/green-check.png) |   |
 | Windows 10 ve üzeri  | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) | ![Desteklenir](./media/certificates-configure/green-check.png) |
+
+- ***Note 1*** -Android 11 ' den başlayarak, güvenilen sertifika profilleri artık *Android Cihaz Yöneticisi*olarak kaydedilen cihazlara güvenilen kök sertifikayı yükleyemez. Bu sınırlama Samsung Knox için geçerlidir. Daha fazla bilgi için bkz. [Android Cihaz Yöneticisi Için güvenilen sertifika profilleri](#trusted-certificate-profiles-for-android-device-administrator).
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Güvenilen kök CA sertifikasını dışarı aktarma
 
@@ -108,12 +110,25 @@ SCEP sertifika profilleri doğrudan bir güvenilen sertifika profiline başvurur
 Desteklemek istediğiniz her cihaz platformu için, SCEP, PKCS ve PKCS içeri aktarılan sertifika profillerinde yaptığınız gibi ayrı bir güvenilen sertifika profili oluşturun.
 
 > [!IMPORTANT]
-> Platform *Windows 10 ve üzeri*için oluşturduğunuz güvenilen kök profiller, Microsoft Endpoint Manager Yönetim merkezinde Platform *Windows 8.1 ve üzeri*için profiller olarak görüntülenir. 
+> Platform *Windows 10 ve üzeri*için oluşturduğunuz güvenilen kök profiller, Microsoft Endpoint Manager Yönetim merkezinde Platform *Windows 8.1 ve üzeri*için profiller olarak görüntülenir.
 >
 > Bu, güvenilen sertifika profilleri için platform sunumuyla ilgili bilinen bir sorundur. Profil bir Windows 8.1 platformunu ve daha sonrasını görüntülediğinde, Windows 10 ve üzeri sürümlerde çalışır.
 
 > [!NOTE]
 > Intune 'daki *Güvenilen sertifika* profili yalnızca kök ya da ara sertifikaları sağlamak için kullanılabilir. Bu tür sertifikaları dağıtmanın amacı, bir güven zinciri sağlamaktır. Kök veya ara sertifikalar dışında sertifikalar sağlamak için güvenilen sertifika profili kullanmak Microsoft tarafından desteklenmez. Intune portalında güvenilen sertifika profilini seçerken kök veya ara sertifika olarak kabul edilen sertifikaları içeri aktarma işlemi engellenmiş olabilir. Bu profil türünü kullanan bir kök veya ara sertifika olmayan bir sertifikayı içeri aktarıp dağıtabseniz bile, iOS ve Android gibi farklı platformlar arasında beklenmedik sonuçlarla karşılaşacaksınız.
+
+### <a name="trusted-certificate-profiles-for-android-device-administrator"></a>Android Cihaz Yöneticisi için güvenilen sertifika profilleri
+
+Android 11 ' den başlayarak, güvenilen bir kök sertifikayı *Android Cihaz Yöneticisi*olarak kaydedilen cihazlara dağıtmak için artık güvenilen bir sertifika profili kullanamazsınız. Bu sınırlama Samsung Knox için geçerlidir.
+
+SCEP sertifika profilleri hem güvenilen kök sertifikanın bir cihaza yüklenmesini gerektirdiğinden hem de bu sertifikaya başvuran bir güvenilen sertifika profiline başvurmalıdır, bu sınırlamaya geçici çözüm bulmak için aşağıdaki adımları kullanın:
+
+1. Cihazı güvenilir kök sertifikaya el ile sağlayın.
+2. Cihaza, cihaza yüklediğiniz güvenilen kök sertifikaya başvuran bir güvenilen kök sertifika profili olan cihaza dağıtın.
+3. Güvenilir kök sertifika profiline başvuran cihaza bir SCEP sertifika profili dağıtın.
+Bu sorun, SCEP sertifika profilleriyle sınırlı değildir. Bu nedenle, güvenilen kök sertifikayı geçerli cihazlara el ile yüklemeyi planlayın, PKCS sertifika profillerini kullanmanız gerekir veya PKCS Içeri aktarılan sertifika profilleri bunu gerektirir.
+
+Techcommunity.microsoft.com adresinden [Android Cihaz Yöneticisi desteğini azaltma](https://techcommunity.microsoft.com/t5/intune-customer-success/decreasing-support-for-android-device-administrator/ba-p/1441935) hakkında daha fazla bilgi edinin.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Güvenilen bir sertifika profili oluşturmak için
 
@@ -135,7 +150,7 @@ Desteklemek istediğiniz her cihaz platformu için, SCEP, PKCS ve PKCS içeri ak
 
 6. **İleri**’yi seçin.
 
-7. **Yapılandırma ayarları**' nda, önceden verdiğiniz GÜVENILEN kök CA sertifikası için. cer dosyasını belirtin. 
+7. **Yapılandırma ayarları**' nda, önceden verdiğiniz GÜVENILEN kök CA sertifikası için. cer dosyasını belirtin.
 
    Yalnızca Windows 8.1 ve Windows 10 cihazları için, güvenilen sertifika için **Hedef Depo** olarak şunlardan birini seçin:
 

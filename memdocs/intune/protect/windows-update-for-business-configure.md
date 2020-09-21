@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/15/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8d6bb9e69831d2804d93d3694671f8dd27da305
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ce540e15427dd425734d2ee95fbf25040bf29efb
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88915985"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814945"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Intune’da Windows 10 yazılım güncelleştirmelerini yönetme
 
@@ -154,7 +154,7 @@ Bir güncelleştirme halkası duraklatıldığında, bu güncelleştirme halkas�
 2. **Özelliklerin** veya **kalite** güncelleştirmelerinin her birini sürdürmesini sağlamak için kullanılabilir seçenekler arasından seçim yapın ve ardından **Tamam**' ı seçin.
 3. Bir güncelleştirme türü için duraklama 'yı genişlettikten sonra, diğer güncelleştirme türünü genişletmek için yeniden Genişlet seçeneğini belirleyebilirsiniz.
 
-#### <a name="uninstall"></a>Kaldırma  
+#### <a name="uninstall"></a>Kaldır  
 
 Bir Intune Yöneticisi, etkin veya duraklatılmış bir güncelleştirme halkası için en son *özellik* güncelleştirmesini veya en son *kalite* güncelleştirmesini kaldırmak (geri almak) için **kaldırmayı** kullanabilir. Bir tür kaldırıldıktan sonra, diğer türü kaldırabilirsiniz. Intune, kullanıcıların güncelleştirmeleri kaldırma yeteneğini desteklemez veya yönetemez.  
 
@@ -248,6 +248,8 @@ Bu bölmeden şunları yapabilirsiniz:
 ## <a name="validation-and-reporting-for-windows-10-updates"></a>Windows 10 güncelleştirmeleri için doğrulama ve raporlama
 
 Hem Windows 10 güncelleştirme halkaları hem de Windows 10 özellik güncelleştirmeleri için cihazların güncelleştirme durumunu izlemek üzere [güncelleştirmeler Için Intune uyumluluk raporları](windows-update-compliance-reports.md) ' nı kullanın. Bu çözüm, Azure aboneliğinizle birlikte [güncelleştirme uyumluluğu](/windows/deployment/update/update-compliance-monitor) kullanır.
+
+Windows 10 özellik güncelleştirme başarısızlıklarını izlemek için **özellik güncelleştirme arızalarını** raporunu kullanın. Bu rapor, bir **Windows 10 özellik güncelleştirmeleri** ilkesiyle hedeflenen ve bir güncelleştirmeyi denemeyen cihazlara yönelik hata ayrıntıları sağlar. [Microsoft Uç Nokta Yöneticisi Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431), **Devices**  >  **Monitor**  >  Bu raporu görüntülemek için cihazlar**özelliği güncelleştirme başarısızlıklarını** göster ' i seçebilirsiniz. Daha fazla bilgi için bkz. [Intune raporları](../fundamentals/reports.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

@@ -11,24 +11,48 @@ metadata:
   author: mestew
   ms.author: mstewart
   ms.date: 04/01/2020
-  ms.openlocfilehash: 80a602c8aa6be7599bbb579f41f34fb560d903c3
-  ms.sourcegitcommit: 42882de75c8a984ba35951b1165c424a7e0ba42e
+  ms.openlocfilehash: b3d6c2510cb26fb520c3b765a0931991aaed6e14
+  ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/28/2020
-  ms.locfileid: "89067996"
+  ms.lasthandoff: 09/18/2020
+  ms.locfileid: "90802831"
 landingContent:
 - title: Kiracı ekleme hakkında
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: Kiracı eklemeyi etkinleştirme
       url: device-sync-actions.md
-    - text: ConfigMgr istemci detaylarını görüntüle (önizleme)
-      url: client-details.md
   - linkListType: reference
     links:
     - text: Kiracı ekleme ve cihaz eylemleri sorunlarını giderme
       url: troubleshoot.md
     - text: ConfigMgr istemci detayları sorunlarını giderme (önizleme)
       url: troubleshoot-client-details.md
+- title: Karşıya yüklenen cihazlar hakkında bilgi alma
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: ConfigMgr istemci detaylarını görüntüle (önizleme)
+      url: client-details.md
+    - text: Cihaz zaman çizelgesi (önizleme)
+      url: timeline.md
+    - text: Kaynak gezgini (önizleme)
+      url: resource-explorer.md
+- title: Sık kullanılan görevler
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Betikleri çalıştırma
+      url: scripts.md
+    - text: Uygulamaları yükleme
+      url: applications.md
+    - text: CMPivot’u başlatma
+      url: cmpivot-start.md
+  - linkListType: concept
+    links:
+    - text: CMPivot kullanıma genel bakış
+      url: cmpivot-overview-attached.md
+    - text: CMPivot örnek betikleri
+      url: cmpivot-samples-attached.md

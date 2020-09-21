@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/17/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a3954057d14aaf24a1a0147d9717cfc01413d51
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 2047e0224294156a3de5dd08b163c8fd40687e0f
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914931"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815047"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarını yapılandırmak için güvenlik temellerini kullanma
 
@@ -53,11 +53,13 @@ Güvenlik temelleri, Microsoft 365 çalışırken uçtan uca güvenli bir iş ak
 Aşağıdaki güvenlik temeli örnekleri Intune ile kullanılabilir. Her bir taban çizgisinin en son örneğine ilişkin ayarları görüntülemek için bağlantıları kullanın.
 
 - **MDM güvenlik temeli**
+  - [Eylül 2019 için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
   - [2019 Mayıs için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Önizleme: 2018 Ekim için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
 - **Microsoft Defender ATP temeli** 
    *(Bu temeli kullanmak için ortamınızın [Microsoft Defender Gelişmiş tehdit koruması](advanced-threat-protection.md#prerequisites)'nı kullanmaya yönelik önkoşulları karşılaması gerekir)*.
+  - [Eylül 2020 için Microsoft Defender ATP temeli-sürüm 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
   - [Nisan 2020 için Microsoft Defender ATP temeli-sürüm 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
   - [Mart 2020 için Microsoft Defender ATP temeli-sürüm 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 

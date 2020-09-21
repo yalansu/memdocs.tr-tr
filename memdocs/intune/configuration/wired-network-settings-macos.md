@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/28/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1da738611dd5fe114054645170d2b49ef12f0523
-ms.sourcegitcommit: e8076576f5c0ea7e72358d233782f8c38c184c8f
+ms.openlocfilehash: 23878b08e783240d53ec8a205ba79b73b6d9faf2
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334615"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815468"
 ---
 # <a name="add-wired-network-settings-for-macos-devices-in-microsoft-intune"></a>Microsoft Intune 'de macOS cihazları için kablolu ağ ayarları ekleme
 
@@ -32,7 +32,7 @@ Bu makalede, yapılandırabileceğiniz ayarlar açıklanmaktadır.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Kablolu ağ aygıtı yapılandırma profili oluşturun](wired-networks-configure.md).
+[MacOS kablolu ağ cihazı yapılandırma profili](wired-networks-configure.md)oluşturun.
 
 > [!NOTE]
 > Bu ayarlar tüm kayıt türleri için kullanılabilir. Kayıt türleri hakkında daha fazla bilgi için bkz. [MacOS kaydı](../enrollment/macos-enroll.md).

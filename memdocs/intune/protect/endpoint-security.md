@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 09/21/2020
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: mattsha
-ms.openlocfilehash: e3ab2e31aa8a35ef04c150972cd7bb7650e46040
-ms.sourcegitcommit: 97f150f8ba8be8746aa32ebc9b909bb47e22121c
+ms.openlocfilehash: 8d02f32d11cedae94cc179f6a7bdeba553063c8d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84879703"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815400"
 ---
 # <a name="manage-endpoint-security-in-microsoft-intune"></a>Microsoft Intune uç nokta güvenliğini yönetme
 
@@ -29,7 +29,7 @@ Güvenlik Yöneticisi olarak, cihaz güvenliğini yapılandırmak ve bu cihazlar
 
 Uç nokta güvenlik düğümü, Intune aracılığıyla cihazları güvenli tutmak için kullanabileceğiniz araçları gruplandırır:
 
-- **Tüm yönetilen cihazlarınızın durumunu gözden geçirin**. Cihaz uyumluluğunu yüksek bir düzeyden görüntüleyebileceğiniz [tüm cihazlar](#manage-devices) görünümünü kullanın ve ardından bunları çözebilmeniz için hangi uyumluluk ilkelerinin karşılanmadığını anlamak üzere belirli cihazlara gidebilirsiniz.
+- **Tüm yönetilen cihazlarınızın durumunu gözden geçirin**. Cihaz uyumluluğunu yüksek bir düzeyden görüntüleyebileceğiniz [tüm cihazlar](#manage-devices) görünümünü kullanın. Daha sonra, belirli cihazlarda detaya geçmek için, hangi uyumluluk ilkelerinin karşılanmadığını anlayabilmeniz için bu kuralları çözebilirsiniz.
 
 - **Cihazlar için en iyi yöntem güvenlik yapılandırmalarının temelini oluşturan güvenlik temellerini dağıtın**. Intune, Windows cihazlarına yönelik [güvenlik temellerini](#manage-security-baselines) ve Microsoft Defender Gelişmiş tehdit koruması (MICROSOFT Defender ATP) ve Microsoft Edge gibi büyüyen bir uygulamalar listesi içerir. Güvenlik temelleri, bilinen bir ayar grubunu ve ilgili güvenlik ekiplerinin önermediği varsayılan değerleri uygulamanıza yardımcı olan önceden yapılandırılmış Windows ayarları gruplarıdır.
 
@@ -137,7 +137,7 @@ Intune çeşitli [Mobile Threat Defense iş ortaklarıyla](../protect/mobile-thr
 Microsoft Endpoint Manager Yönetim Merkezi 'nin uç nokta güvenlik düğümündeki görevleri yönetmek için bir hesabın olması gerekir:
 
 - Intune için bir lisans atanması.
-- Rol tabanlı erişim denetimi (RBAC) izinlerinin **Endpoint Security Manager**'ın yerleşik Intune rolü tarafından belirtilen izinlere eşit olması gerekir. *Endpoint Security Manager* rolü Microsoft Endpoint Manager yönetim merkezine erişim izni verir. Bu rol, güvenlik temelleri, cihaz uyumluluğu, koşullu erişim ve Microsoft Defender ATP dahil olmak üzere güvenlik ve uyumluluk özelliklerini yöneten kişiler tarafından kullanılabilir.
+- Rol tabanlı erişim denetimi (RBAC) izinlerinin  **Endpoint Security Manager**'ın yerleşik Intune rolü tarafından belirtilen izinlere eşit olması gerekir. *Endpoint Security Manager* rolü Microsoft Endpoint Manager yönetim merkezine erişim izni verir. Bu rol, güvenlik temelleri, cihaz uyumluluğu, koşullu erişim ve Microsoft Defender ATP dahil olmak üzere güvenlik ve uyumluluk özelliklerini yöneten kişiler tarafından kullanılabilir.
 
 Daha fazla bilgi için bkz. [rol tabanlı erişim denetimi (RBAC) Microsoft Intune ile](../fundamentals/role-based-access-control.md)
 
@@ -158,7 +158,7 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
   - Oluştur
   - Sil
   - Okuma
-  - Güncelleştirme
+  - Güncelleştir
   - Raporları görüntüle
 - **Cihaz yapılandırmaları**
   - Okuma
@@ -178,7 +178,7 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
   - Sil
   - Okuma
   - Birincil kullanıcıyı ayarla
-  - Güncelleştirme
+  - Güncelleştir
 - **Mobil uygulamalar**
   - Okuma
 - **Kuruluş**
@@ -188,7 +188,14 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
 - **Uzaktan yardım**
   - Okuma
 - **Uzak görevler**
-  - Filekasa anahtarını alın.
+  - Filekasa anahtarını al
+  - Yapılandırma Yöneticisi eylemini Başlat
+  - Microsoft Defender
+  - Şimdi yeniden Başlat
+  - Uzaktan kilitleme
+  - BitLockerKeys 'i döndürme (Önizleme)
+  - Filekasa anahtarını döndür
+  - Cihazları eşitleme
 - **Roller**
   - Okuma
 - **Güvenlik temelleri**
@@ -196,10 +203,10 @@ Microsoft Endpoint Manager Yönetim merkezinde aşağıdaki izin listesini, **ki
   - Oluştur
   - Sil
   - Okuma
-  - Güncelleştirme
+  - Güncelleştir
 - **Güvenlik görevleri**
   - Okuma
-  - Güncelleştirme
+  - Güncelleştir
 - **Telekom giderleri**
   - Okuma
 - **Hüküm ve koşullar**

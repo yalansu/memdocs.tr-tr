@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b716a7e85f817e95a9f1fec992458e052570d81
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: f10a84415f42632b0a9d7b17829feb0b7c99d0a4
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429525"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815417"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-and-system-extensions-in-intune"></a>Intune 'da çekirdek ve sistem uzantılarını yapılandırmak ve kullanmak için macOS cihaz ayarları
 
@@ -37,7 +37,7 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[MacOS Uzantıları yapılandırma profili oluşturun](kernel-extensions-overview-macos.md).
+[MacOS uzantıları cihaz yapılandırma profili](kernel-extensions-overview-macos.md)oluşturun.
 
 > [!NOTE]
 > Bu ayarlar farklı kayıt türleri için geçerlidir. Farklı kayıt türleri hakkında daha fazla bilgi için bkz. [MacOS kaydı](../enrollment/macos-enroll.md).

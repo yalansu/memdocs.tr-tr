@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62348a4e551112a93f960388d6e21b398c447dfc
-ms.sourcegitcommit: b4b75876839e86357ef5804e5a0cf7a16c8a0414
+ms.openlocfilehash: 0aef706071952dc632161f4c73e380c5af3ae99d
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85502383"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815149"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Intune 'da Android ve Samsung KNOX Standard cihaz kısıtlama ayarları listeleri
 
@@ -32,7 +32,7 @@ Bu makalede, Android çalıştıran cihazlar için yapılandırabileceğiniz tü
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Bir cihaz yapılandırma profili oluşturun](device-restrictions-configure.md).
+[Android Cihaz Yöneticisi cihaz kısıtlamaları yapılandırma profili](device-restrictions-configure.md)oluşturun.
 
 ## <a name="general"></a>Genel
 
@@ -58,18 +58,62 @@ Bu makalede, Android çalıştıran cihazlar için yapılandırabileceğiniz tü
 
 ## <a name="password"></a>Parola
 
+- **Şifreleme**: cihazdaki dosyaların şifrelenmesi için **gerektir** ' i seçin. Tüm cihazlar şifrelemeyi desteklemez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Bu ayarı yapılandırmak ve uyumluluğu doğru şekilde raporlamak için aşağıdakileri de yapılandırın:
+  1. **Password**: **gerektir**olarak ayarlayın.
+  2. **Gerekli parola türü**: **en az sayısal**olarak ayarlanır.
+  3. **Minimum parola uzunluğu**: en az olarak ayarlanır `4` .
+
+  > [!NOTE]
+  > Bir şifreleme ilkesi uygulanırsa Samsung Knox cihazlar, kullanıcıların cihaz parolası olarak 6 karakterli karmaşık bir parola ayarlamasını gerektirir.
+
+### <a name="all-android-devices"></a>Tüm Android cihazlar
+
+Bu ayarlar şu cihazlarda geçerlidir:  
+- Android 4,0 ve üzeri
+- Knox 4,0 ve üzeri
+
+- **Ekran kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazın boşta kalması gereken süreyi girin. Örneğin, `5` 5 dakika çalıştıktan sonra cihazları kilitlemek için yazın. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  Bir cihazda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil dakikalar olarak ayarlandıysa `15` , kullanıcılar değeri 5 dakikaya ayarlayabilirler. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
+
+- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihazların temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0` (sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+
+### <a name="android-10-and-later"></a>Android 10 ve üzeri
+
+- **Parola karmaşıklığı**: gerekli parola karmaşıklığını girin. Seçenekleriniz şunlardır:
+
+  - **Hiçbiri** (varsayılan): parola gerekli değildir.
+  - **Düşük**: parola aşağıdaki koşullardan birini karşılar:
+    - Desen
+    - PIN 'in yinelenen (4444) veya sıralı (1234, 4321, 2468) sırası vardır.
+  - **Orta**: parola aşağıdaki koşullardan birini karşılar:
+    - PIN 'in yinelenen (4444) veya sıralı (1234, 4321, 2468) sırası yoktur ve en az 4 uzunluğu vardır.
+    - Alfabetik, en az 4 uzunluğunda.
+    - Alfasayısal, en az 4 uzunluğunda.
+  - **Yüksek**: parola aşağıdaki koşullardan birini karşılar:
+    - PIN 'in yinelenen (4444) veya sıralı (1234, 4321, 2468) sırası yoktur ve en az 8 uzunluğu vardır.
+    - Alfabetik, en az 6 uzunluğunda bir.
+    - Alfasayısal, en az 6 uzunluğunda.
+
+  Bu ayarın geçerli olduğu sürümler:  
+  - Android 10 ve üzeri, Samsung KNOX üzerinde değil.
+ 
+### <a name="android-9-and-earlier-or-samsung-knox"></a>Android 9 ve önceki sürümleri ya da Samsung KNOX
+
+Bu ayarlar şu cihazlarda geçerlidir:  
+- Android 9,0 ve öncesi
+- Herhangi bir Samsung KNOX sürümü
+
 - **Parola**: kullanıcıların cihazlara erişmek için parola girmesini **gerektir** . **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bir parola girmeden cihazlara erişmelerine izin verebilir.
 
     > [!NOTE]
     > Samsung Knox cihazlar, MDM kaydı sırasında otomatik olarak 4 basamaklı bir PIN gerektirir. Yerel Android cihazlar, koşullu erişimle uyumlu hale gelmesi için otomatik olarak bir PIN gerektirebilir.
 
 - **Minimum parola uzunluğu**: 4-16 adresinden gereken en az karakter sayısını girin. Örneğin, `6` parola uzunluğu için en az altı sayı veya karakter gerektirmek için girin.
-- **Ekran kilitlenmeden önce geçen işlem yapılmayan dakika sayısı**: ekran otomatik olarak kilitlenmeden önce cihazın boşta kalması gereken süreyi girin. Örneğin, `5` 5 dakika çalıştıktan sonra cihazları kilitlemek için yazın. Değer boş olduğunda veya **Yapılandırılmadı**olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-  Bir cihazda, kullanıcılar profilde yapılandırılan süreden daha büyük bir zaman değeri ayarlayamamakta. Kullanıcılar, daha düşük bir saat değeri ayarlayabilir. Örneğin, profil dakikalar olarak ayarlandıysa `15` , kullanıcılar değeri 5 dakikaya ayarlayabilirler. Kullanıcılar değeri 30 dakika olarak ayarlayamıyorum.
-
-- **Cihaz silinmeden önceki oturum açma hatalarının sayısı**: cihazların temizlenmeden önce izin verilen hatalı parola sayısını 4-11 adresinden girin. `0`(sıfır) cihaz temizleme işlevini devre dışı bırakabilir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
 - **Parola kullanım süresi (gün)**: cihaz parolasının, 1-365 adresinden değiştirilinceye kadar gün sayısını girin. Örneğin, `90` 90 gün sonra parolanın süresini dolacak şekilde girin. Parola geçerlilik süresi dolduğunda kullanıcıların yeni bir parola oluşturması istenir. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
 - **Gerekli parola türü**: gerekli parola karmaşıklığı düzeyini ve biyometrik cihazların kullanılıp kullanılamayacağını girin. Seçenekleriniz şunlardır:
   - **Cihaz varsayılanı**
   - **Düşük güvenlik Biyometri**: [güçlü ve zayıf Biyometri](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (Android 'in Web sitesini açar)
@@ -86,22 +130,15 @@ Bu makalede, Android çalıştıran cihazlar için yapılandırabileceğiniz tü
   - **Semboller ile en az alfasayısal**: büyük harfler, küçük harfler, sayısal karakterler, noktalama işaretleri ve semboller içerir.
 
 - **Önceki parolaların yeniden kullanılmasını engelle**: kullanıcıların daha önce kullanılan parolaları oluşturmasını kısıtlamak için bu ayarı kullanın. 1-24 adresinden, daha önce kullanılmış olan parolaların sayısını girin. Örneğin, `5` kullanıcıların geçerli parolasına veya önceki dört parolalarından birine yeni bir parola ayarlayamaması için girin. Değer boş olduğunda, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
 - **Parmak iziyle kilit açma (yalnızca Samsung KNOX)**: **blok** cihazların kilidini açmak için parmak izi kullanımını engeller. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların bir parmak izi kullanarak cihazların kilidini açmaya izin verebilir.
+
 - **Akıllı kilit ve diğer güven aracıları**: **blok** akıllı kilit veya diğer güven aracılarının kilit ekranı ayarlarını değiştirmesine engel olur. Cihaz güvenilir bir konumdayken, güven aracısı olarak da bilinen bu özellik, cihaz kilit ekranı parolasını devre dışı bırakmanıza veya atlamanıza izin verir. Örneğin, cihazlar belirli bir Bluetooth cihazına bağlıyken veya cihazlar bir NFC etiketine yakın olduğunda bu özelliği kullanın. Bu ayarı kullanıcıların Akıllı Kilitleme’yi yapılandırmasını önlemek için kullanabilirsiniz.
 
   **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
 
-  Bu ayarın geçerli olduğu sürümler:
-
+  Bu ayarın geçerli olduğu sürümler:  
   - Samsung KNOX Standard 5.0 +
-
-- **Şifreleme**: cihazdaki dosyaların şifrelenmesi için **gerektir** ' i seçin. Tüm cihazlar şifrelemeyi desteklemez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Bu ayarı yapılandırmak ve uyumluluğu doğru şekilde raporlamak için aşağıdakileri de yapılandırın:
-  1. **Password**: **gerektir**olarak ayarlayın.
-  2. **Gerekli parola türü**: **en az sayısal**olarak ayarlanır.
-  3. **Minimum parola uzunluğu**: en az olarak ayarlanır `4` .
-
-  > [!NOTE]
-  > Bir şifreleme ilkesi uygulanırsa Samsung Knox cihazlar, kullanıcıların cihaz parolası olarak 6 karakterli karmaşık bir parola ayarlamasını gerektirir.
 
 ## <a name="google-play-store"></a>Google Play Store
 

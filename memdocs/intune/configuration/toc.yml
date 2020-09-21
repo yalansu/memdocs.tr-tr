@@ -5,7 +5,7 @@
   items:
     - name: Cihaz yapılandırmasına genel bakış
       href: device-profiles.md
-- name: Hızlı başlangıçlar
+- name: Hızlı Başlangıçlar
   items:
     - name: E-posta cihaz profili oluşturma
       href: quickstart-email-profile.md
@@ -51,9 +51,11 @@
           displayName: 'psk, oma-uri, eap'
         - name: Wi-Fi sorunlarını giderme
           href: troubleshoot-wi-fi-profiles.md
-    - name: Yönetim şablonları
-      displayName: 'admx, gpo, group policy'
+    - name: Grup ilkesi ve Yönetim şablonları
+      displayName: 'admx, gpo'
       items:
+        - name: Grup İlkesi analizleri
+          href: group-policy-analytics.md
         - name: Yönetimsel şablonlar oluşturma
           href: administrative-templates-windows.md
         - name: Yönetim şablonlarını kullanarak Office’i güncelleştirme

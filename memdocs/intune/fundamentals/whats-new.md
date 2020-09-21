@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/02/2020
+ms.date: 09/17/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc8fa6f2d4fe5171bd8a4ffe977eec7f6eed2093
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: 0561a7f7615b4f8aee8fd60b2b2b2481923c07ff
+ms.sourcegitcommit: eaa077aa028a76a4873e4aa7437888f901a7e77f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564117"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90767154"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -53,6 +53,14 @@ ms.locfileid: "89564117"
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+
+<!-- ########################## -->
+## <a name="week-of-september-14-2020"></a>14 Eylül 2020 haftası
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Uygulama yönetimi
+
+#### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal---1817861-wnready---"></a>Windows Şirket Portalı Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş teslimi<!-- 1817861 wnready -->
+2006 sürümünde, [Şirket portalı Web sitesinde Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş olarak teslimini](../fundamentals/whats-new.md#unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal)duyurduk. Bu özellik Windows Şirket Portalı desteklenir. Intune 'un **Özelleştirme** bölmesinde, Windows Şirket portalı hem **Azure AD kurumsal uygulamalarını** hem de **Office Online uygulamalarını** **gizlemek** veya **göstermek** için seçin. Her Son Kullanıcı tüm uygulama kataloglarını seçilen Microsoft hizmetinden görürler. Varsayılan olarak, her bir ek uygulama kaynağı **gizleyecek**şekilde ayarlanır. Bu yapılandırma ayarını bulmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **Kiracı Yönetimi**  >  **özelleştirmesi** ' nı seçin. İlgili bilgiler için bkz. [Intune şirket portalı uygulamalar, Şirket portalı Web sitesi ve Intune uygulaması nasıl özelleştirilir](../apps/company-portal-app.md).
 
 <!-- ########################## -->
 ## <a name="week-of-september-7-2020"></a>7 Eylül 2020 haftası
@@ -1284,7 +1292,7 @@ Genel önizleme olarak, Microsoft uç nokta yönetimi Yönetim Merkezi 'nde uç 
 Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanılabilir profil türleri verilmiştir:
 
 - **Virüsten koruma (Önizleme)**:
-  - MacOS
+  - macOS:
     - **Virüsten koruma** - [Mac IÇIN Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'Yi yönetmek üzere MacOS için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
 
   - Windows 10 ve üzeri:
@@ -1300,12 +1308,12 @@ Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanı
   - **Windows Güvenlik deneyimi** -son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde görüntüleyebilecekleri Windows güvenlik ayarlarını ve aldıkları bildirimleri yönetin. Bu ayarlar, cihaz yapılandırma Endpoint Protection profili olarak kullanılabilenlerden değiştirilmez.
 
 - **Disk şifrelemesi (Önizleme)**:
-  - MacOS
+  - macOS:
     - **FileVault**
   - Windows 10 ve üzeri:
     - **BitLocker**
 - **Güvenlik Duvarı (Önizleme)**:
-  - MacOS
+  - macOS:
     - **macOS güvenlik duvarı**
   - Windows 10 ve üzeri:
     - **Microsoft Defender güvenlik duvarı**

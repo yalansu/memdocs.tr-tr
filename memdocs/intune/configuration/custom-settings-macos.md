@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e92315377a839a537dfc4c2da00d282d2cddf58f
-ms.sourcegitcommit: 48005a260bcb2b97d7fe75809c4bf1552318f50a
+ms.openlocfilehash: 689c87f6362c4d369ad7e968aebb139ef2560b99
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83429099"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814928"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Microsoft Intune’da macOS cihazlar için özel ayarlar kullanma
 
@@ -39,7 +39,7 @@ Bu makalede, Apple Configurator ve Apple Profile Manager kullanımı hakkında b
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[MacOS özel profili oluşturun](custom-settings-configure.md).
+[MacOS özel cihaz yapılandırma profili](custom-settings-configure.md)oluşturun.
 
 ## <a name="what-you-need-to-know"></a>Bilmeniz gerekenler
 

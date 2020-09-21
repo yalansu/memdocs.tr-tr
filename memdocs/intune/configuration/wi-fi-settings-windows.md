@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bfa28a6b4df30c6303f75d4a5cf91c20ce4e827
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: 4ffa0fd0bc1c3b1ed1fe7f5d79ae009aaf9fc713
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820638"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815132"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Intune’da Windows 10 ve üzeri cihazlar için Wi-Fi ayarları ekleme
 
@@ -31,7 +31,7 @@ Bu makalede bu ayarlar açıklanır.
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Cihaz profili oluşturma](wi-fi-settings-configure.md).
+Bir [Windows 10 Wi-Fi cihaz yapılandırma profili](wi-fi-settings-configure.md)oluşturun.
 
 ## <a name="basic-profile"></a>Temel profil
 

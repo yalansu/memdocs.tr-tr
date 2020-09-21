@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65b5c7c0b9cb8a587213d237854e69705b5a7f63
-ms.sourcegitcommit: eccf83dc41f2764675d4fd6b6e9f02e6631792d2
+ms.openlocfilehash: f510bd51a9fbc84e839ee37a0c5d4195f4eed021
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86461700"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815230"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Microsoft Intune 'de Android kurumsal adanmış ve tam olarak yönetilen cihazlar için Wi-Fi ayarları ekleme
 
@@ -31,7 +31,10 @@ Bu makalede bu ayarlar açıklanır. [Cihazlarınızda Wi-Fi kullanın](wi-fi-se
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Cihaz profili oluşturma](wi-fi-settings-configure.md).
+[Android Kurumsal Wi-Fi cihaz yapılandırma profili](wi-fi-settings-configure.md)oluşturma:
+
+- Tam olarak yönetilen, adanmış ve şirkete ait iş profili
+- İş profili
 
 ## <a name="fully-managed-dedicated-and-corporate-owned-work-profile"></a>Tam olarak yönetilen, adanmış ve şirkete ait Iş profili
 
@@ -49,7 +52,7 @@ Android kurumsal adanmış veya tam olarak yönetilen bir cihaza dağıtım yap�
   - **WEP-Önceden paylaşılan anahtar**: **Önceden paylaşılan anahtar** olarak parolayı girin. Kuruluşunuzun ağı ayarlandığında veya yapılandırıldığında bir parola veya ağ anahtarı da yapılandırılır. PSK değeri için bu parolayı veya ağ anahtarını girin.
   - **WPA-Önceden paylaşılan anahtar**: **Önceden paylaşılan anahtar** olarak parolayı girin. Kuruluşunuzun ağı ayarlandığında veya yapılandırıldığında bir parola veya ağ anahtarı da yapılandırılır. PSK değeri için bu parolayı veya ağ anahtarını girin.
 
-### <a name="enterprise"></a>Enterprise
+### <a name="enterprise"></a>Kurumsal
 
 - **Wi-Fi türü**: **Kurumsal**’ı seçin.
 - **SSID**: cihazların bağlandığı kablosuz ağın gerçek adı olan **hizmet kümesi tanımlayıcısını**girin. Ancak, kullanıcılar bağlantıyı seçerken yapılandırdığınız **ağ adını** görür.
@@ -105,7 +108,7 @@ Android kurumsal adanmış veya tam olarak yönetilen bir cihaza dağıtım yap�
 - **SSID**: cihazların bağlandığı kablosuz ağın gerçek adı olan **hizmet kümesi tanımlayıcısını**girin. Ancak, kullanıcılar bağlantıyı seçerken yapılandırdığınız **ağ adını** görür.
 - **Gizli ağ**: Cihazdaki kullanılabilir ağlar listesinde bu ağı gizlemek için **Etkinleştir**’i seçin. SSID yayınlanmaz. Cihazdaki kullanılabilir ağlar listesinde bu ağı göstermek için **Devre dışı bırak**’ı seçin.
 
-### <a name="enterprise"></a>Enterprise
+### <a name="enterprise"></a>Kurumsal
 
 - **Wi-Fi türü**: **Kurumsal**’ı seçin.
 - **SSID**: cihazların bağlandığı kablosuz ağın gerçek adı olan **hizmet kümesi tanımlayıcısını**girin. Ancak, kullanıcılar bağlantıyı seçerken yapılandırdığınız **ağ adını** görür.

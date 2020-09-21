@@ -10,12 +10,12 @@ ms.assetid: 4b071746-61e1-404b-8053-60978de028a7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 7e67773c359291db3c537ac0ed8fe6ce6fbcfc1f
-ms.sourcegitcommit: 8fc1704ed0e1141f46662bdd32b52bec00fb93b4
+ms.openlocfilehash: 07980da205dcc222216ec7607cf7488bbb0f356a
+ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89607649"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90802889"
 ---
 # <a name="whats-new-in-version-2006-of-configuration-manager-current-branch"></a>Geçerli dalın Configuration Manager sürüm 2006 ' deki yenilikler
 
@@ -32,9 +32,13 @@ Yeni Configuration Manager özelliklerinden tam olarak yararlanmak için, siteyi
 
 ## <a name="microsoft-endpoint-manager-tenant-attach"></a><a name="bkmk_tenant"></a> Microsoft Uç Nokta Yöneticisi kiracı iliştirme
 
+### <a name="scripts-from-the-admin-center"></a>Yönetim merkezinden betikler
+<!--IN7220536, CM6234688  -->
+Şirket içi Configuration Manager [Çalıştır](../../../apps/deploy-use/create-deploy-scripts.md) özelliğinin gücünü Microsoft Endpoint Manager yönetim merkezine taşıyın. Yardım masası gibi ek personbuna, tek başına Configuration Manager yönetilen bir cihaza gerçek zamanlı olarak, PowerShell betikleri çalıştırmanızı sağlar. Bu, bu yeni ortama Configuration Manager yöneticisi tarafından önceden tanımlanmış ve onaylanmış olan PowerShell betiklerinin tüm geleneksel avantajlarını sağlar. Daha fazla bilgi için bkz. [Yönetim merkezinden kiracı iliştirme: betikler](../../../tenant-attach/scripts.md).
+
 ### <a name="device-timeline-in-the-admin-center"></a><a name="bkmk_timeline"></a> Yönetim merkezinde cihaz zaman çizelgesi
 <!--7220536, CM7141381-->
-Configuration Manager, kiracı iliştirme aracılığıyla bir cihazı Microsoft Uç Nokta Yöneticisi ile eşitlediğinde, olayların bir zaman çizelgesini görebileceksiniz. Bu zaman çizelgesi, cihazdaki sorunları gidermenize yardımcı olabilecek geçmiş etkinlikleri gösterir. Daha fazla bilgi için bkz. [yönetim merkezindeki cihaz zaman çizelgesi](../../../tenant-attach/timeline.md).
+Configuration Manager, kiracı iliştirme aracılığıyla bir cihazı Microsoft Uç Nokta Yöneticisi ile eşitlediğinde, olayların bir zaman çizelgesini görebileceksiniz. Bu zaman çizelgesi, cihazdaki sorunları gidermenize yardımcı olabilecek geçmiş etkinlikleri gösterir. Daha fazla bilgi için bkz. [kiracı iliştirme: yönetim merkezindeki cihaz zaman çizelgesi](../../../tenant-attach/timeline.md).
 
 ### <a name="resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Yönetim merkezinde kaynak Gezgini
 <!--6479284-->
@@ -44,9 +48,9 @@ Microsoft uç nokta Yönetimi yönetim merkezinden, kaynak Gezgini 'ni kullanara
 <!--6024392-->
 CMPivot 'in gücünü Microsoft Endpoint Manager yönetim merkezine taşıyın. Yardım masası gibi ek kişilerin buluttan, tek bir ConfigMgr tarafından yönetilen cihaza karşı gerçek zamanlı sorgular başlatabilmesini ve sonuçları yönetim merkezine geri döndürmesini sağlar. Bu, CMPivot 'in tüm geleneksel avantajlarından yararlanmanızı sağlar. Bu, BT yöneticilerinin ve diğer belirlenen kişilerin, ortamlarında cihazların durumunu hızlıca değerlendirebilme ve işlem yapması için sahip olduğu bir işlemdir.
 
-Yönetim merkezinden CMPivot hakkında daha fazla bilgi için bkz. [CMPivot önkoşulları](../../../tenant-attach/cmpivot-start.md), [CMPivot genel bakış](../../../tenant-attach/cmpivot-overview-attached.md)ve [CMPivot örnek komut dosyaları](../../../tenant-attach/cmpivot-samples-attached.md).
+Yönetim merkezinden CMPivot hakkında daha fazla bilgi için bkz. [kiracı iliştirme: Launch CMPivot in Admin Center](../../../tenant-attach/cmpivot-start.md), [CMPivot Overview](../../../tenant-attach/cmpivot-overview-attached.md)ve [CMPivot Sample Scripts](../../../tenant-attach/cmpivot-samples-attached.md).
 
-### <a name="tenant-attach-microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Kiracı iliştirme: Microsoft Endpoint Manager Yönetim merkezinde Microsoft Defender virüsten koruma ilkeleri
+### <a name="microsoft-defender-antivirus-policies-in-the-microsoft-endpoint-manager-admin-center"></a><a name="bkmk_atp"></a> Microsoft Endpoint Manager Yönetim merkezinde Microsoft Defender virüsten koruma ilkeleri
 <!--4812909-->
 Artık Microsoft Endpoint Manager konsolunda Microsoft Defender virüsten koruma ilkeleri oluşturabilir ve bunları Configuration Manager koleksiyonlara dağıtabilirsiniz. Ayrıntılı yönergeler ve kullanılabilir ayarlar dahil daha fazla bilgi için aşağıdaki makalelere bakın:
 - [Kiracı iliştirme: Yönetim Merkezi 'nden Microsoft Defender ATP 'ye Configuration Manager istemcileri ekleme (Önizleme)](../../../tenant-attach/atp-onboard.md)

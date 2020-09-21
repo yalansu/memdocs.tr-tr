@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/21/2020
+ms.date: 09/17/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94ef57ddd9186678f4f09c74764f9fc110534db3
-ms.sourcegitcommit: cf7cdd0e66e155ac153392468799732eafbb0744
+ms.openlocfilehash: ecee35682d1da15dba27cd7280998209f0add85d
+ms.sourcegitcommit: eaa077aa028a76a4873e4aa7437888f901a7e77f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89390820"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90767086"
 ---
 # <a name="how-to-customize-the-intune-company-portal-apps-company-portal-website-and-intune-app"></a>Intune Şirket Portalı uygulamaları, Şirket Portalı Web sitesini ve Intune uygulamasını özelleştirme
 
@@ -111,10 +111,10 @@ Aşağıdaki tabloda, kayda özgü yapılandırma ayrıntıları verilmiştir:
 > 
 > Aşağıdaki ayarlar, [Samsung KNOX mobil kaydı](../enrollment/android-samsung-knox-mobile-enroll.md) (KME) Ile yapılandırılmış Android cihazları için geçerlidir. Bir cihaz KME için yapılandırıldıysa ve cihaz kaydı kullanılamıyor olarak ayarlandıysa, cihaz kullanıma hazır akış sırasında kayıt yapamaz.
 
-|    Cihaz kayıt seçenekleri    |    Açıklama    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
+|    Cihaz kayıt seçenekleri    |    Description    |    Denetim listesi istemleri    |    Bildirim    |    Cihaz ayrıntıları durumu    |    Uygulama ayrıntıları durumu (kayıt gerektiren bir uygulama)    |
 |-----------------------------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------|--------------------|-----------------------------|--------------------------------------------------------------------|
-|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Evet    |    Evet    |    Evet    |    Evet    |
-|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Evet    |    Evet    |
+|    Kullanılabilir, istemlerle    |    Tüm olası konumlara kaydolmak için istemlerle ilgili varsayılan deneyim.    |    Yes    |    Yes    |    Yes    |    Yes    |
+|    Kullanılabilir, istem yok    |    Kullanıcı, geçerli cihazlarından veya kayıt gerektiren uygulamalardan cihaz ayrıntıları ' nda durum aracılığıyla kaydedebilir.    |    Hayır    |    Hayır    |    Yes    |    Yes    |
 |    Kullanılamaz    |    Kullanıcıların kaydolmasına yol yoktur.    |    Hayır    |    Hayır    |    Hayır    |    Hayır    |
 
 ### <a name="privacy"></a>Gizlilik
@@ -151,7 +151,7 @@ Aşağıdaki tabloda, uygulama kaynağına özgü yapılandırma ayrıntıları 
 #### <a name="app-source-setting-options"></a>Uygulama kaynağı ayarı seçenekleri
 
 > [!NOTE]
-> Şirket Portalı Web sitesi, ilk olarak diğer Microsoft hizmetlerinden uygulamaların görüntülenmesini destekler.
+> Diğer Microsoft hizmetlerinden uygulamaların görünümü yalnızca Windows Şirket Portalı ve Şirket Portalı Web sitesinde desteklenir.
 
 Her son kullanıcı için Şirket Portalı **Azure AD kurumsal uygulamalarını** ve **Office Online uygulamalarını** gizleyebilir veya gösterebilirsiniz. **Göster** , Şirket portalı, kullanıcıya atanan seçili Microsoft hizmetinden tüm uygulama kataloğunun görüntülenmesine neden olur. **Azure AD kurumsal uygulamaları** [Azure Portal](https://portal.azure.com)aracılığıyla kaydedilir ve atanır. **Office Online Uygulamaları** , [M365 Yönetim merkezinde](https://admin.microsoft.com)bulunan lisanslama denetimleri kullanılarak atanır. Bu yapılandırma ayarını bulmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **Kiracı Yönetimi**  >  **özelleştirmesi** ' nı seçin. Varsayılan olarak, her bir ek uygulama kaynağı **gizleyecek**şekilde ayarlanır. 
 
@@ -198,7 +198,7 @@ Son kullanıcılar, Windows Şirket Portalı’nda klavye kısayollarını (hız
 
 Windows Şirket Portalı uygulamasında aşağıdaki kısayollar kullanılabilir.
 
-| Alan | Açıklama | Klavye kısayolu |
+| Alan | Description | Klavye kısayolu |
 |--------------------|----------------|-------------------|
 | Gezinti menüsü | Gezinti | Alt+M |
 |  | Giriş Sayfası | Alt+H |

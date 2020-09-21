@@ -1,12 +1,12 @@
 ---
 title: Microsoft Intune - Azure'da macOS ayarlarını kullanma | Microsoft Docs
 titleSuffix: ''
-description: Parola gereksinimlerini belirleme, kilit ekranını denetleme, yerleşik uygulamaları kullanma, kısıtlanmış veya onaylı uygulamalar ekleme, Bluetooth cihazlarını yönetme, yedekleme ve depolama amacıyla buluta bağlanma, bilgi noktası modunu etkinleştirme, etki alanı ekleme ve kullanıcıların Safari web tarayıcısıyla etkileşim kurma şeklini denetleme gibi özellikleri kısıtlama amacıyla Microsoft Intune'daki macOS cihazlar için ayar ekleme, yapılandırma veya oluşturma işlemlerini gerçekleştirin.
+description: Microsoft Intune özellikleri kısıtlamak için macOS cihazlarındaki ayarları ekleyin, yapılandırın veya oluşturun. Parola gereksinimlerini ayarlama, kilitli ekranı denetleme, yerleşik uygulamalar kullanma, kısıtlı veya onaylanan uygulamalar ekleme, Bluetooth cihazlarını işleme, yedekleme ve depolama için buluta bağlanma, bilgi noktası modunu etkinleştirme, etki alanlarını ekleme ve kullanıcıların Safari Web tarayıcısı ile nasıl etkileşime gireceğini denetleme.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/06/2020
+ms.date: 09/15/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c068a092ad0f7087ad28b8424cc2640214972f82
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: d762f3729f104bedc992c93f1a445ab00b547841
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996699"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90813668"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Intune'u kullanarak özelliklere izin vermeyi veya bunları kısıtlamayı sağlayan macOS cihaz ayarları
 
@@ -35,7 +35,7 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[MacOS cihaz kısıtlamaları yapılandırma profili oluşturun](device-restrictions-configure.md).
+[MacOS cihaz kısıtlamaları yapılandırma profili](device-restrictions-configure.md)oluşturun.
 
 > [!NOTE]
 > Bu ayarlar farklı kayıt türleri için geçerlidir. Farklı kayıt türleri hakkında daha fazla bilgi için bkz. [MacOS kaydı](../enrollment/macos-enroll.md).
@@ -100,24 +100,34 @@ Bu ayarlar, Intune'da bir cihaz yapılandırma profiline eklenir ve daha sonra m
   Bu özellik şu platformlarda geçerlidir:  
   - macOS 10,13 ve üzeri
 
-- **Yazılım güncelleştirmelerini ertele**: **evet** , cihazlarda 0-90 günden itibaren yazılım güncelleştirmeleri gösterildiğinde gecikme yapmanıza izin verir. Bu ayar, güncelleştirmelerin yüklenme tarihini veya durumunu denetlemez. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi cihazlarda güncelleştirmeleri Apple yayınları olarak gösterebilir. Örneğin, bir macOS güncelleştirmesi Apple tarafından belirli bir tarihte yayımlanmışsa, bu güncelleştirme doğal olarak yayın tarihi etrafında cihazlarda görüntülenir. Çekirdek derleme güncelleştirmelerine gecikme olmadan izin verilir.  
+- Ekran **görüntülerini ve ekran kaydını engelle**: cihazın Apple 'ın otomatik cihaz kaydı 'NDA (DEP) kayıtlı olması gerekir. **Evet** seçeneği, kullanıcıların ekran ekran görüntülerini kaydetmelerini engeller. Ayrıca, derslik uygulamasının uzak ekranları gözlemmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların ekran görüntülerini yakalamasına izin verebilir ve derslik uygulamasının uzak ekranları görüntülemesine olanak tanır.
 
-  - **Yazılım güncelleştirmeleri gecikmesi**: 0-90 günden bir değer girin. Gecikme süresi sona erdiğinde kullanıcılara gecikmenin tetiklendiği tarihte kullanılabilir durumda olan en eski işletim sistemi sürümüne güncelleştirme bildirimi gönderilir.
+### <a name="settings-apply-to-user-approved-device-enrollment-automated-device-enrollment-supervised"></a>Ayarlar için geçerlidir: Kullanıcı tarafından onaylanan cihaz kaydı, otomatik cihaz kaydı (denetimli)
+
+- **Yazılım güncelleştirmelerini ertele**: **Evet** , cihazlar üzerinde işletim sistemi güncelleştirmeleri ve işletim sistemi olmayan güncelleştirmeler gösterildiğinde gecikme yapmanıza izin verir. Bu ayar, güncelleştirmelerin yüklenme tarihini veya durumunu denetlemez. Hiçbir şey seçili olmadığında, Intune bu ayarı değiştirmez veya güncelleştirmez.
+
+  Varsayılan olarak, işletim sistemi cihazlarda güncelleştirmeleri Apple yayınları olarak gösterebilir. Varsayılan olarak, yazılım güncelleştirmeleri gecikmez. Bu ayarı yapılandırırsanız, seçtiğiniz seçeneklere bağlı olarak işletim sistemi ve işletim sistemi olmayan yazılım güncelleştirmeleri gecikir. Açılan liste, tam olarak seçtiğiniz şeydir. Her ikisini de geciktirebilir, erteleyebilir ya da onlardan birini erteleyebilir.
+
+  Örneğin, bir macOS güncelleştirmesi Apple tarafından belirli bir tarihte yayımlanmışsa, bu güncelleştirme doğal olarak yayın tarihi etrafında cihazlarda görüntülenir. Çekirdek derleme güncelleştirmelerine gecikme olmadan izin verilir.  
+
+  - **Yazılım güncelleştirmeleri gecikmesi**: 0-90 günden bir değer girin. Güncelleştirmeler varsayılan olarak günler için gecikmiştir `30` . Bu değer, seçtiğiniz **yazılım güncelleştirmelerini ertele** seçeneklerini uygular. Yalnızca **işletim sistemi güncelleştirmelerini**seçerseniz, 30 gün boyunca yalnızca işletim sistemi güncelleştirmeleri gecikir. **İşletim sistemi güncelleştirmeleri** ve **işletim sistemi olmayan güncelleştirmeler**' i seçerseniz, her ikisi de 30 gün gecikmiştir.
+
+    Gecikme süresi sona erdiğinde, kullanıcılar gecikme tetiklendiğinde kullanılabilir olan en eski sürümü güncelleştirme hakkında bir bildirim alır.
 
     Örneğin, bir macOS güncelleştirmesi **1 Ocak**'ta kullanılabiliyorsa ve **gecikme görünürlüğü** **5 güne**ayarlanırsa, güncelleştirme kullanılabilir bir güncelleştirme olarak gösterilmez. Sürümden sonraki **altıncı gün** üzerinde, bu güncelleştirme kullanılabilir ve kullanıcılar uygulamayı yükleyebilir.
 
     Bu özellik şu platformlarda geçerlidir:  
     - macOS 10.13.4 ve üzeri
 
-- Ekran **görüntülerini ve ekran kaydını engelle**: cihazın Apple 'ın otomatik cihaz kaydı 'NDA (DEP) kayıtlı olması gerekir. **Evet** seçeneği, kullanıcıların ekran ekran görüntülerini kaydetmelerini engeller. Ayrıca, derslik uygulamasının uzak ekranları gözlemmasını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi kullanıcıların ekran görüntülerini yakalamasına izin verebilir ve derslik uygulamasının uzak ekranları görüntülemesine olanak tanır.
+### <a name="settings-apply-to-automated-device-enrollment"></a>Ayarlar için geçerlidir: otomatik cihaz kaydı
 
-  - **AirPlay 'ı devre dışı bırakın, derslik uygulamasına göre ekranı görüntüleyin ve ekran paylaşımı**: **Evet** , AirPlay 'i engeller ve diğer cihazlara ekran paylaşımını önler. Ayrıca, öğretmenlerin öğrencilerin ekranlarını görmek için ders uygulamasını kullanmalarını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğretmenlerin öğrencilerinin ekranlarını görmesine izin verebilir.
+- **AirPlay 'ı devre dışı bırakın, derslik uygulamasına göre ekranı görüntüleyin ve ekran paylaşımı**: **Evet** , AirPlay 'i engeller ve diğer cihazlara ekran paylaşımını önler. Ayrıca, öğretmenlerin öğrencilerin ekranlarını görmek için ders uygulamasını kullanmalarını önler. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğretmenlerin öğrencilerinin ekranlarını görmesine izin verebilir.
 
-    Bu ayarı kullanmak için, **blok ekran görüntülerini ve ekran kaydı** ayarını **Yapılandırılmadı** olarak ayarlayın (ekran görüntülerine izin verilir).
+  Bu ayarı kullanmak için, **blok ekran görüntülerini ve ekran kaydı** ayarını **Yapılandırılmadı** olarak ayarlayın (ekran görüntülerine izin verilir).
 
-  - **Sınıf uygulamasının, sormadan AirPlay ve görüntüleme ekranı gerçekleştirmesine Izin ver**: **Evet: Evet** , öğretmenlere öğrenci 'nin anlaşmasına gerek kalmadan öğrencilerinin ekranlarını görmesine izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğretmenler ekranları görebilmesi için öğrencilerinin kabul etmesini gerektirebilir.
+- **Sınıf uygulamasının, sormadan AirPlay ve görüntüleme ekranı gerçekleştirmesine Izin ver**: **Evet: Evet** , öğretmenlere öğrenci 'nin anlaşmasına gerek kalmadan öğrencilerinin ekranlarını görmesine izin verir. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğretmenler ekranları görebilmesi için öğrencilerinin kabul etmesini gerektirebilir.
 
-    Bu ayarı kullanmak için, **blok ekran görüntülerini ve ekran kaydı** ayarını **Yapılandırılmadı** olarak ayarlayın (ekran görüntülerine izin verilir).
+  Bu ayarı kullanmak için, **blok ekran görüntülerini ve ekran kaydı** ayarını **Yapılandırılmadı** olarak ayarlayın (ekran görüntülerine izin verilir).
 
 - **Sınıf uygulaması yönetilmeyen sınıflarının ayrılmaları için öğretmen Izni gerektir**: **Evet** , bir yönetilmeyen sınıfta kayıtlı öğrencileri, kursu bırakmaya yönelik öğretmen onayı almak üzere zorlar. **Yapılandırılmadı** (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Varsayılan olarak, işletim sistemi öğrencilerin öğrenciye her seçişinde kursa ayrılmalarını sağlayabilir.
 
@@ -309,7 +319,7 @@ Bu özellik şu platformlarda geçerlidir:
   - **Apple olayları**: Bu ayar, uygulamaların başka bir uygulama veya işleme kısıtlı bir Apple olayı göndermesini sağlar. Alıcı uygulama veya işlem eklemek için **Ekle** ' yi seçin. Alan uygulamanın veya işlemin aşağıdaki bilgilerini girin:
 
     - **Tanımlayıcı türü**: alma tanımlayıcısı bir uygulama Ise, **paket kimliği** ' ni seçin. Alma tanımlayıcısı bir işlem veya yürütülebilir ise **yolu** seçin.
-    
+
     - **Tanımlayıcı**: uygulama paketi kimliğini veya bir Apple olayı alan işlemin yükleme yolunu girin.  
 
     - **Kod gereksinimi**: alıcı uygulama veya işlem için kod imzasını girin.

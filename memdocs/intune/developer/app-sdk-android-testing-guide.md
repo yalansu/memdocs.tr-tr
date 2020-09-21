@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 09/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 975ab2faa91a5e904beb5aa17b776061f122916d
-ms.sourcegitcommit: 75d6ea42a0f473dc5020ae7fcb667c9bdde7bd97
+ms.openlocfilehash: 1486b75526af470444c6a5880ccd27920f2ceb00
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89286284"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814850"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Android için Microsoft Intune uygulama SDK 'Sı geliştiriciler test Kılavuzu
 
@@ -33,7 +33,7 @@ Android için Microsoft Intune uygulama SDK 'Sı test Kılavuzu, Intune ile yön
 1. [Microsoft CDX kiracı oluşturma sitesine](https://cdx.transform.microsoft.com/my-tenants/create-tenant) gidin ve bir Microsoft 365 Kurumsal kiracı oluşturun.
 2. [Intune](../fundamentals/setup-steps.md) 'u mobil cihaz YÖNETIMI (MDM) etkinleştirecek şekilde ayarlayın.
 3. [Kullanıcı oluşturun](../fundamentals/users-add.md).
-4. [Grup Oluştur].. /temel Mentals/(gruplar-Add. MD).
+4. [Grupları oluşturun](../fundamentals/groups-add.md).
 5. Test testiniz için uygun şekilde [lisans atayın](../fundamentals/licenses-assign.md) .
 
 
@@ -49,7 +49,7 @@ Aşağıdaki test çalışmaları yapılandırma ve onay adımları sağlar. Yen
 
 ### <a name="required-pin-and-corporate-credentials"></a>Gerekli PIN ve şirket kimlik bilgileri
 
-Şirket kaynaklarına erişmek için PIN 'ı zorunlu kılabilirsiniz. Ayrıca, kullanıcıların yönetilen uygulamaları kullanabilmesi için önce şirket kimlik doğrulamasını uygulayabilirsiniz. Bunu yapmak için:
+Şirket kaynaklarına erişmek için PIN 'ı zorunlu kılabilirsiniz. Ayrıca, kullanıcıların yönetilen uygulamaları kullanabilmesi için önce şirket kimlik doğrulamasını uygulayabilirsiniz. Aşağıdaki adımları uygulayın:
 
 1. **Erişim IÇIN PIN gerektir** ' i ayarlayın ve **Evet**' e **erişmek için kurumsal kimlik bilgileri gerektir** . Daha fazla bilgi için, bkz. [Microsoft Intune Android uygulama koruma ilkesi ayarları](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Aşağıdaki koşulları onaylayın:
@@ -71,7 +71,6 @@ Amaç ve içerik sağlayıcılarının kullanımı, bu ilkelerden etkilenir.
     - Yönetilmeyen bir uygulamadan uygulama işlevlerinizi doğru açma.
     - Uygulamanız ve yönetilen uygulamalar arasında içerik paylaşımına izin verilir.
     - Uygulamanızdan Yönetilemeyen uygulamalara (örneğin, Chrome) paylaşım engellenir.
-
 
 #### <a name="restrict-receiving-data-from-other-apps"></a>Diğer uygulamalardan veri almayı kısıtla
 
@@ -97,7 +96,7 @@ Sistem panosunu yönetilen uygulamalarla kısıtlamak için aşağıdaki adımla
     - Uygulamanızdan yönetilmeyen bir uygulamaya (örneğin, Iletiler) metin kopyalama engellenir.
 
 ### <a name="prevent-save"></a>Kaydetmeyi engelle
-Uygulamanız tümleşik farklı kaydet denetimleri gerektiriyorsa, farklı **Kaydet** işlevlerini aşağıdaki şekilde denetleyebilirsiniz:
+Uygulamanız [Tümleşik farklı kaydet denetimleri](app-sdk-android.md#example-data-transfer-between-apps-and-device-or-cloud-storage-locations)gerektiriyorsa, farklı **Kaydet** işlevlerini aşağıdaki şekilde denetleyebilirsiniz:
 
 1. **' Farklı Kaydet '** ayarını **Evet**olarak belirleyin.
 2. Aşağıdaki koşulları onaylayın:
@@ -118,7 +117,7 @@ Uygulama yedeklemesini aşağıdaki şekilde kontrol edebilirsiniz:
     - Yedeklemeler kısıtlıdır.
 
 ### <a name="wipe"></a>Silme
-Yönetilen uygulamaları, şirket e-posta ve belgelerinin bulunduğu yerden uzaktan silebilirsiniz. Kişisel verilerin şifresi artık yönetildiğinde çözülür. Bunu yapmak için:
+Yönetilen uygulamaları, şirket e-posta ve belgelerinin bulunduğu yerden uzaktan silebilirsiniz. Kişisel verilerin şifresi artık yönetildiğinde çözülür. Aşağıdaki adımları uygulayın:
 
 1. Azure portal, [silme](../apps/apps-selective-wipe.md)işlemi yapın.
 2. Uygulamanız herhangi bir silme işleyicisine kaydolmazsa, aşağıdaki koşulları onaylayın:

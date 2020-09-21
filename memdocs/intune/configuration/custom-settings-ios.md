@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/25/2020
+ms.date: 09/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ac931bf20140865e1185c4f401de0141273cdb3
-ms.sourcegitcommit: 7f17d6eb9dd41b031a6af4148863d2ffc4f49551
+ms.openlocfilehash: 1ce86a64955813fba6d202cc3e0e546e8976068b
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "80359413"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90814371"
 ---
 # <a name="use-custom-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Microsoft Intune 'de iOS ve ıpados cihazları için özel ayarlar kullanın
 
@@ -38,7 +38,7 @@ Bu makalede, Apple Configurator ve Apple Profile Manager kullanımı hakkında b
 
 ## <a name="before-you-begin"></a>Başlamadan önce
 
-[Profili oluşturun](custom-settings-configure.md).
+[İOS/ıpados özel cihaz yapılandırma profili](custom-settings-configure.md)oluşturun.
 
 ## <a name="what-you-need-to-know"></a>Bilmeniz gerekenler
 
@@ -48,7 +48,7 @@ Bu makalede, Apple Configurator ve Apple Profile Manager kullanımı hakkında b
 
   - Profile Manager’da [mobil cihaz yönetimini](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C) etkinleştirin.
   - Profil Yöneticisi 'ne [iOS/ıpados cihazları](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984) ekleyin.
-  - Profil Yöneticisi 'ne bir cihaz ekledikten sonra, **kitaplık** > **cihazları** ' na gidin > cihaz > **ayarlarınızı**seçin. Cihazın genel ayarlarını girin.
+  - Profil Yöneticisi 'ne bir cihaz ekledikten sonra, **kitaplık**  >  **cihazları** ' na gidin > cihaz > **ayarlarınızı**seçin. Cihazın genel ayarlarını girin.
 
     Bu dosyayı indirin ve kaydedin. Intune profilinde bu dosyayı girmeniz istenir.
 
@@ -57,12 +57,12 @@ Bu makalede, Apple Configurator ve Apple Profile Manager kullanımı hakkında b
 ## <a name="custom-configuration-profile-settings"></a>Özel yapılandırma profili ayarları
 
 - **Özel yapılandırma profili adı**: İlke için bir ad girin. Bu ad, cihazda ve Intune durumunda gösterilir.
-- **Yapılandırma profili dosyası**: Apple Configurator veya Apple Profile Manager’ı kullanarak oluşturduğunuz yapılandırma profiline gidin. En büyük dosya boyutu bayt `1000000` 'tır (yalnızca 1MB ' in altında). İçeri aktardığınız dosya, **Dosya içeriği** alanında görüntülenir.
+- **Yapılandırma profili dosyası**: Apple Configurator veya Apple Profile Manager’ı kullanarak oluşturduğunuz yapılandırma profiline gidin. En büyük dosya boyutu `1000000` bayt 'tır (yalnızca 1MB ' in altında). İçeri aktardığınız dosya, **Dosya içeriği** alanında görüntülenir.
 
-  Ayrıca, özel yapılandırma dosyalarınıza cihaz belirteçleri ekleyebilirsiniz. Cihaz belirteçleri cihaza özgü bilgileri eklemek için kullanılır. Örneğin, seri numarasını göstermek için girin `{{serialnumber}}`. Cihazda, metin, her bir cihaz için benzersiz `123456789ABC`olan öğesine benzer şekilde görünür. Değişken girerken, küme ayraçları `{{ }}`kullandığınızdan emin olun. [Uygulama yapılandırma belirteçleri](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) , kullanılabilecek değişkenlerin bir listesini içerir. Ayrıca, herhangi bir `deviceid` cihaza özgü değeri de kullanabilirsiniz.
+  Ayrıca, özel yapılandırma dosyalarınıza cihaz belirteçleri ekleyebilirsiniz. Cihaz belirteçleri cihaza özgü bilgileri eklemek için kullanılır. Örneğin, seri numarasını göstermek için girin `{{serialnumber}}` . Cihazda, metin, `123456789ABC` her bir cihaz için benzersiz olan öğesine benzer şekilde görünür. Değişken girerken, küme ayraçları kullandığınızdan emin olun `{{ }}` . [Uygulama yapılandırma belirteçleri](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) , kullanılabilecek değişkenlerin bir listesini içerir. Ayrıca, `deviceid` herhangi bir cihaza özgü değeri de kullanabilirsiniz.
 
   > [!NOTE]
-  > Değişkenler kullanıcı arabiriminde doğrulanmaz ve büyük/küçük harfe duyarlıdır. Sonuç olarak, yanlış girişle kaydedilmiş profiller görebilirsiniz. Örneğin, yerine girdiğinizde `{{DeviceID}}` `{{deviceid}}`, cihazın benzersiz kimliği yerine değişmez dize gösterilir. Doğru bilgileri girdiğinizden emin olun.
+  > Değişkenler kullanıcı arabiriminde doğrulanmaz ve büyük/küçük harfe duyarlıdır. Sonuç olarak, yanlış girişle kaydedilmiş profiller görebilirsiniz. Örneğin, `{{DeviceID}}` yerine girdiğinizde `{{deviceid}}` , CIHAZıN benzersiz kimliği yerine değişmez dize gösterilir. Doğru bilgileri girdiğinizden emin olun.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

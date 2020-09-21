@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d7e5fc7d16212c40fbbe5c1486ed3be76d2738f
-ms.sourcegitcommit: 302556d3b03f1a4eb9a5a9ce6138b8119d901575
+ms.openlocfilehash: fa293b61a3343f4b4041a75a6aecb6118b7d8742
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83983113"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815349"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Intune’da bir cihazın geçiş kodunu sıfırlama veya kaldırma
 
@@ -36,11 +36,11 @@ Bu belgede, Android Enterprise 'ta (eski adıyla Android for Work veya AfW) ciha
 | Sürüm 6.x veya öncesindeki Android cihazları | Yes |
 | Cihaz sahibi olarak kaydedilmiş Android Kurumsal cihazları | Yes |
 | iOS/ıpados cihazları | Yes |
-| Kullanıcı kaydıyla kaydedilen iOS/ıpados cihazları | No |
-| İş profiliyle kaydedilmiş Android cihazları | No |
-| Sürüm 7.0 veya üzeri Android cihazlar | No |
-| macOS | No |
-| Windows | No |
+| Kullanıcı kaydıyla kaydedilen iOS/ıpados cihazları | Hayır |
+| İş profiliyle kaydedilmiş Android cihazları | Hayır |
+| Sürüm 7.0 veya üzeri Android cihazlar | Hayır |
+| macOS | Hayır |
+| Windows | Hayır |
 
 Android cihazlarda, bu, cihaz düzeyi geçiş kodu sıfırlamasının yalnızca 6. x veya önceki sürümleri çalıştıran cihazlarda ya da bilgi noktası modunda çalışan Android kurumsal cihazlarda desteklenir. Bunun nedeni, Google 'ın bir Android 7 cihazının geçiş kodunu/parolasını bir cihaz yöneticisi tarafından verilen uygulama içinden sıfırlama desteğinin kaldırılmasına ve tüm MDM satıcılarına uygulanmasından kaynaklanır.
 
@@ -49,8 +49,10 @@ Android cihazlarda, bu, cihaz düzeyi geçiş kodu sıfırlamasının yalnızca 
 | Platform | Destekleniyor mu? |
 | ---- | ---- |
 | Bir iş profili ile kaydedilmiş ve sürüm 8.0 ve sonrasını çalıştıran Android kurumsal cihazlar | Yes |
-| Bir iş profili ile kaydedilmiş ve sürüm 7.x ve öncesini çalıştıran Android kurumsal cihazlar | No |
-| Sürüm 7.x ve öncesini çalıştıran Android cihazlar | No |
+| İş profili olan Android kurumsal şirkete ait cihazlar | Yes |
+| Bir iş profili ile kaydedilmiş ve sürüm 7.x ve öncesini çalıştıran Android kurumsal cihazlar | Hayır |
+| Sürüm 7.x ve öncesini çalıştıran Android cihazlar | Hayır |
+
 
 Yeni bir iş profili geçiş kodu oluşturmak için Geçiş Kodunu Sıfırla eylemini kullanın. Bu eylem, bir geçiş kodu sıfırlaması ister ve yalnızca iş profili için yeni, geçici bir geçiş kodu oluşturur. 
 

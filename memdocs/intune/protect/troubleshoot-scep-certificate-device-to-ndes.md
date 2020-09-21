@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 166681c4cdb2ac3652234c12e50bcb185c43dcbe
-ms.sourcegitcommit: e2deac196e5e79a183aaf8327b606055efcecc82
+ms.openlocfilehash: 4d225f9254dc66b10e28367b390b31afe8f6ee59
+ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076184"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90815196"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Microsoft Intune 'daki SCEP sertifika profilleri için cihazdan NDES sunucu iletişimi sorunlarını giderme
 
@@ -153,7 +153,7 @@ Aşağıdaki örneğe benzeyen bağlantılar, 500 durum koduyla, *bir Istemcinin
 
 4. **Kullanıcı veya Grup Ekle..**. ' ye tıklayın, **Seçilecek nesne adlarını girin kutusuna** **IIS_IURS** girin ve ardından **Tamam**' a tıklayın.
 
-5. **Tamam** düğmesine tıklayın.
+5. **Tamam**’a tıklayın.
 
 6. Bilgisayarı yeniden başlatın ve ardından cihazdan bağlantıyı yeniden deneyin.
 
@@ -191,7 +191,7 @@ SCEP sunucu URL 'sine gözattığınızda aşağıdaki ağ aygıtı kayıt hizme
   ```
 
   Yükleme başarısız olursa, Microsoft Intune bağlayıcısını kaldırın ve yeniden yükleyin.
-  Yükleme başarılı olduysa ve Genreal NDES iletisini almaya devam ederseniz, IIS 'i yeniden başlatmak için **iisreset** komutunu çalıştırın.
+  Yükleme başarılı olduysa ve genel NDES iletisini almaya devam ederseniz, IIS 'i yeniden başlatmak için **iisreset** komutunu çalıştırın.
 
 #### <a name="http-error-503"></a>HTTP hatası 503
 
@@ -251,7 +251,7 @@ SCEP uygulama havuzu başlatılmazsa, sunucusundaki uygulama olay günlüğünü
   **Çözüm**: başvuruyu geçerli bir sertifikanın parmak izine göre güncelleştirin.
   1. Bir değiştirme sertifikası tanımla:
      - Mevcut Sertifikayı Yenile
-     - Benzer özellikleri (konu, EKU, anahtar türü ve uzunluğu vb.) içeren farklı bir sertifika seçin
+     - Benzer özelliklere (konu, EKU, anahtar türü ve uzunluk vb.) sahip farklı bir sertifika seçin
      - Yeni bir sertifika Kaydet
   2. `NDESPolicy`Geçerli değerleri yedeklemek için kayıt defteri anahtarını dışarı aktarın.
   3. `NDESCertThumbprint`Kayıt defteri değerinin verisini yeni sertifikanın parmak iziyle değiştirin, tüm boşlukları kaldırarak ve metni küçük harfe dönüştürerek.
@@ -263,9 +263,9 @@ SCEP sunucu URL 'sine gözattığınızda, şu hatayı alırsınız:
 
 ![Gatewaytimeout hatası](../protect/media/troubleshoot-scep-certificate-device-to-ndes/gateway-timeout.png)
 
-- **Neden**: **Microsoft AAD uygulama proxy Bağlayıcısı** hizmeti başlatılmadı.
+- **Neden**: **Microsoft Azure AD uygulama proxy Bağlayıcısı** hizmeti başlatılmadı.
 
-  **Çözüm**: **Services. msc**' yi ÇALıŞTıRıN ve ardından **Microsoft AAD uygulama proxy Bağlayıcısı** hizmetinin çalıştığından ve **Başlangıç türünün** **Otomatik**olarak ayarlandığından emin olun.
+  **Çözüm**: **Services. msc**' yi çalıştırın ve ardından **Microsoft Azure AD uygulama proxy Bağlayıcısı** hizmetinin çalıştığından ve **Başlangıç türünün** **Otomatik**olarak ayarlandığından emin olun.
 
 #### <a name="http-414-request-uri-too-long"></a>HTTP 414 Isteği-URI çok uzun
 
