@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 09/21/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,18 +16,18 @@ search.appverid: MET150
 ms.reviewer: samyada
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1394d16dc8493efd258cb8a6779a5d5ff7b7dec1
-ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
+ms.openlocfilehash: 36cb7902fdc9e05aaef9ace8ceaa28e675ca1abc
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90689506"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848513"
 ---
 # <a name="configure-actions-for-noncompliant-devices-in-intune"></a>Intune 'da uyumsuz cihazlar için eylemleri yapılandırma
 
 Uyumluluk ilkelerinizi veya kurallarınızı karşılamayan cihazlarda **uyumsuzluk Için eylemler**ekleyebilirsiniz. Bu özellik, son kullanıcıya e-posta gönderme ve daha fazlası gibi zaman sıralı bir eylem dizisi yapılandırır.
 
-## <a name="overview"></a>Genel bakış
+## <a name="overview"></a>Genel Bakış
 
 Varsayılan olarak, her uyumluluk ilkesi, sıfır gün (**0**) zamanlamasıyla **uyumsuz olarak işaretle cihaz** uyumsuzluğu için eylemi içerir. Bu varsayılan değer, Intune 'un bir cihazın uyumlu olmadığını algıladığında, Intune 'un cihazı uyumsuz olarak işaretlediği bir sonucudur. Bir cihaz uyumsuzluk olarak işaretlendikten sonra, Azure Active Directory (AD) [koşullu erişim](/azure/active-directory/active-directory-conditional-access-azure-portal) cihazı engelleyebilir.
 
@@ -151,7 +151,9 @@ Kullanıcılarınıza e-posta göndermek için bir bildirim iletisi şablonu olu
 
 Oluşturulan bildirimler *uyumluluk ilkeleri*  >  *bildirimleri* sayfasında kullanılabilir. Sayfasında, yapılandırmasını görüntülemek için bir bildirim seçebilirsiniz:
 
-- Intune 'da oturum açmak için kullandığınız hesaba bildirim e-postası önizlemesi göndermek için **Önizleme e-postası gönder** ' i seçin. 
+- Intune 'da oturum açmak için kullandığınız hesaba bildirim e-postası önizlemesi göndermek için **Önizleme e-postası gönder** ' i seçin.
+
+  Önizleme e-postasını başarıyla göndermek için hesabınızın aşağıdaki Azure AD gruplarına veya Intune rollerine eşit olması gerekir: *Azure AD Genel Yöneticisi*, Intune *Yöneticisi* (Intune Azure AD Intune Hizmet Yöneticisi) veya Intune *ilkesi ve Profil Yöneticisi*.
 - Bir değişiklik yapmak için *temel bilgiler* veya *kapsam etiketleri* için **Düzenle** ' yi seçin.
 
 ## <a name="add-actions-for-noncompliance"></a>Uyumsuzluğa yönelik eylemler ekleme

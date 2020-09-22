@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9ec657e7d2ee83f3f4f54f9a33a5a350faa4229
-ms.sourcegitcommit: 7f71d6f776df3ac28e5da3f8c926c88626483ce9
+ms.openlocfilehash: cb9c5c43e3e5c1f9542e06ab1fa4b3b1868924e8
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89564253"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848394"
 ---
 # <a name="in-development-for-microsoft-intune"></a>Microsoft Intune için geliştirme aşamasında
 
@@ -241,7 +241,7 @@ Bir cihazın Donanım Ayrıntıları sayfasında, PowerPrecision ve PowerPrecisi
 ## <a name="intune-apps"></a>Intune uygulamaları
 
 ### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal---1817861----"></a>Windows Şirket Portalı Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş teslimi<!-- 1817861  -->
-2006 sürümünde, [Şirket portalı Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş teslimini](../fundamentals/whats-new.md#unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal)duyurduk. Bu özellik Windows Şirket Portalı desteklenecektir. Intune 'un **Özelleştirme** bölmesinde, Windows Şirket portalı hem **Azure AD kurumsal uygulamalarını** hem de **Office Online uygulamalarını** **gizleme** veya **gösterme** seçeneğini belirleyebileceksiniz. Her Son Kullanıcı tüm uygulama kataloglarını seçilen Microsoft hizmetinden görürler. Varsayılan olarak, her bir ek uygulama kaynağı **gizleyecek**şekilde ayarlanır. Bu yapılandırma ayarını bulmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **Kiracı Yönetimi**  >  **özelleştirmesi** ' nı seçersiniz. İlgili bilgiler için bkz. [Intune şirket portalı uygulamalar, Şirket portalı Web sitesi ve Intune uygulaması nasıl özelleştirilir](../apps/company-portal-app.md).
+2006 sürümünde, [Şirket portalı Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş teslimini](../fundamentals/whats-new.md)duyurduk. Bu özellik Windows Şirket Portalı desteklenecektir. Intune 'un **Özelleştirme** bölmesinde, Windows Şirket portalı hem **Azure AD kurumsal uygulamalarını** hem de **Office Online uygulamalarını** **gizleme** veya **gösterme** seçeneğini belirleyebileceksiniz. Her Son Kullanıcı tüm uygulama kataloglarını seçilen Microsoft hizmetinden görürler. Varsayılan olarak, her bir ek uygulama kaynağı **gizleyecek**şekilde ayarlanır. Bu yapılandırma ayarını bulmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **Kiracı Yönetimi**  >  **özelleştirmesi** ' nı seçersiniz. İlgili bilgiler için bkz. [Intune şirket portalı uygulamalar, Şirket portalı Web sitesi ve Intune uygulaması nasıl özelleştirilir](../apps/company-portal-app.md).
  
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

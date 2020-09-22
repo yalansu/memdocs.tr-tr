@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5ec26d03336e73f7dadf0912992b018058dc493
-ms.sourcegitcommit: cba06c182646cb6dceef304b35230bf728d5133e
+ms.openlocfilehash: 96f6c2a40fa373c73aac30061ddaaaa1ddf0c8a6
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90574890"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848411"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-automated-device-enrollment"></a>iOS/iPadOS cihazlarını Apple’ın Otomatik Cihaz Kayıt Anlaşması ile otomatik olarak kaydetme
 
@@ -218,7 +218,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
     > - **Paylaşılan iPad** = * * Yes * *.
     > Geçici oturumlar varsayılan olarak etkindir ve kullanıcılarınızın yönetilen bir Apple KIMLIĞI hesabı olmadan paylaşılan iPad 'de oturum açmasına olanak tanır. İOS/ıpados paylaşılan iPad [cihaz kısıtlama ayarlarını](../configuration/device-restrictions-ios.md)yapılandırarak paylaşılan iPad üzerinde geçici oturumları devre dışı bırakabilirsiniz.  
 
-13. Bu profili kullanan cihazların **Bilgisayarlarla eşitleme** imkanının olup olmayacağını seçin. **Sertifikaya göre Apple Configurator’a izin ver**’i seçerseniz, **Apple Configurator Sertifikaları**’nın altında bir sertifika seçmeniz gerekir.
+13. Bu profili kullanan cihazların **Bilgisayarlarla eşitleme** imkanının olup olmayacağını seçin. **Sertifikaya göre Apple Configurator’a izin ver**’i seçerseniz, **Apple Configurator Sertifikaları**’nın altında bir sertifika seçmeniz gerekir. İOS/ıpados 13,0 ve üzeri için, bu ayar Apple tarafından kullanımdan kaldırılmıştır. 
 
      > [!NOTE]
      > **Bilgisayarlarla eşitleme** , **Tümünü Reddet**olarak ayarlandıysa, bağlantı noktası iOS ve ıpados cihazlarında sınırlı olur. Bağlantı noktası yalnızca dolduruluyor ve başka hiçbir şey için kullanılabilir. Bağlantı noktasının iTunes veya Apple Configurator 2 kullanılması engellenir.
@@ -232,7 +232,7 @@ Belirtecinizi yüklemişseniz, artık ADE cihazları için bir kayıt profili ol
 17. **Kurulum Yardımcısı özelleştirmesi** sayfasında, aşağıdaki profil ayarlarını yapılandırın: ![ Kurulum Yardımcısı özelleştirmesi.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Departman ayarları | Description |
+    | Departman ayarları | Açıklama |
     |---|---|
     | <strong>Bölüm Adı</strong> | Kullanıcı, etkinleştirme sırasında <strong>Yapılandırma Hakkında</strong> öğesine dokunduğunda görüntülenir. |
     |    <strong>Departman Telefonu</strong>     | Kullanıcı, etkinleştirme sırasında <strong>Yardım Gerekli</strong> düğmesine dokunduğunda görüntülenir. |

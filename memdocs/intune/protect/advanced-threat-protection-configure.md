@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9c3e456722d0b747a07c3f7040edc2cdf28f264
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: c8a499829f769b5533be6786b261aba1b6ddb6fc
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88909593"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848530"
 ---
 # <a name="configure-microsoft-defender-atp-in-intune"></a>Intune 'da Microsoft Defender ATP 'yi yapılandırma
 
@@ -59,6 +59,8 @@ Yalnızca Microsoft Defender ATP 'yi her kiracı için tek bir kez etkinleştirm
 4. Microsoft Endpoint Manager Yönetim merkezinde **Microsoft Defender ATP** 'ye dönün. **MDM uyumluluk Ilkesi ayarları**altında kuruluşunuzun ihtiyaçlarına bağlı olarak:
    - **Windows cihazları 10.0.15063 ve sonraki sürümlerini Microsoft Defender ATP** 'yi **Açık** olarak ayarla
    - **6.0.0 ve üzeri sürüm Android cihazlarını açık olarak Microsoft Defender ATP 'ye bağlama** **On**
+  
+   Bu yapılandırmaların *üzerine*ayarlandıktan sonra, Intune ile zaten yönetilen geçerli cihazların yanı sıra daha sonra da kaydolduktan sonra, uyumluluk amacıyla MICROSOFT Defender ATP 'ye bağlanacaktır.
 
 5. **Kaydet**’i seçin.
 

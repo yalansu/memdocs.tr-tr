@@ -17,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser, contperfq1
 ms.collection: ''
-ms.openlocfilehash: 2660530e85730b192def24f91b77b151d5ed799c
-ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
+ms.openlocfilehash: 2bd7cd16e904395b1afdb24dbd2e1937544c922e
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90689489"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848377"
 ---
 # <a name="install-mobile-threat-defense-app"></a>Mobil tehdit savunması uygulamasını yükleme  
 
@@ -53,7 +53,7 @@ Aşağıdaki MTD uygulamaları genellikle Android cihazlarda kullanılır. Googl
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
 * [Pradeo güvenliği](https://go.microsoft.com/fwlink/?linkid=2143413)
 * [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
-* [SEP Mobile (Symantec Endpoint Protection) (https://go.microsoft.com/fwlink/?linkid=2139454)
+* [SEP Mobile (Symantec Endpoint Protection)](https://go.microsoft.com/fwlink/?linkid=2139454)
 * [Mobil için Sophos KESMENOKTASI X](https://go.microsoft.com/fwlink/?linkid=2143273)
 * [Wandera](https://go.microsoft.com/fwlink/?linkid=2143506)
 * [Zyium mobil IP 'leri (ZIP 'ler)](https://go.microsoft.com/fwlink/?linkid=2139142)  
@@ -120,7 +120,7 @@ Bir tehdidi çözümlemek ve korunan uygulamalara erişimi yeniden kazanmak içi
 2. Tehdit ayrıntılarını uygulamada okuyun. Bu, tehdidi çözülmedi ve çözümlenmezse tehdidin cihazınızı nasıl etkileyebileceğini açıklar. 
 3. Cihazınızda gerekli değişiklikleri yaptıktan sonra, MTD uygulamasına dönün ve yeni bir tarama başlatın. Tüm tehditler çözümlenene kadar bu adımları tekrarlayın. Değişikliklerinizin kuruluşunuzla eşitlenmesi birkaç dakika sürebilir. Bu değişiklikler eşitlendikten sonra korunan uygulamaya yeniden erişim elde edersiniz. 
 
-## <a name="get-support"></a>Destek alın
+## <a name="get-support"></a>Destek alma
 Kuruluşunuzun iletişim bilgilerini bulmak için [Şirket portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) gidin. Hakkında yardım almak için onlara başvurun:
 
 * Hangi MTD uygulamasının kullanılacağını belirleme  

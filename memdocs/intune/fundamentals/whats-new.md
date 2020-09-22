@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/17/2020
+ms.date: 09/21/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b83ae8b5da0f0cc8a53f26b6a4bcc0797cd4a19
-ms.sourcegitcommit: af4fc4f928203c1bfdb27499a56c91fe0ebae854
+ms.openlocfilehash: d3931ee61c276c9778e35e8af034a0e8db761823
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90802930"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848547"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -37,7 +37,7 @@ ms.locfileid: "90802930"
 > - Gün 3: Kuzey Amerika
 > - Gün 4 +: kamu için Intune
 >
-> Bazı özelliklerin piyasaya çıkması birkaç haftayı bulabilir ve tüm özellikler ilk hafta bütün müşterilerimize sunulmamış olabilir.
+> Bazı özelliklerin piyasaya çıkması birkaç haftayı bulabilir ve tüm özellikler ilk hafta bütün müşterilerimize sunulmamış olabilir. 
 >
 > Bir sürümdeki yaklaşan özelliklerin bir listesi için [geliştirme sayfasını](in-development.md) inceleyin.
 
@@ -55,7 +55,8 @@ ms.locfileid: "90802930"
 ### Scripts
 
 <!-- ########################## -->
-## <a name="week-of-september-14-2020"></a>14 Eylül 2020 haftası
+## <a name="week-of-september-21-2020"></a>21 Eylül 2020 haftası
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
 ### <a name="device-management"></a>Cihaz yönetimi
@@ -66,24 +67,293 @@ ms.locfileid: "90802930"
 
 ### <a name="app-management"></a>Uygulama yönetimi
 
-#### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal---1817861-wnready---"></a>Windows Şirket Portalı Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş teslimi<!-- 1817861 wnready -->
-2006 sürümünde, [Şirket portalı Web sitesinde Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş olarak teslimini](../fundamentals/whats-new.md#unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal)duyurduk. Bu özellik Windows Şirket Portalı desteklenir. Intune 'un **Özelleştirme** bölmesinde, Windows Şirket portalı hem **Azure AD kurumsal uygulamalarını** hem de **Office Online uygulamalarını** **gizlemek** veya **göstermek** için seçin. Her Son Kullanıcı tüm uygulama kataloglarını seçilen Microsoft hizmetinden görürler. Varsayılan olarak, her bir ek uygulama kaynağı **gizleyecek**şekilde ayarlanır. Bu yapılandırma ayarını bulmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **Kiracı Yönetimi**  >  **özelleştirmesi** ' nı seçin. İlgili bilgiler için bkz. [Intune şirket portalı uygulamalar, Şirket portalı Web sitesi ve Intune uygulaması nasıl özelleştirilir](../apps/company-portal-app.md).
+#### <a name="new-app-categories-to-target-app-protection-policies-more-easily---4802581----"></a>Uygulama koruma ilkelerini daha kolay hedefleyecek yeni uygulama kategorileri<!-- 4802581  -->
+Intune 'un 2009 sürümü sayesinde, uygulama koruma ilkelerini daha kolay ve hızlı bir şekilde hedeflemek için kullanabileceğiniz uygulama kategorileri oluşturarak Microsoft Endpoint Manager 'ın UX ' i geliştirdik. Bu kategoriler **tüm ortak uygulamalar**, **Microsoft uygulamaları**ve **temel Microsoft uygulamalardır**. Hedeflenen uygulama koruma ilkesini oluşturduktan sonra, bu ilkeden etkilenecek uygulamaların listesini görüntülemek için **hedeflenecek uygulamaların listesini görüntüle** ' yi seçebilirsiniz. Yeni uygulamalar desteklenene kadar bu kategorileri bu uygulamaları uygun şekilde içerecek şekilde dinamik olarak güncelleştiririz ve ilkeleriniz seçtiğiniz Kategorideki tüm uygulamalara otomatik olarak uygulanacaktır. Gerekirse, tek tek uygulamalar için ilkeleri hedeflemek için de devam edebilirsiniz. Daha fazla bilgi için bkz. [Uygulama koruma ilkeleri oluşturma ve atama](../apps/app-protection-policies.md) ve [ıntune ile WINDOWS Information Protection (WIP) ilkesi oluşturma ve dağıtma](../apps/windows-information-protection-policy-create.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Cihaz yapılandırması
+
+#### <a name="cope-preview-update-new-settings-to-create-requirements-for-the-work-profile-password-for-android-enterprise-corporate-owned-devices-with-a-work-profile--7088355----"></a>COPE Preview güncelleştirmesi: iş profili içeren Android kurumsal şirkete ait cihazlar için iş profili parolası gereksinimleri oluşturmaya yönelik yeni ayarlar<!--7088355  -->
+Yeni ayarlar artık yöneticilere iş profili içeren Android kurumsal şirkete ait cihazlar için iş profili parolasını ayarlama olanağı sunar:
+
+- Gerekli parola türü
+- Minimum parola uzunluğu
+- Parolanın süresi dolana kadar geçen gün sayısı
+- Kullanıcının bir parolayı yeniden kullanabilmesi için gereken parola sayısı
+- Cihaz silinmeden önceki oturum açma hatası sayısı
+
+Daha fazla bilgi için bkz. [Intune kullanarak özelliklere izin vermek veya bunları kısıtlamak için Android Kurumsal cihaz ayarları](../configuration/device-restrictions-android-for-work.md).
+
+#### <a name="cope-preview-update-new-settings-to-configure-the-personal-profile-for-android-enterprise-corporate-owned-devices-with-a-work-profile---7086356-----"></a>COPE önizleme güncelleştirmesi: Android kurumsal şirkete ait cihazlar için kişisel profili bir iş profiliyle yapılandırmaya yönelik yeni ayarlar<!-- 7086356   -->
+İş profili olan Android kurumsal şirkete ait cihazlar için, yalnızca kişisel profile uygulanan yeni ayarlar vardır (**cihaz**  >  **yapılandırma profilleri**  >  platform için bir**profil**  >  **Android Enterprise** >, **tam olarak yönetilen, adanmış ve şirkete ait iş profili**  >  **cihaz kısıtlamalarını** , profil > **kişisel profil**):
+
+- **Kamera**: kişisel kullanım sırasında kameraya erişimi engellemek için bu ayarı kullanın.
+- **Ekran yakalama**: kişisel kullanım sırasında ekran yakalamalarını engellemek için bu ayarı kullanın.
+- **Kullanıcıların kişisel profilde bilinmeyen kaynaklardan uygulama yüklemesini etkinleştirmesine Izin ver**: Bu ayarı, kullanıcıların kişisel profilde bilinmeyen kaynaklardan uygulama yüklemelerine izin vermek için kullanın. 
+
+Aşağıdakiler cihazlar için geçerlidir:
+- İş profili, kişisel olarak etkinleştirilen Android kurumsal şirkete ait cihazlar.
+
+Yapılandırabileceğiniz tüm ayarları görmek için [Android kurumsal cihaz ayarları ' na giderek özelliklere izin verin veya kısıtlayın](../configuration/device-restrictions-android-for-work.md).
+
+#### <a name="analyze-your-on-premises-gpos-using-group-policy-analytics--7200950-----"></a>Grup ilkesi Analytics kullanarak şirket içi GPO 'larınızı çözümleyin<!--7200950   -->
+**Cihazlar**  >  **Grup İlkesi Analytics (Önizleme)** bölümünde, Grup İlkesi nesnelerinizi (GPO) Endpoint Manager Yönetim merkezinde içeri aktarabilirsiniz. İçeri aktardığınızda Intune, GPO 'YU otomatik olarak analiz eder ve Intune 'da eşdeğer ayarlara sahip olan ilkeleri gösterir. Ayrıca kullanım dışı olan veya artık desteklenmeyen GPO 'Ları gösterir. Daha ayrıntılı bir ayrıntıya gitme için, **Reports**  >   geçiş hazırlığı raporuna > raporlar**Grup İlkesi Analizi (Önizleme)** bölümüne gidin.
+
+Bu özellik hakkında daha fazla bilgi için bkz. [Grup İlkesi Analytics](../configuration/group-policy-analytics.md).
+
+Aşağıdakiler cihazlar için geçerlidir:
+- Windows 10 ve üzeri
+
+#### <a name="block-app-clips-on-iosipados-and-defer-non-os-software-updates-on-macos-devices---7518422-----"></a>İOS/ıpados üzerinde uygulama kliplerini engelleyin ve macOS cihazlarındaki işletim sistemi olmayan yazılım güncelleştirmelerini erteleyin<!-- 7518422   -->
+İOS/ıpados ve macOS cihazlarında bir cihaz kısıtlamaları profili oluşturduğunuzda, bazı yeni ayarlar vardır:
+
+**iOS/ıpados 14.0 + uygulama kliplerini engelle**
+
+- İOS/ıpados 14,0 ve üzeri için geçerlidir.
+- Cihazların cihaz kaydı veya otomatik cihaz kaydı (denetimli cihazlar) ile kaydedilmiş olması gerekir.
+- **Uygulama kliplerini engelle** ayarı, yönetilen cihazlarda uygulama kliplerini**engeller (cihaz**  >  **yapılandırma profilleri**profil  >  **oluşturma**  >  **iOS/ıpados** for platform > **cihaz kısıtlamaları** > **genel**). Bloke edildiğinde, kullanıcılar uygulama klipleri ekleyemez ve mevcut uygulama klipleri kaldırılır.
+
+**macOS 11 + yazılım güncelleştirmelerini ertele**
+
+- MacOS 11 ve üzeri için geçerlidir. Denetimli macOS cihazlarında, cihazda Kullanıcı tarafından onaylanan cihaz kaydı veya otomatik cihaz kaydı üzerinden kaydedilmiş olması gerekir.
+- Var olan **yazılım güncelleştirmelerini ertele** ayarı artık işletim sistemi ve işletim sistemi olmayan güncelleştirmeleri**geciktirebilir (cihaz**  >  **yapılandırma profilleri**, profil için  >  **Create profile**  >  **ma> cos** profilini **Device restrictions** oluşturur > **genel**). **Yazılım güncelleştirmeleri ayarının mevcut gecikme görünürlüğü** , işletim sistemi ve işletim sistemi olmayan güncelleştirmeler için geçerlidir. İşletim sistemi olmayan yazılım güncelleştirmelerinin erteleniyor, zamanlanmış güncelleştirmeleri etkilemez.
+- Mevcut ilkelerin davranışı değiştirilmez, etkilenmez veya silinmez. Mevcut ilkeler, otomatik olarak aynı yapılandırmanızla yeni ayara geçirilir.
+
+Yapılandırabileceğiniz cihaz kısıtlama ayarlarını görmek için bkz. [iOS/ıpados](../configuration/device-restrictions-ios.md) ve [MacOS](../configuration/device-restrictions-macos.md).
+
+#### <a name="new-settings-using-per-app-vpn-or-on-demand-vpn-on-iosipados-and-macos-devices---7758772-7758837-7758886-----"></a>İOS/ıpados ve macOS cihazlarında uygulama başına VPN veya isteğe bağlı VPN kullanan yeni ayarlar<!-- 7758772 7758837 7758886   -->
+**Cihazların**otomatik VPN  >  **Configuration profiles**  >  **Create profile**  >  > profili için iOS > **VPN** için**iOS** veya **MacOS** **Automatic VPN**profili oluşturma, cihazlar yapılandırma profillerinde otomatik VPN profilleri yapılandırabilirsiniz. Yapılandırabileceğiniz yeni uygulama başına VPN ayarları vardır:
+
+- **Kullanıcıların OTOMATIK VPN 'yi devre dışı bırakmasını engelle**: otomatik olarak **uygulama başına VPN** veya **isteğe bağlı VPN** bağlantısı oluştururken, kullanıcıları otomatik VPN 'yi etkin ve çalışır durumda tutmaya zorlayabilirsiniz.
+- **İlişkili etki alanları**: otomatik olarak **uygulama başına VPN** bağlantısı oluştururken, VPN profilinde VPN bağlantısını otomatik olarak başlatan ilişkili etki alanlarını ekleyebilirsiniz. İlişkili etki alanları hakkında daha fazla bilgi için bkz. [ilişkili etki alanları](../configuration/device-features-configure.md#associated-domains).
+- **Dışlanan etki alanları**: otomatik **uygulama başına VPN** bağlantısı oluştururken, uygulama başına VPN bağlıyken VPN bağlantısını atlayabileceğiniz etki alanları ekleyebilirsiniz.
+
+Bu ayarları ve yapılandırabileceğiniz diğer ayarları görmek için [iOS/ıpados VPN ayarları](../configuration/vpn-settings-ios.md) ve [MacOS VPN ayarları](../configuration/vpn-settings-macos.md)' na gidin.
+
+[İOS/ıpados cihazları için uygulama başına sanal özel ağ (VPN)](../configuration/vpn-setting-configure-per-app.md#create-a-per-app-vpn-profile)ayarlayın.
+
+Aşağıdakiler cihazlar için geçerlidir:
+- iOS/ıpados 14 ve üzeri
+- macOS Big Sur (macOS 11)
+
+#### <a name="set-maximum-transmission-unit-for-ikev2-vpn-connections-on-iosipados-devices---7758937----"></a>İOS/ıpados cihazlarında IKEv2 VPN bağlantıları için en yüksek iletim birimini ayarlayın<!-- 7758937  -->
+İOS/ıpados 14 ve daha yeni cihazlardan başlayarak, IKEv2 VPN bağlantıları kullanırken özel bir en yüksek iletim birimi (MTU) yapılandırabilirsiniz (**cihaz**  >  **yapılandırma profilleri**  >  **Create profile**  >  > profil oluşturma >**iOS** **VPN** **IKEv2**
+
+Bu ayar ve yapılandırabileceğiniz diğerleri hakkında daha fazla bilgi için bkz. [Ikev2 ayarları](../configuration/vpn-settings-ios.md#ikev2-settings).
+
+Aşağıdakiler cihazlar için geçerlidir:
+- iOS/ıpados 14 ve üzeri
+
+#### <a name="per-account-vpn-connection-for-email-profiles-on-iosipados-devices---7759116-----"></a>İOS/ıpados cihazlarındaki e-posta profilleri için hesap başına VPN bağlantısı<!-- 7759116   -->
+İOS/ıpados 14 ' ten başlayarak, yerel posta uygulaması için e-posta trafiği, kullanıcının kullandığı hesaba göre bir VPN aracılığıyla yönlendirilebilir. Intune 'da, **Hesap başına VPN profili için VPN profilini** yapılandırabilirsiniz (**cihaz**  >  **yapılandırma profilleri**  >  **Profil oluştur**  >  **iOS/ıpados** for platform > **e-posta** > **Exchange ActiveSync e-posta ayarları**). 
+
+Bu özellik, hesap tabanlı bir VPN bağlantısı için kullanmak üzere uygulama başına VPN profili seçmenizi sağlar. Kullanıcılar, e-posta uygulamasında Kuruluş hesabını kullandıklarında, uygulama başına VPN bağlantısı otomatik olarak açılır.
+
+Bu ayarı ve yapılandırabileceğiniz diğerlerini görmek için [iOS ve ıpados cihazları için e-posta ayarları ekle](../configuration/email-settings-ios.md)' ye gidin.
+
+Aşağıdakiler cihazlar için geçerlidir:
+- iOS/ıpados 14 ve üzeri
+
+#### <a name="disable-mac-address-randomization-on-wi-fi-networks-on-iosipados-devices---7758689-----"></a>İOS/ıpados cihazlarında Wi-Fi ağlarında MAC adresi rastgele seçimini devre dışı bırakma<!-- 7758689   -->
+İOS/ıpados 14 ' den başlayarak, varsayılan olarak cihazlar bir ağa bağlanırken fiziksel MAC adresi yerine rastgele bir MAC adresi sunar. Bu davranış, bir cihazı MAC adresine göre izlemek daha zor olduğundan gizlilik için önerilir. Bu özellik ayrıca ağ erişim denetimi (NAC) dahil olmak üzere statik bir MAC adresine dayanan işlevselliği de keser.
+
+Wi-Fi profillerinde ağ başına rastgele olarak MAC adresi rastgele seçimini devre dışı bırakabilirsiniz (**cihaz**yapılandırma profilleri, for the The The  >  **Configuration profiles**  >  **Create profile**  >  **iOS/iPadOS** **Basic** veya **Enterprise** for Wi-Fi Type for the Configuration for platform > **Wi-> Fi** ).
+
+Bu ayarı ve yapılandırabileceğiniz diğerlerini görmek için [iOS ve ıpados cihazları Için Wi-Fi ayarları ekleme](../configuration/wi-fi-settings-ios.md)bölümüne gidin.
+
+Aşağıdakiler cihazlar için geçerlidir:
+- iOS/ıpados 14 ve üzeri
+
+#### <a name="new-settings-for-device-control-profiles----8368028---"></a>Cihaz denetim profillerine yönelik yeni ayarlar <!-- 8368028 -->
+Windows 10 veya üzerini çalıştıran cihazlara yönelik *saldırı yüzeyi azaltma* Ilkesi için [ *cihaz denetim* profiline](../protect/endpoint-security-asr-profile-settings.md#device-control-profile) bir çift ayar ekledik:
+
+- **Çıkarılabilir depolama birimi**
+- **USB bağlantıları (yalnızca HoloLens)**
+ 
+*Saldırı yüzeyi azaltma* Ilkesi, Intune 'daki [Endpoint Security](../protect/endpoint-security-policy.md) 'nin bir parçasıdır.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Cihaz kaydı
+
+#### <a name="enrollment-status-page-shows-critical-kiosk-policies--7021540---"></a>Kayıt durumu sayfası kritik bilgi noktası ilkelerini gösterir<!--7021540 -->
+Artık kayıt durumu sayfasında izlenen aşağıdaki ilkeleri görebileceksiniz
+- Atanan erişim
+- Bilgi noktası tarayıcı ayarları
+- Edge tarayıcı ayarları
+
+Diğer tüm bilgi noktası ilkeleri Şu anda izlenemez.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Cihaz yönetimi
+
+#### <a name="support-for-powerprecision-and-powerprecision-batteries-for-zebra-devices--3724987----"></a>Zeköşeli cihazlar için PowerPrecision ve PowerPrecision + pille destek<!--3724987  -->
+Bir cihazın Donanım Ayrıntıları sayfasında, şimdi PowerPrecision ve PowerPrecision ve pil kullanarak Zeköşeli cihazlarla ilgili aşağıdaki bilgileri görebilirsiniz:
+- Zepoya tarafından belirlendiği şekilde sistem durumu derecelendirmesi (yalnızca PowerPrecision + piller)
+- Tüketilen tam ücret döngüsü sayısı
+- Cihazda son bulunan pil için son iade tarihi
+- Cihazda en son bulunan pil paketinin seri numarası
+
+#### <a name="cope-preview-update-reset-work-profile-password-for-android-enterprise-corporate-owned-devices-with-a-work-profile---7217228----"></a>COPE önizleme güncelleştirmesi: iş profiliyle şirkete ait Android Kurumsal cihazları için iş profili parolasını sıfırlama <!--7217228  -->
+Artık, Android kurumsal şirkete ait cihazlarda iş profili parolasını bir iş profiliyle sıfırlayabilirsiniz. Daha fazla bilgi için bkz. [geçiş kodunu sıfırlama](../remote-actions/device-passcode-reset.md#reset-a-passcode).
+
+#### <a name="rename-a-co-managed-device-that-is-azure-active-directory-joined--7728043----"></a>Azure Active Directory birleştirilmiş bir ortak yönetilen cihazı yeniden adlandırma<!--7728043  -->
+Artık Azure AD 'ye katılmış bir ortak yönetilen cihazı yeniden adlandırabilirsiniz. Daha fazla bilgi için bkz. [Intune 'da cihazı yeniden adlandırma](../remote-actions/device-rename.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Cihaz güvenliği
+
+#### <a name="additional-biometric-authentication-support-for-android-devices---5706213----"></a>Android cihazlar için ek biyometrik kimlik doğrulama desteği<!-- 5706213  -->
+Yeni Android cihazları, parmak izlerinin ötesinde daha farklı bir biyometri kümesi kullanmaktır. OEM 'Ler, parmak izi olmayan Biyometri için destek uygularken, son kullanıcıların güvenli erişim ve daha iyi bir deneyim için bu özelliği kullanma olasılığı vardır. Intune 'un 2009 sürümü ile son kullanıcılarınızın Android cihazının desteklediği seçeneğe bağlı olarak parmak izini veya yüzü açma kilidini kullanmasına izin verebilirsiniz. Tüm biyometrik türlerin kimlik doğrulaması için kullanılıp kullanılamayacağını yapılandırabilir, parmak izleri yalnızca kabul edilir veya biyometri kabul edilmez. Daha fazla bilgi için bkz. [Android cihazları Için uygulama koruma deneyimi](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
+
+#### <a name="new-details-in-the-endpoint-security-configuration-for-a-device---7745029-------"></a>Bir cihaz için uç nokta güvenlik yapılandırmasındaki yeni ayrıntılar<!-- 7745029     -->
+Artık cihazlar için bir cihaz *uç noktası güvenlik yapılandırmasının*parçası olarak ek ayrıntılar görüntüleyebilirsiniz. Cihazlara dağıttığınız ilkelerle ilgili durum ayrıntılarını görüntülemek için ayrıntıya gidin, şimdi şunları bulabilirsiniz:
+ 
+- **UPN** (Kullanıcı asıl adı): UPN, cihazdaki belirli bir kullanıcıya hangi uç nokta Güvenlik profilinin atandığını tanımlar. Bu, bir cihazdaki birden çok kullanıcının ve cihaza atanan bir profilin veya taban çizgisinin birden çok girişinin ayırt edilmesine yardımcı olmak için yararlıdır. 
+
+Daha fazla bilgi için bkz. [güvenlik temelleri için çakışmaları çözme](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines).
+
+#### <a name="expanded-rbac-permissions-for-the-endpoint-security-role--7312374------"></a>Uç nokta güvenlik rolü için genişletilmiş RBAC izinleri<!--7312374    -->
+Intune için **Endpoint Security Manager** rolünde, [ **uzak görevler**için ek rol tabanlı erişim denetimi (RBAC) izinleri](../protect/endpoint-security.md#permissions-granted-by-the-endpoint-security-manager-role)vardır.
+ 
+Bu rol, Microsoft Endpoint Manager yönetim merkezine erişim verir ve güvenlik temelleri, cihaz uyumluluğu, koşullu erişim ve Microsoft Defender Gelişmiş tehdit koruması dahil olmak üzere güvenlik ve uyumluluk özelliklerini yöneten kişiler tarafından kullanılabilir.
+ 
+*Uzak görevlere* yönelik yeni izinler şunlardır:
+ 
+- Şimdi yeniden Başlat
+- Uzaktan kilitleme
+- BitLockerKeys 'i döndürme (Önizleme)
+- Filekasa anahtarını döndür
+- Cihazları eşitleme
+- Microsoft Defender
+- Yapılandırma Yöneticisi eylemini Başlat
+ 
+Herhangi bir Intune RBAC rolü için tüm izin kümesini görüntülemek için (**Kiracı Yöneticisi**  >  **Intune rolleri**  >  *bir rol*  >  **izinleri**seçin) bölümüne gidin.
+
+#### <a name="updates-for-security-baselines---7102146-7103916-------"></a>Güvenlik temelleri için güncelleştirmeler<!-- 7102146, 7103916     -->
+Aşağıdaki [güvenlik temelleri](../protect/security-baselines.md)için yeni sürümlere sahipsiniz:  
+ 
+- **[MDM güvenlik temeli (Windows 10 güvenliği)](../protect/security-baseline-settings-mdm-all.md?pivots-mdm-sept-2020)**
+- **[Microsoft Defender ATP temeli](../protect/security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)**
+ 
+Güncelleştirilmiş temel sürümler, ilgili ürün ekipleri tarafından önerilen en iyi yöntem yapılandırmalarının bakımını yapmanıza yardımcı olmak için son ayarlar için destek getirir.
+
+Sürümler arasında nelerin değiştirildiğini anlamak için, bkz. nasıl dışarı aktarılacağını öğrenmek için [temel sürümleri karşılaştırın](../protect/security-baselines.md#compare-baseline-versions) . Değişiklikleri gösteren CSV dosyası.  
+
+#### <a name="use-endpoint-security-configuration-details-to-identify-the-source-of-policy-conflicts-for-devices---7567503------"></a>Cihazların ilke çakışmalarının kaynağını belirlemek için uç nokta güvenlik yapılandırması ayrıntılarını kullanın<!-- 7567503    -->
+Çakışma çözümüne yardımcı olmak için, artık seçili bir cihazın *uç nokta güvenlik yapılandırmasını* görüntülemek için güvenlik temeli profilinde detaya gidebilirsiniz. Buradan, bir *Çakışma* veya *hata* gösteren ayarları seçebilir ve çakışmanın bir parçası olan profilleri ve ilkeleri içeren ayrıntıların bir listesini görüntülemek için ayrıntıya devam edebilirsiniz.
+ 
+Daha sonra bir çakışmanın kaynağı olan bir ilke seçerseniz, Intune, ilke yapılandırmasını gözden geçirebileceğiniz veya değiştirebileceğiniz ilkelere genel bakış bölmesini açar.
+ 
+Aşağıdaki ilke türleri bir güvenlik temeliyle detaydan bir çakışma kaynağı olarak tanımlanabilir:
+
+- Cihaz yapılandırma ilkesi
+- Uç nokta güvenlik ilkeleri
+ 
+Daha fazla bilgi için bkz. [güvenlik temelleri için çakışmaları çözme](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines).
+
+#### <a name="support-for-certificates-with-a-key-size-of-4096-on-ios-and-macos-devices---7659175-----"></a>İOS ve macOS cihazlarında 4096 anahtar boyutuna sahip sertifikalar için destek<!-- 7659175   -->
+İOS/ıpados veya macOS cihazları için bir *SCEP sertifika* profili yapılandırdığınızda artık **4096** bitlik bir **anahtar boyutu (bit)** belirtebilirsiniz. 
+ 
+Intune, aşağıdaki platformlar için 4096 bitlik anahtarları destekler: 
+- iOS 14 ve üzeri
+- MacOS 11 ve üzeri    
+ 
+SCEP sertifika profillerini yapılandırmak için bkz. [SCEP sertifika profili oluşturma](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile).
+
+#### <a name="android-11-deprecates-deployment-of-trusted-root-certificates-to-device-administrator-enrolled-devices--7662775----"></a>Android 11 güvenilen kök sertifikaların Cihaz Yöneticisi kayıtlı cihazlara dağıtımını kullanımdan kaldırma<!--7662775  -->
+Android 11 ' den başlayarak, güvenilen kök sertifikalar artık *Android Cihaz Yöneticisi*olarak kaydeden cihazlara güvenilen kök sertifikayı yükleyemez. Bu sınırlama, Samsung KNOX cihazlarını etkilemez. Samsung olmayan cihazlarda, kullanıcıların güvenilen kök sertifikayı cihaza el ile yüklemesi gerekir. 
+ 
+Güvenilen kök sertifika bir cihaza el ile yüklendikten sonra, cihaza sertifika sağlamak için SCEP kullanabilirsiniz. Hala cihaza *güvenilir bir sertifika* İlkesi oluşturup dağıtmanız ve bu ilkeyi *SCEP sertifika* profiline bağlamanız gerekir.
+
+- Güvenilen kök sertifika cihazdayken, SCEP sertifika profili başarıyla yüklenebilir. 
+- Güvenilen sertifika cihazda bulunamıyorsa, SCEP sertifika profili başarısız olur.
+
+Daha fazla bilgi için bkz. [Android Cihaz Yöneticisi Için güvenilen sertifika profilleri](../protect/certificates-configure.md#trusted-certificate-profiles-for-android-device-administrator).
+
+
+#### <a name="tri-state-options-for-more-settings-in-endpoint-security-firewall-policy---6586159----"></a>Uç nokta güvenlik duvarı ilkesinde daha fazla ayar için üçlü durum seçenekleri<!-- 6586159  -->
+[Windows 10 Için uç nokta güvenlik güvenlik duvarı ilkelerindeki](../protect/endpoint-security-firewall-profile-settings.md)birkaç farklı ayar durumuna bir yapılandırma ekledik.
+
+Aşağıdaki ayarlar güncelleştirilir:
+- **Durum bilgisi olan Dosya Aktarım Protokolü (FTP)** artık *Yapılandırılmadı*, *izin ver*ve *devre dışı*.
+- **Anahtar modüllerinin yalnızca desteklemediği kimlik doğrulama paketlerini yok saymasını gerektir** , artık *Yapılandırılmadı*, *etkin*ve *devre dışı*.
+
+#### <a name="improved-certificate-deployment-for-android-enterprise----6296499-------"></a>Android Enterprise için geliştirilmiş sertifika dağıtımı <!-- 6296499     -->
+Tam olarak yönetilen, adanmış ve şirkete ait Iş profilleri olarak kaydeden Android kurumsal cihazlarda şifreleme ve imzalama için [Outlook Için S/MIME sertifikaları](../protect/certificates-s-mime-encryption-sign.md) kullanma desteğimizi geliştirdik. Daha önce, S/MIME kullanımı cihaz kullanıcısına erişime izin vermek için gereklidir. Artık, S/MIME sertifikaları kullanıcı etkileşimi olmadan kullanılabilir.   
+
+Desteklenen Android cihazlara S/MIME sertifikaları dağıtmak için, cihaz yapılandırması için [PKCS içeri aktarılan sertifika profili](../protect/certificates-imported-pfx-configure.md) veya [SCEP sertifika profili](../protect/certificates-profile-scep.md) kullanın. **Android Enterprise** için bir profil oluşturun ve ardından *tam olarak yönetilen, adanmış ve şirkete ait iş profili*için kategoriden **PKCS içeri aktarılan sertifikası** ' nı seçin.
+
+#### <a name="improved-status-details-in-security-baseline-reports---7221051---"></a>Güvenlik temeli raporlarında geliştirilmiş durum ayrıntıları<!-- 7221051 -->
+[Güvenlik temeli için durum ayrıntılarının](../protect/security-baselines-monitor.md)çoğunu geliştirmeye başladık. Dağıttığınız taban çizgisi sürümleri hakkında bilgi görüntülerken artık daha anlamlı ve ayrıntılı durum görürsünüz.
+ 
+Özellikle, bir taban çizgisi seçtiğinizde, *Sürüm*' ü seçtiğinizde ve bu taban çizgisinin bir örneğini seçtiğinizde, Ilk genel bakış aşağıdakileri görüntüler:
+ 
+- **Güvenlik temeli duruşunu** grafiği-bu grafik artık aşağıdaki durum ayrıntılarını gösterir:
+  - **Varsayılan taban çizgisiyle eşleşir** – bu durum, *eşleşen taban çizgisini* değiştirir ve bir cihaz yapılandırmasının varsayılan (değiştirilmemiş) taban çizgisi yapılandırmasıyla ne zaman eşleştiğini tanımlar.
+  - **Özel ayarlarla eşleşir** – bu, bir cihaz yapılandırmasının yapılandırdığınız (özelleştirilmiş) ve dağıtılan taban çizgisiyle ne zaman eşleştiğini tanımlar.
+  - **Yanlış yapılandırılmış** – bu bir cihazdan üç durum koşulu temsil eden bir toplu hatadır: *hata*, *bekleyen*veya *Çakışma*. Bu ayrı durumlar, aşağıda açıklandığı gibi diğer görünümlerde kullanılabilir.
+  - **Uygulanamaz** -bu, ilkeyi alamayacak bir cihazı temsil eder. Örneğin, ilke Windows 'un en son sürümüne özgü bir ayarı güncelleştirir, ancak cihaz bu ayarı desteklemeyen daha eski (eski) bir sürümünü çalıştırır. 
+- **Kategoriye göre güvenlik temeli** geri yükleme-Bu, cihaz durumunu kategoriye göre görüntüleyen bir liste görünümüdür. Kullanılabilir sütunlar *güvenlik temeli duruşunu* grafiğinin çoğunu yansıtır, ancak *yanlış yapılandırılmış* durum yerine, yanlış yapılandırılmış durum için üç sütun görürsünüz:
+  - **Hata**: ilke uygulanamadı. Bu ileti, genellikle bir açıklamaya bağlantı veren bir hata kodu görüntüler.
+  - **Çakışma**: aynı cihaza iki ayar uygulanır ve Intune çakışmayı sıralayamazsınız. Yöneticinin gözden geçirmesi gerekir.
+  - **Bekliyor**: cihaz, ilkeyi henüz alacak şekilde Intune ile iade edilmedi.
+
+#### <a name="new-setting-for-password-complexity-for-android-10-and-later-for-device-administrator-enrolled-devices---7992114---"></a>Cihaz Yöneticisi kayıtlı cihazlar için Android 10 ve üzeri için parola karmaşıklığı için yeni ayar<!-- 7992114 -->
+
+Android 10 ve üzeri Android Cihaz Yöneticisi olarak kaydedilen cihazlarda yeni seçenekleri desteklemek için, hem [*cihaz uyumluluk*](../protect/compliance-policy-create-android.md#password) ilkesi hem de [*cihaz kısıtlama*](../configuration/device-restrictions-android.md#password) ilkesi için **parola karmaşıklığı** adlı yeni bir ayar ekledik.  Bu yeni ayarı, parola türü, uzunluğu ve kalitesindeki bir parola kuvvetinin bir *ölçüsünü* yönetmek için kullanırsınız. 
+ 
+Samsung KNOX cihazları için parola karmaşıklığı uygulanmaz. Bu cihazlarda parola uzunluğu ve tür ayarları, parola karmaşıklığını geçersiz kılar.
+
+Parola karmaşıklığı aşağıdaki seçenekleri destekler:
+
+- **Hiçbiri** -parola yok
+- **Düşük** -parola aşağıdakilerden birini karşılar:
+  - Desen
+  - Yinelenen (4444) veya sıralı (1234, 4321, 2468) dizileriyle SABITLE
+- **Orta** -parola aşağıdakilerden birini karşılar:
+  - Yinelenen (4444) veya sıralı (1234, 4321, 2468) dizileri olmadan SABITLE, en az 4 uzunluğunda
+  - Alfabetik, uzunluk en az 4
+  - Alfasayısal, uzunluk en az 4
+- **Yüksek** -parola aşağıdakilerden birini karşılar:
+  - Yinelenen (4444) veya sıralı (1234, 4321, 2468) diziler olmadan PIN, en az 8 Uzunluk
+  - Alfabetik, uzunluk en az 6
+  - Alfasayısal, uzunluk en az 6
+ 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
+
+#### <a name="bulk-actions-for-devices-listed-in-operational-report---8218481----"></a>İşletimsel raporda listelenen cihazlara yönelik toplu eylemler<!-- 8218481  -->
+Microsoft Endpoint Manager güvenliği altında kullanıma sunulacak olan yeni virüsten koruma raporlarının bir parçası olarak, **Windows 10 algılanan kötü amaçlı yazılım** kullanım raporu, rapor içinde seçilen cihazlar için geçerli olan toplu eylemler sağlar. Eylemler **yeniden başlatma**, **hızlı tarama**ve **tam tarama**içerir. Daha fazla bilgi için bkz. [Windows 10 algılanan kötü amaçlı yazılım raporu](../fundamentals/reports.md#windows-10-detected-malware-report-operational).
+
+#### <a name="export-intune-reports-using-graph-apis---8270831----"></a>Grafik API 'Lerini kullanarak Intune raporlarını dışarı aktarma<!-- 8270831  -->
+Intune raporlama altyapısına geçirilmiş tüm raporlar, tek bir üst düzey dışarı aktarma API 'sinden dışarı aktarmak için kullanılabilir. Daha fazla bilgi için bkz. [Graph API 'lerini kullanarak Intune raporlarını dışa aktarma](../fundamentals/reports-export-graph-apis.md).
+
+#### <a name="new-and-improved-microsoft-defender-antivirus-reporting-for-windows-10-and-newer---6018169----"></a>Windows 10 ve üzeri için yeni ve geliştirilmiş Microsoft Defender virüsten koruma raporlaması<!-- 6018169  -->
+Microsoft Endpoint Manager 'da Windows 10 ' da Microsoft Defender virüsten koruma için dört yeni rapor ekliyoruz. Bu raporlar şunları içerir:
+- İki işlemsel rapor, *Windows 10 sağlıksız uç noktaları* ve *Windows 10 kötü amaçlı yazılım algıladı*. Microsoft Endpoint Manager 'da **Endpoint Security**  >  **Antivirus**' ü seçin.
+- İki kuruluş raporu, *Virüsten koruma Aracısı durumu* ve *algılanan kötü amaçlı yazılım*. Microsoft Endpoint Manager 'da **raporlar**  >  **Microsoft Defender virüsten koruma**' yı seçin.
+
+Daha fazla bilgi için bkz. [Intune raporları](../fundamentals/reports.md) ve [Microsoft Intune uç nokta güvenliği yönetimi](../protect/endpoint-security.md).
+
+#### <a name="new-windows-10-feature-update-failures-report---6473121-----"></a>Yeni Windows 10 özellik güncelleştirme hatalarının raporu<!-- 6473121   -->
+**Özellik güncelleştirme hataları** işlem raporu, bir **Windows 10 özellik güncelleştirmeleri** ilkesiyle hedeflenen ve bir güncelleştirmeyi denemeyen cihazlara yönelik hata ayrıntıları sağlar. Bu raporu görüntülemek için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde, **cihazlar**  >  **Monitor**  >  **özellik güncelleştirme hatalarının sayısı** ' nı seçin. Daha fazla bilgi için bkz. [Windows 10 güncelleştirmeleri Için](../protect/windows-update-for-business-configure.md#validation-and-reporting-for-windows-10-updates) [özellik güncelleştirme hatalarıyla Ilgili rapor](../fundamentals/reports.md#feature-update-failures-report-operational) ve doğrulama ve raporlama.
+
+#### <a name="new-windows-10-feature-update-report---6473128----"></a>Yeni Windows 10 Özellik Güncelleştirme raporu<!-- 6473128  -->
+**Windows 10 özellik güncelleştirme** raporu, bir **Windows 10 özellik güncelleştirmeleri** ilkesiyle hedeflenen cihazların Uyumluluk görünümünü sağlar. Bu raporun özetini görüntülemek için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **raporlar**  >  **Windows güncelleştirmeleri** ' ni seçin. Belirli ilkelerin raporlarını görmek için **Windows güncelleştirmeleri** iş yükünde, **raporlar** sekmesini seçin ve **Windows özellik güncelleştirme raporunu**açın. Daha fazla bilgi için bkz. [Windows 10 özellik güncelleştirmeleri](../fundamentals/reports.md#windows-10-feature-updates-organizational).
+
 
 <!-- ########################## -->
 ## <a name="week-of-september-7-2020"></a>7 Eylül 2020 haftası
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Cihaz yönetimi
 
-#### <a name="tenant-attach-device-timeline-in-the-admin-center"></a>Kiracı iliştirme: Yönetim merkezinde cihaz zaman çizelgesi
-<!--7220536, CM7141381-->
+#### <a name="tenant-attach-device-timeline-in-the-admin-center--7220536-cm7141381--"></a>Kiracı iliştirme: Yönetim merkezinde cihaz zaman çizelgesi<!--7220536, CM7141381-->
 Configuration Manager, kiracı iliştirme aracılığıyla bir cihazı Microsoft Uç Nokta Yöneticisi ile eşitlediğinde, olayların bir zaman çizelgesini görebileceksiniz. Bu zaman çizelgesi, cihazdaki sorunları gidermenize yardımcı olabilecek geçmiş etkinlikleri gösterir. Daha fazla bilgi için bkz. [kiracı iliştirme: yönetim merkezindeki cihaz zaman çizelgesi](../../configmgr/tenant-attach/timeline.md).
 
-#### <a name="tenant-attach-resource-explorer-in-the-admin-center"></a><a name="bkmk_hinv"></a> Kiracı iliştirme: Yönetim merkezinde kaynak Gezgini
-<!--IN7220536, CM6479284 -->
+#### <a name="tenant-attach-resource-explorer-in-the-admin-center--in7220536-cm6479284---"></a><a name="bkmk_hinv"></a> Kiracı iliştirme: Yönetim merkezinde kaynak Gezgini<!--IN7220536, CM6479284 -->
 Microsoft uç nokta Yönetimi yönetim merkezinden, kaynak Gezgini 'ni kullanarak karşıya yüklenen Configuration Manager cihazları için donanım envanterini görüntüleyebilirsiniz. Daha fazla bilgi için bkz. [Yönetim merkezinde kiracı iliştirme: kaynak Gezgini](../../configmgr/tenant-attach/resource-explorer.md).
 
-#### <a name="tenant-attach-cmpivot-from-the-admin-center"></a>Kiracı iliştirme: yönetim merkezinden CMPivot
-<!--IN7220536, CM6024392-->
+#### <a name="tenant-attach-cmpivot-from-the-admin-center--in7220536-cm6024392--"></a>Kiracı iliştirme: yönetim merkezinden CMPivot<!--IN7220536, CM6024392-->
 CMPivot 'in gücünü Microsoft Endpoint Manager yönetim merkezine taşıyın. Yardım masası gibi ek kişilerin buluttan, tek bir ConfigMgr tarafından yönetilen cihaza karşı gerçek zamanlı sorgular başlatabilmesini ve sonuçları yönetim merkezine geri döndürmesini sağlar. Bu, CMPivot 'in tüm geleneksel avantajlarından yararlanmanızı sağlar. Bu, BT yöneticilerinin ve diğer belirlenen kişilerin, ortamlarında cihazların durumunu hızlıca değerlendirebilme ve işlem yapması için sahip olduğu bir işlemdir.
 
 Yönetim merkezinden CMPivot hakkında daha fazla bilgi için bkz. [CMPivot önkoşulları](../../configmgr/tenant-attach/cmpivot-start.md), [CMPivot genel bakış](../../configmgr/tenant-attach/cmpivot-overview-attached.md)ve [CMPivot örnek komut dosyaları](../../configmgr/tenant-attach/cmpivot-samples-attached.md).
@@ -92,7 +362,7 @@ Yönetim merkezinden CMPivot hakkında daha fazla bilgi için bkz. [CMPivot önk
 
 ### <a name="device-configuration"></a>Cihaz yapılandırması
 
-#### <a name="new-version-of-the-pfx-certificate-connector-and-changes-for-pkcs-certificate-profile-support-----4839686----"></a>PFX Sertifika bağlayıcısının yeni sürümü ve PKCS sertifika profili desteği değişiklikleri <!--  4839686  -->
+#### <a name="new-version-of-the-pfx-certificate-connector-and-changes-for-pkcs-certificate-profile-support----4839686----"></a>PFX Sertifika bağlayıcısının yeni sürümü ve PKCS sertifika profili desteği değişiklikleri<!--  4839686  -->
 
 PFX Sertifika Bağlayıcısı 'nın sürüm **6.2008.60.607**yeni bir sürümünü yayımladık. Bu yeni bağlayıcı sürümü:
 
@@ -262,7 +532,7 @@ Artık Microsoft Endpoint Manager yönetim merkezinden bir kiracıya bağlı cih
 ### <a name="monitor-and-troubleshoot"></a>İzleme ve sorun giderme
 
 #### <a name="power-bi-compliance-report-template-v20---636958---"></a>Power BI uyumluluk raporu şablonu V 2.0<!-- 636958 -->
-Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamaya sahip Power BI uygulamalar oluşturmasına ve bunları herhangi bir Power BI müşteriye dağıtmalarına olanak tanır. Yöneticiler, Power BI uyumluluk raporu şablonunun sürümünü V 1.0 'dan V 2.0 'a güncelleştirebilir. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [Power BI Ile veri ambarına bağlanma](../developer/reports-proc-get-a-link-powerbi.md) ve [bir şablon uygulamasını güncelleştirme](/power-bi/service-template-apps-install-distribute#update-a-template-app). Ayrıca, [Intune veri ambarı ile Power BI uyumluluk raporunun yeni bir sürümünü duyuran](https://aka.ms/new_compliance_report)blog gönderisine bakın.
+Power BI şablon uygulamaları, Power BI iş ortaklarının çok az kodlamayla veya hiç kodlama kullanmadan Power BI uygulamaları oluşturmasını ve bunları Power BI müşterilerine dağıtmasını sağlar. Yöneticiler, Power BI uyumluluk raporu şablonunun sürümünü V 1.0 'dan V 2.0 'a güncelleştirebilir. V 2.0, gelişmiş bir tasarım, Ayrıca, şablonun bir parçası olarak ortaya çıkacak hesaplamalarda ve verilerde yapılan değişiklikleri içerir. Daha fazla bilgi için bkz. [Power BI Ile veri ambarına bağlanma](../developer/reports-proc-get-a-link-powerbi.md) ve [bir şablon uygulamasını güncelleştirme](/power-bi/service-template-apps-install-distribute#update-a-template-app). Ayrıca, [Intune veri ambarı ile Power BI uyumluluk raporunun yeni bir sürümünü duyuran](https://aka.ms/new_compliance_report)blog gönderisine bakın.
 
 <!-- ########################## -->
 ## <a name="week-of-july-13-2020--2007-service-release"></a>13 Temmuz 2020 (2007 hizmet sürümü) haftası
@@ -516,7 +786,7 @@ Android cihazınızın Intune 'a nasıl oluşturulduğuna bağlı olarak, aşağ
 #### <a name="telecommunications-data-transfer-protection-for-managed-apps---6884491----"></a>Yönetilen uygulamalar için telekomünikasyon veri aktarımı koruması<!-- 6884491  -->
 Korumalı bir uygulamada köprülü telefon numarası algılandığında, Intune, sayının bir çevirici uygulamasına aktarılmasını sağlayan bir koruma ilkesinin uygulanıp uygulanmadığı kontrol eder. İlke ile yönetilen bir uygulamadan başlatıldığında bu tür bir içerik aktarımını nasıl işleyebileceğini seçebilirsiniz. Microsoft Endpoint Manager 'da bir uygulama koruma ilkesi oluştururken, **Kuruluş verilerini diğer uygulamalara gönder**' den yönetilen bir uygulama seçeneği belirleyin ve ardından Iletişim **verilerini aktarma**seçeneğini belirleyin. Bu veri koruma ayarı hakkında daha fazla bilgi için, Microsoft Intune ve [iOS uygulama koruma ilkesi ayarları](../apps/app-protection-policy-settings-ios.md) ['nda Android uygulama koruma ilkesi ayarları](../apps/app-protection-policy-settings-android.md) bölümüne bakın. 
 
-#### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-company-portal---7414033----"></a>Şirket Portalı Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş teslimi<!-- 7414033  -->
+#### <a name="unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal---7414033----"></a>Windows Şirket Portalı Azure AD kurumsal ve Office Online uygulamalarının birleştirilmiş teslimi<!-- 7414033  -->
 Intune 'un **Özelleştirme** bölmesinde Şirket portalı hem **Azure AD kurumsal uygulamalarını** hem de **Office Online uygulamalarını** **gizleme** veya **gösterme** seçeneğini belirleyebilirsiniz. Her Son Kullanıcı tüm uygulama kataloglarını seçilen Microsoft hizmetinden görürler. Varsayılan olarak, her bir ek uygulama kaynağı **gizleyecek**şekilde ayarlanır. Bu özellik ilk olarak Şirket Portalı Web sitesinde, izlenmesi beklenen Windows Şirket Portalı desteğiyle etkili olacaktır. Bu yapılandırma ayarını bulmak için [Microsoft Uç Nokta Yöneticisi Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)' nde **Kiracı Yönetimi**  >  **özelleştirmesi** ' nı seçin. İlgili bilgiler için bkz. [Intune şirket portalı uygulamalar, Şirket portalı Web sitesi ve Intune uygulaması nasıl özelleştirilir](../apps/company-portal-app.md).
 
 #### <a name="improvements-to-the-company-portal-for-macos-enrollment-experience---6444452----"></a>MacOS kayıt deneyimi için Şirket Portalı geliştirmeleri<!-- 6444452  -->
@@ -1299,7 +1569,7 @@ Genel önizleme olarak, Microsoft uç nokta yönetimi Yönetim Merkezi 'nde uç 
 Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanılabilir profil türleri verilmiştir:
 
 - **Virüsten koruma (Önizleme)**:
-  - macOS:
+  - MacOS
     - **Virüsten koruma** - [Mac IÇIN Microsoft Defender ATP](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)'Yi yönetmek üzere MacOS için [Virüsten koruma ilkesi ayarlarını](../protect/antivirus-microsoft-defender-settings-macos.md) yönetin.
 
   - Windows 10 ve üzeri:
@@ -1315,12 +1585,12 @@ Aşağıda, önizleme aşamasında olan yeni ilke türleri ve bunların kullanı
   - **Windows Güvenlik deneyimi** -son kullanıcıların Microsoft Defender Güvenlik Merkezi 'nde görüntüleyebilecekleri Windows güvenlik ayarlarını ve aldıkları bildirimleri yönetin. Bu ayarlar, cihaz yapılandırma Endpoint Protection profili olarak kullanılabilenlerden değiştirilmez.
 
 - **Disk şifrelemesi (Önizleme)**:
-  - macOS:
+  - MacOS
     - **FileVault**
   - Windows 10 ve üzeri:
     - **BitLocker**
 - **Güvenlik Duvarı (Önizleme)**:
-  - macOS:
+  - MacOS
     - **macOS güvenlik duvarı**
   - Windows 10 ve üzeri:
     - **Microsoft Defender güvenlik duvarı**

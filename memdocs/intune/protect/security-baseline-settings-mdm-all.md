@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63bf4e680dea22a5ca69227fe3701f9ba6f2e0de
-ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
+ms.openlocfilehash: 8410a72ffe5dcf09ad81429bc6817ac16f31582a
+ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90815213"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90848496"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune için Windows MDM güvenlik taban çizgisi ayarları
 
@@ -104,8 +104,10 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-ApplicationManagement](/
   **Varsayılan**: Evet.
 
 - **Yüklemeler üzerinde kullanıcı denetimini engelle**:  
-  Bu ilke ayarı, kullanıcıların genellikle sistem yöneticileri tarafından kullanılabilen yükleme seçeneklerini değiştirmesine izin verir. Bu ilke ayarını etkinleştirirseniz, Windows Installer güvenlik özelliklerinden bazıları atlanır. Bu, yüklemelerin tamamlanmasına izin verir, aksi takdirde bir güvenlik ihlali nedeniyle durdurulur. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, Windows Installer güvenlik özellikleri, kullanıcıların sistem yöneticileri için tipik olarak ayrılmış yükleme seçeneklerini değiştirmelerini engeller (örneğin, dosyaların yüklendiği dizini belirtme). Windows Installer bir yükleme paketinin kullanıcının korumalı bir seçeneği değiştirmesine izin verdiğini algılarsa, yüklemeyi sonlandırır ve bir ileti görüntüler. Bu güvenlik özellikleri yalnızca, yükleme programı Kullanıcı tarafından reddedilen dizinlere erişimi olan ayrıcalıklı bir güvenlik bağlamında çalışırken çalışır. Bu ilke ayarı, daha az kısıtlayıcı ortamlar için tasarlanmıştır. Bu, yazılımın yüklenmesini önleyen bir yükleme programındaki hataları aşmak için kullanılabilir.  
+  Bu ilke, kullanıcıların dosyaları yüklemek için Dizin girme gibi sistem yöneticileri için genellikle ayrılmış yükleme seçeneklerini değiştirmelerini engeller. Yapılandırılmadı (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Windows Installer, varsayılan olarak kullanıcıların bu yükleme seçeneklerini değiştirmelerini engelleyebilir ve Windows Installer güvenlik özelliklerinden bazıları atlanır.  
   [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067060)
+
+  **Varsayılan**: Evet
 
 - **Oyun DVR 'ı engelle (yalnızca masaüstü)**:  
   Oyunları kaydetmeye ve yayına izin verilip verilmeyeceğini yapılandırır.  
@@ -117,7 +119,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-ApplicationManagement](/
 ::: zone pivot="mdm-may-2019"
 
 - **Yüklemeler üzerinde kullanıcı denetimini engelle**:  
-  Bu ilke ayarı, kullanıcıların genellikle sistem yöneticileri tarafından kullanılabilen yükleme seçeneklerini değiştirmesine izin verir. Bu ilke ayarını etkinleştirirseniz, Windows Installer güvenlik özelliklerinden bazıları atlanır. Bu, yüklemelerin tamamlanmasına izin verir, aksi takdirde bir güvenlik ihlali nedeniyle durdurulur. Bu ilke ayarını devre dışı bırakır veya yapılandırmazsanız, Windows Installer güvenlik özellikleri, kullanıcıların sistem yöneticileri için tipik olarak ayrılmış yükleme seçeneklerini değiştirmelerini engeller (örneğin, dosyaların yüklendiği dizini belirtme). Windows Installer bir yükleme paketinin kullanıcının korumalı bir seçeneği değiştirmesine izin verdiğini algılarsa, yüklemeyi sonlandırır ve bir ileti görüntüler. Bu güvenlik özellikleri yalnızca, yükleme programı Kullanıcı tarafından reddedilen dizinlere erişimi olan ayrıcalıklı bir güvenlik bağlamında çalışırken çalışır. Bu ilke ayarı, daha az kısıtlayıcı ortamlar için tasarlanmıştır. Bu, yazılımın yüklenmesini önleyen bir yükleme programındaki hataları aşmak için kullanılabilir.  
+  Bu ilke, kullanıcıların dosyaları yüklemek için Dizin girme gibi sistem yöneticileri için genellikle ayrılmış yükleme seçeneklerini değiştirmelerini engeller. Yapılandırılmadı (varsayılan) olarak ayarlandığında, Intune bu ayarı değiştirmez veya güncelleştirmez. Windows Installer, varsayılan olarak kullanıcıların bu yükleme seçeneklerini değiştirmelerini engelleyebilir ve Windows Installer güvenlik özelliklerinden bazıları atlanır.  
   [Daha fazla bilgi edinin](https://go.microsoft.com/fwlink/?linkid=2067060)
 
   **Varsayılan**: Evet
@@ -2116,7 +2118,7 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-RemoteProcedureCall](/
 
   **Varsayılan**: kimliği doğrulandı
 
-## <a name="search"></a>Ara
+## <a name="search"></a>Arayın
 
 Daha fazla bilgi için bkz. [Ilke CSP-](/windows/client-management/mdm/policy-csp-search) Windows belgelerinde arama.
 
