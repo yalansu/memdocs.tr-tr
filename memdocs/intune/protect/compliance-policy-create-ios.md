@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e57cd425ca89fa875b89c73a9eba30cecb7516d7
-ms.sourcegitcommit: 2e0bc4859f7e27dea20c6cc59d537a31f086c019
+ms.openlocfilehash: 231bffb475679a6fd043242563444a4896e7c85c
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871925"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002758"
 ---
 # <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Intune kullanarak cihazları uyumlu veya uyumsuz olarak işaretlemek için iOS/ıpados ayarları
 
@@ -150,6 +150,9 @@ E-posta profilleri hakkında ayrıntılı bilgi için bkz. [Intune ile e-posta p
 
   - **Uygulama adı** -paket kimliğini belirlemenize yardımcı olması için Kullanıcı dostu bir ad girin.
   - **Uygulama PAKETI kimliği** -uygulama sağlayıcısı tarafından atanan benzersiz paket kimliğini girin. Paket KIMLIĞINI bulmak için Support.apple.com adresindeki [Yerel iOS ve ıpados uygulamaları Için paket kimlikleri](https://support.apple.com/guide/mdm/native-ios-and-ipados-app-bundle-ids-mdm90f60c1ce/web) bölümüne bakın veya uygulamanın yazılım satıcısına başvurun.
+  
+  > [!NOTE]
+  > *Kısıtlanmış uygulamalar* ayarı, yönetim bağlamı dışında yüklenen yönetilmeyen uygulamalar için geçerlidir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

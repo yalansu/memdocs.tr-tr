@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52c8be7556fac2cf06d244fc8640a0ed7d173481
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 6d062af4859dcca6c762bf401e1007a9fc9af126
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992951"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002673"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Intune ile koşullu erişim kullanmanın yaygın yolları nelerdir?
 
@@ -113,7 +113,7 @@ Cihazlar koşullar kümesini karşılamıyorsa, Son Kullanıcı cihazı kaydetme
 > [!NOTE]
 > Haziran 2020 ' den başlayarak Exchange Connector için destek kullanım dışıdır ve Exchange [karma modern kimlik doğrulaması](/office365/enterprise/hybrid-modern-auth-overview) (HMA) ile değiştirilmiştir. HMA kullanımı, Intune 'un Exchange bağlayıcısını kurulumunu ve kullanmasını gerektirmez. Bu değişiklik ile, aboneliğiniz ile bir Exchange Bağlayıcısı kullanmıyorsanız, Intune için Exchange bağlayıcısını yapılandırmak ve yönetmek için kullanılan Kullanıcı arabirimi Microsoft Endpoint Manager yönetim merkezinden kaldırılmıştır.
 >
-> Ortamınızda ayarlanmış bir Exchange Bağlayıcısı varsa, Intune kiracınız kullanım için desteklenir ve yapılandırmasını destekleyen Kullanıcı arabirimine erişime sahip olmaya devam edersiniz. Daha fazla bilgi için bkz. [Şirket Içi Exchange bağlayıcısını yüklemeye](../protect/exchange-connector-install.md) . Bağlayıcıyı kullanmaya devam edebilir veya HMA 'yı yapılandırabilir ve ardından bağlayıcınızı kaldırabilirsiniz.
+> Ortamınızda ayarlanmış bir Exchange Bağlayıcısı varsa, Intune kiracınız kullanım için desteklenmeye devam eder ve yapılandırmasını destekleyen Kullanıcı arabirimine erişime sahip olmaya devam edersiniz. Daha fazla bilgi için bkz. [Şirket Içi Exchange bağlayıcısını yüklemeye](../protect/exchange-connector-install.md) . Bağlayıcıyı kullanmaya devam edebilir veya HMA 'yı yapılandırabilir ve ardından bağlayıcınızı kaldırabilirsiniz.
 >
 > Karma modern kimlik doğrulaması, Intune için Exchange Connector tarafından daha önce sağlanan işlevselliği sağlar: bir cihaz kimliğini Exchange kaydıyla eşleme.  Bu eşleme artık, Intune 'da yaptığınız bir yapılandırmanın veya Intune bağlayıcısının Intune ve Exchange 'e köprü oluşturma gereksiniminin dışında gerçekleşir. HMA ile, ' Intune ' öğesine özgü yapılandırmayı (bağlayıcı) kullanma gereksinimi kaldırılmıştır.
 

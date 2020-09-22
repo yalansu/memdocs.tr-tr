@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8410a72ffe5dcf09ad81429bc6817ac16f31582a
-ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
+ms.openlocfilehash: 0fe4c785ce8a7943f0555f8d9f696c183e823f32
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90848496"
+ms.locfileid: "91002622"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune için Windows MDM güvenlik taban çizgisi ayarları
 
 Windows 10 veya üzerini çalıştıran cihazlar için Microsoft Intune desteklediği MDM güvenlik taban çizgisi ayarlarını görüntüleyin. Bu temeldeki ayarların varsayılan değerleri, uygulanabilir cihazlar için önerilen yapılandırmayı temsil eder. Bir taban çizgisi için varsayılanlar, diğer güvenlik temellerinden veya bu taban çizgisinin diğer sürümlerindeki varsayılanlardan eşleşmeyebilir.
 
 - Intune ile güvenlik temellerini kullanma ve güvenlik taban çizgisi profillerinizden temel sürümü yükseltme hakkında bilgi edinmek için bkz. [güvenlik temellerini kullanma](security-baselines.md).
-- En son temel sürüm, **2020 Eylül Için MDM güvenlik temeliyle**
+- En son temel sürüm, **ağustos 2020 Için MDM güvenlik temeliyle**
 
 Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
 
@@ -38,7 +38,7 @@ Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin
 
 ::: zone pivot="mdm-sept-2020"
 
-**Eylül 2020 için MDM güvenlik temeli**  
+**Ağustos 2020 için MDM güvenlik temeli**  
 Güvenlik temelinin bu sürümü, *2019 Mayıs Için MDM güvenlik temeli*olan önceki taban çizgisinin yerini almıştır. Bu taban çizgisinin kullanılabilirliğine başlamadan önce oluşturulan profiller, yeni ayarları veya değerleri yansıtacak şekilde günceldeğildir.  Önceki temel sürüme göre yeni profiller oluşturamıyoruz, ancak önceki bir sürümü temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
 
 Taban çizgisinin bu sürümünde önceki sürümden nelerin değiştirildiğini öğrenmek için, bkz. [Yeni şablonda nelerin değiştiğini](#whats-changed-in-the-new-template).

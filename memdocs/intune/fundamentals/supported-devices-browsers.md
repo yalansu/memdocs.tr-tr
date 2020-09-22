@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8bfddd247f2f86d8fc5a9162a5c68efd5e7ffb5
-ms.sourcegitcommit: fde92731a7e27c892d32c63f515cf19545e02ceb
+ms.openlocfilehash: 463e2b7c72c91131de88eb3de956556d65d50788
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88996291"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002775"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Intune 'da desteklenen işletim sistemleri ve tarayıcılar
 
@@ -95,7 +95,7 @@ Bir [Intune yazılım istemcisi](manage-windows-pcs-with-microsoft-intune.md) al
 > [!Note]
 > Microsoft Windows 7 desteğinin 14 Ocak 2020'de sona erdiğini duyurdu. Aynı tarihte Intune'da Windows 7 çalıştıran cihazlar için desteğini kaldıracaktır.
 >
-> Daha fazla bilgi için bkz. [Intune plan değişikliği: Windows 7 için destek sonu](whats-new.md#windows-7-ends-extended-support).
+> Daha fazla bilgi için bkz. [Intune plan değişikliği: Windows 7 için destek sonu](whats-new-archive.md#windows-7-ends-extended-support).
 >
 > Microsoft Intune, 15 Ekim 2020 ' de Silverlight tabanlı Intune Konsolu desteğini devre dışı bırakacaktır. Bu kullanımdan kaldırma, Silverlight konsolu yapılandırılmış bılgısayar yazılım istemcisi (bılgısayar Aracısı olarak da bilinir) için son desteği içerir.
 >

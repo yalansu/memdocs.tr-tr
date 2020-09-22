@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2047e0224294156a3de5dd08b163c8fd40687e0f
-ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
+ms.openlocfilehash: 570d848f624b5558d84177b66751f55c0a0ab4ae
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90815047"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002741"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarını yapılandırmak için güvenlik temellerini kullanma
 
@@ -59,7 +59,7 @@ Aşağıdaki güvenlik temeli örnekleri Intune ile kullanılabilir. Her bir tab
 
 - **Microsoft Defender ATP temeli** 
    *(Bu temeli kullanmak için ortamınızın [Microsoft Defender Gelişmiş tehdit koruması](advanced-threat-protection.md#prerequisites)'nı kullanmaya yönelik önkoşulları karşılaması gerekir)*.
-  - [Eylül 2020 için Microsoft Defender ATP temeli-sürüm 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
+  - [Ağustos 2020 için Microsoft Defender ATP temeli-sürüm 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
   - [Nisan 2020 için Microsoft Defender ATP temeli-sürüm 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
   - [Mart 2020 için Microsoft Defender ATP temeli-sürüm 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 

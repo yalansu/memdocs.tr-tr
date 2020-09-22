@@ -1,11 +1,11 @@
 ---
-title: İşletim sistemi kısıtlamaları kaldırıldığından Android cihazınız bağlanamıyor
-description: ''
+title: Android cihazınızın kökü belirtilmiş ve bağlanamaz-Microsoft Intune
+description: Cihazınızın kökü olarak belirtilen bir iletiyi alma nedeninizi öğrenin.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2017
+ms.date: 09/22/2017
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,23 +19,27 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 464bc84c6d638ccb113b4d0ad98db268d98e2292
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: f790c814046e0fd275385cbf996f58c92d3b7a13
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83877030"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002869"
 ---
-# <a name="your-android-device-is-rooted-so-you-cant-connect"></a>Android cihazınıza kök erişim izni verildiği için bağlanamıyorsunuz
+# <a name="android-device-is-rooted-so-you-cant-connect"></a>Bağlantı kurmak için Android cihazın kökü belirtilmiş  
 
-Cihazınıza _kök erişim izni verildiğini_ gösteren bir ileti gördüğünüz için buraya yönlendirildiniz.
+Cihazınızın şu durumlarda şirket kaynaklarına erişimi engellenir:  
 
-Bir Android cihazına "kök erişim izni verilmişse", normalde cihazda sunulmayan bazı yetenekleri etkinleştirmek için cihazın yazılımının bir kısmı değiştirilmiş demektir. Bu değişiklikler, e-postalar ve belgeler gibi kuruluş kaynaklarına güvenli erişimi genellikle tehlikeye atabilir. Bu nedenle sorun düzeltilene kadar bu kaynaklara erişmek için kök erişim izni verilmiş cihazların kullanılması engellenir.  
+- Bir uygulamayı, kök algılama yazılımının bir güvenlik riski olduğunu düşündüğü cihaza yüklersiniz. Bir uygulamayı yükledikten hemen sonra cihazınızın kökünü kaldırmak isteyip istemediğiniz sorulursa, uygulamayı kaldırmayı deneyin.  
 
-Cihaza kök erişim izni vermek için kullanılan birkaç yaygın yol vardır:
+- Cihazınızın üreticisi, kök algılama yazılımının güvenlik riski taşıdığını düşündüğü bir yazılım yüklemiş olabilir. Yardım için BT destek sorumlunuza başvurun. İletişim bilgileri için [Şirket portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980)gidin.  
 
-- Cihazınıza, kök algılama yazılımının güvenlik riski taşıdığını düşündüğü bir uygulama yüklemiş olabilirsiniz. Bir uygulamayı yükledikten hemen sonra bu iletiyi görürseniz uygulamayı kaldırmayı deneyin.
+- Cihazı kök olarak alırsınız. Kökü (genellikle PC yazılımı veya uygulamaları ile yapılır) tersine çevirin ve cihazı önceki durumuna geri yükleyin. Başlamadan önce cihazınızı yedeklediğinizden emin olun. 
 
-- Cihazınızın üreticisi, kök algılama yazılımının güvenlik riski taşıdığını düşündüğü bir yazılım yüklemiş olabilir. Bu durumda yardım için şirketinizin destek birimine başvurmalısınız. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) gidin.
+## <a name="why-your-access-is-blocked"></a>Erişiminizin neden engelleniyor?
 
-Cihazınıza kök erişim iznini siz verdiyseniz, işlemi iptal etmeniz ve cihazı kök erişim izni verilmemiş durumuna getirmeniz gerekir.
+Bir cihazın kökü oluşturma, yazılımının değiştirilmesini içerir. Bu değişiklikler, cihazın yetkisiz erişime ve kötü amaçlı saldırılara karşı daha açık olmasını sağlar. Bu nedenle, köklü cihazların genellikle şirket e-postasına veya dosyalarına erişimi engellenmektedir.  
+
+## <a name="next-steps"></a>Sonraki adımlar  
+
+Bu bilgiler yardımcı olmadı mı? BT destek sorumlunuza başvurun. Kişi bilgileri için [Şirket Portalı Web sitesine](https://go.microsoft.com/fwlink/?linkid=2010980) bakın.  

@@ -1,11 +1,11 @@
 ---
-title: Intune için Android cihazını şifreleme | Microsoft Docs
-description: Intune için gerektiğinde Android cihaz şifrelemesini açma adımları
+title: Android cihazınızı şifreleme-Microsoft Intune | Microsoft Docs
+description: Intune için gerektiğinde Android cihaz şifrelemesini açmayı öğrenin.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/31/2020
+ms.date: 09/22/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,16 +19,16 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 268e1ab9b76cc214b7e755763ada6a2bd09ed80e
-ms.sourcegitcommit: a77ba49424803fddcaf23326f1befbc004e48ac9
+ms.openlocfilehash: 98950a6907db0ac6869b55ae26718a2919048154
+ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83880583"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91002656"
 ---
 # <a name="encrypting-your-android-device"></a>Android cihazınızı şifreleme
 
-Cihazınız kaybolur veya çalınırsa, cihaz şifreleme, dosyalarınızı ve klasörlerinizi yetkisiz erişimden korur. Bu, cihazınızdaki verilerin geçiş kodu olmayan kişiler tarafından erişilemez ve okunamaz olmasını sağlar. 
+Cihazınız kaybolur veya çalınırsa, cihaz şifreleme, dosyalarınızı ve klasörlerinizi yetkisiz erişimden korur. Bir geçiş kodu olmayan kişilerin verileri erişilemez ve okunamaz hale getirir. 
 
 Okul veya iş kaynaklarına erişebilmek için kuruluşunuz şunları yapmanız gerekebilir:
 
@@ -41,12 +41,10 @@ Okul veya iş kaynaklarına erişebilmek için kuruluşunuz şunları yapmanız 
 
 ## <a name="encrypt-device"></a>Cihazı şifreleme
 
-Cihazınızı şifrelemek için aşağıdaki adımları izleyin. Cihazınız birkaç kez yeniden başlayabilir. 
-
-Şifreleme seçeneğinin adı ve konumu, cihaz üreticinize ve Android sürümüne bağlı olarak değişir. 
+Cihazınızı şifrelemek için aşağıdaki adımları izleyin. Cihazınız birkaç kez yeniden başlayabilir. Şifreleme seçeneğinin adı ve konumu, cihaz üreticinize ve Android sürümüne bağlı olarak değişir. 
 
 1. **Ayarlar** uygulamasını başlatın.
-2. İlgili ayarları bulmak için uygulamanın arama çubuğuna **güvenlik** veya **şifreleme** yazın.
+2. İlgili ayarları bulmak için arama çubuğuna **güvenlik** veya **şifreleme** yazın.  
 3. Cihazınızı şifrelemek için seçeneğe dokunun. Ekrandaki yönergeleri takip edin.  
 4. İstendiğinde, bir kilit ekranı parolası, PIN veya başka bir kimlik doğrulama yöntemi (kuruluşunuz tarafından izin verildiyse) ayarlayın. 
 5. Ayarları yeniden denetlemek için Şirket Portalı veya Microsoft Intune uygulamasını açın.
@@ -55,9 +53,9 @@ Cihazınızı şifrelemek için aşağıdaki adımları izleyin. Cihazınız bir
 
 ## <a name="enable-secure-startup"></a>Güvenli başlatmayı etkinleştir
 
-Kuruluşunuz, şifreleme ilkelerinin bir parçası olarak güvenli başlatmayı etkinleştirmenizi isteyebilir. Bu özellik, telefon başlamadan önce bir parola veya PIN girilmesini isteyerek cihazınızı daha da korur. Birçok ek kimlik doğrulama seçeneğiniz vardır ancak kuruluşunuzun izin verdiği seçeneğe göre farklılık gösterir. 
+Kuruluşunuz, *güvenli başlatmayı*etkinleştirmenizi gerektirebilir. Güvenli başlatma, cihazın her açılışında bir parola veya PIN isteyerek cihazınızı korur. Kuruluşunuzun izin verdiği seçeneğe bağlı olarak kullanabileceğiniz diğer kimlik doğrulama seçenekleri olabilir. 
 
-Güvenli Başlatma seçeneğinin adı ve konumu, cihaz üreticinize ve Android sürümüne bağlı olarak değişir. Bazı cihazlarda bu ayar **güçlü koruma**olarak adlandırılabilir. 
+Güvenli Başlatma seçeneğinin adı ve konumu, cihaz üreticinize ve Android sürümüne göre de değişir. Bazı cihazlarda, bu ayar **güçlü koruma**olarak adlandırılır. 
 
 1. **Ayarlar** uygulamasını başlatın.
 2. Uygulamanın arama çubuğunda **güvenli başlangıç** yazın.
@@ -69,9 +67,9 @@ Güvenli Başlatma seçeneğinin adı ve konumu, cihaz üreticinize ve Android s
 
 
 ## <a name="set-startup-passcode"></a>Başlangıç geçiş kodunu ayarla   
-[Cihazınızı şifreleyip](#encrypt-device) [güvenli başlatmayı etkinleştirdiğinizde](#enable-secure-startup), cihazınızın PIN 'ini, parolasını veya diğer kimlik doğrulama yöntemini (kuruluşunuz tarafından izin verildiyse) ayarlamanız istenir. Başka bir adım gerekmez. 
+Cihazınızı şifreledikten ve güvenli başlatmayı etkinleştirdikten sonra, cihazınızın PIN 'ini, parolasını veya diğer kimlik doğrulama yöntemini (kuruluşunuz tarafından izin verildiyse) ayarlamanız istenir. Bu adım, başlangıç geçiş kodu gereksinimini karşılaacaktır. 
 
-Kilit ekranı türünü seçmek veya değiştirmek için:
+Cihazınızda bir kilit ekranı ayarlamak veya şu anda kullandığınız türü değiştirmek için:  
 
 1. **Ayarlar** uygulamasını başlatın.
 2. Uygulamanın arama çubuğuna **ekran kilidi** yazın.
