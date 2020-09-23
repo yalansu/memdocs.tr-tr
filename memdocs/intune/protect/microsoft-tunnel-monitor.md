@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd2f584221643c82f07924d96f72fa01c4321b79
-ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
+ms.openlocfilehash: 959aea0411f25f62857d1f7aaed902c2a8005c17
+ms.sourcegitcommit: 6e488937039e8437866d55f2f23e5944a4b35a35
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91017738"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91022377"
 ---
 # <a name="monitor-microsoft-tunnel"></a>Microsoft tüneli izleme
 
@@ -37,7 +37,7 @@ Microsoft tüneli yüklendikten sonra, sunucu yapılandırmasını ve sunucu sis
 
 Microsoft tünel sunucusu hakkında bilgi almak için **MST-CLI** komut satırı aracını kullanın. Bu dosya, Microsoft tüneli yüklediğinde Linux sunucusuna eklenir. Araç şurada bulunur: **/usr/sbin/MST-cli**.
 
-Daha fazla bilgi ve komut satırı örnekleri için bkz. [MST-CLI komut satırı aracı, Microsoft tüneli için... /Protect/Microsoft-Tunnel-Reference.MD # MST-CLI-komut satırı-araç-for-Microsoft-Tunnel)
+Daha fazla bilgi ve komut satırı örnekleri için bkz. [Microsoft tüneli için MST-CLI komut satırı aracı](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
