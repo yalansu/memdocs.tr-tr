@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fd6943be69f66d4cd6fde2e9c08bec9323005a5
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: ed235acefe62b7c432351273d1defe9db89f0f60
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914438"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008388"
 ---
 <!-- Pivots in use: 
 ::: zone pivot="edge-october-2019"
@@ -44,10 +44,21 @@ Microsoft Intune tarafından desteklenen Microsoft Edge Web tarayıcısı taban 
 > [!NOTE]
 > Ekim 2019 için Microsoft Edge taban çizgisi genel önizlemededir.
 
+Bir güvenlik temeli profilini Bu taban çizgisinin en son sürümüne güncelleştirmek için, bkz. [bir profil için temel sürümü değiştirme](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+
 ::: zone-end
 ::: zone pivot="edge-april-2020"
 
-Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
+**2020 Nisan için Microsoft Edge taban çizgisi (Edge sürüm 80)**  
+Güvenlik temelinin bu sürümü önceki sürümlerin yerini alır. Bu temel sürümün kullanılabilirliğine önce oluşturulan profiller:
+
+- Artık salt okunurdur. Bu profilleri kullanmaya devam edebilirsiniz, ancak yapılandırmalarını değiştirecek şekilde düzenleyemezsiniz.
+- En son sürüme güncelleştirilebilen olabilir. Geçerli temel sürümü güncelleştirdikten sonra ayarları değiştirmek için profili düzenleyebilirsiniz.
+
+Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın. Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin olun.
+
+Bir güvenlik temeli profilini Bu taban çizgisinin en son sürümüne güncelleştirmek için, bkz. [bir profil için temel sürümü değiştirme](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+
 
 ::: zone-end
 ::: zone pivot="edge-october-2019,edge-april-2020"

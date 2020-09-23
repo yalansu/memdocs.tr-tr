@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: has-adal-ref
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08f0f02075baf7447815beb56c0f9c0a726c4d43
-ms.sourcegitcommit: f575b13789185d3ac1f7038f0729596348a3cf14
+ms.openlocfilehash: 2d6de0d9033e7eec4a3854053ef24cae4b065ec5
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039406"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008218"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>iOS için Microsoft Intune Uygulama SDK’sı geliştirici kılavuzu
 
@@ -33,11 +33,11 @@ ms.locfileid: "90039406"
 
 iOS için Microsoft Intune Uygulama SDK’sı, Intune uygulama koruma ilkelerini (APP veya MAM ilkeleri olarak da bilinir) yerel iOS uygulamanıza eklemenizi sağlar. MAM özellikli uygulamalar Intune Uygulama SDK’sı ile tümleşik çalışır. Intune uygulamayı etkin bir şekilde yönetirken, BT yöneticileri mobil uygulamanıza uygulama koruma ilkeleri dağıtabilir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- OS X 10.12.6 veya üstünü çalıştıran bir Mac OS bilgisayara ihtiyacınız vardır ve Ayrıca Xcode 9 veya üzeri bir sürümü yüklü olur.
+- Xcode 11 veya üzeri bir sürümü yüklü Mac OS bir bilgisayar olması gerekir.
 
-- Uygulamanız iOS 11 veya üzeri için hedeflenmelidir.
+- Uygulamanız iOS 12 veya üzeri için hedeflenmelidir.
 
 - [iOS için Intune Uygulama SDK'sı Lisans Koşulları](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf)'nı gözden geçirmelisiniz. Kendi kayıtlarınız için lisans koşullarının bir kopyasını yazdırmalı ve saklamalısınız. iOS için Intune Uygulama SDK'sını indirip kullandığınızda bu lisans koşullarını kabul etmiş olursunuz.  Kabul etmiyorsanız, yazılımı kullanmayın.
 
@@ -45,7 +45,7 @@ iOS için Microsoft Intune Uygulama SDK’sı, Intune uygulama koruma ilkelerini
 
 ## <a name="whats-in-the-sdk-repository"></a>SDK deposundaki Özellikler
 
-Aşağıdaki dosyalar, hiçbir Swift kodu içermeyen uygulamalar/uzantılara veya 10,2 ' dan önceki bir Xcode sürümü ile derlenerek geçerlidir:
+Aşağıdaki dosyalar, hiçbir Swift kodu içermeyen uygulamalarla/uzantılara uygundur:
 
 * **IntuneMAM.framework**: Intune Uygulama SDK’sı çerçevesi. Intune istemci uygulama yönetimini etkinleştirmek için bu çerçeveyi uygulamanıza/uzantılara bağlamanız önerilir. Ancak bazı geliştiriciler statik kitaplığın performans avantajlarını tercih edebilir. Aşağıdakilere bakın.
 
@@ -53,7 +53,7 @@ Aşağıdaki dosyalar, hiçbir Swift kodu içermeyen uygulamalar/uzantılara vey
 
 * **Intunemamresources. demeti**: SDK 'nın bağımlı olduğu kaynakları içeren bir kaynak paketi. Kaynak demeti yalnızca statik kitaplığı (Libintunemad. a) tümleştiren uygulamalar için gereklidir.
 
-Aşağıdaki dosyalar, Swift kodu içeren uygulamalar/uzantılar ile ilgilidir ve Xcode 10.2 + ile derlenir:
+Aşağıdaki dosyalar, Swift kodu içeren uygulamalar/uzantılar ile ilgilidir:
 
 * **IntuneMAMSwift. Framework**: Intune uygulama SDK 'sı Swift çerçevesi. Bu çerçeve, uygulamanızın çağıracağız API 'Lerin tüm üst bilgilerini içerir. Intune istemci uygulama yönetimini etkinleştirmek için bu çerçeveyi uygulamanıza/uzantılara bağlayın.
 
@@ -101,14 +101,14 @@ iOS için Intune Uygulama SDK'sının amacı, kodda minimum düzeyde değişikli
 
 Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin:
 
-1. **Seçenek 1-Framework (önerilir)**: Xcode 10.2 + kullanıyorsanız ve uygulamanız/uzantınız Swift kodu içeriyorsa ve `IntuneMAMSwift.framework` `IntuneMAMSwiftStub.framework` hedeflemenize ve hedeflemenize, bağlantı ve hedef Için `IntuneMAMSwift.framework` , `IntuneMAMSwiftStub.framework` proje hedefinin **katıştırılmış ikili dosyalar** listesine sürükleyin.
+1. **Seçenek 1-çerçeve (önerilir)**: uygulamanız/uzantınız Swift kodu içeriyorsa, `IntuneMAMSwift.framework` ve `IntuneMAMSwiftStub.framework` hedeflemenize:, `IntuneMAMSwift.framework` ve ' yi, `IntuneMAMSwiftStub.framework` proje hedefinin **katıştırılmış ikili dosyalar** listesine sürükleyin.
 
     Aksi takdirde, `IntuneMAM.framework` hedefle bağlantı: `IntuneMAM.framework` proje hedefinin **katıştırılmış Ikili dosyalar** listesine sürükleyin.
 
    > [!NOTE]
    > Çerçeveyi kullanırsanız, uygulamanızı App Store’a göndermeden önce evrensel çerçeveden simülatör mimarilerini kendiniz çıkarmanız gerekir. Daha fazla bilgi için bkz. [Uygulamanızı App Store'a gönderme](#submit-your-app-to-the-app-store).
 
-   **Seçenek 2-statik kitaplık**: Bu seçenek yalnızca bir Swift kodu içermeyen veya 10,2 < Xcode ile oluşturulmuş uygulamalar/uzantılar için kullanılabilir. `libIntuneMAM.a`Kitaplık bağlantısı. `libIntuneMAM.a` kitaplığını proje hedefinin **Bağlantılı Çerçeveler ve Kitaplıklar** listesine sürükleyin.
+   **Seçenek 2-statik kitaplık**: Bu seçenek yalnızca bir Swift kodu içermeyen uygulamalar/uzantılar için kullanılabilir. `libIntuneMAM.a`Kitaplık bağlantısı. `libIntuneMAM.a` kitaplığını proje hedefinin **Bağlantılı Çerçeveler ve Kitaplıklar** listesine sürükleyin.
 
     ![Intune Uygulama SDK’sı iOS: bağlantılı çerçeveler ve kitaplıklar](./media/app-sdk-ios/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -139,7 +139,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
 3. Her bir proje hedefinde **Özellikler**’i seçip **Anahtar Zinciri Paylaşımı** anahtarını etkinleştirerek anahtar zinciri paylaşımını etkinleştirin (önceden etkinleştirilmemişse). Anahtarlık paylaşımı, sonraki adıma devam edebilmeniz için gereklidir.
 
    > [!NOTE]
-   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örneğin:
+   > Sağlama profilinizin, yeni anahtarlık paylaşımı değerlerini desteklemesi gerekir. Anahtarlık erişim grupları bir joker karakteri desteklemelidir. Bunu,. mobileprovision dosyasını bir metin düzenleyicisinde açıp **Anahtarlık erişim grupları**araması yaparak ve bir joker karakter olmasını sağlayarak denetleyebilirsiniz. Örnek:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -158,7 +158,7 @@ Intune Uygulama SDK'sını etkinleştirmek için aşağıdaki adımları izleyin
     
       ![Intune Uygulama SDK’sı iOS: Anahtarlık paylaşımı](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örneğin:
+    d. Anahtarlık erişim gruplarını oluşturmak için yukarıda gösterilen Xcode UI'ı kullanmak yerine doğrudan yetkilendirme dosyalarını düzenliyorsanız, anahtarlık erişim gruplarını `$(AppIdentifierPrefix)` öğesinin önüne ekleyin (Xcode bunu otomatik olarak işler). Örnek:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -235,7 +235,7 @@ Daha önce belirtildiği gibi, Intune uygulama SDK 'sı, kimlik doğrulama ve ko
 
 ### <a name="special-considerations-when-using-msal"></a>MSAL kullanılırken özel konular 
 
-1. **WebView hesabınızı kontrol edin** ; uygulamaların, uygulama tarafından başlatılan msal etkileşimli kimlik doğrulama işlemlerinde Web görünümü olarak SFSafariViewController, SFAuthSession veya ASWebAuthSession kullanması önerilir. Bazı nedenlerle uygulamanızın herhangi bir etkileşimli MSAL auth işlemi için bu Web görünümlerinden birini kullanması gerekiyorsa, `SafariViewControllerBlockedOverride` `true` `IntuneMAMSettings` uygulamanın Info. plist dosyasındaki sözlük altında olarak da ayarlanmalıdır. Uyarı: Bu, kimlik doğrulama oturumunu etkinleştirmek üzere Intune 'un SafariViewController kancalarını devre dışı bırakır. Bu, uygulama kurumsal verileri görüntülemek için SafariViewController kullanıyorsa, uygulama bu Web görünümü türlerinden herhangi birinde kurumsal verileri göstermemelidir.
+1. **WebView hesabınızı denetleyin** -uygulamaların, uygulama tarafından başlatılan msal etkileşimli kimlik doğrulama işlemleri için Web görünümü olarak SFSafariViewController, SFAuththenticationSession veya ASWebAuthenticationSession kullanması önerilir. MSAL, varsayılan olarak ASWebAuthenticationSession kullanır, bu nedenle uygulama geliştiricilerinin [WebView türünü açıkça ayarlaması](https://docs.microsoft.com/azure/active-directory/develop/customize-webviews#change-the-default-browser-for-the-request)gerekir. Bazı nedenlerle uygulamanızın herhangi bir etkileşimli MSAL kimlik doğrulama işlemi için WKWebView dışında bir WebView türü kullanması gerekiyorsa, `SafariViewControllerBlockedOverride` `true` `IntuneMAMSettings` uygulamanın Info. plist dosyasındaki sözlük altında öğesine de ayarlanmalıdır. Uyarı: Bu, kimlik doğrulama oturumunu etkinleştirmek üzere Intune 'un SafariViewController kancalarını devre dışı bırakır. Bu, uygulama kurumsal verileri görüntülemek için SafariViewController kullanıyorsa, uygulama bu Web görünümü türlerinden herhangi birinde kurumsal verileri göstermemelidir.
 2. **Hem adal hem de msal** -geliştiricilerin bağlanması, Intune 'un bu senaryoda adal üzerinde msal 'yi tercih edebilecekleri şekilde kabul etmelidir. Varsayılan olarak, Intune desteklenen ADAL sürümlerini desteklenen MSAL sürümlerine, her ikisi de çalışma zamanında bağlanmışsa tercih edecektir. Intune, Intune 'un ilk kimlik doğrulama işlemi sırasında olduğunda yalnızca desteklenen bir MSAL sürümünü tercih eder `IntuneMAMUseMSALOnNextLaunch` `true` `NSUserDefaults` . `IntuneMAMUseMSALOnNextLaunch` `false` Veya ayarlanmamışsa, Intune varsayılan davranışa geri dönecektir. Adından da anlaşılacağı gibi, bir değişiklik `IntuneMAMUseMSALOnNextLaunch` sonraki başlatma üzerinde devreye girer.
 
 
@@ -557,7 +557,7 @@ Sürüm 8.0.2'den başlayarak, yalnızca Intune tarafından yönetilen paylaşı
 
 Ve aracılığıyla belge paylaşırken `UIActivityViewController` `UIDocumentInteractionController` , iOS, paylaşılan belgeyi açmayı destekleyen her uygulama Için ' Kopyala ' eylemlerini görüntüler. Uygulamalar, Info.plist dosyalarındaki `CFBundleDocumentTypes` ayarı yoluyla destekledikleri belge türlerini bildirir. İlke yönetilmeyen uygulamalara paylaşımı yasaklarsa, bu paylaşım türü artık kullanılabilir olmaz. Bunun yerine kullanıcı, kullanıcı arabirimi olmayan Eylem uzantısını ekleyip bunu Intune Uygulama SDK’sına bağlamak zorunda kalır. Eylem uzantısı, yalnızca bir saplamadır. SDK, dosya paylaşım davranışını uygular. Aşağıdaki adımları izleyin:
 
-1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örneğin:
+1. Uygulamanız, kendi Info. plist altında, onun karşılığına göre tanımlanmış en az bir ıgnmeurl içermelidir `CFBundleURLTypes` `-intunemam` . Örnek:
     ```objc
     <key>CFBundleURLSchemes</key>
     <array>

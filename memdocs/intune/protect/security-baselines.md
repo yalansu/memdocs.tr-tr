@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.custom:
 - intune-azure
 - contperfq1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 570d848f624b5558d84177b66751f55c0a0ab4ae
-ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
+ms.openlocfilehash: f99adfc51ce680cb604281cd74c3f91cee409885
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "91002741"
+ms.locfileid: "91008422"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Intune 'da Windows 10 cihazlarını yapılandırmak için güvenlik temellerini kullanma
 
@@ -53,7 +53,7 @@ Güvenlik temelleri, Microsoft 365 çalışırken uçtan uca güvenli bir iş ak
 Aşağıdaki güvenlik temeli örnekleri Intune ile kullanılabilir. Her bir taban çizgisinin en son örneğine ilişkin ayarları görüntülemek için bağlantıları kullanın.
 
 - **MDM güvenlik temeli**
-  - [Eylül 2019 için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
+  - [Ağustos 2020 için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
   - [2019 Mayıs için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Önizleme: 2018 Ekim için MDM güvenlik temeli](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
@@ -72,7 +72,7 @@ Aşağıdaki güvenlik temeli örnekleri Intune ile kullanılabilir. Her bir tab
 
 Önizleme şablonu yeni profiller oluşturmak için artık kullanılabilir olmadığında bile, daha önce bir önizleme şablonunu temel alarak oluşturduğunuz profilleri kullanmaya ve düzenlemeye devam edebilirsiniz.
 
-Kullandığınız bir taban çizgisinin daha yeni bir sürümüne taşımaya hazırsanız, bu makaledeki [bir profilin temel sürümünü değiştirme](#change-the-baseline-version-for-a-profile) bölümüne bakın. 
+Kullandığınız bir taban çizgisinin daha yeni bir sürümüne taşımaya hazırsanız, bu makaledeki [bir profilin temel sürümünü değiştirme](#change-the-baseline-version-for-a-profile) bölümüne bakın.
 
 ## <a name="about-baseline-versions-and-instances"></a>Temel sürümler ve örnekler hakkında
 
@@ -171,23 +171,48 @@ Güvenlik temellerinde çalışırken ortak görevler şunları içerir:
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Bir profilin temel sürümünü değiştirme
 
-Kullanılan temel örnek sürümünü bir profille değiştirebilirsiniz.  Sürümü değiştirdiğinizde, aynı taban çizgisinin kullanılabilir bir örneğini seçersiniz. Bir profili, MDM güvenlik temelini kullanarak Defender ATP için bir taban çizgisi kullanarak değiştirme gibi iki farklı taban çizgisi türü arasında geçiş yapamazsınız.
+Bir taban çizgisi için yeni bir sürüm serbest bırakıldığında, mevcut profillerinizi yeni sürüme güncelleştirmeyi planlayın:
 
-Taban çizgisi sürümünün bir değişikliğini yapılandırırken, dahil edilen iki temel sürüm arasındaki değişiklikleri listeleyen bir CSV dosyası indirebilirsiniz. Tüm özelleştirmelerinizi özgün temel sürümden tutma veya yeni sürümü varsayılan değerlerini kullanarak uygulama seçeneğiniz de vardır. Bir profil için bir taban çizgisinin sürümünü değiştirdiğinizde tek tek ayarlarda değişiklik yapma seçeneğiniz yoktur.
+- Mevcut profiller, yeni sürümlere otomatik olarak yükseltilmez.
+- Yeni sürümü kullanmayan temel profiller salt okunurdur. Taban çizgisinin daha eski bir sürümünü kullanan profilleri kullanmaya devam edebilirsiniz, ancak en son temel sürüme güncelleştirene kadar bunları düzenleyemeyeceksiniz  
 
-Kaydetme sırasında, dönüştürme işlemi tamamlandıktan sonra, taban çizgisi atanan gruplara hemen yeniden dağıtılır.
+Canlı profillerinizi güncelleştirmeden önce [, sürüm](#test-the-conversion-and-updated-baseline) güncelleştirmesini mevcut profillerinizin bir kopyasında test etmenizi öneririz.
 
-**Dönüştürme sırasında**:
+Profil sürümünü değiştirdiğinizde:
 
-- Kullanmakta olduğunuz Orijinal sürümde olmayan yeni ayarlar eklendi ve varsayılan değerleri kullanacak şekilde ayarlandı.
+- Aynı taban çizgisinin en son örneğini seçersiniz. Bir profili, MDM güvenlik temelini kullanarak Defender ATP için bir taban çizgisi kullanarak değiştirme gibi iki farklı taban çizgisi türü arasında geçiş yapamazsınız.
+- Dahil edilen iki taban çizgisi sürümü arasındaki değişiklikleri listeleyen bir CSV dosyasını indirme seçeneğiniz vardır.
+- Profilin nasıl güncelleştirilmesini seçmelisiniz:
+  - Tüm özelleştirmelerinizi özgün temel sürümden tutabilirsiniz.
+  - Yeni temel sürümdeki tüm ayarlar için varsayılan değerleri kullanmayı tercih edebilirsiniz.
+
+  Güncelleştirme sırasında bir profildeki bazı ayarları değiştirme seçeneğiniz yoktur.
+
+Dönüştürme sırasında:
+
+- Kullanmakta olduğunuz eski sürümde olmayan yeni ayarlar eklendi. Yeni sürümden yeni ayarlar varsayılan değerlerini kullanır.
 
 - Seçtiğiniz yeni temel sürümde olmayan ayarlar kaldırılır ve artık bu güvenlik temeli profili tarafından zorlanmaz.
 
   Bir ayar artık temel bir profil tarafından yönetilmediğinde, bu ayar cihazda sıfırlanmaz. Bunun yerine, başka bir işlem değişiklik ayarlarını yönetene kadar cihazdaki ayar en son yapılandırmaya ayarlanır. Yönetimi durdurduktan sonra bir ayarı değiştirebiliyor işlem örnekleri, farklı bir temel profil, bir Grup İlkesi ayarı veya cihazda yapılan el ile yapılandırma içerir.
 
+Yeni temel sürüme dönüştürme işlemi tamamlandıktan sonra:
+
+- Taban çizgisi, atanan gruplara hemen yeniden dağıtılır.
+- Tek tek ayarları değiştirmek için taban çizgisini düzenleyebilirsiniz.
+
+#### <a name="test-the-conversion-and-updated-baseline"></a>Dönüştürmeyi test etme ve temeli güncelleme
+
+Bir temel profilini yeni bir sürüme güncelleştirmeden önce, profilinizin yeni sürümünü bir cihaz grubunda sınayabilmeniz için bir kopyasını oluşturun. Bu makalenin ilerleyen bölümlerinde [güvenlik taban çizgisini çoğaltın](#duplicate-a-security-baseline) bölümüne bakın.
+
+- Bir kopya oluşturduğunuzda Grup atamaları dahil edilmez. Bu, taban çizgisi kopyanızın kopya yaptığınız zaman herhangi bir cihaza veya yeni bir sürüme güncelleştirinceye kadar hiçbir cihaza dağıtılmayacağı anlamına gelir.
+- Profili en son sürüme güncelleştirdikten sonra düzenleyebilirsiniz. Güncelleştirilmiş kopyayı bir cihaz grubuna atayabilir ve profildeki tek ayarlarla ilgili değişiklikler tanıtmak üzere düzenleyebilirsiniz.
+
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>Bir profilin temel sürümünü değiştirmek için
 
-1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın. 
+Gruplara atanan bir profilin sürümünü güncelleştirmeden önce, [sürüm güncelleştirmesini](#test-the-conversion-and-updated-baseline) profil kopyası üzerinde test edin, böylece daha sonra, cihazların test grubundaki yeni temel ayarları doğrulayabilirsiniz.
+
+1. [Microsoft Endpoint Manager Yönetim merkezinde](https://go.microsoft.com/fwlink/?linkid=2109431)oturum açın.
 
 2. **Uç nokta güvenlik**  >  **güvenliği temelleri**' ni seçin ve ardından değiştirmek istediğiniz profile sahip olan temel türün kutucuğunu seçin.
 

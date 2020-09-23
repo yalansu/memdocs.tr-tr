@@ -5,7 +5,7 @@ description: Microsoft Defender Gelişmiş tehdit koruması 'nı yönetmek için
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
-ms.openlocfilehash: c6985dfd419932bf93dcb10cae1cb1d530b8c563
-ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
+ms.openlocfilehash: a91a15bde690840f81a6895baf3724fcde173003
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90814962"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008371"
 ---
 <!-- Pivots in use: 
 
@@ -56,17 +56,43 @@ Microsoft Intune tarafından desteklenen Microsoft Defender Gelişmiş tehdit ko
 
 ::: zone pivot="atp-sept-2020"
 
-Bu makaledeki ayrıntılar, 21 Eylül 2020 ' de kullanıma sunulan Microsoft Defender ATP taban çizgisinin 54 sürümü için geçerlidir. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
+**Eylül 2020 için Microsoft Defender ATP temeli-sürüm 5**  
+Güvenlik temelinin bu sürümü önceki sürümlerin yerini alır. Bu temel sürümün kullanılabilirliğine önce oluşturulan profiller:
+
+- Artık salt okunurdur. Bu profilleri kullanmaya devam edebilirsiniz, ancak yapılandırmalarını değiştirecek şekilde düzenleyemezsiniz.
+- En son sürüme güncelleştirilebilen olabilir. Geçerli temel sürümü güncelleştirdikten sonra ayarları değiştirmek için profili düzenleyebilirsiniz.
+
+Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın. Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin olun.
+
+Bir güvenlik temeli profilini Bu taban çizgisinin en son sürümüne güncelleştirmek için, bkz. [bir profil için temel sürümü değiştirme](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+
 
 ::: zone-end
 ::: zone pivot="atp-april-2020"
 
-Bu makaledeki ayrıntılar, 21 Nisan 2020 ' de kullanıma sunulan Microsoft Defender ATP taban çizgisinin 4. sürümü için geçerlidir. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
+**Nisan 2020 için Microsoft Defender ATP temeli-sürüm 4**  
+Güvenlik temelinin bu sürümü önceki sürümlerin yerini alır. Bu temel sürümün kullanılabilirliğine önce oluşturulan profiller:
+
+- Artık salt okunurdur. Bu profilleri kullanmaya devam edebilirsiniz, ancak yapılandırmalarını değiştirecek şekilde düzenleyemezsiniz.
+- En son sürüme güncelleştirilebilen olabilir. Geçerli temel sürümü güncelleştirdikten sonra ayarları değiştirmek için profili düzenleyebilirsiniz.
+
+Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın. Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin olun.
+
+Bir güvenlik temeli profilini Bu taban çizgisinin en son sürümüne güncelleştirmek için, bkz. [bir profil için temel sürümü değiştirme](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="atp-march-2020"
 
-Bu makaledeki ayrıntılar, 1 Mart 2020 ' de kullanıma sunulan Microsoft Defender ATP taban çizgisinin 3. sürümü için geçerlidir. Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
+**Mart 2020 için Microsoft Defender ATP temeli-sürüm 3**  
+Güvenlik temelinin bu sürümü önceki sürümlerin yerini alır. Bu temel sürümün kullanılabilirliğine önce oluşturulan profiller:
+
+
+- Artık salt okunurdur. Bu profilleri kullanmaya devam edebilirsiniz, ancak yapılandırmalarını değiştirecek şekilde düzenleyemezsiniz.
+- En son sürüme güncelleştirilebilen olabilir. Geçerli temel sürümü güncelleştirdikten sonra ayarları değiştirmek için profili düzenleyebilirsiniz.
+
+Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın. Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin olun.
+
+Bir güvenlik temeli profilini Bu taban çizgisinin en son sürümüne güncelleştirmek için, bkz. [bir profil için temel sürümü değiştirme](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020"

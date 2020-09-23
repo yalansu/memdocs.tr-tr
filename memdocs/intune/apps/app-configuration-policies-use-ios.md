@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/13/2020
+ms.date: 09/14/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8480ec3f7d83ad5819e21ad34b9dfbc67f38999
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 843a6d36fa736485494dfb891fed31c5f3f7b96f
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88907349"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008252"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Yönetilen iOS/ıpados cihazları için uygulama yapılandırma ilkeleri ekleme
 
@@ -116,9 +116,13 @@ Microsoft Intune Yöneticisi olarak, yönetilen cihazlarda Microsoft uygulamalar
    > [!NOTE]
    > Aşağıdaki uygulamalar, yukarıdaki uygulama yapılandırmasını işler ve yalnızca kuruluş hesaplarına izin verir:
    > - İOS için Edge (44.8.7 ve üzeri)
+   > - Office, Word, Excel, iOS için PowerPoint (2,41 ve üzeri)
    > - İOS için OneDrive (10,34 ve üzeri)
+   > - İOS için OneNote (2,41 ve üzeri)
    > - İOS için Outlook (2.99.0 ve üzeri)
    > - İOS için takımlar (2.0.15 ve üzeri)
+   > - Office, Word, Excel, iOS için PowerPoint (2,41 ve üzeri)
+   
 
 ## <a name="enter-xml-data"></a>XML verilerini girme
 

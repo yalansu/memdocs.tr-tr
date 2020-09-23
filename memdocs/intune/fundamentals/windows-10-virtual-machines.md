@@ -18,20 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 944b3d98dc59dcae69f72fef5dfdb1793701f67a
-ms.sourcegitcommit: 2871a17e43b2625a5850a41a9aff447c8ca44820
+ms.openlocfilehash: c427d6aa57220fed4e5a16db94985f449298d32f
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82126186"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008364"
 ---
 # <a name="using-windows-10-virtual-machines-with-intune"></a>Intune ile Windows 10 sanal makinelerini kullanma
 
 Intune, Windows 10 Enterprise çalıştıran sanal makinelerin belirli sınırlamalara sahip olarak yönetilmesini destekler. Intune yönetimi, aynı sanal makinenin Windows sanal masaüstü yönetimini etkilemez veya buna engel olmaz.
-
-Intune ile Windows 10 VM 'Leri yönetirken aşağıdaki noktaları göz önünde bulundurun:
-
-- Windows sanal masaüstü 'nde kullanılan Windows 10 Enterprise çoklu oturum (sanal cihazlar için Enterprise) Şu anda Intune yönetimini desteklememektedir.
 
 ## <a name="enrollment"></a>Kayıt
 - Intune ile isteğe bağlı, oturum ana bilgisayar sanal makinelerini yönetmeyi önermiyoruz. Her sanal makinenin oluşturulduğu zaman kayıtlı olması gerekir. Ayrıca, sanal makineleri düzenli olarak silmek, [temizlenene](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules)kadar yalnız bırakılmış cihaz kayıtlarını Intune 'da bırakır. 
@@ -47,11 +43,12 @@ Intune, aşağıdakiler de dahil olmak üzere Güvenilir Platform Modülü veya 
 - [Cihaz üretici yazılımı yapılandırma arabirimi ayarları](../configuration/device-profiles.md#device-firmware-configuration-interface)
 
 ## <a name="reporting"></a>Raporlama
-Intune, sanal makineleri otomatik olarak algılar ve **cihazlar** > **tüm cihazlarda** "sanal makine" olarak raporlar > bir cihaz > **genel bakış** > **modeli** alanı seçin. 
+Intune, sanal makineleri otomatik olarak algılar ve **cihazlar**tüm cihazlarda "sanal makine" olarak raporlar  >  **All devices** > bir cihaz > **genel bakış**  >  **modeli** alanı seçin. 
 
 Serbest bırakılmış sanal makineler [, Intune hizmetine iade](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)kuramadığı için uyumsuz cihaz raporlarına katkıda bulunabilir.
 
 ## <a name="retirement"></a>Devre dışı bırakma
 Yalnızca RDP erişiminiz varsa [silme eylemini](../remote-actions/devices-wipe.md#wipe)kullanmayın. Silme eylemi, sanal makinenin RDP ayarlarını silecek ve yeniden bağlanmanızı engelleyecek.
 
-
+## <a name="next-steps"></a>Sonraki adımlar
+[Intune ile Windows sanal masaüstü kullanımı hakkında bilgi edinin](windows-virtual-desktop.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b37eda7cb134230842205f986cea9f89545ec40a
-ms.sourcegitcommit: 7037d2cd6b4e3d3e75471db33f22d475dfd89f5e
+ms.openlocfilehash: 687fd002f8635ed92887e259cc44f29d4f9f6b61
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90814738"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008235"
 ---
 # <a name="app-protection-policies-overview"></a>Uygulama koruma ilkelerine genel bakış
 
@@ -337,7 +337,7 @@ Farklı ayar türleriyle ilgilenirken, bir Intune SDK sürümü gereksinimi önc
 ## <a name="app-protection-experience-for-android-devices"></a>Android cihazlar için uygulama koruma deneyimi
 
 ### <a name="device-biometric-authentication"></a>Cihaz biyometrik kimlik doğrulaması
-Biyometrik kimlik doğrulamasını destekleyen Android cihazlarda, Android cihazlarının desteklediği seçeneklere bağlı olarak son kullanıcıların parmak izini veya yüzü açma özelliklerini kullanmasına izin verebilirsiniz. Tüm biyometrik türlerin kimlik doğrulaması için kullanılıp kullanılamayacağını yapılandırabilir, parmak izleri yalnızca kabul edilir veya biyometri kabul edilmez. Parmak izi ve yüz kilidi açma 'nın yalnızca bu biyometrik türleri desteklemek üzere üretilmiş cihazlarda kullanılabilir ve Android 'in doğru sürümünü çalıştırdığından emin olmanız gerektiğini unutmayın. Android 6 ve üzeri parmak izi için gereklidir ve yüz kilidi açma için Android 10 ve üzeri gereklidir.
+Biyometrik kimlik doğrulamasını destekleyen Android cihazlarda, Android cihazlarının desteklediği seçeneklere bağlı olarak son kullanıcıların parmak izini veya yüzü açma özelliklerini kullanmasına izin verebilirsiniz. Parmak izinin ötesinde tüm biyometrik türlerin kimlik doğrulaması için kullanılıp kullanılamayacağını yapılandırabilirsiniz. Parmak izi ve yüz kilidi açma 'nın yalnızca bu biyometrik türleri desteklemek üzere üretilmiş cihazlarda kullanılabilir ve Android 'in doğru sürümünü çalıştırdığından emin olmanız gerektiğini unutmayın. Android 6 ve üzeri parmak izi için gereklidir ve yüz kilidi açma için Android 10 ve üzeri gereklidir.
 
 ### <a name="company-portal-app-and-intune-app-protection"></a>Şirket Portalı uygulaması ve Intune uygulama koruması
 Uygulama koruma işlevlerinin çoğu Şirket Portalı uygulamasında yerleşik olarak bulunur. Şirket Portalı uygulaması her zaman gerekli olsa bile cihaz kaydı _gerekli değildir_ . Kayıt olmadan mobil uygulama yönetimi için son kullanıcının cihazda Şirket Portalı uygulamasının yüklü olması gerekir.

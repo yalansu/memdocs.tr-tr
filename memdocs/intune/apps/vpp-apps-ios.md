@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21bc1b47f64318579da439e37f8dcf66d5a0a6ce
-ms.sourcegitcommit: 9408d103e7dff433bd0ace5a9ab8b7bdcf2a9ca2
+ms.openlocfilehash: ef364647ee007027ea709a7f84004063618155f7
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88820519"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008167"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Microsoft Intune ile Apple Volume Purchase Program aracılığıyla satın alınan iOS ve macOS uygulamalarını yönetme
 
@@ -50,7 +50,7 @@ Satın alınan uygulamalar, Apple 'ın iOS/ıpados ve macOS cihazları için sun
 |------- | -----------------| ---------------|
 | Uygulama Mağazası oturum açma | Gerekli değildir. | Her son kullanıcının, App Store 'da oturum açmanız istendiğinde benzersiz bir Apple KIMLIĞI kullanması gerekir. |
 | Cihaz yapılandırması uygulama deposuna erişimi engelliyor | Uygulamalar, Şirket Portalı kullanılarak yüklenip güncelleştirilemeyebilir. | Apple VPP 'ye katılma daveti App Store 'a erişim gerektirir. App Store 'u devre dışı bırakmak için bir ilke ayarladıysanız, VPP uygulamaları için Kullanıcı lisanslama çalışmaz. |
-| Otomatik uygulama güncelleştirmesi | Apple VPP belirteci ayarlarında Intune Yöneticisi tarafından yapılandırıldığı gibi.<p>Atama türü kayıtlı cihazlar için kullanılabiliyorsa, uygulama ayrıntıları sayfasında **Güncelleştir** eylemi seçilerek Şirket portalı kullanılabilir uygulama güncelleştirmeleri de yüklenebilir. | Kişisel uygulama mağazası ayarları 'nda Son Kullanıcı tarafından yapılandırılır. Bu, Intune Yöneticisi tarafından yönetilemez. |
+| Otomatik uygulama güncelleştirmesi | Apple VPP belirteci ayarlarında Intune Yöneticisi tarafından yapılandırıldığı gibi.<p>Atama türü kayıtlı cihazlar için kullanılabiliyorsa, uygulama ayrıntıları sayfasında **Güncelleştir** eylemi seçilerek Şirket portalı kullanılabilir uygulama güncelleştirmeleri de yüklenebilir. | Apple VPP belirteci ayarlarında Intune Yöneticisi tarafından yapılandırıldığı gibi.<p>Atama türü kayıtlı cihazlar için kullanılabiliyorsa, uygulama ayrıntıları sayfasında **Güncelleştir** eylemi seçilerek Şirket portalı kullanılabilir uygulama güncelleştirmeleri de yüklenebilir. |
 | Kullanıcı kaydı | Desteklenmez. | Yönetilen Apple kimlikleri kullanılarak desteklenir. |
 | Kitaplar | Desteklenmez. | Destekleniyor. |
 | Kullanılan lisanslar | cihaz başına 1 lisans. Lisans cihazla ilişkilendirilir. | aynı kişisel Apple KIMLIĞINI kullanarak en fazla 5 cihaz için 1 lisans. Lisans kullanıcıyla ilişkilendirilir.<p>Intune 'da kişisel bir Apple KIMLIĞIYLE ve yönetilen bir Apple KIMLIĞIYLE ilişkili bir Son Kullanıcı 2 uygulama lisansı kullanır. |

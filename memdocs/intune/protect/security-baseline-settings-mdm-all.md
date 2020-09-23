@@ -5,7 +5,7 @@ description: Windows MDM güvenlik temelinin Microsoft Intune ile yönetebilece�
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0fe4c785ce8a7943f0555f8d9f696c183e823f32
-ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
+ms.openlocfilehash: 5a043224036fd0cc8e5362e2166d278c4aa9006c
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "91002622"
+ms.locfileid: "91008337"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune için Windows MDM güvenlik taban çizgisi ayarları
 
@@ -32,25 +32,30 @@ Windows 10 veya üzerini çalıştıran cihazlar için Microsoft Intune destekle
 - Intune ile güvenlik temellerini kullanma ve güvenlik taban çizgisi profillerinizden temel sürümü yükseltme hakkında bilgi edinmek için bkz. [güvenlik temellerini kullanma](security-baselines.md).
 - En son temel sürüm, **ağustos 2020 Için MDM güvenlik temeliyle**
 
-Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın.
-
-Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin olun.
-
 ::: zone pivot="mdm-sept-2020"
 
 **Ağustos 2020 için MDM güvenlik temeli**  
-Güvenlik temelinin bu sürümü, *2019 Mayıs Için MDM güvenlik temeli*olan önceki taban çizgisinin yerini almıştır. Bu taban çizgisinin kullanılabilirliğine başlamadan önce oluşturulan profiller, yeni ayarları veya değerleri yansıtacak şekilde günceldeğildir.  Önceki temel sürüme göre yeni profiller oluşturamıyoruz, ancak önceki bir sürümü temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
+Güvenlik temelinin bu sürümü önceki sürümlerin yerini alır. Bu temel sürümün kullanılabilirliğine önce oluşturulan profiller:
 
-Taban çizgisinin bu sürümünde önceki sürümden nelerin değiştirildiğini öğrenmek için, bkz. [Yeni şablonda nelerin değiştiğini](#whats-changed-in-the-new-template).
+- Artık salt okunurdur. Bu profilleri kullanmaya devam edebilirsiniz, ancak yapılandırmalarını değiştirecek şekilde düzenleyemezsiniz.
+- En son sürüme güncelleştirilebilen olabilir. Geçerli temel sürümü güncelleştirdikten sonra ayarları değiştirmek için profili düzenleyebilirsiniz.
+
+Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın. Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin olun.
+
+Bir güvenlik temeli profilini Bu taban çizgisinin en son sürümüne güncelleştirmek için, bkz. [bir profil için temel sürümü değiştirme](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
 **2019 Mayıs Için MDM güvenlik temeli**:  
-> [!NOTE]
-> Haziran 2019 ' de, *mayıs 2019 şablonunun MDM güvenlik temeli* genel kullanıma sunuldu (önizlemede değil) olarak yayımlanmıştır. Güvenlik temelinin bu sürümü, *2018 Ekim Için MDM güvenlik temelini*, önceki taban çizgisinin yerini almıştır.  Mayıs 2019 temelinin kullanılabilirliği öncesinde oluşturulan profiller, Mayıs 2019 sürümündeki ayarları ve değerleri yansıtacak şekilde güncellemeyebilir.  Önizleme şablonunu temel alan yeni profiller oluşturamıyoruz, ancak önizleme şablonunu temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
+Güvenlik temelinin bu sürümü önceki sürümlerin yerini alır. Bu temel sürümün kullanılabilirliğine önce oluşturulan profiller:
 
-Taban çizgisinin bu sürümünde önceki sürümden nelerin değiştirildiğini öğrenmek için, bkz. [Yeni şablonda nelerin değiştiğini](#whats-changed-in-the-new-template).
+- Artık salt okunurdur. Bu profilleri kullanmaya devam edebilirsiniz, ancak yapılandırmalarını değiştirecek şekilde düzenleyemezsiniz.
+- En son sürüme güncelleştirilebilen olabilir. Geçerli temel sürümü güncelleştirdikten sonra ayarları değiştirmek için profili düzenleyebilirsiniz.
+
+Önceki sürümlerden taban çizgisinin bu sürümü ile nelerin değiştirildiğini anlamak için, bu taban çizgisi için *sürümler* bölmesi görüntülenirken kullanılabilen [temelleri Karşılaştır](../protect/security-baselines.md#compare-baseline-versions) eylemini kullanın. Görüntülemek istediğiniz taban çizgisinin sürümünü seçtiğinizden emin olun.
+
+Bir güvenlik temeli profilini Bu taban çizgisinin en son sürümüne güncelleştirmek için, bkz. [bir profil için temel sürümü değiştirme](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="mdm-preview"
@@ -58,6 +63,10 @@ Taban çizgisinin bu sürümünde önceki sürümden nelerin değiştirildiğini
 **Preview-2018 Ekim IÇIN MDM güvenlik temeli**:  
 > [!NOTE]
 > Bu, Ekim 2018 ' de yayınlanan MDM güvenlik temelinin önizleme sürümüdür. Bu önizleme temeli, 2019 Haziran 'da, genel kullanıma açık olan (Önizleme aşamasında değil) *mayıs 2019 şablonu Için MDM güvenlik temeli* sürümü ile değiştirilmiştir. *Mayıs 2019 temeli Için MDM güvenlik temelinin* kullanılabilirliği öncesinde oluşturulan profiller, Mayıs 2019 sürümü Için MDM güvenlik temelindeki ayarları ve değerleri yansıtacak şekilde güncellemeyebilir. Önizleme şablonunu temel alan yeni profiller oluşturamıyoruz, ancak önizleme şablonunu temel alan daha önce oluşturduğunuz profilleri düzenleyebilir ve kullanmaya devam edebilirsiniz.
+
+
+Bir güvenlik temeli profilini Bu taban çizgisinin en son sürümüne güncelleştirmek için, bkz. [bir profil için temel sürümü değiştirme](../protect/security-baselines.md#change-the-baseline-version-for-a-profile).
+
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"

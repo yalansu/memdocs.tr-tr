@@ -23,6 +23,8 @@
     - name: Gizlilik ve kişisel veriler
       href: privacy-personal-data.md
       items:
+        - name: İstemci uygulamalarında isteğe bağlı tanılama verileri
+          href: client-apps-optional-data.md
         - name: Veri toplama
           href: privacy-data-collect.md
         - name: Veri depolama ve işleme

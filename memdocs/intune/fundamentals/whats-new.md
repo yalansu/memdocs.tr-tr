@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75de46da55f790ffada4477a281695820d5110c4
-ms.sourcegitcommit: fdd6d3c4b906e895ebec2856ebc38b0656296d2c
+ms.openlocfilehash: 49f3bcd1fafac132771e966a8dc7bad8a823e194
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "91002724"
+ms.locfileid: "91008405"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -202,8 +202,13 @@ Artık Azure AD 'ye katılmış bir ortak yönetilen cihazı yeniden adlandırab
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-security"></a>Cihaz güvenliği
 
+#### <a name="microsoft-tunnel-gateway-vpn-solution-in-preview---7843124----"></a>Önizleme aşamasında Microsoft Tunnel Gateway VPN çözümü<!-- 7843124  -->
+Artık iOS ve Android Enterprise (tam olarak yönetilen, şirkete ait Iş profili, Iş profili) cihazlarındaki şirket içi kaynaklara uzaktan erişim sağlamak için [Microsoft tünel ağ geçidini](../protect/microsoft-tunnel-overview.md) dağıtabilirsiniz.
+
+Microsoft tüneli, modern kimlik doğrulaması kullanarak uygulama başına ve tam cihaz VPN, bölünmüş tünel oluşturma ve koşullu erişim özelliklerini destekler.  Tünel, üretim hazırlığı için yüksek kullanılabilirlik için birden çok ağ geçidi sunucusunu destekleyebilir.
+
 #### <a name="additional-biometric-authentication-support-for-android-devices---5706213----"></a>Android cihazlar için ek biyometrik kimlik doğrulama desteği<!-- 5706213  -->
-Yeni Android cihazları, parmak izlerinin ötesinde daha farklı bir biyometri kümesi kullanmaktır. OEM 'Ler, parmak izi olmayan Biyometri için destek uygularken, son kullanıcıların güvenli erişim ve daha iyi bir deneyim için bu özelliği kullanma olasılığı vardır. Intune 'un 2009 sürümü ile son kullanıcılarınızın Android cihazının desteklediği seçeneğe bağlı olarak parmak izini veya yüzü açma kilidini kullanmasına izin verebilirsiniz. Tüm biyometrik türlerin kimlik doğrulaması için kullanılıp kullanılamayacağını yapılandırabilir, parmak izleri yalnızca kabul edilir veya biyometri kabul edilmez. Daha fazla bilgi için bkz. [Android cihazları Için uygulama koruma deneyimi](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
+Yeni Android cihazları, parmak izlerinin ötesinde daha farklı bir biyometri kümesi kullanmaktır. OEM 'Ler, parmak izi olmayan Biyometri için destek uygularken, son kullanıcıların güvenli erişim ve daha iyi bir deneyim için bu özelliği kullanma olasılığı vardır. Intune 'un 2009 sürümü ile son kullanıcılarınızın Android cihazının desteklediği seçeneğe bağlı olarak parmak izini veya yüzü açma kilidini kullanmasına izin verebilirsiniz. Parmak izinin ötesinde tüm biyometrik türlerin kimlik doğrulaması için kullanılıp kullanılamayacağını yapılandırabilirsiniz. Daha fazla bilgi için bkz. [Android cihazları Için uygulama koruma deneyimi](../apps/app-protection-policy.md#app-protection-experience-for-android-devices).
 
 #### <a name="new-details-in-the-endpoint-security-configuration-for-a-device---7745029-------"></a>Bir cihaz için uç nokta güvenlik yapılandırmasındaki yeni ayrıntılar<!-- 7745029     -->
 Artık cihazlar için bir cihaz *uç noktası güvenlik yapılandırmasının*parçası olarak ek ayrıntılar görüntüleyebilirsiniz. Cihazlara dağıttığınız ilkelerle ilgili durum ayrıntılarını görüntülemek için ayrıntıya gidin, şimdi şunları bulabilirsiniz:
@@ -256,7 +261,7 @@ Daha fazla bilgi için bkz. [güvenlik temelleri için çakışmaları çözme](
  
 Intune, aşağıdaki platformlar için 4096 bitlik anahtarları destekler: 
 - iOS 14 ve üzeri
-- macOS 11 ve üzeri    
+- macOS 11 ve üzeri  
  
 SCEP sertifika profillerini yapılandırmak için bkz. [SCEP sertifika profili oluşturma](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile).
 

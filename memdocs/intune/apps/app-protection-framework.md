@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2020
+ms.date: 09/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0803563dc525b0835602d54d4bde3de1345aeb33
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: a6ca36dab6e0dffb1e2e9a2e968d271e58d33ab4
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88913384"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008150"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Uygulama koruma ilkeleri kullanan veri koruma altyapısı 
 
@@ -45,7 +45,7 @@ Yeni yazılımların, özelliklerin veya ayarların herhangi bir dağıtımında
 
 Microsoft, uygulama veri koruma çerçevesi için aşağıdaki dağıtım halkası yaklaşımını önerir:
 
-| Dağıtım halkası  | Kiracı  | Değerlendirme takımları  | Çıktı  | Zaman çizelgesi  |
+| Dağıtım halkası  | Kiracı  | Değerlendirme takımları  | Çıkış  | Zaman çizelgesi  |
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
 | Kalite Güvencesi  | Ön üretim kiracısı  | Mobil yetenek sahipleri, güvenlik, risk değerlendirmesi, gizlilik, UX  | İşlevsel senaryo doğrulaması, taslak belgeler  | 0-30 gün  |
 | Önizleme  | Üretim kiracısı  | Mobil yetenek sahipleri, UX  | Son Kullanıcı senaryosu doğrulaması, kullanıcıya yönelik belgeler  | 7-14 gün, kalite sonrası güvence  |
@@ -120,6 +120,7 @@ Düzey 1 ' deki ilkeler, Microsoft Endpoint Manager 'da uygulama koruma Ilkesi o
 | Erişim için PIN yerine biyometrik öğesini geçersiz kıl  | Gerektirme  | iOS/ıpados, Android  |   |
 | Zaman aşımı (etkinlik dakikası)  | 720  | iOS/ıpados, Android  |   |
 | Erişim için PIN yerine yüz KIMLIĞI  | İzin Ver  | iOS/iPadOS  |   |
+| Erişim için PIN yerine Biyometri  | İzin Ver  | Android  |   |
 | Belirtilen sayıda gün sonra PIN sıfırlama  | Hayır  | iOS/ıpados, Android  |   |
 | Cihaz PIN'i ayarlı olduğunda uygulama PIN'i  | Gerektirme  | iOS/ıpados, Android  | Cihaz Intune 'A kaydedildiyse, Yöneticiler cihaz uyumluluk ilkesi aracılığıyla güçlü bir cihaz PIN 'ı zorlarsa bunu "gerekli değil" olarak ayarlamayı düşünebilirler.  |
 | Erişim için iş veya okul hesabı kimlik bilgileri  | Gerekli değil  | iOS/ıpados, Android  |   |
@@ -179,6 +180,8 @@ Düzey 3 ' te zorlanan ilke ayarları, düzey 2 için önerilen tüm ilke ayarla
 | Veri Aktarımı |       İletişim verilerini aktarma  |          Belirli bir çevirici uygulaması |          iOS/iPadOS  |  |
 | Veri Aktarımı |       Çevirici uygulama URL 'SI şeması  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | İOS/ıpados üzerinde bu değer, kullanılmakta olan özel çevirici uygulamasının URL şeması ile değiştirilmelidir. URL düzeni bilinmiyorsa daha fazla bilgi için uygulama geliştiricisine başvurun. URL şemaları hakkında daha fazla bilgi için bkz. [uygulamanız Için özel BIR URL düzeni tanımlama](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Veri aktarımı |       Diğer uygulamalardan veri al  |          İlke ile yönetilen uygulamalar  |          iOS/ıpados, Android         |  |
+| Veri aktarımı |       Verileri kuruluş belgelerine açın  |          Blok  |          iOS/ıpados, Android         |  |
+| Veri aktarımı |       Kullanıcıların seçili hizmetlerden veri açmasına izin ver  |          OneDrive Iş, SharePoint  |          iOS/ıpados, Android         |  |
 | Veri aktarımı |       Üçüncü taraf klavyeler  |          Blok  |          iOS/iPadOS        | İOS/ıpados 'da bu, tüm üçüncü taraf klavyelerin uygulama içinde çalışmasını engeller.  |
 | Veri aktarımı |       Onaylanan klavyeler  |          Gerektirme  |          Android        |  |
 | Veri aktarımı |       Onaylanacak klavyeleri seçin  |          *Klavye ekle/kaldır*  |          Android        | Android ile, dağıtılan Android cihazlarınıza göre kullanılabilmesi için klavyeler seçili olmalıdır.  |
@@ -190,7 +193,7 @@ Düzey 3 ' te zorlanan ilke ayarları, düzey 2 için önerilen tüm ilke ayarla
 |-----------------------------------------------------------|--------------------|---------------------------------|
 |       Basit PIN  |          Blok  |          iOS/ıpados, Android  |
 |       Minimum PIN uzunluğunu seçin  |          6  |          iOS/ıpados, Android  |
-|       Gün sayısından sonra PIN sıfırlama  |          Evet  |          iOS/ıpados, Android  |
+|       Gün sayısından sonra PIN sıfırlama  |          Yes  |          iOS/ıpados, Android  |
 |       Gün sayısı  |          365  |          iOS/ıpados, Android  |
 
 #### <a name="conditional-launch"></a>Koşullu başlatma

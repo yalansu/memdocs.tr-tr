@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/09/2020
+ms.date: 09/22/2020
 ms.topic: end-user-help
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: amanh
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 268ef3b9931c86a73ccf4e681240e4d2333c8026
-ms.sourcegitcommit: 2339c927b6576db8878f34f167a9a45c5dc9f58d
+ms.openlocfilehash: 01e802ba551321853ca9367ff8e1d9cbe67b1819
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90689404"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008116"
 ---
 # <a name="troubleshoot-windows-10-device-access"></a>Windows 10 cihaz erişimi sorunlarını giderme
 Bu makalede, kayıtlı bir Windows 10 cihazına yönelik erişim sorunlarının nasıl çözümleneceği açıklanır. 
@@ -34,7 +34,7 @@ Bu makalede, kayıtlı bir Windows 10 cihazına yönelik erişim sorunlarının 
 İş veya okul kaynaklarına erişmek için Wi-Fi bağlantısı gerekir. Wi-Fi ' a bağlı olduğunuzdan emin olun ve ardından kaynaklara erişmeyi yeniden deneyin.  
 
 ## <a name="add-work-or-school-account-in-settings-app"></a>Ayarlar uygulamasında iş veya okul hesabı ekle  
-Bu adımlar, cihazınızı kaydetmek için kullandığınız aynı. Ancak, hesabınız **Ayarlar** uygulamasında görüntülenmiyorsa, bu adımları bir kez daha çalıştırmanız gerekir.  
+Bu adımlar, cihazınızı kaydetmek için kullandığınız aynı. Ancak, hesabınız **Ayarlar** uygulamasında görünmediğinde, bu adımları yeniden çalıştırmanız gerekebilir.  
 
 1. **Ayarlar** uygulamasını başlatın. 
 2. **Hesaplar**’ı seçin.
@@ -68,6 +68,13 @@ Ayarlar uygulamasında iş veya okul hesabınızı görürseniz, cihazınız ve 
 1. Cihaz araç çubuğınızdan veya ayarlarınızda **ağ durumu** küre simgesini seçin.
 2. **Connect**> bir Wi-Fi ağı seçin.  
 3. Hesabınızı yeniden bağlamayı deneyin.  
+
+### <a name="your-device-is-already-being-managed-by-an-organization"></a>Cihazınız zaten bir kuruluş tarafından yönetiliyor.  
+
+**Neden**: cihazınız Intune 'a veya başka bir mobil cihaz YÖNETIMI (MDM) sağlayıcısına zaten kaydedilmiş.    
+
+#### <a name="resolution"></a>Çözüm  
+Nasıl devam edeceğine ilişkin bilgi edinmek için BT destek sorumlunuza başvurun.    
 
 
 ## <a name="next-steps"></a>Sonraki adımlar  

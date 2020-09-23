@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafc7549dfb04bff14b0cdfe8c737ee4971d4db1
-ms.sourcegitcommit: 45657123a5db50aaecdb96d068712623d775f31c
+ms.openlocfilehash: 57e9195a71c268a9d7465be767b51f0f335dfb8d
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443815"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008184"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Microsoft Intune ile uygulamaları gruplara atama
 
@@ -39,13 +39,13 @@ Aşağıdaki tabloda uygulamaları kullanıcılara ve cihazlara atamaya yönelik
 | Seçenek  | Intune’a kayıtlı cihazlar | Intune’a kayıtlı olmayan cihazlar |
 |-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
 | Kullanıcılara ata | Yes | Yes |
-| Cihazlara atama | Evet | Hayır |
+| Cihazlara atama | Yes | Hayır |
 | Sarmalanan uygulamaları veya Intune SDK’sını birleştiren uygulamaları atama (uygulama koruma ilkeleri için) | Yes | Yes |
 | Uygulamaları Kullanılabilir olarak atama | Yes | Yes |
-| Uygulamalarını Gerekli olarak atama | Evet | Hayır |
-| Uygulamaları kaldırma | Evet | Hayır |
-| Intune’dan uygulama güncelleştirmelerini alma | Evet | Hayır |
-| Son kullanıcıların Şirket Portalı uygulamasından kullanılabilir uygulamaları yüklemesi | Evet | Hayır |
+| Uygulamalarını Gerekli olarak atama | Yes | Hayır |
+| Uygulamaları kaldırma | Yes | Hayır |
+| Intune’dan uygulama güncelleştirmelerini alma | Yes | Hayır |
+| Son kullanıcıların Şirket Portalı uygulamasından kullanılabilir uygulamaları yüklemesi | Yes | Hayır |
 | Son kullanıcıların web tabanlı Şirket Portalı’ndan kullanılabilir uygulamaları yüklemesi | Yes | Yes |
 
 > [!NOTE]
@@ -64,7 +64,7 @@ Aşağıdaki tabloda uygulamaları kullanıcılara ve cihazlara atamaya yönelik
    - **Kayıtlı cihazlar Için kullanılabilir**: uygulamayı şirket portalı uygulamadan veya Web sitesinden yükleyebilen Kullanıcı gruplarına atayın.
    - **Kayıtlı veya kayıtsız olarak kullanılabilir**: Bu uygulamayı, cihazları Intune’a kayıtlı olmayan kullanıcı gruplarına atayın. Kullanıcılara Intune lisansı atanmış olmalıdır, bkz. [Intune Lisansları](../fundamentals/licenses.md).
    - **Gerekli**: Uygulama, seçili gruplardaki cihazlara yüklenir. Bazı platformlarda yükleme başlamadan önce son kullanıcıya ek sorular ve bilgiler sunulabilir.
-   - **Kaldır**: Intune, uygulamayı daha önce kayıtlı cihazlar için kullanılabilir "veya aynı dağıtımı kullanarak" gerekli "atama yoluyla cihaza daha önce yükletiyse, seçilen gruplardaki cihazlardan kaldırılır. Dağıtım sonrasında web bağlantıları kaldırılamaz.
+   - **Kaldır**: Intune, uygulamayı daha önce kayıtlı cihazlar için kullanılabilir "veya aynı dağıtımı kullanarak" gerekli "atama yoluyla cihaza daha önce yükletiyse, seçilen gruplardaki cihazlardan kaldırılır. 
 
      > [!NOTE]
      > **Yalnızca iOS/ıpados uygulamaları için**:
@@ -94,7 +94,7 @@ Aşağıdaki tablodaki bilgiler, bir çakışma oluştuğunda ortaya çıkan ama
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Kullanıcı Gerekli|Kullanıcı Mevcut|Gerekli ve Kullanılabilir|
 |Kullanıcı Gerekli|Kullanıcı Kaldır|Gerekli|
-|Kullanıcı Mevcut|Kullanıcı Kaldır|Kaldırma|
+|Kullanıcı Mevcut|Kullanıcı Kaldır|Kaldır|
 |Kullanıcı Gerekli|Cihaz Gerekli|İkisi de mevcut, Intune Gerekli olanı işler
 |Kullanıcı Gerekli|Cihaz Kaldır|İkisi de mevcut, Intune Gerekli olanı çözümler
 |Kullanıcı Mevcut|Cihaz Gerekli|İkisi de mevcut; Intune Gerekli (Gerekli ve Kullanılabilir) olanı çözümler

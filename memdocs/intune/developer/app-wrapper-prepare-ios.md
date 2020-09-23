@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c10738d20b793de2ba1adbca548290a517ca5d9e
-ms.sourcegitcommit: 764142960005ea0cb5afa00757f2b403ce5032c6
+ms.openlocfilehash: 0a171ff37485a64e730fca80839d2f71457f1021
+ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405928"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "91008031"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Intune Uygulama Sarmalama Aracı ile iOS uygulamalarını uygulama koruma ilkelerine hazırlama
 
@@ -38,13 +38,13 @@ Uygulama Sarmalama Aracı’nı çalıştırmadan önce bazı genel önkoşullar
 
 * Github’dan [iOS için Microsoft Intune Uygulama Sarmalama Aracı](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios)’nı indirin.
 
-* Xcode araç takımının sürüm 9 veya üzeri yüklü olan ve OS X 10.8.5 ya da üzerini çalıştıran bir Mac OS bilgisayar.
+* Xcode araç takımı 11 veya sonraki bir sürümü yüklü olan bir macOS bilgisayarı.
 
 * Giriş iOS uygulaması, şirketiniz veya bağımsız bir yazılım satıcısı (ISV) tarafından geliştirilmiş ve imzalanmış olmalıdır.
 
   * Giriş uygulaması dosyasının uzantısı **.ipa** veya **.app** olmalıdır.
 
-  * Giriş uygulamasının iOS 11 veya üzeri için derlenmesi gerekir.
+  * Giriş uygulamasının iOS 12 veya üzeri için derlenmesi gerekir.
 
   * Giriş uygulaması şifrelenemez.
 
@@ -101,7 +101,7 @@ Intune tarafından sarmalanan uygulamaları dağıtmak için aşağıdakiler ger
 
    ![Apple geliştirici portalı-sertifikalar, kimlikler & profiller](./media/app-wrapper-prepare-ios/iOS-signing-cert-1.png)
 
-5. &nbsp; ![Sağ üst köşedeki Apple Geliştirici portalı artı işaretine](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) tıklayarak bir iOS sertifikası ekleyin.
+5. Sağ üst köşedeki ![Sağ üst köşedeki Apple Geliştirici portalı artı işaretine](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) tıklayarak bir iOS sertifikası ekleyin.
 
 6. **Üretim** altında **Şirket İçi ve Geçici** bir sertifika oluşturmayı seçin.
 
@@ -148,7 +148,7 @@ Intune tarafından sarmalanan uygulamaları dağıtmak için aşağıdakiler ger
 
 2. **Sertifikalar, Kimlikler ve Profiller**’e tıklayın.
 
-3. &nbsp; ![Sağ üst köşedeki Apple Geliştirici portalı artı işaretine](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) tıklayarak bir iOS sağlama profili ekleyin.
+3. Sağ üst köşedeki ![Sağ üst köşedeki Apple Geliştirici portalı artı işaretine](./media/app-wrapper-prepare-ios/iOS-signing-cert-2.png) tıklayarak bir iOS sağlama profili ekleyin.
 
 4. **Dağıtım** altında bir **Şirket içi** sağlama profili oluşturmayı seçin.
 
@@ -203,7 +203,7 @@ Aşağıdaki komut satırı parametrelerini Uygulama Sarmalama Aracı ile birlik
 |**-Ar**|(İsteğe bağlı) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Bu, uygulama kaydlarınızın yapılandırdığı yeniden yönlendirme URI 'sidir. Genellikle, Microsoft Authenticator uygulamanın aracılı kimlik doğrulamasından sonra geri döndürdüğü uygulamanın URL protokolü olur. |
 |**-v**| (İsteğe bağlı) Konsola ayrıntılı ileti çıkışı yapar. Bu bayrağın hataları ayıklamak için kullanılması önerilir. |
 |**-e**| (İsteğe bağlı) Uygulama Sarmalama Aracının uygulamayı işlerken eksik yetkilendirmeleri kaldırmasını sağlamak için bu bayrağı kullanın. Daha fazla ayrıntı için [uygulama yetkilendirmelerini ayarlama](#setting-app-entitlements) bölümüne bakın.|
-|**-xe**| (İsteğe bağlı) Uygulamadaki iOS uzantıları hakkında bilgi ve bunları kullanmak için hangi yetkilendirmelerin gerektiğini yazdırır. Daha fazla ayrıntı için [uygulama yetkilendirmelerini ayarlama](#setting-app-entitlements) bölümüne bakın. |
+|**-xe**| (İsteğe bağlı) Uygulamadaki iOS uzantıları hakkında bilgi ve bunları kullanmak için hangi yetkilendirmelerin gerektiğini yazdırır. Daha fazla ayrıntı için  [uygulama yetkilendirmelerini ayarlama](#setting-app-entitlements) bölümüne bakın. |
 |**-x**| (İsteğe bağlı) `<An array of paths to extension provisioning profiles>`. Uygulamanızda uzantı sağlayan profiller gerekiyorsa bunu kullanın.|
 |**-b**|(İsteğe bağlı) Sarmalanan çıkış uygulamasının giriş uygulamasıyla aynı paket sürümüne sahip olmasını isterseniz (önerilmez), -b’yi bağımsız değişken olmadan kullanın. <br/><br/> Sarmalanan uygulamanın özel CFBundleVersion içermesini istiyorsanız `-b <custom bundle version>` kullanın. Özel bir Cfpaketlik sürümü belirtmeyi seçerseniz, yerel uygulamanın Cfpaketlik sürümünü 1.0.0-> 1.0.1 gibi en az önemli bir bileşen ile artırmanız iyi bir fikirdir. |
 |**-Citrix**|Seçim Citrix XenMobile uygulama SDK 'sını (yalnızca ağ varyantı) dahil edin. Bu seçeneği kullanmak için [CITRIX MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) 'in yüklü olması gerekir. |
@@ -327,7 +327,7 @@ Uygulamanızı sarmalamadan önce, uygulamaya genellikle uygulamanın ne yapabil
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>iOS için Uygulama Sarmalama Aracı’nda desteklenen yetenekler
 
-|Yetenek|Description|Önerilen yönerge|
+|Özellik|Açıklama|Önerilen yönerge|
 |--------------|---------------|------------------------|
 |Uygulama grupları|Birden çok uygulamanın paylaşılan kapsayıcılara erişimine ve uygulamalar arasında işlemler arası ek iletişime olanak tanımak için uygulama gruplarını kullanın.<br /><br />Uygulama gruplarını etkinleştirmek için, **Yetenekler** bölmesini açın ve **Uygulama Grupları** bölümünde **AÇIK**’a tıklayın. Uygulama grupları ekleyebilir veya var olanları seçebilirsiniz.|Uygulama Grupları’nı kullanırken, ters DNS gösterimini kullanın:<br /><br />*grup.com.şirketAdı.UygulamaGrubu*|
 |Arka plan modları|Arka plan modlarının etkinleştirilmesi, iOS uygulamanızın arka planda çalışmaya devam etmesine olanak tanır.||
