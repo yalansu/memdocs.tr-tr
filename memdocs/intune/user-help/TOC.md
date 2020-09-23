@@ -22,6 +22,7 @@
 ##### [Intercede ile kaydetme](enroll-android-device-intercede.md)
 ##### [DISA Purebred ile kaydetme](enroll-android-device-disa-purebred.md)
 ### [Yeni cihaz yönetimi kurulumuna taşıma](move-to-new-device-management-setup.md)
+### [Android için Microsoft Tunnel](use-microsoft-tunnel-android.md)
 ### [Cihazınızdaki yönetilen uygulamaları kullanma](use-managed-apps-on-your-device-android.md)
 ### [Cihazınızı şifreleme](encrypt-your-device-android.md)
 ### [PIN veya parolanızı ayarlama](set-your-pin-or-password-android.md)
@@ -71,7 +72,7 @@
 ##### [Entrust Datacard ile kaydetme](enroll-ios-device-entrust-datacard.md)
 ##### [Intercede ile kaydetme](enroll-ios-device-intercede.md)
 ##### [DISA Purebred ile kaydetme](enroll-ios-device-disa-purebred.md)
-
+### [iOS için Microsoft Tunnel kullanma](use-microsoft-tunnel-iOS.md)
 
 ### [Cihazınızdaki yönetilen uygulamaları kullanma](use-managed-apps-on-your-device-ios.md)
 ### [Geçiş kodunuzu ayarlama veya değiştirme](set-or-change-your-passcode-ios.md)

@@ -153,6 +153,8 @@
               href: network-bandwidth-use.md
             - name: Windows 10 VM’lerini Intune ile kullanma
               href: windows-10-virtual-machines.md
+            - name: Intune ile Windows Sanal Masaüstü kullanma
+              href: windows-virtual-desktop.md
             - name: Intune uç noktaları
               href: intune-endpoints.md
             - name: Intune ABD kamu uç noktaları
