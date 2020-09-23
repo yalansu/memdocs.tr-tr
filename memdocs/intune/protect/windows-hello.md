@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/23/2020
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 70c0418f02bd94a957967c72045be210dad56c78
-ms.sourcegitcommit: 0c7e6b9b47788930dca543d86a95348da4b0d902
+ms.openlocfilehash: 64eab64259a2d2a6222275576df8fac9fced2b34
+ms.sourcegitcommit: b70cfbccd5ce6947fd7ce9235da2be84ab00666e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88914710"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91107461"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>İş için Windows Hello ile Microsoft Intune tümleştirmesi  
 
@@ -118,6 +118,10 @@ Bu makalenin geri kalanında, tüm kuruluşunuzu hedefleyen Iş için varsayıla
    - **Telefonla oturum açmaya Izin ver**:
 
      Bu seçenek **Evet** olarak ayarlanırsa, kullanıcılar masaüstü bilgisayar kimlik doğrulaması için bir taşınabilir özel cihaz olarak hizmet verecek bir uzak passport kullanabilir. Masaüstü bilgisayarı Azure Active Directory’e katılmış olmalıdır ve özel cihaz bir İş İçin Windows Hello PIN kodu ile yapılandırılmalıdır.
+
+   - **Oturum açma için güvenlik anahtarlarını kullanın**:
+
+     **Etkin**olarak ayarlandığında, bu ayar müşterinin kuruluşundaki tüm bilgisayarlar Için Windows Hello güvenlik anahtarlarını uzaktan açma/kapatma kapasitesi sağlar.
 
 ## <a name="windows-holographic-for-business-support"></a>Windows 10 Holographic for Business desteği
 

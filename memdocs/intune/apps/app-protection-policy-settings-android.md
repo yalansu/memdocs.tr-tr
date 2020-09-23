@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8fd15b7bdc52d3cd8dc00f77dced42e9bb6bd66
-ms.sourcegitcommit: cb12dd341792c0379bebe9fd5f844600638c668a
+ms.openlocfilehash: 2911966cb3c4fd3ea35f1beb9ebe023c5d774e6a
+ms.sourcegitcommit: b70cfbccd5ce6947fd7ce9235da2be84ab00666e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88252161"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91107511"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Microsoft Intune’da Android uygulama koruma ilkesi ayarları
 Bu makalede Android cihazları için uygulama koruma ilkesi ayarları açıklanır. Açıklanan ilke ayarları, Azure portal **Ayarlar** bölmesinde bir uygulama koruma ilkesi için [yapılandırılabilir](app-protection-policies.md) .
@@ -41,12 +41,14 @@ Bu makalede Android cihazları için uygulama koruma ilkesi ayarları açıklan�
 | **Kuruluş verilerini Android yedekleme hizmetlerine yedekleme** | Bu uygulamanın iş veya okul verilerini [Android Yedekleme hizmetine](https://developer.android.com/google/backup/index.html)yedeklemesini engellemek için **Engelle** ' yi seçin.<br><br> Bu uygulamanın iş veya okul verilerini yedekleyebilmesine izin vermek için **Izin ver** ' i seçin.| **İzin Ver** |
 | **Diğer uygulamalara kuruluş verileri gönderme** | Hangi uygulamaların bu uygulamadan veri alabileceğini belirtin: <ul><li> **İlke ile yönetilen uygulamalar**: Yalnızca diğer ilkeyle yönetilen uygulamalara aktarım yapılmasına izin verilir.</li> <li>**Tüm uygulamalar**: Herhangi bir uygulamaya aktarıma izin verilir. </li> <li>**Hiçbiri**: İlkeyle yönetilen diğer uygulamalar da dahil olmak üzere hiçbir uygulamaya veri aktarmaya izin verilmez.</li></ul> <p>Intune’un varsayılan olarak veri aktarımı hedefi olarak izin verebileceği bazı muaf uygulamalar ve hizmetler vardır. Buna ek olarak, verilerin Intune APP'yi desteklemeyen bir uygulamaya aktarılmasına izin vermeniz gerekiyorsa kendi muafiyetlerinizi oluşturabilirsiniz. Daha fazla bilgi için bkz. [veri aktarımı muafiyetleri](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Bu ilke, Android Uygulama Bağlantıları için de geçerlidir.  Genel web bağlantıları **Uygulama bağlantılarını Intune Managed Browser'da aç** ilke ayarıyla yönetilir.<p><div class="NOTE"><p>Not</p><p>Intune Şu anda Android Instant Apps özelliğini desteklememektedir. Intune, uygulamaya gelen veya uygulamadan giden tüm veri bağlantılarını engelleyecektir. Daha fazla bilgi için Android Geliştirici belgelerindeki [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) bölümüne bakın.</p><p>**Diğer uygulamalara kuruluş verileri gönder** **tüm uygulamalar**için yapılandırılmışsa, metin verileri yine de Pano 'ya işletim sistemi paylaşımı aracılığıyla aktarılabilir.</p></div> | **Tüm uygulamalar** | 
 |<ul><ui>**Dışarıda tutulacak uygulamaları seçin** | Bu seçenek, önceki seçenekte *İlke ile yönetilen uygulamalar* seçildiğinde kullanılabilir duruma gelir. | |
-|<ul><ui>**Kuruluş verilerinin kopyalarını Kaydet** | Bu uygulamadaki farklı Kaydet seçeneğinin kullanımını devre dışı bırakmak için **Engelle** ' yi seçin. Farklı Kaydet 'in kullanılmasına izin vermek istiyorsanız, **Izin ver** ' i seçin. **Not:** *Bu ayar Microsoft Excel, OneNote, PowerPoint ve Word için desteklenir. Ayrıca, üçüncü taraf ve LOB uygulamaları tarafından da desteklenebilir.*| **İzin Ver** |  
+|<ul><ui>**Kuruluş verilerinin kopyalarını Kaydet** | Bu uygulamadaki farklı Kaydet seçeneğinin kullanımını devre dışı bırakmak için **Engelle** ' yi seçin. *Farklı kaydet*'in kullanılmasına izin vermek Istiyorsanız, **izin ver** ' i seçin. *Engelle*olarak ayarlandığında, *kullanıcının seçili hizmetlere kopya kaydetmesine izin ver*ayarını yapılandırabilirsiniz. <br><br>**Not:**<ul><li><i>Bu ayar Microsoft Excel, OneNote, PowerPoint ve Word için desteklenir. Ayrıca, üçüncü taraf ve LOB uygulamaları tarafından da desteklenebilir.</i></li><li><i>Bu ayar yalnızca, **diğer uygulamalara kuruluş verileri gönderme** ayarı **ilke tarafından yönetilen uygulamalar**, ilke tarafından yönetilen uygulamalar, **işletim sistemi paylaşımı** veya ilke Ile yönetilen uygulamalar olarak **Açık/paylaşım filtrelemesine**ayarlandığında zorlanır.</i></li><li><i>Aşağıdaki uygulamalar bu ayarı destekler:</i><ul><li><i>OneDrive 11.45.3 ve üzeri.</i></li></ul></li></ul>. | **İzin Ver** |  
 |<ul><ui><ul><ui>**Kullanıcının seçili hizmetlere kopya kaydetmesine izin ver** |Kullanıcılar, seçili hizmetlere (OneDrive İş, SharePoint ve Yerel Depolama) kaydedebilir. Diğer tüm hizmetler engellenir.  | **0 seçili** |
 |<ul><ui>**Telekomünikasyon verilerini aktarma** | Genellikle, bir Kullanıcı bir uygulamada köprülü telefon numarası seçtiğinde, önceden doldurulan telefon numarası ve çağrıya hazır olarak bir çevirici uygulaması açılır. Bu ayar için, ilke tarafından yönetilen bir uygulamadan başlatıldığında bu tür bir içerik aktarımını nasıl işleyeceğinizi seçin:<ul><li>**Hiçbiri, bu verileri uygulamalar arasında aktarma**: bir telefon numarası algılandığında iletişim verileri aktarılmaz.</li><li>**Belirli bir çevirici uygulaması**: bir telefon numarası algılandığında belirli bir çevirici uygulamasının iletişim başlatmasına izin verin.</li><li>**İlke ile yönetilen herhangi bir çevirici uygulaması**: bir telefon numarası algılandığında ilkeyle yönetilen herhangi bir çevirici uygulamasının kişi başlatmasına izin verin.</li><li>**Herhangi bir çevirici uygulaması**: bir telefon numarası algılandığında, iletişim kurmak için herhangi bir çevirici uygulamasının kullanılmasına izin verin.</li></ul>| **Herhangi bir çevirici uygulaması** |  
 |<ul><ui><ul><ui>**Çevirici uygulama paketi KIMLIĞI** | Belirli bir çevirici uygulaması seçildiğinde, [uygulama PAKETI kimliğini](../apps/app-configuration-vpn-ae.md#get-the-app-package-id)sağlamanız gerekir. | **Adet** |
 |<ul><ui><ul><ui>**Çevirici uygulama adı** | Belirli bir çevirici uygulaması seçildiğinde, çevirici uygulamasının adını sağlamanız gerekir. | **Adet** |
 | **Diğer uygulamalardan veri al** | Hangi uygulamaların bu uygulamaya veri aktarabileceğini belirtin: <ul><li>**İlke ile yönetilen uygulamalar**: Yalnızca diğer ilkeyle yönetilen uygulamalardan aktarım yapılmasına izin verilir.</li><li>**Tüm uygulamalar**: Herhangi bir uygulamadan veri aktarımına izin verilir.</li><li>**Hiçbiri**: İlkeyle yönetilen diğer uygulamalar da dahil olmak üzere hiçbir uygulamadan veri aktarmaya izin verilmez. </li></ul> <p>Intune’un veri aktarımı kaynağı olarak izin verebileceği bazı muaf uygulamalar ve hizmetler vardır. Uygulama ve hizmetlerin tam listesi için bkz.  [veri aktarımı muafiyetleri](app-protection-policy-settings-android.md#data-transfer-exemptions) . | **Tüm uygulamalar** |
+| <ul><ui>**Verileri kuruluş belgelerine açın** | Bu uygulamadaki hesaplar arasında veri paylaşmak için *Aç* seçeneğinin veya diğer seçeneklerin kullanımını devre dışı bırakmak için **Engelle** ' yi seçin. *Açık*kullanımına izin vermek Istiyorsanız, **izin ver** ' i seçin. <br><br>**Blok** olarak ayarlandığında, **kullanıcının seçili hizmetlerden veri açmasına izin ver** ' i, kuruluş veri konumları için hangi hizmetlere izin verileceğini yapılandırabilirsiniz.<br><br>**Not:**<ul><li><i>Bu ayar yalnızca **diğer uygulamalardan veri al** ayarı **ilke ile yönetilen uygulamalar**olarak ayarlandıysa zorlanır.</i></li><li><i>Aşağıdaki uygulamalar bu ayarı destekler:</i><ul><li><i>OneDrive 6.14.1.</i></li></ul></li></ul>. | <br><br> **İzin Ver**   |
+| <ul><ui><ul><ui>**Kullanıcıların seçili hizmetlerden veri açmasına izin ver** | Kullanıcıların verileri açabilme uygulama depolama hizmetlerini seçin. Diğer tüm hizmetler engellenir. Hiçbir hizmetin seçilmesi, kullanıcıların veri açmasını engeller.<br><br>Desteklenen hizmetler:<ul><li>OneDrive İş</li><li>SharePoint Online</li><li>Kamera</li></ul>| **Tümü seçili**  |
 | **Diğer uygulamalar arasında kesme, kopyalama ve yapıştırmayı kısıtla** | Bu uygulamada kes, kopyala ve yapıştır eylemlerinin ne zaman kullanılabileceğini belirtin. Aşağıdakilerden birini seçin: <ul><li>**Engellendi**: Bu uygulama ve diğer herhangi bir uygulama arasında kesme, kopyalama ve yapıştırma eylemlerine izin verilmez.</li><li>**İlkeyle yönetilen uygulamalar**: Bu uygulama ve diğer ilkeyle yönetilen uygulamalar arasında kesme, kopyalama ve yapıştırma eylemlerine izin verilir.</li><li>**Yapıştırma seçeneğiyle ilke ile yönetilen**: Bu uygulama ve diğer ilkeyle yönetilen uygulamalar arasında kesme veya kopyalama eylemine izin verilir. Herhangi bir uygulamadan verilerin bu uygulamaya yapıştırılmasına izin verir.</li><li>**Herhangi bir uygulama**: Bu uygulamaya veya bu uygulamadan kesme, kopyalama ve yapıştırma eylemleriyle ilgili bir kısıtlama olmaz. | **Herhangi bir uygulama** |
 | <ul><ui>**Herhangi bir uygulama için karakter sınırını kes ve Kopyala** | Kuruluş verilerinden ve hesaplarından kesilebilir veya kopyalanabilecek karakter sayısını belirtin.  Bu, "diğer uygulamalarla kesme, kopyalama ve yapıştırmayı kısıtla" ayarıyla belirtilen sayıda karakteri paylaşıma izin verir.<p>Varsayılan Değer = 0<p>**Note**: Intune Şirket Portalı sürüm 5.0.4364.0 veya üstünü gerektirir.  | **0** |
 | **Ekran yakalama ve Google Yardımcısı** | Bu uygulamayı kullanırken cihazın ekran yakalamayı ve **Google Assistant** özelliklerini engellemek için **Engelle** ' yi seçin. **Izin ver** ' i seçmek, bu uygulamayı bir iş veya okul hesabıyla kullanırken App-değiştirici önizleme görüntüsünü de bulanıklaştıracaktır.| **Block** |
@@ -78,7 +80,7 @@ Intune uygulama koruma ilkelerinin veri aktarımına ve uygulamasına izin veren
 
   Bu uygulama ve hizmetlere, Intune tarafından yönetilen uygulamalara ve uygulamalardan veri aktarımına tam olarak izin verilir.
 
-  |Uygulama/hizmet adı | Açıklama |
+  |Uygulama/hizmet adı | Description |
   | ------ | ---- |
   | com.android.phone | Yerel telefon uygulaması
   | com.android.vending | Google Play Store |
@@ -94,7 +96,7 @@ Intune uygulama koruma ilkelerinin veri aktarımına ve uygulamasına izin veren
 ### <a name="conditional-exemptions"></a>Koşullu muafiyetler
   Bu uygulama ve hizmetlere, yalnızca belirli koşullar altında Intune tarafından yönetilen uygulamalara ve uygulamalardan veri aktarımına izin verilir.
 
-  |Uygulama/hizmet adı | Açıklama | Muafiyet koşulu|
+  |Uygulama/hizmet adı | Description | Muafiyet koşulu|
   | ------ | ---- | --- |
   | com.android.chrome | Google Chrome Tarayıcısı | Chrome, Android 7.0+ sürümünde bazı WebView bileşenleri için kullanılır ve görünümden asla gizlenmez. Ancak uygulamaya giden ve uygulamadan gelen veri akışı her zaman kısıtlandırılır.  |
   | com.skype.raider | Skype | Skype uygulamasına yalnızca telefon aramasıyla biten belirli eylemlerde izin verilir. |

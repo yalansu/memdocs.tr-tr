@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/21/2020
+ms.date: 09/22/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49f3bcd1fafac132771e966a8dc7bad8a823e194
-ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
+ms.openlocfilehash: 0f169da16cec126dd160a32543a835fbb99db546
+ms.sourcegitcommit: b70cfbccd5ce6947fd7ce9235da2be84ab00666e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91008405"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91107551"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Microsoft Intune'daki yenilikler
 
@@ -66,6 +66,14 @@ ms.locfileid: "91008405"
 Şirket içi Configuration Manager [Çalıştır](../../configmgr/apps/deploy-use/create-deploy-scripts.md) özelliğinin gücünü Microsoft Endpoint Manager yönetim merkezine taşıyın. Yardım masası gibi ek personbuna, tek başına Configuration Manager yönetilen bir cihaza gerçek zamanlı olarak, PowerShell betikleri çalıştırmanızı sağlar. Bu, bu yeni ortama Configuration Manager yöneticisi tarafından önceden tanımlanmış ve onaylanmış olan PowerShell betiklerinin tüm geleneksel avantajlarını sağlar. Daha fazla bilgi için bkz. [kiracı iliştirme: yönetim merkezinden betikleri çalıştırma](../../configmgr/tenant-attach/scripts.md).
 
 ### <a name="app-management"></a>Uygulama yönetimi
+
+#### <a name="app-protection-policies-allow-administrators-to-configure-incoming-org-data-locations---4176693---"></a>Uygulama koruma ilkeleri, yöneticilerin gelen kuruluş veri konumlarını yapılandırmasına izin verir<!-- 4176693 -->
+Artık, kuruluş belgelerinde hangi güvenilen veri kaynaklarının açmasına izin verileceğini denetleyebilirsiniz. **Kuruluş verilerini** uygulama koruma ilkesi 'nin var olan kopyalarına benzer şekilde, hangi gelen veri konumlarına güvenildiğini tanımlayabilirsiniz. Bu işlevsellik, aşağıdaki uygulama koruma ilkesi ayarlarıyla ilgilidir:
+- **Kuruluş verilerinin kopyalarını Kaydet**
+- **Verileri kuruluş belgelerine açın**
+- **Kullanıcıların seçili hizmetlerden veri açmasına izin ver**
+
+[Microsoft Endpoint Manager Yönetim Merkezi](https://go.microsoft.com/fwlink/?linkid=2109431)'nde **uygulamalar**  >  **Uygulama koruma ilkeleri**  >  **ilke oluştur**' u seçin. Bu işlevselliği kullanmak için, Intune ilkesi tarafından yönetilen uygulamaların bu denetim için destek uygulaması gerekir. Daha fazla bilgi için bkz. [iOS uygulama koruma ilkesi ayarları](../apps/app-protection-policy-settings-ios.md) ve [Android uygulama koruma ilkesi ayarları](../apps/app-protection-policy-settings-android.md).
 
 #### <a name="new-app-categories-to-target-app-protection-policies-more-easily---4802581----"></a>Uygulama koruma ilkelerini daha kolay hedefleyecek yeni uygulama kategorileri<!-- 4802581  -->
 Intune 'un 2009 sürümü sayesinde, uygulama koruma ilkelerini daha kolay ve hızlı bir şekilde hedeflemek için kullanabileceğiniz uygulama kategorileri oluşturarak Microsoft Endpoint Manager 'ın UX ' i geliştirdik. Bu kategoriler **tüm ortak uygulamalar**, **Microsoft uygulamaları**ve **temel Microsoft uygulamalardır**. Hedeflenen uygulama koruma ilkesini oluşturduktan sonra, bu ilkeden etkilenecek uygulamaların listesini görüntülemek için **hedeflenecek uygulamaların listesini görüntüle** ' yi seçebilirsiniz. Yeni uygulamalar desteklenene kadar bu kategorileri bu uygulamaları uygun şekilde içerecek şekilde dinamik olarak güncelleştiririz ve ilkeleriniz seçtiğiniz Kategorideki tüm uygulamalara otomatik olarak uygulanacaktır. Gerekirse, tek tek uygulamalar için ilkeleri hedeflemek için de devam edebilirsiniz. Daha fazla bilgi için bkz. [Uygulama koruma ilkeleri oluşturma ve atama](../apps/app-protection-policies.md) ve [ıntune ile WINDOWS Information Protection (WIP) ilkesi oluşturma ve dağıtma](../apps/windows-information-protection-policy-create.md).
