@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: f16a5736d0bebbcb4f3b03989c6983cd55ac8f54
-ms.sourcegitcommit: 99084d70c032c4db109328a4ca100cd3f5759433
+ms.openlocfilehash: ff661683bdb1d7ff491186ab214719c8d073b72a
+ms.sourcegitcommit: bcfacddbee1faa3826eea89697018450dfa9d264
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88696999"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91134943"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Configuration Manager ile Windows 10 güncelleştirme teslimini iyileştirin
 
@@ -105,14 +105,14 @@ Hızlı yükleme dosyaları için doğru eş önbelleğe alma teknolojisinin se�
 
 | İşlev  | Teslim Iyileştirme  | Eş önbellek  | BranchCache  |
 |---------|---------|---------|---------|
-| Alt ağlar arasında destekleniyor | Evet | Evet | Hayır |
+| Alt ağlar arasında destekleniyor | Yes | Yes | Hayır |
 | Bant genişliği azaltma | Evet (yerel) | Evet (BITS aracılığıyla) | Evet (BITS aracılığıyla) |
 | Kısmi içerik desteği | Evet, bu sütunda listelenen tüm desteklenen içerik türleri için bir sonraki satırda. | Yalnızca Microsoft 365 uygulamalar ve hızlı güncelleştirmeler için | Evet, bu sütunda listelenen tüm desteklenen içerik türleri için bir sonraki satırda. |
 | Desteklenen içerik türleri | **ConfigMgr aracılığıyla:** </br> -Hızlı güncelleştirmeler </br> -Tüm Windows güncelleştirmeleri (sürüm 1910 ' den başlayarak). Bu, Microsoft 365 uygulama güncelleştirmeleri içermez.</br> </br> **Microsoft bulutu aracılığıyla:**</br> -Windows ve güvenlik güncelleştirmeleri</br> -Sürücüler</br> -Windows Mağazası uygulamaları</br> -Iş için Windows Mağazası uygulamaları | [WINDOWS PE](../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) 'de indirilen görüntüler dahil tüm ConfigMgr içerik türleri | Tüm ConfigMgr içerik türleri, görüntüler hariç |
-| Disk denetimindeki önbellek boyutu | Evet | Evet | Evet |
+| Disk denetimindeki önbellek boyutu | Yes | Yes | Yes |
 | Eş kaynağı bulma | Automatic | El ile (istemci Aracısı ayarı) | Automatic |
 | Eş keşfi | Teslim Iyileştirme bulut hizmeti aracılığıyla (internet erişimi gerektirir) | Yönetim noktası aracılığıyla (istemci sınır gruplarına göre) | Noktalı |
-| Raporlama | Evet (Masaüstü analizlerini kullanarak) | ConfigMgr istemci veri kaynakları panosu | ConfigMgr istemci veri kaynakları panosu |
+| Raporlama | [Güncelleştirme Uyumluluğu](/windows/deployment/update/update-compliance-get-started) | ConfigMgr istemci veri kaynakları panosu | ConfigMgr istemci veri kaynakları panosu |
 | WAN kullanım denetimi | Evet (yerel, Grup İlkesi ayarları aracılığıyla denetlenebilirler) | Sınır grupları | Yalnızca alt ağ desteği |
 | ConfigMgr aracılığıyla yönetim | Kısmi (istemci Aracısı ayarı) | Evet (istemci Aracısı ayarı) | Evet (istemci Aracısı ayarı) |
 

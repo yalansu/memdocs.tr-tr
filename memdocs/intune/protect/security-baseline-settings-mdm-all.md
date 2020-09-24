@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a043224036fd0cc8e5362e2166d278c4aa9006c
-ms.sourcegitcommit: 7b4d4bc6ec7d6e551d73fa4320984edef606c63d
+ms.openlocfilehash: 2cbaeed40bb5f39401e1b311bb2ee48bf8818b67
+ms.sourcegitcommit: bcfacddbee1faa3826eea89697018450dfa9d264
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "91008337"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91134960"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Intune için Windows MDM güvenlik taban çizgisi ayarları
 
@@ -69,7 +69,7 @@ Bir güvenlik temeli profilini Bu taban çizgisinin en son sürümüne güncelle
 
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-preview,mdm-sept-2020"
+::: zone pivot="mdm-may-2019,mdm-preview"
 
 ## <a name="above-lock"></a>Kilidin üstünde
 
@@ -82,7 +82,7 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-AboveLock](/windows/cl
   **Varsayılan**: Evet
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019"
 
 - **Korumalı ekrandan uygulamaları etkinleştirin**:  
   **Varsayılan**: devre dışı
@@ -390,7 +390,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-Browser](/windows/client
   
   **Varsayılan**: Evet
 
-## <a name="connectivity"></a>Bağlantı
+## <a name="connectivity"></a>Bağlanabilirlik
 
 Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-bağlantı](/windows/client-management/mdm/policy-csp-connectivity) bölümüne bakın.
 
@@ -411,8 +411,8 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-bağlantı](/windows/cli
 
   *Windows 'u yalnızca ek güvenlik gereksinimlerini karşıladıktan sonra BELIRTILEN UNC yollarına erişime izin verecek şekilde yapılandırdığınızda* , *sağlamlaştırılmış UNC yolu listesini*yapılandırabilirsiniz.
 
-  - **Sağlamlaştırılmış UNC yol listesi**:  
-    Ek güvenlik bayraklarını ve sunucu yollarını belirtmek için **Ekle** ' yi seçin.
+- **Sağlamlaştırılmış UNC yol listesi**:  
+  Ek güvenlik bayraklarını ve sunucu yollarını belirtmek için **Ekle** ' yi seçin.
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019,mdm-sept-2020"
@@ -687,7 +687,7 @@ Daha fazla bilgi için Windows belgelerindeki [POLICY CSP-FileExplorer](/windows
 
   **Varsayılan**: devre dışı
 
-## <a name="firewall"></a>Güvenlik Duvarı
+## <a name="firewall"></a>Güvenlik duvarı
 
 Daha fazla bilgi için Windows protokolleri belgelerindeki [2.2.2 FW_PROFILE_TYPE]( /openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) bölümüne bakın.
 
@@ -2236,7 +2236,7 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
   **Varsayılan**: etkin
 
 ::: zone-end
-::: zone pivot="mdm-may-2019,mdm-sept-2020"
+::: zone pivot="mdm-may-2019"
 
 ## <a name="windows-hello-for-business"></a>İş İçin Windows Hello
 
@@ -2259,9 +2259,6 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
 
     **Varsayılan**: yapılandırılmadı
 
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
   - **PIN 'de küçük harfler**:  
     Gerekirse, Kullanıcı PIN 'ı en az bir küçük harf içermelidir.
 
@@ -2276,9 +2273,6 @@ Daha fazla bilgi için Windows belgelerindeki [Ilke CSP-WindowsConnectionManager
     Gerekirse, Kullanıcı PIN 'ı en az bir büyük harf içermelidir.
 
     **Varsayılan**: izin verilmiyor
-
-::: zone-end
-::: zone pivot="mdm-sept-2020"
 
   - **PIN 'de küçük harfler**:  
     Gerekirse, Kullanıcı PIN 'ı en az bir küçük harf içermelidir.

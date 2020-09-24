@@ -6,7 +6,7 @@ keywords: Gizlilik, kişisel veriler
 author: erikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/16/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,28 +18,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5d78438301e8469189d0c70a2cf52b58938e277
-ms.sourcegitcommit: 37dc6b78de8bb904b83a9d571f3c9f414b54f321
+ms.openlocfilehash: e4d8833860b5c16375e5a68ea0174d81357df819
+ms.sourcegitcommit: bcfacddbee1faa3826eea89697018450dfa9d264
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90864501"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91134858"
 ---
 # <a name="optional-diagnostic-data-from-intune-client-apps"></a>Intune Istemci uygulamalarından isteğe bağlı Tanılama verileri
 
-Intune, çeşitli Intune istemci uygulamaları aracılığıyla kullanıcıların sorunları algılamak, tanılamak ve onarmak için çeşitli isteğe bağlı veriler toplar. Intune istemci uygulamaları şunları içerir:
+Intune, çeşitli Intune istemci uygulamaları aracılığıyla kullanıcıların sorunları algılamak, tanılamak ve onarmak için çeşitli isteğe bağlı veriler toplar.  Bu isteğe bağlı Tanılama verileri, bir sorun haline gelmeden önce, kuruluşunuzdaki sorunları önceden tespit etmek için yardım toplamaktadır. Intune istemci uygulamaları şunları içerir:
 - iOS/ıpados Şirket Portalı
 - macOS Şirket Portalı
 - Windows Şirket Portalı
 - Android Şirket Portalı
 - Android Intune uygulaması
-- MacOS sepet
-- Windows sepet
+- MacOS için Yönetim Aracısı Microsoft Intune
+- Microsoft Intune Yönetimi uzantısı
 - Android mobil uygulama yönetimi (MAM)
 
 İstemcilerden toplanan isteğe bağlı veriler, Intune hizmetlerinin başarıyla çalıştırılması için gerekli değildir. Toplanan veriler yardımcı olur:
-- ABD ürün geliştirmeleri yapın.
-- Sorunları algılamanıza, tanımamıza ve gidermenize yardımcı olacak gelişmiş bilgiler sağlar.
+- Sorunları proaktif olarak algılamamızı, tanılamanıza ve gidermenize yardımcı olacak gelişmiş bilgiler sağlar.
+- Ürün ve hizmet iyileştirmeleri yapar.
+
 
 ## <a name="data-collected"></a>Toplanan veriler
 
@@ -49,8 +50,8 @@ Intune istemci uygulamaları tarafından toplanan isteğe bağlı Tanılama veri
     - Azure AD Kullanıcı KIMLIĞI
     - Cihaz Kimliği
     - Bağıntı Kimliği
-    - Uygulama oturumu GUID 'SI
-    - SDK Kullanıcı KIMLIĞI
+    - Uygulama oturum KIMLIĞI
+    - Kullanıcı oturum KIMLIĞI
 - Yönetici ve hesap bilgileri
     - Kiracı Kimliği
     - Azure AD kiracı kimliği
@@ -81,19 +82,20 @@ Intune istemci uygulamaları tarafından toplanan isteğe bağlı Tanılama veri
 - Performans ölçümü
     - Süre
     - Yanıt süresi
- 
+
+
 ## <a name="data-not-collected"></a>Toplanan veriler
-Veriler, şunun gibi müşteri bilgilerini içermez:
+Veriler, aşağıdakiler gibi herhangi bir müşteri bilgisini içermez:
 - Cihaz adı.
 - Telefon numarası.
 - Kullanıcının dosya veya fotoğrafının içeriği.
 
+
 ## <a name="turn-off-data-collection"></a>Veri toplamayı kapama
-Kullanıcılar, Ayarlar uygulamasından bireysel cihazları için [kullanım verilerini toplamayı](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android) kapatabilir.
+Kullanıcıların bu isteğe bağlı verileri paylaşması için ilginç nedenler olduğunu düşündük. Microsoft 'un kurumsal uygulamalar ve hizmetler için herhangi bir Microsoft 365 uygulamasının kullanımı sırasında topladığı tüm isteğe bağlı Tanılama verileri, ISO/ıEC 19944:2017 (Section 8.3.3) standardında tanımlanan şekilde belirlenir. Kullanıcılar, bireysel cihazları için [kullanım verileri toplamayı kapatabilir](https://docs.microsoft.com/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android) .
 
 
 ## <a name="next-steps"></a>Sonraki adımlar
-
 [Intune 'da veri toplama hakkında daha fazla bilgi edinin.](privacy-data-collect.md)
 
 
